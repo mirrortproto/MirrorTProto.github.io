@@ -46,7 +46,7 @@ const mtprotoCore = [
   '/mtproto/TL/', '/mtproto_v1/',
 ];
 const mtprotoItems = pick(mtprotoCore);
-for (const p of pages.filter((p) => (p.url.startsWith('/mtproto/') || p.url.startsWith('/techfaq')) && !mtprotoCore.includes(p.url)).sort((a, b) => a.url.localeCompare(b.url))) {
+for (const p of pages.filter((p) => p.url.startsWith('/mtproto/') && !mtprotoCore.includes(p.url)).sort((a, b) => a.url.localeCompare(b.url))) {
   mtprotoItems.push(p);
 }
 
@@ -68,6 +68,13 @@ const sections = [
   { key: 'api', title: 'Telegram API', items: apiItems },
   { key: 'mtproto', title: 'MTProto Protocol', items: mtprotoItems },
   { key: 'schema', title: 'Schema', items: schemaItems },
+  {
+    key: 'other',
+    title: 'Other',
+    items: pages
+      .filter((p) => p.section === 'faq')
+      .sort((a, b) => a.url.localeCompare(b.url)),
+  },
 ];
 
 await mkdir(path.join(SRC, '_data'), { recursive: true });

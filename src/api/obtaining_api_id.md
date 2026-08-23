@@ -9,7 +9,7 @@ layout: layout.njk
 
 # Creating your Telegram Application
 
-We welcome all developers to use our [API](https://core.telegram.org/api#telegram-api) and source code to create Telegram-like messaging applications on our platform free of charge.
+We welcome all developers to use our [API](/api/#telegram-api) and source code to create Telegram-like messaging applications on our platform free of charge.
 
 > In order to ensure consistency and security across the Telegram ecosystem, **all third-party client apps** must comply with the [**API Terms of Service**](/api/terms/).
 

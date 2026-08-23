@@ -9,7 +9,7 @@ layout: layout.njk
 
 # messages.SponsoredMessages
 
-A set of [sponsored messages](https://core.telegram.org/api/sponsored-messages) associated with a channel
+A set of [sponsored messages](/api/sponsored-messages/) associated with a channel
 
 ```
 messages.sponsoredMessages#ffda656d flags:# posts_between:flags.0?int start_delay:flags.1?int between_delay:flags.2?int messages:Vector<SponsoredMessage> chats:Vector<Chat> users:Vector<User> = messages.SponsoredMessages;

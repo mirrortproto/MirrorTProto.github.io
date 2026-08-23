@@ -13,7 +13,7 @@ We welcome all developers to use our API and source code to [create Telegram-lik
 
 #### 1\. Privacy & Security
 
-**1.1.** Telegram is a privacy-oriented platform. All client apps must, therefore, guard their users' privacy with utmost care and comply with our [Security Guidelines](https://core.telegram.org/mtproto/security_guidelines).  
+**1.1.** Telegram is a privacy-oriented platform. All client apps must, therefore, guard their users' privacy with utmost care and comply with our [Security Guidelines](/mtproto/security_guidelines/).  
 **1.2.** Developers are welcome to add new features or improve and extend existing Telegram features provided that these modifications do not violate these Terms of Service.  
 **1.3.** As a client developer, you must make sure that all the basic features of the main Telegram apps function correctly and in an expected way both in your app and when users of your app communicate with other Telegram users. It is forbidden to force users of other Telegram clients to download your app in order to view certain messages and content sent using your app.  
 **1.4.** It is forbidden to interfere with the basic functionality of Telegram. This includes but is not limited to: making actions on behalf of the user without the user's knowledge and consent, preventing self-destructing content from disappearing, preventing last seen and online statuses from being displayed correctly, tampering with the 'read' statuses of messages (e.g. implementing a 'ghost mode'), preventing typing statuses from being sent/displayed, etc.  
@@ -30,7 +30,7 @@ We welcome all developers to use our API and source code to [create Telegram-lik
 
 **3.1.** Developers are allowed to monetize their coding efforts through advertising or other legitimate means.  
 **3.2.** If you decide to monetize your app, you must clearly mention all the methods of monetization that are used in your app in all its app store descriptions.  
-**3.3.** If your app allows accessing content from Telegram [channels](https://telegram.org/tour/channels), you must include support for [official sponsored messages](https://core.telegram.org/api/sponsored-messages) in Telegram channels and may not interfere with this functionality.
+**3.3.** If your app allows accessing content from Telegram [channels](https://telegram.org/tour/channels), you must include support for [official sponsored messages](/api/sponsored-messages/) in Telegram channels and may not interfere with this functionality.
 
 #### 4\. Breach of terms
 
@@ -39,4 +39,4 @@ We welcome all developers to use our API and source code to [create Telegram-lik
 
 We reserve the right to expand these terms and guidelines as the need arises. We will inform client developers of such changes via an in-app notification to their accounts connected to the app in question.
 
-> [Back to Creating Your Telegram Application »](https://core.telegram.org/api/obtaining_api_id)
+> [Back to Creating Your Telegram Application »](/api/obtaining_api_id/)

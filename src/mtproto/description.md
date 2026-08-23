@@ -18,7 +18,7 @@ This article describes the basic layer of the MTProto protocol version 2.0 (Clou
 -   **msg\_key** depends not only on the message to be encrypted, but on a portion of **auth\_key** as well;
 -   12..1024 padding bytes are used instead of 0..15 padding bytes in v.1.0.
 
-See also: [MTProto 2.0: Secret Chats, end-to-end encryption](https://core.telegram.org/api/end-to-end)
+See also: [MTProto 2.0: Secret Chats, end-to-end encryption](/api/end-to-end/)
 
 ### Protocol description
 
@@ -44,9 +44,9 @@ Each plaintext message to be encrypted in MTProto always contains the following 
 
 ###### **Note 2**
 
-Telegram's **End-to-end** encrypted Secret Chats are using an additional layer of encryption on top of the described above. See [Secret Chats, End-to-End encryption](https://core.telegram.org/api/end-to-end) for details.
+Telegram's **End-to-end** encrypted Secret Chats are using an additional layer of encryption on top of the described above. See [Secret Chats, End-to-End encryption](/api/end-to-end/) for details.
 
-> MTProto supports [Perfect Forward Secrecy](https://core.telegram.org/api/pfs) in both [cloud chats](https://core.telegram.org/api/pfs) and [secret chats](https://core.telegram.org/api/end-to-end/pfs).
+> MTProto supports [Perfect Forward Secrecy](/api/pfs/) in both [cloud chats](/api/pfs/) and [secret chats](/api/end-to-end/pfs/).
 
 ### Terminology
 

@@ -34,7 +34,7 @@ photoCachedSize#21e1ad6 type:string w:int h:int bytes:bytes = PhotoSize;
 
 ### Photosize.type values
 
-See [PhotoSize.type values »](/api/files/#photosizetype-values).
+See [PhotoSize.type values »](https://core.telegram.org/api/files#photosizetype-values).
 
 ### Related pages
 

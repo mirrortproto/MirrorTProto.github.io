@@ -35,7 +35,8 @@ function extractDiv(html, marker) {
 }
 
 function extractH1(html) {
-  const m = html.match(/<h1 id="dev_page_title"[^>]*>([\s\S]*?)<\/h1>/);
+  const m = html.match(/<h1 id="dev_page_title"[^>]*>([\s\S]*?)<\/h1>/)
+    || html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/);
   if (!m) return null;
   return decode(m[1].replace(/<[^>]+>/g, '')).trim();
 }
@@ -85,11 +86,36 @@ function sectionOf(p) {
   if (p.startsWith('/constructor') || p.startsWith('/method') || p.startsWith('/type')) return 'ref';
   if (p.startsWith('/mtproto')) return 'mtproto';
   if (p.startsWith('/schema')) return 'schema';
+  if (p.startsWith('/techfaq')) return 'faq';
+  if (p === '/faq' || p.startsWith('/faq/')) return 'faq';
   return 'api';
 }
 
 function fmEscape(s) {
   return String(s).replace(/\\/g, '\\\\').replace(/"/g, '\\"');
+}
+
+// Same slug algorithm as eleventy.config.mjs (markdown-it-anchor)
+const slugify = (s) => s.trim().toLowerCase().replace(/[^a-z0-9]+/gi, '-').replace(/^-+|-+$/g, '');
+
+const cleanInline = (s) =>
+  s.replace(/\[([^\]]*)\]\([^)]*\)/g, '$1').replace(/<[^>]+>/g, '').replace(/`/g, '').replace(/\*\*/g, '');
+
+// heading slugs of a markdown body (fences ignored)
+function headingSlugs(md) {
+  const slugs = new Set();
+  let inFence = false;
+  for (const line of md.split('\n')) {
+    const t = line.trim();
+    if (t.startsWith('```')) {
+      inFence = !inFence;
+      continue;
+    }
+    if (inFence) continue;
+    const m = t.match(/^#{1,6}\s+(.+)$/);
+    if (m) slugs.add(slugify(cleanInline(m[1])));
+  }
+  return slugs;
 }
 
 // First meaningful paragraph of the ORIGINAL page, used for <meta description>/OG.
@@ -104,11 +130,7 @@ function deriveDescription(md) {
     }
     if (inFence) continue;
     if (!t || t === '---' || /^#/.test(t) || t.startsWith('|') || t.startsWith('>') || t.startsWith('-') || t.startsWith('![') || t.startsWith('<')) continue;
-    let text = t
-      .replace(/\[([^\]]*)\]\([^)]*\)/g, '$1')
-      .replace(/<[^>]+>/g, '')
-      .replace(/`/g, '')
-      .replace(/\*\*/g, '');
+    let text = cleanInline(t);
     if (text.length < 25) continue;
     if (text.length > 180) {
       text = text.slice(0, 180);
@@ -124,6 +146,7 @@ function deriveDescription(md) {
 const KEEP = new Set([
   'index.md', 'search.md', '404.md', 'css', 'favicon.svg', 'favicons',
   '_includes', '_data', 'icon-64.png', 'apple-touch-icon.png', 'manifest.webmanifest',
+  'sitemap.njk', 'robots.njk',
 ]);
 
 async function main() {
@@ -140,46 +163,26 @@ async function main() {
   }
   console.log('src/ mirror directories cleaned');
 
-  // link rewriting: local for pages in the backup, absolute core.telegram.org otherwise
-  const rewriteLinks = (md) =>
-    md
-      .replace(/!\[([^\]]*)\]\(\/file\//g, '![$1](https://core.telegram.org/file/')
-      .replace(/!\[([^\]]*)\]\(\/img\//g, '![$1](https://core.telegram.org/img/')
-      .replace(/!\[([^\]]*)\]\(\/\//g, '![$1](https://')
-      .replace(/\]\((?!https?:|#)(\/[^)#\s]*)(#[^)\s]*)?\)/g, (_m, p, a) => {
-        if (closure.has(p)) {
-          const base = p.endsWith('/') ? p : p + '/';
-          return `](${base}${a || ''})`;
-        }
-        return `](https://core.telegram.org${p}${a || ''})`;
-      });
-
-  let written = 0;
-  const skipped = [];
-  const seenPaths = new Set();
+  // ---- pass 1: convert everything to markdown ----
+  const records = [];
   for (const pg of meta.pages) {
-    // trailing-slash duplicates ("/x/" when "/x" exists) collapse to one page
-    const normPath = pg.path.replace(/\/+$/, '');
-    if (seenPaths.has(normPath)) continue;
-    seenPaths.add(normPath);
     const html = await readFile(path.join(backup, pg.file), 'utf8');
+    const normPath = pg.path.replace(/\/+$/, '');
     const rel = normPath.replace(/^\/+/, '');
-    const trimmed = html.trimStart();
     let body;
     let title;
     let crumbs = [];
+    const origin = pg.site || 'https://core.telegram.org';
+    const trimmed = html.trimStart();
     if (trimmed.startsWith('{') || trimmed.startsWith('[')) {
-      // raw data pages (machine-readable JSON dumps)
       title = rel.split('/').pop();
       body = 'Machine-readable data from the original site (JSON). View the [original](' + pg.url + ') for context.\n\n```json\n' + html.trim() + '\n```';
     } else {
-      let content = extractDiv(html, '<div id="dev_page_content">');
+      let content = extractDiv(html, '<div id="dev_page_content">')
+        || extractDiv(html, '<div class="tl_page">');
       if (!content) {
         const m = html.match(/<div class="dev_page_wrap">([\s\S]*?)<div class="footer_wrap">/);
-        if (!m) {
-          skipped.push(pg.path);
-          continue;
-        }
+        if (!m) continue;
         let raw = m[1].replace(/<div class="dev_page_head[\s\S]*?<\/div>\s*<\/div>/, '');
         raw = raw.replace(/<[^>]+>/g, '');
         body = '```\n' + decode(raw).trim() + '\n```';
@@ -190,10 +193,60 @@ async function main() {
       title = extractH1(html) || rel.split('/').pop() || 'Telegram';
       crumbs = extractCrumbs(html).map((c) => ({
         title: c.title,
-        url: closure.has(c.url.split('#')[0]) ? (c.url.endsWith('/') ? c.url : c.url + '/') : 'https://core.telegram.org' + c.url,
+        url: closure.has(c.url.split('#')[0].replace(/\/+$/, '')) ? (c.url.endsWith('/') ? c.url : c.url + '/') : 'https://core.telegram.org' + c.url,
       }));
     }
-    body = rewriteLinks(body);
+    records.push({ pg, normPath, rel, body, title, crumbs, origin });
+  }
+
+  const slugsByPath = new Map(records.map((r) => [r.normPath, headingSlugs(r.body)]));
+
+  // ---- link rewriting with anchor validation ----
+  const resolveAnchor = (targetSlugs, anchor) => {
+    let a = anchor.slice(1);
+    if (targetSlugs.has(a)) return a;
+    if (a.startsWith('q-') && targetSlugs.has(a.slice(2))) return a.slice(2); // original FAQ anchors
+    return null;
+  };
+
+  const rewriteLinks = (md, ownPath, origin) =>
+    md
+      .replace(/!\[([^\]]*)\]\(\/file\//g, '![$1](https://core.telegram.org/file/')
+      .replace(/!\[([^\]]*)\]\(\/img\//g, `![$1](${origin}/img/`)
+      .replace(/!\[([^\]]*)\]\(\/\//g, '![$1](https://')
+      // same-page anchors
+      .replace(/\]\((#[^)\s]+)\)/g, (m0, anchor) => {
+        const a = resolveAnchor(slugsByPath.get(ownPath) || new Set(), anchor);
+        return a === null ? m0 : `](#${a})`;
+      })
+      // absolute links to core.telegram.org: local when mirrored
+      .replace(/\]\(https:\/\/core\.telegram\.org(\/[^)#\s]*)(#[^)\s]*)?\)/g, (m0, p, anchor) => {
+        const np = (p || '/').replace(/\/+$/, '');
+        if (!closure.has(np)) return m0;
+        if (anchor) {
+          const a = resolveAnchor(slugsByPath.get(np) || new Set(), anchor);
+          if (a === null) return m0;
+          return `](${np}/#${a})`;
+        }
+        return `](${np}/)`;
+      })
+      // cross-page relative links
+      .replace(/\]\((?!https?:|#)(\/[^)#\s]*)(#[^)\s]*)?\)/g, (m0, p, anchor) => {
+        if (!closure.has(p.replace(/\/+$/, ''))) return `](${origin}${p}${anchor || ''})`;
+        if (!anchor) {
+          const base = p.endsWith('/') ? p : p + '/';
+          return `](${base})`;
+        }
+        const a = resolveAnchor(slugsByPath.get(p.replace(/\/+$/, '')) || new Set(), anchor);
+        if (a === null) return `](${origin}${p}${anchor})`;
+        const base = p.endsWith('/') ? p : p + '/';
+        return `](${base}#${a})`;
+      });
+
+  // ---- pass 2: write files ----
+  let written = 0;
+  for (const r of records) {
+    let body = rewriteLinks(r.body, r.normPath, r.origin);
     // the original <h1> lives outside the content div: restore it so every
     // page has exactly one h1 (a11y/SEO); ignore '#' lines inside code fences
     let inFence = false;
@@ -209,28 +262,27 @@ async function main() {
         break;
       }
     }
-    if (!hasH1) body = `# ${title}\n\n` + body;
+    if (!hasH1) body = `# ${r.title}\n\n` + body;
     // table header cells get scope for screen readers
     body = body.replace(/<th(\s|>)/g, '<th scope="col"$1');
     const description = deriveDescription(body);
     const fm = [
       '---',
-      `title: "${fmEscape(title)}"`,
-      `original: "${pg.url}"`,
-      `section: ${sectionOf(normPath)}`,
+      `title: "${fmEscape(r.title)}"`,
+      `original: "${r.pg.url}"`,
+      `section: ${sectionOf(r.normPath)}`,
       ...(description ? [`description: "${fmEscape(description)}"`] : []),
-      `crumbs: ${JSON.stringify(crumbs)}`,
+      `crumbs: ${JSON.stringify(r.crumbs)}`,
       'layout: layout.njk',
       '---',
       '',
     ].join('\n');
-    const dest = path.join(SRC, rel + '.md');
+    const dest = path.join(SRC, r.rel + '.md');
     await mkdir(path.dirname(dest), { recursive: true });
     await writeFile(dest, fm + '\n' + body + '\n');
     written++;
   }
   console.log('pages written to src/:', written);
-  if (skipped.length) console.log('skipped:', skipped.join(', '));
 }
 
 main().catch((e) => {

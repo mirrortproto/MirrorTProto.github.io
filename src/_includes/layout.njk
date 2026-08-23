@@ -79,7 +79,7 @@
 </header>
 <div class="layout">
   {% set showAll = section == 'other' %}
-  {% set currentGroup = 'schema' if section == 'ref' else section %}
+  {% set currentGroup = 'schema' if section == 'ref' else ('other' if section == 'faq' else section) %}
   <aside class="sidebar" aria-label="Pages in this section">
     {% for group in nav.sections %}
       {% if showAll or group.key == currentGroup %}

@@ -144,7 +144,7 @@ A placed bid cannot be retracted: the only three possible outcomes are a win (in
 
 Placed bids show up in the [Stars transaction history »](/api/stars/) with the `stargift_auction_bid` flag set.
 
-To place a bid, invoke [payments.getPaymentForm](/method/payments.getPaymentForm/), passing an [inputInvoiceStarGiftAuctionBid](/constructor/inputInvoiceStarGiftAuctionBid/), then follow the [usual payment flow »](/api/payments/#22-getting-invoice-info-about-the-product).
+To place a bid, invoke [payments.getPaymentForm](/method/payments.getPaymentForm/), passing an [inputInvoiceStarGiftAuctionBid](/constructor/inputInvoiceStarGiftAuctionBid/), then follow the [usual payment flow »](https://core.telegram.org/api/payments#22-getting-invoice-info-about-the-product).
 
 The constructor accepts the following parameters:
 

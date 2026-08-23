@@ -1,6 +1,6 @@
 ---
 title: "Nearby users&chats"
-original: "https://core.telegram.org/api/nearby"
+original: "https://core.telegram.org/api/nearby/"
 section: api
 description: "How to work with geolocation-based features like geogroups and the nearby users feature."
 crumbs: [{"title":"API","url":"/api/"},{"title":"Nearby users&chats","url":"/api/nearby/"}]

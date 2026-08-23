@@ -214,7 +214,7 @@ In the future, bits 3 and 4 in the `flags` field may be used to transmit new fie
 
 -   The type `True` with a single null constructor `true` plays a role similar to the void type in C/C++. It is especially useful as a bare type `%True`, alias `true`, because its serialization has zero length. For example, the `first_name:flags.1?string` constructor used above is in fact shorthand for (the as-yet unsupported) alternative-type general constructor `first_name:(flags.1?string:true)`.
 
-When directly used in a [conditional field](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) it may simply indicate the presence (absence) of a certain parameter with void type. If the conditional field exists, the associated parameter will not be populated; the conditional field simply exists and the existance value can be used to perform certain operations, example:
+When directly used in a [conditional field](/mtproto/TL-combinators/#conditional-fields) it may simply indicate the presence (absence) of a certain parameter with void type. If the conditional field exists, the associated parameter will not be populated; the conditional field simply exists and the existance value can be used to perform certain operations, example:
 
 ```
 user {flags:#} id:flags.0?string first_name:flags.1?string last_name:flags.2?string bot:flags.3?true reserved4:flags.4?False = User flags;

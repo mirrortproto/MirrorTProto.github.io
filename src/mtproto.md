@@ -89,7 +89,7 @@ Prior to a message (or a multipart message) being transmitted over a network usi
 
 The first thing a client application must do is [create an authorization key](/mtproto/auth_key/) which is normally generated when it is first run and almost never changes.
 
-To prevent attackers potentially intercepting encrypted messages from decrypting them _post factum_ by somehow appropriating the authorization key (for example, by stealing a device – even though in that case one could also gain access to all the information cached on the device without decrypting anything), MTProto supports [Perfect Forward Secrecy](https://core.telegram.org/api/pfs) in both [cloud chats](https://core.telegram.org/api/pfs) and [secret chats](https://core.telegram.org/api/end-to-end/pfs).
+To prevent attackers potentially intercepting encrypted messages from decrypting them _post factum_ by somehow appropriating the authorization key (for example, by stealing a device – even though in that case one could also gain access to all the information cached on the device without decrypting anything), MTProto supports [Perfect Forward Secrecy](/api/pfs/) in both [cloud chats](/api/pfs/) and [secret chats](/api/end-to-end/pfs/).
 
 #### Time Synchronization
 
@@ -135,7 +135,7 @@ To recap, using the [ISO/OSI stack as comparison](https://en.wikipedia.org/wiki/
 
 -   Layer 7 (Application): [High-level RPC API](#high-level-component-rpc-query-language-api)
 -   Layer 6 (Presentation): [Type Language](/mtproto/TL/)
--   Layer 5 (Session): [MTProto session](https://core.telegram.org/mtproto/description#session)
+-   Layer 5 (Session): [MTProto session](/mtproto/description/#session)
 -   Layer 4 (Transport):
     -   4.3: [MTProto transport protocol](#mtproto-transport)
     -   4.2: [MTProto obfuscation (optional)](/mtproto/mtproto-transports/#transport-obfuscation)

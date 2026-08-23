@@ -25,7 +25,7 @@ photoSizeProgressive#fa3efb95 type:string w:int h:int sizes:Vector<int> = PhotoS
 
 ### Photosize.type values
 
-See [PhotoSize.type values »](/api/files/#photosizetype-values).
+See [PhotoSize.type values »](https://core.telegram.org/api/files#photosizetype-values).
 
 ### Related pages
 

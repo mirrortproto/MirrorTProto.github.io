@@ -265,7 +265,7 @@ account.invalidateSignInCodes#ca8ae8ba codes:Vector<string> = Bool;
 
 Each phone number is limited to only a certain number of login attempts per day (e.g. 5, but this is subject to change), after which the API will return a FLOOD error until the next day. This might not be enough for testing the implementation of User Authorization flows in client applications.
 
-There are several reserved phone number prefixes for testing that your application handles redirects between DCs, sign up, sign in and 2FA flows correctly. These numbers are only available on **Test DCs** (their IP addresses for TCP transport are available in [API development tools](https://my.telegram.org/apps) panel after [api\_id was obtained](https://core.telegram.org/api/obtaining_api_id#obtaining-api-id), [URI format](https://core.telegram.org/mtproto/transports#uri-format) for HTTPS/WebSocket transport).
+There are several reserved phone number prefixes for testing that your application handles redirects between DCs, sign up, sign in and 2FA flows correctly. These numbers are only available on **Test DCs** (their IP addresses for TCP transport are available in [API development tools](https://my.telegram.org/apps) panel after [api\_id was obtained](/api/obtaining_api_id/#obtaining-api-id), [URI format](/mtproto/transports/#uri-format) for HTTPS/WebSocket transport).
 
 If you wish to emulate an application of a user associated with DC number X, it is sufficient to specify the phone number as `99966XYYYY`, where YYYY are random numbers, when registering the user. A user like this would always get XXXXX as the login confirmation code (the DC number, repeated five times). Note that the value of X must be in the range of 1-3 because there are only 3 Test DCs. When the flood limit is reached for any particular test number, just choose another number (changing the YYYY random part).
 
@@ -299,7 +299,7 @@ Only a small portion of the API methods are available to **unauthorized** users:
 -   [auth.reportMissingCode](/method/auth.reportMissingCode/) - Official apps only, reports that the SMS authentication code wasn't delivered.
 -   [auth.requestFirebaseSms](/method/auth.requestFirebaseSms/) - Request an SMS code via Firebase.
 -   [auth.resendCode](/method/auth.resendCode/) - Resend the login code via another medium, the phone code type is determined by the return value of the previous auth.sendCode/auth.resendCode: see [login](/api/auth/) for more info.
--   [auth.resetLoginEmail](/method/auth.resetLoginEmail/) - Reset the [login email »](https://core.telegram.org/api/auth#email-verification).
+-   [auth.resetLoginEmail](/method/auth.resetLoginEmail/) - Reset the [login email »](/api/auth/#email-verification).
 -   [auth.sendCode](/method/auth.sendCode/) - Send the verification code for login
 -   [auth.signIn](/method/auth.signIn/) - Signs in a user with a validated phone number.
 -   [auth.signUp](/method/auth.signUp/) - Registers a validated phone number in the system.

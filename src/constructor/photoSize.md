@@ -34,7 +34,7 @@ photoSize#75c78e60 type:string w:int h:int size:int = PhotoSize;
 
 ### Photosize.type values
 
-See [PhotoSize.type values »](/api/files/#photosizetype-values).
+See [PhotoSize.type values »](https://core.telegram.org/api/files#photosizetype-values).
 
 ### Related pages
 

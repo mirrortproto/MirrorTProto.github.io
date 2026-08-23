@@ -9,7 +9,7 @@ layout: layout.njk
 
 # Messages.BotPreparedInlineMessage
 
-Represents a [prepared inline message saved by a bot, to be sent to the user via a web app »](/api/bots/inline/#21-using-a-prepared-inline-message)
+Represents a [prepared inline message saved by a bot, to be sent to the user via a web app »](https://core.telegram.org/api/bots/inline#21-using-a-prepared-inline-message)
 
 ```
 messages.botPreparedInlineMessage#8ecf0511 id:string expire_date:int = messages.BotPreparedInlineMessage;

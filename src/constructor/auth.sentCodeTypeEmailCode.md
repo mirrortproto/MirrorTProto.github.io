@@ -31,7 +31,7 @@ Some methods require the client to verify if the data obtained from an external 
 
 #### [auth.resetLoginEmail](/method/auth.resetLoginEmail/)
 
-Reset the [login email »](https://core.telegram.org/api/auth#email-verification).
+Reset the [login email »](/api/auth/#email-verification).
 
 #### [Telegram Premium](/api/premium/)
 

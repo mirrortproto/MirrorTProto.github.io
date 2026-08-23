@@ -9,7 +9,7 @@ layout: layout.njk
 
 # inputInvoiceStarGiftPrepaidUpgrade
 
-[Separately prepay for the upgrade of a gift »](/api/gifts/#prepaying-for-someone-elses-upgrade).
+[Separately prepay for the upgrade of a gift »](https://core.telegram.org/api/gifts#prepaying-for-someone-elses-upgrade).
 
 ```
 inputInvoiceStarGiftPrepaidUpgrade#9a0b48b8 peer:InputPeer hash:string = InputInvoice;

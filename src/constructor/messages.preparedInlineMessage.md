@@ -9,7 +9,7 @@ layout: layout.njk
 
 # messages.preparedInlineMessage
 
-Represents a [prepared inline message received via a bot's mini app, that can be sent to some chats »](/api/bots/inline/#21-using-a-prepared-inline-message)
+Represents a [prepared inline message received via a bot's mini app, that can be sent to some chats »](https://core.telegram.org/api/bots/inline#21-using-a-prepared-inline-message)
 
 ```
 messages.preparedInlineMessage#ff57708d query_id:long result:BotInlineResult peer_types:Vector<InlineQueryPeerType> cache_time:int users:Vector<User> = messages.PreparedInlineMessage;

@@ -9,7 +9,7 @@ layout: layout.njk
 
 # messages.savePreparedInlineMessage
 
-Save a [prepared inline message](/api/bots/inline/#21-using-a-prepared-inline-message), to be shared by the user of the mini app using a [web\_app\_send\_prepared\_message event](/api/web-events/#web-app-send-prepared-message)
+Save a [prepared inline message](https://core.telegram.org/api/bots/inline#21-using-a-prepared-inline-message), to be shared by the user of the mini app using a [web\_app\_send\_prepared\_message event](/api/web-events/#web-app-send-prepared-message)
 
 ```
 messages.botPreparedInlineMessage#8ecf0511 id:string expire_date:int = messages.BotPreparedInlineMessage;

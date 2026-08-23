@@ -78,21 +78,21 @@ Example implementations: [tdlib](https://github.com/tdlib/td/tree/master/td/tele
 
 The following entities need to be manually specified by the user through formatting options.
 
--   [**messageEntityBold**](https://core.telegram.org/constructor/messageEntityBold) => `<b>bold</b>`, `<strong>bold</strong>`, `**bold**`
+-   [**messageEntityBold**](/constructor/messageEntityBold/) => `<b>bold</b>`, `<strong>bold</strong>`, `**bold**`
     
--   [_messageEntityItalic_](https://core.telegram.org/constructor/messageEntityItalic) => `<i>italic</i>`, `<em>italic</em>` `*italic*`
+-   [_messageEntityItalic_](/constructor/messageEntityItalic/) => `<i>italic</i>`, `<em>italic</em>` `*italic*`
     
--   [`messageEntityCode` »](https://core.telegram.org/constructor/messageEntityCode) => `<code>code</code>`, `` `code` ``
+-   [`messageEntityCode` »](/constructor/messageEntityCode/) => `<code>code</code>`, `` `code` ``
     
--   [messageEntityStrike](https://core.telegram.org/constructor/messageEntityStrike) => `<s>strike</s>`, `<strike>strike</strike>`, `<del>strike</del>`, `~~strike~~`
+-   [messageEntityStrike](/constructor/messageEntityStrike/) => `<s>strike</s>`, `<strike>strike</strike>`, `<del>strike</del>`, `~~strike~~`
     
--   [messageEntityUnderline](https://core.telegram.org/constructor/messageEntityUnderline) => `<u>underline</u>`
+-   [messageEntityUnderline](/constructor/messageEntityUnderline/) => `<u>underline</u>`
     
 -   [messageEntityBlockquote](/constructor/messageEntityBlockquote/) =>
     
     > Block quote
     
--   [`messageEntityPre` »](https://core.telegram.org/constructor/messageEntityPre) => `<pre language="c++">code</pre>`,
+-   [`messageEntityPre` »](/constructor/messageEntityPre/) => `<pre language="c++">code</pre>`,
     
     ```
       ```c++

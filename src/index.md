@@ -31,6 +31,12 @@ The transport/crypto layer beneath the API: message format, `auth_key` generatio
 
 The TL schema: all [constructors](/constructor/), [methods](/method/), [types](/type/), the [MTProto layer schema](/schema/mtproto/), the [end-to-end layer schema](/schema/end-to-end/) and machine-readable JSON dumps.
 
+### Other
+
+- [Telegram FAQ](/faq/) — the general user FAQ from telegram.org (the single mirrored page outside core.telegram.org).
+- [FAQ for the Technically Inclined](/techfaq/) — the technical FAQ: encryption, key exchange, updates, security questions.
+- [Advanced FAQ (MTProto v1.0)](/techfaq/mtproto_v1/) — the same deep-dive FAQ for the deprecated protocol version 1.0.
+
 ## About this site
 
 The site is built from a dated backup of the original pages (the backup is stored in this repository, see `README.md`); the build pipeline reads only from the backup. Found an error or an outdated page? [Open an issue](https://github.com/mirrortproto/mirrortproto.github.io/issues).

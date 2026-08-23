@@ -152,7 +152,7 @@ payments.getPaymentForm#37148dbb flags:# invoice:InputInvoice theme_params:flags
     -   Used to [pay to upgrade a Gift to a collectible gift](/api/gifts/#upgrade-a-gift-to-a-collectible-gift).  
         See the [collectible gifts »](/api/gifts/#collectible-gifts) documentation for more info.
 -   [inputInvoiceStarGiftPrepaidUpgrade](/constructor/inputInvoiceStarGiftPrepaidUpgrade/)
-    -   Used to [pay for someone to upgrade a Gift to a collectible gift](/api/gifts/#prepaying-for-someone-elses-upgrade).  
+    -   Used to [pay for someone to upgrade a Gift to a collectible gift](https://core.telegram.org/api/gifts#prepaying-for-someone-elses-upgrade).  
         See the [collectible gifts »](/api/gifts/#collectible-gifts) documentation for more info.
 -   [inputInvoiceStarGiftTransfer](/constructor/inputInvoiceStarGiftTransfer/)
     -   Used to [pay to transfer a Gift to another peer](/api/gifts/#transferring-collectible-gifts).  

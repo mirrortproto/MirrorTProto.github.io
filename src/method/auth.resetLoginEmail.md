@@ -9,7 +9,7 @@ layout: layout.njk
 
 # auth.resetLoginEmail
 
-Reset the [login email »](https://core.telegram.org/api/auth#email-verification).
+Reset the [login email »](/api/auth/#email-verification).
 
 ```
 auth.sentCode#5e002502 flags:# type:auth.SentCodeType phone_code_hash:string next_type:flags.1?auth.CodeType timeout:flags.2?int = auth.SentCode;

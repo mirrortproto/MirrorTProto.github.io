@@ -23,7 +23,7 @@ export default function (eleventyConfig) {
   // Heading anchors (keep Cyrillic/Latin as-is)
   eleventyConfig.amendLibrary('md', (mdLib) =>
     mdLib.use(markdownItAnchor, {
-      slugify: (s) => s.trim().toLowerCase().replace(/\s+/g, '-'),
+      slugify: (s) => s.trim().toLowerCase().replace(/[^a-z0-9]+/gi, '-').replace(/^-+|-+$/g, ''),
       permalink: markdownItAnchor.permalink.linkInsideHeader({
         symbol: '#',
         placement: 'after',

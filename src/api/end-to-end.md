@@ -37,7 +37,7 @@ This article describes the end-to-end encryption layer in the MTProto protocol v
 -   msg\_key depends not only on the message to be encrypted, but on a portion of the secret chat key as well;
 -   12..1024 padding bytes are used instead of 0..15 padding bytes in v.1.0.
 
-See also: [MTProto 2.0: Cloud Chats, server-client encryption](https://core.telegram.org/mtproto)
+See also: [MTProto 2.0: Cloud Chats, server-client encryption](/mtproto/)
 
 ### Key Generation
 

@@ -275,7 +275,7 @@ On the other hand, `random_id`s in [live drafts »](/api/bots/ai/#live-response-
 
 The _common_ update state is represented by the [updates.State](/type/updates.State/) constructor. When the user logs in for the first time, a call to [updates.getState](/method/updates.getState/) has to be made to store the latest update state (which will not be the absolute initial state, just the latest state at the current time). The common update state can also be fetched from [updates.differenceTooLong](/constructor/updates.differenceTooLong/).
 
-The _channel update state_ is represented simply by the `pts` of the event sequence: when first logging in, the initial channel state can be obtained from the [dialog](/constructor/dialog/) constructor when fetching dialogs, from [the full channel info](/constructor/channelFull/), or it can be received [as an updateChannelTooLong update](https://core.telegram.org/constructor/updateChannelTooLong).
+The _channel update state_ is represented simply by the `pts` of the event sequence: when first logging in, the initial channel state can be obtained from the [dialog](/constructor/dialog/) constructor when fetching dialogs, from [the full channel info](/constructor/channelFull/), or it can be received [as an updateChannelTooLong update](/constructor/updateChannelTooLong/).
 
 The _secondary update state_ is represented by the `qts` of the secret event sequence, it is contained in the [updates.State](/type/updates.State/) of the _common update state_.
 
@@ -354,7 +354,7 @@ Manually obtaining updates through the above methods is required in the followin
     [updates.getChannelDifference](/method/updates.getChannelDifference/) does _not_ have to be manually called for all channels on startup.  
     Instead, [updates.getChannelDifference](/method/updates.getChannelDifference/) will be automatically triggered (only for channels that need catching up) by a set of [updateChannelTooLong](/constructor/updateChannelTooLong/) updates that will be returned by the [updates.getDifference](/method/updates.getDifference/) call.
 -   Loss of sync: a gap was found in **seq** / **pts** / **qts** / **version** (as described above). Note that it may be useful to wait up to 0.5 seconds in this situation, as the missing updates may have been simply reordered by the server, and may arrive shortly after, filling the gap. If the gap is not filled within 0.5 seconds by another incoming update, proceed with the manual gap filling logic.
--   Session loss on the server: the client receives a [new session created notification](https://core.telegram.org/mtproto/service_messages#new-session-creation-notification). This can be caused by garbage collection on the MTProto server or a server reboot.
+-   Session loss on the server: the client receives a [new session created notification](/mtproto/service_messages/#new-session-creation-notification). This can be caused by garbage collection on the MTProto server or a server reboot.
 -   Incorrect update: the client cannot deserialize the received data.
 -   Incomplete update: the client is missing data about a chat/user from one of the shortened constructors, such as [updateShortChatMessage](/constructor/updateShortChatMessage/), etc.
 -   Long period without updates: no updates for 15 minutes or longer.

@@ -177,7 +177,7 @@ Payload structure:
 Envelope description:
 
 -   Length: length+seqno+payload+crc length encoded as 4 length bytes (little endian, the length of the length field must be included, too)
--   Seqno: the TCP sequence number for this TCP connection (different from the [MTProto sequence number](https://core.telegram.org/mtproto/description#message-sequence-number-msg-seqno)): the first packet sent is numbered 0, the next one 1, etc.
+-   Seqno: the TCP sequence number for this TCP connection (different from the [MTProto sequence number](/mtproto/description/#message-sequence-number-msg-seqno)): the first packet sent is numbered 0, the next one 1, etc.
 -   payload: MTProto payload
 -   crc: 4 CRC32 bytes computed using length, sequence number, and payload together.
 

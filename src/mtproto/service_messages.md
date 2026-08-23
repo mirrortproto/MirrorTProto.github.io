@@ -136,7 +136,7 @@ message msg_id:long seqno:int bytes:int body:Object = Message;
 
 `bytes` is the number of bytes in the body serialization. All messages in a container must have msg\_id lower than that of the container itself. A container does not require an acknowledgment and may not carry other simple containers. When messages are re-sent, they may be combined into a container in a different manner or sent individually.
 
-MTProto container can have at have at most `1024` messages. Clients should group acknowledgments, state requests and message resend requests into three separate [`msgs_ack` »](/mtproto/service_messages_about_messages/#acknowledgment-of-receipt), [`msgs_state_req` »](https://core.telegram.org/mtproto/service_messages_about_messages#request-for-message-status-information), [`msg_resend_req` »](/mtproto/service_messages_about_messages/#explicit-request-to-re-send-messages) service messages with at most 8192 IDs each.
+MTProto container can have at have at most `1024` messages. Clients should group acknowledgments, state requests and message resend requests into three separate [`msgs_ack` »](/mtproto/service_messages_about_messages/#acknowledgment-of-receipt), [`msgs_state_req` »](/mtproto/service_messages_about_messages/#request-for-message-status-information), [`msg_resend_req` »](/mtproto/service_messages_about_messages/#explicit-request-to-re-send-messages) service messages with at most 8192 IDs each.
 
 Empty containers are also allowed. They are used by the server, for example, to respond to an HTTP request when the timeout specified in http\_wait expires, and there are no messages to transmit.
 

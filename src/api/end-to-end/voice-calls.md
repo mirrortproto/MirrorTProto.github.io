@@ -9,7 +9,7 @@ layout: layout.njk
 
 # End-to-End Encrypted Voice Calls
 
-> This document describes encryption in **voice calls** as implemented in Telegram apps with versions **< 7.0**. See [this document](https://core.telegram.org/api/end-to-end/video-calls) for details on encryption used in **voice and video calls** in app versions released on **August 14, 2020** and later.
+> This document describes encryption in **voice calls** as implemented in Telegram apps with versions **< 7.0**. See [this document](/api/end-to-end/video-calls/) for details on encryption used in **voice and video calls** in app versions released on **August 14, 2020** and later.
 
 ##### Related articles
 
@@ -67,7 +67,7 @@ The `random_bytes` string should contain at least 7 bytes of random data. The fi
 
 ### MTProto encryption
 
-Once the data is encapsulated in `DecryptedDataBlock`, it is [TL-serialized](/mtproto/TL/) and encrypted with [MTProto](https://core.telegram.org/mtproto/description#defining-aes-key-and-initialization-vector), using `key` instead of `auth_key`; the parameter _x_ is to be set to _0_ for messages from _A_ to _B_, and to _8_ for messages in the opposite direction. Encrypted data are prepended by the 128-bit `msg_key` (usual for MTProto); before that, either the 128-bit `voice_call_id` (if P2P is used) or the `peer_tag` (if reflectors are used) is prepended. The resulting data packet is sent by UDP either directly to the other party (if P2P is possible) or to the Telegram relay servers (reflectors).
+Once the data is encapsulated in `DecryptedDataBlock`, it is [TL-serialized](/mtproto/TL/) and encrypted with [MTProto](/mtproto/description/#defining-aes-key-and-initialization-vector), using `key` instead of `auth_key`; the parameter _x_ is to be set to _0_ for messages from _A_ to _B_, and to _8_ for messages in the opposite direction. Encrypted data are prepended by the 128-bit `msg_key` (usual for MTProto); before that, either the 128-bit `voice_call_id` (if P2P is used) or the `peer_tag` (if reflectors are used) is prepended. The resulting data packet is sent by UDP either directly to the other party (if P2P is possible) or to the Telegram relay servers (reflectors).
 
 ## Key Verification
 

@@ -60,7 +60,7 @@ Paid media is represented by a [messageMediaPaidMedia](/constructor/messageMedia
     -   [messageExtendedMediaPreview](/constructor/messageExtendedMediaPreview/), for media the current user hasn't bought yet, **optionally** contains basic info about the media (width, height, [extremely low resolution thumbnail](/api/files/#stripped-thumbnails), video duration for videos).
     -   [messageExtendedMedia](/constructor/messageExtendedMedia/), for media the current user has already purchased, containing the actual [messageMediaPhoto](/constructor/messageMediaPhoto/)/[messageMediaDocument](/constructor/messageMediaDocument/) (video) that can be downloaded and viewed [as usual »](/api/files/).
 
-To purchase paid media, follow the [usual payment flow »](/api/payments/#22-getting-invoice-info-about-the-product), passing an [inputInvoiceMessage](/constructor/inputInvoiceMessage/) with the peer and message ID of the paid media.
+To purchase paid media, follow the [usual payment flow »](https://core.telegram.org/api/payments#22-getting-invoice-info-about-the-product), passing an [inputInvoiceMessage](/constructor/inputInvoiceMessage/) with the peer and message ID of the paid media.
 
 Once the payment succeeds, an [updateMessageExtendedMedia](/constructor/updateMessageExtendedMedia/) will be emitted, replacing the [messageExtendedMediaPreview](/constructor/messageExtendedMediaPreview/) constructors associated with the message with [messageExtendedMedia](/constructor/messageExtendedMedia/) constructors.  
 If the media was posted by a bot, it will also receive an [updateBotPurchasedPaidMedia](/constructor/updateBotPurchasedPaidMedia/).  

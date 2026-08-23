@@ -9,7 +9,7 @@ layout: layout.njk
 
 # updateNewMessage
 
-New message in a private chat or in a [basic group](https://core.telegram.org/api/channel#basic-groups).
+New message in a private chat or in a [basic group](/api/channel/#basic-groups).
 
 ```
 updateNewMessage#1f2b0afd message:Message pts:int pts_count:int = Update;

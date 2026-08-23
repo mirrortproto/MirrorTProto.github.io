@@ -62,11 +62,11 @@ Each plaintext message to be encrypted in MTProto always contains the following 
 
 ###### **Note 2**
 
-See additional comments on our use of [IGE](https://core.telegram.org/techfaq#q-do-you-use-ige-ige-is-broken), [SHA-1](https://core.telegram.org/techfaq#q-why-do-you-use-sha-1-not-sha-256-or-x-insert-your-favorite-has) and [message authentication](https://core.telegram.org/techfaq#q-how-are-mtproto-messages-authenticated).
+See additional comments on our use of [IGE](/techfaq/#q-do-you-use-ige-ige-is-broken), [SHA-1](https://core.telegram.org/techfaq#q-why-do-you-use-sha-1-not-sha-256-or-x-insert-your-favorite-has) and [message authentication](/techfaq/#q-how-are-mtproto-messages-authenticated).
 
 ###### **Note 3**
 
-Telegram's **End-to-end** encrypted Secret Chats are using an additional layer of encryption on top of the described above. See [Secret Chats, End-to-End encryption](https://core.telegram.org/api/end-to-end) for details.
+Telegram's **End-to-end** encrypted Secret Chats are using an additional layer of encryption on top of the described above. See [Secret Chats, End-to-End encryption](/api/end-to-end/) for details.
 
 ### Brief Component Summary
 

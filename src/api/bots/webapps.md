@@ -645,13 +645,13 @@ Params: a JSON object with the following fields:
 
 -   `error` - Contains the text of the RPC error returned by [messages.getPreparedInlineMessage](/method/messages.getPreparedInlineMessage/), or `USER_DECLINED` if the user aborted the sharing process, or `MESSAGE_SEND_FAILED` if sending fails for another reason.
 
-Emitted by clients in case of errors during the [share prepared messages flow](/api/bots/inline/#21-using-a-prepared-inline-message), initiated by the [web\_app\_send\_prepared\_message »](/api/web-events/#web-app-send-prepared-message) event.
+Emitted by clients in case of errors during the [share prepared messages flow](https://core.telegram.org/api/bots/inline#21-using-a-prepared-inline-message), initiated by the [web\_app\_send\_prepared\_message »](/api/web-events/#web-app-send-prepared-message) event.
 
 #### `prepared_message_sent`
 
 Params: `null`
 
-Emitted by clients when the [share prepared messages flow](/api/bots/inline/#21-using-a-prepared-inline-message) initiated by the [web\_app\_send\_prepared\_message »](/api/web-events/#web-app-send-prepared-message) event completes successfully.
+Emitted by clients when the [share prepared messages flow](https://core.telegram.org/api/bots/inline#21-using-a-prepared-inline-message) initiated by the [web\_app\_send\_prepared\_message »](/api/web-events/#web-app-send-prepared-message) event completes successfully.
 
 #### `safe_area_changed`
 

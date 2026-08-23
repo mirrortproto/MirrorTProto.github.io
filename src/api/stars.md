@@ -112,7 +112,7 @@ Once the user has chosen a specific star topup/gift option, invoke [payments.get
 
 The `spend_purpose_peer` of [inputStorePaymentStarsTopup »](/constructor/inputStorePaymentStarsTopup/) should be populated with the peer where the topup process was initiated due to low funds (i.e. a bot for bot payments, a channel for paid media/reactions, etc); leave this flag unpopulated if the topup flow was not initiated when attempting to spend more Stars than currently available on the account's balance.
 
-Then, follow the [invoice payment flow as described in the payments documentation »](/api/payments/#22-getting-invoice-info-about-the-product).
+Then, follow the [invoice payment flow as described in the payments documentation »](https://core.telegram.org/api/payments#22-getting-invoice-info-about-the-product).
 
 More alternative payment flows are also available:
 
@@ -284,7 +284,7 @@ payments.getStarsStatus#4ea9b3bf flags:# ton:flags.0?true peer:InputPeer = payme
 
 The number of available stars on the user's balance may be fetched by invoking [payments.getStarsStatus](/method/payments.getStarsStatus/) with peer=[inputPeerSelf](/constructor/inputPeerSelf/) over the business connection.
 
-To transfer the stars, invoke [payments.getPaymentForm](/method/payments.getPaymentForm/) with [inputInvoiceBusinessBotTransferStars](/constructor/inputInvoiceBusinessBotTransferStars/) (with `bot`\=[inputPeerSelf](/constructor/inputPeerSelf/)), and follow the usual [payment flow »](/api/payments/#22-getting-invoice-info-about-the-product), **with all method calls executed over the business connection**.
+To transfer the stars, invoke [payments.getPaymentForm](/method/payments.getPaymentForm/) with [inputInvoiceBusinessBotTransferStars](/constructor/inputInvoiceBusinessBotTransferStars/) (with `bot`\=[inputPeerSelf](/constructor/inputPeerSelf/)), and follow the usual [payment flow »](https://core.telegram.org/api/payments#22-getting-invoice-info-about-the-product), **with all method calls executed over the business connection**.
 
 ### My Stars deep links
 

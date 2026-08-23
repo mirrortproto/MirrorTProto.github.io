@@ -52,7 +52,7 @@ For example:
     "layer": 225,
     "constants": {
         "webpage type": {
-            "description": "Web page type values from the [webPage](https://core.telegram.org/constructor/webPage) constructor.",
+            "description": "Web page type values from the [webPage](/constructor/webPage/) constructor.",
             "type": "map",
             "entries": {
                 "telegram_nft": "Preview of a collectible gift link.",
@@ -60,7 +60,7 @@ For example:
             }
         },
         "settings paths": {
-            "description": "In-app settings deep link paths openable via [settings deep links »](https://core.telegram.org/api/links#settings-links).",
+            "description": "In-app settings deep link paths openable via [settings deep links »](/api/links/#settings-links).",
             "type": "list",
             "entries": [
                 "appearance",

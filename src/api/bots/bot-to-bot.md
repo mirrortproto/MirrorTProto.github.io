@@ -73,7 +73,7 @@ Only the sending bot needs to enable Bot-to-Bot Communication Mode.
 
 Obtain the `connection_id` from [botBusinessConnection](/constructor/botBusinessConnection/), then invoke [messages.sendMessage](/method/messages.sendMessage/) through [invokeWithBusinessConnection](/method/invokeWithBusinessConnection/). The available operations still depend on the [businessBotRights](/constructor/businessBotRights/) granted for that connection.
 
-Messages received through the connection are delivered as [updateBotNewBusinessMessage](/constructor/updateBotNewBusinessMessage/) updates, using the `qts` [update sequence »](/api/updates/#qts-secret-chats-amp-bots).
+Messages received through the connection are delivered as [updateBotNewBusinessMessage](/constructor/updateBotNewBusinessMessage/) updates, using the `qts` [update sequence »](https://core.telegram.org/api/updates#qts-secret-chats-amp-bots).
 
 ### Loop prevention
 

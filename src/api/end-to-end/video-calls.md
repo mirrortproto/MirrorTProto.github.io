@@ -46,7 +46,7 @@ It is of paramount importance to accept each update only once for each instance 
 
 ## Encryption
 
-> This document describes encryption in **voice and video calls** as implemented in Telegram apps with versions **7.0** and above. See [this document](https://core.telegram.org/api/end-to-end/voice-calls) for details on encryption used in **voice calls** in app versions released before **August 14, 2020**.
+> This document describes encryption in **voice and video calls** as implemented in Telegram apps with versions **7.0** and above. See [this document](/api/end-to-end/voice-calls/) for details on encryption used in **voice calls** in app versions released before **August 14, 2020**.
 
 The [Telegram Voice and Video Call Library](https://github.com/TelegramMessenger/tgcalls) uses an optimized version of [MTProto 2.0](https://core.telegram.org/) to send and receive **packets**, consisting of one or more end-to-end encrypted **messages** of various types ([_ice_](https://webrtcglossary.com/ice/) _candidates list, video formats, remote video status, audio stream data, video stream data, message ack_ or _empty_).
 

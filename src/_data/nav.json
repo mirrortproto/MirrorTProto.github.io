@@ -829,6 +829,27 @@
      "title": "Types (reference)"
     }
    ]
+  },
+  {
+   "key": "other",
+   "title": "Other",
+   "items": [
+    {
+     "url": "/faq/",
+     "title": "Telegram FAQ",
+     "section": "faq"
+    },
+    {
+     "url": "/techfaq/",
+     "title": "FAQ for the Technically Inclined",
+     "section": "faq"
+    },
+    {
+     "url": "/techfaq/mtproto_v1/",
+     "title": "FAQ for the Technically Inclined (MTProto v.1.0)",
+     "section": "faq"
+    }
+   ]
   }
  ]
 }

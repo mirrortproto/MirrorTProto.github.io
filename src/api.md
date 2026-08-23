@@ -158,7 +158,7 @@ Important checks required in your client application.
 
 Binding temporary authorization keys to permanent ones.
 
-#### [End-to-End Encryption in Voice and Video Calls](https://core.telegram.org/api/end-to-end/video-calls)
+#### [End-to-End Encryption in Voice and Video Calls](/api/end-to-end/video-calls/)
 
 End-to-end-encrypted calls.
 
@@ -511,7 +511,7 @@ Telegram apps support generating, sharing and synchronizing app themes.
 
 ### [Sponsored messages](/api/sponsored-messages/)
 
-If your app allows accessing content from Telegram [channels](https://telegram.org/tour/channels), you must include support for [official sponsored messages](https://core.telegram.org/api/sponsored-messages) in Telegram channels.
+If your app allows accessing content from Telegram [channels](https://telegram.org/tour/channels), you must include support for [official sponsored messages](/api/sponsored-messages/) in Telegram channels.
 
 ### [Channel and bot ad revenue](/api/revenue/)
 
