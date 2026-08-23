@@ -10,7 +10,7 @@ layout: layout.njk
 
 <link rel="stylesheet" href="/pagefind/pagefind-ui.css">
 
-Full-text search over the whole mirror: articles, constructors, methods and types. Use the **Section** filter below to limit the search to Telegram API, MTProto or Schema pages.
+Full-text search over the whole mirror: articles, constructors, methods and types. Use the **Section** filter below to limit the search to Telegram API, MTProto, Schema or Other (FAQ) pages.
 
 <div id="search-page"></div>
 

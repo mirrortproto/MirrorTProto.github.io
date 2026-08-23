@@ -63,7 +63,7 @@
 </script>
 {% endif %}
 </head>
-<body{% if section and section != 'other' %} data-pagefind-filter="section:{% if section == 'ref' %}schema{% else %}{{ section }}{% endif %}"{% endif %}>
+<body{% if section and section != 'other' %} data-pagefind-filter="section:{% if section == 'ref' %}schema{% elif section == 'faq' %}other{% else %}{{ section }}{% endif %}"{% endif %}>
 <a class="skip-link" href="#content">Skip to content</a>
 <header class="site-header">
   <div class="header-inner">
@@ -72,6 +72,7 @@
       <a href="/api/" {% if section == 'api' %}class="active" aria-current="section"{% endif %}>API</a>
       <a href="/mtproto/" {% if section == 'mtproto' %}class="active" aria-current="section"{% endif %}>MTProto</a>
       <a href="/schema/" {% if section == 'schema' or section == 'ref' %}class="active" aria-current="section"{% endif %}>Schema</a>
+      <a href="/faq/" {% if section == 'faq' %}class="active" aria-current="section"{% endif %}>FAQ</a>
     </nav>
     <form class="site-search" action="/search/" method="get" role="search">
       <span class="search-field">

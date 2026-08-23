@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://mirrortproto.github.io/search/</loc><lastmod>2026-08-23</lastmod></url>
 <url><loc>https://mirrortproto.github.io/</loc><lastmod>2026-08-23</lastmod></url>
 <url><loc>https://mirrortproto.github.io/api/</loc><lastmod>2026-08-23</lastmod></url>
 <url><loc>https://mirrortproto.github.io/api/account-deletion/</loc><lastmod>2026-08-23</lastmod></url>
@@ -3190,4 +3189,5 @@
 <url><loc>https://mirrortproto.github.io/constructor/</loc><lastmod>2026-08-23</lastmod></url>
 <url><loc>https://mirrortproto.github.io/method/</loc><lastmod>2026-08-23</lastmod></url>
 <url><loc>https://mirrortproto.github.io/type/</loc><lastmod>2026-08-23</lastmod></url>
+<url><loc>https://mirrortproto.github.io/search/</loc><lastmod>2026-08-23</lastmod></url>
 </urlset>
