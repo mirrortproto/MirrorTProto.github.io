@@ -15,7 +15,7 @@ Prior to a message (or a multipart message) being transmitted over a network usi
 
 A user key together with the message key define an actual 256-bit key and a 256-bit initialization vector, which is what encrypts the message using AES-256 encryption with infinite garble extension (IGE). Note that the initial part of the message to be encrypted contains variable data (session, message ID, sequence number, server salt) that obviously influences the message key (and thus the AES key and iv). The message key is defined as the 128 lower-order bits of the SHA1 of the message body (including session, message ID, etc.) Multipart messages are encrypted as a single message.
 
-[![MTProto server-client encryption, cloud chats](https://core.telegram.org/file/811140187/1/sfBQV3Trp80/3a3c48bad836b853ed)](https://core.telegram.org/file/811140187/1/sfBQV3Trp80/3a3c48bad836b853ed)
+[<img src="https://core.telegram.org/file/811140187/1/sfBQV3Trp80/3a3c48bad836b853ed" alt="MTProto server-client encryption, cloud chats" class="dev_page_image">](https://core.telegram.org/file/811140187/1/sfBQV3Trp80/3a3c48bad836b853ed)
 
 ### Terminology
 

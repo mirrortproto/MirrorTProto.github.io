@@ -316,7 +316,7 @@ If they don't know your phone number, they can find you in these cases:
 
 Telegram allows third-party services to [send verification codes](https://telegram.org/blog/gifts-verification-platform#verification-platform) to their users via Telegram. These codes only appear in the **verified _'Verification Codes'_ chat**, and let you tap to instantly copy the code.
 
-[![](https://core.telegram.org/file/400780400405/5/DJtYqf_wYiU.829923/a5d5fc8092802cab46 "verif codes.png, 437.12KB")](https://telegram.org/file/400780400405/5/DJtYqf_wYiU.829923/a5d5fc8092802cab46)
+[<img src="https://telegram.org/file/400780400405/5/DJtYqf_wYiU.829923/a5d5fc8092802cab46" title="verif codes.png, 437.12KB" width="480" class="dev_page_image">](https://telegram.org/file/400780400405/5/DJtYqf_wYiU.829923/a5d5fc8092802cab46)
 
 > Services that do not specify a name or profile picture for their codes will appear with the default name and photo of _'Verification Codes'_.
 
@@ -373,6 +373,8 @@ If you're not sharing your last seen timestamp with someone and don't do anythin
 #### Q: Can I delete my messages?
 
 Yes. You can always delete any messages you **sent** or **received** for _both sides_ in _any_ one-on-one conversation (in groups, it's still your own messages only). You can also clear the entire chat history on both ends. On Telegram, deleted messages do not leave a mark in the chat.
+
+<div class="blog_video_player_wrap" style="max-width: 480px; margin: 20px auto 20px;"><video class="blog_video_player tl_blog_vid_autoplay" onclick="videoTogglePlay(this)" autoplay="" loop="" controls="" muted="" poster="https://telegram.org/file/811140695/1947/Mc6JXlUuMPQ.58001/3107f1f4ed0eb44baf" style="max-width: 480px;" title="Unsend any message" alt="Unsend any message"><source src="https://telegram.org/file/811140386/137b/JsWWEUuVuKE.867807.mp4/09a0afd95f3285e521" type="video/mp4"></video></div>
 
 Together with privacy settings for [forwarded messages](https://telegram.org/blog/unsend-privacy-emoji#anonymous-forwarding), this makes exchanging Telegram messages similar to talking face to face (without a tape recorder). As a result, users no longer need to worry about the data accumulating in their chats over the years. Both parties in a conversation have full control over what does and what doesn't belong to their online identity.
 
@@ -754,9 +756,9 @@ Many relevant settings are available in _Settings > Privacy & Security_ (on iOS,
 
 For other data:
 
--   To delete your profile pictures, open your profile > tap on your profile picture > ![Menu Android](https://core.telegram.org/file/464001466/3/TUYKwGzdaIM.984/c472ac8f01ebdd57c8) > Delete.
+-   To delete your profile pictures, open your profile > tap on your profile picture > <img class="icon" src="https://telegram.org/file/464001466/3/TUYKwGzdaIM.984/c472ac8f01ebdd57c8" alt="Menu Android"> > Delete.
 -   To delete the stories you posted go to **My Stories**, then hold to select and tap on the delete icon in the top right corner.
--   To delete your call history go to Calls > ![Menu Android](https://core.telegram.org/file/464001466/3/TUYKwGzdaIM.984/c472ac8f01ebdd57c8) / ![Menu iOS](https://core.telegram.org/file/464001448/2/VHd-rEO8AMI.2898/1d9c403b5d0d54dbb0) > Delete All Calls.
+-   To delete your call history go to Calls > <img class="icon" src="https://telegram.org/file/464001466/3/TUYKwGzdaIM.984/c472ac8f01ebdd57c8" alt="Menu Android"> / <img class="icon" src="https://telegram.org/file/464001448/2/VHd-rEO8AMI.2898/1d9c403b5d0d54dbb0" alt="Menu iOS"> > Delete All Calls.
 
 #### Q: My phone was stolen, what do I do?
 
@@ -793,6 +795,8 @@ Purchasing gifts, sending [Paid Messages](https://telegram.org/blog/star-message
 If you are already logged in to Telegram on a device, you can **create a passkey** that allows you to enter your Telegram account the same way you **unlock your device**. With a passkey, you can log in to your device simply by entering a **PIN code** or **biometric data** like your Face ID or fingerprint scan.
 
 Passkeys are an **additional login method** that can be used **instead of SMS** to instantly enter your account – even if you are traveling or don't have SMS service. Passkeys are also **more secure** than SMS codes, helping **protect users** from unauthorized access to their account.
+
+<div class="blog_video_player_wrap" style="max-width: 600px; margin: 20px auto 20px;"><div><video class="blog_video_player tl_blog_vid_autoplay" onclick="videoTogglePlay(this)" autoplay="" loop="" controls="" muted="" poster="https://telegram.org/file/400780400876/4/0W8yu8Yn5Aw.39054.jpg/0f875debd431bfe573" style="max-width: 600px;" alt="Passkeys"><source src="https://telegram.org/file/400780400419/4/mcnSe9NxPy4.1437516.mp4/672b9e27512ca78eda" type="video/mp4"></video></div></div>
 
 > Your passkeys can be managed in _Settings > Privacy and Security > Passkeys_ from any app — which **shows detailed info** for each of your passkeys, like their **creation date** and when they were **last used** to log in.
 
@@ -943,9 +947,7 @@ If you have recently used one of our apps on **another device** (it could also b
 
 To receive such a code, just check Telegram from any of your connected devices. You will find it in the chat with Telegram, a verified profile with a blue check:
 
-[![](https://core.telegram.org/file/811140682/1a34/C6cNb93Sl4w.36331/8d856ce132fda22ee0 "Login via Telegram")](https://telegram.org/file/811140682/1a34/C6cNb93Sl4w.36331/8d856ce132fda22ee0)
-
-Login code sent via Telegram
+<div class="blog_image_wrap"><a href="https://telegram.org/file/811140682/1a34/C6cNb93Sl4w.36331/8d856ce132fda22ee0" target="_blank"><img src="https://telegram.org/file/811140682/1a34/C6cNb93Sl4w.36331/8d856ce132fda22ee0" title="Login via Telegram"></a><p>Login code sent via Telegram</p></div>
 
 **WARNING!** Please note that getting codes via Telegram should not be considered an alternative to using an **up-to-date phone number**. In case of a change in numbers, always make sure [Telegram is connected](#q-how-do-i-change-my-phone-number) to a phone number **you control**, otherwise you risk losing access to your account forever.
 

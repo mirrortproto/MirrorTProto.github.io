@@ -13,12 +13,12 @@ Info about a gifted Telegram Premium subscription
 
 This service message should be displayed below the appropriate sticker from the [inputStickerSetPremiumGifts »](/constructor/inputStickerSetPremiumGifts/) [stickerset »](/api/stickers/#stickersets):
 
--   If `months == 1`, choose the sticker with emoji equal to "![1️⃣](https://telegram.org/img/emoji/40/31E283A3.png)"
--   If `months == 3`, choose the sticker with emoji equal to "![2️⃣](https://telegram.org/img/emoji/40/32E283A3.png)"
--   If `months == 6`, choose the sticker with emoji equal to "![3️⃣](https://telegram.org/img/emoji/40/33E283A3.png)"
--   If `months == 12`, choose the sticker with emoji equal to "![4️⃣](https://telegram.org/img/emoji/40/34E283A3.png)"
--   If `months == 24`, choose the sticker with emoji equal to "![5️⃣](https://telegram.org/img/emoji/40/35E283A3.png)"
--   Otherwise, fallback to the sticker with emoji equal to "![1️⃣](https://telegram.org/img/emoji/40/31E283A3.png)"
+-   If `months == 1`, choose the sticker with emoji equal to "<img class="emoji" src="https://telegram.org/img/emoji/40/31E283A3.png" width="20" height="20" alt="1️⃣">"
+-   If `months == 3`, choose the sticker with emoji equal to "<img class="emoji" src="https://telegram.org/img/emoji/40/32E283A3.png" width="20" height="20" alt="2️⃣">"
+-   If `months == 6`, choose the sticker with emoji equal to "<img class="emoji" src="https://telegram.org/img/emoji/40/33E283A3.png" width="20" height="20" alt="3️⃣">"
+-   If `months == 12`, choose the sticker with emoji equal to "<img class="emoji" src="https://telegram.org/img/emoji/40/34E283A3.png" width="20" height="20" alt="4️⃣">"
+-   If `months == 24`, choose the sticker with emoji equal to "<img class="emoji" src="https://telegram.org/img/emoji/40/35E283A3.png" width="20" height="20" alt="5️⃣">"
+-   Otherwise, fallback to the sticker with emoji equal to "<img class="emoji" src="https://telegram.org/img/emoji/40/31E283A3.png" width="20" height="20" alt="1️⃣">"
 
 ```
 messageActionGiftPremium#48e91302 flags:# currency:string amount:long days:int crypto_currency:flags.0?string crypto_amount:flags.0?long message:flags.1?TextWithEntities = MessageAction;

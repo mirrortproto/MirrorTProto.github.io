@@ -182,6 +182,16 @@
       }
     });
   })();
+  (function () {
+    // hide the alt-text placeholder once the image has actually loaded
+    document.querySelectorAll('.img-box').forEach(function (box) {
+      var im = box.querySelector('img');
+      if (!im) return;
+      var ok = function () { box.classList.add('img-ok'); };
+      if (im.complete && im.naturalWidth > 0) ok();
+      else im.addEventListener('load', ok);
+    });
+  })();
 </script>
 </body>
 </html>

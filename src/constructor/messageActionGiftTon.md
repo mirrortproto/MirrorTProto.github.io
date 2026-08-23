@@ -13,9 +13,9 @@ You were gifted some Grams.
 
 This service message should be displayed below the appropriate sticker from the [inputStickerSetTonGifts »](/constructor/inputStickerSetTonGifts/) [stickerset »](/api/stickers/#stickersets):
 
--   If `crypto_amount <= 10_000_000_000`, choose the sticker with emoji equal to "![2️⃣](https://telegram.org/img/emoji/40/32E283A3.png)"
--   If `crypto_amount <= 50_000_000_000`, choose the sticker with emoji equal to "![1️⃣](https://telegram.org/img/emoji/40/31E283A3.png)"
--   Otherwise, choose the sticker with emoji equal to "![3️⃣](https://telegram.org/img/emoji/40/33E283A3.png)"
+-   If `crypto_amount <= 10_000_000_000`, choose the sticker with emoji equal to "<img class="emoji" src="https://telegram.org/img/emoji/40/32E283A3.png" width="20" height="20" alt="2️⃣">"
+-   If `crypto_amount <= 50_000_000_000`, choose the sticker with emoji equal to "<img class="emoji" src="https://telegram.org/img/emoji/40/31E283A3.png" width="20" height="20" alt="1️⃣">"
+-   Otherwise, choose the sticker with emoji equal to "<img class="emoji" src="https://telegram.org/img/emoji/40/33E283A3.png" width="20" height="20" alt="3️⃣">"
 
 ```
 messageActionGiftTon#a8a3c699 flags:# currency:string amount:long crypto_currency:string crypto_amount:long transaction_id:flags.0?string = MessageAction;

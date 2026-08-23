@@ -8,11 +8,98 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ 'src/apple-touch-icon.png': 'apple-touch-icon.png' });
   eleventyConfig.addPassthroughCopy({ 'src/manifest.webmanifest': 'manifest.webmanifest' });
 
-  // defer offscreen images (content images come from the original markup)
-  eleventyConfig.addTransform('img-lazy', (content, page) => {
+  // images: every <img> (standalone or linked) is wrapped into a .img-box
+  // placeholder that shows a broken-image icon + the original alt/title text
+  // until the image actually loads (then JS adds .img-ok and hides the chip).
+  const entDecode = (s) =>
+    s.replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"')
+      .replace(/&#39;/g, "'").replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&');
+  const entEncode = (s) =>
+    s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  const BROKEN_SVG =
+    '<svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true">' +
+    '<rect x="1.75" y="2.75" width="12.5" height="10.5" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.3"/>' +
+    '<path d="M2 10.5l3.2-2.8 2.6 2.2 3.4-3 2.8 2.6" fill="none" stroke="currentColor" stroke-width="1.3"/>' +
+    '<line x1="4.2" y1="4.2" x2="11.8" y2="11.8" stroke="currentColor" stroke-width="1.3"/></svg>';
+
+  function boxWrap(innerHtml, imgTag) {
+    const attr = (n) => {
+      const m = imgTag.match(new RegExp('\\s' + n + '="([^"]*)"'));
+      return m ? m[1] : null;
+    };
+    const width = parseInt(attr('width') || '', 10);
+    const height = parseInt(attr('height') || '', 10);
+    const cls = attr('class') || '';
+    const style = attr('style') || '';
+    const text = entDecode(attr('alt') || attr('title') || '').trim();
+    const icon = /(^|\s)(icon|emoji)(\s|$)/.test(cls) || (width > 0 && width <= 40);
+
+    const boxDecls = [];
+    const imgDecls = [];
+    for (const d of style.split(';').map((s) => s.trim()).filter(Boolean)) {
+      const prop = d.split(':')[0].trim().toLowerCase();
+      if (/^(float|max-width|margin|margin-(top|bottom|left|right))$/.test(prop)) boxDecls.push(d);
+      else imgDecls.push(d);
+    }
+    if (width > 0 && !icon) boxDecls.push('width:' + width + 'px');
+    if (height > 0) boxDecls.push('height:' + height + 'px');
+
+    let img = imgTag.replace(/\s*(width|height|style)="[^"]*"/g, '');
+    if (imgDecls.length) {
+      const st = ' style="' + entEncode(imgDecls.join(';')) + '"';
+      img = img.endsWith('/>') ? img.slice(0, -2) + st + '/>' : img.slice(0, -1) + st + '>';
+    }
+    // NOTE: no loading="lazy" here — a lazy image hidden with display:none
+    // never starts loading, so the placeholder would never resolve.
+    if (!/decoding=/.test(img)) img = img.replace(/^<img/, '<img decoding="async"');
+    // reliable load/failure signals regardless of script timing
+    if (!/onload=/.test(img)) {
+      img = img.replace(/^<img/,
+        '<img onload="var b=this.closest(\'.img-box\');if(b)b.classList.add(\'img-ok\')" ' +
+        'onerror="var b=this.closest(\'.img-box\');if(b)b.classList.add(\'img-broken\')"');
+    }
+
+    const chip =
+      '<span class="img-alt" aria-hidden="true">' + BROKEN_SVG +
+      (text ? '<span>' + entEncode(text) + '</span>' : '') + '</span>';
+    const boxStyle = boxDecls.length ? ' style="' + entEncode(boxDecls.join(';')) + '"' : '';
+    return '<span class="img-box' + (icon ? ' img-icon' : '') + '"' + boxStyle + '>' +
+      innerHtml.replace(imgTag, img) + chip + '</span>';
+  }
+
+  eleventyConfig.addTransform('img-enhance', (content, page) => {
     const out = typeof page === 'string' ? page : page && page.outputPath;
     if (typeof content !== 'string' || !out || !out.endsWith('.html')) return content;
-    return content.replace(/<img (?![^>]*loading=)/g, '<img loading="lazy" decoding="async" ');
+    const stash = [];
+    // videos: same placeholder principle as images
+    let s = content.replace(/<video\b[\s\S]*?<\/video>/g, (v0) => {
+      let v = v0.replace(/\s*onclick="[^"]*"/g, ''); // original player JS is not mirrored
+      const attr = (n) => {
+        const m = v.match(new RegExp('\\s' + n + '="([^"]*)"'));
+        return m ? m[1] : null;
+      };
+      const text = entDecode(attr('title') || attr('alt') || 'Video').trim();
+      if (!/onloadeddata=/.test(v)) {
+        v = v.replace(/^<video/,
+          '<video onloadeddata="var b=this.closest(\'.img-box\');if(b)b.classList.add(\'img-ok\')" ' +
+          'onerror="var b=this.closest(\'.img-box\');if(b)b.classList.add(\'img-broken\')"');
+      }
+      const chip =
+        '<span class="img-alt" aria-hidden="true">' + BROKEN_SVG +
+        '<span>' + entEncode(text) + '</span></span>';
+      stash.push('<span class="img-box img-video">' + v + chip + '</span>');
+      return '\x00' + (stash.length - 1) + '\x00';
+    });
+    s = s.replace(/<a\b[^>]*><img\b[^>]*><\/a>/g, (m0) => {
+      const img = m0.match(/<img\b[^>]*>/)[0];
+      stash.push(boxWrap(m0, img));
+      return '\x00' + (stash.length - 1) + '\x00';
+    });
+    s = s.replace(/<img\b[^>]*>/g, (img) => {
+      stash.push(boxWrap(img, img));
+      return '\x00' + (stash.length - 1) + '\x00';
+    });
+    return s.replace(/\x00(\d+)\x00/g, (_m, i) => stash[+i]);
   });
 
   // escape for use inside HTML attributes (meta/OG tags)

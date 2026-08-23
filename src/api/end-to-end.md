@@ -26,7 +26,7 @@ layout: layout.njk
 
 Secret Chats are one-on-one chats wherein messages are encrypted with a key held only by the chat's participants. Note that the [schema](/schema/end-to-end/) for these end-to-end encrypted Secret Chats is different from what is used for [cloud chats](/mtproto/):
 
-[![](https://core.telegram.org/file/811140633/4/hHw6Zy2DPyQ.109500/cabc10049a7190694f "End-to-end encryption in MTProto 2.0 (Secret Chats)")](https://core.telegram.org/file/811140633/4/hHw6Zy2DPyQ.109500/cabc10049a7190694f)
+[<img src="https://core.telegram.org/file/811140633/4/hHw6Zy2DPyQ.109500/cabc10049a7190694f" title="End-to-end encryption in MTProto 2.0 (Secret Chats)" class="dev_page_image" style="max-width: 600px">](https://core.telegram.org/file/811140633/4/hHw6Zy2DPyQ.109500/cabc10049a7190694f)
 
 #### A note on MTProto 2.0
 

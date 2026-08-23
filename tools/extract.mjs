@@ -79,6 +79,18 @@ td.addRule('pageSchemeDiv', {
   filter: (node) => node.nodeName === 'DIV' && /page_scheme/.test(node.getAttribute('class') || ''),
   replacement: (_c, node) => '\n\n```\n' + node.textContent.replace(/\n+$/, '') + '\n```\n\n',
 });
+// keep <img> as raw HTML so width/height/class/style (floats) survive
+td.addRule('imgRaw', {
+  filter: 'img',
+  replacement: (_c, node) => node.outerHTML,
+});
+// keep image/caption wrappers as raw HTML so their classes survive
+td.addRule('rawMediaDivs', {
+  filter: (node) =>
+    node.nodeName === 'DIV' &&
+    /blog_(image_wrap|video_player_wrap|2images_wrap|3images_wrap|medium_image_wrap)/.test(node.getAttribute('class') || ''),
+  replacement: (_c, node) => '\n\n' + node.outerHTML + '\n\n',
+});
 td.keep(['table']);
 
 function sectionOf(p) {
@@ -211,7 +223,15 @@ async function main() {
 
   const rewriteLinks = (md, ownPath, origin) =>
     md
-      .replace(/!\[([^\]]*)\]\(\/file\//g, '![$1](https://core.telegram.org/file/')
+      .replace(/<img([^>]*?)src="\/file\//g, `<img$1src="${origin}/file/`)
+      .replace(/<img([^>]*?)src="\/img\//g, `<img$1src="${origin}/img/`)
+      .replace(/<img([^>]*?)src="\/\//g, '<img$1src="https://')
+      .replace(/(<a[^>]*?)href="\/file\//g, `$1href="${origin}/file/`)
+      .replace(/(<a[^>]*?)href="\/img\//g, `$1href="${origin}/img/`)
+      .replace(/(<a[^>]*?)href="\/\//g, '$1href="https://')
+      .replace(/(<(?:source|video|img)[^>]*?)src="\/file\//g, `$1src="${origin}/file/`)
+      .replace(/(<video[^>]*?)poster="\/file\//g, `$1poster="${origin}/file/`)
+      .replace(/!\[([^\]]*)\]\(\/file\//g, `![$1](${origin}/file/`)
       .replace(/!\[([^\]]*)\]\(\/img\//g, `![$1](${origin}/img/`)
       .replace(/!\[([^\]]*)\]\(\/\//g, '![$1](https://')
       // same-page anchors

@@ -13,9 +13,9 @@ You won some [Telegram Stars](/api/stars/) in a [Telegram Star giveaway »](/api
 
 This service message should be displayed below the appropriate sticker from the [inputStickerSetPremiumGifts »](/constructor/inputStickerSetPremiumGifts/) [stickerset »](/api/stickers/#stickersets):
 
--   If `stars <= 1000`, choose the sticker with emoji equal to "![2️⃣](https://telegram.org/img/emoji/40/32E283A3.png)"
--   If `stars < 2500`, choose the sticker with emoji equal to "![3️⃣](https://telegram.org/img/emoji/40/33E283A3.png)"
--   Otherwise, choose the sticker with emoji equal to "![4️⃣](https://telegram.org/img/emoji/40/34E283A3.png)"
+-   If `stars <= 1000`, choose the sticker with emoji equal to "<img class="emoji" src="https://telegram.org/img/emoji/40/32E283A3.png" width="20" height="20" alt="2️⃣">"
+-   If `stars < 2500`, choose the sticker with emoji equal to "<img class="emoji" src="https://telegram.org/img/emoji/40/33E283A3.png" width="20" height="20" alt="3️⃣">"
+-   Otherwise, choose the sticker with emoji equal to "<img class="emoji" src="https://telegram.org/img/emoji/40/34E283A3.png" width="20" height="20" alt="4️⃣">"
 
 ```
 messageActionPrizeStars#b00c47a2 flags:# unclaimed:flags.0?true stars:long transaction_id:string boost_peer:Peer giveaway_msg_id:int = MessageAction;

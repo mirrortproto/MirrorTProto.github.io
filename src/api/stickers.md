@@ -494,13 +494,13 @@ Some places in the UI require the usage of a server-specified list of stickers, 
 
 Some places in the UI might require showing a list of Premium stickers, as an example of stickers that may be used if the user buys a [Premium subscription](/api/premium/).
 
-To fetch this special list, invoke [messages.getStickers](/method/messages.getStickers/) with `emoticon=![⭐️](https://telegram.org/img/emoji/40/E2AD90.png)![⭐️](https://telegram.org/img/emoji/40/E2AD90.png)`
+To fetch this special list, invoke [messages.getStickers](/method/messages.getStickers/) with `emoticon=<img class="emoji" src="https://telegram.org/img/emoji/40/E2AD90.png" width="20" height="20" alt="⭐️"><img class="emoji" src="https://telegram.org/img/emoji/40/E2AD90.png" width="20" height="20" alt="⭐️">`
 
 #### Greeting stickers
 
 When the user opens a private chat with a user they don't have a history with, the UI should display a randomly chosen greeting sticker+invitation to send a message.
 
-To fetch this special list of greeting stickers, invoke [messages.getStickers](/method/messages.getStickers/) with `emoticon=![👋](https://telegram.org/img/emoji/40/F09F918B.png)![⭐️](https://telegram.org/img/emoji/40/E2AD90.png)`.
+To fetch this special list of greeting stickers, invoke [messages.getStickers](/method/messages.getStickers/) with `emoticon=<img class="emoji" src="https://telegram.org/img/emoji/40/F09F918B.png" width="20" height="20" alt="👋"><img class="emoji" src="https://telegram.org/img/emoji/40/E2AD90.png" width="20" height="20" alt="⭐️">`.
 
 Note that if a custom [Telegram Business introduction »](/api/business/#business-introduction) is enabled, the message+sticker specified in [userFull](/constructor/userFull/).`intro` must be used, instead.
 

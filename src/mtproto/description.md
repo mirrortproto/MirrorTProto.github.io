@@ -28,7 +28,7 @@ The authorization key **auth\_key** combined with the message key **msg\_key** d
 
 Multipart messages are encrypted as a single message.
 
-[![MTProto server-client encryption, cloud chats](https://core.telegram.org/file/811140746/2/CzMyJPVnPo8.81605/c2310d6ede1a5e220f)](https://core.telegram.org/file/811140746/2/CzMyJPVnPo8.81605/c2310d6ede1a5e220f)
+[<img src="https://core.telegram.org/file/811140746/2/CzMyJPVnPo8.81605/c2310d6ede1a5e220f" alt="MTProto server-client encryption, cloud chats" class="dev_page_image" style="max-width: 600px;">](https://core.telegram.org/file/811140746/2/CzMyJPVnPo8.81605/c2310d6ede1a5e220f)
 
 > Got questions about this setup? — Check out the [Advanced FAQ](http://core.telegram.org/techfaq)!
 

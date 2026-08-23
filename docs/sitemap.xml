@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url><loc>https://mirrortproto.github.io/search/</loc><lastmod>2026-08-23</lastmod></url>
+<url><loc>https://mirrortproto.github.io/</loc><lastmod>2026-08-23</lastmod></url>
 <url><loc>https://mirrortproto.github.io/api/</loc><lastmod>2026-08-23</lastmod></url>
 <url><loc>https://mirrortproto.github.io/api/account-deletion/</loc><lastmod>2026-08-23</lastmod></url>
 <url><loc>https://mirrortproto.github.io/api/action-bar/</loc><lastmod>2026-08-23</lastmod></url>
@@ -53,8 +54,8 @@
 <url><loc>https://mirrortproto.github.io/api/end-to-end/voice-calls/</loc><lastmod>2026-08-23</lastmod></url>
 <url><loc>https://mirrortproto.github.io/api/end-to-end_v1/</loc><lastmod>2026-08-23</lastmod></url>
 <url><loc>https://mirrortproto.github.io/api/entities/</loc><lastmod>2026-08-23</lastmod></url>
-<url><loc>https://mirrortproto.github.io/api/errors/</loc><lastmod>2026-08-23</lastmod></url>
 <url><loc>https://mirrortproto.github.io/api/errors.json/</loc><lastmod>2026-08-23</lastmod></url>
+<url><loc>https://mirrortproto.github.io/api/errors/</loc><lastmod>2026-08-23</lastmod></url>
 <url><loc>https://mirrortproto.github.io/api/factcheck/</loc><lastmod>2026-08-23</lastmod></url>
 <url><loc>https://mirrortproto.github.io/api/file-reference-generator/</loc><lastmod>2026-08-23</lastmod></url>
 <url><loc>https://mirrortproto.github.io/api/file-references/</loc><lastmod>2026-08-23</lastmod></url>
@@ -1692,9 +1693,9 @@
 <url><loc>https://mirrortproto.github.io/constructor/updates.channelDifferenceTooLong/</loc><lastmod>2026-08-23</lastmod></url>
 <url><loc>https://mirrortproto.github.io/constructor/updates.difference/</loc><lastmod>2026-08-23</lastmod></url>
 <url><loc>https://mirrortproto.github.io/constructor/updates.differenceEmpty/</loc><lastmod>2026-08-23</lastmod></url>
+<url><loc>https://mirrortproto.github.io/constructor/updates/</loc><lastmod>2026-08-23</lastmod></url>
 <url><loc>https://mirrortproto.github.io/constructor/updates.differenceSlice/</loc><lastmod>2026-08-23</lastmod></url>
 <url><loc>https://mirrortproto.github.io/constructor/updates.differenceTooLong/</loc><lastmod>2026-08-23</lastmod></url>
-<url><loc>https://mirrortproto.github.io/constructor/updates/</loc><lastmod>2026-08-23</lastmod></url>
 <url><loc>https://mirrortproto.github.io/constructor/updates.state/</loc><lastmod>2026-08-23</lastmod></url>
 <url><loc>https://mirrortproto.github.io/constructor/updatesCombined/</loc><lastmod>2026-08-23</lastmod></url>
 <url><loc>https://mirrortproto.github.io/constructor/updatesTooLong/</loc><lastmod>2026-08-23</lastmod></url>
@@ -2537,6 +2538,7 @@
 <url><loc>https://mirrortproto.github.io/methods/</loc><lastmod>2026-08-23</lastmod></url>
 <url><loc>https://mirrortproto.github.io/mtproto/</loc><lastmod>2026-08-23</lastmod></url>
 <url><loc>https://mirrortproto.github.io/mtproto/TL-abstract-types/</loc><lastmod>2026-08-23</lastmod></url>
+<url><loc>https://mirrortproto.github.io/mtproto/TL/</loc><lastmod>2026-08-23</lastmod></url>
 <url><loc>https://mirrortproto.github.io/mtproto/TL-combinators/</loc><lastmod>2026-08-23</lastmod></url>
 <url><loc>https://mirrortproto.github.io/mtproto/TL-dependent/</loc><lastmod>2026-08-23</lastmod></url>
 <url><loc>https://mirrortproto.github.io/mtproto/TL-formal/</loc><lastmod>2026-08-23</lastmod></url>
@@ -2545,7 +2547,6 @@
 <url><loc>https://mirrortproto.github.io/mtproto/TL-polymorph/</loc><lastmod>2026-08-23</lastmod></url>
 <url><loc>https://mirrortproto.github.io/mtproto/TL-tl/</loc><lastmod>2026-08-23</lastmod></url>
 <url><loc>https://mirrortproto.github.io/mtproto/TL-types/</loc><lastmod>2026-08-23</lastmod></url>
-<url><loc>https://mirrortproto.github.io/mtproto/TL/</loc><lastmod>2026-08-23</lastmod></url>
 <url><loc>https://mirrortproto.github.io/mtproto/auth_key/</loc><lastmod>2026-08-23</lastmod></url>
 <url><loc>https://mirrortproto.github.io/mtproto/description/</loc><lastmod>2026-08-23</lastmod></url>
 <url><loc>https://mirrortproto.github.io/mtproto/description_v1/</loc><lastmod>2026-08-23</lastmod></url>
@@ -3189,5 +3190,4 @@
 <url><loc>https://mirrortproto.github.io/constructor/</loc><lastmod>2026-08-23</lastmod></url>
 <url><loc>https://mirrortproto.github.io/method/</loc><lastmod>2026-08-23</lastmod></url>
 <url><loc>https://mirrortproto.github.io/type/</loc><lastmod>2026-08-23</lastmod></url>
-<url><loc>https://mirrortproto.github.io/</loc><lastmod>2026-08-23</lastmod></url>
 </urlset>

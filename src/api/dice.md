@@ -38,7 +38,7 @@ If a user attempts to send a single emoji from the ones specified in `emojies_se
 Incoming dice stickers will be received as a [messageMediaDice](/constructor/messageMediaDice/) constructor, along with a randomly generated server-side value, ranging from 1 to the maximum allowed value for this type of dice.  
 Clients should display the correct dice animated sticker for the specified value: since dice values start from 1, and the first animated sticker in dice stickerset is the preview, `value` can be used to directly index the `documents` sticker array from the animated stickerset.
 
-The [`emojies_send_dice_success` configuration parameter](/api/config/#emojies-send-dice-success) contains more info about dice emojis other than the basic ![🎲](https://telegram.org/img/emoji/40/F09F8EB2.png):
+The [`emojies_send_dice_success` configuration parameter](/api/config/#emojies-send-dice-success) contains more info about dice emojis other than the basic <img class="emoji" src="https://telegram.org/img/emoji/40/F09F8EB2.png" width="20" height="20" alt="🎲">:
 
 ```
     "emojies_send_dice_success": {
@@ -53,12 +53,12 @@ The [`emojies_send_dice_success` configuration parameter](/api/config/#emojies-s
     }
 ```
 
-For each of the dice emojis, a maximum "winning" value is specified, along with the frame number at which to show the fireworks ![🎆](https://telegram.org/img/emoji/40/F09F8E86.png).  
+For each of the dice emojis, a maximum "winning" value is specified, along with the frame number at which to show the fireworks <img class="emoji" src="https://telegram.org/img/emoji/40/F09F8E86.png" width="20" height="20" alt="🎆">.  
 Please note that dice animated stickers should loop only once, right after being sent/received **for the first time**; clicking on the dice sticker should bring up a popup, inviting the user to send a new dice of the same type.
 
 ### Slot machine
 
-Slot machine ![🎰](https://telegram.org/img/emoji/40/F09F8EB0.png) dice stickers are implemented a bit differently: the `value` isn't used to directly index the stickers array, but is instead used as follows.
+Slot machine <img class="emoji" src="https://telegram.org/img/emoji/40/F09F8EB0.png" width="20" height="20" alt="🎰"> dice stickers are implemented a bit differently: the `value` isn't used to directly index the stickers array, but is instead used as follows.
 
 The `value` is composed of three 2-bit values, each indicating the animated sticker to show in the three slots, incremented by one.
 

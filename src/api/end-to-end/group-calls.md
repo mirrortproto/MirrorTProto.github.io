@@ -657,7 +657,7 @@ The encryption relies on the following primitive functions, similar to MTProto 2
 
 -   **encrypt\_data(payload, secret, extra\_data)**
 
-[![Encrypt Data](https://core.telegram.org/file/400780400121/3/4i8vpkfDb-Q.209706.png/5b7f9e14d6c811fd9c)](https://core.telegram.org/file/400780400121/3/4i8vpkfDb-Q.209706.png/5b7f9e14d6c811fd9c)
+[<img src="https://core.telegram.org/file/400780400121/3/4i8vpkfDb-Q.209706.png/5b7f9e14d6c811fd9c" alt="Encrypt Data" class="dev_page_image" style="max-width: 600px;">](https://core.telegram.org/file/400780400121/3/4i8vpkfDb-Q.209706.png/5b7f9e14d6c811fd9c)
 
 > Encrypts `payload` using a `secret`. `extra_data` will be used as part of MAC. `large_msg_id` will be used later to sign the packet.
 
@@ -678,7 +678,7 @@ Result: (msg_id || encrypted), large_msg_id
 
 -   **encrypt\_header(header, encrypted\_msg, secret)**
 
-[![Encrypt Header](https://core.telegram.org/file/400780400206/1/iqlwkozJe4g.139107.png/e98f3020c133d4b503)](https://core.telegram.org/file/400780400206/1/iqlwkozJe4g.139107.png/e98f3020c133d4b503)
+[<img src="https://core.telegram.org/file/400780400206/1/iqlwkozJe4g.139107.png/e98f3020c133d4b503" alt="Encrypt Header" class="dev_page_image" style="max-width: 600px;">](https://core.telegram.org/file/400780400206/1/iqlwkozJe4g.139107.png/e98f3020c133d4b503)
 
 > Encrypts a 32-byte `header` using context from `encrypted_msg` and a `secret`.
 
@@ -700,7 +700,7 @@ Audio, video and conference in-call message packets are encrypted using the foll
 
 -   **encrypt\_packet(payload, extra\_data, active\_epochs, user\_id, channel\_id, seqno, private\_key)**
 
-[![Encrypt Packet](https://core.telegram.org/file/400780400411/2/SNTNBubSRE4.286743.png/191c0cd208afb9921f)](https://core.telegram.org/file/400780400411/2/SNTNBubSRE4.286743.png/191c0cd208afb9921f)
+[<img src="https://core.telegram.org/file/400780400411/2/SNTNBubSRE4.286743.png/191c0cd208afb9921f" alt="Encrypt Packet" class="dev_page_image" style="max-width: 600px;">](https://core.telegram.org/file/400780400411/2/SNTNBubSRE4.286743.png/191c0cd208afb9921f)
 
 > Encrypts `payload` for transmission, associating it with active blockchain epochs. Epochs are essentially blocks whose shared keys are currently used for encryption.
 

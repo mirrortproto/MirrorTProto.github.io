@@ -257,6 +257,6 @@ For example the following diff:
 
 Is rendered like this:
 
-[![](https://core.telegram.org/file/400780400224/3/mT5D09bwVMk.26923.png/17ab4a219f971e78b0 "Diff entity render example")](https://core.telegram.org/file/400780400224/3/mT5D09bwVMk.26923.png/17ab4a219f971e78b0)
+[<img src="https://core.telegram.org/file/400780400224/3/mT5D09bwVMk.26923.png/17ab4a219f971e78b0" title="Diff entity render example" class="dev_page_image">](https://core.telegram.org/file/400780400224/3/mT5D09bwVMk.26923.png/17ab4a219f971e78b0)
 
 Note how the final [messageEntityDiffDelete](/constructor/messageEntityDiffDelete/)'s offset is not changed by the `uuu` inserted by the preceding [messageEntityDiffReplace](/constructor/messageEntityDiffReplace/).

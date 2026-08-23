@@ -232,6 +232,46 @@ article table { border-collapse: collapse; width: 100%; margin: 12px 0; font-siz
 article th, article td { border: 1px solid var(--border); padding: 6px 10px; text-align: left; vertical-align: top; }
 article th { background: var(--code-bg); }
 article img { max-width: 100%; }
+/* media placeholder boxes: until the media loads, an in-flow chip shows the
+   broken-image icon plus the original alt/title text (never clipped);
+   once loaded, the chip disappears and the media takes its place */
+.img-box { position: relative; display: inline-block; vertical-align: middle; max-width: 100%; }
+.img-box > a { display: inline-block; max-width: 100%; }
+.img-box:not(.img-ok) img,
+.img-box:not(.img-ok) video { display: none !important; }
+.img-box img { display: block; max-width: 100%; height: auto; }
+.img-alt {
+  display: flex; align-items: center; justify-content: center; gap: 4px;
+  padding: 2px 6px;
+  min-width: 20ch;      /* at least 20 characters long */
+  min-height: 2em;      /* at least two lines tall… */
+  line-height: 1;       /* …each line one character high, no leading */
+  border: 1px dashed var(--border); border-radius: 4px;
+  background: var(--code-bg); color: var(--muted);
+  font-size: 12px; text-align: center;
+}
+.img-alt > span { line-height: 1; }
+.img-alt svg { flex-shrink: 0; }
+.img-box.img-ok .img-alt { display: none; }
+/* inline icons/emoji: compact placeholder, no width forced on the image */
+.img-box.img-icon { vertical-align: text-bottom; }
+.img-box.img-icon img { height: 20px; width: auto; }
+.img-box.img-icon .img-alt { min-width: 0; min-height: 2ch; font-size: 11px; }
+/* video placeholders: same principle as images */
+.img-box.img-video { display: block; width: 100%; }
+.img-box.img-video video {
+  display: block; width: 100%; height: auto; max-width: 480px; margin: 0 auto;
+  background: #000;
+}
+.img-box.img-video .img-alt { min-height: 9em; max-width: 480px; margin: 0 auto; }
+/* original media wrappers: centered grey captions, bounded images */
+.blog_image_wrap { width: 275px; max-width: 100%; margin: 10px auto 20px; }
+.blog_image_wrap .img-box { display: block; }
+.blog_image_wrap .img-box img { width: 275px; max-width: 100%; padding: 10px 5px; }
+.blog_image_wrap p, .blog_video_player_wrap p {
+  text-align: center; color: var(--muted); font-size: 12px;
+  margin: 10px 0 0; line-height: 150%; padding: 0 10px;
+}
 @media (max-width: 900px) {
   article table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
 }

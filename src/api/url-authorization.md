@@ -147,7 +147,7 @@ When the user clicks on a [keyboardButtonUrlAuth](/constructor/keyboardButtonUrl
 
 The info should be shown in a prompt:
 
-[![TITLE](https://core.telegram.org/file/811140909/1631/20k1Z53eiyY.23995/c541e89b74253623d9 "TITLE")](https://core.telegram.org/file/811140015/1734/8VZFkwWXalM.97872/6127fa62d8a0bf2b3c)
+<div class="blog_image_wrap"><a href="https://core.telegram.org/file/811140015/1734/8VZFkwWXalM.97872/6127fa62d8a0bf2b3c" target="_blank"><img src="https://core.telegram.org/file/811140909/1631/20k1Z53eiyY.23995/c541e89b74253623d9" title="TITLE" alt="TITLE" srcset="/file/811140015/1734/8VZFkwWXalM.97872/6127fa62d8a0bf2b3c , 2x"></a></div>
 
 If the user agrees to login to the URL, [messages.acceptUrlAuth](/method/messages.acceptUrlAuth/) should be called, eventually setting the `write_allowed`/`share_phone_number` flags if requested by [urlAuthResultRequest](/constructor/urlAuthResultRequest/).`request_write_access`/`request_phone_number` and consented to by the user. The result will be a [urlAuthResultAccepted](/constructor/urlAuthResultAccepted/) with the final URL to open (always set for bot button URL authorization and [link URL authorization](#link-url-authorization)), which will include a query string with the requested info and a hash that [must be verified upon receipt by the service](https://core.telegram.org/widgets/login#receiving-authorization-data).
 

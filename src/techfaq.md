@@ -78,7 +78,7 @@ If you have any comments, feel free to reach out to [security@telegram.org](mail
 
 **Server-client encryption** is used in Telegram **Cloud Chats**. Here's a brief overview of the setup:
 
-[![MTProto 2.0, Part I. Cloud chats (server-client encryption)](https://core.telegram.org/file/811140746/2/CzMyJPVnPo8.81605/c2310d6ede1a5e220f)](https://core.telegram.org/file/811140746/2/CzMyJPVnPo8.81605/c2310d6ede1a5e220f)
+[<img src="https://core.telegram.org/file/811140746/2/CzMyJPVnPo8.81605/c2310d6ede1a5e220f" alt="MTProto 2.0, Part I. Cloud chats (server-client encryption)" class="dev_page_image" style="width: 600px">](https://core.telegram.org/file/811140746/2/CzMyJPVnPo8.81605/c2310d6ede1a5e220f)
 
 ###### **Note 1**
 
@@ -102,7 +102,7 @@ Telegram's **End-to-end** encrypted Secret Chats are using an additional layer o
 
 **End-to-end encryption** is used in Telegram **Secret Chats**, as well as voice and video calls. You can read more about it here: [Secret Chats, End-to-End encryption](/api/end-to-end/). Here's a brief overview of the setup:
 
-[![](https://core.telegram.org/file/811140633/4/hHw6Zy2DPyQ.109500/cabc10049a7190694f "End-to-end encryption in MTProto 2.0 (Secret Chats)")](https://core.telegram.org/file/811140633/4/hHw6Zy2DPyQ.109500/cabc10049a7190694f)
+[<img src="https://core.telegram.org/file/811140633/4/hHw6Zy2DPyQ.109500/cabc10049a7190694f" title="End-to-end encryption in MTProto 2.0 (Secret Chats)" class="dev_page_image" style="width: 600px">](https://core.telegram.org/file/811140633/4/hHw6Zy2DPyQ.109500/cabc10049a7190694f)
 
 Please see these articles for details:
 

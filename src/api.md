@@ -19,7 +19,7 @@ Designers are welcome to create [**Animated Stickers and Emoji**](https://core.t
 
 ### Bot API
 
-[![](https://core.telegram.org/file/811140934/1/tbDSLHSaijc/fdcc7b6d5fb3354adf "The Botfather. Click for hi-res picture")](https://core.telegram.org/file/811140327/1/zlN4goPTupk/9ff2f2f01c4bd1b013)
+[<img src="https://core.telegram.org/file/811140934/1/tbDSLHSaijc/fdcc7b6d5fb3354adf" title="The Botfather. Click for hi-res picture" style="max-width: 200px;float:right">](https://core.telegram.org/file/811140327/1/zlN4goPTupk/9ff2f2f01c4bd1b013)
 
 This API allows you to connect bots to our system. [**Telegram Bots**](https://core.telegram.org/bots) are special accounts that do not require an additional phone number to set up. These accounts serve as an interface for code running somewhere on your server.
 

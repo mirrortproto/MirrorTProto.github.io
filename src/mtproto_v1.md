@@ -46,7 +46,7 @@ The protocol is subdivided into three virtually independent components:
 -   Cryptographic (authorization) layer: defines the method by which messages are encrypted prior to being transmitted through the transport protocol.
 -   Transport component: defines the method for the client and the server to transmit messages over some other existing network protocol (such as, http, https, tcp, udp).
 
-[![Server-client encryption in MTProto (Cloud chats)](https://core.telegram.org/file/811140187/1/sfBQV3Trp80/3a3c48bad836b853ed)](https://core.telegram.org/file/811140187/1/sfBQV3Trp80/3a3c48bad836b853ed)
+[<img src="https://core.telegram.org/file/811140187/1/sfBQV3Trp80/3a3c48bad836b853ed" alt="Server-client encryption in MTProto (Cloud chats)" class="dev_page_image">](https://core.telegram.org/file/811140187/1/sfBQV3Trp80/3a3c48bad836b853ed)
 
 > Got questions about this setup? — Check out the [Advanced FAQ](http://core.telegram.org/techfaq)!
 

@@ -595,7 +595,7 @@ A list of supported [animated dice](/api/dice/) stickers (array of strings).
 
 #### `emojies_send_dice_success`
 
-For [animated dice](/api/dice/) emojis other than the basic ![🎲](https://telegram.org/img/emoji/40/F09F8EB2.png), indicates the winning dice value and the final frame of the animated sticker, at which to show the fireworks ![🎆](https://telegram.org/img/emoji/40/F09F8E86.png) (object with emoji keys and object values, containing `value` and `frame_start` float values)
+For [animated dice](/api/dice/) emojis other than the basic <img class="emoji" src="https://telegram.org/img/emoji/40/F09F8EB2.png" width="20" height="20" alt="🎲">, indicates the winning dice value and the final frame of the animated sticker, at which to show the fireworks <img class="emoji" src="https://telegram.org/img/emoji/40/F09F8E86.png" width="20" height="20" alt="🎆"> (object with emoji keys and object values, containing `value` and `frame_start` float values)
 
 #### `emojies_sounds`
 
@@ -713,7 +713,7 @@ Maximum number of participants in a group call (livestreams allow ∞ participan
 
 #### `reactions_uniq_max`
 
-Maximum number of unique reactions for any given message: for example, if there are 2000 ![👍](https://telegram.org/img/emoji/40/F09F918D.png) and 1000 custom emoji ![😁](https://telegram.org/img/emoji/40/F09F9881.png) reactions and reactions\_uniq\_max = 2, you can't add a ![👎](https://telegram.org/img/emoji/40/F09F918E.png) reaction, because that would raise the number of unique reactions to 3 > 2. (integer)
+Maximum number of unique reactions for any given message: for example, if there are 2000 <img class="emoji" src="https://telegram.org/img/emoji/40/F09F918D.png" width="20" height="20" alt="👍"> and 1000 custom emoji <img class="emoji" src="https://telegram.org/img/emoji/40/F09F9881.png" width="20" height="20" alt="😁"> reactions and reactions\_uniq\_max = 2, you can't add a <img class="emoji" src="https://telegram.org/img/emoji/40/F09F918E.png" width="20" height="20" alt="👎"> reaction, because that would raise the number of unique reactions to 3 > 2. (integer)
 
 #### `reactions_in_chat_max`
 

@@ -53,7 +53,7 @@ The protocol is subdivided into three virtually independent components:
 -   Cryptographic (authorization) layer: defines the method by which messages are encrypted prior to being transmitted through the transport protocol.
 -   Transport component: defines the method for the client and the server to transmit messages over some other existing network protocol (such as HTTP, HTTPS, WS (plain WebSockets), WSS (WebSockets over HTTPS), TCP, UDP).
 
-[![MTProto 2.0, server-client encryption, cloud chats](https://core.telegram.org/file/811140746/2/CzMyJPVnPo8.81605/c2310d6ede1a5e220f)](https://core.telegram.org/file/811140746/2/CzMyJPVnPo8.81605/c2310d6ede1a5e220f)
+[<img src="https://core.telegram.org/file/811140746/2/CzMyJPVnPo8.81605/c2310d6ede1a5e220f" alt="MTProto 2.0, server-client encryption, cloud chats" class="dev_page_image" style="max-width: 600px;">](https://core.telegram.org/file/811140746/2/CzMyJPVnPo8.81605/c2310d6ede1a5e220f)
 
 > As of version 4.6, major Telegram clients are using **MTProto 2.0**, described in this article. MTProto v1.0 ([described here](/mtproto_v1/) for reference) is deprecated and is currently being phased out.
 

@@ -13,9 +13,9 @@ You gifted or were gifted some [Telegram Stars](/api/stars/).
 
 This service message should be displayed below the appropriate sticker from the [inputStickerSetPremiumGifts »](/constructor/inputStickerSetPremiumGifts/) [stickerset »](/api/stickers/#stickersets):
 
--   If `stars <= 1000`, choose the sticker with emoji equal to "![2️⃣](https://telegram.org/img/emoji/40/32E283A3.png)"
--   If `stars < 2500`, choose the sticker with emoji equal to "![3️⃣](https://telegram.org/img/emoji/40/33E283A3.png)"
--   Otherwise, choose the sticker with emoji equal to "![4️⃣](https://telegram.org/img/emoji/40/34E283A3.png)"
+-   If `stars <= 1000`, choose the sticker with emoji equal to "<img class="emoji" src="https://telegram.org/img/emoji/40/32E283A3.png" width="20" height="20" alt="2️⃣">"
+-   If `stars < 2500`, choose the sticker with emoji equal to "<img class="emoji" src="https://telegram.org/img/emoji/40/33E283A3.png" width="20" height="20" alt="3️⃣">"
+-   Otherwise, choose the sticker with emoji equal to "<img class="emoji" src="https://telegram.org/img/emoji/40/34E283A3.png" width="20" height="20" alt="4️⃣">"
 
 ```
 messageActionGiftStars#45d5b021 flags:# currency:string amount:long stars:long crypto_currency:flags.0?string crypto_amount:flags.0?long transaction_id:flags.1?string = MessageAction;
