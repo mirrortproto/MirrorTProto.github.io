@@ -135,12 +135,13 @@ export default function (eleventyConfig) {
     return content.slice(0, start) + article + content.slice(end);
   });
 
-  // HTML minification: collapse whitespace outside <pre> blocks (keeps one
-  // space so inline text never sticks together). Runs after other transforms.
+  // HTML minification: collapse whitespace outside <pre>/<script> blocks.
+  // <script> must stay intact — line comments (`//`) would swallow the rest
+  // of the script if their newline were collapsed.
   eleventyConfig.addTransform('minify-html', (content, page) => {
     const out = typeof page === 'string' ? page : page && page.outputPath;
     if (typeof content !== 'string' || !out || !out.endsWith('.html')) return content;
-    const parts = content.split(/(<pre[\s\S]*?<\/pre>)/g);
+    const parts = content.split(/(<pre[\s\S]*?<\/pre>|<script[\s\S]*?<\/script>)/g);
     return parts
       .map((part, i) => (i % 2 === 1 ? part : part.replace(/\s*\n+\s*/g, ' ').replace(/ {2,}/g, ' ')))
       .join('');
