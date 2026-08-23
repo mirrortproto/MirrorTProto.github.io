@@ -264,6 +264,10 @@ article img { max-width: 100%; }
   background: #000;
 }
 .img-box.img-video .img-alt { min-height: 9em; max-width: 480px; margin: 0 auto; }
+/* standalone media promoted out of <p> into a block <figure> (Instant View needs
+   a block-level photo). Must render exactly like the paragraph it replaced:
+   same default margin (1em 0), same inline-block box, same ¶ hover behaviour. */
+article figure.img-figure { position: relative; margin: 1em 0; }
 /* original media wrappers: centered grey captions, bounded images */
 .blog_image_wrap { width: 275px; max-width: 100%; margin: 10px auto 20px; }
 .blog_image_wrap .img-box { display: block; }
@@ -283,7 +287,7 @@ article p { position: relative; }
   opacity: 0; transition: opacity .12s;
   font-size: .9em;
 }
-article p:hover .p-anchor, .p-anchor:focus { opacity: .65; }
+article p:hover .p-anchor, article figure.img-figure:hover .p-anchor, .p-anchor:focus { opacity: .65; }
 .header-anchor { margin-left: 6px; color: var(--accent); text-decoration: none; opacity: 0; transition: opacity .12s; }
 h1:hover .header-anchor, h2:hover .header-anchor, h3:hover .header-anchor, h4:hover .header-anchor,
 .header-anchor:focus { opacity: .65; }

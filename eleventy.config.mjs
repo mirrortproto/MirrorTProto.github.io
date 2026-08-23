@@ -52,12 +52,9 @@ export default function (eleventyConfig) {
     // NOTE: no loading="lazy" here — a lazy image hidden with display:none
     // never starts loading, so the placeholder would never resolve.
     if (!/decoding=/.test(img)) img = img.replace(/^<img/, '<img decoding="async"');
-    // reliable load/failure signals regardless of script timing
-    if (!/onload=/.test(img)) {
-      img = img.replace(/^<img/,
-        '<img onload="var b=this.closest(\'.img-box\');if(b)b.classList.add(\'img-ok\')" ' +
-        'onerror="var b=this.closest(\'.img-box\');if(b)b.classList.add(\'img-broken\')"');
-    }
+    // Load/failure signals are wired by the capture-phase listener in layout.njk
+    // (fires at the same moment an inline on* handler would). Inline handlers are
+    // deliberately NOT emitted: Instant View drops nodes carrying inline JS.
 
     const chip =
       '<span class="img-alt" aria-hidden="true">' + BROKEN_SVG +
@@ -79,11 +76,7 @@ export default function (eleventyConfig) {
         return m ? m[1] : null;
       };
       const text = entDecode(attr('title') || attr('alt') || 'Video').trim();
-      if (!/onloadeddata=/.test(v)) {
-        v = v.replace(/^<video/,
-          '<video onloadeddata="var b=this.closest(\'.img-box\');if(b)b.classList.add(\'img-ok\')" ' +
-          'onerror="var b=this.closest(\'.img-box\');if(b)b.classList.add(\'img-broken\')"');
-      }
+      // signals wired by the capture-phase listener in layout.njk (see boxWrap)
       const chip =
         '<span class="img-alt" aria-hidden="true">' + BROKEN_SVG +
         '<span>' + entEncode(text) + '</span></span>';
@@ -132,6 +125,46 @@ export default function (eleventyConfig) {
       n += 1;
       return `<p id="p-${n}">${inner}<a class="p-anchor" href="#p-${n}" aria-label="Link to this paragraph">¶</a></p>`;
     });
+    return content.slice(0, start) + article + content.slice(end);
+  });
+
+  // Instant View needs standalone media as a block: a photo cannot live inside a
+  // text paragraph. A <p> whose whole content is one media box becomes a <figure>.
+  // Runs AFTER paragraph-anchors on purpose, so the p-N numbering, the id and the
+  // ¶ link are carried over verbatim and existing #p-N links keep resolving.
+  // Inline icons/emoji (.img-icon) stay inline — they belong to the text flow.
+  function spanEnd(s) {
+    // s starts with "<span"; index just past its matching </span>, or -1
+    const re = /<(\/?)span\b[^>]*>/g;
+    let depth = 0;
+    let m;
+    while ((m = re.exec(s))) {
+      depth += m[1] ? -1 : 1;
+      if (depth === 0) return re.lastIndex;
+    }
+    return -1;
+  }
+
+  eleventyConfig.addTransform('media-block', (content, page) => {
+    const out = typeof page === 'string' ? page : page && page.outputPath;
+    if (typeof content !== 'string' || !out || !out.endsWith('.html')) return content;
+    if (!content.includes('<article>') || !content.includes('class="img-box')) return content;
+    const start = content.indexOf('<article>');
+    const end = content.indexOf('</article>');
+    if (start === -1 || end === -1) return content;
+
+    const article = content.slice(start, end).replace(
+      /<p id="(p-\d+)">([\s\S]*?)<\/p>/g,
+      (whole, id, inner) => {
+        const anchorRe = /<a class="p-anchor"[\s\S]*?<\/a>\s*$/;
+        const anchor = (inner.match(anchorRe) || [''])[0];
+        const body = inner.replace(anchorRe, '').trim();
+        // exactly one media box, nothing else in the paragraph
+        if (!/^<span class="img-box(?! img-icon)/.test(body)) return whole;
+        if (spanEnd(body) !== body.length) return whole;
+        return `<figure id="${id}" class="img-figure">${body}${anchor}</figure>`;
+      }
+    );
     return content.slice(0, start) + article + content.slice(end);
   });
 

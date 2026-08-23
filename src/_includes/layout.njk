@@ -11,6 +11,29 @@
     } catch (e) {}
   })();
 </script>
+<script>
+  (function () {
+    /* Media placeholders: flag .img-box as loaded/broken at the same moment an
+       inline on* handler would have. load/error/loadeddata do not bubble, but a
+       capture-phase listener on document still sees them, and this runs in <head>
+       before any media exists — so cached media never flashes the placeholder.
+       Kept out of the markup because Instant View drops nodes with inline JS. */
+    function mark(t, cls) {
+      var b = t && t.closest && t.closest('.img-box');
+      if (b) b.classList.add(cls);
+    }
+    document.addEventListener('load', function (e) {
+      if (e.target && e.target.tagName === 'IMG') mark(e.target, 'img-ok');
+    }, true);
+    document.addEventListener('loadeddata', function (e) {
+      if (e.target && e.target.tagName === 'VIDEO') mark(e.target, 'img-ok');
+    }, true);
+    document.addEventListener('error', function (e) {
+      var t = e.target;
+      if (t && (t.tagName === 'IMG' || t.tagName === 'VIDEO')) mark(t, 'img-broken');
+    }, true);
+  })();
+</script>
 <title>{{ title }} — MTProto Mirror</title>
 {% if description %}<meta name="description" content="{{ description | htmlattr }}">{% endif %}
 <meta property="og:title" content="{{ title | htmlattr }}">
@@ -189,13 +212,16 @@
     });
   })();
   (function () {
-    /* hide the alt-text placeholder once the image has actually loaded */
+    /* Sweep for media that already settled before the head listener could see it
+       (future load/error events are handled there). */
     document.querySelectorAll('.img-box').forEach(function (box) {
-      var im = box.querySelector('img');
-      if (!im) return;
-      var ok = function () { box.classList.add('img-ok'); };
-      if (im.complete && im.naturalWidth > 0) ok();
-      else im.addEventListener('load', ok);
+      var m = box.querySelector('img, video');
+      if (!m) return;
+      if (m.tagName === 'IMG') {
+        if (m.complete) box.classList.add(m.naturalWidth > 0 ? 'img-ok' : 'img-broken');
+      } else if (m.readyState >= 2) {
+        box.classList.add('img-ok');
+      }
     });
   })();
 </script>
