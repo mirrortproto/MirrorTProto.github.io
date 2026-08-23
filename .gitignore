@@ -1,0 +1,4 @@
+node_modules/
+.npm-cache/
+.crawl.log
+.npm_install.log

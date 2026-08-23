@@ -1,0 +1,27 @@
+---
+title: "contacts.getStatuses"
+original: "https://core.telegram.org/method/contacts.getStatuses"
+section: ref
+description: "Use this method to obtain the online statuses of all contacts with an accessible Telegram account."
+crumbs: [{"title":"API","url":"/api/"},{"title":"All Methods","url":"/methods/"},{"title":"contacts.getStatuses","url":"/method/contacts.getStatuses/"}]
+layout: layout.njk
+---
+
+# contacts.getStatuses
+
+Use this method to obtain the online statuses of all contacts with an accessible Telegram account.
+
+```
+---functions---
+contacts.getStatuses#c4a353ee = Vector<ContactStatus>;
+```
+
+### Parameters
+
+This constructor does not require any parameters.
+
+### Result
+
+[Vector](https://core.telegram.org/type/Vector%20t)<[ContactStatus](/type/ContactStatus/)\>
+
+### Only users can use this method
