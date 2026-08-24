@@ -23,7 +23,7 @@ contacts.getContactIDs#7adc669d hash:long = Vector<int>;
 
 ### Result
 
-[Vector](https://core.telegram.org/type/Vector%20t)<[int](/type/int/)\>
+[Vector](https://core.telegram.org/type/Vector%20t)&lt;[int](/type/int/)\>
 
 ### Only users can use this method
 

@@ -22,7 +22,7 @@ users.getUsers#d91a548 id:Vector<InputUser> = Vector<User>;
 
 ### Result
 
-[Vector](https://core.telegram.org/type/Vector%20t)<[User](/type/User/)\>
+[Vector](https://core.telegram.org/type/Vector%20t)&lt;[User](/type/User/)\>
 
 ### Both users and bots can use this method
 

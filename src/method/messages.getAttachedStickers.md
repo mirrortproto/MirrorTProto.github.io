@@ -22,7 +22,7 @@ messages.getAttachedStickers#cc5b67cc media:InputStickeredMedia = Vector<Sticker
 
 ### Result
 
-[Vector](https://core.telegram.org/type/Vector%20t)<[StickerSetCovered](/type/StickerSetCovered/)\>
+[Vector](https://core.telegram.org/type/Vector%20t)&lt;[StickerSetCovered](/type/StickerSetCovered/)\>
 
 ### Only users can use this method
 

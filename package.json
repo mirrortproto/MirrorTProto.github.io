@@ -9,9 +9,10 @@
     "nav": "node tools/gennav.mjs",
     "indexes": "node tools/genrefindexes.mjs",
     "icons": "python3 tools/make_icons.py",
-    "build": "eleventy && pagefind --site docs",
+    "build": "eleventy && npm run clean:index && pagefind --site docs",
     "serve": "eleventy --serve",
     "clean": "rm -rf docs",
+    "clean:index": "rm -rf docs/pagefind",
     "check": "node tools/verify.mjs",
     "regenerate": "npm run extract && npm run nav && npm run indexes && npm run build"
   },
@@ -21,8 +22,11 @@
   "type": "commonjs",
   "devDependencies": {
     "@11ty/eleventy": "^3.1.6",
+    "html-minifier-terser": "^7.2.0",
+    "lightningcss": "^1.33.0",
     "markdown-it-anchor": "^9.2.1",
     "pagefind": "^1.5.2",
+    "terser": "^5.50.0",
     "turndown": "^7.2.4"
   }
 }

@@ -22,7 +22,7 @@ payments.getStarsGiftOptions#d3c96bc8 flags:# user_id:flags.0?InputUser = Vector
 
 ### Result
 
-[Vector](https://core.telegram.org/type/Vector%20t)<[StarsGiftOption](/type/StarsGiftOption/)\>
+[Vector](https://core.telegram.org/type/Vector%20t)&lt;[StarsGiftOption](/type/StarsGiftOption/)\>
 
 ### Only users can use this method
 

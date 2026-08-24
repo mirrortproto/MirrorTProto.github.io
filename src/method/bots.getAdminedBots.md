@@ -22,6 +22,6 @@ This constructor does not require any parameters.
 
 ### Result
 
-[Vector](https://core.telegram.org/type/Vector%20t)<[User](/type/User/)\>
+[Vector](https://core.telegram.org/type/Vector%20t)&lt;[User](/type/User/)\>
 
 ### Only users can use this method

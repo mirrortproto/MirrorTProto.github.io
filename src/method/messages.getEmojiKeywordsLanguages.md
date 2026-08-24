@@ -24,7 +24,7 @@ messages.getEmojiKeywordsLanguages#4e9963b2 lang_codes:Vector<string> = Vector<E
 
 ### Result
 
-[Vector](https://core.telegram.org/type/Vector%20t)<[EmojiLanguage](/type/EmojiLanguage/)\>
+[Vector](https://core.telegram.org/type/Vector%20t)&lt;[EmojiLanguage](/type/EmojiLanguage/)\>
 
 ### Only users can use this method
 

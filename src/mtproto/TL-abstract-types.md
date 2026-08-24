@@ -52,7 +52,7 @@ Converting an abstract value to a serialized value, generally speaking, is strai
 
 If we use _\[T\]_ to denote the concrete type corresponding to the abstract _T_, and _\[E\]_ to denote an element of _\[T\]_ corresponding to the value _E_ of type _T_, then the last rule may be written as:
 
--   _\[T\]_ is the combination, for each constructor of type _C_ _T1->T2->...->Tr->T_ (i.e. that returns a value of type _T_), of direct products _{C} x \[T1\] x \[T2\] x ... x \[Tr\]_, where _{C}_ is a single-element set consisting of the combinator number _C_. Because _{C}<>{C'}_ when _C<>C'_, this defines a mutually single-valued mapping of the values of the abstract type _T_ (written using S-expressions) to the set _\[T\]_.
+-   _\[T\]_ is the combination, for each constructor of type _C_ _T1->T2->...->Tr->T_ (i.e. that returns a value of type _T_), of direct products _{C} x \[T1\] x \[T2\] x ... x \[Tr\]_, where _{C}_ is a single-element set consisting of the combinator number _C_. Because _{C}&lt;>{C'}_ when _C&lt;>C'_, this defines a mutually single-valued mapping of the values of the abstract type _T_ (written using S-expressions) to the set _\[T\]_.
 
 Values of the built-in clothed types `Int` and `String` and serialized as if they were defined using `int x:int = Int;` and `string s:string = String;`, i.e. the serialization of integer constant or a string is preceded by number of the `int` or `string` combinator (constructor). In S-expressions, this may be written as `(int 5)` or `(string "Test")`.
 

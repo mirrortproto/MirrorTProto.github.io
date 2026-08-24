@@ -1,7 +1,24 @@
 import markdownItAnchor from 'markdown-it-anchor';
+import { minify as minifyHtml } from 'html-minifier-terser';
+import { minify as minifyJs } from 'terser';
+import { transform as transformCss } from 'lightningcss';
 
 export default function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy({ 'src/css': 'css' });
+  // style.css is compiled instead of copied, so it can be minified. It is kept
+  // out of collections by src/css/css.11tydata.json — otherwise sitemap.njk,
+  // which walks collections.all, would list the stylesheet as a page.
+  eleventyConfig.addTemplateFormats('css');
+  eleventyConfig.addExtension('css', {
+    outputFileExtension: 'css',
+    compile: (inputContent, inputPath) => async () => {
+      const { code } = transformCss({
+        filename: inputPath,
+        code: Buffer.from(inputContent),
+        minify: true,
+      });
+      return code.toString();
+    },
+  });
   eleventyConfig.addPassthroughCopy({ 'src/favicon.svg': 'favicon.svg' });
   eleventyConfig.addPassthroughCopy({ 'src/favicons': 'favicons' });
   eleventyConfig.addPassthroughCopy({ 'src/icon-64.png': 'icon-64.png' });
@@ -16,11 +33,10 @@ export default function (eleventyConfig) {
       .replace(/&#39;/g, "'").replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&');
   const entEncode = (s) =>
     s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-  const BROKEN_SVG =
-    '<svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true">' +
-    '<rect x="1.75" y="2.75" width="12.5" height="10.5" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.3"/>' +
-    '<path d="M2 10.5l3.2-2.8 2.6 2.2 3.4-3 2.8 2.6" fill="none" stroke="currentColor" stroke-width="1.3"/>' +
-    '<line x1="4.2" y1="4.2" x2="11.8" y2="11.8" stroke="currentColor" stroke-width="1.3"/></svg>';
+  // The broken-image glyph used to be inlined into every placeholder chip: four
+  // SVG nodes and ~430 bytes duplicated per occurrence. It now lives once in
+  // style.css as a mask on .img-alt::before, so the chip carries no icon markup
+  // at all and still tints itself with currentColor for the dark theme.
 
   function boxWrap(innerHtml, imgTag) {
     const attr = (n) => {
@@ -57,7 +73,7 @@ export default function (eleventyConfig) {
     // deliberately NOT emitted: Instant View drops nodes carrying inline JS.
 
     const chip =
-      '<span class="img-alt" aria-hidden="true">' + BROKEN_SVG +
+      '<span class="img-alt" aria-hidden="true">' +
       (text ? '<span>' + entEncode(text) + '</span>' : '') + '</span>';
     const boxStyle = boxDecls.length ? ' style="' + entEncode(boxDecls.join(';')) + '"' : '';
     return '<span class="img-box' + (icon ? ' img-icon' : '') + '"' + boxStyle + '>' +
@@ -78,7 +94,7 @@ export default function (eleventyConfig) {
       const text = entDecode(attr('title') || attr('alt') || 'Video').trim();
       // signals wired by the capture-phase listener in layout.njk (see boxWrap)
       const chip =
-        '<span class="img-alt" aria-hidden="true">' + BROKEN_SVG +
+        '<span class="img-alt" aria-hidden="true">' +
         '<span>' + entEncode(text) + '</span></span>';
       stash.push('<span class="img-box img-video">' + v + chip + '</span>');
       return '\x00' + (stash.length - 1) + '\x00';
@@ -168,16 +184,50 @@ export default function (eleventyConfig) {
     return content.slice(0, start) + article + content.slice(end);
   });
 
-  // HTML minification: collapse whitespace outside <pre>/<script> blocks.
-  // <script> must stay intact — line comments (`//`) would swallow the rest
-  // of the script if their newline were collapsed.
-  eleventyConfig.addTransform('minify-html', (content, page) => {
+  // ---- minification -------------------------------------------------------
+  // The inline scripts are byte-identical across all ~3200 outputs, so Terser
+  // runs once per distinct body and every later page reuses the cached result.
+  const JS_CACHE = new Map();
+  const SCRIPT_RE = /<script([^>]*)>([\s\S]*?)<\/script>/g;
+  // Leave alone anything with a src, and any non-JS payload — notably the
+  // application/ld+json breadcrumb blocks, which Terser would reject.
+  const isInlineJs = (attrs) =>
+    !/\ssrc=/.test(attrs) &&
+    (!/\stype=/.test(attrs) ||
+      /\stype=(["'])(?:text\/javascript|application\/javascript|module)\1/.test(attrs));
+
+  async function minifyInlineJs(html) {
+    const pending = new Set();
+    for (const [, attrs, body] of html.matchAll(SCRIPT_RE)) {
+      if (isInlineJs(attrs) && body.trim() && !JS_CACHE.has(body)) pending.add(body);
+    }
+    for (const body of pending) {
+      try {
+        const { code } = await minifyJs(body, { compress: true, mangle: true });
+        JS_CACHE.set(body, typeof code === 'string' ? code : body);
+      } catch {
+        JS_CACHE.set(body, body); // a minifier failure must never break a page
+      }
+    }
+    return html.replace(SCRIPT_RE, (whole, attrs, body) =>
+      isInlineJs(attrs) && JS_CACHE.has(body) ? `<script${attrs}>${JS_CACHE.get(body)}</script>` : whole
+    );
+  }
+
+  eleventyConfig.addTransform('minify-html', async (content, page) => {
     const out = typeof page === 'string' ? page : page && page.outputPath;
     if (typeof content !== 'string' || !out || !out.endsWith('.html')) return content;
-    const parts = content.split(/(<pre[\s\S]*?<\/pre>|<script[\s\S]*?<\/script>)/g);
-    return parts
-      .map((part, i) => (i % 2 === 1 ? part : part.replace(/\s*\n+\s*/g, ' ').replace(/ {2,}/g, ' ')))
-      .join('');
+    return minifyHtml(await minifyInlineJs(content), {
+      collapseWhitespace: true,
+      // Never drop a space outright. Mirrored prose carries meaning in the
+      // whitespace between inline <code>/<a>/<strong> runs, and <pre> content
+      // is left untouched by html-minifier-terser regardless.
+      conservativeCollapse: true,
+      removeComments: true,
+      removeRedundantAttributes: true,
+      minifyCSS: true,
+      minifyJS: false, // done above, with caching
+    });
   });
 
   eleventyConfig.addCollection('pages', (collectionApi) =>

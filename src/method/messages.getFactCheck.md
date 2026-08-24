@@ -22,7 +22,7 @@ messages.getFactCheck#b9cdc5ee peer:InputPeer msg_id:Vector<int> = Vector<FactCh
 
 ### Result
 
-[Vector](https://core.telegram.org/type/Vector%20t)<[FactCheck](/type/FactCheck/)\>
+[Vector](https://core.telegram.org/type/Vector%20t)&lt;[FactCheck](/type/FactCheck/)\>
 
 ### Only users can use this method
 

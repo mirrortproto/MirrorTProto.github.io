@@ -22,7 +22,7 @@ messages.getMessageReadParticipants#31c1c44f peer:InputPeer msg_id:int = Vector<
 
 ### Result
 
-[Vector](https://core.telegram.org/type/Vector%20t)<[ReadParticipantDate](/type/ReadParticipantDate/)\>
+[Vector](https://core.telegram.org/type/Vector%20t)&lt;[ReadParticipantDate](/type/ReadParticipantDate/)\>
 
 ### Only users can use this method
 

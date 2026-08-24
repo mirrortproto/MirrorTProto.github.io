@@ -9,7 +9,7 @@ layout: layout.njk
 
 # End-to-End Encrypted Voice Calls
 
-> This document describes encryption in **voice calls** as implemented in Telegram apps with versions **< 7.0**. See [this document](/api/end-to-end/video-calls/) for details on encryption used in **voice and video calls** in app versions released on **August 14, 2020** and later.
+> This document describes encryption in **voice calls** as implemented in Telegram apps with versions **&lt; 7.0**. See [this document](/api/end-to-end/video-calls/) for details on encryption used in **voice and video calls** in app versions released on **August 14, 2020** and later.
 
 ##### Related articles
 
@@ -28,10 +28,10 @@ The Diffie-Hellman key exchange, as well as the whole protocol used to create a 
 However, we have introduced some important changes to facilitate the [key verification process](#key-verification). Below is the entire exchange between the two communicating parties, the Caller (A) and the Callee (B), through the Telegram servers (S).
 
 -   _A_ executes [messages.getDhConfig](/method/messages.getDhConfig/) to find out the 2048-bit Diffie-Hellman prime _p_ and generator _g_. The client is expected to check whether _p_ is a safe prime and perform all the [security checks](/api/end-to-end/#sending-a-request) necessary for secret chats.
--   _A_ chooses a random value of _a_, 1 < a < p-1, and computes _g\_a:=power(g,a) mod p_ (a 256-byte number) and _g\_a\_hash:=SHA256(g\_a)_ (32 bytes long).
+-   _A_ chooses a random value of _a_, 1 &lt; a &lt; p-1, and computes _g\_a:=power(g,a) mod p_ (a 256-byte number) and _g\_a\_hash:=SHA256(g\_a)_ (32 bytes long).
 -   _A_ invokes (sends to server _S_) [phone.requestCall](/method/phone.requestCall/), which has the field `g_a_hash:bytes`, among others. For this call, this field is to be filled with _g\_a\_hash_, **not** _g\_a_ itself.
 -   The Server _S_ performs privacy checks and sends an [updatePhoneCall](/constructor/updatePhoneCall/) update with a [phoneCallRequested](/constructor/phoneCallRequested/) constructor to all of _B_'s active devices. This update, apart from the identity of _A_ and other relevant parameters, contains the _g\_a\_hash_ field, filled with the value obtained from _A_.
--   _B_ accepts the call on one of their devices, stores the received value of _g\_a\_hash_ for this instance of the voice call creation protocol, chooses a random value of _b_, 1 < b < p-1, computes _g\_b:=power(g,b) mod p_, performs all the required security checks, and invokes the [phone.acceptCall](/method/phone.acceptCall/) method, which has a _g\_b:bytes_ field (among others), to be filled with the value of _g\_b_ itself (not its hash).
+-   _B_ accepts the call on one of their devices, stores the received value of _g\_a\_hash_ for this instance of the voice call creation protocol, chooses a random value of _b_, 1 &lt; b &lt; p-1, computes _g\_b:=power(g,b) mod p_, performs all the required security checks, and invokes the [phone.acceptCall](/method/phone.acceptCall/) method, which has a _g\_b:bytes_ field (among others), to be filled with the value of _g\_b_ itself (not its hash).
 -   The Server _S_ sends an [updatePhoneCall](/constructor/updatePhoneCall/) with the [phoneCallDiscarded](/constructor/phoneCallDiscarded/) constructor to all other devices _B_ has authorized, to prevent accepting the same call on any of the other devices. From this point on, the server _S_ works only with that of _B_'s devices which has invoked [phone.acceptCall](/method/phone.acceptCall/) first.
 -   The Server _S_ sends to _A_ an [updatePhoneCall](/constructor/updatePhoneCall/) update with [phoneCallAccepted](/constructor/phoneCallAccepted/) constructor, containing the value of _g\_b_ received from _B_.
 -   _A_ performs all the usual security checks on _g\_b_ and _a_, computes the Diffie--Hellman key _key:=power(g\_b,a) mod p_ and its fingerprint _key\_fingerprint:long_, equal to the lower 64 bits of _SHA1(key)_, the same as with secret chats. Then _A_ invokes the [phone.confirmCall](/method/phone.confirmCall/) method, containing `g_a:bytes` and `key_fingerprint:long`.

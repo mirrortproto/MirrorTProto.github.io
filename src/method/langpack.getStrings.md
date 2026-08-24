@@ -22,7 +22,7 @@ langpack.getStrings#efea3803 lang_pack:string lang_code:string keys:Vector<strin
 
 ### Result
 
-[Vector](https://core.telegram.org/type/Vector%20t)<[LangPackString](/type/LangPackString/)\>
+[Vector](https://core.telegram.org/type/Vector%20t)&lt;[LangPackString](/type/LangPackString/)\>
 
 ### Only users can use this method
 

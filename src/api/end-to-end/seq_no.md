@@ -31,7 +31,7 @@ Your client must ensure that all outgoing secret chat messages are queued on the
 
 Your client must check that it has received _each_ message with the sequence number **out\_seq\_no** starting from 0 to some current point **C**. It should then expect the next message to have the sequence number **out\_seq\_no=C+1**. If the **out\_seq\_no** in the received message does not match this, the following needs to be done:
 
--   If the received **out\_seq\_no<=C**, the local client must drop the message (repeated message). The client should not check the contents of the message because the original message could have been deleted (see [Deleting unacknowledged messages](#deleting-unacknowledged-messages)).
+-   If the received **out\_seq\_no&lt;=C**, the local client must drop the message (repeated message). The client should not check the contents of the message because the original message could have been deleted (see [Deleting unacknowledged messages](#deleting-unacknowledged-messages)).
 -   If the received **out\_seq\_no>C+1**, it most likely means that the server left out some messages due to a technical failure or due to the messages becoming obsolete. A temporary solution to this is to simply abort the secret chat. But since this may cause some existing older secret chats to be aborted, it is strongly recommended for the client to properly handle such **seq\_no** gaps. Note that **in\_seq\_no** is not increased upon receipt of such a message; it is advanced only after all preceding gaps are filled.
 
 #### Proper handling of gaps

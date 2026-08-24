@@ -23,7 +23,7 @@ messages.receivedQueue#55a5bb66 max_qts:int = Vector<long>;
 
 ### Result
 
-[Vector](https://core.telegram.org/type/Vector%20t)<[long](/type/long/)\>
+[Vector](https://core.telegram.org/type/Vector%20t)&lt;[long](/type/long/)\>
 
 ### Only users can use this method
 

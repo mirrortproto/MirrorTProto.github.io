@@ -24,7 +24,7 @@ users.getRequirementsToContact#d89a83a3 id:Vector<InputUser> = Vector<Requiremen
 
 ### Result
 
-[Vector](https://core.telegram.org/type/Vector%20t)<[RequirementToContact](/type/RequirementToContact/)\>
+[Vector](https://core.telegram.org/type/Vector%20t)&lt;[RequirementToContact](/type/RequirementToContact/)\>
 
 ### Only users can use this method
 

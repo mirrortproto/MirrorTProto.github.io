@@ -22,7 +22,7 @@ upload.reuploadCdnFile#9b2754a8 file_token:bytes request_token:bytes = Vector<Fi
 
 ### Result
 
-[Vector](https://core.telegram.org/type/Vector%20t)<[FileHash](/type/FileHash/)\>
+[Vector](https://core.telegram.org/type/Vector%20t)&lt;[FileHash](/type/FileHash/)\>
 
 ### Both users and bots can use this method
 

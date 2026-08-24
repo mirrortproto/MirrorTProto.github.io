@@ -37,7 +37,7 @@ All subsequent messages contain the pair (nonce, server\_nonce) both in the plai
 
 #### Proof of work
 
-##### 3) Client decomposes pq into prime factors such that p < q.
+##### 3) Client decomposes pq into prime factors such that p &lt; q.
 
 This starts a round of Diffie-Hellman key exchanges.
 
@@ -113,7 +113,7 @@ Here, encrypted\_answer is obtained as follows:
 
 Following this step, new\_nonce is still known to client and server only. The client is certain that it is the server that responded and that the response was generated specifically in response to client query req\_DH\_params, since the response data are encrypted using new\_nonce.
 
-Client is expected to check whether **p = dh\_prime** is a safe 2048-bit prime (meaning that both **p** and **(p-1)/2** are prime, and that 2^2047 < p < 2^2048), and that **g** generates a cyclic subgroup of prime order **(p-1)/2**, i.e. is a quadratic residue **mod p**. Since **g** is always equal to 2, 3, 4, 5, 6 or 7, this is easily done using quadratic reciprocity law, yielding a simple condition on **p mod 4g** -- namely, **p mod 8 = 7** for **g = 2**; **p mod 3 = 2** for **g = 3**; no extra condition for **g = 4**; **p mod 5 = 1 or 4** for **g = 5**; **p mod 24 = 19 or 23** for **g = 6**; and **p mod 7 = 3, 5 or 6** for **g = 7**. After **g** and **p** have been checked by the client, it makes sense to cache the result, so as not to repeat lengthy computations in future.
+Client is expected to check whether **p = dh\_prime** is a safe 2048-bit prime (meaning that both **p** and **(p-1)/2** are prime, and that 2^2047 &lt; p &lt; 2^2048), and that **g** generates a cyclic subgroup of prime order **(p-1)/2**, i.e. is a quadratic residue **mod p**. Since **g** is always equal to 2, 3, 4, 5, 6 or 7, this is easily done using quadratic reciprocity law, yielding a simple condition on **p mod 4g** -- namely, **p mod 8 = 7** for **g = 2**; **p mod 3 = 2** for **g = 3**; no extra condition for **g = 4**; **p mod 5 = 1 or 4** for **g = 5**; **p mod 24 = 19 or 23** for **g = 6**; and **p mod 7 = 3, 5 or 6** for **g = 7**. After **g** and **p** have been checked by the client, it makes sense to cache the result, so as not to repeat lengthy computations in future.
 
 If the verification takes too long time (which is the case for older mobile devices), one might initially run only 15 Miller--Rabin iterations for verifying primeness of **p** and **(p - 1)/2** with error probability not exceeding one billionth, and do more iterations later in the background.
 

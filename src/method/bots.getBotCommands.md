@@ -22,7 +22,7 @@ bots.getBotCommands#e34c0dd6 scope:BotCommandScope lang_code:string = Vector<Bot
 
 ### Result
 
-[Vector](https://core.telegram.org/type/Vector%20t)<[BotCommand](/type/BotCommand/)\>
+[Vector](https://core.telegram.org/type/Vector%20t)&lt;[BotCommand](/type/BotCommand/)\>
 
 ### Only bots can use this method
 

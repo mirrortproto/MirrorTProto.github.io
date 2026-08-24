@@ -2,14 +2,14 @@
 title: "photoPathSize"
 original: "https://core.telegram.org/constructor/photoPathSize"
 section: ref
-description: "Messages with animated stickers can have a compressed svg (< 300 bytes) to show the outline of the sticker before fetching the actual lottie animation."
+description: "Messages with animated stickers can have a compressed svg (&lt; 300 bytes) to show the outline of the sticker before fetching the actual lottie animation."
 crumbs: [{"title":"API","url":"/api/"},{"title":"TL-schema","url":"/schema/"},{"title":"photoPathSize","url":"/constructor/photoPathSize/"}]
 layout: layout.njk
 ---
 
 # photoPathSize
 
-Messages with animated stickers can have a compressed svg (< 300 bytes) to show the outline of the sticker before fetching the actual lottie animation.
+Messages with animated stickers can have a compressed svg (&lt; 300 bytes) to show the outline of the sticker before fetching the actual lottie animation.
 
 ```
 photoPathSize#d8214d41 type:string bytes:bytes = PhotoSize;

@@ -85,7 +85,7 @@ Consequently, the `int` constructor index number, for example, is the CRC32 of t
 
 The values of bare type `int` are exactly all the single-element _sequences_, i. e. numbers between -2^31 and 2^31-1 represent themselves in this case. Values of type `long` are two-element sequences that are 64-bit signed numbers (little endian again). Values of type `double`, again, are two-element sequences containing 64-bit real numbers in a standard double format. And finally, the values of type `string` look differently depending on the length L of the string being serialized:
 
--   If L <= 253, the serialization contains one byte with the value of L, then L bytes of the string followed by 0 to 3 characters containing 0, such that the overall length of the value be divisible by 4, whereupon all of this is interpreted as a sequence of int(L/4)+1 32-bit numbers.
+-   If L &lt;= 253, the serialization contains one byte with the value of L, then L bytes of the string followed by 0 to 3 characters containing 0, such that the overall length of the value be divisible by 4, whereupon all of this is interpreted as a sequence of int(L/4)+1 32-bit numbers.
 -   If L >= 254, the serialization contains byte 254, followed by 3 bytes with the string length L, followed by L bytes of the string, further followed by 0 to 3 null padding bytes.
 
 #### Object Pseudotype

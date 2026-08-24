@@ -22,7 +22,7 @@ account.getMultiWallPapers#65ad71dc wallpapers:Vector<InputWallPaper> = Vector<W
 
 ### Result
 
-[Vector](https://core.telegram.org/type/Vector%20t)<[WallPaper](/type/WallPaper/)\>
+[Vector](https://core.telegram.org/type/Vector%20t)&lt;[WallPaper](/type/WallPaper/)\>
 
 ### Only users can use this method
 

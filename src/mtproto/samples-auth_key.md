@@ -63,7 +63,7 @@ Let's choose the only matching key, the one with fingerprint equal to `85FD64DE8
 
 #### Proof of work
 
-##### 3) Client decomposes pq into prime factors such that p < q.
+##### 3) Client decomposes pq into prime factors such that p &lt; q.
 
 ```
 pq = 3358800871349344843

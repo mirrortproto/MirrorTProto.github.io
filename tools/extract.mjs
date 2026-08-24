@@ -71,6 +71,15 @@ function stripNoise(html) {
 
 // ---- turndown ----
 const td = new TurndownService({ headingStyle: 'atx', codeBlockStyle: 'fenced', bulletListMarker: '-' });
+// Turndown decodes entities in text nodes, so `Vector&lt;int&gt;` from the source
+// would land in the markdown as a bare `Vector<int>`, and markdown-it (HTML
+// enabled) parses `<int>` back into an element — silently swallowing the type
+// name that the original page displayed. Re-escape `<`: markdown-it passes the
+// entity through untouched, so the reader sees the literal text again.
+// Turndown routes only non-code text nodes through escape(), and the raw-HTML
+// rules below use `replacement`, so code blocks and kept markup are unaffected.
+const escapeMarkdown = td.escape.bind(td);
+td.escape = (s) => escapeMarkdown(s).replace(/</g, '&lt;');
 td.addRule('preCode', {
   filter: (node) => node.nodeName === 'PRE',
   replacement: (_c, node) => '\n\n```\n' + node.textContent.replace(/\n+$/, '') + '\n```\n\n',

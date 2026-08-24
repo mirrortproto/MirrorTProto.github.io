@@ -22,7 +22,7 @@ payments.getPremiumGiftCodeOptions#2757ba54 flags:# boost_peer:flags.0?InputPeer
 
 ### Result
 
-[Vector](https://core.telegram.org/type/Vector%20t)<[PremiumGiftCodeOption](/type/PremiumGiftCodeOption/)\>
+[Vector](https://core.telegram.org/type/Vector%20t)&lt;[PremiumGiftCodeOption](/type/PremiumGiftCodeOption/)\>
 
 ### Only users can use this method
 

@@ -22,7 +22,7 @@ stories.togglePinned#9a75a1ef peer:InputPeer id:Vector<int> pinned:Bool = Vector
 
 ### Result
 
-[Vector](https://core.telegram.org/type/Vector%20t)<[int](/type/int/)\>
+[Vector](https://core.telegram.org/type/Vector%20t)&lt;[int](/type/int/)\>
 
 ### Only users can use this method
 

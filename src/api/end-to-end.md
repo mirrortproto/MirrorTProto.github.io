@@ -51,7 +51,7 @@ User **A** executes [messages.getDhConfig](/method/messages.getDhConfig/) to obt
 
 Executing this method before each new key generation procedure is of vital importance. It makes sense to cache the values of the parameters together with the version in order to avoid having to receive all of the values every time. If the version stored on the client is still up-to-date, the server will return the constructor [messages.dhConfigNotModified](/constructor/messages.dhConfigNotModified/).
 
-The client is expected to check whether **p** is a safe 2048-bit prime (meaning that both **p** and **(p-1)/2** are prime, and that 2^2047 < p < 2^2048), and that **g** generates a cyclic subgroup of prime order **(p-1)/2**, i.e. is a quadratic residue **mod p**. Since **g** is always equal to 2, 3, 4, 5, 6 or 7, this is easily done using quadratic reciprocity law, yielding a simple condition on **p mod 4g** -- namely, **p mod 8 = 7** for **g = 2**; **p mod 3 = 2** for **g = 3**; no extra condition for **g = 4**; **p mod 5 = 1 or 4** for **g = 5**; **p mod 24 = 19 or 23** for **g = 6**; and **p mod 7 = 3, 5 or 6** for **g = 7**. After **g** and **p** have been checked by the client, it makes sense to cache the result, so as to avoid repeating lengthy computations in the future. This cache might be shared with one used for [Authorization Key generation](/mtproto/auth_key/).
+The client is expected to check whether **p** is a safe 2048-bit prime (meaning that both **p** and **(p-1)/2** are prime, and that 2^2047 &lt; p &lt; 2^2048), and that **g** generates a cyclic subgroup of prime order **(p-1)/2**, i.e. is a quadratic residue **mod p**. Since **g** is always equal to 2, 3, 4, 5, 6 or 7, this is easily done using quadratic reciprocity law, yielding a simple condition on **p mod 4g** -- namely, **p mod 8 = 7** for **g = 2**; **p mod 3 = 2** for **g = 3**; no extra condition for **g = 4**; **p mod 5 = 1 or 4** for **g = 5**; **p mod 24 = 19 or 23** for **g = 6**; and **p mod 7 = 3, 5 or 6** for **g = 7**. After **g** and **p** have been checked by the client, it makes sense to cache the result, so as to avoid repeating lengthy computations in the future. This cache might be shared with one used for [Authorization Key generation](/mtproto/auth_key/).
 
 If the client needs additional entropy for the random number generator, it can pass the **random\_length** parameter (random\_length> 0) so the server generates its own random sequence **random** of the appropriate length. **Important**: using the server's random sequence in its raw form may be unsafe, it must be combined with a client sequence.
 
@@ -65,7 +65,7 @@ Both clients are to check that **g**, **g\_a** and **g\_b** are greater than one
 
 After User **B** confirms the creation of a secret chat with **A** in the client interface, Client **B** also receives up-to-date configuration parameters for the Diffie-Hellman method. Thereafter, it generates a random 2048-bit number, **b**, using rules similar to those for **a**.
 
-Having received **g\_a** from the update with [encryptedChatRequested](/constructor/encryptedChatRequested/), it can immediately generate the final shared key: `key = (pow(g_a, b) mod dh_prime)`. If key length < 256 bytes, add several leading zero bytes as padding — so that the key is exactly 256 bytes long. Its fingerprint, **key\_fingerprint**, is equal to the 64 last bits of SHA1 (key).
+Having received **g\_a** from the update with [encryptedChatRequested](/constructor/encryptedChatRequested/), it can immediately generate the final shared key: `key = (pow(g_a, b) mod dh_prime)`. If key length &lt; 256 bytes, add several leading zero bytes as padding — so that the key is exactly 256 bytes long. Its fingerprint, **key\_fingerprint**, is equal to the 64 last bits of SHA1 (key).
 
 **Note 1:** in this particular case SHA1 is used here even for MTProto 2.0 secret chats.
 
@@ -77,7 +77,7 @@ For all of Client **B's** authorized devices, except the current one, [updateEnc
 
 User **A** will be sent an [updateEncryption](/constructor/updateEncryption/) update with the constructor [encryptedChat](/constructor/encryptedChat/), for the authorization key that initiated the chat.
 
-With **g\_b** from the update, Client **A** can also compute the shared key `key = (pow(g_b, a) mod dh_prime)`. If key length < 256 bytes, add several leading zero bytes as padding — so that the key is exactly 256 bytes long. If the fingerprint for the received key is identical to the one that was passed to [encryptedChat](/constructor/encryptedChat/), incoming messages can be sent and processed. Otherwise, [messages.discardEncryption](/method/messages.discardEncryption/) must be executed and the user notified.
+With **g\_b** from the update, Client **A** can also compute the shared key `key = (pow(g_b, a) mod dh_prime)`. If key length &lt; 256 bytes, add several leading zero bytes as padding — so that the key is exactly 256 bytes long. If the fingerprint for the received key is identical to the one that was passed to [encryptedChat](/constructor/encryptedChat/), incoming messages can be sent and processed. Otherwise, [messages.discardEncryption](/method/messages.discardEncryption/) must be executed and the user notified.
 
 #### Perfect Forward Secrecy
 

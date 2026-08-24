@@ -22,6 +22,6 @@ messages.receivedMessages#5a954c0 max_id:int = Vector<ReceivedNotifyMessage>;
 
 ### Result
 
-[Vector](https://core.telegram.org/type/Vector%20t)<[ReceivedNotifyMessage](/type/ReceivedNotifyMessage/)\>
+[Vector](https://core.telegram.org/type/Vector%20t)&lt;[ReceivedNotifyMessage](/type/ReceivedNotifyMessage/)\>
 
 ### Only users can use this method

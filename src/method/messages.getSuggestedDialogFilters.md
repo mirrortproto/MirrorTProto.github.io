@@ -22,7 +22,7 @@ This constructor does not require any parameters.
 
 ### Result
 
-[Vector](https://core.telegram.org/type/Vector%20t)<[DialogFilterSuggested](/type/DialogFilterSuggested/)\>
+[Vector](https://core.telegram.org/type/Vector%20t)&lt;[DialogFilterSuggested](/type/DialogFilterSuggested/)\>
 
 ### Only users can use this method
 

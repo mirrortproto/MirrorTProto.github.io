@@ -22,7 +22,7 @@ bots.getPreviewMedias#a2a5594d bot:InputUser = Vector<BotPreviewMedia>;
 
 ### Result
 
-[Vector](https://core.telegram.org/type/Vector%20t)<[BotPreviewMedia](/type/BotPreviewMedia/)\>
+[Vector](https://core.telegram.org/type/Vector%20t)&lt;[BotPreviewMedia](/type/BotPreviewMedia/)\>
 
 ### Only users can use this method
 

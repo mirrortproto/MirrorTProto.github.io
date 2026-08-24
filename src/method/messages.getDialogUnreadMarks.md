@@ -22,6 +22,6 @@ messages.getDialogUnreadMarks#21202222 flags:# parent_peer:flags.0?InputPeer = V
 
 ### Result
 
-[Vector](https://core.telegram.org/type/Vector%20t)<[DialogPeer](/type/DialogPeer/)\>
+[Vector](https://core.telegram.org/type/Vector%20t)&lt;[DialogPeer](/type/DialogPeer/)\>
 
 ### Only users can use this method

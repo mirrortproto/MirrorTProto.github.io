@@ -322,7 +322,7 @@ Web page type values from the [webPage](/constructor/webPage/) constructor.
 
 -   Added **live\_photo**, **video** parameters in [inputMediaUploadedPhoto](/constructor/inputMediaUploadedPhoto/)
 -   Added **live\_photo**, **video** parameters in [inputMediaPhoto](/constructor/inputMediaPhoto/)
--   Added **attached\_media**, **solution\_media** parameters, changed type of **correct\_answers** from **flags.0?Vector<bytes>** to **flags.0?Vector<int>** in [inputMediaPoll](/constructor/inputMediaPoll/)
+-   Added **attached\_media**, **solution\_media** parameters, changed type of **correct\_answers** from **flags.0?Vector&lt;bytes>** to **flags.0?Vector&lt;int>** in [inputMediaPoll](/constructor/inputMediaPoll/)
 -   Added **bot\_can\_manage\_bots** parameter in [user](/constructor/user/)
 -   Added **live\_photo**, **video** parameters in [messageMediaPhoto](/constructor/messageMediaPhoto/)
 -   Added **flags**, **attached\_media** parameters in [messageMediaPoll](/constructor/messageMediaPoll/)
@@ -1181,7 +1181,7 @@ This layer introduces:
 -   Added **send\_paid\_messages\_stars** parameter in [phone.toggleGroupCallSettings](/method/phone.toggleGroupCallSettings/)
 -   Added **for\_live\_stories** parameter in [channels.getSendAs](/method/channels.getSendAs/)
 -   Added **flags**, **live\_story** parameters in [phone.getGroupCallStreamRtmpUrl](/method/phone.getGroupCallStreamRtmpUrl/)
--   Changed type of [stories.getPeerMaxIDs](/method/stories.getPeerMaxIDs/) from **Vector<int>** to **Vector<RecentStory>**
+-   Changed type of [stories.getPeerMaxIDs](/method/stories.getPeerMaxIDs/) from **Vector&lt;int>** to **Vector&lt;RecentStory>**
 -   Changed type of [phone.sendGroupCallMessage](/method/phone.sendGroupCallMessage/) from **Bool** to **Updates**
 -   Added **flags**, **allow\_paid\_stars**, **send\_as** parameters in [phone.sendGroupCallMessage](/method/phone.sendGroupCallMessage/)
 

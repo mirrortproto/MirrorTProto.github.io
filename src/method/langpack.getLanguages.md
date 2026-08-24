@@ -22,7 +22,7 @@ langpack.getLanguages#42c6978f lang_pack:string = Vector<LangPackLanguage>;
 
 ### Result
 
-[Vector](https://core.telegram.org/type/Vector%20t)<[LangPackLanguage](/type/LangPackLanguage/)\>
+[Vector](https://core.telegram.org/type/Vector%20t)&lt;[LangPackLanguage](/type/LangPackLanguage/)\>
 
 ### Only users can use this method
 

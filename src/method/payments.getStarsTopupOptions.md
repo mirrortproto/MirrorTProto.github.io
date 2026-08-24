@@ -22,7 +22,7 @@ This constructor does not require any parameters.
 
 ### Result
 
-[Vector](https://core.telegram.org/type/Vector%20t)<[StarsTopupOption](/type/StarsTopupOption/)\>
+[Vector](https://core.telegram.org/type/Vector%20t)&lt;[StarsTopupOption](/type/StarsTopupOption/)\>
 
 ### Only users can use this method
 

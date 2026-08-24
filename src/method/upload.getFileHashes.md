@@ -22,7 +22,7 @@ upload.getFileHashes#9156982a location:InputFileLocation offset:long = Vector<Fi
 
 ### Result
 
-[Vector](https://core.telegram.org/type/Vector%20t)<[FileHash](/type/FileHash/)\>
+[Vector](https://core.telegram.org/type/Vector%20t)&lt;[FileHash](/type/FileHash/)\>
 
 ### Both users and bots can use this method
 

@@ -22,6 +22,6 @@ This constructor does not require any parameters.
 
 ### Result
 
-[Vector](https://core.telegram.org/type/Vector%20t)<[MessageRange](/type/MessageRange/)\>
+[Vector](https://core.telegram.org/type/Vector%20t)&lt;[MessageRange](/type/MessageRange/)\>
 
 ### Only users can use this method

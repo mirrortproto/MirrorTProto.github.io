@@ -22,7 +22,7 @@ stories.getPeerMaxIDs#78499170 id:Vector<InputPeer> = Vector<RecentStory>;
 
 ### Result
 
-[Vector](https://core.telegram.org/type/Vector%20t)<[RecentStory](/type/RecentStory/)\>
+[Vector](https://core.telegram.org/type/Vector%20t)&lt;[RecentStory](/type/RecentStory/)\>
 
 ### Only users can use this method
 

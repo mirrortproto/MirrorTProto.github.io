@@ -24,7 +24,7 @@ messages.getCustomEmojiDocuments#d9ab0f54 document_id:Vector<long> = Vector<Docu
 
 ### Result
 
-[Vector](https://core.telegram.org/type/Vector%20t)<[Document](/type/Document/)\>
+[Vector](https://core.telegram.org/type/Vector%20t)&lt;[Document](/type/Document/)\>
 
 ### Both users and bots can use this method
 

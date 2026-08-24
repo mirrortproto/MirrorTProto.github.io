@@ -22,7 +22,7 @@ messages.getSearchCounters#1bbcf300 flags:# peer:InputPeer saved_peer_id:flags.2
 
 ### Result
 
-[Vector](https://core.telegram.org/type/Vector%20t)<[messages.SearchCounter](/type/messages.SearchCounter/)\>
+[Vector](https://core.telegram.org/type/Vector%20t)&lt;[messages.SearchCounter](/type/messages.SearchCounter/)\>
 
 ### Only users can use this method
 

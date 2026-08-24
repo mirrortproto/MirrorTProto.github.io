@@ -22,7 +22,7 @@ This constructor does not require any parameters.
 
 ### Result
 
-[Vector](https://core.telegram.org/type/Vector%20t)<[SavedContact](/type/SavedContact/)\>
+[Vector](https://core.telegram.org/type/Vector%20t)&lt;[SavedContact](/type/SavedContact/)\>
 
 ### Only users can use this method
 

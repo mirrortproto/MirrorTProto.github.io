@@ -22,7 +22,7 @@ upload.getCdnFileHashes#91dc3f31 file_token:bytes offset:long = Vector<FileHash>
 
 ### Result
 
-[Vector](https://core.telegram.org/type/Vector%20t)<[FileHash](/type/FileHash/)\>
+[Vector](https://core.telegram.org/type/Vector%20t)&lt;[FileHash](/type/FileHash/)\>
 
 ### Both users and bots can use this method
 

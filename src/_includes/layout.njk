@@ -110,54 +110,44 @@
 <div class="layout">
   {% set showAll = section == 'other' %}
   {% set currentGroup = 'schema' if section == 'ref' else ('other' if section == 'faq' else section) %}
-  <aside class="sidebar" aria-label="Pages in this section">
+  {% if crumbs and crumbs.length %}
+    <div class="crumbs">
+      {% for c in crumbs %}<a href="{{ c.url }}">{{ c.title }}</a>{% if not loop.last %} <span class="crumb-sep">›</span> {% endif %}{% endfor %}
+    </div>
+  {% endif %}
+  {# One navigation tree for both breakpoints. CSS places it in the sticky left
+     column on desktop and as an accordion above the article on mobile; the two
+     used to be separate DOM subtrees carrying identical links.
+     .nav-pinned = the single-section case, which desktop keeps permanently
+     expanded (and non-interactive) while mobile keeps it collapsed by default —
+     a difference <details> cannot express in markup, so the script below syncs
+     the `open` state to the breakpoint. #}
+  <nav class="sidebar" aria-label="Pages in this section">
     {% for group in nav.sections %}
       {% if showAll or group.key == currentGroup %}
-        {% if showAll %}
-        <details class="nav-group nav-collapsible">
-          <summary class="nav-group-title">
-            <svg class="chev" width="10" height="10" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <span>{{ group.title }}</span>
-          </summary>
-          <ul>
-            {% for item in group.items %}
-              <li{% if page.url == item.url %} class="active"{% endif %}><a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.title }}</a></li>
-            {% endfor %}
-          </ul>
-        </details>
-        {% else %}
-        <div class="nav-group">
-          <div class="nav-group-title">{{ group.title }}</div>
-          <ul>
-            {% for item in group.items %}
-              <li{% if page.url == item.url %} class="active"{% endif %}><a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.title }}</a></li>
-            {% endfor %}
-          </ul>
-        </div>
-        {% endif %}
+      <details class="nav-group{% if not showAll %} nav-pinned{% endif %}"{% if not showAll %} open{% endif %}>
+        <summary class="nav-group-title">
+          <svg class="chev" width="10" height="10" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>{{ group.title }}</span>
+        </summary>
+        <ul>
+          {% for item in group.items %}
+            <li{% if page.url == item.url %} class="active"{% endif %}><a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </details>
       {% endif %}
     {% endfor %}
-  </aside>
+  </nav>
+  {# Breakpoint sync for .nav-pinned. A <details> cannot carry two different
+     default states, but desktop needs the single-section group expanded and
+     mobile needs it collapsed. This runs while the nav is still being parsed —
+     before first paint — so the mobile state never flashes open. It also drops
+     the summary from the desktop tab order, matching the inert <div> title it
+     replaced; without JS the group simply stays expanded, which stays usable.
+     Emitted minified on purpose: it ships on every one of ~3200 pages. #}
+  {% if not showAll %}<script>(function(){var p=document.querySelectorAll('.nav-pinned'),m=window.matchMedia&&matchMedia('(max-width:900px)');if(!p.length||!m)return;function s(){for(var i=0;i<p.length;i++){p[i].open=!m.matches;var t=p[i].firstElementChild;if(t&&t.tagName==='SUMMARY')t.tabIndex=m.matches?0:-1}}s();m.addEventListener?m.addEventListener('change',s):m.addListener&&m.addListener(s)})();</script>{% endif %}
   <main class="content" id="content">
-    {% if crumbs and crumbs.length %}
-      <div class="crumbs">
-        {% for c in crumbs %}<a href="{{ c.url }}">{{ c.title }}</a>{% if not loop.last %} <span class="crumb-sep">›</span> {% endif %}{% endfor %}
-      </div>
-    {% endif %}
-    <div class="mobile-nav" role="navigation" aria-label="Pages in this section">
-      {% for group in nav.sections %}
-        {% if showAll or group.key == currentGroup %}
-        <details class="mobile-nav-group">
-          <summary>{{ group.title }}</summary>
-          <ul>
-            {% for item in group.items %}
-              <li{% if page.url == item.url %} class="active"{% endif %}><a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.title }}</a></li>
-            {% endfor %}
-          </ul>
-        </details>
-        {% endif %}
-      {% endfor %}
-    </div>
     <article>
       {{ content | safe }}
       <div class="source-note">

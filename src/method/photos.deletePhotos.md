@@ -22,6 +22,6 @@ photos.deletePhotos#87cf7f2f id:Vector<InputPhoto> = Vector<long>;
 
 ### Result
 
-[Vector](https://core.telegram.org/type/Vector%20t)<[long](/type/long/)\>
+[Vector](https://core.telegram.org/type/Vector%20t)&lt;[long](/type/long/)\>
 
 ### Only users can use this method

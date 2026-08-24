@@ -503,7 +503,7 @@ The stripped `bytes` payload should be inflated to a JPG payload as seen [here 
 photoPathSize#d8214d41 type:string bytes:bytes = PhotoSize;
 ```
 
-Messages with [animated](/api/stickers/#animated-stickers), [video](/api/stickers/#video-stickers), [static](/api/stickers/#static-stickers) stickers can have a compressed svg (< 300 bytes) to show the outline of the sticker before fetching the actual sticker. Sticker outlines will have a `j` type [photoPathSize](/constructor/photoPathSize/) thumbnail.
+Messages with [animated](/api/stickers/#animated-stickers), [video](/api/stickers/#video-stickers), [static](/api/stickers/#static-stickers) stickers can have a compressed svg (&lt; 300 bytes) to show the outline of the sticker before fetching the actual sticker. Sticker outlines will have a `j` type [photoPathSize](/constructor/photoPathSize/) thumbnail.
 
 This specific vector thumbnail consists of an [SVG path](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Paths), specially encoded to save space.  
 This path will be the outline of the animated sticker, and should be shown to the user while downloading the actual sticker.
@@ -534,7 +534,7 @@ for (i = 0; i < len; i++) {
 path += "z"
 ```
 
-`path` will contain the actual SVG path that can be directly inserted in the `d` attribute of an [svg <path> element](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/path):
+`path` will contain the actual SVG path that can be directly inserted in the `d` attribute of an [svg &lt;path> element](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/path):
 
 ```
 <?xml version="1.0" encoding="utf-8"?>

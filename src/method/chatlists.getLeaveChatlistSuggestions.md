@@ -22,7 +22,7 @@ chatlists.getLeaveChatlistSuggestions#fdbcd714 chatlist:InputChatlist = Vector<P
 
 ### Result
 
-[Vector](https://core.telegram.org/type/Vector%20t)<[Peer](/type/Peer/)\>
+[Vector](https://core.telegram.org/type/Vector%20t)&lt;[Peer](/type/Peer/)\>
 
 ### Only users can use this method
 
