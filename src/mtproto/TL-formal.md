@@ -9,7 +9,7 @@ layout: layout.njk
 
 # Formal TL declaration
 
-See also [TL Language](TL). For the syntax of declaring combinators, see in article [Formal declaration of TL combinators](TL-combinators). For the syntax of patterns, see in article [Formal declaration of TL patterns](TL-patterns).
+See also [TL Language](/mtproto/TL/). For the syntax of declaring combinators, see in article [Formal declaration of TL combinators](/mtproto/TL-combinators/). For the syntax of patterns, see in article [Formal declaration of TL patterns](/mtproto/TL-patterns/).
 
 ### Tokens
 
@@ -123,7 +123,7 @@ _conditional-def_ ::= _var-ident_ \[ `.` _nat-const_ \] `?`
 _result-type_ ::= _boxed-type-ident_ { _subexpr_ }  
 _result-type_ ::= _boxed-type-ident_ `<` _subexpr_ { `,` _subexpr_ } `>`
 
-See [Formal declaration of TL combinators](TL-combinators) for a description of what exactly this means. Here we will only note that when declaring the type of a combinator's next argument, only the names of previously arranged (more to the left) arguments of the same combinator may be used as variables, but when declaring the result type you can use all of its parameters (of type `Type` and `#`).
+See [Formal declaration of TL combinators](/mtproto/TL-combinators/) for a description of what exactly this means. Here we will only note that when declaring the type of a combinator's next argument, only the names of previously arranged (more to the left) arguments of the same combinator may be used as variables, but when declaring the result type you can use all of its parameters (of type `Type` and `#`).
 
 Note that the names of combinators declared in this way may be used in TL itself only as the corresponding bare types. The only combinators that appear in declarations are built-in: `O : #` and `S : # -> #`.
 
@@ -137,7 +137,7 @@ _partial-app-decl_ ::= _partial-type-app-decl_ | _partial-comb-app-decl_
 _partial-type-app-decl_ ::= _boxed-type-ident_ _subexpr_ { _subexpr_ } `;` | _boxed-type-ident_ `<` _expr_ { `,` _expr_ } `>` `;`  
 _partial-comb-app-decl_ ::= _combinator-id_ _subexpr_ { _subexpr_ } `;`
 
-See [Formal declaration of TL patterns](TL-patterns).
+See [Formal declaration of TL patterns](/mtproto/TL-patterns/).
 
 ### Type finalization
 

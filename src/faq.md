@@ -30,7 +30,7 @@ layout: layout.njk
 -   [How do you make money?](#q-how-are-you-going-to-make-money-out-of-this)
 -   [What are your thoughts on internet privacy?](#q-what-are-your-thoughts-on-internet-privacy)
 -   [What about GDPR?](#q-what-about-gdpr)
--   [Do you process takedown requests?](#q-there-39s-illegal-content-on-telegram-how-do-i-take-it-down)
+-   [Do you process takedown requests?](#q-there-s-illegal-content-on-telegram-how-do-i-take-it-down)
 -   [Do you process data requests?](#q-do-you-process-data-requests)
 
 [**Telegram Basics**](#telegram-basics)
@@ -42,7 +42,7 @@ layout: layout.njk
 -   [Inviting friends](#q-how-do-i-invite-my-friends)
 -   [What do the check marks mean in Telegram?](#q-what-do-the-check-marks-mean)
 -   [Can I hide my 'last seen'?](#q-can-i-hide-my-last-seen-time)
--   [Who can see me 'online'?](#q-who-can-see-me-39online-39)
+-   [Who can see me 'online'?](#q-who-can-see-me-online)
 -   [Can I delete my messages?](#q-can-i-delete-my-messages)
 -   [Voice, Video and Group calls](#q-can-i-make-calls-via-telegram)
 -   [Using emoticons](#q-how-can-i-use-emoticons)
@@ -50,18 +50,18 @@ layout: layout.njk
 [**Groups and Channels**](#groups-and-channels)
 
 -   [What makes Telegram groups cool?](#q-what-makes-telegram-groups-cool)
--   [How are channels and groups different?](#q-what-39s-the-difference-between-groups-and-channels)
+-   [How are channels and groups different?](#q-what-s-the-difference-between-groups-and-channels)
 -   [Creating a group](#q-how-do-i-create-a-group)
--   [Adding members and using Invite Links](#q-how-do-i-add-more-members-what-39s-an-invite-link)
+-   [Adding members and using Invite Links](#q-how-do-i-add-more-members-what-s-an-invite-link)
 
 [**Usernames and t.me**](#usernames-and-t-me)
 
 -   [What are usernames? How do I get one?](#q-what-are-usernames-how-do-i-get-one)
--   [What are Collectible Usernames? How are they different from basic usernames?](#q-what-are-collectible-usernames-how-are-they-different-from-bas)
+-   [What are Collectible Usernames? How are they different from basic usernames?](#q-what-are-collectible-usernames-how-are-they-different-from-basic-usernames)
 -   [How does t.me work?](#q-how-does-t-me-work)
 -   [What can I use as my username?](#q-what-can-i-use-as-my-username)
 -   [Do I need a username?](#q-do-i-need-a-username)
--   [Will people know my number?](#q-if-someone-finds-me-by-username-messages-and-i-reply-will-they)
+-   [Will people know my number?](#q-if-someone-finds-me-by-username-messages-and-i-reply-will-they-know-my-number)
 -   [How do I delete my username?](#q-how-do-i-delete-my-username)
 -   [What do I do if my username is taken?](#q-what-do-i-do-if-my-username-is-taken)
 -   [What if someone is pretending to be me?](#q-what-if-someone-is-pretending-to-be-me)
@@ -72,11 +72,11 @@ layout: layout.njk
 -   [How do you encrypt data?](#q-so-how-do-you-encrypt-data)
 -   [Why should I trust you?](#q-why-should-i-trust-you)
 -   [Do I need to trust Telegram for it to be secure?](#q-do-i-need-to-trust-telegram-for-this-to-be-secure)
--   [What if my hacker friend doubts you?](#q-what-if-my-hacker-friend-says-they-could-decipher-telegram-mes)
+-   [What if my hacker friend doubts you?](#q-what-if-my-hacker-friend-says-they-could-decipher-telegram-messages)
 -   [Can Telegram protect me against everything?](#q-can-telegram-protect-me-against-everything)
 -   [How does 2-Step Verification work?](#q-how-does-2-step-verification-work)
 -   [What is Cocoon?](#q-what-is-cocoon)
--   [Do Telegram AI features upload data to third parties?](#q-do-telegram-39s-ai-features-upload-data-to-third-parties)
+-   [Do Telegram AI features upload data to third parties?](#q-do-telegram-s-ai-features-upload-data-to-third-parties)
 -   [What AI models does Telegram use?](#q-what-ai-model-does-telegram-use)
 
 [**Secret Chats**](#secret-chats)
@@ -84,9 +84,9 @@ layout: layout.njk
 -   [What is a _secret chat?_](#q-how-are-secret-chats-different)
 -   [Starting a secret chat](#q-how-do-i-start-a-secret-chat)
 -   [Using the self-destruct timer](#q-how-do-self-destructing-messages-work)
--   [Screenshot alerts](#q-can-i-be-certain-that-my-conversation-partner-doesn-39t-take-a)
--   [Encryption key picture](#q-what-is-this-39encryption-key-39-thing)
--   [Why not make all chats 'secret'?](#q-why-not-just-make-all-chats-39secret-39)
+-   [Screenshot alerts](#q-can-i-be-certain-that-my-conversation-partner-doesn-t-take-a-screenshot)
+-   [Encryption key picture](#q-what-is-this-encryption-key-thing)
+-   [Why not make all chats 'secret'?](#q-why-not-just-make-all-chats-secret)
 
 [**Your Account**](#your-account)
 
@@ -109,7 +109,7 @@ layout: layout.njk
 
 [**Deeper Questions**](#deeper-questions)
 
--   [Can I get Telegram's server-side code?](#q-can-i-get-telegram-39s-server-side-code)
+-   [Can I get Telegram's server-side code?](#q-can-i-get-telegram-s-server-side-code)
 -   [Can I use my own server?](#q-can-i-run-telegram-using-my-own-server)
 -   [Can I use the Telegram API?](#q-can-i-use-the-telegram-api)
 -   [Do you have a Privacy Policy?](#q-do-you-have-a-privacy-policy)
@@ -127,7 +127,7 @@ layout: layout.njk
 -   [Problems with contacts](#problems-with-contacts)
 -   [Deleting contacts on Android](#deleting-contacts-on-android)
 -   [Secret Chats](#where-did-my-secret-chat-messages-go)
--   [Can't send messages to non contacts](#can-39t-send-messages-to-non-contacts)
+-   [Can't send messages to non contacts](#can-t-send-messages-to-non-contacts)
 -   [Telegram uses the camera or microphone in the background](#telegram-uses-the-camera-or-microphone-in-the-background)
 
 [**Contact Telegram Support**](#telegram-support)  
@@ -529,7 +529,7 @@ Go to Settings and save an empty username. This will remove your username; peopl
 
 #### Q: What do I do if my username is taken?
 
-There are two types of username on Telegram, [basic usernames](#q-what-are-usernames-how-do-i-get-one) and [collectible usernames](#q-what-are-collectible-usernames-how-are-they-different-from-bas).
+There are two types of username on Telegram, [basic usernames](#q-what-are-usernames-how-do-i-get-one) and [collectible usernames](#q-what-are-collectible-usernames-how-are-they-different-from-basic-usernames).
 
 **Basic Usernames**
 
@@ -579,7 +579,7 @@ On top of that, Telegram's primary focus is not to [bring a profit](#q-how-are-y
 
 #### Q: Do I need to trust Telegram for this to be secure?
 
-When it comes to [secret chats](#secret-chats), you don't — just make sure that the visualized key of your secret chat matches the one in your friend's secret chat settings. [More about this below](faq#q-what-is-this-39encryption-key-39-thing).
+When it comes to [secret chats](#secret-chats), you don't — just make sure that the visualized key of your secret chat matches the one in your friend's secret chat settings. [More about this below](/faq/#q-what-is-this-encryption-key-thing).
 
 #### Q: What if my hacker friend says they could decipher Telegram messages?
 

@@ -346,6 +346,10 @@ h1:hover .header-anchor, h2:hover .header-anchor, h3:hover .header-anchor, h4:ho
 }
 .source-note { margin-top: 40px; padding-top: 12px; border-top: 1px dashed var(--border); color: var(--muted); font-size: 13.5px; }
 .source-note a { color: var(--muted); }
+/* mirror-generated page (schema indexes, search, 404, home): stated above the
+   "Closest original" line, one step less muted so it reads as a statement
+   about the page rather than as part of the source reference */
+.generated-note { margin: 0 0 6px; color: var(--fg); }
 .site-footer { border-top: 1px solid var(--border); color: var(--muted); font-size: 13px; text-align: center; padding: 18px 20px; margin-top: 40px; }
 .site-footer a { color: var(--muted); }
 @media (max-width: 900px) {

@@ -20,13 +20,13 @@ layout: layout.njk
 -   [End-to-end encryption](#q-how-does-end-to-end-encryption-work-in-mtproto)
 -   [Why didn't you use a different solution?](#q-why-are-you-not-using-x-insert-solution)
 -   [Why are you mostly relying on classical crypto algorithms?](#q-why-are-you-mostly-relying-on-classical-crypto-algorithms)
--   [I'm a security expert and I have comments about your setup](#q-i-39m-a-security-expert-and-i-have-comments-about-your-setup)
+-   [I'm a security expert and I have comments about your setup](#q-i-m-a-security-expert-and-i-have-comments-about-your-setup)
 
 [**Encryption**](#encryption)
 
 -   [How are MTProto messages authenticated?](#q-how-are-mtproto-messages-authenticated)
--   [Are you using Encrypt-and-MAC?](#q-are-you-doing-encrypt-then-mac-mac-then-encrypt-or-mac-and-enc)
--   [Why not go for Encrypt-then-MAC?](#q-why-don-39t-you-go-for-a-standard-encrypt-then-mac-approach)
+-   [Are you using Encrypt-and-MAC?](#q-are-you-doing-encrypt-then-mac-mac-then-encrypt-or-mac-and-encrypt)
+-   [Why not go for Encrypt-then-MAC?](#q-why-don-t-you-go-for-a-standard-encrypt-then-mac-approach)
 -   [Do you still use SHA-1?](#q-do-you-still-use-sha-1)
 -   [Do you use IGE? IGE is broken!](#q-do-you-use-ige-ige-is-broken)
 
@@ -57,7 +57,7 @@ layout: layout.njk
 -   [Can CDNs be used for censorship?](#q-can-cdns-be-used-for-censorship)
 -   [Can I verify this?](#q-can-i-verify-this)
 -   [Does this affect private data?](#q-does-this-affect-private-data)
--   [Is this connected to government requests to move servers to their territory?](#q-is-this-connected-with-government-requests-to-move-private-dat)
+-   [Is this connected to government requests to move servers to their territory?](#q-is-this-connected-with-government-requests-to-move-private-data-to-their-territory)
 -   [Does this give countries any influence over Telegram?](#q-does-this-give-some-countries-any-influence-over-telegram)
 
 * * *
@@ -140,7 +140,7 @@ It is crucial that AES decryption keys depend both on _msg\_key_, and on _auth\_
 
 We do none of the above, strictly speaking. For message authentication, we compute SHA-256(auth\_key\_fragment + AES\_decrypt(…,encrypted\_message)) upon message receipt and compare this value to the _msg\_key_ received with the encrypted message.
 
-> See also: [Why not Encrypt-then-MAC?](#q-why-don-39t-you-go-for-a-standard-encrypt-then-mac-approach)
+> See also: [Why not Encrypt-then-MAC?](#q-why-don-t-you-go-for-a-standard-encrypt-then-mac-approach)
 
 #### Q: Why don't you go for a standard encrypt-then-MAC approach?
 
@@ -164,7 +164,7 @@ In MTProto 2.0, SHA-1 is used only where the choice of hash function is irreleva
 
 Yes, we use IGE, but it is not broken in our implementation. The fact that we do not use IGE as MAC together with other properties of our system makes the known attacks on IGE irrelevant.
 
-IGE, just as the ubiquitous CBC, is vulnerable to [blockwise-adaptive CPA](http://eprint.iacr.org/2006/271.pdf). But adaptive attacks are only a threat for as long as the same key can be used in several messages (not so in [MTProto](#q-are-you-doing-encrypt-then-mac-mac-then-encrypt-or-mac-and-enc)).
+IGE, just as the ubiquitous CBC, is vulnerable to [blockwise-adaptive CPA](http://eprint.iacr.org/2006/271.pdf). But adaptive attacks are only a threat for as long as the same key can be used in several messages (not so in [MTProto](#q-are-you-doing-encrypt-then-mac-mac-then-encrypt-or-mac-and-encrypt)).
 
 Adaptive attacks are even theoretically impossible in MTProto, because in order to be encrypted the message must be fully formed first, since the key is dependent on the message content. As for non-adaptive CPA, IGE is secure against them, as is CBC.
 

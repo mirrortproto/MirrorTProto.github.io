@@ -9,7 +9,7 @@ layout: layout.njk
 
 # Optional combinator parameters and their values
 
-[TL Language](TL) makes it possible to declare a combinator's first few parameters optional. Subsequently, they are almost never required to be explicitly stated. This is directly related to another important property of TL: [polymorphism](TL-polymorph).
+[TL Language](/mtproto/TL/) makes it possible to declare a combinator's first few parameters optional. Subsequently, they are almost never required to be explicitly stated. This is directly related to another important property of TL: [polymorphism](/mtproto/TL-polymorph/).
 
 All optional parameters are typically required to be part of the result type (at least once).
 
@@ -49,4 +49,4 @@ The idea is this: we assume that during (de)serialization of a value of a type m
 
 In fact, `!` denotes the direction in which type information is flowing. By default, the result type is the source of information about types (and their parameters), while argument types are the recipients of that information. The use of `!` reverses the direction of information flow, making the result type the recipient and the argument type the source of type information.
 
-See also [Binary serialization and abstract TL types](TL-abstract-types) and [Polymorphism in TL](TL-polymorph).
+See also [Binary serialization and abstract TL types](/mtproto/TL-abstract-types/) and [Polymorphism in TL](/mtproto/TL-polymorph/).

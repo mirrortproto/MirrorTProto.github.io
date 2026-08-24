@@ -11,7 +11,7 @@ layout: layout.njk
 
 [Formal declaration of TL combinators](/mtproto/TL-combinators/)
 
-Main article: [Formal description of TL](TL-formal). See also [TL Language](TL).
+Main article: [Formal description of TL](/mtproto/TL-formal/). See also [TL Language](/mtproto/TL/).
 
 Combinators in TL are declared as follows:
 

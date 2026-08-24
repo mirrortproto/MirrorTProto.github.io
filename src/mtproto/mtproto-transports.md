@@ -45,7 +45,7 @@ OR
 +-+---+----...----+
 ```
 
-Before sending _anything_ into the underlying socket (see [transports](transports)), the client must first send `0xef` as the first byte (the server **will not** send `0xef` as the first byte in the first reply).  
+Before sending _anything_ into the underlying socket (see [transports](/mtproto/transports/)), the client must first send `0xef` as the first byte (the server **will not** send `0xef` as the first byte in the first reply).  
 Then, payloads are wrapped in the following envelope:
 
 If the packet length divided by four is smaller than 127:
@@ -100,7 +100,7 @@ Payload structure:
 +----+----...----+
 ```
 
-Before sending _anything_ into the underlying socket (see [transports](transports)), the client must first send `0xeeeeeeee` as the first int (four bytes, the server **will not** send `0xeeeeeeee` as the first int in the first reply).  
+Before sending _anything_ into the underlying socket (see [transports](/mtproto/transports/)), the client must first send `0xeeeeeeee` as the first int (four bytes, the server **will not** send `0xeeeeeeee` as the first int in the first reply).  
 Then, payloads are wrapped in the following envelope:
 
 -   Length: payload length encoded as 4 length bytes (little endian)
@@ -128,7 +128,7 @@ Padded version of the [intermediate protocol](#intermediate), to use with [obfus
 -   Minimum envelope length: random
 -   Maximum envelope length: random
 
-Before sending _anything_ into the underlying socket (see [transports](transports)), the client must first send `0xdddddddd` as the first int (four bytes, the server **will not** send `0xdddddddd` as the first int in the first reply).  
+Before sending _anything_ into the underlying socket (see [transports](/mtproto/transports/)), the client must first send `0xdddddddd` as the first int (four bytes, the server **will not** send `0xdddddddd` as the first int in the first reply).  
 Then, payloads are wrapped in the following envelope:
 
 ```
@@ -218,7 +218,7 @@ When using the [HTTP](/mtproto/transports/#http)/[HTTPS](/mtproto/transports/#ht
 
 #### Transport obfuscation
 
-Transport obfuscation is required to use the [WebSocket transports](transports#websocket).
+Transport obfuscation is required to use the [WebSocket transports](/mtproto/transports/#websocket).
 
 Transport obfuscation to **prevent ISP blocks** is implemented using the following protocol, situated under the MTProto transport in the ISO/OSI stack, see the [recap](/mtproto/#recap); this means that the payload is first wrapped in the [MTProto transport envelope](/mtproto/mtproto-transports/) (all transports are supported), and then obfuscated:
 

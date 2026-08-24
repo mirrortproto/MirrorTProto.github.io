@@ -13,7 +13,7 @@ Bots may use this method to prepare a peer request button for a [Mini App](/api/
 
 <p class="page_layer">Layer 223</p>
 
-<pre class="page_scheme"><code>Method schema is available as of layer 224. <a href="?layer=224">Switch »</a></code></pre>
+<pre class="page_scheme"><code>Method schema is available as of layer 224. <a href="https://core.telegram.org/method/bots.requestWebViewButton?layer=224">Switch »</a></code></pre>
 
 ### Parameters
 

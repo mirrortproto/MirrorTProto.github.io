@@ -70,12 +70,17 @@ function extractH1(html) {
 // `messagesreport` there and `messages-report` here). Links written against the
 // original ids used to be downgraded to off-site links; this map lets them be
 // resolved to the local heading instead.
+// core.telegram.org names the target with `id`, telegram.org (the FAQ page, the
+// one mirrored page from that host) with the older `name` — and it also encodes
+// apostrophes into the id as their entity number, so nothing but this map can
+// reconnect `#q-who-can-see-me-39online-39` to the heading it belongs to.
+// Reading only `id` left all 21 anchors of the FAQ table of contents dead.
 function originalAnchors(html) {
   const map = new Map();
   const re = /<(h[1-6])\b[^>]*>([\s\S]*?)<\/\1>/g;
   let m;
   while ((m = re.exec(html)) !== null) {
-    const id = m[2].match(/<a class="anchor"[^>]*\sid="([^"]*)"/);
+    const id = m[2].match(/<a class="anchor"[^>]*\s(?:id|name)="([^"]*)"/);
     if (!id) continue;
     const text = decode(m[2].replace(/<[^>]+>/g, '')).trim();
     if (text) map.set(id[1], slugify(cleanInline(text)));
@@ -414,6 +419,36 @@ async function main() {
     return encodePath(decoded + '/') + (a ? '#' + a : '');
   };
 
+  // Anything already absolute, scheme-qualified or a bare fragment is somebody
+  // else's job — the replacements above have handled it by the time the
+  // document-relative rules below run.
+  const ABSOLUTE = /^(?:[a-zA-Z][a-zA-Z0-9+.-]*:|\/\/|\/|#)/;
+
+  // Document-relative links — `TL`, `transports#websocket`, `?layer=98` — are
+  // resolved against the URL of the page that carries them, and that URL is not
+  // the same shape here as upstream: the original serves /mtproto/TL-formal,
+  // the mirror serves the directory /mtproto/TL-formal/. Copied verbatim,
+  // href="TL" therefore means /mtproto/TL (right) upstream and
+  // /mtproto/TL-formal/TL (a 404) here. Resolving against the *original* URL and
+  // emitting an absolute path makes the link immune to the URL shape.
+  // A query string names a different *version* of the page rather than another
+  // page: "?layer=98" is the "Switch »" link of the layer selector, and that
+  // version was never crawled. Such a link leaves for the original, the same way
+  // every other target outside the mirrored closure does — pointing it at the
+  // local page would produce a "Switch" link that switches nothing.
+  const RELBASE = 'https://relative.invalid';
+  const relTarget = (raw, ownPath, origin) => {
+    let u;
+    try {
+      u = new URL(raw, RELBASE + ownPath);
+    } catch {
+      return null;
+    }
+    if (u.origin !== RELBASE) return null;
+    const local = u.search ? null : target(u.pathname, u.hash);
+    return local === null ? origin + u.pathname + u.search + u.hash : local;
+  };
+
   const rewriteLinks = (md, ownPath, origin) =>
     md
       .replace(/<img([^>]*?)src="\/file\//g, `<img$1src="${origin}/file/`)
@@ -454,6 +489,20 @@ async function main() {
       .replace(/\]\((?!https?:|#)(\/[^)#\s]*)(#[^)\s]*)?\)/g, (m0, p, anchor) => {
         const local = target(p, anchor);
         return `](${local === null ? origin + p + (anchor || '') : local})`;
+      })
+      // document-relative hrefs kept as raw HTML (tables, TL-schema blocks)
+      .replace(/(<a\b[^>]*?)href="([^"]+)"/g, (m0, head, raw) => {
+        if (ABSOLUTE.test(raw)) return m0;
+        const local = relTarget(raw, ownPath, origin);
+        return local === null ? m0 : `${head}href="${escAttr(local)}"`;
+      })
+      // document-relative markdown links. The leading group tells a link from an
+      // image: `![alt](src)` is matched by its whole prefix, so the `]` branch
+      // cannot claim it, and image sources are left to the rules above.
+      .replace(/(!\[[^\]]*\]|\])\(([^)\s]+)\)/g, (m0, lead, raw) => {
+        if (lead[0] === '!' || ABSOLUTE.test(raw)) return m0;
+        const local = relTarget(raw, ownPath, origin);
+        return local === null ? m0 : `](${local})`;
       });
 
   // ---- pass 2: write files ----

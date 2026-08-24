@@ -9,7 +9,7 @@ layout: layout.njk
 
 # TL schema for serialization of TL schemas
 
-If necessary, a [TL](TL) schema can be serialized in binary form. Here, this serialization format is defined by a TL schema (usually stored in the file `tl.tl`). This can be useful, for example, to make it possible to write a parser one time for converting a TL schema from text form (stored in the file `something.tl`) to binary form (stored in the file `something.tlo`). All other programs (for example, auto-generators of TL-(de)serializers for various programming languages) only need to know how to read `.tlo` files, which only requires generating an automatic deserializer according to the schema presented below.
+If necessary, a [TL](/mtproto/TL/) schema can be serialized in binary form. Here, this serialization format is defined by a TL schema (usually stored in the file `tl.tl`). This can be useful, for example, to make it possible to write a parser one time for converting a TL schema from text form (stored in the file `something.tl`) to binary form (stored in the file `something.tlo`). All other programs (for example, auto-generators of TL-(de)serializers for various programming languages) only need to know how to read `.tlo` files, which only requires generating an automatic deserializer according to the schema presented below.
 
 First, a fragment of the file `common.tl` with certain required built-in types:
 

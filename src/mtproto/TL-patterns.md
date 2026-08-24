@@ -23,4 +23,4 @@ In theory, this problem can be solved by using the full form of the constructor 
 
 object X:Type X = TypedObject
 
-and passing the object type explicitly. [Type serialization](TL-types) is required in both cases.
+and passing the object type explicitly. [Type serialization](/mtproto/TL-types/) is required in both cases.

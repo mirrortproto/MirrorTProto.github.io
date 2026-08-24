@@ -50,6 +50,39 @@ const mdFiles = await walk(SRC, '.md');
 // blocks. The raw-HTML half used to go completely unchecked.
 const LINK_RES = [/\]\((\/[^)\s]*)\)/g, /<a\b[^>]*?href="(\/[^"]*)"/g];
 
+// The same two syntaxes, document-relative. These resolve against the URL of the
+// page holding them, and on this site that URL is a directory: `href="TL"` on
+// /mtproto/TL-formal/ means /mtproto/TL-formal/TL, not the /mtproto/TL it means
+// upstream (where the page has no trailing slash). Checking only the absolute
+// half is how a batch of such 404s, and the `#/` entry of the type index, stayed
+// invisible here for as long as they did. The leading group separates a link
+// from an image the same way tools/extract.mjs does.
+const REL_RES = [/(!\[[^\]]*\]|\])\(([^)\s]+)\)/g, /<a\b[^>]*?href="([^"]+)"/g];
+const ABSOLUTE = /^(?:[a-zA-Z][a-zA-Z0-9+.-]*:|\/\/|\/|#)/;
+const RELBASE = 'https://relative.invalid';
+
+// Links into the page's own headings. They point at no page, so nothing above
+// looks at them — and a table of contents made of them is exactly as broken as
+// any other dead link if the ids drifted (the FAQ had 21 such).
+const SAME_RES = [/\]\((#[^)\s]+)\)/g, /<a\b[^>]*?href="(#[^"]+)"/g];
+
+// Markdown code is text, not markup: `<a href="#target">` in the prose of
+// /constructor/pageBlockAnchor/ shows what that block renders as, and no such
+// anchor exists (nor should). Fenced blocks and inline spans are masked before
+// links are collected. The raw-HTML <pre class="page_scheme"> listings are NOT
+// markdown code and stay untouched — their 11 607 schema links are real links.
+const stripCode = (md) => md.replace(/^```[\s\S]*?^```/gm, '').replace(/(`+)[\s\S]*?\1/g, '');
+
+// Where the page ends up on the site — the base every relative link is measured
+// against. `permalink` in the front matter wins (src/404.md is served as
+// /404.html, not /404/).
+const docUrl = (file, frontMatter) => {
+  const pm = frontMatter.match(/^permalink:\s*(\S+)\s*$/m);
+  if (pm) return pm[1];
+  const rel = '/' + path.relative(SRC, file).replace(/\\/g, '/').replace(/\.md$/, '');
+  return rel === '/index' ? '/' : rel.replace(/\/index$/, '') + '/';
+};
+
 // The five machine-readable endpoints are data, not prose: whatever looks like a
 // link inside them belongs to the document and is deliberately left untouched.
 const DATA_PAGES = new Set(
@@ -57,28 +90,69 @@ const DATA_PAGES = new Set(
     .map((p) => path.join(SRC, p.slice(1) + '.md'))
 );
 
-const links = []; // { file, url, target, anchor }
+const links = []; // { file, url, target, anchor, relative, samePage }
+let relative = 0;
+let samePage = 0;
 for (const f of mdFiles) {
   if (DATA_PAGES.has(f)) continue;
   const text = await readFile(f, 'utf8');
-  const body = text.startsWith('---\n') ? text.slice(text.indexOf('\n---\n', 3) + 5) : text;
+  const hasFm = text.startsWith('---\n');
+  const body = stripCode(hasFm ? text.slice(text.indexOf('\n---\n', 3) + 5) : text);
+  const file = path.relative(SRC, f);
   for (const re of LINK_RES) {
     for (const m of body.matchAll(re)) {
       const [target, anchor] = m[1].split('#');
-      links.push({ file: path.relative(SRC, f), url: m[1], target: decodePath(target).replace(/\/+$/, ''), anchor });
+      links.push({ file, url: m[1], target: decodePath(target).replace(/\/+$/, ''), anchor });
+    }
+  }
+  const own = docUrl(f, hasFm ? text.slice(4, text.indexOf('\n---\n', 3)) : '');
+  const base = RELBASE + own;
+  for (const re of SAME_RES) {
+    for (const m of body.matchAll(re)) {
+      samePage++;
+      links.push({
+        file,
+        url: m[1],
+        target: own.replace(/\/+$/, ''),
+        anchor: decodeURIComponent(m[1].slice(1)),
+        samePage: true,
+      });
+    }
+  }
+  for (const re of REL_RES) {
+    for (const m of body.matchAll(re)) {
+      const raw = m[2] ?? m[1];
+      if (m[2] !== undefined && m[1][0] === '!') continue; // an image, not a link
+      if (ABSOLUTE.test(raw)) continue; // collected by LINK_RES above
+      let u;
+      try {
+        u = new URL(raw, base);
+      } catch {
+        continue;
+      }
+      if (u.origin !== RELBASE) continue;
+      relative++;
+      links.push({
+        file,
+        url: raw,
+        target: decodePath(u.pathname).replace(/\/+$/, ''),
+        anchor: u.hash.slice(1) || undefined,
+        relative: true,
+      });
     }
   }
 }
 
 let broken = 0;
 for (const l of links) {
+  if (l.samePage) continue; // the page holding the link is the page it names
   const base = path.join(SRC, l.target);
   if (await exists(base + '.md')) continue;
   if (await exists(path.join(base, 'index.md'))) continue;
   broken++;
-  if (broken <= 10) fail(`broken link ${l.url} in ${l.file}`);
+  if (broken <= 10) fail(`broken link ${l.url} in ${l.file}${l.relative ? ` (relative, resolves to ${l.target})` : ''}`);
 }
-if (!broken) ok(`local links: ${links.length} (markdown + raw HTML), all resolve`);
+if (!broken) ok(`local links: ${links.length - samePage} (markdown + raw HTML; ${relative} document-relative), all resolve`);
 
 // ---- built pages ---------------------------------------------------------
 const pages = (await walk(DOCS)).filter((f) => f.endsWith('.html'));
@@ -119,17 +193,19 @@ if (!urlBad) ok('canonical/og:url properly encoded on all pages');
 // a link to a missing page, and far easier to introduce unnoticed.
 let anchorBad = 0;
 let anchorChecked = 0;
+let anchorSame = 0;
 for (const l of links) {
   if (!l.anchor) continue;
   const ids = idsByUrl.get(l.target || '/');
   if (!ids) continue; // page-level breakage is reported above
   anchorChecked++;
+  if (l.samePage) anchorSame++;
   if (!ids.has(l.anchor)) {
     anchorBad++;
     if (anchorBad <= 10) fail(`dead anchor ${l.url} in ${l.file}`);
   }
 }
-if (!anchorBad) ok(`anchors: ${anchorChecked} in-site fragments, all resolve`);
+if (!anchorBad) ok(`anchors: ${anchorChecked} in-site fragments (${anchorSame} into the page's own headings), all resolve`);
 
 const backups = path.join(ROOT, 'backup');
 const dates = (await readdir(backups).catch(() => [])).filter((d) => /^\d{4}-\d{2}-\d{2}$/.test(d)).sort();

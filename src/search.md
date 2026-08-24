@@ -3,6 +3,7 @@ title: "Search"
 original: "https://core.telegram.org"
 section: other
 description: "Full-text search over the mirrored Telegram API, MTProto and TL schema documentation, with a filter by section."
+generated: true
 layout: layout.njk
 ---
 

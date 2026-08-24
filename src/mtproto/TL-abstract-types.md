@@ -9,7 +9,7 @@ layout: layout.njk
 
 # Binary serialization and abstract TL types
 
-[TL Language](TL) defines _abstract_ data types in the spirit of a general theory of types (more accurately, Martin-Löf's theories of dependent intuitionistic types) without specifying the values of these types should be represented in memory, when saved to disk, or transmitted over a network. In contrast, the article on [binary serialization](serialize) discusses the problem of effective serialization of values of abstract types. To this end, the concept of a _concrete_ or _serialized_ type has been defined as the sets of serializations of all possible values of the corresponding abstract type. In this case, the serializations take values in the set A\* of words in the alphabet _A_, which consists of 2^32 characters -- 32-bit integers.
+[TL Language](/mtproto/TL/) defines _abstract_ data types in the spirit of a general theory of types (more accurately, Martin-Löf's theories of dependent intuitionistic types) without specifying the values of these types should be represented in memory, when saved to disk, or transmitted over a network. In contrast, the article on [binary serialization](/mtproto/serialize/) discusses the problem of effective serialization of values of abstract types. To this end, the concept of a _concrete_ or _serialized_ type has been defined as the sets of serializations of all possible values of the corresponding abstract type. In this case, the serializations take values in the set A\* of words in the alphabet _A_, which consists of 2^32 characters -- 32-bit integers.
 
 In order to use a TL schema (e.g. “program”) in the TL language to describe the serialization of values of abstract types, we should explain how the concrete type _\[T\]_ (subset _\[T\]_ of A^\*) is associated with the abstract type _T_ (defined in TL), and how the values of the abstract type _T_ correspond to the values of the concrete type _\[T\]_ (i.e. the elements of _\[T\]_).
 
@@ -45,7 +45,7 @@ Converting an abstract value to a serialized value, generally speaking, is strai
 
 -   It is the serialization of values _n_ of the primitive type `int` (as a single-symbol word in the alphabet _A_)
     
--   The serialization of a string constant (a value of the primitive type string) is a sequence of the 32-bit numbers defined in [Binary serialization](serialize).
+-   The serialization of a string constant (a value of the primitive type string) is a sequence of the 32-bit numbers defined in [Binary serialization](/mtproto/serialize/).
     
 -   The serialization of the S-expression `(C E1 ... Er) : T`, where `C` is a combinator with arity _r_ with argument types _T1_, ..., _Tr_ and result type _T_ (e.g. _C : T1->T2->...->Tr->T_) is the concatenation of the _combinator number_ _C_ (a 32-bit number that unambiguously identifies the combinator, usually equal to the CRC-32 of the string of its TL description) and the serializations of the values _E1_ of type _T1_, _E2_ of type _T2_, ..., _Er_ of type _Tr_.
     
@@ -56,7 +56,7 @@ If we use _\[T\]_ to denote the concrete type corresponding to the abstract _T_,
 
 Values of the built-in clothed types `Int` and `String` and serialized as if they were defined using `int x:int = Int;` and `string s:string = String;`, i.e. the serialization of integer constant or a string is preceded by number of the `int` or `string` combinator (constructor). In S-expressions, this may be written as `(int 5)` or `(string "Test")`.
 
-However, what has been described above does not account for certain subtleties, such as the existence of naked types, or the difference between functions (active combinators whose application may be reduced, e.g. calculated) and constructors (passive combinators for which there are not and cannot be reduction rules). Furthermore, we have not explained how to handle polymorphic types and [optional combinator parameters](TL-optargs). We will attempt to explain this now.
+However, what has been described above does not account for certain subtleties, such as the existence of naked types, or the difference between functions (active combinators whose application may be reduced, e.g. calculated) and constructors (passive combinators for which there are not and cannot be reduction rules). Furthermore, we have not explained how to handle polymorphic types and [optional combinator parameters](/mtproto/TL-optargs/). We will attempt to explain this now.
 
 ### Constants, surface values, and functional values
 
@@ -161,4 +161,4 @@ It is probably more correct to think about the `!` modifier as follows. All type
 
 ### Optional combinator parameters and their values
 
-See [Optional combinator parameters and their values](TL-optargs).
+See [Optional combinator parameters and their values](/mtproto/TL-optargs/).

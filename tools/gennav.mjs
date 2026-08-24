@@ -59,9 +59,9 @@ const apiItems = pages
 const schemaCore = ['/schema/', '/schema/mtproto/', '/schema/end-to-end/', '/methods/', '/schema/json/', '/schema/mtproto-json/', '/schema/end-to-end-json/'];
 const schemaItems = pick(schemaCore);
 schemaItems.push(
-  { url: '/constructor/', title: 'Constructors (reference)' },
-  { url: '/method/', title: 'Methods (reference)' },
-  { url: '/type/', title: 'Types (reference)' }
+  { url: '/constructor/', title: 'Constructors (index)' },
+  { url: '/method/', title: 'Methods (index)' },
+  { url: '/type/', title: 'Types (index)' }
 );
 
 const sections = [
