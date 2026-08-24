@@ -32,7 +32,7 @@ for await (const f of walk(SRC)) {
   if (!fm.title) continue;
   const rel = '/' + path.relative(SRC, f).replace(/\.md$/, '').replace(/\\/g, '/');
   const url = rel === '/index' ? '/' : rel.endsWith('/index') ? rel.slice(0, -5) : rel + '/';
-  pages.push({ url, title: fm.title, section: fm.section || 'other' });
+  pages.push({ url, title: fm.title, section: fm.section || 'other', date: fm.date || '' });
 }
 
 const byUrl = new Map(pages.map((p) => [p.url, p]));
@@ -64,17 +64,40 @@ schemaItems.push(
   { url: '/type/', title: 'Types (index)' }
 );
 
+// Bot API: the section index first, then the rest by url.
+const botsItems = pages
+  .filter((p) => p.section === 'bots')
+  .sort((a, b) => (a.url === '/bots/' ? -1 : b.url === '/bots/' ? 1 : a.url.localeCompare(b.url)));
+
+// Blog: newest first. A decade of announcements sorted by title would be a
+// filing cabinet, not a blog; every post carries its upstream date.
+const blogItems = pages
+  .filter((p) => p.section === 'blog')
+  .sort((a, b) => (b.date || '').localeCompare(a.date || '') || a.url.localeCompare(b.url))
+  .map((p) => ({ ...p, title: p.date ? `${p.title} (${p.date.slice(0, 7)})` : p.title }));
+
+// FAQ: the two the mirror already had lead, then the rest by url.
+const faqLead = ['/faq/', '/techfaq/', '/techfaq/mtproto_v1/'];
+const faqItems = [
+  ...pick(faqLead),
+  ...pages
+    .filter((p) => p.section === 'faq' && !faqLead.includes(p.url))
+    .sort((a, b) => a.url.localeCompare(b.url)),
+];
+
+// Other: everything the documentation links to that is none of the above.
+const otherItems = pages
+  .filter((p) => p.section === 'other')
+  .sort((a, b) => a.url.localeCompare(b.url));
+
 const sections = [
   { key: 'api', title: 'Telegram API', items: apiItems },
+  { key: 'bots', title: 'Bot API', items: botsItems },
   { key: 'mtproto', title: 'MTProto Protocol', items: mtprotoItems },
   { key: 'schema', title: 'Schema', items: schemaItems },
-  {
-    key: 'other',
-    title: 'Other',
-    items: pages
-      .filter((p) => p.section === 'faq')
-      .sort((a, b) => a.url.localeCompare(b.url)),
-  },
+  { key: 'blog', title: 'Blog', items: blogItems },
+  { key: 'faq', title: 'FAQ', items: faqItems },
+  { key: 'other', title: 'Other', items: otherItems },
 ];
 
 await mkdir(path.join(SRC, '_data'), { recursive: true });
@@ -88,4 +111,8 @@ try {
 } catch {}
 await writeFile(path.join(SRC, '_data', 'site.json'), JSON.stringify({ backup_date: backupDate }, null, 1));
 
-console.log('nav: MTProto', mtprotoItems.length, '| API', apiItems.length, '| Schema', schemaItems.length, '| backup', backupDate);
+console.log(
+  'nav: API', apiItems.length, '| Bot API', botsItems.length, '| MTProto', mtprotoItems.length,
+  '| Schema', schemaItems.length, '| Blog', blogItems.length, '| FAQ', faqItems.length,
+  '| Other', otherItems.length, '| backup', backupDate
+);

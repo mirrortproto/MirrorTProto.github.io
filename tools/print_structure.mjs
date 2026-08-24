@@ -39,18 +39,30 @@ pages.sort((a, b) => a.url.localeCompare(b.url));
 
 const groups = {
   mtproto: pages.filter((p) => p.url.startsWith('/mtproto')),
-  api: pages.filter((p) => p.url.startsWith('/api')),
+  api: pages.filter((p) => p.section === 'api'),
+  bots: pages.filter((p) => p.section === 'bots'),
   schema: pages.filter((p) => p.section === 'schema' || p.url.startsWith('/schema') || ['/methods/', '/constructors/', '/types/'].includes(p.url)),
   ref: pages.filter((p) => p.section === 'ref'),
+  blog: pages.filter((p) => p.section === 'blog'),
+  faq: pages.filter((p) => p.section === 'faq'),
+  other: pages.filter((p) => p.section === 'other'),
+  site: pages.filter((p) => p.section === 'site'),
 };
 
-console.log(`- **MTProto Protocol** — ${groups.mtproto.length} pages:`);
-for (const p of groups.mtproto) console.log(`  - \`${p.url}\` — ${p.title}`);
-console.log(`- **Telegram API** — ${groups.api.length} pages:`);
-for (const p of groups.api) console.log(`  - \`${p.url}\` — ${p.title}`);
-console.log(`- **Schema (overview & indexes)** — ${groups.schema.length} pages:`);
-for (const p of groups.schema) console.log(`  - \`${p.url}\` — ${p.title}`);
+const list = (title, items) => {
+  console.log(`- **${title}** — ${items.length} pages:`);
+  for (const p of items) console.log(`  - \`${p.url}\` — ${p.title}`);
+};
+
+list('MTProto Protocol', groups.mtproto);
+list('Telegram API', groups.api);
+list('Bot API', groups.bots);
+list('Schema (overview & indexes)', groups.schema);
 const c = groups.ref.filter((p) => p.url.startsWith('/constructor')).length;
 const m = groups.ref.filter((p) => p.url.startsWith('/method')).length;
 const t = groups.ref.filter((p) => p.url.startsWith('/type')).length;
 console.log(`- **Schema reference** — ${groups.ref.length} pages: ${c} constructors (\`/constructor/<name>/\`), ${m} methods (\`/method/<name>/\`), ${t} types (\`/type/<name>/\`).`);
+list('FAQ', groups.faq);
+list('Blog', groups.blog);
+list('Other', groups.other);
+list('Pages of the mirror itself', groups.site);

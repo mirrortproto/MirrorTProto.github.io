@@ -159,9 +159,23 @@ const td = new TurndownService({ headingStyle: 'atx', codeBlockStyle: 'fenced', 
 // rules below use `replacement`, so code blocks and kept markup are unaffected.
 const escapeMarkdown = td.escape.bind(td);
 td.escape = (s) => escapeMarkdown(s).replace(/</g, '&lt;');
+// A fence has to be longer than the longest backtick run inside the block, or
+// the block ends where its own content says so. The Bot API page is made of
+// such samples — its "MarkdownV2 style" section shows ```python fences as
+// example text — and a three-backtick fence closed there, spilling raw
+// <pre>/<blockquote> examples into the document as live markup: 170 headings
+// downstream lost their anchors and the page grew four <h1>s.
+const fenceFor = (text) => {
+  const longest = (text.match(/`+/g) || []).reduce((n, r) => Math.max(n, r.length), 0);
+  return '`'.repeat(Math.max(3, longest + 1));
+};
 td.addRule('preCode', {
   filter: (node) => node.nodeName === 'PRE',
-  replacement: (_c, node) => '\n\n```\n' + node.textContent.replace(/\n+$/, '') + '\n```\n\n',
+  replacement: (_c, node) => {
+    const text = node.textContent.replace(/\n+$/, '');
+    const fence = fenceFor(text);
+    return '\n\n' + fence + '\n' + text + '\n' + fence + '\n\n';
+  },
 });
 // TL-schema listings (<pre class="page_scheme">) are the one code block on the
 // original site whose identifiers are hyperlinks — every type, constructor and
@@ -217,14 +231,23 @@ td.addRule('rawMediaDivs', {
 });
 td.keep(['table']);
 
-function sectionOf(p) {
+// The section a page belongs to. Pages of the crawled documentation are placed
+// by their path; the pages listed in tools/extra-pages.json carry their group
+// in the manifest, so the grouping is stated once, as data, and not guessed
+// twice. Anything unplaced lands in "other" rather than silently joining the
+// API — the section a page is filed under is the menu the reader gets.
+const GROUP_SECTION = { 'Bot API': 'bots', Blog: 'blog', FAQ: 'faq', Other: 'other' };
+
+function sectionOf(p, group) {
+  if (group && GROUP_SECTION[group]) return GROUP_SECTION[group];
   if (p === '/methods' || p === '/constructors' || p === '/types') return 'schema';
   if (p.startsWith('/constructor') || p.startsWith('/method') || p.startsWith('/type')) return 'ref';
   if (p.startsWith('/mtproto')) return 'mtproto';
   if (p.startsWith('/schema')) return 'schema';
   if (p.startsWith('/techfaq')) return 'faq';
   if (p === '/faq' || p.startsWith('/faq/')) return 'faq';
-  return 'api';
+  if (p === '/api' || p.startsWith('/api/')) return 'api';
+  return 'other';
 }
 
 function fmEscape(s) {
@@ -237,44 +260,54 @@ const slugify = (s) => s.trim().toLowerCase().replace(/[^a-z0-9]+/gi, '-').repla
 const cleanInline = (s) =>
   s.replace(/\[([^\]]*)\]\([^)]*\)/g, '$1').replace(/<[^>]+>/g, '').replace(/`/g, '').replace(/\*\*/g, '');
 
+// Walks a markdown body, skipping fenced code. A fence closes only on a run of
+// backticks at least as long as the one that opened it (CommonMark), which is
+// what lets a ````-fenced sample contain a ``` line of its own — the Bot API
+// documents exactly that. Counting every ``` as a toggle would flip the state
+// in the middle of such a block and hide, or invent, everything after it.
+function eachTextLine(md, fn) {
+  let fence = 0;
+  for (const line of md.split('\n')) {
+    const t = line.trim();
+    const m = /^(`{3,})/.exec(t);
+    if (fence) {
+      if (m && m[1].length >= fence) fence = 0;
+      continue;
+    }
+    if (m) {
+      fence = m[1].length;
+      continue;
+    }
+    if (fn(t) === false) return;
+  }
+}
+
 // heading slugs of a markdown body (fences ignored)
 function headingSlugs(md) {
   const slugs = new Set();
-  let inFence = false;
-  for (const line of md.split('\n')) {
-    const t = line.trim();
-    if (t.startsWith('```')) {
-      inFence = !inFence;
-      continue;
-    }
-    if (inFence) continue;
+  eachTextLine(md, (t) => {
     const m = t.match(/^#{1,6}\s+(.+)$/);
     if (m) slugs.add(slugify(cleanInline(m[1])));
-  }
+  });
   return slugs;
 }
 
 // First meaningful paragraph of the ORIGINAL page, used for <meta description>/OG.
 // No text of our own is added — only the original wording.
 function deriveDescription(md) {
-  let inFence = false;
-  for (const line of md.split('\n')) {
-    const t = line.trim();
-    if (t.startsWith('```')) {
-      inFence = !inFence;
-      continue;
-    }
-    if (inFence) continue;
-    if (!t || t === '---' || /^#/.test(t) || t.startsWith('|') || t.startsWith('>') || t.startsWith('-') || t.startsWith('![') || t.startsWith('<')) continue;
+  let found = '';
+  eachTextLine(md, (t) => {
+    if (!t || t === '---' || /^#/.test(t) || t.startsWith('|') || t.startsWith('>') || t.startsWith('-') || t.startsWith('![') || t.startsWith('<')) return;
     let text = cleanInline(t);
-    if (text.length < 25) continue;
+    if (text.length < 25) return;
     if (text.length > 180) {
       text = text.slice(0, 180);
       text = text.slice(0, text.lastIndexOf(' ')) + '…';
     }
-    return text;
-  }
-  return '';
+    found = text;
+    return false;
+  });
+  return found;
 }
 
 // The five machine-readable endpoints are served as bare JSON: no <h1>, no
@@ -329,10 +362,28 @@ const KEEP = new Set([
 async function main() {
   const backup = await pickBackup(process.argv[2]);
   const meta = JSON.parse(await readFile(path.join(backup, 'manifest.json'), 'utf8'));
-  const closure = new Set(meta.pages.map((p) => p.path));
   console.log('backup:', backup, 'pages:', meta.pages.length);
 
-  const inClosure = (u) => closure.has(decodePath(u.split('#')[0]).replace(/\/+$/, ''));
+  // The mirror spans two hosts — core.telegram.org and, for the user FAQ,
+  // telegram.org — and both address pages by the same kind of path. A closure
+  // of bare paths cannot tell telegram.org/faq (mirrored) from a hypothetical
+  // core.telegram.org/faq, so it is keyed by host; a link is localized only
+  // when *that* host really serves *that* path in the backup.
+  //
+  // It is filled from the pages actually extracted, not from the backup: a
+  // backup entry the extractor cannot turn into a page (core.telegram.org/tdlib/docs
+  // is a Doxygen tree, not an article) would otherwise stay a valid link target
+  // and every link to it would land on a page that was never written.
+  const hostKey = (h) => h.replace(/^www\./, '').toLowerCase();
+  const closureByHost = new Map();
+  const addToClosure = (url, p) => {
+    const h = hostKey(new URL(url).hostname);
+    if (!closureByHost.has(h)) closureByHost.set(h, new Set());
+    closureByHost.get(h).add(p.replace(/\/+$/, ''));
+  };
+
+  const inClosure = (host, u) =>
+    (closureByHost.get(hostKey(host)) || new Set()).has(decodePath(u.split('#')[0]).replace(/\/+$/, ''));
   const localUrl = (u) => encodePath(decodePath(u.split('#')[0]).replace(/\/+$/, '') + '/');
 
   // clean regeneration: remove previous mirror output, keep hand-written files
@@ -346,6 +397,7 @@ async function main() {
   // ---- pass 1: convert everything to markdown ----
   const records = [];
   const anchorsByPath = new Map();
+  const notExtracted = [];
   for (const pg of meta.pages) {
     const html = await readFile(path.join(backup, pg.file), 'utf8');
     const normPath = pg.path.replace(/\/+$/, '');
@@ -353,6 +405,7 @@ async function main() {
     let body;
     let title;
     let crumbs = [];
+    let rawCrumbs = [];
     const origin = pg.site || 'https://core.telegram.org';
     const trimmed = html.trimStart();
     const isJson = trimmed.startsWith('{') || trimmed.startsWith('[');
@@ -366,7 +419,10 @@ async function main() {
         || extractDiv(html, '<div class="tl_page">');
       if (!found) {
         const m = html.match(/<div class="dev_page_wrap">([\s\S]*?)<div class="footer_wrap">/);
-        if (!m) continue;
+        if (!m) {
+          notExtracted.push(pg.url);
+          continue;
+        }
         let raw = m[1].replace(/<div class="dev_page_head[\s\S]*?<\/div>\s*<\/div>/, '');
         raw = raw.replace(/<[^>]+>/g, '');
         body = '```\n' + decode(raw).trim() + '\n```';
@@ -381,14 +437,37 @@ async function main() {
           );
         }
       }
-      title = extractH1(html) || rel.split('/').pop() || 'Telegram';
-      crumbs = extractCrumbs(html).map((c) => ({
-        title: c.title,
-        url: inClosure(c.url) ? localUrl(c.url) : 'https://core.telegram.org' + c.url,
-      }));
+      // A page without an <h1> still has a <title>: the blog index is "Telegram
+      // News" there and "blog" if the last path segment is all one takes.
+      const docTitle = decode(((html.match(/<title>([^<]*)</) || [])[1] || '').trim());
+      title = extractH1(html) || docTitle || rel.split('/').pop() || 'Telegram';
+      rawCrumbs = extractCrumbs(html);
       anchorsByPath.set(normPath, originalAnchors(html));
     }
-    records.push({ pg, normPath, rel, body, title, crumbs, origin, isJson });
+    const published = (html.match(/article:published_time"\s+content="(\d{4}-\d{2}-\d{2})/) || [])[1];
+    records.push({ pg, normPath, rel, body, title, crumbs, rawCrumbs, origin, isJson, published });
+  }
+
+  // Only now, with every page that could be extracted in hand, does the closure
+  // exist — and the breadcrumbs, which are links like any other, are resolved
+  // against it. A breadcrumb belongs to the page that carries it, so it uses
+  // that page's own host, and falls back to that host too, not to
+  // core.telegram.org, which does not serve telegram.org's paths.
+  for (const r of records) addToClosure(r.pg.url, r.normPath);
+  for (const r of records) {
+    if (r.isJson) continue;
+    r.crumbs = r.rawCrumbs.map((c) => ({
+      title: c.title,
+      url: /^https?:\/\//i.test(c.url)
+        ? c.url
+        : inClosure(new URL(r.origin).hostname, c.url)
+          ? localUrl(c.url)
+          : r.origin + c.url,
+    }));
+  }
+  if (notExtracted.length) {
+    console.log('pages in the backup with no extractable article (left out of the mirror):', notExtracted.length);
+    for (const u of notExtracted) console.log('  ' + u);
   }
 
   const slugsByPath = new Map(records.map((r) => [r.normPath, headingSlugs(r.body)]));
@@ -396,6 +475,28 @@ async function main() {
   // ---- link rewriting with anchor validation ----
   // `null` = unresolvable (the link must stay/become an off-site link),
   // `''`   = the link carried an empty `#`, which simply drops away.
+  // Last resort for an anchor none of the exact rules claim. Three habits of the
+  // original account for nearly all of them, and all three are spelling, not
+  // meaning: the fragment is written in the case of the method
+  // (`#sendMessage` for the heading that slugs to `sendmessage`); the older
+  // slugger left the *entity digits* of an apostrophe in the id
+  // (`bot&#39;s` → `bot-39s`, where the heading now slugs to `bot-s`); and the
+  // punctuation between words differs. Comparing the letters and digits alone —
+  // with that `39` removed — reunites them. A form claimed by two different
+  // headings is left alone: a guess between two sections is worse than no jump.
+  const looseKey = (s) => s.toLowerCase().replace(/39/g, '').replace(/[^a-z0-9]+/g, '');
+  const looseByPath = new Map();
+  const looseIndex = (targetPath) => {
+    if (looseByPath.has(targetPath)) return looseByPath.get(targetPath);
+    const index = new Map();
+    for (const slug of slugsByPath.get(targetPath) || []) {
+      const k = looseKey(slug);
+      index.set(k, index.has(k) ? null : slug); // null marks an ambiguous key
+    }
+    looseByPath.set(targetPath, index);
+    return index;
+  };
+
   const resolveAnchor = (targetPath, anchor) => {
     const targetSlugs = slugsByPath.get(targetPath) || new Set();
     const a = anchor.slice(1);
@@ -404,18 +505,69 @@ async function main() {
     if (a.startsWith('q-') && targetSlugs.has(a.slice(2))) return a.slice(2); // original FAQ anchors
     const mapped = (anchorsByPath.get(targetPath) || new Map()).get(a);
     if (mapped && targetSlugs.has(mapped)) return mapped;
+    const index = looseIndex(targetPath);
+    const key = looseKey(a);
+    const loose = index.get(key);
+    if (loose) return loose;
+    // The original truncates its ids at 60 characters, so a link written
+    // against a long heading arrives cut in half
+    // ("#how-can-i-make-sure-that-webhook-requests-are-coming-from-telegr").
+    // A prefix that long can only belong to one heading — and if it somehow
+    // belongs to two, no jump is made.
+    if (key.length >= 24) {
+      let hit = null;
+      for (const [k, slug] of index) {
+        if (!slug || !k.startsWith(key)) continue;
+        if (hit) return null;
+        hit = slug;
+      }
+      if (hit) return hit;
+    }
     return null;
   };
 
-  // Resolve a site-relative path to its local URL, or to null when the target is
-  // outside the mirrored closure. Percent-escapes matter: the closure holds
-  // decoded paths ("/type/Vector t") while links carry encoded ones
+  // Resolve host + path to a local URL, or to null when the target is outside
+  // the mirrored closure. Percent-escapes matter: the closure holds decoded
+  // paths ("/type/Vector t") while links carry encoded ones
   // ("/type/Vector%20t"), and the emitted URL has to be encoded again.
-  const target = (p, anchor) => {
-    const decoded = decodePath(p).replace(/\/+$/, '');
-    if (!closure.has(decoded)) return null;
+  //
+  // A query string names a *version* of the page rather than another page:
+  // "?layer=225" is the "Switch »" of the layer selector and the "Layer N"
+  // headings of /api/layers. Upstream it only sets the stel_dev_layer cookie
+  // and 302s back to the same path, so the path is what the link is after —
+  // it is localized and the parameter dropped. Any other query cannot be
+  // reproduced by a static mirror, so such a link stays off-site.
+  const LAYER_QUERY = /^\?layer=\d+$/i;
+  // Upstream answers some of the linked URLs with another page the mirror does
+  // hold (/widgets/login → /bots/telegram-login, /dl → /apps). Following that
+  // redirect here is better than either leaving the link off-site or making a
+  // second copy of one page under two paths.
+  const aliases = new Map();
+  for (const r of meta.redirects || []) aliases.set(hostKey(new URL(r.url).hostname) + r.path, r.to);
+
+  const stats = { anchorsDropped: new Map(), layerLocalized: 0, aliased: 0 };
+  const target = (host, p, anchor, query) => {
+    const paths = closureByHost.get(hostKey(host || ''));
+    if (!paths) return null;
+    if (query && !LAYER_QUERY.test(query)) return null;
+    let decoded = decodePath(p || '/').replace(/\/+$/, '');
+    if (!paths.has(decoded) && aliases.has(hostKey(host) + decoded)) {
+      decoded = aliases.get(hostKey(host) + decoded);
+      stats.aliased++;
+      anchor = ''; // the fragment belonged to the page that redirected away
+    }
+    if (!paths.has(decoded)) return null;
+    // An anchor naming nothing in the mirror is dropped instead of sending the
+    // reader off-site: these fragments (#test-phone-numbers,
+    // #q-how-are-voice-calls-authenticated) no longer exist upstream either —
+    // the original renamed those sections — so the page, not the host, is what
+    // the link is really after, and the page is right here.
     const a = anchor ? resolveAnchor(decoded, anchor) : '';
-    if (a === null) return null;
+    if (a === null) {
+      const key = decoded + anchor;
+      stats.anchorsDropped.set(key, (stats.anchorsDropped.get(key) || 0) + 1);
+    }
+    if (query) stats.layerLocalized++;
     return encodePath(decoded + '/') + (a ? '#' + a : '');
   };
 
@@ -431,13 +583,11 @@ async function main() {
   // href="TL" therefore means /mtproto/TL (right) upstream and
   // /mtproto/TL-formal/TL (a 404) here. Resolving against the *original* URL and
   // emitting an absolute path makes the link immune to the URL shape.
-  // A query string names a different *version* of the page rather than another
-  // page: "?layer=98" is the "Switch »" link of the layer selector, and that
-  // version was never crawled. Such a link leaves for the original, the same way
-  // every other target outside the mirrored closure does — pointing it at the
-  // local page would produce a "Switch" link that switches nothing.
+  // The layer query of such a link ("?layer=225" — the bare "Switch »" href) is
+  // handled by target(): the mirror holds one layer, so the parameter goes and
+  // the link stays inside the mirror.
   const RELBASE = 'https://relative.invalid';
-  const relTarget = (raw, ownPath, origin) => {
+  const relTarget = (raw, ownPath, origin, host) => {
     let u;
     try {
       u = new URL(raw, RELBASE + ownPath);
@@ -445,12 +595,13 @@ async function main() {
       return null;
     }
     if (u.origin !== RELBASE) return null;
-    const local = u.search ? null : target(u.pathname, u.hash);
+    const local = target(host, u.pathname, u.hash, u.search);
     return local === null ? origin + u.pathname + u.search + u.hash : local;
   };
 
-  const rewriteLinks = (md, ownPath, origin) =>
-    md
+  const rewriteLinks = (md, ownPath, origin) => {
+    const host = new URL(origin).hostname;
+    return md
       .replace(/<img([^>]*?)src="\/file\//g, `<img$1src="${origin}/file/`)
       .replace(/<img([^>]*?)src="\/img\//g, `<img$1src="${origin}/img/`)
       .replace(/<img([^>]*?)src="\/\//g, '<img$1src="https://')
@@ -462,38 +613,69 @@ async function main() {
       .replace(/!\[([^\]]*)\]\(\/file\//g, `![$1](${origin}/file/`)
       .replace(/!\[([^\]]*)\]\(\/img\//g, `![$1](${origin}/img/`)
       .replace(/!\[([^\]]*)\]\(\/\//g, '![$1](https://')
+      // Turndown escapes markdown punctuation, and it does so inside link
+      // destinations too: telegram.org's DSA report links to
+      // `/privacy\#8-3-law-enforcement-authorities`. A backslash there is not
+      // part of the URL, and while it stays the fragment is invisible to every
+      // rule below — the link left the mirror for a page the mirror holds.
+      .replace(/\]\(([^)\s]+)\)/g, (m0, dest) => (dest.includes('\\#') ? `](${dest.replace(/\\#/g, '#')})` : m0))
+      // A protocol-relative markdown link is an absolute URL, not a path:
+      // telegram.org/faq writes the cross-host ones as `//core.telegram.org/api`.
+      // Left to the site-relative rule below, it was glued to the origin of the
+      // page carrying it and produced https://telegram.org//core.telegram.org/api
+      // — a 200 that serves the telegram.org home page instead of the API docs.
+      // The raw-HTML form of the same thing is normalised a few lines above.
+      .replace(/\]\(\/\/([^)\s]+)\)/g, '](https://$1)')
+      // Order matters from here on. A site-relative link belongs to the host of
+      // the page carrying it, so it is resolved first; an absolute link carries
+      // its own host and is resolved after. The other way round, a link the
+      // absolute rule had just localized ("/techfaq/") was picked up again by
+      // the site-relative rule and re-resolved against the *carrying* page's
+      // host, which turned core.telegram.org/techfaq on the telegram.org FAQ
+      // into https://telegram.org/techfaq/ — a page that host does not serve.
+      //
       // Hrefs kept as raw HTML — tables and the TL-schema blocks. Site-relative
       // ones used to stay extension-less (a redirect per link on GitHub Pages)
-      // and, for the ~200 pointing outside the mirror, they 404'd; absolute ones
-      // left the mirror even when the target is part of it.
-      .replace(/(<a\b[^>]*?)href="https:\/\/core\.telegram\.org(\/[^"#]*)(#[^"]*)?"/g,
-        (m0, head, p, anchor) => {
-          const local = target(p, anchor);
+      // and, for the ~200 pointing outside the mirror, they 404'd.
+      // A raw href is already attribute-escaped in the source HTML, so the
+      // off-site fallback is passed through verbatim; a local URL comes out of
+      // encodePath() and carries nothing that would need escaping.
+      .replace(/(<a\b[^>]*?)href="(\/(?!\/)[^"?#]*)(\?[^"#]*)?(#[^"]*)?"/g, (m0, head, p, q, anchor) => {
+        const local = target(host, p, anchor, q);
+        return `${head}href="${local === null ? origin + p + (q || '') + (anchor || '') : local}"`;
+      })
+      // Absolute ones left the mirror even when the target is part of it. Both
+      // schemes count: the older pages still write http://core.telegram.org/techfaq,
+      // which is the very same page as its https twin.
+      .replace(/(<a\b[^>]*?)href="https?:\/\/([^/"?#]+)([^"?#]*)(\?[^"#]*)?(#[^"]*)?"/gi,
+        (m0, head, h, p, q, anchor) => {
+          const local = target(h, p, anchor, q);
           return local === null ? m0 : `${head}href="${local}"`;
         })
-      .replace(/(<a\b[^>]*?)href="(\/[^"#]*)(#[^"]*)?"/g, (m0, head, p, anchor) => {
-        const local = target(p, anchor);
-        return `${head}href="${local === null ? origin + p + (anchor || '') : local}"`;
-      })
-      // same-page anchors
+      // Same-page anchors. One naming a section the page no longer has — the
+      // original dropped "Web Apps" from /bots/features and kept linking to it
+      // — points at the top of the page instead of staying a fragment that
+      // resolves nowhere; the section it wanted is gone upstream as well.
       .replace(/\]\((#[^)\s]+)\)/g, (m0, anchor) => {
         const a = resolveAnchor(ownPath, anchor);
-        return a === null ? m0 : `](${a ? '#' + a : '#'})`;
-      })
-      // absolute links to core.telegram.org: local when mirrored
-      .replace(/\]\(https:\/\/core\.telegram\.org(\/[^)#\s]*)(#[^)\s]*)?\)/g, (m0, p, anchor) => {
-        const local = target(p || '/', anchor);
-        return local === null ? m0 : `](${local})`;
+        if (a === null) stats.anchorsDropped.set(ownPath + anchor, (stats.anchorsDropped.get(ownPath + anchor) || 0) + 1);
+        return `](${a ? '#' + a : '#'})`;
       })
       // cross-page relative links
-      .replace(/\]\((?!https?:|#)(\/[^)#\s]*)(#[^)\s]*)?\)/g, (m0, p, anchor) => {
-        const local = target(p, anchor);
-        return `](${local === null ? origin + p + (anchor || '') : local})`;
+      .replace(/\]\((?!https?:|#|\/\/)(\/[^)\s?#]*)(\?[^)\s#]*)?(#[^)\s]*)?\)/g, (m0, p, q, anchor) => {
+        const local = target(host, p, anchor, q);
+        return `](${local === null ? origin + p + (q || '') + (anchor || '') : local})`;
       })
+      // absolute links to a mirrored host: local when that host serves the path
+      .replace(/\]\(https?:\/\/([^)\s/?#]+)([^)\s?#]*)(\?[^)\s#]*)?(#[^)\s]*)?\)/gi,
+        (m0, h, p, q, anchor) => {
+          const local = target(h, p, anchor, q);
+          return local === null ? m0 : `](${local})`;
+        })
       // document-relative hrefs kept as raw HTML (tables, TL-schema blocks)
       .replace(/(<a\b[^>]*?)href="([^"]+)"/g, (m0, head, raw) => {
         if (ABSOLUTE.test(raw)) return m0;
-        const local = relTarget(raw, ownPath, origin);
+        const local = relTarget(raw, ownPath, origin, host);
         return local === null ? m0 : `${head}href="${escAttr(local)}"`;
       })
       // document-relative markdown links. The leading group tells a link from an
@@ -501,9 +683,10 @@ async function main() {
       // cannot claim it, and image sources are left to the rules above.
       .replace(/(!\[[^\]]*\]|\])\(([^)\s]+)\)/g, (m0, lead, raw) => {
         if (lead[0] === '!' || ABSOLUTE.test(raw)) return m0;
-        const local = relTarget(raw, ownPath, origin);
+        const local = relTarget(raw, ownPath, origin, host);
         return local === null ? m0 : `](${local})`;
       });
+  };
 
   // ---- pass 2: write files ----
   let written = 0;
@@ -511,21 +694,41 @@ async function main() {
     // A JSON document is data, not prose: rewriting "links" inside it would
     // corrupt the very bytes the page exists to reproduce.
     let body = r.isJson ? r.body : rewriteLinks(r.body, r.normPath, r.origin);
+    // A page whose original numbers its sections with <h1> — telegram.org's
+    // Mini App Terms has seven — would arrive as seven top-level headings and
+    // no page title at all. Push every heading one level down; the title then
+    // takes the one h1 below, and the outline reads like a document again.
+    let h1s = 0;
+    eachTextLine(body, (t) => {
+      if (/^#\s/.test(t)) h1s++;
+    });
+    if (h1s > 1) {
+      const out = [];
+      let fence = 0;
+      for (const line of body.split('\n')) {
+        const t = line.trim();
+        const f = /^(`{3,})/.exec(t);
+        if (fence) {
+          if (f && f[1].length >= fence) fence = 0;
+        } else if (f) {
+          fence = f[1].length;
+        } else {
+          out.push(line.replace(/^(#{1,5})(\s)/, '#$1$2'));
+          continue;
+        }
+        out.push(line);
+      }
+      body = out.join('\n');
+    }
     // the original <h1> lives outside the content div: restore it so every
     // page has exactly one h1 (a11y/SEO); ignore '#' lines inside code fences
-    let inFence = false;
     let hasH1 = false;
-    for (const line of body.split('\n')) {
-      const t = line.trim();
-      if (t.startsWith('```')) {
-        inFence = !inFence;
-        continue;
-      }
-      if (!inFence && /^#\s/.test(t)) {
+    eachTextLine(body, (t) => {
+      if (/^#\s/.test(t)) {
         hasH1 = true;
-        break;
+        return false;
       }
-    }
+    });
     if (!hasH1) body = `# ${r.title}\n\n` + body;
     // table header cells get scope for screen readers
     if (!r.isJson) body = body.replace(/<th(\s|>)/g, '<th scope="col"$1');
@@ -533,8 +736,14 @@ async function main() {
     const fm = [
       '---',
       `title: "${fmEscape(r.title)}"`,
-      `original: "${r.pg.url}"`,
-      `section: ${sectionOf(r.normPath)}`,
+      // final_url is set when the original answers the mirrored URL with
+      // another document — telegram.org/tos serves /tos/eu. Pointing at what
+      // was actually copied beats pointing at a URL that answers differently.
+      `original: "${r.pg.final_url || r.pg.url}"`,
+      `section: ${sectionOf(r.normPath, r.pg.group)}`,
+      // Blog posts carry their publication date upstream; without it the menu
+      // could only sort a decade of announcements alphabetically.
+      ...(r.published ? [`date: ${r.published}`] : []),
       ...(description ? [`description: "${fmEscape(description)}"`] : []),
       `crumbs: ${JSON.stringify(r.crumbs)}`,
       'layout: layout.njk',
@@ -547,6 +756,14 @@ async function main() {
     written++;
   }
   console.log('pages written to src/:', written);
+  console.log('layer-switch links localized:', stats.layerLocalized);
+  console.log('links following an upstream redirect to a mirrored page:', stats.aliased);
+  // Anchors the original itself has renamed away: the link now lands on the
+  // mirrored page without a fragment instead of leaving the site. Listed so a
+  // regression in anchor mapping cannot hide behind a silent drop.
+  const dropped = [...stats.anchorsDropped].sort((a, b) => b[1] - a[1]);
+  console.log('links whose anchor no longer exists (kept local, fragment dropped):', dropped.length);
+  for (const [where, n] of dropped) console.log(`  ${n}x ${where}`);
 }
 
 main().catch((e) => {

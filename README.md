@@ -1,16 +1,39 @@
 # mirrortproto.github.io
 
 Enhanced mirror of the documentation sections of [core.telegram.org](https://core.telegram.org):
-the **Telegram API**, the **MTProto protocol**, and the **TL schema**.
+the **Telegram API**, the **Bot API**, the **MTProto protocol** and the **TL schema** — together
+with the pages they link to: the **blog**, every **FAQ** and the rest, from core.telegram.org and
+telegram.org alike.
 The site is built with [Eleventy](https://www.11ty.dev/) and published via GitHub Pages.
 
-**Дата копии оригинального сайта / content snapshot date: `2026-08-23`** (3186 страниц / pages).
+**Дата копии оригинального сайта / content snapshot date: `2026-08-23`** (3465 страниц / pages).
 
 Каждая страница зеркала содержит ссылку на оригинал.
 
+**Зеркало замкнуто по ссылкам:** ни одна его страница не ссылается на страницу core.telegram.org
+или telegram.org, которой в зеркале нет. Всё, что осталось снаружи, перечислено с причиной в
+`manifest.json` (`not_mirrored`) — формы входа на my.telegram.org, витрины магазинов приложений,
+удалённые из оригинала посты, переводы, заглушки — плюс дерево Doxygen `/tdlib/docs/`, главные
+страницы самих оригиналов и адреса-версии с query (`?setln=`, `?offset=`). Проверяется командой
+`node tools/extlinks.mjs` — она пишет `external-links.md` со всеми внешними адресами и страницами,
+которые на них ссылаются.
+
 ## Возможности / Features
 
-- **Full-text search** over all pages (articles + constructor/method/type names) — a dedicated [search page](https://mirrortproto.github.io/search/) powered by [Pagefind](https://pagefind.app/) with a filter by section (Telegram API / MTProto / Schema); runs entirely in the browser. Hotkey `/` focuses the search box.
+- **Seven sections**: Telegram API (130), Bot API (18), MTProto (23), Schema (10 + 3 022 reference
+  pages), Blog (179), FAQ (9) and Other (76) — each with its own menu, its own filter in the search
+  and its own entry in the header. The blog is the **whole archive** of telegram.org, newest first
+  by the upstream publication date: `tools/list-blog.mjs` pages through the archive and writes every
+  post into the page list. The archive's own first page is mirrored as `/blog/`; its paginated views
+  (`?offset=20`, …) are not — they are a view of the same posts, and the Blog menu lists all 179 of
+  them at once. The FAQ holds every FAQ of both hosts (the user FAQ, the technical one, the bot FAQ,
+  Premium, channels, spam, the Persian CDN one).
+- **What is deliberately left out**, with the reason recorded in `manifest.json` → `not_mirrored`:
+  media (images, video and archives keep pointing at the original), interactive forms whose static
+  copy would be nothing but field labels (`/support`, `/dsa-report`), login screens on
+  my.telegram.org, app-store fronts, the Doxygen dump of `/tdlib/docs/`, translations, and the
+  addresses the original answers with a stand-in page.
+- **Full-text search** over all pages (articles + constructor/method/type names) — a dedicated [search page](https://mirrortproto.github.io/search/) powered by [Pagefind](https://pagefind.app/) with a filter by section; runs entirely in the browser. Hotkey `/` focuses the search box.
 - **Anchors on every paragraph and heading** — hover a paragraph for the ¶ link, hover a heading for #.
 - **Sidebar menu** with the pages of the current section + breadcrumbs on every page.
 - **Three color themes**: system (default), light, dark — switcher in the header, choice persisted.
@@ -28,9 +51,20 @@ The site is built with [Eleventy](https://www.11ty.dev/) and published via GitHu
 - **Every internal link is absolute**: the original writes some of them document-relative
   (`href="TL"` on `/mtproto/TL-formal`), which only works while the page URL carries no trailing
   slash; here every page is a directory, so `tools/extract.mjs` resolves such links against the
-  original URL and rewrites them from the site root (`/mtproto/TL/`). A link that names another
-  *version* of a page rather than another page — the `?layer=98` "Switch »" of the layer selector —
-  points at the original instead: that version was never crawled.
+  original URL and rewrites them from the site root (`/mtproto/TL/`).
+- **A link to a mirrored page stays in the mirror, however the original spells it.** The same page
+  is written upstream in half a dozen shapes, and each one is recognised:
+  `https://core.telegram.org/api`, `http://core.telegram.org/techfaq` (the old pages still use plain
+  http), the protocol-relative `//core.telegram.org/api` of telegram.org's FAQ, the site-relative
+  `/api`, and the document-relative `TL`. The closure is keyed by **host**, not by path alone —
+  `telegram.org/faq` is mirrored while `core.telegram.org/faq` does not exist, and the two must not
+  be confused. `?layer=N` — the "Switch »" of the layer selector and the *Layer N* headings of
+  `/api/layers` — names a *version* of a page rather than another page: upstream it merely sets the
+  `stel_dev_layer` cookie and redirects back to the same path, so the mirror keeps the path and
+  drops the parameter. An anchor that names nothing in the mirror (`#test-phone-numbers`,
+  `#q-how-are-voice-calls-authenticated` — sections the original has since renamed, so the fragment
+  is dead upstream too) is dropped while the link stays local; `npm run extract` lists every such
+  case instead of hiding it.
 - **Complete TL schema reference**: constructors, methods, types, methods by category, machine-readable JSON dumps.
 - **Pages added by the mirror are labelled as such**: the schema indexes (`/constructor/`, `/method/`,
   `/type/`), the search page, the 404 page and the home page have no upstream counterpart, so they
@@ -71,6 +105,46 @@ npm run serve        # режим разработки: eleventy --serve → htt
 извлекается только из бэкапа — сборка не обращается к сети**. Мета-описания и OG-теги страниц
 генерируются из текста оригинала (первый абзац страницы), без добавления своего текста.
 
+Бэкап собирается из двух источников: разделы документации core.telegram.org обходятся по ссылкам от
+корней `/api`, `/mtproto`, `/schema`, а страницы вне этих разделов — Bot API, блог, FAQ и прочее с
+обоих хостов — перечислены в `tools/extra-pages.json` и качаются **листьями**: их собственные ссылки
+не обходятся, иначе один пост блога утащил бы половину telegram.org. Повторный запуск краулера с той
+же датой **дополняет** существующий бэкап: уже скачанные файлы не трогаются, качаются только
+недостающие, а страница, пропавшая из нового прогона, останавливает запись манифеста с ошибкой —
+удалить её можно только явно, назвав причину в `not_mirrored`.
+Отдельно в манифесте хранятся `redirects` (URL, который оригинал отдаёт редиректом на другую
+страницу зеркала — `/widgets/login` → `/bots/telegram-login`, `/dl` → `/apps`) и `not_mirrored`
+(ссылки, которые страницами зеркала быть не могут, с причиной). Оба списка переиспользуются
+следующим прогоном, поэтому уже выясненный адрес не запрашивается снова.
+
+Ни один из хостов не отвечает на несуществующий путь кодом 404 — telegram.org отдаёт свою главную
+со статусом 200. Поэтому краулер один раз спрашивает у каждого хоста заведомо несуществующий адрес,
+запоминает заголовок этой заглушки и не берёт страницу, которая пришла с тем же заголовком: иначе
+кривая ссылка оригинала (`t.me/username` без схемы, фрагмент `#3-3-5-paid-posts` как путь)
+зеркалировалась бы как отдельная копия главной. По той же причине не берутся переводы: адрес,
+оканчивающийся кодом языка из переключателя самого сайта (`/privacy/de`), и страница, чей текст
+оказался не английским.
+
+### Замыкание по ссылкам
+
+```bash
+node tools/list-blog.mjs     # весь архив блога (разово, при обновлении бэкапа)
+node tools/extlinks.mjs      # какие страницы зеркало упоминает, но не содержит
+node tools/expand-extra.mjs  # добавить их в tools/extra-pages.json
+npm run backup -- 2026-08-23 # докачать только их (бэкап дополняется)
+npm run regenerate           # пересобрать сайт
+```
+
+Повторять, пока `expand-extra.mjs` не скажет `queued 0 new page(s)`. Каждый круг добавляет страницы,
+на которые ссылаются страницы прошлого круга, поэтому кругов нужно несколько: на текущем бэкапе —
+шесть, от 103 страниц в первом до нуля в последнем.
+
+telegram.org отдаёт страницы на языке по геолокации — с IPv4 этой машины `/tos` уводит на немецкий
+`/tos/de`, с IPv6 на английский `/tos/eu`. Краулер просит IPv6 (`ipv6first`), затем перепроверяет
+язык: если адрес приземлился на код языка из переключателя самой страницы или текст не похож на
+английский, страница перезапрашивается через `?setln=en`; фактический URL копии записывается в
+`final_url` и именно он попадает в ссылку «Original».
+
 ### Полная перегенерация сайта с нуля
 
 ```bash
@@ -83,8 +157,8 @@ npm run icons
 
 # 3. Пересобрать сайт целиком из бэкапа:
 npm run regenerate
-#    = npm run extract   — очищает зеркальные каталоги в src/ (api/, mtproto/, schema/,
-#                          constructor/, method/, type/ и т.д.), НЕ трогая служебные файлы
+#    = npm run extract   — очищает зеркальные каталоги в src/ (api/, bots/, mtproto/, schema/,
+#                          constructor/, method/, type/, blog/, tos/ и т.д.), НЕ трогая служебные файлы
 #                          (index.md, search.md, 404.md, css/, _includes/, _data/, иконки),
 #                          и заново извлекает контент из backup/<последняя дата>/:
 #                          HTML → markdown, заголовки, крошки, description из первого абзаца,
@@ -105,13 +179,17 @@ node tools/print_structure.mjs
 
 | Скрипт | Назначение | Сеть |
 |---|---|---|
-| `tools/crawl.mjs` | снимает датированный бэкап `backup/<дата>/` (HTML + `manifest.json` с sha256) | да |
-| `tools/extract.mjs` | извлекает контент из бэкапа в `src/` (markdown + front matter), локализует ссылки (все внутренние — абсолютные, от корня сайта), сопоставляет якоря оригинала (`id=` на core.telegram.org, `name=` на telegram.org) со своими заголовками, сохраняет TL-схемы со ссылками, форматирует JSON-документы | нет |
+| `tools/crawl.mjs` | снимает (и дополняет) датированный бэкап `backup/<дата>/` (HTML + `manifest.json` с sha256, редиректами и причинами пропуска) | да |
+| `tools/extra-pages.json` | данные, а не код: список связанных страниц вне разделов документации, разбитый по разделам сайта (Bot API / Blog / FAQ / Other) | — |
+| `tools/extract.mjs` | извлекает контент из бэкапа в `src/` (markdown + front matter), локализует ссылки (все внутренние — абсолютные, от корня сайта; распознаются `http`/`https`, протокол-относительные `//host/path`, `?layer=N` и адреса обоих зеркалируемых хостов), сопоставляет якоря оригинала (`id=` на core.telegram.org, `name=` на telegram.org) со своими заголовками, сохраняет TL-схемы со ссылками, форматирует JSON-документы | нет |
 | `tools/gennav.mjs` | меню (`nav.json`) и дата бэкапа (`site.json`) | нет |
 | `tools/genrefindexes.mjs` | алфавитные индексы конструкторов/методов/типов (`generated: true`, имена в ссылках percent-encoded) | нет |
 | `tools/make_icons.py` | PNG-иконки (`icon-64.png`, `apple-touch-icon.png`) из кода | нет |
 | `tools/print_structure.mjs` | список всех страниц для README | нет |
 | `tools/verify.mjs` (`npm run check`) | самопроверка собранного сайта: ссылки и якоря, h1/meta/канонические URL, sitemap, а также сверка TL-схем и JSON-документов с бэкапом | нет |
+| `tools/extlinks.mjs` | инвентаризация внешних ссылок: `external-links.md` + `external-links.json` — какие страницы вне зеркала и на каких его страницах на них ссылаются | нет |
+| `tools/expand-extra.mjs` | круг замыкания: переносит недостающие страницы двух хостов из отчёта в `tools/extra-pages.json`, раскладывая по разделам | нет |
+| `tools/list-blog.mjs` | листает архив telegram.org/blog и вносит в список все посты — блог зеркалируется целиком, а не только связанные посты | да |
 
 Готовый сайт — в `docs/`. Локальный просмотр:
 
@@ -133,7 +211,7 @@ npm run serve        # режим разработки: eleventy --serve → htt
 ```
 mirrortproto.github.io/
 ├── backup/
-│   └── 2026-08-23/            # копия оригинала от 23.08.2026 (3186 страниц)
+│   └── 2026-08-23/            # копия оригинала от 23.08.2026 (3465 страниц)
 │       ├── manifest.json      # полный список страниц с sha256
 │       ├── urls.txt
 │       └── pages/             # сырые HTML-копии
@@ -143,16 +221,23 @@ mirrortproto.github.io/
 │   ├── _data/nav.json         # меню (генерируется: tools/gennav.mjs)
 │   ├── css/style.css
 │   ├── api/...                # раздел Telegram API
+│   ├── bots/...               # раздел Bot API
 │   ├── mtproto/...            # раздел MTProto
 │   ├── schema/...             # обзорные страницы схем + JSON-дампы
 │   ├── constructor/...        # справочник конструкторов
 │   ├── method/...             # справочник методов
 │   ├── type/...               # справочник типов
+│   ├── blog/...               # раздел Blog (посты telegram.org)
+│   ├── faq*.md, techfaq/...   # раздел FAQ
+│   ├── tos/..., tour/..., …   # раздел Other: прочие связанные страницы
 │   └── index.md               # главная
 ├── tools/
 │   ├── crawl.mjs              # снятие датированного бэкапа (сеть)
+│   ├── extra-pages.json       # список связанных страниц вне разделов документации
 │   ├── extract.mjs            # извлечение контента из бэкапа (без сети)
 │   ├── gennav.mjs             # меню + дата бэкапа
+│   ├── extlinks.mjs           # инвентаризация внешних ссылок
+│   ├── expand-extra.mjs       # круг замыкания зеркала по ссылкам
 │   └── print_structure.mjs    # генерация списка страниц для README
 ├── eleventy.config.mjs        # конфигурация: якоря параграфов/заголовков, вывод в docs/
 ├── package.json               # скрипты: backup, extract, nav, build, serve, clean
@@ -161,21 +246,19 @@ mirrortproto.github.io/
 
 ## Полная структура сайта / Complete site structure
 
-- **Главная** — `/` — Telegram API Documentation Mirror.
-- **MTProto Protocol** — 23 страницы:
-  - `/mtproto/` — MTProto Mobile Protocol
+- **MTProto Protocol** — 23 pages:
   - `/mtproto_v1/` — MTProto Mobile Protocol v.1.0 (DEPRECATED)
+  - `/mtproto/` — MTProto Mobile Protocol
   - `/mtproto/auth_key/` — Creating an Authorization Key
-  - `/mtproto/description/` — Mobile Protocol: Detailed Description
   - `/mtproto/description_v1/` — Mobile Protocol: Detailed Description (v.1.0, DEPRECATED)
+  - `/mtproto/description/` — Mobile Protocol: Detailed Description
   - `/mtproto/mtproto-transports/` — MTProto transports
   - `/mtproto/samples-auth_key/` — Auth key generation example
-  - `/mtproto/security_guidelines/` — Security Guidelines for Client Developers
   - `/mtproto/security_guidelines_v1/` — Security Guidelines for Client Developers (v.1.0, DEPRECATED)
+  - `/mtproto/security_guidelines/` — Security Guidelines for Client Developers
   - `/mtproto/serialize/` — Binary Data Serialization
-  - `/mtproto/service_messages/` — Service Messages
   - `/mtproto/service_messages_about_messages/` — Service Messages about Messages
-  - `/mtproto/TL/` — TL Language
+  - `/mtproto/service_messages/` — Service Messages
   - `/mtproto/TL-abstract-types/` — Binary serialization and abstract TL types
   - `/mtproto/TL-combinators/` — Formal description of TL combinators
   - `/mtproto/TL-dependent/` — TL dependent types
@@ -185,8 +268,9 @@ mirrortproto.github.io/
   - `/mtproto/TL-polymorph/` — Polymorphism in TL
   - `/mtproto/TL-tl/` — TL schema for serialization of TL schemas
   - `/mtproto/TL-types/` — Type serialization
+  - `/mtproto/TL/` — TL Language
   - `/mtproto/transports/` — Transport protocols
-- **Telegram API** — 130 страниц:
+- **Telegram API** — 130 pages:
   - `/api/` — Telegram APIs
   - `/api/account-deletion/` — Account deletion
   - `/api/action-bar/` — Action bar
@@ -219,8 +303,8 @@ mirrortproto.github.io/
   - `/api/calls/` — Phone calls
   - `/api/channel/` — Channels, supergroups, gigagroups and basic groups
   - `/api/colors/` — Accent colors
+  - `/api/config.json/` — config.json
   - `/api/config/` — Client configuration
-  - `/api/config.json/` — config.json (машиночитаемые данные)
   - `/api/contacts/` — Contact list
   - `/api/content-protection/` — Content protection
   - `/api/custom-emoji/` — Custom emojis
@@ -231,16 +315,16 @@ mirrortproto.github.io/
   - `/api/effects/` — Animated message effects
   - `/api/emoji-categories/` — Emoji categories
   - `/api/emoji-status/` — Emoji status
-  - `/api/end-to-end/` — End-to-End Encryption, Secret Chats
   - `/api/end-to-end_v1/` — Secret chats, end-to-end encryption (v. 1.0, DEPRECATED)
+  - `/api/end-to-end/` — End-to-End Encryption, Secret Chats
   - `/api/end-to-end/group-calls/` — E2E Group Calls
   - `/api/end-to-end/pfs/` — Perfect Forward Secrecy
   - `/api/end-to-end/seq_no/` — Sequence numbers in Secret Chats
   - `/api/end-to-end/video-calls/` — End-to-End Encrypted Voice and Video Calls
   - `/api/end-to-end/voice-calls/` — End-to-End Encrypted Voice Calls
   - `/api/entities/` — Styled text with message entities
+  - `/api/errors.json/` — errors.json
   - `/api/errors/` — Error handling
-  - `/api/errors.json/` — errors.json (машиночитаемые данные)
   - `/api/factcheck/` — Fact checks
   - `/api/file-reference-generator/` — File reference generator
   - `/api/file-references/` — File references
@@ -317,24 +401,308 @@ mirrortproto.github.io/
   - `/api/views/` — Views and read metrics
   - `/api/wallpapers/` — Chat wallpapers
   - `/api/web-events/` — Web events
-- **Schema (обзорные страницы)** — 7 страниц:
-  - `/methods/` — Available methods (методы по категориям)
+- **Bot API** — 18 pages:
+  - `/bots/` — Bots: An introduction for developers
+  - `/bots/2-0-intro/` — Introducing Bot API 2.0
+  - `/bots/api-changelog/` — Bot API changelog
+  - `/bots/api/` — Telegram Bot API
+  - `/bots/blockchain-guidelines/` — Blockchain Guidelines
+  - `/bots/features/` — Telegram Bot Features
+  - `/bots/games/` — Gaming Platform
+  - `/bots/inline/` — Inline Bots
+  - `/bots/payments-stars/` — Bot Payments API for Digital Goods and Services
+  - `/bots/payments/` — Bot Payments API
+  - `/bots/payments/currencies.json/` — currencies.json
+  - `/bots/samples/` — Bot API Library Examples
+  - `/bots/samples/hellobot/` — Hellobot
+  - `/bots/self-signed/` — Using self-signed certificates
+  - `/bots/telegram-login/` — Log In With Telegram
+  - `/bots/tutorial/` — From BotFather to 'Hello World'
+  - `/bots/webapps/` — Telegram Mini Apps
+  - `/bots/webhooks/` — Marvin's Marvellous Guide to All Things Webhook
+- **Schema (overview & indexes)** — 10 pages:
+  - `/constructor/` — Constructors — TL schema reference
+  - `/method/` — Methods — TL schema reference
+  - `/methods/` — Available methods
   - `/schema/` — Schema
+  - `/schema/end-to-end-json/` — End-to-end TL-Schema in JSON
   - `/schema/end-to-end/` — Current end-to-end TL-schema
-  - `/schema/end-to-end-json/` — End-to-end TL-Schema in JSON (машиночитаемые данные)
-  - `/schema/json/` — TL-Schema in JSON (машиночитаемые данные)
+  - `/schema/json/` — TL-Schema in JSON
+  - `/schema/mtproto-json/` — MTProto TL-Schema in JSON
   - `/schema/mtproto/` — Current MTProto TL-schema
-  - `/schema/mtproto-json/` — MTProto TL-Schema in JSON (машиночитаемые данные)
-- **Справочник схемы** — 3022 страницы: 1615 конструкторов (`/constructor/<имя>/`),
-  787 методов (`/method/<имя>/`), 620 типов (`/type/<имя>/`); индексы:
-  `/constructor/`, `/method/`, `/type/`.
-- **Other** (ссылки в боковом меню и на главной, вне верхних разделов):
-  - `/faq/` — Telegram FAQ для обычных пользователей (единственное исключение: страница
-    скачана с telegram.org, а не с core.telegram.org; добавлена в бэкап вручную);
-  - `/techfaq/` — FAQ for the Technically Inclined;
-  - `/techfaq/mtproto_v1/` — FAQ for the Technically Inclined (MTProto v.1.0), «Advanced FAQ» оригинальной документации v1.
-
-Итого: **3186 страниц** в копии от 23.08.2026 (включая три FAQ-страницы) + служебные страницы сайта.
+  - `/type/` — Types — TL schema reference
+- **Schema reference** — 3022 pages: 1615 constructors (`/constructor/<name>/`), 787 methods (`/method/<name>/`), 620 types (`/type/<name>/`).
+- **FAQ** — 9 pages:
+  - `/bots/faq/` — Bots FAQ
+  - `/cdn/faq_ir/` — شبکه‌های تحویل محتوا (CDN) رمزنگاری شده
+  - `/cdn/faq_ir/durov/` — توضيحات CDNهاى رمزنگارى شده
+  - `/faq_channels/` — Channels FAQ
+  - `/faq_premium/` — Telegram Premium FAQ
+  - `/faq_spam/` — Spam FAQ
+  - `/faq/` — Telegram FAQ
+  - `/techfaq/` — FAQ for the Technically Inclined
+  - `/techfaq/mtproto_v1/` — FAQ for the Technically Inclined (MTProto v.1.0)
+- **Blog** — 179 pages:
+  - `/blog/` — Telegram Blog
+  - `/blog/10-billion/` — 10 Billion Telegrams Delivered Daily
+  - `/blog/100-million/` — 100,000,000 Monthly Active Users
+  - `/blog/15-billion/` — 15 Billion Telegrams Delivered Daily
+  - `/blog/15million-reuters/` — Keep Calm and Send Telegrams&#33;
+  - `/blog/2-billion/` — Telegram Hits 2 Billion Messages Sent Daily
+  - `/blog/200-million/` — 200,000,000 Monthly Active Users
+  - `/blog/400-million/` — 400 Million Users, 20,000 Stickers, Quizzes 2.0 and €400K for Creators of Educational Tests
+  - `/blog/6-years/` — Celebrating 6 Years of Telegram
+  - `/blog/700-million-and-premium/` — 700 Million Users and Telegram Premium
+  - `/blog/admin-revolution/` — Supergroups 10,000: Admin Tools & More
+  - `/blog/affiliate-programs-ai-sticker-search/` — Affiliate Programs, AI-Powered Sticker Search, Collages, and More
+  - `/blog/ai-bot-revolution-11-new-features/` — Guest AI Bots, Bot-to-Bot Chats, Chat Automation, Custom AI Styles, 100M+ Emoji & Sticker Search and Much More
+  - `/blog/ai-editor-mighty-polls-and-more/` — AI Editor, Mighty Polls, Live Photos, Bots Managed by Bots, and More
+  - `/blog/AI-sticker-search-video-improvements/` — AI-Powered Sticker Search, Improved Videos and More
+  - `/blog/albums-saved-messages/` — Albums, Saved Messages and Better Search
+  - `/blog/android-2-0/` — Telegram 2.0 for Android: Material Design
+  - `/blog/android-gif/` — GIF and Image Search on Android
+  - `/blog/android-streaming/` — Streaming and Auto-Night Mode on Android
+  - `/blog/android-themes/` — Custom Themes
+  - `/blog/android-wear-2-0/` — Telegram for Android Wear 2.0
+  - `/blog/animated-backgrounds/` — Animated Backgrounds
+  - `/blog/animated-stickers/` — Animated Stickers Done Right
+  - `/blog/apple-watch/` — Telegram on Apple Watch
+  - `/blog/archive-and-new-design/` — Archived Chats, a New Design and More
+  - `/blog/autodelete-inv2/` — Auto-Delete, Widgets and Expiring Invite Links
+  - `/blog/autoplay/` — Autoplaying Videos, Automatic Downloads and Multiple Accounts
+  - `/blog/backgrounds-2-0/` — Chat Backgrounds 2.0: Make Your Own
+  - `/blog/bb-contest-extension/` — &#036;50,000 Blackberry Contest Extended
+  - `/blog/bb-results/` — BlackBerry Contest Results
+  - `/blog/billion/` — Telegram Reaches 1 Billion Daily Messages
+  - `/blog/blackberry-contest/` — A &#036;50,000 Contest For Blackberry Engineers
+  - `/blog/bot-revolution/` — Telegram Bot Platform
+  - `/blog/botprize/` — &#036;1,000,000 to Bot Developers. For free.
+  - `/blog/botprize1/` — First BotPrize Winners Get &#036;200,000
+  - `/blog/bots-2-0/` — Bot Platform 2.0
+  - `/blog/cache-and-stickers/` — Clearing Cache and Reordering Stickers
+  - `/blog/calls-and-bots/` — Colorful Calls, Thanos Snap Effect, and an Epic Update for Bots
+  - `/blog/calls/` — Voice Calls: Secure, Crystal-Clear, AI-Powered
+  - `/blog/captions-places/` — Places, Captions and more
+  - `/blog/channel-stories/` — Stories in Channels, View-Once Media and More
+  - `/blog/channels-2-0/` — Channels 2.0 and More
+  - `/blog/channels/` — Channels: Broadcasting Done Right
+  - `/blog/chat-themes-interactive-emoji-read-receipts/` — Chat Themes, Interactive Emoji, Read Receipts in Groups and Live Stream Recording
+  - `/blog/checklists-suggested-posts/` — Checklists, Suggested Posts and More Monetization Options for Channels
+  - `/blog/collectible-gifts-and-more/` — Collectible Gifts, Message Search Filters and More
+  - `/blog/comments-in-video-chats-threads-for-bots/` — Comments in Group Calls, Notes for Contacts, Suggested Birthdays and More
+  - `/blog/communities-editor-invisible-messages/` — Rich Text Editor, Communities, Ephemeral Messages in Groups, 350 Million GIFs
+  - `/blog/contacts-local-groups/` — Location-Based Chats, Adding Contacts Without Phone Numbers and More
+  - `/blog/coronavirus/` — Coronavirus News and Verified Channels
+  - `/blog/crafting-android-design-and-more/` — Android Redesign, Group Ownership Transfer, Gift Crafting, Colored Bot Buttons
+  - `/blog/crowdsourcing-a-more-secure-future/` — Crowdsourcing a More Secure Future
+  - `/blog/cryptocontest-ends/` — Crypto Contest Ends
+  - `/blog/cryptocontest/` — &#036;300,000 for Cracking Telegram Encryption
+  - `/blog/custom-emoji/` — Telegram Emoji Platform, Custom Animated Emoji Packs, Gifting Telegram Premium, and More
+  - `/blog/ddos/` — A DDoS in Asia Pacific
+  - `/blog/desktop-1-0/` — Telegram Desktop reaches version 1.0 – and it's BEAUTIFUL
+  - `/blog/desktop-compact/` — Telegram Desktop Adds Compact Mode
+  - `/blog/direct-to-channel-trim-voice-and-more/` — Direct Messages for Channels, Voice Trimming, Topic Tabs and HD Photos
+  - `/blog/discover-stickers-and-more/` — Sticker Search, Multiple Photos, and More
+  - `/blog/downloads-attachments-streaming/` — Download Manager, New Attachment Menu, Live Streaming With Other Apps and More
+  - `/blog/drafts/` — Drafts, Picture-in-Picture, and More
+  - `/blog/dynamic-video-quality-and-more/` — Improved Videos and Much More
+  - `/blog/edit/` — Edit Messages, New Mentions and More
+  - `/blog/encrypted-cdns/` — More Speed and Security&#33;
+  - `/blog/export-and-more/` — Chat Export Tool, Better Notifications and More
+  - `/blog/february2024/` — Stories for Groups and 8 More Features
+  - `/blog/files-on-steroids/` — Sending Files On Steroids — And More
+  - `/blog/filters-anonymous-admins-comments/` — Search Filters, Anonymous Admins, Channel Comments and More
+  - `/blog/first-IV-contest/` — Instant View Now Available for 2274 Websites
+  - `/blog/folders/` — Chat Folders, Archive, Channel Stats and More
+  - `/blog/fullscreen-miniapps-and-more/` — Mini Apps 2.0: Full-Screen Mode, Home Screen Icons, Geolocation and 10 more features
+  - `/blog/games/` — Gaming Platform 1.0
+  - `/blog/gif-revolution/` — GIF Revolution
+  - `/blog/gifs/` — GIF Search and More
+  - `/blog/gift-marketplace-and-more/` — Gift Marketplace, Posting Several Stories at Once, Auto-Translate For Channels
+  - `/blog/gifts-verification-platform/` — Gifts, Verification Platform and More
+  - `/blog/giveaways/` — Giveaways in Channels and Free Premium
+  - `/blog/group-calls-made-easy/` — Extra-Secure Group Calls, Automated Accounts, and More
+  - `/blog/group-video-calls/` — Group Video Calls
+  - `/blog/growing-telegram-together/` — Growing Telegram Together
+  - `/blog/hidden-media-zero-storage-profile-pics/` — Hidden Media, Zero Storage Usage, New Drawing Tools, Profile Pictures for Your Contacts, and More
+  - `/blog/infinite-reactions-statuses/` — Infinite Reactions, Emoji Statuses and Much More
+  - `/blog/inline-bots/` — Introducing Inline Bots
+  - `/blog/instant-camera/` — Instant Camera and More 3D Touch
+  - `/blog/instant-view-contest-200K/` — Instant Views for Everyone & a &#036;200K Contest
+  - `/blog/instant-view/` — Instant View, Telegraph, and Other Goodies
+  - `/blog/invite-links/` — Migrating Existing Group Chats to Telegram
+  - `/blog/link-preview/` — Link Previews
+  - `/blog/live-locations/` — Live Locations, Media Player and Languages
+  - `/blog/live-stories-gift-auctions/` — Live Stories, Repeated Messages, Auctions for Gifts and More
+  - `/blog/live-streams-forwarding-next-channel/` — Live Streams, Flexible Forwarding, Jump to Next Channel, Trending Stickers and More
+  - `/blog/login/` — Telegram Login for Websites
+  - `/blog/masks/` — Photo Editor 2.0, Masks and Homemade GIFs
+  - `/blog/member-tags-disable-sharing-and-more/` — Member Tags, Login with Telegram, Disable Sharing, GIF Editing, Date Formatting, Voting Timestamps
+  - `/blog/message-effects-and-more/` — Message Effects, Hashtag Search, and More
+  - `/blog/mini-app-bar-paid-media-and-more/` — Mini App Bar, Paid Media, Story Search & More
+  - `/blog/moar-stickers/` — MOAR Stickers&#33;
+  - `/blog/monetization-for-channels/` — Sharing Revenue with Channel Owners
+  - `/blog/move-history/` — Moving Chat History from Other Apps
+  - `/blog/my-profile-and-15-more/` — My Profile, Recommended Channels and 15 More Features
+  - `/blog/new-design-ai-summaries/` — AI Summaries, New Design and More
+  - `/blog/new-profiles-people-nearby/` — New Profiles, Fast Media Viewer and People Nearby 2.0
+  - `/blog/new-saved-messages-and-9-more/` — Saved Messages 2.0, One-Time Voice Messages and 8 More Features
+  - `/blog/notifications-bots/` — Notification Sounds, Bot Revolution and More
+  - `/blog/now-you-see-me/` — Disappearing Media, Your Bio & More Speed
+  - `/blog/passkeys-and-gift-offers/` — Passkeys, Gift Purchase Offers and More
+  - `/blog/passport/` — Introducing Telegram Passport
+  - `/blog/payments-2-0-scheduled-voice-chats/` — Payments 2.0, Scheduled Voice Chats, New Web Versions
+  - `/blog/payments/` — Payments for Bots
+  - `/blog/permissions-groups-undo/` — Group Permissions, Undo Delete and More
+  - `/blog/photo-editor-and-passcodes/` — Photo Editor and Passcode Lock
+  - `/blog/pin-and-ifttt/` — Pinned Chats and IFTTT Integrations
+  - `/blog/pinned-messages-locations-playlists/` — Pinned Messages 2.0, Improved Live Locations, Playlists and More
+  - `/blog/pinned-messages-locations-playlists/world/` — Pinned Messages 2.0, Improved Live Locations, Playlists and More
+  - `/blog/polls-2-0-vmq/` — Polls 2.0: Visible Votes, Multiple Answers, and Quiz Mode
+  - `/blog/polls/` — Polls: Bringing Choice to Communities
+  - `/blog/post-search-story-albums-and-more/` — Public Post Search, Story Albums, Gift Collections and More
+  - `/blog/posts-in-stories-and-more/` — Channel Appearance, Posts in Stories and More
+  - `/blog/power-saving/` — Power Saving Mode and More
+  - `/blog/privacy-discussions-web-bots/` — Focused Privacy, Discussion Groups, Seamless Web Bots and More
+  - `/blog/privacy-revolution/` — Hiding Last Seen Time - Done Right
+  - `/blog/profile-music-gift-themes/` — Music on Profiles, Stickers Mini App, New Profiles, and More
+  - `/blog/profile-pics-emoji-translations/` — Profile Photo Maker, Translating Entire Chats, Emoji Categories and More
+  - `/blog/profile-videos-people-nearby-and-more/` — Profile Videos, 2 GB File Sharing, Group Stats, Improved People Nearby and More
+  - `/blog/protected-content-delete-by-date-and-more/` — Protected Content, Delete by Date, Device Management and More
+  - `/blog/reactions-spoilers-translations/` — Reactions, Spoilers, Translation and QR Codes
+  - `/blog/replies-mentions-hashtags/` — Reinventing Group Chats: Replies, Mentions, Hashtags and More
+  - `/blog/replies-mentions-stickers/` — Better Replies, Stickers & Invitations
+  - `/blog/reply-revolution/` — Replies 2.0, Adjustable Link Previews, Name Colors and More
+  - `/blog/scheduled-reminders-themes/` — Scheduled Messages, Reminders, Custom Cloud Themes and More Privacy
+  - `/blog/search-and-media/` — In-App Media Playback and Search in Chats
+  - `/blog/sessions-and-2-step-verification/` — Active Sessions and Two-Step Verification
+  - `/blog/share-preview/` — Sharing and Previews
+  - `/blog/shareable-folders-custom-wallpapers/` — Shareable Chat Folders, Custom Wallpapers and More
+  - `/blog/shared-files/` — Shared Files and Fast Mute
+  - `/blog/shared-links/` — Shared Links and Recent Searches
+  - `/blog/shared-media-scrolling-calendar-join-requests-and-more/` — Hyper-Speed Scrolling and Calendar View for Shared Media, Join Requests, Global Chat Themes on iOS and More
+  - `/blog/silent-messages-slow-mode/` — Silent Messages, Slow Mode, Admin Titles and More
+  - `/blog/similar-channels/` — Similar Channels, Reposting Stories, and 9 More Features
+  - `/blog/star-giveaways-iv-in-browser/` — Star Giveaways and More
+  - `/blog/star-messages-gateway-2-0-and-more/` — Star Messages, Pinned Gifts, Verification Platform 2.0, and More
+  - `/blog/sticker-maker/` — Sticker Editor — Create Your Own Stickers
+  - `/blog/stickers-meet-art-and-history/` — When Stickers Meet Art And History
+  - `/blog/stickers-revolution/` — Custom Sticker Sets
+  - `/blog/stickers/` — Stickers Done Right
+  - `/blog/stories/` — Stories and 10 Years of Telegram
+  - `/blog/superchannels-star-reactions-subscriptions/` — Super Channels, Star Reactions and Subscriptions
+  - `/blog/supergroups/` — Admins, Supergroups and More
+  - `/blog/supergroups5k/` — Supergroups 5000: Public Groups, Pinned Posts
+  - `/blog/tdlib/` — TDLib – Build Your Own Telegram
+  - `/blog/telegram-5-ios/` — Introducing Telegram 5.0 for iOS
+  - `/blog/telegram-business/` — Introducing Telegram Business
+  - `/blog/telegram-me-change-number-and-pfs/` — Telegram.me, Changing Numbers and PFS
+  - `/blog/telegram-stars/` — Telegram Stars: Pay for Digital Goods and More
+  - `/blog/telegram-x/` — Telegram X: Progress through Competition
+  - `/blog/telegraph/` — Meet the Telegraph API for Logins and Stats
+  - `/blog/themes-accounts/` — Themes, Multiple Accounts and More
+  - `/blog/topics-in-groups-collectible-usernames/` — Topics in Groups, Collectible Usernames, Voice-to-Text for Video Messages and More
+  - `/blog/translations-iv2/` — Custom Languages, Instant View 2.0 and More
+  - `/blog/trending-stickers/` — Trending Stickers, Storage and More
+  - `/blog/ultimate-privacy-topics-2-0/` — No-SIM Signup, Auto-Delete All Chats, Topics 2.0 and More
+  - `/blog/unread-replace-2x/` — Replace Media, Share vCards, Mark as Unread, 2X Voice Messages, and More
+  - `/blog/unsend-and-usage/` — Unsend Messages, Network Usage, and More
+  - `/blog/unsend-privacy-emoji/` — Taking Back Our Right to Privacy
+  - `/blog/usernames-and-secret-chats-v2/` — Usernames and Secret Chats 2.0
+  - `/blog/verifiable-apps-and-more/` — Verifiable Builds, New Theme Editor, Send When Online and So Much More
+  - `/blog/video-1000/` — Video Calls with up to 1000 Viewers, Video Messages 2.0, Video Playback Speed and More
+  - `/blog/video-calls/` — Video Calls and Seven Years of Telegram
+  - `/blog/video-editor-gifs/` — Video Editor, Animated Photos, Better GIFs and More
+  - `/blog/video-messages-and-telescope/` — Video Messages and Telescope
+  - `/blog/video-stickers-better-reactions/` — Video Stickers, Better Reactions and More
+  - `/blog/voice-2-secret-3/` — Voice Messages 2.0, Secret Chats 3.0 and...
+  - `/blog/voice-chats-on-steroids/` — Voice Chats 2.0: Channels, Millions of Listeners, Recorded Chats, Admin Tools
+  - `/blog/voice-chats/` — Voice Chats Done Right
+  - `/blog/w3-browser-mini-app-store/` — Telegram Browser, Gifting Stars and More
+  - `/blog/watch-apps-and-more/` — Smartwatch Apps, Rich Text for Bots, AI Guardians for Groups, and Much More
+  - `/blog/wear-gifts-blockchain-and-more/` — Wear Collectible Gifts, Move Gifts to the Blockchain, Send Gifts to Channels, and More
+  - `/blog/winter-contest-ends/` — Winter Contest Ends
+- **Other** — 76 pages:
+  - `/android/` — Telegram for Android
+  - `/apple_privacy/` — Apple Privacy Labels Explained
+  - `/apps/` — Telegram Applications
+  - `/articles/DH_Hash_Collision/` — Hash Collisions for Diffie-Hellman Keys
+  - `/blackberry/` — Blackberry 10 Dev Contest
+  - `/blackberry/chat-edit/` — Editing Messages
+  - `/blackberry/chat-emoji/` — Choosing Emoji
+  - `/blackberry/chat-media-send/` — Sending Media
+  - `/blackberry/chat-media-view/` — Viewing Media
+  - `/blackberry/chat-send/` — Sending Messages
+  - `/blackberry/chat-voice/` — Sending Voice Messages
+  - `/blackberry/chat/` — Chat screens
+  - `/blackberry/chats/` — Chats
+  - `/blackberry/contacts/` — Сontacts
+  - `/blackberry/group-info/` — Group Chat Info
+  - `/blackberry/intro/` — Intro
+  - `/blackberry/login/` — Login
+  - `/blackberry/newmessage/` — New Message
+  - `/blackberry/secretchats/` — Secret Chats
+  - `/blackberry/settings/` — Settings
+  - `/bug-bounty/` — Telegram Bug Bounty Program
+  - `/cdn/` — Encrypted CDNs for Speed and Security
+  - `/contest300K/` — Telegram Cracking Contest Description
+  - `/evolution/` — The Evolution of Telegram
+  - `/gateway/` — Telegram Gateway – Fast, Affordable, and Secure User Verification
+  - `/gateway/api/` — Telegram Gateway API
+  - `/gateway/verification-tutorial/` — Authorization via Telegram Gateway: Quick-start Guide
+  - `/import-stickers/` — Importing Stickers to Telegram
+  - `/jobs/` — Jobs
+  - `/moderation/` — Telegram Safety Overview
+  - `/passport/` — Telegram Passport Manual
+  - `/passport/encryption/` — Telegram Passport Encryption Details
+  - `/passport/example/` — Passport example
+  - `/passport/sdk-android/` — Android SDK
+  - `/passport/sdk-ios-mac/` — iOS & macOS SDK
+  - `/passport/sdk-javascript/` — Javascript SDK
+  - `/press/` — Telegram Press Info
+  - `/privacy-tpa/` — Standard Bot Privacy Policy
+  - `/privacy/` — Telegram Privacy Policy
+  - `/reproducible-builds/` — Reproducible Builds for iOS and Android
+  - `/stickers/` — Telegram Stickers
+  - `/stickers/webm-vp9-encoding/` — Encoding Video Stickers and Emoji with .WEBM and VP9
+  - `/tdlib/` — Telegram Database Library
+  - `/tdlib/getting-started/` — Getting started with TDLib
+  - `/tdlib/notification-api/` — Notification API
+  - `/tdlib/options/` — TDLib options
+  - `/themes/` — Creating Custom Cloud Themes
+  - `/tos/` — Terms of Service
+  - `/tos/bot-developers/` — Telegram Bot Platform Developer Terms of Service
+  - `/tos/bots/` — Terms of Service for Bots
+  - `/tos/business/` — Terms of Service for Telegram Business
+  - `/tos/content-creator-rewards/` — Terms of Service for Content Creators
+  - `/tos/content-licensing/` — Terms of Service for Content Licensing
+  - `/tos/eu-dsa/` — User guidance for the EU Digital Services Act
+  - `/tos/eu-dsa/transparency-2025/` — Telegram’s DSA Transparency Report
+  - `/tos/eu/` — Terms of Service
+  - `/tos/eu/t.me/EURegulation/` — Terms of Service
+  - `/tos/eu/t.me/ISISwatch/` — Terms of Service
+  - `/tos/eu/transparency-tco/` — Telegram's Transparency Reports under the TCO Regulation
+  - `/tos/gateway/` — Terms of Service for Telegram Gateway
+  - `/tos/mini-apps/` — Terms of Service for Mini Apps
+  - `/tos/stars/` — Terms of Service for Telegram Stars
+  - `/tos/third-party-payments/` — Third-Party Payments and Authorized Resellers
+  - `/tour/affiliate-programs/` — Affiliate Programs
+  - `/tour/channels/` — Telegram Channels
+  - `/tour/chat-folders/` — Shareable Chat Folders
+  - `/tour/groups/` — Group Chats on Telegram
+  - `/tour/quizbot/` — Quizzes
+  - `/tour/screenshots/` — Telegram Logos and App Screenshots
+  - `/tour/stories/` — Telegram Stories
+  - `/verify/` — Page Verification Guidelines
+  - `/widgets/` — Telegram Widgets
+  - `/widgets/discussion/` — Discussion Widget
+  - `/widgets/login-legacy/` — Telegram Login Widget
+  - `/widgets/posts/` — Post Widget
+  - `/widgets/share/` — Sharing Button
+- **Pages of the mirror itself** — 3 pages:
+  - `/` — Telegram API Documentation Mirror
+  - `/404/` — Page not found
+  - `/search/` — Search
 
 ## Права
 
