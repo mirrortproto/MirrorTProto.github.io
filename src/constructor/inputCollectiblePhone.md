@@ -11,13 +11,13 @@ layout: layout.njk
 
 Represents a [phone number fragment collectible](/api/fragment/)
 
-```
-inputCollectiblePhone#a2e214a4 phone:string = InputCollectible;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputCollectiblePhone/" class="current_page_link">inputCollectiblePhone</a>#a2e214a4 phone:<a href="/type/string/">string</a> = <a href="/type/InputCollectible/">InputCollectible</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>phone</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Phone number</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>phone</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td>Phone number</td></tr></tbody></table>
 
 ### Type
 

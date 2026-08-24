@@ -11,9 +11,9 @@ layout: layout.njk
 
 Whether the current document has stickers attached
 
-```
-documentAttributeHasStickers#9801d2f7 = DocumentAttribute;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/documentAttributeHasStickers/" class="current_page_link">documentAttributeHasStickers</a>#9801d2f7 = <a href="/type/DocumentAttribute/">DocumentAttribute</a>;</code></pre>
 
 ### Parameters
 

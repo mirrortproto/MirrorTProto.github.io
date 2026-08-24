@@ -11,9 +11,9 @@ layout: layout.njk
 
 The specified bot commands will only be valid in all private chats with users.
 
-```
-botCommandScopeUsers#3c4f04d8 = BotCommandScope;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/botCommandScopeUsers/" class="current_page_link">botCommandScopeUsers</a>#3c4f04d8 = <a href="/type/BotCommandScope/">BotCommandScope</a>;</code></pre>
 
 ### Parameters
 

@@ -11,13 +11,13 @@ layout: layout.njk
 
 One or more messages in a [quick reply shortcut »](/api/business/#quick-reply-shortcuts) were deleted.
 
-```
-updateDeleteQuickReplyMessages#566fe7cd shortcut_id:int messages:Vector<int> = Update;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/updateDeleteQuickReplyMessages/" class="current_page_link">updateDeleteQuickReplyMessages</a>#566fe7cd shortcut_id:<a href="/type/int/">int</a> messages:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/int/">int</a>&gt; = <a href="/type/Update/">Update</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>shortcut_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Quick reply shortcut ID.</td></tr><tr><td><strong>messages</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/int">int</a>&gt;</td><td>IDs of the deleted messages.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>shortcut_id</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>Quick reply shortcut ID.</td></tr><tr><td><strong>messages</strong></td><td style="text-align: center;"><a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/int/">int</a>&gt;</td><td>IDs of the deleted messages.</td></tr></tbody></table>
 
 ### Type
 

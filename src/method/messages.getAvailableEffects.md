@@ -11,16 +11,16 @@ layout: layout.njk
 
 Fetch the full list of usable [animated message effects »](/api/effects/).
 
-```
-messages.availableEffectsNotModified#d1ed9a5b = messages.AvailableEffects;
-messages.availableEffects#bddb616e hash:int effects:Vector<AvailableEffect> documents:Vector<Document> = messages.AvailableEffects;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/messages.availableEffectsNotModified/">messages.availableEffectsNotModified</a>#d1ed9a5b = <a href="/type/messages.AvailableEffects/">messages.AvailableEffects</a>;
+<a href="/constructor/messages.availableEffects/">messages.availableEffects</a>#bddb616e hash:<a href="/type/int/">int</a> effects:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/AvailableEffect/">AvailableEffect</a>&gt; documents:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/Document/">Document</a>&gt; = <a href="/type/messages.AvailableEffects/">messages.AvailableEffects</a>;
 ---functions---
-messages.getAvailableEffects#dea20a39 hash:int = messages.AvailableEffects;
-```
+<a href="/method/messages.getAvailableEffects/" class="current_page_link">messages.getAvailableEffects</a>#dea20a39 hash:<a href="/type/int/">int</a> = <a href="/type/messages.AvailableEffects/">messages.AvailableEffects</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td><a href="/api/offsets#hash-generation">Hash used for caching, for more info click here</a>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td><a href="/api/offsets/#hash-generation">Hash used for caching, for more info click here</a>.</td></tr></tbody></table>
 
 ### Result
 

@@ -11,9 +11,9 @@ layout: layout.njk
 
 Details about an accepted authorization request, for more info [click here »](/api/url-authorization/)
 
-```
-urlAuthResultDefault#a9d6db1f = UrlAuthResult;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/urlAuthResultDefault/" class="current_page_link">urlAuthResultDefault</a>#a9d6db1f = <a href="/type/UrlAuthResult/">UrlAuthResult</a>;</code></pre>
 
 ### Parameters
 

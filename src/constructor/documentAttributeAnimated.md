@@ -20,9 +20,9 @@ documentAttributeAnimated#11b58939 = DocumentAttribute;
 
 #### API schema
 
-```
-documentAttributeAnimated#11b58939 = DocumentAttribute;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/documentAttributeAnimated/" class="current_page_link">documentAttributeAnimated</a>#11b58939 = <a href="/type/DocumentAttribute/">DocumentAttribute</a>;</code></pre>
 
 ### Parameters
 

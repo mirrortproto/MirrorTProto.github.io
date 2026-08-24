@@ -11,13 +11,13 @@ layout: layout.njk
 
 Contains a live story's total donations and top donors, see [paid live story donations »](/api/group-calls/#paid-live-story-donations).
 
-```
-phone.groupCallStars#9d1dbd26 total_stars:long top_donors:Vector<GroupCallDonor> chats:Vector<Chat> users:Vector<User> = phone.GroupCallStars;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/phone.groupCallStars/" class="current_page_link">phone.groupCallStars</a>#9d1dbd26 total_stars:<a href="/type/long/">long</a> top_donors:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/GroupCallDonor/">GroupCallDonor</a>&gt; chats:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/Chat/">Chat</a>&gt; users:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/User/">User</a>&gt; = <a href="/type/phone.GroupCallStars/">phone.GroupCallStars</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>total_stars</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Total Stars donated to the live story</td></tr><tr><td><strong>top_donors</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/GroupCallDonor">GroupCallDonor</a>&gt;</td><td>Top donors</td></tr><tr><td><strong>chats</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/Chat">Chat</a>&gt;</td><td>Chats mentioned in <code>top_donors</code></td></tr><tr><td><strong>users</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/User">User</a>&gt;</td><td>Users mentioned in <code>top_donors</code></td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>total_stars</strong></td><td style="text-align: center;"><a href="/type/long/">long</a></td><td>Total Stars donated to the live story</td></tr><tr><td><strong>top_donors</strong></td><td style="text-align: center;"><a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/GroupCallDonor/">GroupCallDonor</a>&gt;</td><td>Top donors</td></tr><tr><td><strong>chats</strong></td><td style="text-align: center;"><a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/Chat/">Chat</a>&gt;</td><td>Chats mentioned in <code>top_donors</code></td></tr><tr><td><strong>users</strong></td><td style="text-align: center;"><a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/User/">User</a>&gt;</td><td>Users mentioned in <code>top_donors</code></td></tr></tbody></table>
 
 ### Type
 

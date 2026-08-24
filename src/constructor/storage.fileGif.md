@@ -11,9 +11,9 @@ layout: layout.njk
 
 GIF image. MIME type: `image/gif`.
 
-```
-storage.fileGif#cae1aadf = storage.FileType;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/storage.fileGif/" class="current_page_link">storage.fileGif</a>#cae1aadf = <a href="/type/storage.FileType/">storage.FileType</a>;</code></pre>
 
 ### Parameters
 

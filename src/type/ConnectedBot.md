@@ -11,13 +11,13 @@ layout: layout.njk
 
 Contains info about a [connected business bot »](/api/bots/connected-business-bots/).
 
-```
-connectedBot#cd64636c flags:# bot_id:long recipients:BusinessBotRecipients rights:BusinessBotRights = ConnectedBot;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/connectedBot/">connectedBot</a>#cd64636c flags:<a href="/type/%23/">#</a> bot_id:<a href="/type/long/">long</a> recipients:<a href="/type/BusinessBotRecipients/">BusinessBotRecipients</a> rights:<a href="/type/BusinessBotRights/">BusinessBotRights</a> = <a href="/type/ConnectedBot/" class="current_page_link">ConnectedBot</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/connectedBot">connectedBot</a></td><td>Contains info about a <a href="/api/bots/connected-business-bots">connected business bot »</a>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/connectedBot/">connectedBot</a></td><td>Contains info about a <a href="/api/bots/connected-business-bots/">connected business bot »</a>.</td></tr></tbody></table>
 
 ### Related pages
 

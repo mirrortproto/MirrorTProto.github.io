@@ -11,16 +11,16 @@ layout: layout.njk
 
 Mark [channel/supergroup](/api/channel/) message contents as read, emitting an [updateChannelReadMessagesContents](/constructor/updateChannelReadMessagesContents/).
 
-```
-boolFalse#bc799737 = Bool;
-boolTrue#997275b5 = Bool;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/boolFalse/">boolFalse</a>#bc799737 = <a href="/type/Bool/">Bool</a>;
+<a href="/constructor/boolTrue/">boolTrue</a>#997275b5 = <a href="/type/Bool/">Bool</a>;
 ---functions---
-channels.readMessageContents#eab5dc38 channel:InputChannel id:Vector<int> = Bool;
-```
+<a href="/method/channels.readMessageContents/" class="current_page_link">channels.readMessageContents</a>#eab5dc38 channel:<a href="/type/InputChannel/">InputChannel</a> id:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/int/">int</a>&gt; = <a href="/type/Bool/">Bool</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>channel</strong></td><td style="text-align: center;"><a href="/type/InputChannel">InputChannel</a></td><td><a href="/api/channel">Channel/supergroup</a></td></tr><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/int">int</a>&gt;</td><td>IDs of messages whose contents should be marked as read</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>channel</strong></td><td style="text-align: center;"><a href="/type/InputChannel/">InputChannel</a></td><td><a href="/api/channel/">Channel/supergroup</a></td></tr><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/int/">int</a>&gt;</td><td>IDs of messages whose contents should be marked as read</td></tr></tbody></table>
 
 ### Result
 

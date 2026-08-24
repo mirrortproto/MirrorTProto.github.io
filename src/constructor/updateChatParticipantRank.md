@@ -11,13 +11,13 @@ layout: layout.njk
 
 The [tag »](/api/rank/) of a participant of a [basic group »](/api/channel/#basic-groups) has changed.
 
-```
-updateChatParticipantRank#bd8367b9 chat_id:long user_id:long rank:string version:int = Update;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/updateChatParticipantRank/" class="current_page_link">updateChatParticipantRank</a>#bd8367b9 chat_id:<a href="/type/long/">long</a> user_id:<a href="/type/long/">long</a> rank:<a href="/type/string/">string</a> version:<a href="/type/int/">int</a> = <a href="/type/Update/">Update</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>chat_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Basic group ID.</td></tr><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>User ID.</td></tr><tr><td><strong>rank</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>The new tag.</td></tr><tr><td><strong>version</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Used similarly to <code>pts</code> values to deduplicate/update outdated chat information as specified <a href="/api/peers#basic-group-updates">here »</a>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>chat_id</strong></td><td style="text-align: center;"><a href="/type/long/">long</a></td><td>Basic group ID.</td></tr><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/long/">long</a></td><td>User ID.</td></tr><tr><td><strong>rank</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td>The new tag.</td></tr><tr><td><strong>version</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>Used similarly to <code>pts</code> values to deduplicate/update outdated chat information as specified <a href="/api/peers/#basic-group-updates">here »</a>.</td></tr></tbody></table>
 
 ### Type
 

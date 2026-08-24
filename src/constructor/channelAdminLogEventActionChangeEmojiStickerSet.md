@@ -11,13 +11,13 @@ layout: layout.njk
 
 The supergroup's [custom emoji stickerset](/api/boost/#setting-a-custom-emoji-stickerset-for-supergroups) was changed.
 
-```
-channelAdminLogEventActionChangeEmojiStickerSet#46d840ab prev_stickerset:InputStickerSet new_stickerset:InputStickerSet = ChannelAdminLogEventAction;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/channelAdminLogEventActionChangeEmojiStickerSet/" class="current_page_link">channelAdminLogEventActionChangeEmojiStickerSet</a>#46d840ab prev_stickerset:<a href="/type/InputStickerSet/">InputStickerSet</a> new_stickerset:<a href="/type/InputStickerSet/">InputStickerSet</a> = <a href="/type/ChannelAdminLogEventAction/">ChannelAdminLogEventAction</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>prev_stickerset</strong></td><td style="text-align: center;"><a href="/type/InputStickerSet">InputStickerSet</a></td><td>Old value</td></tr><tr><td><strong>new_stickerset</strong></td><td style="text-align: center;"><a href="/type/InputStickerSet">InputStickerSet</a></td><td>New value</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>prev_stickerset</strong></td><td style="text-align: center;"><a href="/type/InputStickerSet/">InputStickerSet</a></td><td>Old value</td></tr><tr><td><strong>new_stickerset</strong></td><td style="text-align: center;"><a href="/type/InputStickerSet/">InputStickerSet</a></td><td>New value</td></tr></tbody></table>
 
 ### Type
 

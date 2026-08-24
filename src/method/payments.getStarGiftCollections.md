@@ -11,16 +11,16 @@ layout: layout.njk
 
 Fetches all [star gift collections »](/api/gifts/#gift-collections) of a peer.
 
-```
-payments.starGiftCollectionsNotModified#a0ba4f17 = payments.StarGiftCollections;
-payments.starGiftCollections#8a2932f3 collections:Vector<StarGiftCollection> = payments.StarGiftCollections;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/payments.starGiftCollectionsNotModified/">payments.starGiftCollectionsNotModified</a>#a0ba4f17 = <a href="/type/payments.StarGiftCollections/">payments.StarGiftCollections</a>;
+<a href="/constructor/payments.starGiftCollections/">payments.starGiftCollections</a>#8a2932f3 collections:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/StarGiftCollection/">StarGiftCollection</a>&gt; = <a href="/type/payments.StarGiftCollections/">payments.StarGiftCollections</a>;
 ---functions---
-payments.getStarGiftCollections#981b91dd peer:InputPeer hash:long = payments.StarGiftCollections;
-```
+<a href="/method/payments.getStarGiftCollections/" class="current_page_link">payments.getStarGiftCollections</a>#981b91dd peer:<a href="/type/InputPeer/">InputPeer</a> hash:<a href="/type/long/">long</a> = <a href="/type/payments.StarGiftCollections/">payments.StarGiftCollections</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>The peer.</td></tr><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Hash (<a href="/api/offsets#hash-generation">generated as specified here »</a>) using the <a href="/constructor/starGiftCollection">starGiftCollection</a>.<code>hash</code> field (<strong>not</strong> the <code>collection_id</code> field) of all collections returned by a previous method call, to avoid refetching the result if it hasn't changed.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer/">InputPeer</a></td><td>The peer.</td></tr><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/long/">long</a></td><td>Hash (<a href="/api/offsets/#hash-generation">generated as specified here »</a>) using the <a href="/constructor/starGiftCollection/">starGiftCollection</a>.<code>hash</code> field (<strong>not</strong> the <code>collection_id</code> field) of all collections returned by a previous method call, to avoid refetching the result if it hasn't changed.</td></tr></tbody></table>
 
 ### Result
 

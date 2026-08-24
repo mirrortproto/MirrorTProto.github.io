@@ -17,7 +17,7 @@ e2e.chain.groupState#1ddc7584 participants:Vector<e2e.chain.GroupParticipant> ex
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>participants</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/e2e.chain.GroupParticipant">e2e.chain.GroupParticipant</a>&gt;</td><td>Current call participants, identified by user ID and public key.</td></tr><tr><td><strong>external_permissions</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td><code>add_users</code>, <code>remove_users</code> and <code>set_value</code> permission bits used only when applying a group-state change signed by a user not yet present in <code>participants</code>; the mask cannot increase</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>participants</strong></td><td style="text-align: center;"><a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/e2e.chain.GroupParticipant/">e2e.chain.GroupParticipant</a>&gt;</td><td>Current call participants, identified by user ID and public key.</td></tr><tr><td><strong>external_permissions</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td><code>add_users</code>, <code>remove_users</code> and <code>set_value</code> permission bits used only when applying a group-state change signed by a user not yet present in <code>participants</code>; the mask cannot increase</td></tr></tbody></table>
 
 ### Type
 

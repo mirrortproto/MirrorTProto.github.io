@@ -11,9 +11,9 @@ layout: layout.njk
 
 No sponsored messages are available.
 
-```
-messages.sponsoredMessagesEmpty#1839490f = messages.SponsoredMessages;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/messages.sponsoredMessagesEmpty/" class="current_page_link">messages.sponsoredMessagesEmpty</a>#1839490f = <a href="/type/messages.SponsoredMessages/">messages.SponsoredMessages</a>;</code></pre>
 
 ### Parameters
 

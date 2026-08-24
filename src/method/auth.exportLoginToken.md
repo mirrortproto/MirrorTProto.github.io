@@ -14,17 +14,17 @@ The generated login token should be encoded using base64url, then shown as a `tg
 
 For more info, see [login via QR code](/api/qr-login/).
 
-```
-auth.loginToken#629f1980 expires:int token:bytes = auth.LoginToken;
-auth.loginTokenMigrateTo#68e9916 dc_id:int token:bytes = auth.LoginToken;
-auth.loginTokenSuccess#390d5c5e authorization:auth.Authorization = auth.LoginToken;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/auth.loginToken/">auth.loginToken</a>#629f1980 expires:<a href="/type/int/">int</a> token:<a href="/type/bytes/">bytes</a> = <a href="/type/auth.LoginToken/">auth.LoginToken</a>;
+<a href="/constructor/auth.loginTokenMigrateTo/">auth.loginTokenMigrateTo</a>#68e9916 dc_id:<a href="/type/int/">int</a> token:<a href="/type/bytes/">bytes</a> = <a href="/type/auth.LoginToken/">auth.LoginToken</a>;
+<a href="/constructor/auth.loginTokenSuccess/">auth.loginTokenSuccess</a>#390d5c5e authorization:<a href="/type/auth.Authorization/">auth.Authorization</a> = <a href="/type/auth.LoginToken/">auth.LoginToken</a>;
 ---functions---
-auth.exportLoginToken#b7e085fe api_id:int api_hash:string except_ids:Vector<long> = auth.LoginToken;
-```
+<a href="/method/auth.exportLoginToken/" class="current_page_link">auth.exportLoginToken</a>#b7e085fe api_id:<a href="/type/int/">int</a> api_hash:<a href="/type/string/">string</a> except_ids:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/long/">long</a>&gt; = <a href="/type/auth.LoginToken/">auth.LoginToken</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>api_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Application identifier (see. <a href="/myapp">App configuration</a>)</td></tr><tr><td><strong>api_hash</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Application identifier hash (see. <a href="/myapp">App configuration</a>)</td></tr><tr><td><strong>except_ids</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/long">long</a>&gt;</td><td>List of already logged-in user IDs, to prevent logging in twice with the same user</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>api_id</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>Application identifier (see. <a href="https://core.telegram.org/myapp">App configuration</a>)</td></tr><tr><td><strong>api_hash</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td>Application identifier hash (see. <a href="https://core.telegram.org/myapp">App configuration</a>)</td></tr><tr><td><strong>except_ids</strong></td><td style="text-align: center;"><a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/long/">long</a>&gt;</td><td>List of already logged-in user IDs, to prevent logging in twice with the same user</td></tr></tbody></table>
 
 ### Result
 

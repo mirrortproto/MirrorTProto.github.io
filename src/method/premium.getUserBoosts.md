@@ -11,15 +11,15 @@ layout: layout.njk
 
 Returns the lists of boost that were applied to a channel/supergroup by a specific user (admins only)
 
-```
-premium.boostsList#86f8613c flags:# count:int boosts:Vector<Boost> next_offset:flags.0?string users:Vector<User> = premium.BoostsList;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/premium.boostsList/">premium.boostsList</a>#86f8613c flags:<a href="/type/%23/">#</a> count:<a href="/type/int/">int</a> boosts:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/Boost/">Boost</a>&gt; next_offset:flags.0?<a href="/type/string/">string</a> users:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/User/">User</a>&gt; = <a href="/type/premium.BoostsList/">premium.BoostsList</a>;
 ---functions---
-premium.getUserBoosts#39854d1f peer:InputPeer user_id:InputUser = premium.BoostsList;
-```
+<a href="/method/premium.getUserBoosts/" class="current_page_link">premium.getUserBoosts</a>#39854d1f peer:<a href="/type/InputPeer/">InputPeer</a> user_id:<a href="/type/InputUser/">InputUser</a> = <a href="/type/premium.BoostsList/">premium.BoostsList</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>The channel/supergroup</td></tr><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/InputUser">InputUser</a></td><td>The user</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer/">InputPeer</a></td><td>The channel/supergroup</td></tr><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/InputUser/">InputUser</a></td><td>The user</td></tr></tbody></table>
 
 ### Result
 

@@ -11,9 +11,9 @@ layout: layout.njk
 
 No filter
 
-```
-channelMessagesFilterEmpty#94d42ee7 = ChannelMessagesFilter;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/channelMessagesFilterEmpty/" class="current_page_link">channelMessagesFilterEmpty</a>#94d42ee7 = <a href="/type/ChannelMessagesFilter/">ChannelMessagesFilter</a>;</code></pre>
 
 ### Parameters
 

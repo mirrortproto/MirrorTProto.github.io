@@ -11,11 +11,11 @@ layout: layout.njk
 
 Returns a current state of updates.
 
-```
-updates.state#a56c2a3e pts:int qts:int date:int seq:int unread_count:int = updates.State;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/updates.state/">updates.state</a>#a56c2a3e pts:<a href="/type/int/">int</a> qts:<a href="/type/int/">int</a> date:<a href="/type/int/">int</a> seq:<a href="/type/int/">int</a> unread_count:<a href="/type/int/">int</a> = <a href="/type/updates.State/">updates.State</a>;
 ---functions---
-updates.getState#edd4882a = updates.State;
-```
+<a href="/method/updates.getState/" class="current_page_link">updates.getState</a>#edd4882a = <a href="/type/updates.State/">updates.State</a>;</code></pre>
 
 ### Parameters
 

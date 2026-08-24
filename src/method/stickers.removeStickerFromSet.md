@@ -11,16 +11,16 @@ layout: layout.njk
 
 Remove a sticker from the set where it belongs. The sticker set must have been created by the current user/bot.
 
-```
-messages.stickerSet#6e153f16 set:StickerSet packs:Vector<StickerPack> keywords:Vector<StickerKeyword> documents:Vector<Document> = messages.StickerSet;
-messages.stickerSetNotModified#d3f924eb = messages.StickerSet;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/messages.stickerSet/">messages.stickerSet</a>#6e153f16 set:<a href="/type/StickerSet/">StickerSet</a> packs:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/StickerPack/">StickerPack</a>&gt; keywords:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/StickerKeyword/">StickerKeyword</a>&gt; documents:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/Document/">Document</a>&gt; = <a href="/type/messages.StickerSet/">messages.StickerSet</a>;
+<a href="/constructor/messages.stickerSetNotModified/">messages.stickerSetNotModified</a>#d3f924eb = <a href="/type/messages.StickerSet/">messages.StickerSet</a>;
 ---functions---
-stickers.removeStickerFromSet#f7760f51 sticker:InputDocument = messages.StickerSet;
-```
+<a href="/method/stickers.removeStickerFromSet/" class="current_page_link">stickers.removeStickerFromSet</a>#f7760f51 sticker:<a href="/type/InputDocument/">InputDocument</a> = <a href="/type/messages.StickerSet/">messages.StickerSet</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>sticker</strong></td><td style="text-align: center;"><a href="/type/InputDocument">InputDocument</a></td><td>The sticker to remove</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>sticker</strong></td><td style="text-align: center;"><a href="/type/InputDocument/">InputDocument</a></td><td>The sticker to remove</td></tr></tbody></table>
 
 ### Result
 

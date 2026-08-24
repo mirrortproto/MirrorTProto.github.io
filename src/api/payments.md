@@ -152,7 +152,7 @@ payments.getPaymentForm#37148dbb flags:# invoice:InputInvoice theme_params:flags
     -   Used to [pay to upgrade a Gift to a collectible gift](/api/gifts/#upgrade-a-gift-to-a-collectible-gift).  
         See the [collectible gifts »](/api/gifts/#collectible-gifts) documentation for more info.
 -   [inputInvoiceStarGiftPrepaidUpgrade](/constructor/inputInvoiceStarGiftPrepaidUpgrade/)
-    -   Used to [pay for someone to upgrade a Gift to a collectible gift](https://core.telegram.org/api/gifts#prepaying-for-someone-elses-upgrade).  
+    -   Used to [pay for someone to upgrade a Gift to a collectible gift](/api/gifts/#prepaying-for-someone-else-s-upgrade).  
         See the [collectible gifts »](/api/gifts/#collectible-gifts) documentation for more info.
 -   [inputInvoiceStarGiftTransfer](/constructor/inputInvoiceStarGiftTransfer/)
     -   Used to [pay to transfer a Gift to another peer](/api/gifts/#transferring-collectible-gifts).  
@@ -189,11 +189,11 @@ payments.validatedRequestedInfo#d1451883 flags:# id:flags.0?string shipping_opti
 payments.validateRequestedInfo#b6c8f12b flags:# save:flags.0?true invoice:InputInvoice info:PaymentRequestedInfo = payments.ValidatedRequestedInfo;
 ```
 
-If any data at all is requested by the [**invoice**](/constructor/invoice/) (`name_requested`, `phone_requested`, `email_requested`, `shipping_address_requested`), the user must call [payments.validateRequestedInfo](/method/payments.validateRequestedInfo/), providing the required data (as usual, `msg_id` is the ID of the invoice message). The user can choose to save order information for future use by setting the `save` flag. Data can be autofilled as described in [autofill](#231-autofill).
+If any data at all is requested by the [**invoice**](/constructor/invoice/) (`name_requested`, `phone_requested`, `email_requested`, `shipping_address_requested`), the user must call [payments.validateRequestedInfo](/method/payments.validateRequestedInfo/), providing the required data (as usual, `msg_id` is the ID of the invoice message). The user can choose to save order information for future use by setting the `save` flag. Data can be autofilled as described in [autofill](#2-3-1-autofill).
 
 If no errors are found in the submitted info, the [response](/constructor/payments.validatedRequestedInfo/) of the method will contain an `id` flag, to be used later to complete the payment.
 
-If the `flexible` flag of the invoice is set, calling the [payments.validateRequestedInfo](/method/payments.validateRequestedInfo/) method will send a [shipping query update](/constructor/updateBotShippingQuery/) to the bot, to which the bot will reply with the available shipping options for the specified address [as described here »](#24-select-delivery-option). The return value in this case will also contain a `shipping_options` field with the available shipping options.
+If the `flexible` flag of the invoice is set, calling the [payments.validateRequestedInfo](/method/payments.validateRequestedInfo/) method will send a [shipping query update](/constructor/updateBotShippingQuery/) to the bot, to which the bot will reply with the available shipping options for the specified address [as described here »](#2-4-select-delivery-option). The return value in this case will also contain a `shipping_options` field with the available shipping options.
 
 If any errors are found in the submitted data, a [service notification](/constructor/updateServiceNotification/) will be sent to the user, with a description of the error from the bot.
 
@@ -226,9 +226,9 @@ updateBotShippingQuery#b5aefd7d query_id:long user_id:long payload:bytes shippin
 messages.setBotShippingResults#e5f672fa flags:# query_id:long error:flags.0?string shipping_options:flags.1?Vector<ShippingOption> = Bool;
 ```
 
-If a shipping address was requested and the bot included the parameter `flexible`, when the user [validates order information](#23-verifying-information) the Telegram API will send an [updateBotShippingQuery](/constructor/updateBotShippingQuery/) to the bot. The bot must respond using [messages.setBotShippingResults](/method/messages.setBotShippingResults/) either with a list of possible delivery options and the relevant delivery prices, or with an error (for example, if delivery to the specified address is not possible).
+If a shipping address was requested and the bot included the parameter `flexible`, when the user [validates order information](#2-3-verifying-information) the Telegram API will send an [updateBotShippingQuery](/constructor/updateBotShippingQuery/) to the bot. The bot must respond using [messages.setBotShippingResults](/method/messages.setBotShippingResults/) either with a list of possible delivery options and the relevant delivery prices, or with an error (for example, if delivery to the specified address is not possible).
 
-The returned shipping options or the shipping error will be returned to the user while [validating order information](#23-verifying-information).
+The returned shipping options or the shipping error will be returned to the user while [validating order information](#2-3-verifying-information).
 
 ### 3\. Payment
 
@@ -248,7 +248,7 @@ A [payments.paymentFormStars](/constructor/payments.paymentFormStars/) or [payme
 Calling [payments.sendStarsForm](/method/payments.sendStarsForm/) twice with the same `form_id` will **not** repeat the transaction.
 
 Note that the returned form is only valid for 10 minutes, after which a call to [payments.sendStarsForm](/method/payments.sendStarsForm/) will return a `400` `FORM_EXPIRED` error.  
-When receiving this error, simply re-generate the form as specified in [step 2.2 »](#22-getting-invoice-info-about-the-product) and re-call [payments.sendStarsForm](/method/payments.sendStarsForm/).
+When receiving this error, simply re-generate the form as specified in [step 2.2 »](#2-2-getting-invoice-info-about-the-product) and re-call [payments.sendStarsForm](/method/payments.sendStarsForm/).
 
 A `400` `BALANCE_TOO_LOW` error will be emitted by [payments.sendStarsForm](/method/payments.sendStarsForm/) if the current Telegram Stars balance is not enough to complete the transaction: when receiving this error, the client should invite the user to [topup their Telegram Stars balance »](/api/stars/#buying-or-gifting-stars), before re-invoking [payments.sendStarsForm](/method/payments.sendStarsForm/).
 
@@ -378,17 +378,17 @@ payments.sendPaymentForm#2d03522f flags:# form_id:long invoice:InputInvoice requ
 payments.sendStarsForm#7998c914 form_id:long invoice:InputInvoice = payments.PaymentResult;
 ```
 
-After [verifying order information](#23-verifying-information), the final step for the client is to call [payments.sendPaymentForm](/method/payments.sendPaymentForm/) or [payments.sendStarsForm](/method/payments.sendStarsForm/) for [payments using Telegram Stars »](#31-star-payment), with the following parameters:
+After [verifying order information](#2-3-verifying-information), the final step for the client is to call [payments.sendPaymentForm](/method/payments.sendPaymentForm/) or [payments.sendStarsForm](/method/payments.sendStarsForm/) for [payments using Telegram Stars »](#3-1-star-payment), with the following parameters:
 
 -   The `form_id` is set to the ID of the form
 -   The `invoice` is set to the previously passed invoice
--   `requested_info_id` is set to the `id` of the [verified order information](#23-verifying-information), if it was requested
--   `shipping_option_id` is set to the [selected delivery option](#24-select-delivery-option), if shipping was requested.
+-   `requested_info_id` is set to the `id` of the [verified order information](#2-3-verifying-information), if it was requested
+-   `shipping_option_id` is set to the [selected delivery option](#2-4-select-delivery-option), if shipping was requested.
 -   `credentials` are the payment credentials generated by the payment provider, required to complete the order.
 
 Payment method info can also be saved to the Telegram Servers and reused, by setting the `save` flag of [inputPaymentCredentials](/constructor/inputPaymentCredentials/) when sending the form. This is only possible on accounts with [2FA](/api/srp/) enabled.
 
-The bot then [replies to the received precheckout query](#41-receiving-pre-checkout-query), finally the user [proceeds to checkout](#5-checkout).
+The bot then [replies to the received precheckout query](#4-1-receiving-pre-checkout-query), finally the user [proceeds to checkout](#5-checkout).
 
 Please note that if the result of the method is a [payments.paymentVerificationNeeded](/constructor/payments.paymentVerificationNeeded/), before [proceeding to checkout](#5-checkout) the payment provider requires the user to verify their identity by opening the provided `url` and following instructions (ie 3-D Secure).  
 Once the user finishes working with the webpage, the client can [proceed to checkout](#5-checkout).

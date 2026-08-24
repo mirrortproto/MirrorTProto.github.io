@@ -11,13 +11,13 @@ layout: layout.njk
 
 Represents a [custom pending suggestion »](/api/config/#custom-suggestions).
 
-```
-pendingSuggestion#e7e82e12 suggestion:string title:TextWithEntities description:TextWithEntities url:string = PendingSuggestion;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/pendingSuggestion/" class="current_page_link">pendingSuggestion</a>#e7e82e12 suggestion:<a href="/type/string/">string</a> title:<a href="/type/TextWithEntities/">TextWithEntities</a> description:<a href="/type/TextWithEntities/">TextWithEntities</a> url:<a href="/type/string/">string</a> = <a href="/type/PendingSuggestion/">PendingSuggestion</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>suggestion</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>The suggestion ID, can be passed to <a href="/method/help.dismissSuggestion">help.dismissSuggestion</a>.</td></tr><tr><td><strong>title</strong></td><td style="text-align: center;"><a href="/type/TextWithEntities">TextWithEntities</a></td><td>Title of the suggestion.</td></tr><tr><td><strong>description</strong></td><td style="text-align: center;"><a href="/type/TextWithEntities">TextWithEntities</a></td><td>Body of the suggestion.</td></tr><tr><td><strong>url</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>URL to open when the user clicks on the suggestion.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>suggestion</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td>The suggestion ID, can be passed to <a href="/method/help.dismissSuggestion/">help.dismissSuggestion</a>.</td></tr><tr><td><strong>title</strong></td><td style="text-align: center;"><a href="/type/TextWithEntities/">TextWithEntities</a></td><td>Title of the suggestion.</td></tr><tr><td><strong>description</strong></td><td style="text-align: center;"><a href="/type/TextWithEntities/">TextWithEntities</a></td><td>Body of the suggestion.</td></tr><tr><td><strong>url</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td>URL to open when the user clicks on the suggestion.</td></tr></tbody></table>
 
 ### Type
 

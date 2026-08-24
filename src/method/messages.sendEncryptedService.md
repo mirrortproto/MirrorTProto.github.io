@@ -11,16 +11,16 @@ layout: layout.njk
 
 Sends a service message to a secret chat.
 
-```
-messages.sentEncryptedMessage#560f8935 date:int = messages.SentEncryptedMessage;
-messages.sentEncryptedFile#9493ff32 date:int file:EncryptedFile = messages.SentEncryptedMessage;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/messages.sentEncryptedMessage/">messages.sentEncryptedMessage</a>#560f8935 date:<a href="/type/int/">int</a> = <a href="/type/messages.SentEncryptedMessage/">messages.SentEncryptedMessage</a>;
+<a href="/constructor/messages.sentEncryptedFile/">messages.sentEncryptedFile</a>#9493ff32 date:<a href="/type/int/">int</a> file:<a href="/type/EncryptedFile/">EncryptedFile</a> = <a href="/type/messages.SentEncryptedMessage/">messages.SentEncryptedMessage</a>;
 ---functions---
-messages.sendEncryptedService#32d439a4 peer:InputEncryptedChat random_id:long data:bytes = messages.SentEncryptedMessage;
-```
+<a href="/method/messages.sendEncryptedService/" class="current_page_link">messages.sendEncryptedService</a>#32d439a4 peer:<a href="/type/InputEncryptedChat/">InputEncryptedChat</a> random_id:<a href="/type/long/">long</a> data:<a href="/type/bytes/">bytes</a> = <a href="/type/messages.SentEncryptedMessage/">messages.SentEncryptedMessage</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputEncryptedChat">InputEncryptedChat</a></td><td>Secret chat ID</td></tr><tr><td><strong>random_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Unique client message ID required to prevent message resending. See <a href="/api/updates#updatemessageid-updates">here »</a> for more info on random ID deduplication and updateMessageID mapping.</td></tr><tr><td><strong>data</strong></td><td style="text-align: center;"><a href="/type/bytes">bytes</a></td><td>TL-serialization of <a href="/type/DecryptedMessage">DecryptedMessage</a> type, encrypted with a key generated during chat initialization</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputEncryptedChat/">InputEncryptedChat</a></td><td>Secret chat ID</td></tr><tr><td><strong>random_id</strong></td><td style="text-align: center;"><a href="/type/long/">long</a></td><td>Unique client message ID required to prevent message resending. See <a href="/api/updates/#updatemessageid-updates">here »</a> for more info on random ID deduplication and updateMessageID mapping.</td></tr><tr><td><strong>data</strong></td><td style="text-align: center;"><a href="/type/bytes/">bytes</a></td><td>TL-serialization of <a href="/type/DecryptedMessage/">DecryptedMessage</a> type, encrypted with a key generated during chat initialization</td></tr></tbody></table>
 
 ### Result
 

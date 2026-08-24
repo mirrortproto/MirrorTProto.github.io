@@ -12,15 +12,15 @@ layout: layout.njk
 Get the available stream channels and current playback timestamp of an RTMP-mode video chat, livestream or live story, see [here »](/api/group-calls/#rtmp-mode) for the full flow.  
 The group call must be joined before invoking this method. Send the request to the media DC specified by [groupCall](/constructor/groupCall/).`stream_dc_id`.
 
-```
-phone.groupCallStreamChannels#d0e482b2 channels:Vector<GroupCallStreamChannel> = phone.GroupCallStreamChannels;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/phone.groupCallStreamChannels/">phone.groupCallStreamChannels</a>#d0e482b2 channels:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/GroupCallStreamChannel/">GroupCallStreamChannel</a>&gt; = <a href="/type/phone.GroupCallStreamChannels/">phone.GroupCallStreamChannels</a>;
 ---functions---
-phone.getGroupCallStreamChannels#1ab21940 call:InputGroupCall = phone.GroupCallStreamChannels;
-```
+<a href="/method/phone.getGroupCallStreamChannels/" class="current_page_link">phone.getGroupCallStreamChannels</a>#1ab21940 call:<a href="/type/InputGroupCall/">InputGroupCall</a> = <a href="/type/phone.GroupCallStreamChannels/">phone.GroupCallStreamChannels</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>call</strong></td><td style="text-align: center;"><a href="/type/InputGroupCall">InputGroupCall</a></td><td>RTMP-mode video chat, livestream or live story</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>call</strong></td><td style="text-align: center;"><a href="/type/InputGroupCall/">InputGroupCall</a></td><td>RTMP-mode video chat, livestream or live story</td></tr></tbody></table>
 
 ### Result
 

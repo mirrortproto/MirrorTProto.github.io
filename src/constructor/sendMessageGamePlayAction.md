@@ -11,9 +11,9 @@ layout: layout.njk
 
 User is playing a game
 
-```
-sendMessageGamePlayAction#dd6a8f48 = SendMessageAction;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/sendMessageGamePlayAction/" class="current_page_link">sendMessageGamePlayAction</a>#dd6a8f48 = <a href="/type/SendMessageAction/">SendMessageAction</a>;</code></pre>
 
 ### Parameters
 

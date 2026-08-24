@@ -11,9 +11,9 @@ layout: layout.njk
 
 Whether you will accept phone calls
 
-```
-inputPrivacyKeyPhoneCall#fabadc5f = InputPrivacyKey;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputPrivacyKeyPhoneCall/" class="current_page_link">inputPrivacyKeyPhoneCall</a>#fabadc5f = <a href="/type/InputPrivacyKey/">InputPrivacyKey</a>;</code></pre>
 
 ### Parameters
 

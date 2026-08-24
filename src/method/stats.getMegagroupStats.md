@@ -11,15 +11,15 @@ layout: layout.njk
 
 Get [supergroup statistics](/api/stats/)
 
-```
-stats.megagroupStats#ef7ff916 period:StatsDateRangeDays members:StatsAbsValueAndPrev messages:StatsAbsValueAndPrev viewers:StatsAbsValueAndPrev posters:StatsAbsValueAndPrev growth_graph:StatsGraph members_graph:StatsGraph new_members_by_source_graph:StatsGraph languages_graph:StatsGraph messages_graph:StatsGraph actions_graph:StatsGraph top_hours_graph:StatsGraph weekdays_graph:StatsGraph top_posters:Vector<StatsGroupTopPoster> top_admins:Vector<StatsGroupTopAdmin> top_inviters:Vector<StatsGroupTopInviter> users:Vector<User> = stats.MegagroupStats;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/stats.megagroupStats/">stats.megagroupStats</a>#ef7ff916 period:<a href="/type/StatsDateRangeDays/">StatsDateRangeDays</a> members:<a href="/type/StatsAbsValueAndPrev/">StatsAbsValueAndPrev</a> messages:<a href="/type/StatsAbsValueAndPrev/">StatsAbsValueAndPrev</a> viewers:<a href="/type/StatsAbsValueAndPrev/">StatsAbsValueAndPrev</a> posters:<a href="/type/StatsAbsValueAndPrev/">StatsAbsValueAndPrev</a> growth_graph:<a href="/type/StatsGraph/">StatsGraph</a> members_graph:<a href="/type/StatsGraph/">StatsGraph</a> new_members_by_source_graph:<a href="/type/StatsGraph/">StatsGraph</a> languages_graph:<a href="/type/StatsGraph/">StatsGraph</a> messages_graph:<a href="/type/StatsGraph/">StatsGraph</a> actions_graph:<a href="/type/StatsGraph/">StatsGraph</a> top_hours_graph:<a href="/type/StatsGraph/">StatsGraph</a> weekdays_graph:<a href="/type/StatsGraph/">StatsGraph</a> top_posters:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/StatsGroupTopPoster/">StatsGroupTopPoster</a>&gt; top_admins:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/StatsGroupTopAdmin/">StatsGroupTopAdmin</a>&gt; top_inviters:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/StatsGroupTopInviter/">StatsGroupTopInviter</a>&gt; users:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/User/">User</a>&gt; = <a href="/type/stats.MegagroupStats/">stats.MegagroupStats</a>;
 ---functions---
-stats.getMegagroupStats#dcdf8607 flags:# dark:flags.0?true channel:InputChannel = stats.MegagroupStats;
-```
+<a href="/method/stats.getMegagroupStats/" class="current_page_link">stats.getMegagroupStats</a>#dcdf8607 flags:<a href="/type/%23/">#</a> dark:flags.0?true channel:<a href="/type/InputChannel/">InputChannel</a> = <a href="/type/stats.MegagroupStats/">stats.MegagroupStats</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>Flags, see <a href="/mtproto/TL-combinators#conditional-fields">TL conditional fields</a></td></tr><tr><td><strong>dark</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Whether to enable dark theme for graph colors</td></tr><tr><td><strong>channel</strong></td><td style="text-align: center;"><a href="/type/InputChannel">InputChannel</a></td><td><a href="/api/channel">Supergroup ID</a></td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23/">#</a></td><td>Flags, see <a href="/mtproto/TL-combinators/#conditional-fields">TL conditional fields</a></td></tr><tr><td><strong>dark</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators/#conditional-fields">flags</a>.0?<a href="/constructor/true/">true</a></td><td>Whether to enable dark theme for graph colors</td></tr><tr><td><strong>channel</strong></td><td style="text-align: center;"><a href="/type/InputChannel/">InputChannel</a></td><td><a href="/api/channel/">Supergroup ID</a></td></tr></tbody></table>
 
 ### Result
 

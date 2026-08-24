@@ -11,12 +11,12 @@ layout: layout.njk
 
 Look for updates of telegram's terms of service
 
-```
-help.termsOfServiceUpdateEmpty#e3309f7f expires:int = help.TermsOfServiceUpdate;
-help.termsOfServiceUpdate#28ecf961 expires:int terms_of_service:help.TermsOfService = help.TermsOfServiceUpdate;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/help.termsOfServiceUpdateEmpty/">help.termsOfServiceUpdateEmpty</a>#e3309f7f expires:<a href="/type/int/">int</a> = <a href="/type/help.TermsOfServiceUpdate/">help.TermsOfServiceUpdate</a>;
+<a href="/constructor/help.termsOfServiceUpdate/">help.termsOfServiceUpdate</a>#28ecf961 expires:<a href="/type/int/">int</a> terms_of_service:<a href="/type/help.TermsOfService/">help.TermsOfService</a> = <a href="/type/help.TermsOfServiceUpdate/">help.TermsOfServiceUpdate</a>;
 ---functions---
-help.getTermsOfServiceUpdate#2ca51fd1 = help.TermsOfServiceUpdate;
-```
+<a href="/method/help.getTermsOfServiceUpdate/" class="current_page_link">help.getTermsOfServiceUpdate</a>#2ca51fd1 = <a href="/type/help.TermsOfServiceUpdate/">help.TermsOfServiceUpdate</a>;</code></pre>
 
 ### Parameters
 

@@ -11,13 +11,13 @@ layout: layout.njk
 
 A certain peer has forwarded the story as a message to a public chat or channel.
 
-```
-storyReactionPublicForward#bbab2643 message:Message = StoryReaction;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/storyReactionPublicForward/" class="current_page_link">storyReactionPublicForward</a>#bbab2643 message:<a href="/type/Message/">Message</a> = <a href="/type/StoryReaction/">StoryReaction</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>message</strong></td><td style="text-align: center;"><a href="/type/Message">Message</a></td><td>The message with the forwarded story.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>message</strong></td><td style="text-align: center;"><a href="/type/Message/">Message</a></td><td>The message with the forwarded story.</td></tr></tbody></table>
 
 ### Type
 

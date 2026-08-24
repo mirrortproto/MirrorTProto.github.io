@@ -11,9 +11,9 @@ layout: layout.njk
 
 Some featured [custom emoji stickers](/api/custom-emoji/) were marked as read
 
-```
-updateReadFeaturedEmojiStickers#fb4c496c = Update;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/updateReadFeaturedEmojiStickers/" class="current_page_link">updateReadFeaturedEmojiStickers</a>#fb4c496c = <a href="/type/Update/">Update</a>;</code></pre>
 
 ### Parameters
 

@@ -11,15 +11,15 @@ layout: layout.njk
 
 Get count of online users in a chat
 
-```
-chatOnlines#f041e250 onlines:int = ChatOnlines;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/chatOnlines/">chatOnlines</a>#f041e250 onlines:<a href="/type/int/">int</a> = <a href="/type/ChatOnlines/">ChatOnlines</a>;
 ---functions---
-messages.getOnlines#6e2be050 peer:InputPeer = ChatOnlines;
-```
+<a href="/method/messages.getOnlines/" class="current_page_link">messages.getOnlines</a>#6e2be050 peer:<a href="/type/InputPeer/">InputPeer</a> = <a href="/type/ChatOnlines/">ChatOnlines</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>The chat</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer/">InputPeer</a></td><td>The chat</td></tr></tbody></table>
 
 ### Result
 

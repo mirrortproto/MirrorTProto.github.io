@@ -11,16 +11,16 @@ layout: layout.njk
 
 Check if the specified [gift »](/api/gifts/) can be sent.
 
-```
-payments.checkCanSendGiftResultOk#374fa7ad = payments.CheckCanSendGiftResult;
-payments.checkCanSendGiftResultFail#d5e58274 reason:TextWithEntities = payments.CheckCanSendGiftResult;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/payments.checkCanSendGiftResultOk/">payments.checkCanSendGiftResultOk</a>#374fa7ad = <a href="/type/payments.CheckCanSendGiftResult/">payments.CheckCanSendGiftResult</a>;
+<a href="/constructor/payments.checkCanSendGiftResultFail/">payments.checkCanSendGiftResultFail</a>#d5e58274 reason:<a href="/type/TextWithEntities/">TextWithEntities</a> = <a href="/type/payments.CheckCanSendGiftResult/">payments.CheckCanSendGiftResult</a>;
 ---functions---
-payments.checkCanSendGift#c0c4edc9 gift_id:long = payments.CheckCanSendGiftResult;
-```
+<a href="/method/payments.checkCanSendGift/" class="current_page_link">payments.checkCanSendGift</a>#c0c4edc9 gift_id:<a href="/type/long/">long</a> = <a href="/type/payments.CheckCanSendGiftResult/">payments.CheckCanSendGiftResult</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>gift_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Gift ID.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>gift_id</strong></td><td style="text-align: center;"><a href="/type/long/">long</a></td><td>Gift ID.</td></tr></tbody></table>
 
 ### Result
 

@@ -11,16 +11,16 @@ layout: layout.njk
 
 Check if the [2FA recovery code](/api/srp/) sent using [auth.requestPasswordRecovery](/method/auth.requestPasswordRecovery/) is valid, before passing it to [auth.recoverPassword](/method/auth.recoverPassword/).
 
-```
-boolFalse#bc799737 = Bool;
-boolTrue#997275b5 = Bool;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/boolFalse/">boolFalse</a>#bc799737 = <a href="/type/Bool/">Bool</a>;
+<a href="/constructor/boolTrue/">boolTrue</a>#997275b5 = <a href="/type/Bool/">Bool</a>;
 ---functions---
-auth.checkRecoveryPassword#d36bf79 code:string = Bool;
-```
+<a href="/method/auth.checkRecoveryPassword/" class="current_page_link">auth.checkRecoveryPassword</a>#d36bf79 code:<a href="/type/string/">string</a> = <a href="/type/Bool/">Bool</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>code</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Code received via email</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>code</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td>Code received via email</td></tr></tbody></table>
 
 ### Result
 

@@ -11,16 +11,16 @@ layout: layout.njk
 
 Changes the default value of the Time-To-Live setting, applied to all new chats.
 
-```
-boolFalse#bc799737 = Bool;
-boolTrue#997275b5 = Bool;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/boolFalse/">boolFalse</a>#bc799737 = <a href="/type/Bool/">Bool</a>;
+<a href="/constructor/boolTrue/">boolTrue</a>#997275b5 = <a href="/type/Bool/">Bool</a>;
 ---functions---
-messages.setDefaultHistoryTTL#9eb51445 period:int = Bool;
-```
+<a href="/method/messages.setDefaultHistoryTTL/" class="current_page_link">messages.setDefaultHistoryTTL</a>#9eb51445 period:<a href="/type/int/">int</a> = <a href="/type/Bool/">Bool</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>period</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>The new default Time-To-Live of all messages sent in new chats, in seconds.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>period</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>The new default Time-To-Live of all messages sent in new chats, in seconds.</td></tr></tbody></table>
 
 ### Result
 

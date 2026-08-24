@@ -11,15 +11,15 @@ layout: layout.njk
 
 Get [instant view](https://instantview.telegram.org) page
 
-```
-messages.webPage#fd5e12bd webpage:WebPage chats:Vector<Chat> users:Vector<User> = messages.WebPage;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/messages.webPage/">messages.webPage</a>#fd5e12bd webpage:<a href="/type/WebPage/">WebPage</a> chats:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/Chat/">Chat</a>&gt; users:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/User/">User</a>&gt; = <a href="/type/messages.WebPage/">messages.WebPage</a>;
 ---functions---
-messages.getWebPage#8d9692a3 url:string hash:int = messages.WebPage;
-```
+<a href="/method/messages.getWebPage/" class="current_page_link">messages.getWebPage</a>#8d9692a3 url:<a href="/type/string/">string</a> hash:<a href="/type/int/">int</a> = <a href="/type/messages.WebPage/">messages.WebPage</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>url</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>URL of IV page to fetch</td></tr><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td><a href="/api/offsets#hash-generation">Hash used for caching, for more info click here</a>.<br><strong>Note</strong>: the usual hash generation algorithm cannot be used in this case, please re-use the <a href="/constructor/webPage">webPage</a>.<code>hash</code> field returned by a previous call to the method, or pass 0 if this is the first call or if the previous call did not return a <a href="/constructor/webPage">webPage</a>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>url</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td>URL of IV page to fetch</td></tr><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td><a href="/api/offsets/#hash-generation">Hash used for caching, for more info click here</a>.<br><strong>Note</strong>: the usual hash generation algorithm cannot be used in this case, please re-use the <a href="/constructor/webPage/">webPage</a>.<code>hash</code> field returned by a previous call to the method, or pass 0 if this is the first call or if the previous call did not return a <a href="/constructor/webPage/">webPage</a>.</td></tr></tbody></table>
 
 ### Result
 

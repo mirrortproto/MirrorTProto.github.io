@@ -11,9 +11,9 @@ layout: layout.njk
 
 Indicates the default notification sound should be used
 
-```
-notificationSoundDefault#97e8bebe = NotificationSound;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/notificationSoundDefault/" class="current_page_link">notificationSoundDefault</a>#97e8bebe = <a href="/type/NotificationSound/">NotificationSound</a>;</code></pre>
 
 ### Parameters
 

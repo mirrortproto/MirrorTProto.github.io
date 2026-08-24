@@ -13,16 +13,16 @@ Binds a temporary authorization key `temp_auth_key_id` to the permanent authoriz
 
 For more information, see [Perfect Forward Secrecy](/api/pfs/).
 
-```
-boolFalse#bc799737 = Bool;
-boolTrue#997275b5 = Bool;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/boolFalse/">boolFalse</a>#bc799737 = <a href="/type/Bool/">Bool</a>;
+<a href="/constructor/boolTrue/">boolTrue</a>#997275b5 = <a href="/type/Bool/">Bool</a>;
 ---functions---
-auth.bindTempAuthKey#cdd42a05 perm_auth_key_id:long nonce:long expires_at:int encrypted_message:bytes = Bool;
-```
+<a href="/method/auth.bindTempAuthKey/" class="current_page_link">auth.bindTempAuthKey</a>#cdd42a05 perm_auth_key_id:<a href="/type/long/">long</a> nonce:<a href="/type/long/">long</a> expires_at:<a href="/type/int/">int</a> encrypted_message:<a href="/type/bytes/">bytes</a> = <a href="/type/Bool/">Bool</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>perm_auth_key_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Permanent auth_key_id to bind to</td></tr><tr><td><strong>nonce</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Random long from <a href="#binding-message-contents">Binding message contents</a></td></tr><tr><td><strong>expires_at</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Unix timestamp to invalidate temporary key, see <a href="#binding-message-contents">Binding message contents</a></td></tr><tr><td><strong>encrypted_message</strong></td><td style="text-align: center;"><a href="/type/bytes">bytes</a></td><td>See <a href="#generating-encrypted-message">Generating encrypted_message</a></td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>perm_auth_key_id</strong></td><td style="text-align: center;"><a href="/type/long/">long</a></td><td>Permanent auth_key_id to bind to</td></tr><tr><td><strong>nonce</strong></td><td style="text-align: center;"><a href="/type/long/">long</a></td><td>Random long from <a href="#binding-message-contents">Binding message contents</a></td></tr><tr><td><strong>expires_at</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>Unix timestamp to invalidate temporary key, see <a href="#binding-message-contents">Binding message contents</a></td></tr><tr><td><strong>encrypted_message</strong></td><td style="text-align: center;"><a href="/type/bytes/">bytes</a></td><td>See <a href="#generating-encrypted-message">Generating encrypted_message</a></td></tr></tbody></table>
 
 ### Result
 
@@ -38,7 +38,7 @@ The client begins by creating a special binding message:
 bind_auth_key_inner#75a3f765 nonce:long temp_auth_key_id:long perm_auth_key_id:long temp_session_id:long expires_at:int = BindAuthKeyInner;
 ```
 
-<table class="table"><thead><tr><th scope="col"></th><th scope="col"></th><th scope="col"></th></tr></thead><tbody><tr><td><strong>nonce</strong></td><td><a href="/type/long">long</a></td><td>Random long</td></tr><tr><td><strong>temp_auth_key_id</strong></td><td><a href="/type/long">long</a></td><td>Temporary auth_key_id</td></tr><tr><td><strong>perm_auth_key_id</strong></td><td><a href="/type/long">long</a></td><td>Permanent auth_key_id to bind to</td></tr><tr><td><strong>temp_session_id</strong></td><td><a href="/type/long">long</a></td><td>Session id, which will be used to invoke <strong>auth.bindTempAuthKey</strong> method</td></tr><tr><td><strong>expires_at</strong></td><td><a href="/type/int">int</a></td><td>Unix timestamp to invalidate temporary key</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col"></th><th scope="col"></th><th scope="col"></th></tr></thead><tbody><tr><td><strong>nonce</strong></td><td><a href="/type/long/">long</a></td><td>Random long</td></tr><tr><td><strong>temp_auth_key_id</strong></td><td><a href="/type/long/">long</a></td><td>Temporary auth_key_id</td></tr><tr><td><strong>perm_auth_key_id</strong></td><td><a href="/type/long/">long</a></td><td>Permanent auth_key_id to bind to</td></tr><tr><td><strong>temp_session_id</strong></td><td><a href="/type/long/">long</a></td><td>Session id, which will be used to invoke <strong>auth.bindTempAuthKey</strong> method</td></tr><tr><td><strong>expires_at</strong></td><td><a href="/type/int/">int</a></td><td>Unix timestamp to invalidate temporary key</td></tr></tbody></table>
 
 ### Encrypting the binding message
 

@@ -11,9 +11,9 @@ layout: layout.njk
 
 Represents epic collectible gift attribute rarity.
 
-```
-starGiftAttributeRarityEpic#78fbf3a8 = StarGiftAttributeRarity;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/starGiftAttributeRarityEpic/" class="current_page_link">starGiftAttributeRarityEpic</a>#78fbf3a8 = <a href="/type/StarGiftAttributeRarity/">StarGiftAttributeRarity</a>;</code></pre>
 
 ### Parameters
 

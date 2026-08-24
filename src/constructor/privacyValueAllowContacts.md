@@ -11,9 +11,9 @@ layout: layout.njk
 
 Allow all contacts
 
-```
-privacyValueAllowContacts#fffe1bac = PrivacyRule;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/privacyValueAllowContacts/" class="current_page_link">privacyValueAllowContacts</a>#fffe1bac = <a href="/type/PrivacyRule/">PrivacyRule</a>;</code></pre>
 
 ### Parameters
 

@@ -11,13 +11,13 @@ layout: layout.njk
 
 Info about a [saved message reaction tag »](/api/saved-messages/#tags).
 
-```
-savedReactionTag#cb6ff828 flags:# reaction:Reaction title:flags.0?string count:int = SavedReactionTag;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/savedReactionTag/">savedReactionTag</a>#cb6ff828 flags:<a href="/type/%23/">#</a> reaction:<a href="/type/Reaction/">Reaction</a> title:flags.0?<a href="/type/string/">string</a> count:<a href="/type/int/">int</a> = <a href="/type/SavedReactionTag/" class="current_page_link">SavedReactionTag</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/savedReactionTag">savedReactionTag</a></td><td>Info about a <a href="/api/saved-messages#tags">saved message reaction tag »</a>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/savedReactionTag/">savedReactionTag</a></td><td>Info about a <a href="/api/saved-messages/#tags">saved message reaction tag »</a>.</td></tr></tbody></table>
 
 ### Related pages
 

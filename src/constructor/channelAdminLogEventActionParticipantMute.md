@@ -11,13 +11,13 @@ layout: layout.njk
 
 A group call participant was muted
 
-```
-channelAdminLogEventActionParticipantMute#f92424d2 participant:GroupCallParticipant = ChannelAdminLogEventAction;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/channelAdminLogEventActionParticipantMute/" class="current_page_link">channelAdminLogEventActionParticipantMute</a>#f92424d2 participant:<a href="/type/GroupCallParticipant/">GroupCallParticipant</a> = <a href="/type/ChannelAdminLogEventAction/">ChannelAdminLogEventAction</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>participant</strong></td><td style="text-align: center;"><a href="/type/GroupCallParticipant">GroupCallParticipant</a></td><td>The participant that was muted</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>participant</strong></td><td style="text-align: center;"><a href="/type/GroupCallParticipant/">GroupCallParticipant</a></td><td>The participant that was muted</td></tr></tbody></table>
 
 ### Type
 

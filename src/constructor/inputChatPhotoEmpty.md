@@ -11,9 +11,9 @@ layout: layout.njk
 
 Empty constructor, remove group photo.
 
-```
-inputChatPhotoEmpty#1ca48f57 = InputChatPhoto;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputChatPhotoEmpty/" class="current_page_link">inputChatPhotoEmpty</a>#1ca48f57 = <a href="/type/InputChatPhoto/">InputChatPhoto</a>;</code></pre>
 
 ### Parameters
 

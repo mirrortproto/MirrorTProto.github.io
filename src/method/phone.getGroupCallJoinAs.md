@@ -13,15 +13,15 @@ Get a list of peers that can be used to join a [video chat or livestream »](/ap
 
 This method cannot be used for live stories or conference calls. To comment or react in a live story as another peer, use [channels.getSendAs](/method/channels.getSendAs/) with `for_live_stories` set and pass one of the returned peers to [phone.sendGroupCallMessage](/method/phone.sendGroupCallMessage/).`send_as`.
 
-```
-phone.joinAsPeers#afe5623f peers:Vector<Peer> chats:Vector<Chat> users:Vector<User> = phone.JoinAsPeers;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/phone.joinAsPeers/">phone.joinAsPeers</a>#afe5623f peers:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/Peer/">Peer</a>&gt; chats:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/Chat/">Chat</a>&gt; users:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/User/">User</a>&gt; = <a href="/type/phone.JoinAsPeers/">phone.JoinAsPeers</a>;
 ---functions---
-phone.getGroupCallJoinAs#ef7c213a peer:InputPeer = phone.JoinAsPeers;
-```
+<a href="/method/phone.getGroupCallJoinAs/" class="current_page_link">phone.getGroupCallJoinAs</a>#ef7c213a peer:<a href="/type/InputPeer/">InputPeer</a> = <a href="/type/phone.JoinAsPeers/">phone.JoinAsPeers</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>The basic group, supergroup or channel whose video chat/livestream we're trying to join; cannot target a live story.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer/">InputPeer</a></td><td>The basic group, supergroup or channel whose video chat/livestream we're trying to join; cannot target a live story.</td></tr></tbody></table>
 
 ### Result
 

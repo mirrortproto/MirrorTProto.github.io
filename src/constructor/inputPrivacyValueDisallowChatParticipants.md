@@ -11,13 +11,13 @@ layout: layout.njk
 
 Disallow only participants of certain chats
 
-```
-inputPrivacyValueDisallowChatParticipants#e94f0f86 chats:Vector<long> = InputPrivacyRule;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputPrivacyValueDisallowChatParticipants/" class="current_page_link">inputPrivacyValueDisallowChatParticipants</a>#e94f0f86 chats:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/long/">long</a>&gt; = <a href="/type/InputPrivacyRule/">InputPrivacyRule</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>chats</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/long">long</a>&gt;</td><td>Disallowed chat IDs (either a <a href="/constructor/chat">chat</a> or a <a href="/constructor/channel">supergroup</a> ID, verbatim the way it is received in the constructor (i.e. unlike with bot API IDs, here group and supergroup IDs should be treated in the same way)).</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>chats</strong></td><td style="text-align: center;"><a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/long/">long</a>&gt;</td><td>Disallowed chat IDs (either a <a href="/constructor/chat/">chat</a> or a <a href="/constructor/channel/">supergroup</a> ID, verbatim the way it is received in the constructor (i.e. unlike with bot API IDs, here group and supergroup IDs should be treated in the same way)).</td></tr></tbody></table>
 
 ### Type
 

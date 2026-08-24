@@ -11,13 +11,13 @@ layout: layout.njk
 
 Configuring parameters did not change.
 
-```
-messages.dhConfigNotModified#c0e24635 random:bytes = messages.DhConfig;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/messages.dhConfigNotModified/" class="current_page_link">messages.dhConfigNotModified</a>#c0e24635 random:<a href="/type/bytes/">bytes</a> = <a href="/type/messages.DhConfig/">messages.DhConfig</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>random</strong></td><td style="text-align: center;"><a href="/type/bytes">bytes</a></td><td>Random sequence of bytes of assigned length</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>random</strong></td><td style="text-align: center;"><a href="/type/bytes/">bytes</a></td><td>Random sequence of bytes of assigned length</td></tr></tbody></table>
 
 ### Type
 

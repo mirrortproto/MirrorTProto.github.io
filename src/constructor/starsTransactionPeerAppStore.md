@@ -11,9 +11,9 @@ layout: layout.njk
 
 Describes a [Telegram Star](/api/stars/) transaction with the App Store, used when purchasing Telegram Stars through the App Store.
 
-```
-starsTransactionPeerAppStore#b457b375 = StarsTransactionPeer;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/starsTransactionPeerAppStore/" class="current_page_link">starsTransactionPeerAppStore</a>#b457b375 = <a href="/type/StarsTransactionPeer/">StarsTransactionPeer</a>;</code></pre>
 
 ### Parameters
 

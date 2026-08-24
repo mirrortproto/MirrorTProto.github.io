@@ -11,13 +11,13 @@ layout: layout.njk
 
 Peer-specific media autosave settings
 
-```
-autoSaveException#81602d47 peer:Peer settings:AutoSaveSettings = AutoSaveException;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/autoSaveException/" class="current_page_link">autoSaveException</a>#81602d47 peer:<a href="/type/Peer/">Peer</a> settings:<a href="/type/AutoSaveSettings/">AutoSaveSettings</a> = <a href="/type/AutoSaveException/">AutoSaveException</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/Peer">Peer</a></td><td>The peer</td></tr><tr><td><strong>settings</strong></td><td style="text-align: center;"><a href="/type/AutoSaveSettings">AutoSaveSettings</a></td><td>Media autosave settings</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/Peer/">Peer</a></td><td>The peer</td></tr><tr><td><strong>settings</strong></td><td style="text-align: center;"><a href="/type/AutoSaveSettings/">AutoSaveSettings</a></td><td>Media autosave settings</td></tr></tbody></table>
 
 ### Type
 

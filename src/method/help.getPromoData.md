@@ -11,12 +11,12 @@ layout: layout.njk
 
 Returns a set of useful suggestions and PSA/MTProxy sponsored peers, see [here »](/api/config/#suggestions) for more info.
 
-```
-help.promoDataEmpty#98f6ac75 expires:int = help.PromoData;
-help.promoData#8a4d87a flags:# proxy:flags.0?true expires:int peer:flags.3?Peer psa_type:flags.1?string psa_message:flags.2?string pending_suggestions:Vector<string> dismissed_suggestions:Vector<string> custom_pending_suggestion:flags.4?PendingSuggestion chats:Vector<Chat> users:Vector<User> = help.PromoData;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/help.promoDataEmpty/">help.promoDataEmpty</a>#98f6ac75 expires:<a href="/type/int/">int</a> = <a href="/type/help.PromoData/">help.PromoData</a>;
+<a href="/constructor/help.promoData/">help.promoData</a>#8a4d87a flags:<a href="/type/%23/">#</a> proxy:flags.0?true expires:<a href="/type/int/">int</a> peer:flags.3?<a href="/type/Peer/">Peer</a> psa_type:flags.1?<a href="/type/string/">string</a> psa_message:flags.2?<a href="/type/string/">string</a> pending_suggestions:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/string/">string</a>&gt; dismissed_suggestions:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/string/">string</a>&gt; custom_pending_suggestion:flags.4?<a href="/type/PendingSuggestion/">PendingSuggestion</a> chats:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/Chat/">Chat</a>&gt; users:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/User/">User</a>&gt; = <a href="/type/help.PromoData/">help.PromoData</a>;
 ---functions---
-help.getPromoData#c0977421 = help.PromoData;
-```
+<a href="/method/help.getPromoData/" class="current_page_link">help.getPromoData</a>#c0977421 = <a href="/type/help.PromoData/">help.PromoData</a>;</code></pre>
 
 ### Parameters
 

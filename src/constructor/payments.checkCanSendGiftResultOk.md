@@ -11,9 +11,9 @@ layout: layout.njk
 
 The specified gift can be sent.
 
-```
-payments.checkCanSendGiftResultOk#374fa7ad = payments.CheckCanSendGiftResult;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/payments.checkCanSendGiftResultOk/" class="current_page_link">payments.checkCanSendGiftResultOk</a>#374fa7ad = <a href="/type/payments.CheckCanSendGiftResult/">payments.CheckCanSendGiftResult</a>;</code></pre>
 
 ### Parameters
 

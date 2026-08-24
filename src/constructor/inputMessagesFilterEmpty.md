@@ -11,9 +11,9 @@ layout: layout.njk
 
 Filter is absent.
 
-```
-inputMessagesFilterEmpty#57e2f66c = MessagesFilter;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputMessagesFilterEmpty/" class="current_page_link">inputMessagesFilterEmpty</a>#57e2f66c = <a href="/type/MessagesFilter/">MessagesFilter</a>;</code></pre>
 
 ### Parameters
 

@@ -11,13 +11,13 @@ layout: layout.njk
 
 A story found using [global story search »](/api/stories/#searching-stories).
 
-```
-foundStory#e87acbc0 peer:Peer story:StoryItem = FoundStory;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/foundStory/">foundStory</a>#e87acbc0 peer:<a href="/type/Peer/">Peer</a> story:<a href="/type/StoryItem/">StoryItem</a> = <a href="/type/FoundStory/" class="current_page_link">FoundStory</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/foundStory">foundStory</a></td><td>A story found using <a href="/api/stories#searching-stories">global story search »</a>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/foundStory/">foundStory</a></td><td>A story found using <a href="/api/stories/#searching-stories">global story search »</a>.</td></tr></tbody></table>
 
 ### Related pages
 

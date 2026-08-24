@@ -12,13 +12,13 @@ layout: layout.njk
 Users may also choose to display messages from all topics as if they were sent to a normal group, using a "View as messages" setting in the local client.  
 This setting only affects the current account, and is synced to other logged in sessions using the [channels.toggleViewForumAsMessages](/method/channels.toggleViewForumAsMessages/) method; invoking this method will update the value of the `view_forum_as_messages` flag of [channelFull](/constructor/channelFull/) or [dialog](/constructor/dialog/) and emit an [updateChannelViewForumAsMessages](/constructor/updateChannelViewForumAsMessages/).
 
-```
-updateChannelViewForumAsMessages#7b68920 channel_id:long enabled:Bool = Update;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/updateChannelViewForumAsMessages/" class="current_page_link">updateChannelViewForumAsMessages</a>#7b68920 channel_id:<a href="/type/long/">long</a> enabled:<a href="/type/Bool/">Bool</a> = <a href="/type/Update/">Update</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>channel_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>The forum ID</td></tr><tr><td><strong>enabled</strong></td><td style="text-align: center;"><a href="/type/Bool">Bool</a></td><td>The new value of the toggle.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>channel_id</strong></td><td style="text-align: center;"><a href="/type/long/">long</a></td><td>The forum ID</td></tr><tr><td><strong>enabled</strong></td><td style="text-align: center;"><a href="/type/Bool/">Bool</a></td><td>The new value of the toggle.</td></tr></tbody></table>
 
 ### Type
 

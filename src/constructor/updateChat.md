@@ -15,13 +15,13 @@ This update can only be received through getDifference or in [updates](/construc
 
 However, full peer information will not come bundled in updates, so the full peer cache ([chatFull](/constructor/chatFull/)) must be invalidated for `chat_id` when receiving this update.
 
-```
-updateChat#f89a6a4e chat_id:long = Update;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/updateChat/" class="current_page_link">updateChat</a>#f89a6a4e chat_id:<a href="/type/long/">long</a> = <a href="/type/Update/">Update</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>chat_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Chat ID</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>chat_id</strong></td><td style="text-align: center;"><a href="/type/long/">long</a></td><td>Chat ID</td></tr></tbody></table>
 
 ### Type
 

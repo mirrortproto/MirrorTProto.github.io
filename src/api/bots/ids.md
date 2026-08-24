@@ -3,7 +3,7 @@ title: "Bot API dialog IDs"
 original: "https://core.telegram.org/api/bots/ids"
 section: api
 description: "The id field of peers » (i.e. users, chats, channels, secret chats) contains four distinct sequences of unique 64-bit IDs used to identify a specific user, chat, channel or secret…"
-crumbs: [{"title":"API","url":"/api/"},{"title":"Bot API dialog IDs","url":"https://core.telegram.org/api/bots%2Fids"}]
+crumbs: [{"title":"API","url":"/api/"},{"title":"Bot API dialog IDs","url":"/api/bots/ids/"}]
 layout: layout.njk
 ---
 

@@ -11,14 +11,14 @@ layout: layout.njk
 
 Invoke with the given message range
 
-```
----functions---
-invokeWithMessagesRange#365275f2 {X:Type} range:MessageRange query:!X = X;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code>---functions---
+<a href="/method/invokeWithMessagesRange/" class="current_page_link">invokeWithMessagesRange</a>#365275f2 {X:Type} range:<a href="/type/MessageRange/">MessageRange</a> query:!X = X;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>range</strong></td><td style="text-align: center;"><a href="/type/MessageRange">MessageRange</a></td><td>Message range</td></tr><tr><td><strong>query</strong></td><td style="text-align: center;">!X</td><td>Query</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>range</strong></td><td style="text-align: center;"><a href="/type/MessageRange/">MessageRange</a></td><td>Message range</td></tr><tr><td><strong>query</strong></td><td style="text-align: center;">!X</td><td>Query</td></tr></tbody></table>
 
 ### Result
 

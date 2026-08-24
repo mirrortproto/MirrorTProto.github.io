@@ -13,14 +13,14 @@ Invoke a method using a [Telegram Business Bot connection, see here » for more 
 
 Make sure to always send queries wrapped in a `invokeWithBusinessConnection` to the datacenter ID, specified in the `dc_id` field of the [botBusinessConnection](/constructor/botBusinessConnection/) that is being used.
 
-```
----functions---
-invokeWithBusinessConnection#dd289f8e {X:Type} connection_id:string query:!X = X;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code>---functions---
+<a href="/method/invokeWithBusinessConnection/" class="current_page_link">invokeWithBusinessConnection</a>#dd289f8e {X:Type} connection_id:<a href="/type/string/">string</a> query:!X = X;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>connection_id</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Business connection ID.</td></tr><tr><td><strong>query</strong></td><td style="text-align: center;">!X</td><td>The actual query.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>connection_id</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td>Business connection ID.</td></tr><tr><td><strong>query</strong></td><td style="text-align: center;">!X</td><td>The actual query.</td></tr></tbody></table>
 
 ### Result
 

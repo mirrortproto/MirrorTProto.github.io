@@ -11,16 +11,16 @@ layout: layout.njk
 
 Send [phone call](/api/calls/#call-debug) debug data to server.
 
-```
-boolFalse#bc799737 = Bool;
-boolTrue#997275b5 = Bool;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/boolFalse/">boolFalse</a>#bc799737 = <a href="/type/Bool/">Bool</a>;
+<a href="/constructor/boolTrue/">boolTrue</a>#997275b5 = <a href="/type/Bool/">Bool</a>;
 ---functions---
-phone.saveCallDebug#277add7e peer:InputPhoneCall debug:DataJSON = Bool;
-```
+<a href="/method/phone.saveCallDebug/" class="current_page_link">phone.saveCallDebug</a>#277add7e peer:<a href="/type/InputPhoneCall/">InputPhoneCall</a> debug:<a href="/type/DataJSON/">DataJSON</a> = <a href="/type/Bool/">Bool</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPhoneCall">InputPhoneCall</a></td><td>Phone call</td></tr><tr><td><strong>debug</strong></td><td style="text-align: center;"><a href="/type/DataJSON">DataJSON</a></td><td>Debug statistics obtained from tgcalls</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPhoneCall/">InputPhoneCall</a></td><td>Phone call</td></tr><tr><td><strong>debug</strong></td><td style="text-align: center;"><a href="/type/DataJSON/">DataJSON</a></td><td>Debug statistics obtained from tgcalls</td></tr></tbody></table>
 
 ### Result
 

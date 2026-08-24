@@ -11,13 +11,13 @@ layout: layout.njk
 
 Used to [pay to transfer a collectible gift to another peer](/api/gifts/#transferring-collectible-gifts), see the [gifts »](/api/gifts/#transferring-collectible-gifts) documentation for more info.
 
-```
-inputInvoiceStarGiftTransfer#4a5f5bd9 stargift:InputSavedStarGift to_id:InputPeer = InputInvoice;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputInvoiceStarGiftTransfer/" class="current_page_link">inputInvoiceStarGiftTransfer</a>#4a5f5bd9 stargift:<a href="/type/InputSavedStarGift/">InputSavedStarGift</a> to_id:<a href="/type/InputPeer/">InputPeer</a> = <a href="/type/InputInvoice/">InputInvoice</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>stargift</strong></td><td style="text-align: center;"><a href="/type/InputSavedStarGift">InputSavedStarGift</a></td><td>The identifier of the received gift</td></tr><tr><td><strong>to_id</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>The destination peer</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>stargift</strong></td><td style="text-align: center;"><a href="/type/InputSavedStarGift/">InputSavedStarGift</a></td><td>The identifier of the received gift</td></tr><tr><td><strong>to_id</strong></td><td style="text-align: center;"><a href="/type/InputPeer/">InputPeer</a></td><td>The destination peer</td></tr></tbody></table>
 
 ### Type
 

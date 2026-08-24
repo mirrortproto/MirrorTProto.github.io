@@ -11,16 +11,16 @@ layout: layout.njk
 
 Returns the list of user photos.
 
-```
-photos.photos#8dca6aa5 photos:Vector<Photo> users:Vector<User> = photos.Photos;
-photos.photosSlice#15051f54 count:int photos:Vector<Photo> users:Vector<User> = photos.Photos;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/photos.photos/">photos.photos</a>#8dca6aa5 photos:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/Photo/">Photo</a>&gt; users:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/User/">User</a>&gt; = <a href="/type/photos.Photos/">photos.Photos</a>;
+<a href="/constructor/photos.photosSlice/">photos.photosSlice</a>#15051f54 count:<a href="/type/int/">int</a> photos:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/Photo/">Photo</a>&gt; users:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/User/">User</a>&gt; = <a href="/type/photos.Photos/">photos.Photos</a>;
 ---functions---
-photos.getUserPhotos#91cd32a8 user_id:InputUser offset:int max_id:long limit:int = photos.Photos;
-```
+<a href="/method/photos.getUserPhotos/" class="current_page_link">photos.getUserPhotos</a>#91cd32a8 user_id:<a href="/type/InputUser/">InputUser</a> offset:<a href="/type/int/">int</a> max_id:<a href="/type/long/">long</a> limit:<a href="/type/int/">int</a> = <a href="/type/photos.Photos/">photos.Photos</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/InputUser">InputUser</a></td><td>User ID</td></tr><tr><td><strong>offset</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Number of list elements to be skipped</td></tr><tr><td><strong>max_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>If a positive value was transferred, the method will return only photos with IDs less than the set one. This parameter is often useful when <a href="/api/file-references">refetching file references »</a>, as in conjuction with <code>limit=1</code> and <code>offset=-1</code> the <a href="/constructor/photo">photo</a> object with the <code>id</code> specified in <code>max_id</code> can be fetched.</td></tr><tr><td><strong>limit</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Number of list elements to be returned</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/InputUser/">InputUser</a></td><td>User ID</td></tr><tr><td><strong>offset</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>Number of list elements to be skipped</td></tr><tr><td><strong>max_id</strong></td><td style="text-align: center;"><a href="/type/long/">long</a></td><td>If a positive value was transferred, the method will return only photos with IDs less than the set one. This parameter is often useful when <a href="/api/file-references/">refetching file references »</a>, as in conjuction with <code>limit=1</code> and <code>offset=-1</code> the <a href="/constructor/photo/">photo</a> object with the <code>id</code> specified in <code>max_id</code> can be fetched.</td></tr><tr><td><strong>limit</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>Number of list elements to be returned</td></tr></tbody></table>
 
 ### Result
 

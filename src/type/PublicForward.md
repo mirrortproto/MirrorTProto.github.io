@@ -11,14 +11,14 @@ layout: layout.njk
 
 Contains info about the forwards of a [story](/api/stories/) as a message to public chats and reposts by public channels.
 
-```
-publicForwardMessage#1f2bf4a message:Message = PublicForward;
-publicForwardStory#edf3add0 peer:Peer story:StoryItem = PublicForward;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/publicForwardMessage/">publicForwardMessage</a>#1f2bf4a message:<a href="/type/Message/">Message</a> = <a href="/type/PublicForward/" class="current_page_link">PublicForward</a>;
+<a href="/constructor/publicForwardStory/">publicForwardStory</a>#edf3add0 peer:<a href="/type/Peer/">Peer</a> story:<a href="/type/StoryItem/">StoryItem</a> = <a href="/type/PublicForward/" class="current_page_link">PublicForward</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/publicForwardMessage">publicForwardMessage</a></td><td>Contains info about a forward of a <a href="/api/stories">story</a> as a message.</td></tr><tr><td><a href="/constructor/publicForwardStory">publicForwardStory</a></td><td>Contains info about a forward of a <a href="/api/stories">story</a> as a repost by a public channel.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/publicForwardMessage/">publicForwardMessage</a></td><td>Contains info about a forward of a <a href="/api/stories/">story</a> as a message.</td></tr><tr><td><a href="/constructor/publicForwardStory/">publicForwardStory</a></td><td>Contains info about a forward of a <a href="/api/stories/">story</a> as a repost by a public channel.</td></tr></tbody></table>
 
 ### Related pages
 

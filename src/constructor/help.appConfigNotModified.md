@@ -11,9 +11,9 @@ layout: layout.njk
 
 The client configuration parameters haven't changed
 
-```
-help.appConfigNotModified#7cde641d = help.AppConfig;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/help.appConfigNotModified/" class="current_page_link">help.appConfigNotModified</a>#7cde641d = <a href="/type/help.AppConfig/">help.AppConfig</a>;</code></pre>
 
 ### Parameters
 

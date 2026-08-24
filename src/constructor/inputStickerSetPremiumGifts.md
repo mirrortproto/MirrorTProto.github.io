@@ -11,9 +11,9 @@ layout: layout.njk
 
 Stickers to show when receiving a gifted Telegram Premium subscription
 
-```
-inputStickerSetPremiumGifts#c88b3b02 = InputStickerSet;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputStickerSetPremiumGifts/" class="current_page_link">inputStickerSetPremiumGifts</a>#c88b3b02 = <a href="/type/InputStickerSet/">InputStickerSet</a>;</code></pre>
 
 ### Parameters
 

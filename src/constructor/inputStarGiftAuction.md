@@ -11,13 +11,13 @@ layout: layout.njk
 
 Used to fetch [auctions](/api/auctions/) using the ID of the linked [collectible gift](/api/gifts/#collectible-gifts).
 
-```
-inputStarGiftAuction#2e16c98 gift_id:long = InputStarGiftAuction;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputStarGiftAuction/" class="current_page_link">inputStarGiftAuction</a>#2e16c98 gift_id:<a href="/type/long/">long</a> = <a href="/type/InputStarGiftAuction/">InputStarGiftAuction</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>gift_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td><a href="/api/gifts#collectible-gifts">Collectible gift ID</a></td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>gift_id</strong></td><td style="text-align: center;"><a href="/type/long/">long</a></td><td><a href="/api/gifts/#collectible-gifts">Collectible gift ID</a></td></tr></tbody></table>
 
 ### Type
 

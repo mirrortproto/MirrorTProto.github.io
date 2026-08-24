@@ -11,9 +11,9 @@ layout: layout.njk
 
 Uses the default reaction privacy, set using [messages.togglePaidReactionPrivacy](/method/messages.togglePaidReactionPrivacy/).
 
-```
-paidReactionPrivacyDefault#206ad49e = PaidReactionPrivacy;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/paidReactionPrivacyDefault/" class="current_page_link">paidReactionPrivacyDefault</a>#206ad49e = <a href="/type/PaidReactionPrivacy/">PaidReactionPrivacy</a>;</code></pre>
 
 ### Parameters
 

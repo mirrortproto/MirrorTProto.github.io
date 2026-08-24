@@ -11,17 +11,17 @@ layout: layout.njk
 
 Gets the menu button action for a given user or for all users, previously set using [bots.setBotMenuButton](/method/bots.setBotMenuButton/); users can see this information in the [botInfo](/constructor/botInfo/) constructor.
 
-```
-botMenuButtonDefault#7533a588 = BotMenuButton;
-botMenuButtonCommands#4258c205 = BotMenuButton;
-botMenuButton#c7b57ce6 text:string url:string = BotMenuButton;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/botMenuButtonDefault/">botMenuButtonDefault</a>#7533a588 = <a href="/type/BotMenuButton/">BotMenuButton</a>;
+<a href="/constructor/botMenuButtonCommands/">botMenuButtonCommands</a>#4258c205 = <a href="/type/BotMenuButton/">BotMenuButton</a>;
+<a href="/constructor/botMenuButton/">botMenuButton</a>#c7b57ce6 text:<a href="/type/string/">string</a> url:<a href="/type/string/">string</a> = <a href="/type/BotMenuButton/">BotMenuButton</a>;
 ---functions---
-bots.getBotMenuButton#9c60eb28 user_id:InputUser = BotMenuButton;
-```
+<a href="/method/bots.getBotMenuButton/" class="current_page_link">bots.getBotMenuButton</a>#9c60eb28 user_id:<a href="/type/InputUser/">InputUser</a> = <a href="/type/BotMenuButton/">BotMenuButton</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/InputUser">InputUser</a></td><td>User ID or empty for the default menu button.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/InputUser/">InputUser</a></td><td>User ID or empty for the default menu button.</td></tr></tbody></table>
 
 ### Result
 

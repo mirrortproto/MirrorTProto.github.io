@@ -11,22 +11,22 @@ layout: layout.njk
 
 List of [reaction tag »](/api/saved-messages/#tags) names assigned by the user.
 
-```
-messages.savedReactionTagsNotModified#889b59ef = messages.SavedReactionTags;
-messages.savedReactionTags#3259950a tags:Vector<SavedReactionTag> hash:long = messages.SavedReactionTags;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/messages.savedReactionTagsNotModified/">messages.savedReactionTagsNotModified</a>#889b59ef = <a href="/type/messages.SavedReactionTags/" class="current_page_link">messages.SavedReactionTags</a>;
+<a href="/constructor/messages.savedReactionTags/">messages.savedReactionTags</a>#3259950a tags:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/SavedReactionTag/">SavedReactionTag</a>&gt; hash:<a href="/type/long/">long</a> = <a href="/type/messages.SavedReactionTags/" class="current_page_link">messages.SavedReactionTags</a>;
 
 ---functions---
 
-messages.getSavedReactionTags#3637e05b flags:# peer:flags.0?InputPeer hash:long = messages.SavedReactionTags;
-```
+<a href="/method/messages.getSavedReactionTags/">messages.getSavedReactionTags</a>#3637e05b flags:<a href="/type/%23/">#</a> peer:flags.0?<a href="/type/InputPeer/">InputPeer</a> hash:<a href="/type/long/">long</a> = <a href="/type/messages.SavedReactionTags/" class="current_page_link">messages.SavedReactionTags</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/messages.savedReactionTagsNotModified">messages.savedReactionTagsNotModified</a></td><td>The list of <a href="/api/saved-messages#tags">reaction tag »</a> names assigned by the user hasn't changed.</td></tr><tr><td><a href="/constructor/messages.savedReactionTags">messages.savedReactionTags</a></td><td>List of <a href="/api/saved-messages#tags">reaction tag »</a> names assigned by the user.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/messages.savedReactionTagsNotModified/">messages.savedReactionTagsNotModified</a></td><td>The list of <a href="/api/saved-messages/#tags">reaction tag »</a> names assigned by the user hasn't changed.</td></tr><tr><td><a href="/constructor/messages.savedReactionTags/">messages.savedReactionTags</a></td><td>List of <a href="/api/saved-messages/#tags">reaction tag »</a> names assigned by the user.</td></tr></tbody></table>
 
 ### Methods
 
-<table class="table"><thead><tr><th scope="col">Method</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/method/messages.getSavedReactionTags">messages.getSavedReactionTags</a></td><td>Fetch the full list of <a href="/api/saved-messages#tags">saved message tags</a> created by the user.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Method</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/method/messages.getSavedReactionTags/">messages.getSavedReactionTags</a></td><td>Fetch the full list of <a href="/api/saved-messages/#tags">saved message tags</a> created by the user.</td></tr></tbody></table>
 
 ### Related pages
 

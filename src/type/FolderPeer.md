@@ -11,10 +11,10 @@ layout: layout.njk
 
 Peer associated to folder
 
-```
-folderPeer#e9baa668 peer:Peer folder_id:int = FolderPeer;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/folderPeer/">folderPeer</a>#e9baa668 peer:<a href="/type/Peer/">Peer</a> folder_id:<a href="/type/int/">int</a> = <a href="/type/FolderPeer/" class="current_page_link">FolderPeer</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/folderPeer">folderPeer</a></td><td>Peer in a folder</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/folderPeer/">folderPeer</a></td><td>Peer in a folder</td></tr></tbody></table>

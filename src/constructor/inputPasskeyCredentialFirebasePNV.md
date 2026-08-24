@@ -11,13 +11,13 @@ layout: layout.njk
 
 Alternative [passkey](/api/passkeys/) credential that proves ownership of the account's phone number through a Firebase Phone Number Verification (PNV) token, used on official apps where a full WebAuthn [public-key passkey](/constructor/inputPasskeyCredentialPublicKey/) cannot be created, in a way similar to [Firebase SMS authentication »](/api/auth/).
 
-```
-inputPasskeyCredentialFirebasePNV#5b1ccb28 pnv_token:string = InputPasskeyCredential;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputPasskeyCredentialFirebasePNV/" class="current_page_link">inputPasskeyCredentialFirebasePNV</a>#5b1ccb28 pnv_token:<a href="/type/string/">string</a> = <a href="/type/InputPasskeyCredential/">InputPasskeyCredential</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>pnv_token</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Firebase Phone Number Verification token attesting that the user controls the phone number associated with the account.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>pnv_token</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td>Firebase Phone Number Verification token attesting that the user controls the phone number associated with the account.</td></tr></tbody></table>
 
 ### Type
 

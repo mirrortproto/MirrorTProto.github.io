@@ -11,15 +11,15 @@ layout: layout.njk
 
 Obtains a list of peers that can be displayed as the sender in a specific context. With `for_live_stories`, returns peers that may author [live story in-call messages »](/api/group-calls/#in-call-messages).
 
-```
-channels.sendAsPeers#f496b0c6 peers:Vector<SendAsPeer> chats:Vector<Chat> users:Vector<User> = channels.SendAsPeers;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/channels.sendAsPeers/">channels.sendAsPeers</a>#f496b0c6 peers:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/SendAsPeer/">SendAsPeer</a>&gt; chats:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/Chat/">Chat</a>&gt; users:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/User/">User</a>&gt; = <a href="/type/channels.SendAsPeers/">channels.SendAsPeers</a>;
 ---functions---
-channels.getSendAs#e785a43f flags:# for_paid_reactions:flags.0?true for_live_stories:flags.1?true peer:InputPeer = channels.SendAsPeers;
-```
+<a href="/method/channels.getSendAs/" class="current_page_link">channels.getSendAs</a>#e785a43f flags:<a href="/type/%23/">#</a> for_paid_reactions:flags.0?true for_live_stories:flags.1?true peer:<a href="/type/InputPeer/">InputPeer</a> = <a href="/type/channels.SendAsPeers/">channels.SendAsPeers</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>Flags, see <a href="/mtproto/TL-combinators#conditional-fields">TL conditional fields</a></td></tr><tr><td><strong>for_paid_reactions</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>If set, fetches the list of peers that can be used to send <a href="/api/reactions#paid-reactions">paid reactions</a> to messages of a specific peer.</td></tr><tr><td><strong>for_live_stories</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Fetch the peers that may be passed to <a href="/method/phone.sendGroupCallMessage">phone.sendGroupCallMessage</a>.<code>send_as</code> to comment or react in a <a href="/api/group-calls#in-call-messages">live story »</a>.</td></tr><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>The target peer; when <code>for_live_stories</code> is set, the peer that owns the live story.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23/">#</a></td><td>Flags, see <a href="/mtproto/TL-combinators/#conditional-fields">TL conditional fields</a></td></tr><tr><td><strong>for_paid_reactions</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators/#conditional-fields">flags</a>.0?<a href="/constructor/true/">true</a></td><td>If set, fetches the list of peers that can be used to send <a href="/api/reactions/#paid-reactions">paid reactions</a> to messages of a specific peer.</td></tr><tr><td><strong>for_live_stories</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators/#conditional-fields">flags</a>.1?<a href="/constructor/true/">true</a></td><td>Fetch the peers that may be passed to <a href="/method/phone.sendGroupCallMessage/">phone.sendGroupCallMessage</a>.<code>send_as</code> to comment or react in a <a href="/api/group-calls/#in-call-messages">live story »</a>.</td></tr><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer/">InputPeer</a></td><td>The target peer; when <code>for_live_stories</code> is set, the peer that owns the live story.</td></tr></tbody></table>
 
 ### Result
 

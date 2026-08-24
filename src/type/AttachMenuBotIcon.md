@@ -11,13 +11,13 @@ layout: layout.njk
 
 Represents an attachment menu icon for [bot mini apps »](https://core.telegram.org/bots/webapps#launching-mini-apps-from-the-attachment-menu)
 
-```
-attachMenuBotIcon#b2a7386b flags:# name:string icon:Document colors:flags.0?Vector<AttachMenuBotIconColor> = AttachMenuBotIcon;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/attachMenuBotIcon/">attachMenuBotIcon</a>#b2a7386b flags:<a href="/type/%23/">#</a> name:<a href="/type/string/">string</a> icon:<a href="/type/Document/">Document</a> colors:flags.0?<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/AttachMenuBotIconColor/">AttachMenuBotIconColor</a>&gt; = <a href="/type/AttachMenuBotIcon/" class="current_page_link">AttachMenuBotIcon</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/attachMenuBotIcon">attachMenuBotIcon</a></td><td>Represents an attachment menu icon for <a href="/api/bots/attach">bot mini apps »</a></td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/attachMenuBotIcon/">attachMenuBotIcon</a></td><td>Represents an attachment menu icon for <a href="/api/bots/attach/">bot mini apps »</a></td></tr></tbody></table>
 
 ### Related pages
 

@@ -11,11 +11,11 @@ layout: layout.njk
 
 Returns info on data center nearest to the user.
 
-```
-nearestDc#8e1a1775 country:string this_dc:int nearest_dc:int = NearestDc;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/nearestDc/">nearestDc</a>#8e1a1775 country:<a href="/type/string/">string</a> this_dc:<a href="/type/int/">int</a> nearest_dc:<a href="/type/int/">int</a> = <a href="/type/NearestDc/">NearestDc</a>;
 ---functions---
-help.getNearestDc#1fb33026 = NearestDc;
-```
+<a href="/method/help.getNearestDc/" class="current_page_link">help.getNearestDc</a>#1fb33026 = <a href="/type/NearestDc/">NearestDc</a>;</code></pre>
 
 ### Parameters
 

@@ -11,9 +11,9 @@ layout: layout.njk
 
 Report for divulgation of personal details
 
-```
-inputReportReasonPersonalDetails#9ec7863d = ReportReason;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputReportReasonPersonalDetails/" class="current_page_link">inputReportReasonPersonalDetails</a>#9ec7863d = <a href="/type/ReportReason/">ReportReason</a>;</code></pre>
 
 ### Parameters
 

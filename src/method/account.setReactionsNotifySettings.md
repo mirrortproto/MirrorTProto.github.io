@@ -11,15 +11,15 @@ layout: layout.njk
 
 Change the [reaction notification settings »](/api/reactions/#notifications-about-reactions).
 
-```
-reactionsNotifySettings#56e34970 flags:# messages_notify_from:flags.0?ReactionNotificationsFrom stories_notify_from:flags.1?ReactionNotificationsFrom sound:NotificationSound show_previews:Bool = ReactionsNotifySettings;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/reactionsNotifySettings/">reactionsNotifySettings</a>#56e34970 flags:<a href="/type/%23/">#</a> messages_notify_from:flags.0?<a href="/type/ReactionNotificationsFrom/">ReactionNotificationsFrom</a> stories_notify_from:flags.1?<a href="/type/ReactionNotificationsFrom/">ReactionNotificationsFrom</a> sound:<a href="/type/NotificationSound/">NotificationSound</a> show_previews:<a href="/type/Bool/">Bool</a> = <a href="/type/ReactionsNotifySettings/">ReactionsNotifySettings</a>;
 ---functions---
-account.setReactionsNotifySettings#316ce548 settings:ReactionsNotifySettings = ReactionsNotifySettings;
-```
+<a href="/method/account.setReactionsNotifySettings/" class="current_page_link">account.setReactionsNotifySettings</a>#316ce548 settings:<a href="/type/ReactionsNotifySettings/">ReactionsNotifySettings</a> = <a href="/type/ReactionsNotifySettings/">ReactionsNotifySettings</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>settings</strong></td><td style="text-align: center;"><a href="/type/ReactionsNotifySettings">ReactionsNotifySettings</a></td><td>New reaction notification settings.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>settings</strong></td><td style="text-align: center;"><a href="/type/ReactionsNotifySettings/">ReactionsNotifySettings</a></td><td>New reaction notification settings.</td></tr></tbody></table>
 
 ### Result
 

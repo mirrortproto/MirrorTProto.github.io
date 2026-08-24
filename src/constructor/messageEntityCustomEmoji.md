@@ -21,13 +21,13 @@ messageEntityCustomEmoji#c8cf05f8 offset:int length:int document_id:long = Messa
 
 #### API schema
 
-```
-messageEntityCustomEmoji#c8cf05f8 offset:int length:int document_id:long = MessageEntity;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/messageEntityCustomEmoji/" class="current_page_link">messageEntityCustomEmoji</a>#c8cf05f8 offset:<a href="/type/int/">int</a> length:<a href="/type/int/">int</a> document_id:<a href="/type/long/">long</a> = <a href="/type/MessageEntity/">MessageEntity</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>offset</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Offset of message entity within message (in <a href="/api/entities#entity-length">UTF-16 code units</a>)</td></tr><tr><td><strong>length</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Length of message entity within message (in <a href="/api/entities#entity-length">UTF-16 code units</a>)</td></tr><tr><td><strong>document_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Document ID of the <a href="/api/custom-emoji">custom emoji</a>, use <a href="/method/messages.getCustomEmojiDocuments">messages.getCustomEmojiDocuments</a> to fetch the emoji animation and the actual emoji it represents.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>offset</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>Offset of message entity within message (in <a href="/api/entities/#entity-length">UTF-16 code units</a>)</td></tr><tr><td><strong>length</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>Length of message entity within message (in <a href="/api/entities/#entity-length">UTF-16 code units</a>)</td></tr><tr><td><strong>document_id</strong></td><td style="text-align: center;"><a href="/type/long/">long</a></td><td>Document ID of the <a href="/api/custom-emoji/">custom emoji</a>, use <a href="/method/messages.getCustomEmojiDocuments/">messages.getCustomEmojiDocuments</a> to fetch the emoji animation and the actual emoji it represents.</td></tr></tbody></table>
 
 ### Type
 

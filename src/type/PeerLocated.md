@@ -10,11 +10,11 @@ layout: layout.njk
 
 Geolocated peer
 
-```
-peerLocated#ca461b5d peer:Peer expires:int distance:int = PeerLocated;
-peerSelfLocated#f8ec284b expires:int = PeerLocated;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/peerLocated/">peerLocated</a>#ca461b5d peer:<a href="/type/Peer/">Peer</a> expires:<a href="/type/int/">int</a> distance:<a href="/type/int/">int</a> = <a href="/type/PeerLocated/" class="current_page_link">PeerLocated</a>;
+<a href="/constructor/peerSelfLocated/">peerSelfLocated</a>#f8ec284b expires:<a href="/type/int/">int</a> = <a href="/type/PeerLocated/" class="current_page_link">PeerLocated</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/peerLocated">peerLocated</a></td><td>Peer geolocated nearby</td></tr><tr><td><a href="/constructor/peerSelfLocated">peerSelfLocated</a></td><td>Current peer</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/peerLocated/">peerLocated</a></td><td>Peer geolocated nearby</td></tr><tr><td><a href="/constructor/peerSelfLocated/">peerSelfLocated</a></td><td>Current peer</td></tr></tbody></table>

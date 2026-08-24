@@ -11,9 +11,9 @@ layout: layout.njk
 
 Fetch only admin participants
 
-```
-channelParticipantsAdmins#b4608969 = ChannelParticipantsFilter;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/channelParticipantsAdmins/" class="current_page_link">channelParticipantsAdmins</a>#b4608969 = <a href="/type/ChannelParticipantsFilter/">ChannelParticipantsFilter</a>;</code></pre>
 
 ### Parameters
 

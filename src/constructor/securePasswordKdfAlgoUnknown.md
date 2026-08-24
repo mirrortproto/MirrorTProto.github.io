@@ -11,9 +11,9 @@ layout: layout.njk
 
 Unknown KDF algo (most likely the client has to be updated)
 
-```
-securePasswordKdfAlgoUnknown#4a8537 = SecurePasswordKdfAlgo;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/securePasswordKdfAlgoUnknown/" class="current_page_link">securePasswordKdfAlgoUnknown</a>#4a8537 = <a href="/type/SecurePasswordKdfAlgo/">SecurePasswordKdfAlgo</a>;</code></pre>
 
 ### Parameters
 

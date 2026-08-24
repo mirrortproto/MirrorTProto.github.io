@@ -11,9 +11,9 @@ layout: layout.njk
 
 Internal use
 
-```
-help.userInfoEmpty#f3ae2eed = help.UserInfo;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/help.userInfoEmpty/" class="current_page_link">help.userInfoEmpty</a>#f3ae2eed = <a href="/type/help.UserInfo/">help.UserInfo</a>;</code></pre>
 
 ### Parameters
 

@@ -10,10 +10,10 @@ layout: layout.njk
 
 Represents a folder
 
-```
-inputChatlistDialogFilter#f3e0da33 filter_id:int = InputChatlist;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputChatlistDialogFilter/">inputChatlistDialogFilter</a>#f3e0da33 filter_id:<a href="/type/int/">int</a> = <a href="/type/InputChatlist/" class="current_page_link">InputChatlist</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/inputChatlistDialogFilter">inputChatlistDialogFilter</a></td><td>Folder ID</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/inputChatlistDialogFilter/">inputChatlistDialogFilter</a></td><td>Folder ID</td></tr></tbody></table>

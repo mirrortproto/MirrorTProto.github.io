@@ -11,15 +11,15 @@ layout: layout.njk
 
 Obtain information about a [direct link Mini App](/api/bots/webapps/#direct-link-mini-apps)
 
-```
-messages.botApp#eb50adf5 flags:# inactive:flags.0?true request_write_access:flags.1?true has_settings:flags.2?true app:BotApp = messages.BotApp;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/messages.botApp/">messages.botApp</a>#eb50adf5 flags:<a href="/type/%23/">#</a> inactive:flags.0?true request_write_access:flags.1?true has_settings:flags.2?true app:<a href="/type/BotApp/">BotApp</a> = <a href="/type/messages.BotApp/">messages.BotApp</a>;
 ---functions---
-messages.getBotApp#34fdc5c3 app:InputBotApp hash:long = messages.BotApp;
-```
+<a href="/method/messages.getBotApp/" class="current_page_link">messages.getBotApp</a>#34fdc5c3 app:<a href="/type/InputBotApp/">InputBotApp</a> hash:<a href="/type/long/">long</a> = <a href="/type/messages.BotApp/">messages.BotApp</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>app</strong></td><td style="text-align: center;"><a href="/type/InputBotApp">InputBotApp</a></td><td>Bot app information obtained from a <a href="/api/links#direct-mini-app-links">Direct Mini App deep link »</a>.</td></tr><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td><a href="/api/offsets#hash-generation">Hash used for caching, for more info click here</a></td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>app</strong></td><td style="text-align: center;"><a href="/type/InputBotApp/">InputBotApp</a></td><td>Bot app information obtained from a <a href="/api/links/#direct-mini-app-links">Direct Mini App deep link »</a>.</td></tr><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/long/">long</a></td><td><a href="/api/offsets/#hash-generation">Hash used for caching, for more info click here</a></td></tr></tbody></table>
 
 ### Result
 

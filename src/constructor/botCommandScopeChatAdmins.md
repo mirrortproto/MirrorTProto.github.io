@@ -11,9 +11,9 @@ layout: layout.njk
 
 The specified bot commands will be valid only for chat administrators, in all [groups and supergroups](/api/channel/).
 
-```
-botCommandScopeChatAdmins#b9aa606a = BotCommandScope;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/botCommandScopeChatAdmins/" class="current_page_link">botCommandScopeChatAdmins</a>#b9aa606a = <a href="/type/BotCommandScope/">BotCommandScope</a>;</code></pre>
 
 ### Parameters
 

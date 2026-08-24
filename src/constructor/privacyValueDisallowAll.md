@@ -11,9 +11,9 @@ layout: layout.njk
 
 Disallow all users
 
-```
-privacyValueDisallowAll#8b73e763 = PrivacyRule;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/privacyValueDisallowAll/" class="current_page_link">privacyValueDisallowAll</a>#8b73e763 = <a href="/type/PrivacyRule/">PrivacyRule</a>;</code></pre>
 
 ### Parameters
 

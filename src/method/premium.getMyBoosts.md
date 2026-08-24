@@ -11,11 +11,11 @@ layout: layout.njk
 
 Obtain which peers are we currently [boosting](/api/boost/), and how many [boost slots](/api/boost/) we have left.
 
-```
-premium.myBoosts#9ae228e2 my_boosts:Vector<MyBoost> chats:Vector<Chat> users:Vector<User> = premium.MyBoosts;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/premium.myBoosts/">premium.myBoosts</a>#9ae228e2 my_boosts:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/MyBoost/">MyBoost</a>&gt; chats:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/Chat/">Chat</a>&gt; users:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/User/">User</a>&gt; = <a href="/type/premium.MyBoosts/">premium.MyBoosts</a>;
 ---functions---
-premium.getMyBoosts#be77b4a = premium.MyBoosts;
-```
+<a href="/method/premium.getMyBoosts/" class="current_page_link">premium.getMyBoosts</a>#be77b4a = <a href="/type/premium.MyBoosts/">premium.MyBoosts</a>;</code></pre>
 
 ### Parameters
 

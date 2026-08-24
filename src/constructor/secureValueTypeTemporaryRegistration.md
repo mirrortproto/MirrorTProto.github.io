@@ -11,9 +11,9 @@ layout: layout.njk
 
 Temporary registration
 
-```
-secureValueTypeTemporaryRegistration#ea02ec33 = SecureValueType;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/secureValueTypeTemporaryRegistration/" class="current_page_link">secureValueTypeTemporaryRegistration</a>#ea02ec33 = <a href="/type/SecureValueType/">SecureValueType</a>;</code></pre>
 
 ### Parameters
 

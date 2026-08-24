@@ -251,6 +251,23 @@ article a:hover { color: var(--accent); }
 article code { background: var(--code-bg); padding: 1px 5px; border-radius: 4px; font-size: .92em; font-family: "SF Mono", Menlo, Consolas, monospace; }
 article pre { background: var(--code-bg); border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px; overflow-x: auto; }
 article pre code { background: none; padding: 0; }
+/* TL-schema listings — the one kind of code block on the original site whose
+   identifiers are links: every type, constructor and method points at its own
+   reference page. Links stay quiet until hovered so the block still reads as
+   code; `current_page_link` is the line describing the page you are already on
+   and the original renders it as plain text. */
+/* The layer the schema below belongs to — the label of the (unmirrorable)
+   layer selector the original floats above the same block. */
+.page_layer { margin: 16px 0 4px; text-align: right; font-size: 12.5px; color: var(--muted); }
+.page_scheme a { color: var(--accent-dark); text-decoration: none; }
+.page_scheme a:hover { color: var(--accent); text-decoration: underline; }
+.page_scheme .current_page_link,
+.page_scheme .current_page_link:hover { color: var(--fg); font-weight: 600; text-decoration: none; }
+/* Machine-readable JSON documents. One string value in config.json is 11 000
+   characters long, so the block wraps rather than growing a horizontal
+   scrollbar that wide; pre-wrap keeps every newline and all of the indentation,
+   only over-long lines are broken. */
+article pre code.language-json { white-space: pre-wrap; overflow-wrap: anywhere; }
 article table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 14.5px; }
 article th, article td { border: 1px solid var(--border); padding: 6px 10px; text-align: left; vertical-align: top; }
 article th { background: var(--code-bg); }
@@ -348,6 +365,7 @@ h1:hover .header-anchor, h2:hover .header-anchor, h3:hover .header-anchor, h4:ho
   article { overflow-wrap: normal; }
   article a { color: #000; text-decoration: underline; }
   article pre { background: #fff; border: 1px solid #999; page-break-inside: avoid; }
+  .page_scheme a, .page_scheme .current_page_link { color: #000; text-decoration: none; }
   article table { display: table; width: 100%; font-size: 11px; }
   article th { background: #eee; }
   h1, h2, h3 { page-break-after: avoid; }

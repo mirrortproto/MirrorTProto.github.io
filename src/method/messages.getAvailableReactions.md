@@ -11,16 +11,16 @@ layout: layout.njk
 
 Obtain available [message reactions »](/api/reactions/)
 
-```
-messages.availableReactionsNotModified#9f071957 = messages.AvailableReactions;
-messages.availableReactions#768e3aad hash:int reactions:Vector<AvailableReaction> = messages.AvailableReactions;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/messages.availableReactionsNotModified/">messages.availableReactionsNotModified</a>#9f071957 = <a href="/type/messages.AvailableReactions/">messages.AvailableReactions</a>;
+<a href="/constructor/messages.availableReactions/">messages.availableReactions</a>#768e3aad hash:<a href="/type/int/">int</a> reactions:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/AvailableReaction/">AvailableReaction</a>&gt; = <a href="/type/messages.AvailableReactions/">messages.AvailableReactions</a>;
 ---functions---
-messages.getAvailableReactions#18dea0ac hash:int = messages.AvailableReactions;
-```
+<a href="/method/messages.getAvailableReactions/" class="current_page_link">messages.getAvailableReactions</a>#18dea0ac hash:<a href="/type/int/">int</a> = <a href="/type/messages.AvailableReactions/">messages.AvailableReactions</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td><a href="/api/offsets#hash-generation">Hash used for caching, for more info click here</a>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td><a href="/api/offsets/#hash-generation">Hash used for caching, for more info click here</a>.</td></tr></tbody></table>
 
 ### Result
 

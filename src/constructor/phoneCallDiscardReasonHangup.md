@@ -11,9 +11,9 @@ layout: layout.njk
 
 The phone call was ended normally, see [here »](/api/calls/) for more info.
 
-```
-phoneCallDiscardReasonHangup#57adc690 = PhoneCallDiscardReason;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/phoneCallDiscardReasonHangup/" class="current_page_link">phoneCallDiscardReasonHangup</a>#57adc690 = <a href="/type/PhoneCallDiscardReason/">PhoneCallDiscardReason</a>;</code></pre>
 
 ### Parameters
 

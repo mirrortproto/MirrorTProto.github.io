@@ -11,9 +11,9 @@ layout: layout.njk
 
 Return only messages containing geolocations
 
-```
-inputMessagesFilterGeo#e7026d0d = MessagesFilter;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputMessagesFilterGeo/" class="current_page_link">inputMessagesFilterGeo</a>#e7026d0d = <a href="/type/MessagesFilter/">MessagesFilter</a>;</code></pre>
 
 ### Parameters
 

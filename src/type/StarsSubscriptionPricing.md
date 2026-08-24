@@ -11,13 +11,13 @@ layout: layout.njk
 
 Pricing of a [Telegram Star subscription »](/api/invites/#paid-invite-links).
 
-```
-starsSubscriptionPricing#5416d58 period:int amount:long = StarsSubscriptionPricing;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/starsSubscriptionPricing/">starsSubscriptionPricing</a>#5416d58 period:<a href="/type/int/">int</a> amount:<a href="/type/long/">long</a> = <a href="/type/StarsSubscriptionPricing/" class="current_page_link">StarsSubscriptionPricing</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/starsSubscriptionPricing">starsSubscriptionPricing</a></td><td>Pricing of a <a href="/api/invites#paid-invite-links">Telegram Star subscription »</a>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/starsSubscriptionPricing/">starsSubscriptionPricing</a></td><td>Pricing of a <a href="/api/invites/#paid-invite-links">Telegram Star subscription »</a>.</td></tr></tbody></table>
 
 ### Related pages
 

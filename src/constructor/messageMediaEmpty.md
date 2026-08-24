@@ -11,9 +11,9 @@ layout: layout.njk
 
 Empty constructor.
 
-```
-messageMediaEmpty#3ded6320 = MessageMedia;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/messageMediaEmpty/" class="current_page_link">messageMediaEmpty</a>#3ded6320 = <a href="/type/MessageMedia/">MessageMedia</a>;</code></pre>
 
 ### Parameters
 

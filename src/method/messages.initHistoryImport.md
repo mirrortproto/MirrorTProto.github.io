@@ -11,15 +11,15 @@ layout: layout.njk
 
 Import chat history from a foreign chat app into a specific Telegram chat, [click here for more info about imported chats »](/api/import/).
 
-```
-messages.historyImport#1662af0b id:long = messages.HistoryImport;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/messages.historyImport/">messages.historyImport</a>#1662af0b id:<a href="/type/long/">long</a> = <a href="/type/messages.HistoryImport/">messages.HistoryImport</a>;
 ---functions---
-messages.initHistoryImport#34090c3b peer:InputPeer file:InputFile media_count:int = messages.HistoryImport;
-```
+<a href="/method/messages.initHistoryImport/" class="current_page_link">messages.initHistoryImport</a>#34090c3b peer:<a href="/type/InputPeer/">InputPeer</a> file:<a href="/type/InputFile/">InputFile</a> media_count:<a href="/type/int/">int</a> = <a href="/type/messages.HistoryImport/">messages.HistoryImport</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>The Telegram chat where the <a href="/api/import">history should be imported</a>.</td></tr><tr><td><strong>file</strong></td><td style="text-align: center;"><a href="/type/InputFile">InputFile</a></td><td>File with messages to import.</td></tr><tr><td><strong>media_count</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Number of media files associated with the chat that will be uploaded using <a href="/method/messages.uploadImportedMedia">messages.uploadImportedMedia</a>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer/">InputPeer</a></td><td>The Telegram chat where the <a href="/api/import/">history should be imported</a>.</td></tr><tr><td><strong>file</strong></td><td style="text-align: center;"><a href="/type/InputFile/">InputFile</a></td><td>File with messages to import.</td></tr><tr><td><strong>media_count</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>Number of media files associated with the chat that will be uploaded using <a href="/method/messages.uploadImportedMedia/">messages.uploadImportedMedia</a>.</td></tr></tbody></table>
 
 ### Result
 

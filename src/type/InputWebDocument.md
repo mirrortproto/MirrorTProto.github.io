@@ -11,10 +11,10 @@ layout: layout.njk
 
 Specifies a document that will have to be downloaded from the URL by the telegram servers
 
-```
-inputWebDocument#9bed434d url:string size:int mime_type:string attributes:Vector<DocumentAttribute> = InputWebDocument;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputWebDocument/">inputWebDocument</a>#9bed434d url:<a href="/type/string/">string</a> size:<a href="/type/int/">int</a> mime_type:<a href="/type/string/">string</a> attributes:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/DocumentAttribute/">DocumentAttribute</a>&gt; = <a href="/type/InputWebDocument/" class="current_page_link">InputWebDocument</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/inputWebDocument">inputWebDocument</a></td><td>The document</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/inputWebDocument/">inputWebDocument</a></td><td>The document</td></tr></tbody></table>

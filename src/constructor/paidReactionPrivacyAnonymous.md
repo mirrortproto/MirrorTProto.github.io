@@ -11,9 +11,9 @@ layout: layout.njk
 
 Send paid reactions anonymously.
 
-```
-paidReactionPrivacyAnonymous#1f0c1ad9 = PaidReactionPrivacy;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/paidReactionPrivacyAnonymous/" class="current_page_link">paidReactionPrivacyAnonymous</a>#1f0c1ad9 = <a href="/type/PaidReactionPrivacy/">PaidReactionPrivacy</a>;</code></pre>
 
 ### Parameters
 

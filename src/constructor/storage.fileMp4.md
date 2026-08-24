@@ -11,9 +11,9 @@ layout: layout.njk
 
 MPEG-4 video. MIME type: `video/mp4`.
 
-```
-storage.fileMp4#b3cea0e4 = storage.FileType;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/storage.fileMp4/" class="current_page_link">storage.fileMp4</a>#b3cea0e4 = <a href="/type/storage.FileType/">storage.FileType</a>;</code></pre>
 
 ### Parameters
 

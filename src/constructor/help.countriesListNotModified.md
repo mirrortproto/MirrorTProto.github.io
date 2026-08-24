@@ -11,9 +11,9 @@ layout: layout.njk
 
 The country list has not changed
 
-```
-help.countriesListNotModified#93cc1f32 = help.CountriesList;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/help.countriesListNotModified/" class="current_page_link">help.countriesListNotModified</a>#93cc1f32 = <a href="/type/help.CountriesList/">help.CountriesList</a>;</code></pre>
 
 ### Parameters
 

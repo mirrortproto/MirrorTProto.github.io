@@ -11,9 +11,9 @@ layout: layout.njk
 
 Whether the user can see our birthday.
 
-```
-inputPrivacyKeyBirthday#d65a11cc = InputPrivacyKey;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputPrivacyKeyBirthday/" class="current_page_link">inputPrivacyKeyBirthday</a>#d65a11cc = <a href="/type/InputPrivacyKey/">InputPrivacyKey</a>;</code></pre>
 
 ### Parameters
 

@@ -11,18 +11,18 @@ layout: layout.njk
 
 Request a reupload of a certain file to a [CDN DC](https://core.telegram.org/cdn).
 
-```
----functions---
-upload.reuploadCdnFile#9b2754a8 file_token:bytes request_token:bytes = Vector<FileHash>;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code>---functions---
+<a href="/method/upload.reuploadCdnFile/" class="current_page_link">upload.reuploadCdnFile</a>#9b2754a8 file_token:<a href="/type/bytes/">bytes</a> request_token:<a href="/type/bytes/">bytes</a> = <a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/FileHash/">FileHash</a>&gt;;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>file_token</strong></td><td style="text-align: center;"><a href="/type/bytes">bytes</a></td><td>File token</td></tr><tr><td><strong>request_token</strong></td><td style="text-align: center;"><a href="/type/bytes">bytes</a></td><td>Request token</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>file_token</strong></td><td style="text-align: center;"><a href="/type/bytes/">bytes</a></td><td>File token</td></tr><tr><td><strong>request_token</strong></td><td style="text-align: center;"><a href="/type/bytes/">bytes</a></td><td>Request token</td></tr></tbody></table>
 
 ### Result
 
-[Vector](https://core.telegram.org/type/Vector%20t)&lt;[FileHash](/type/FileHash/)\>
+[Vector](/type/Vector%20t/)&lt;[FileHash](/type/FileHash/)\>
 
 ### Both users and bots can use this method
 

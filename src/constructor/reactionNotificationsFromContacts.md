@@ -11,9 +11,9 @@ layout: layout.njk
 
 Receive notifications about reactions made only by our contacts.
 
-```
-reactionNotificationsFromContacts#bac3a61a = ReactionNotificationsFrom;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/reactionNotificationsFromContacts/" class="current_page_link">reactionNotificationsFromContacts</a>#bac3a61a = <a href="/type/ReactionNotificationsFrom/">ReactionNotificationsFrom</a>;</code></pre>
 
 ### Parameters
 

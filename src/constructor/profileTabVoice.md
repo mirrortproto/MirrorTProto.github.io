@@ -11,9 +11,9 @@ layout: layout.njk
 
 Represents the voice messages tab of a profile page.
 
-```
-profileTabVoice#e477092e = ProfileTab;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/profileTabVoice/" class="current_page_link">profileTabVoice</a>#e477092e = <a href="/type/ProfileTab/">ProfileTab</a>;</code></pre>
 
 ### Parameters
 

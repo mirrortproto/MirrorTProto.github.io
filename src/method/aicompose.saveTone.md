@@ -13,13 +13,13 @@ Install or uninstall an [AI composer tone »](/api/ai/#ai-compose-tones), adding
 
 Non-[Premium](/api/premium/) users may install up to [aicompose\_tone\_saved\_limit\_default »](/api/config/#aicompose-tone-saved-limit-default) tones, [Premium](/api/premium/) users up to [aicompose\_tone\_saved\_limit\_premium »](/api/config/#aicompose-tone-saved-limit-premium) tones.
 
-```
- Method schema is available as of layer 225. Switch »
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code>Method schema is available as of layer 225. <a href="?layer=225">Switch »</a></code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>tone</strong></td><td style="text-align: center;"><a href="/type/InputAiComposeTone">InputAiComposeTone</a></td><td>The tone to save or unsave</td></tr><tr><td><strong>unsave</strong></td><td style="text-align: center;"><a href="/type/Bool">Bool</a></td><td>If <code>false</code>, installs (saves) the tone; if <code>true</code>, uninstalls (unsaves) it</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>tone</strong></td><td style="text-align: center;"><a href="/type/InputAiComposeTone/">InputAiComposeTone</a></td><td>The tone to save or unsave</td></tr><tr><td><strong>unsave</strong></td><td style="text-align: center;"><a href="/type/Bool/">Bool</a></td><td>If <code>false</code>, installs (saves) the tone; if <code>true</code>, uninstalls (unsaves) it</td></tr></tbody></table>
 
 ### Result
 

@@ -11,9 +11,9 @@ layout: layout.njk
 
 Allow only [close friends »](/api/privacy/)
 
-```
-privacyValueAllowCloseFriends#f7e8d89b = PrivacyRule;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/privacyValueAllowCloseFriends/" class="current_page_link">privacyValueAllowCloseFriends</a>#f7e8d89b = <a href="/type/PrivacyRule/">PrivacyRule</a>;</code></pre>
 
 ### Parameters
 

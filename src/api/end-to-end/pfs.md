@@ -3,7 +3,7 @@ title: "Perfect Forward Secrecy"
 original: "https://core.telegram.org/api/end-to-end/pfs"
 section: api
 description: "In order to keep past communications safe, official Telegram clients will initiate re-keying once a key has been used to decrypt and encrypt more than 100 messages, or has been in…"
-crumbs: [{"title":"API","url":"/api/"},{"title":"Secret Chats","url":"/api/end-to-end/"},{"title":"Perfect Forward Secrecy","url":"https://core.telegram.org/api/end-to-end%2Fpfs"}]
+crumbs: [{"title":"API","url":"/api/"},{"title":"Secret Chats","url":"/api/end-to-end/"},{"title":"Perfect Forward Secrecy","url":"/api/end-to-end/pfs/"}]
 layout: layout.njk
 ---
 

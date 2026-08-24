@@ -11,9 +11,9 @@ layout: layout.njk
 
 Fetch only recent participants
 
-```
-channelParticipantsRecent#de3f3c79 = ChannelParticipantsFilter;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/channelParticipantsRecent/" class="current_page_link">channelParticipantsRecent</a>#de3f3c79 = <a href="/type/ChannelParticipantsFilter/">ChannelParticipantsFilter</a>;</code></pre>
 
 ### Parameters
 

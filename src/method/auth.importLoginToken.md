@@ -13,17 +13,17 @@ Login using a redirected login token, generated in case of DC mismatch during [Q
 
 For more info, see [login via QR code](/api/qr-login/).
 
-```
-auth.loginToken#629f1980 expires:int token:bytes = auth.LoginToken;
-auth.loginTokenMigrateTo#68e9916 dc_id:int token:bytes = auth.LoginToken;
-auth.loginTokenSuccess#390d5c5e authorization:auth.Authorization = auth.LoginToken;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/auth.loginToken/">auth.loginToken</a>#629f1980 expires:<a href="/type/int/">int</a> token:<a href="/type/bytes/">bytes</a> = <a href="/type/auth.LoginToken/">auth.LoginToken</a>;
+<a href="/constructor/auth.loginTokenMigrateTo/">auth.loginTokenMigrateTo</a>#68e9916 dc_id:<a href="/type/int/">int</a> token:<a href="/type/bytes/">bytes</a> = <a href="/type/auth.LoginToken/">auth.LoginToken</a>;
+<a href="/constructor/auth.loginTokenSuccess/">auth.loginTokenSuccess</a>#390d5c5e authorization:<a href="/type/auth.Authorization/">auth.Authorization</a> = <a href="/type/auth.LoginToken/">auth.LoginToken</a>;
 ---functions---
-auth.importLoginToken#95ac5ce4 token:bytes = auth.LoginToken;
-```
+<a href="/method/auth.importLoginToken/" class="current_page_link">auth.importLoginToken</a>#95ac5ce4 token:<a href="/type/bytes/">bytes</a> = <a href="/type/auth.LoginToken/">auth.LoginToken</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>token</strong></td><td style="text-align: center;"><a href="/type/bytes">bytes</a></td><td>Login token</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>token</strong></td><td style="text-align: center;"><a href="/type/bytes/">bytes</a></td><td>Login token</td></tr></tbody></table>
 
 ### Result
 

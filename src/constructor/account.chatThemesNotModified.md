@@ -11,9 +11,9 @@ layout: layout.njk
 
 The available chat themes were not modified
 
-```
-account.chatThemesNotModified#e011e1c4 = account.ChatThemes;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/account.chatThemesNotModified/" class="current_page_link">account.chatThemesNotModified</a>#e011e1c4 = <a href="/type/account.ChatThemes/">account.ChatThemes</a>;</code></pre>
 
 ### Parameters
 

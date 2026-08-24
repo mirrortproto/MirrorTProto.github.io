@@ -9,17 +9,17 @@ layout: layout.njk
 
 # messages.savePreparedInlineMessage
 
-Save a [prepared inline message](https://core.telegram.org/api/bots/inline#21-using-a-prepared-inline-message), to be shared by the user of the mini app using a [web\_app\_send\_prepared\_message event](/api/web-events/#web-app-send-prepared-message)
+Save a [prepared inline message](/api/bots/inline/#2-1-using-a-prepared-inline-message), to be shared by the user of the mini app using a [web\_app\_send\_prepared\_message event](/api/web-events/#web-app-send-prepared-message)
 
-```
-messages.botPreparedInlineMessage#8ecf0511 id:string expire_date:int = messages.BotPreparedInlineMessage;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/messages.botPreparedInlineMessage/">messages.botPreparedInlineMessage</a>#8ecf0511 id:<a href="/type/string/">string</a> expire_date:<a href="/type/int/">int</a> = <a href="/type/messages.BotPreparedInlineMessage/">messages.BotPreparedInlineMessage</a>;
 ---functions---
-messages.savePreparedInlineMessage#f21f7f2f flags:# result:InputBotInlineResult user_id:InputUser peer_types:flags.0?Vector<InlineQueryPeerType> = messages.BotPreparedInlineMessage;
-```
+<a href="/method/messages.savePreparedInlineMessage/" class="current_page_link">messages.savePreparedInlineMessage</a>#f21f7f2f flags:<a href="/type/%23/">#</a> result:<a href="/type/InputBotInlineResult/">InputBotInlineResult</a> user_id:<a href="/type/InputUser/">InputUser</a> peer_types:flags.0?<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/InlineQueryPeerType/">InlineQueryPeerType</a>&gt; = <a href="/type/messages.BotPreparedInlineMessage/">messages.BotPreparedInlineMessage</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>Flags, see <a href="/mtproto/TL-combinators#conditional-fields">TL conditional fields</a></td></tr><tr><td><strong>result</strong></td><td style="text-align: center;"><a href="/type/InputBotInlineResult">InputBotInlineResult</a></td><td>The message</td></tr><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/InputUser">InputUser</a></td><td>The user to whom the <a href="/api/web-events#web-app-send-prepared-message">web_app_send_prepared_message event</a> event will be sent</td></tr><tr><td><strong>peer_types</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/InlineQueryPeerType">InlineQueryPeerType</a>&gt;</td><td>Types of chats where this message can be sent</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23/">#</a></td><td>Flags, see <a href="/mtproto/TL-combinators/#conditional-fields">TL conditional fields</a></td></tr><tr><td><strong>result</strong></td><td style="text-align: center;"><a href="/type/InputBotInlineResult/">InputBotInlineResult</a></td><td>The message</td></tr><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/InputUser/">InputUser</a></td><td>The user to whom the <a href="/api/web-events/#web-app-send-prepared-message">web_app_send_prepared_message event</a> event will be sent</td></tr><tr><td><strong>peer_types</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators/#conditional-fields">flags</a>.0?<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/InlineQueryPeerType/">InlineQueryPeerType</a>&gt;</td><td>Types of chats where this message can be sent</td></tr></tbody></table>
 
 ### Result
 

@@ -11,9 +11,9 @@ layout: layout.njk
 
 Info about all installed stickers hasn't changed
 
-```
-messages.allStickersNotModified#e86602c3 = messages.AllStickers;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/messages.allStickersNotModified/" class="current_page_link">messages.allStickersNotModified</a>#e86602c3 = <a href="/type/messages.AllStickers/">messages.AllStickers</a>;</code></pre>
 
 ### Parameters
 

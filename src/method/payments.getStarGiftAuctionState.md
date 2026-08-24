@@ -11,15 +11,15 @@ layout: layout.njk
 
 Returns info about a [collectible gift auction »](/api/auctions/); also subscribes the user to auction updates, see [here »](/api/auctions/) for more info on the full flow.
 
-```
-payments.starGiftAuctionState#6b39f4ec gift:StarGift state:StarGiftAuctionState user_state:StarGiftAuctionUserState timeout:int users:Vector<User> chats:Vector<Chat> = payments.StarGiftAuctionState;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/payments.starGiftAuctionState/">payments.starGiftAuctionState</a>#6b39f4ec gift:<a href="/type/StarGift/">StarGift</a> state:<a href="/type/StarGiftAuctionState/">StarGiftAuctionState</a> user_state:<a href="/type/StarGiftAuctionUserState/">StarGiftAuctionUserState</a> timeout:<a href="/type/int/">int</a> users:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/User/">User</a>&gt; chats:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/Chat/">Chat</a>&gt; = <a href="/type/payments.StarGiftAuctionState/">payments.StarGiftAuctionState</a>;
 ---functions---
-payments.getStarGiftAuctionState#5c9ff4d6 auction:InputStarGiftAuction version:int = payments.StarGiftAuctionState;
-```
+<a href="/method/payments.getStarGiftAuctionState/" class="current_page_link">payments.getStarGiftAuctionState</a>#5c9ff4d6 auction:<a href="/type/InputStarGiftAuction/">InputStarGiftAuction</a> version:<a href="/type/int/">int</a> = <a href="/type/payments.StarGiftAuctionState/">payments.StarGiftAuctionState</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>auction</strong></td><td style="text-align: center;"><a href="/type/InputStarGiftAuction">InputStarGiftAuction</a></td><td>Either the ID of the gift linked to the auction, or an <a href="/api/links#auction-links">auction deep link slug »</a>.</td></tr><tr><td><strong>version</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Initially <code>0</code>, then set to the returned <a href="/constructor/starGiftAuctionState">starGiftAuctionState</a>.<code>version</code>, to avoid refetching results if they haven't changed.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>auction</strong></td><td style="text-align: center;"><a href="/type/InputStarGiftAuction/">InputStarGiftAuction</a></td><td>Either the ID of the gift linked to the auction, or an <a href="/api/links/#auction-links">auction deep link slug »</a>.</td></tr><tr><td><strong>version</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>Initially <code>0</code>, then set to the returned <a href="/constructor/starGiftAuctionState/">starGiftAuctionState</a>.<code>version</code>, to avoid refetching results if they haven't changed.</td></tr></tbody></table>
 
 ### Result
 

@@ -13,15 +13,15 @@ Edit a [main mini app preview, see here »](/api/bots/webapps/#main-mini-app-pre
 
 Only owners of bots with a configured Main Mini App can use this method, see [see here »](/api/bots/webapps/#main-mini-app-previews) for more info on how to check if you can invoke this method.
 
-```
-botPreviewMedia#23e91ba3 date:int media:MessageMedia = BotPreviewMedia;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/botPreviewMedia/">botPreviewMedia</a>#23e91ba3 date:<a href="/type/int/">int</a> media:<a href="/type/MessageMedia/">MessageMedia</a> = <a href="/type/BotPreviewMedia/">BotPreviewMedia</a>;
 ---functions---
-bots.editPreviewMedia#8525606f bot:InputUser lang_code:string media:InputMedia new_media:InputMedia = BotPreviewMedia;
-```
+<a href="/method/bots.editPreviewMedia/" class="current_page_link">bots.editPreviewMedia</a>#8525606f bot:<a href="/type/InputUser/">InputUser</a> lang_code:<a href="/type/string/">string</a> media:<a href="/type/InputMedia/">InputMedia</a> new_media:<a href="/type/InputMedia/">InputMedia</a> = <a href="/type/BotPreviewMedia/">BotPreviewMedia</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>bot</strong></td><td style="text-align: center;"><a href="/type/InputUser">InputUser</a></td><td>The bot that owns the Main Mini App.</td></tr><tr><td><strong>lang_code</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>ISO 639-1 language code, indicating the localization of the preview to edit.</td></tr><tr><td><strong>media</strong></td><td style="text-align: center;"><a href="/type/InputMedia">InputMedia</a></td><td>The photo/video preview to replace, previously fetched as specified <a href="/api/bots/webapps#main-mini-app-previews">here »</a>.</td></tr><tr><td><strong>new_media</strong></td><td style="text-align: center;"><a href="/type/InputMedia">InputMedia</a></td><td>The new photo/video preview, uploaded using <a href="/method/messages.uploadMedia">messages.uploadMedia</a>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>bot</strong></td><td style="text-align: center;"><a href="/type/InputUser/">InputUser</a></td><td>The bot that owns the Main Mini App.</td></tr><tr><td><strong>lang_code</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td>ISO 639-1 language code, indicating the localization of the preview to edit.</td></tr><tr><td><strong>media</strong></td><td style="text-align: center;"><a href="/type/InputMedia/">InputMedia</a></td><td>The photo/video preview to replace, previously fetched as specified <a href="/api/bots/webapps/#main-mini-app-previews">here »</a>.</td></tr><tr><td><strong>new_media</strong></td><td style="text-align: center;"><a href="/type/InputMedia/">InputMedia</a></td><td>The new photo/video preview, uploaded using <a href="/method/messages.uploadMedia/">messages.uploadMedia</a>.</td></tr></tbody></table>
 
 ### Result
 

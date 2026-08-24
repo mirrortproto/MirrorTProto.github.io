@@ -11,13 +11,13 @@ layout: layout.njk
 
 Contains info about [Main Mini App previews, see here »](/api/bots/webapps/#main-mini-app-previews) for more info.
 
-```
-bots.previewInfo#ca71d64 media:Vector<BotPreviewMedia> lang_codes:Vector<string> = bots.PreviewInfo;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/bots.previewInfo/" class="current_page_link">bots.previewInfo</a>#ca71d64 media:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/BotPreviewMedia/">BotPreviewMedia</a>&gt; lang_codes:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/string/">string</a>&gt; = <a href="/type/bots.PreviewInfo/">bots.PreviewInfo</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>media</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/BotPreviewMedia">BotPreviewMedia</a>&gt;</td><td>All preview medias for the language code passed to <a href="/method/bots.getPreviewInfo">bots.getPreviewInfo</a>.</td></tr><tr><td><strong>lang_codes</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/string">string</a>&gt;</td><td>All available language codes for which preview medias were uploaded (regardless of the language code passed to <a href="/method/bots.getPreviewInfo">bots.getPreviewInfo</a>).</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>media</strong></td><td style="text-align: center;"><a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/BotPreviewMedia/">BotPreviewMedia</a>&gt;</td><td>All preview medias for the language code passed to <a href="/method/bots.getPreviewInfo/">bots.getPreviewInfo</a>.</td></tr><tr><td><strong>lang_codes</strong></td><td style="text-align: center;"><a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/string/">string</a>&gt;</td><td>All available language codes for which preview medias were uploaded (regardless of the language code passed to <a href="/method/bots.getPreviewInfo/">bots.getPreviewInfo</a>).</td></tr></tbody></table>
 
 ### Type
 

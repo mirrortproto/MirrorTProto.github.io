@@ -11,9 +11,9 @@ layout: layout.njk
 
 Clients should update [folder](/api/folders/) info
 
-```
-updateDialogFilters#3504914f = Update;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/updateDialogFilters/" class="current_page_link">updateDialogFilters</a>#3504914f = <a href="/type/Update/">Update</a>;</code></pre>
 
 ### Parameters
 

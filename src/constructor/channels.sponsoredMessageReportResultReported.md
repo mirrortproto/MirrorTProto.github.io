@@ -11,9 +11,9 @@ layout: layout.njk
 
 The sponsored message was reported successfully.
 
-```
-channels.sponsoredMessageReportResultReported#ad798849 = channels.SponsoredMessageReportResult;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/channels.sponsoredMessageReportResultReported/" class="current_page_link">channels.sponsoredMessageReportResultReported</a>#ad798849 = <a href="/type/channels.SponsoredMessageReportResult/">channels.SponsoredMessageReportResult</a>;</code></pre>
 
 ### Parameters
 

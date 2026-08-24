@@ -11,9 +11,9 @@ layout: layout.njk
 
 No new favorited stickers were found
 
-```
-messages.favedStickersNotModified#9e8fa6d3 = messages.FavedStickers;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/messages.favedStickersNotModified/" class="current_page_link">messages.favedStickersNotModified</a>#9e8fa6d3 = <a href="/type/messages.FavedStickers/">messages.FavedStickers</a>;</code></pre>
 
 ### Parameters
 

@@ -11,9 +11,9 @@ layout: layout.njk
 
 Return only messages where the current user was [mentioned](/api/mentions/).
 
-```
-inputMessagesFilterMyMentions#c1f8e69a = MessagesFilter;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputMessagesFilterMyMentions/" class="current_page_link">inputMessagesFilterMyMentions</a>#c1f8e69a = <a href="/type/MessagesFilter/">MessagesFilter</a>;</code></pre>
 
 ### Parameters
 

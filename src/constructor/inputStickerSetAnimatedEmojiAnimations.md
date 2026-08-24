@@ -11,9 +11,9 @@ layout: layout.njk
 
 Animated emoji reaction stickerset (contains animations to play when a user clicks on a given animated emoji)
 
-```
-inputStickerSetAnimatedEmojiAnimations#cde3739 = InputStickerSet;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputStickerSetAnimatedEmojiAnimations/" class="current_page_link">inputStickerSetAnimatedEmojiAnimations</a>#cde3739 = <a href="/type/InputStickerSet/">InputStickerSet</a>;</code></pre>
 
 ### Parameters
 

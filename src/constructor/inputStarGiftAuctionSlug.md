@@ -11,13 +11,13 @@ layout: layout.njk
 
 Used to fetch [auctions](/api/auctions/) using the [slug of an auction deep link »](/api/links/#auction-links).
 
-```
-inputStarGiftAuctionSlug#7ab58308 slug:string = InputStarGiftAuction;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputStarGiftAuctionSlug/" class="current_page_link">inputStarGiftAuctionSlug</a>#7ab58308 slug:<a href="/type/string/">string</a> = <a href="/type/InputStarGiftAuction/">InputStarGiftAuction</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>slug</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td><a href="/api/links#auction-links">Auction deep link slug »</a>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>slug</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td><a href="/api/links/#auction-links">Auction deep link slug »</a>.</td></tr></tbody></table>
 
 ### Type
 

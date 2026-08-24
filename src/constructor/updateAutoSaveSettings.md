@@ -11,9 +11,9 @@ layout: layout.njk
 
 Media autosave settings have changed and must be refetched using [account.getAutoSaveSettings](/method/account.getAutoSaveSettings/).
 
-```
-updateAutoSaveSettings#ec05b097 = Update;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/updateAutoSaveSettings/" class="current_page_link">updateAutoSaveSettings</a>#ec05b097 = <a href="/type/Update/">Update</a>;</code></pre>
 
 ### Parameters
 

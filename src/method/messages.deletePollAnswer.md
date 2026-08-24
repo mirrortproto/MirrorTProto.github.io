@@ -11,13 +11,13 @@ layout: layout.njk
 
 Remove an answer option from an [open-answer poll »](/api/poll/#open-answer-polls)
 
-```
- Method schema is available as of layer 224. Switch »
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code>Method schema is available as of layer 224. <a href="?layer=224">Switch »</a></code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>Peer where the poll is located</td></tr><tr><td><strong>msg_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Message ID of the poll</td></tr><tr><td><strong>option</strong></td><td style="text-align: center;"><a href="/type/bytes">bytes</a></td><td>The <code>option</code> identifier of the answer to remove</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer/">InputPeer</a></td><td>Peer where the poll is located</td></tr><tr><td><strong>msg_id</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>Message ID of the poll</td></tr><tr><td><strong>option</strong></td><td style="text-align: center;"><a href="/type/bytes/">bytes</a></td><td>The <code>option</code> identifier of the answer to remove</td></tr></tbody></table>
 
 ### Result
 

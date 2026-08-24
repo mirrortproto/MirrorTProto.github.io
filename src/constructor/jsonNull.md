@@ -20,9 +20,9 @@ jsonNull#3f6d7b68 = JSONValue;
 
 #### API schema
 
-```
-jsonNull#3f6d7b68 = JSONValue;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/jsonNull/" class="current_page_link">jsonNull</a>#3f6d7b68 = <a href="/type/JSONValue/">JSONValue</a>;</code></pre>
 
 ### Parameters
 

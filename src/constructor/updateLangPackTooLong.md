@@ -11,13 +11,13 @@ layout: layout.njk
 
 A language pack has changed, the client should manually fetch the changed strings using [langpack.getDifference](/method/langpack.getDifference/)
 
-```
-updateLangPackTooLong#46560264 lang_code:string = Update;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/updateLangPackTooLong/" class="current_page_link">updateLangPackTooLong</a>#46560264 lang_code:<a href="/type/string/">string</a> = <a href="/type/Update/">Update</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>lang_code</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Language code</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>lang_code</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td>Language code</td></tr></tbody></table>
 
 ### Type
 

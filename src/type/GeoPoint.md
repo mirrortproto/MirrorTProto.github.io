@@ -11,11 +11,11 @@ layout: layout.njk
 
 Object defines a GeoPoint.
 
-```
-geoPointEmpty#1117dd5f = GeoPoint;
-geoPoint#b2a2f663 flags:# long:double lat:double access_hash:long accuracy_radius:flags.0?int = GeoPoint;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/geoPointEmpty/">geoPointEmpty</a>#1117dd5f = <a href="/type/GeoPoint/" class="current_page_link">GeoPoint</a>;
+<a href="/constructor/geoPoint/">geoPoint</a>#b2a2f663 flags:<a href="/type/%23/">#</a> long:<a href="/type/double/">double</a> lat:<a href="/type/double/">double</a> access_hash:<a href="/type/long/">long</a> accuracy_radius:flags.0?<a href="/type/int/">int</a> = <a href="/type/GeoPoint/" class="current_page_link">GeoPoint</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/geoPointEmpty">geoPointEmpty</a></td><td>Empty constructor.</td></tr><tr><td><a href="/constructor/geoPoint">geoPoint</a></td><td>GeoPoint.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/geoPointEmpty/">geoPointEmpty</a></td><td>Empty constructor.</td></tr><tr><td><a href="/constructor/geoPoint/">geoPoint</a></td><td>GeoPoint.</td></tr></tbody></table>

@@ -11,13 +11,13 @@ layout: layout.njk
 
 Most active admin in a [supergroup](/api/channel/)
 
-```
-statsGroupTopAdmin#d7584c87 user_id:long deleted:int kicked:int banned:int = StatsGroupTopAdmin;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/statsGroupTopAdmin/">statsGroupTopAdmin</a>#d7584c87 user_id:<a href="/type/long/">long</a> deleted:<a href="/type/int/">int</a> kicked:<a href="/type/int/">int</a> banned:<a href="/type/int/">int</a> = <a href="/type/StatsGroupTopAdmin/" class="current_page_link">StatsGroupTopAdmin</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/statsGroupTopAdmin">statsGroupTopAdmin</a></td><td>Information about an active admin in a supergroup</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/statsGroupTopAdmin/">statsGroupTopAdmin</a></td><td>Information about an active admin in a supergroup</td></tr></tbody></table>
 
 ### Related pages
 

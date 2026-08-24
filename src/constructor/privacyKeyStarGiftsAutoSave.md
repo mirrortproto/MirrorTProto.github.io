@@ -11,9 +11,9 @@ layout: layout.njk
 
 Whether received [gifts](/api/gifts/) will be automatically displayed on our profile
 
-```
-privacyKeyStarGiftsAutoSave#2ca4fdf8 = PrivacyKey;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/privacyKeyStarGiftsAutoSave/" class="current_page_link">privacyKeyStarGiftsAutoSave</a>#2ca4fdf8 = <a href="/type/PrivacyKey/">PrivacyKey</a>;</code></pre>
 
 ### Parameters
 

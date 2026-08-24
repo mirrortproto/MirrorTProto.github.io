@@ -11,13 +11,13 @@ layout: layout.njk
 
 [Telegram Stars topup option](/api/stars/).
 
-```
-starsTopupOption#bd915c0 flags:# extended:flags.1?true stars:long store_product:flags.0?string currency:string amount:long = StarsTopupOption;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/starsTopupOption/">starsTopupOption</a>#bd915c0 flags:<a href="/type/%23/">#</a> extended:flags.1?true stars:<a href="/type/long/">long</a> store_product:flags.0?<a href="/type/string/">string</a> currency:<a href="/type/string/">string</a> amount:<a href="/type/long/">long</a> = <a href="/type/StarsTopupOption/" class="current_page_link">StarsTopupOption</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/starsTopupOption">starsTopupOption</a></td><td><a href="/api/stars">Telegram Stars topup option</a>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/starsTopupOption/">starsTopupOption</a></td><td><a href="/api/stars/">Telegram Stars topup option</a>.</td></tr></tbody></table>
 
 ### Related pages
 

@@ -11,13 +11,13 @@ layout: layout.njk
 
 Used to fetch info about a [Telegram Star transaction »](/api/stars/#balance-and-transaction-history).
 
-```
-inputStarsTransaction#206ae6d1 flags:# refund:flags.0?true id:string = InputStarsTransaction;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputStarsTransaction/">inputStarsTransaction</a>#206ae6d1 flags:<a href="/type/%23/">#</a> refund:flags.0?true id:<a href="/type/string/">string</a> = <a href="/type/InputStarsTransaction/" class="current_page_link">InputStarsTransaction</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/inputStarsTransaction">inputStarsTransaction</a></td><td>Used to fetch info about a <a href="/api/stars#balance-and-transaction-history">Telegram Star transaction »</a>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/inputStarsTransaction/">inputStarsTransaction</a></td><td>Used to fetch info about a <a href="/api/stars/#balance-and-transaction-history">Telegram Star transaction »</a>.</td></tr></tbody></table>
 
 ### Related pages
 

@@ -11,9 +11,9 @@ layout: layout.njk
 
 TON gifts stickerset.
 
-```
-inputStickerSetTonGifts#1cf671a0 = InputStickerSet;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputStickerSetTonGifts/" class="current_page_link">inputStickerSetTonGifts</a>#1cf671a0 = <a href="/type/InputStickerSet/">InputStickerSet</a>;</code></pre>
 
 ### Parameters
 

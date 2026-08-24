@@ -19,13 +19,13 @@ jsonObjectValue#c0de1bd9 key:string value:JSONValue = JSONObjectValue;
 
 #### API schema
 
-```
-jsonObjectValue#c0de1bd9 key:string value:JSONValue = JSONObjectValue;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/jsonObjectValue/" class="current_page_link">jsonObjectValue</a>#c0de1bd9 key:<a href="/type/string/">string</a> value:<a href="/type/JSONValue/">JSONValue</a> = <a href="/type/JSONObjectValue/">JSONObjectValue</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>key</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Key</td></tr><tr><td><strong>value</strong></td><td style="text-align: center;"><a href="/type/JSONValue">JSONValue</a></td><td>Value</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>key</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td>Key</td></tr><tr><td><strong>value</strong></td><td style="text-align: center;"><a href="/type/JSONValue/">JSONValue</a></td><td>Value</td></tr></tbody></table>
 
 ### Type
 

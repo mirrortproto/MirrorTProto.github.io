@@ -11,10 +11,10 @@ layout: layout.njk
 
 Describes a group of video synchronization source identifiers
 
-```
-groupCallParticipantVideoSourceGroup#dcb118b7 semantics:string sources:Vector<int> = GroupCallParticipantVideoSourceGroup;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/groupCallParticipantVideoSourceGroup/">groupCallParticipantVideoSourceGroup</a>#dcb118b7 semantics:<a href="/type/string/">string</a> sources:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/int/">int</a>&gt; = <a href="/type/GroupCallParticipantVideoSourceGroup/" class="current_page_link">GroupCallParticipantVideoSourceGroup</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/groupCallParticipantVideoSourceGroup">groupCallParticipantVideoSourceGroup</a></td><td>Describes a group of video synchronization source identifiers</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/groupCallParticipantVideoSourceGroup/">groupCallParticipantVideoSourceGroup</a></td><td>Describes a group of video synchronization source identifiers</td></tr></tbody></table>

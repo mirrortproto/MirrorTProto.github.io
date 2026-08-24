@@ -11,9 +11,9 @@ layout: layout.njk
 
 Profile photo has not been set, or was hidden.
 
-```
-userProfilePhotoEmpty#4f11bae1 = UserProfilePhoto;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/userProfilePhotoEmpty/" class="current_page_link">userProfilePhotoEmpty</a>#4f11bae1 = <a href="/type/UserProfilePhoto/">UserProfilePhoto</a>;</code></pre>
 
 ### Parameters
 

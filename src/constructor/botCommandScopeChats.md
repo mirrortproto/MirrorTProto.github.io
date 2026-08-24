@@ -11,9 +11,9 @@ layout: layout.njk
 
 The specified bot commands will be valid in all [groups and supergroups](/api/channel/).
 
-```
-botCommandScopeChats#6fe1a881 = BotCommandScope;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/botCommandScopeChats/" class="current_page_link">botCommandScopeChats</a>#6fe1a881 = <a href="/type/BotCommandScope/">BotCommandScope</a>;</code></pre>
 
 ### Parameters
 

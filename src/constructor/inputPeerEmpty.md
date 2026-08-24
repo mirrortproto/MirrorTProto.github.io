@@ -11,9 +11,9 @@ layout: layout.njk
 
 An empty constructor, no user or chat is defined.
 
-```
-inputPeerEmpty#7f3b18ea = InputPeer;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputPeerEmpty/" class="current_page_link">inputPeerEmpty</a>#7f3b18ea = <a href="/type/InputPeer/">InputPeer</a>;</code></pre>
 
 ### Parameters
 

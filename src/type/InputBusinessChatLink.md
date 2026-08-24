@@ -11,13 +11,13 @@ layout: layout.njk
 
 Contains info about a [business chat deep link »](/api/business/#business-chat-links) to be created by the current account.
 
-```
-inputBusinessChatLink#11679fa7 flags:# message:string entities:flags.0?Vector<MessageEntity> title:flags.1?string = InputBusinessChatLink;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputBusinessChatLink/">inputBusinessChatLink</a>#11679fa7 flags:<a href="/type/%23/">#</a> message:<a href="/type/string/">string</a> entities:flags.0?<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/MessageEntity/">MessageEntity</a>&gt; title:flags.1?<a href="/type/string/">string</a> = <a href="/type/InputBusinessChatLink/" class="current_page_link">InputBusinessChatLink</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/inputBusinessChatLink">inputBusinessChatLink</a></td><td>Contains info about a <a href="/api/business#business-chat-links">business chat deep link »</a> to be created by the current account.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/inputBusinessChatLink/">inputBusinessChatLink</a></td><td>Contains info about a <a href="/api/business/#business-chat-links">business chat deep link »</a> to be created by the current account.</td></tr></tbody></table>
 
 ### Related pages
 

@@ -3,7 +3,7 @@ title: "End-to-End Encrypted Voice and Video Calls"
 original: "https://core.telegram.org/api/end-to-end/video-calls"
 section: api
 description: "This article describes the end-to-end encryption used for Telegram voice and video calls."
-crumbs: [{"title":"API","url":"/api/"},{"title":"End-to-End Encrypted Voice and Video Calls","url":"https://core.telegram.org/api/end-to-end%2Fvideo-calls"}]
+crumbs: [{"title":"API","url":"/api/"},{"title":"End-to-End Encrypted Voice and Video Calls","url":"/api/end-to-end/video-calls/"}]
 layout: layout.njk
 ---
 

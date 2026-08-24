@@ -11,9 +11,9 @@ layout: layout.njk
 
 The notification sound was already in MP3 format and was saved without any modification
 
-```
-account.savedRingtone#b7263f6d = account.SavedRingtone;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/account.savedRingtone/" class="current_page_link">account.savedRingtone</a>#b7263f6d = <a href="/type/account.SavedRingtone/">account.SavedRingtone</a>;</code></pre>
 
 ### Parameters
 

@@ -11,21 +11,21 @@ layout: layout.njk
 
 Configuration for [CDN](https://core.telegram.org/cdn) file downloads.
 
-```
-cdnConfig#5725e40a public_keys:Vector<CdnPublicKey> = CdnConfig;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/cdnConfig/">cdnConfig</a>#5725e40a public_keys:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/CdnPublicKey/">CdnPublicKey</a>&gt; = <a href="/type/CdnConfig/" class="current_page_link">CdnConfig</a>;
 
 ---functions---
 
-help.getCdnConfig#52029342 = CdnConfig;
-```
+<a href="/method/help.getCdnConfig/">help.getCdnConfig</a>#52029342 = <a href="/type/CdnConfig/" class="current_page_link">CdnConfig</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/cdnConfig">cdnConfig</a></td><td>Configuration for <a href="/cdn">CDN</a> file downloads.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/cdnConfig/">cdnConfig</a></td><td>Configuration for <a href="https://core.telegram.org/cdn">CDN</a> file downloads.</td></tr></tbody></table>
 
 ### Methods
 
-<table class="table"><thead><tr><th scope="col">Method</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/method/help.getCdnConfig">help.getCdnConfig</a></td><td>Get configuration for <a href="/cdn">CDN</a> file downloads.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Method</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/method/help.getCdnConfig/">help.getCdnConfig</a></td><td>Get configuration for <a href="https://core.telegram.org/cdn">CDN</a> file downloads.</td></tr></tbody></table>
 
 ### Related pages
 

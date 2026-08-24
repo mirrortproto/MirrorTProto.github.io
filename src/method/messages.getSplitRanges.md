@@ -11,10 +11,10 @@ layout: layout.njk
 
 Get message ranges for saving the user's chat history
 
-```
----functions---
-messages.getSplitRanges#1cff7e08 = Vector<MessageRange>;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code>---functions---
+<a href="/method/messages.getSplitRanges/" class="current_page_link">messages.getSplitRanges</a>#1cff7e08 = <a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/MessageRange/">MessageRange</a>&gt;;</code></pre>
 
 ### Parameters
 
@@ -22,6 +22,6 @@ This constructor does not require any parameters.
 
 ### Result
 
-[Vector](https://core.telegram.org/type/Vector%20t)&lt;[MessageRange](/type/MessageRange/)\>
+[Vector](/type/Vector%20t/)&lt;[MessageRange](/type/MessageRange/)\>
 
 ### Only users can use this method

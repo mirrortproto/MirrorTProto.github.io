@@ -11,13 +11,13 @@ layout: layout.njk
 
 Secure [passport](https://core.telegram.org/passport) data, for more info [see the passport docs »](https://core.telegram.org/passport/encryption#securedata)
 
-```
-secureData#8aeabec3 data:bytes data_hash:bytes secret:bytes = SecureData;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/secureData/" class="current_page_link">secureData</a>#8aeabec3 data:<a href="/type/bytes/">bytes</a> data_hash:<a href="/type/bytes/">bytes</a> secret:<a href="/type/bytes/">bytes</a> = <a href="/type/SecureData/">SecureData</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>data</strong></td><td style="text-align: center;"><a href="/type/bytes">bytes</a></td><td>Data</td></tr><tr><td><strong>data_hash</strong></td><td style="text-align: center;"><a href="/type/bytes">bytes</a></td><td>Data hash</td></tr><tr><td><strong>secret</strong></td><td style="text-align: center;"><a href="/type/bytes">bytes</a></td><td>Secret</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>data</strong></td><td style="text-align: center;"><a href="/type/bytes/">bytes</a></td><td>Data</td></tr><tr><td><strong>data_hash</strong></td><td style="text-align: center;"><a href="/type/bytes/">bytes</a></td><td>Data hash</td></tr><tr><td><strong>secret</strong></td><td style="text-align: center;"><a href="/type/bytes/">bytes</a></td><td>Secret</td></tr></tbody></table>
 
 ### Type
 

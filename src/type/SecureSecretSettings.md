@@ -11,13 +11,13 @@ layout: layout.njk
 
 Telegram [passport](https://core.telegram.org/passport) settings
 
-```
-secureSecretSettings#1527bcac secure_algo:SecurePasswordKdfAlgo secure_secret:bytes secure_secret_id:long = SecureSecretSettings;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/secureSecretSettings/">secureSecretSettings</a>#1527bcac secure_algo:<a href="/type/SecurePasswordKdfAlgo/">SecurePasswordKdfAlgo</a> secure_secret:<a href="/type/bytes/">bytes</a> secure_secret_id:<a href="/type/long/">long</a> = <a href="/type/SecureSecretSettings/" class="current_page_link">SecureSecretSettings</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/secureSecretSettings">secureSecretSettings</a></td><td>Secure settings</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/secureSecretSettings/">secureSecretSettings</a></td><td>Secure settings</td></tr></tbody></table>
 
 ### Related pages
 

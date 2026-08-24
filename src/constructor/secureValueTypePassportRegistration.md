@@ -11,9 +11,9 @@ layout: layout.njk
 
 Internal registration [passport](https://core.telegram.org/passport)
 
-```
-secureValueTypePassportRegistration#99e3806a = SecureValueType;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/secureValueTypePassportRegistration/" class="current_page_link">secureValueTypePassportRegistration</a>#99e3806a = <a href="/type/SecureValueType/">SecureValueType</a>;</code></pre>
 
 ### Parameters
 

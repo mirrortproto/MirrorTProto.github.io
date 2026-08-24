@@ -11,9 +11,9 @@ layout: layout.njk
 
 The 2FA password was reset successfully.
 
-```
-account.resetPasswordOk#e926d63e = account.ResetPasswordResult;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/account.resetPasswordOk/" class="current_page_link">account.resetPasswordOk</a>#e926d63e = <a href="/type/account.ResetPasswordResult/">account.ResetPasswordResult</a>;</code></pre>
 
 ### Parameters
 

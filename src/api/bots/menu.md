@@ -3,7 +3,7 @@ title: "Bot menu button"
 original: "https://core.telegram.org/api/bots/menu"
 section: api
 description: "Bots can choose the behavior of the menu button shown next to the text input field."
-crumbs: [{"title":"API","url":"/api/"},{"title":"Bot menu button","url":"https://core.telegram.org/api/bots%2Fmenu"}]
+crumbs: [{"title":"API","url":"/api/"},{"title":"Bot menu button","url":"/api/bots/menu/"}]
 layout: layout.njk
 ---
 

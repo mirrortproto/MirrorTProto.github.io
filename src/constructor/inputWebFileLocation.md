@@ -11,13 +11,13 @@ layout: layout.njk
 
 Location of a remote HTTP(s) file
 
-```
-inputWebFileLocation#c239d686 url:string access_hash:long = InputWebFileLocation;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputWebFileLocation/" class="current_page_link">inputWebFileLocation</a>#c239d686 url:<a href="/type/string/">string</a> access_hash:<a href="/type/long/">long</a> = <a href="/type/InputWebFileLocation/">InputWebFileLocation</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>url</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>HTTP URL of file</td></tr><tr><td><strong>access_hash</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Access hash</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>url</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td>HTTP URL of file</td></tr><tr><td><strong>access_hash</strong></td><td style="text-align: center;"><a href="/type/long/">long</a></td><td>Access hash</td></tr></tbody></table>
 
 ### Type
 

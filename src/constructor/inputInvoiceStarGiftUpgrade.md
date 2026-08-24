@@ -11,13 +11,13 @@ layout: layout.njk
 
 Used to [pay to upgrade a Gift to a collectible gift](/api/gifts/#upgrade-a-gift-to-a-collectible-gift), see the [collectible gifts »](/api/gifts/#collectible-gifts) documentation for more info on the full flow.
 
-```
-inputInvoiceStarGiftUpgrade#4d818d5d flags:# keep_original_details:flags.0?true stargift:InputSavedStarGift = InputInvoice;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputInvoiceStarGiftUpgrade/" class="current_page_link">inputInvoiceStarGiftUpgrade</a>#4d818d5d flags:<a href="/type/%23/">#</a> keep_original_details:flags.0?true stargift:<a href="/type/InputSavedStarGift/">InputSavedStarGift</a> = <a href="/type/InputInvoice/">InputInvoice</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>Flags, see <a href="/mtproto/TL-combinators#conditional-fields">TL conditional fields</a></td></tr><tr><td><strong>keep_original_details</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Set this flag to keep the original gift text, sender and receiver in the upgraded gift as a <a href="/constructor/starGiftAttributeOriginalDetails">starGiftAttributeOriginalDetails</a> attribute.</td></tr><tr><td><strong>stargift</strong></td><td style="text-align: center;"><a href="/type/InputSavedStarGift">InputSavedStarGift</a></td><td>The identifier of the received gift to upgrade.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23/">#</a></td><td>Flags, see <a href="/mtproto/TL-combinators/#conditional-fields">TL conditional fields</a></td></tr><tr><td><strong>keep_original_details</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators/#conditional-fields">flags</a>.0?<a href="/constructor/true/">true</a></td><td>Set this flag to keep the original gift text, sender and receiver in the upgraded gift as a <a href="/constructor/starGiftAttributeOriginalDetails/">starGiftAttributeOriginalDetails</a> attribute.</td></tr><tr><td><strong>stargift</strong></td><td style="text-align: center;"><a href="/type/InputSavedStarGift/">InputSavedStarGift</a></td><td>The identifier of the received gift to upgrade.</td></tr></tbody></table>
 
 ### Type
 

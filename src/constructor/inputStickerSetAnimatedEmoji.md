@@ -11,9 +11,9 @@ layout: layout.njk
 
 Animated emojis stickerset
 
-```
-inputStickerSetAnimatedEmoji#28703c8 = InputStickerSet;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputStickerSetAnimatedEmoji/" class="current_page_link">inputStickerSetAnimatedEmoji</a>#28703c8 = <a href="/type/InputStickerSet/">InputStickerSet</a>;</code></pre>
 
 ### Parameters
 

@@ -11,9 +11,9 @@ layout: layout.njk
 
 Represents legendary collectible gift attribute rarity.
 
-```
-starGiftAttributeRarityLegendary#cef7e7a8 = StarGiftAttributeRarity;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/starGiftAttributeRarityLegendary/" class="current_page_link">starGiftAttributeRarityLegendary</a>#cef7e7a8 = <a href="/type/StarGiftAttributeRarity/">StarGiftAttributeRarity</a>;</code></pre>
 
 ### Parameters
 

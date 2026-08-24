@@ -11,13 +11,13 @@ layout: layout.njk
 
 Fetch an example showing how an [AI composer tone »](/api/ai/#ai-compose-tones) rephrases a sample message, used as a preview in the tone picker.
 
-```
- Method schema is available as of layer 225. Switch »
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code>Method schema is available as of layer 225. <a href="?layer=225">Switch »</a></code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>tone</strong></td><td style="text-align: center;"><a href="/type/InputAiComposeTone">InputAiComposeTone</a></td><td>The tone to preview</td></tr><tr><td><strong>num</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>0-based index of the example to fetch, to cycle through the available examples (there are <a href="/api/config#aicompose-tone-examples-num">aicompose_tone_examples_num »</a> examples per tone)</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>tone</strong></td><td style="text-align: center;"><a href="/type/InputAiComposeTone/">InputAiComposeTone</a></td><td>The tone to preview</td></tr><tr><td><strong>num</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>0-based index of the example to fetch, to cycle through the available examples (there are <a href="/api/config/#aicompose-tone-examples-num">aicompose_tone_examples_num »</a> examples per tone)</td></tr></tbody></table>
 
 ### Result
 

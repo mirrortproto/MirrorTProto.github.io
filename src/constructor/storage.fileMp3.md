@@ -11,9 +11,9 @@ layout: layout.njk
 
 Mp3 audio. MIME type: `audio/mpeg`.
 
-```
-storage.fileMp3#528a0677 = storage.FileType;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/storage.fileMp3/" class="current_page_link">storage.fileMp3</a>#528a0677 = <a href="/type/storage.FileType/">storage.FileType</a>;</code></pre>
 
 ### Parameters
 

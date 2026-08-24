@@ -11,15 +11,15 @@ layout: layout.njk
 
 Get private info associated to the password info (recovery email, telegram [passport](https://core.telegram.org/passport) info & so on)
 
-```
-account.passwordSettings#9a5c33e5 flags:# email:flags.0?string secure_settings:flags.1?SecureSecretSettings = account.PasswordSettings;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/account.passwordSettings/">account.passwordSettings</a>#9a5c33e5 flags:<a href="/type/%23/">#</a> email:flags.0?<a href="/type/string/">string</a> secure_settings:flags.1?<a href="/type/SecureSecretSettings/">SecureSecretSettings</a> = <a href="/type/account.PasswordSettings/">account.PasswordSettings</a>;
 ---functions---
-account.getPasswordSettings#9cd4eaf9 password:InputCheckPasswordSRP = account.PasswordSettings;
-```
+<a href="/method/account.getPasswordSettings/" class="current_page_link">account.getPasswordSettings</a>#9cd4eaf9 password:<a href="/type/InputCheckPasswordSRP/">InputCheckPasswordSRP</a> = <a href="/type/account.PasswordSettings/">account.PasswordSettings</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>password</strong></td><td style="text-align: center;"><a href="/type/InputCheckPasswordSRP">InputCheckPasswordSRP</a></td><td>The password (see <a href="/api/srp">SRP</a>)</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>password</strong></td><td style="text-align: center;"><a href="/type/InputCheckPasswordSRP/">InputCheckPasswordSRP</a></td><td>The password (see <a href="/api/srp/">SRP</a>)</td></tr></tbody></table>
 
 ### Result
 

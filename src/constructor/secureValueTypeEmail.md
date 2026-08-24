@@ -11,9 +11,9 @@ layout: layout.njk
 
 Email
 
-```
-secureValueTypeEmail#8e3ca7ee = SecureValueType;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/secureValueTypeEmail/" class="current_page_link">secureValueTypeEmail</a>#8e3ca7ee = <a href="/type/SecureValueType/">SecureValueType</a>;</code></pre>
 
 ### Parameters
 

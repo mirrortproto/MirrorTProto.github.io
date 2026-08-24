@@ -11,11 +11,11 @@ layout: layout.njk
 
 Get days to live of account
 
-```
-accountDaysTTL#b8d0afdf days:int = AccountDaysTTL;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/accountDaysTTL/">accountDaysTTL</a>#b8d0afdf days:<a href="/type/int/">int</a> = <a href="/type/AccountDaysTTL/">AccountDaysTTL</a>;
 ---functions---
-account.getAccountTTL#8fc711d = AccountDaysTTL;
-```
+<a href="/method/account.getAccountTTL/" class="current_page_link">account.getAccountTTL</a>#8fc711d = <a href="/type/AccountDaysTTL/">AccountDaysTTL</a>;</code></pre>
 
 ### Parameters
 

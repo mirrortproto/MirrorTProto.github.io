@@ -11,9 +11,9 @@ layout: layout.njk
 
 User status has not been set yet.
 
-```
-userStatusEmpty#9d05049 = UserStatus;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/userStatusEmpty/" class="current_page_link">userStatusEmpty</a>#9d05049 = <a href="/type/UserStatus/">UserStatus</a>;</code></pre>
 
 ### Parameters
 

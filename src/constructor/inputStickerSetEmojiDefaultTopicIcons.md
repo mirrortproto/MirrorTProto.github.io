@@ -11,9 +11,9 @@ layout: layout.njk
 
 Default [custom emoji](/api/custom-emoji/) stickerset for [forum topic icons](/api/forum/#forum-topics)
 
-```
-inputStickerSetEmojiDefaultTopicIcons#44c1f8e9 = InputStickerSet;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputStickerSetEmojiDefaultTopicIcons/" class="current_page_link">inputStickerSetEmojiDefaultTopicIcons</a>#44c1f8e9 = <a href="/type/InputStickerSet/">InputStickerSet</a>;</code></pre>
 
 ### Parameters
 

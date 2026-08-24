@@ -11,9 +11,9 @@ layout: layout.njk
 
 No further results were found
 
-```
-messages.foundStickerSetsNotModified#d54b65d = messages.FoundStickerSets;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/messages.foundStickerSetsNotModified/" class="current_page_link">messages.foundStickerSetsNotModified</a>#d54b65d = <a href="/type/messages.FoundStickerSets/">messages.FoundStickerSets</a>;</code></pre>
 
 ### Parameters
 

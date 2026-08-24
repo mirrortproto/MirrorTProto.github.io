@@ -11,22 +11,22 @@ layout: layout.njk
 
 Found [stickers](/api/stickers/)
 
-```
-messages.foundStickersNotModified#6010c534 flags:# next_offset:flags.0?int = messages.FoundStickers;
-messages.foundStickers#82c9e290 flags:# next_offset:flags.0?int hash:long stickers:Vector<Document> = messages.FoundStickers;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/messages.foundStickersNotModified/">messages.foundStickersNotModified</a>#6010c534 flags:<a href="/type/%23/">#</a> next_offset:flags.0?<a href="/type/int/">int</a> = <a href="/type/messages.FoundStickers/" class="current_page_link">messages.FoundStickers</a>;
+<a href="/constructor/messages.foundStickers/">messages.foundStickers</a>#82c9e290 flags:<a href="/type/%23/">#</a> next_offset:flags.0?<a href="/type/int/">int</a> hash:<a href="/type/long/">long</a> stickers:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/Document/">Document</a>&gt; = <a href="/type/messages.FoundStickers/" class="current_page_link">messages.FoundStickers</a>;
 
 ---functions---
 
-messages.searchStickers#29b1c66a flags:# emojis:flags.0?true q:string emoticon:string lang_code:Vector<string> offset:int limit:int hash:long = messages.FoundStickers;
-```
+<a href="/method/messages.searchStickers/">messages.searchStickers</a>#29b1c66a flags:<a href="/type/%23/">#</a> emojis:flags.0?true q:<a href="/type/string/">string</a> emoticon:<a href="/type/string/">string</a> lang_code:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/string/">string</a>&gt; offset:<a href="/type/int/">int</a> limit:<a href="/type/int/">int</a> hash:<a href="/type/long/">long</a> = <a href="/type/messages.FoundStickers/" class="current_page_link">messages.FoundStickers</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/messages.foundStickersNotModified">messages.foundStickersNotModified</a></td><td>No new stickers were found for the specified query</td></tr><tr><td><a href="/constructor/messages.foundStickers">messages.foundStickers</a></td><td>Found stickers</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/messages.foundStickersNotModified/">messages.foundStickersNotModified</a></td><td>No new stickers were found for the specified query</td></tr><tr><td><a href="/constructor/messages.foundStickers/">messages.foundStickers</a></td><td>Found stickers</td></tr></tbody></table>
 
 ### Methods
 
-<table class="table"><thead><tr><th scope="col">Method</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/method/messages.searchStickers">messages.searchStickers</a></td><td>Search for stickers using AI-powered keyword search</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Method</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/method/messages.searchStickers/">messages.searchStickers</a></td><td>Search for stickers using AI-powered keyword search</td></tr></tbody></table>
 
 ### Related pages
 

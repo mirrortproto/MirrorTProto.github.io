@@ -11,25 +11,25 @@ layout: layout.njk
 
 Represents some [saved message dialogs »](/api/saved-messages/).
 
-```
-messages.savedDialogs#f83ae221 dialogs:Vector<SavedDialog> messages:Vector<Message> chats:Vector<Chat> users:Vector<User> = messages.SavedDialogs;
-messages.savedDialogsSlice#44ba9dd9 count:int dialogs:Vector<SavedDialog> messages:Vector<Message> chats:Vector<Chat> users:Vector<User> = messages.SavedDialogs;
-messages.savedDialogsNotModified#c01f6fe8 count:int = messages.SavedDialogs;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/messages.savedDialogs/">messages.savedDialogs</a>#f83ae221 dialogs:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/SavedDialog/">SavedDialog</a>&gt; messages:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/Message/">Message</a>&gt; chats:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/Chat/">Chat</a>&gt; users:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/User/">User</a>&gt; = <a href="/type/messages.SavedDialogs/" class="current_page_link">messages.SavedDialogs</a>;
+<a href="/constructor/messages.savedDialogsSlice/">messages.savedDialogsSlice</a>#44ba9dd9 count:<a href="/type/int/">int</a> dialogs:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/SavedDialog/">SavedDialog</a>&gt; messages:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/Message/">Message</a>&gt; chats:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/Chat/">Chat</a>&gt; users:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/User/">User</a>&gt; = <a href="/type/messages.SavedDialogs/" class="current_page_link">messages.SavedDialogs</a>;
+<a href="/constructor/messages.savedDialogsNotModified/">messages.savedDialogsNotModified</a>#c01f6fe8 count:<a href="/type/int/">int</a> = <a href="/type/messages.SavedDialogs/" class="current_page_link">messages.SavedDialogs</a>;
 
 ---functions---
 
-messages.getSavedDialogs#1e91fc99 flags:# exclude_pinned:flags.0?true parent_peer:flags.1?InputPeer offset_date:int offset_id:int offset_peer:InputPeer limit:int hash:long = messages.SavedDialogs;
-messages.getPinnedSavedDialogs#d63d94e0 = messages.SavedDialogs;
-messages.getSavedDialogsByID#6f6f9c96 flags:# parent_peer:flags.1?InputPeer ids:Vector<InputPeer> = messages.SavedDialogs;
-```
+<a href="/method/messages.getSavedDialogs/">messages.getSavedDialogs</a>#1e91fc99 flags:<a href="/type/%23/">#</a> exclude_pinned:flags.0?true parent_peer:flags.1?<a href="/type/InputPeer/">InputPeer</a> offset_date:<a href="/type/int/">int</a> offset_id:<a href="/type/int/">int</a> offset_peer:<a href="/type/InputPeer/">InputPeer</a> limit:<a href="/type/int/">int</a> hash:<a href="/type/long/">long</a> = <a href="/type/messages.SavedDialogs/" class="current_page_link">messages.SavedDialogs</a>;
+<a href="/method/messages.getPinnedSavedDialogs/">messages.getPinnedSavedDialogs</a>#d63d94e0 = <a href="/type/messages.SavedDialogs/" class="current_page_link">messages.SavedDialogs</a>;
+<a href="/method/messages.getSavedDialogsByID/">messages.getSavedDialogsByID</a>#6f6f9c96 flags:<a href="/type/%23/">#</a> parent_peer:flags.1?<a href="/type/InputPeer/">InputPeer</a> ids:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/InputPeer/">InputPeer</a>&gt; = <a href="/type/messages.SavedDialogs/" class="current_page_link">messages.SavedDialogs</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/messages.savedDialogs">messages.savedDialogs</a></td><td>Represents some <a href="/api/saved-messages">saved message dialogs »</a>.</td></tr><tr><td><a href="/constructor/messages.savedDialogsSlice">messages.savedDialogsSlice</a></td><td>Incomplete list of <a href="/api/saved-messages">saved message dialogs »</a> with messages and auxiliary data.</td></tr><tr><td><a href="/constructor/messages.savedDialogsNotModified">messages.savedDialogsNotModified</a></td><td>The saved dialogs haven't changed</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/messages.savedDialogs/">messages.savedDialogs</a></td><td>Represents some <a href="/api/saved-messages/">saved message dialogs »</a>.</td></tr><tr><td><a href="/constructor/messages.savedDialogsSlice/">messages.savedDialogsSlice</a></td><td>Incomplete list of <a href="/api/saved-messages/">saved message dialogs »</a> with messages and auxiliary data.</td></tr><tr><td><a href="/constructor/messages.savedDialogsNotModified/">messages.savedDialogsNotModified</a></td><td>The saved dialogs haven't changed</td></tr></tbody></table>
 
 ### Methods
 
-<table class="table"><thead><tr><th scope="col">Method</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/method/messages.getSavedDialogs">messages.getSavedDialogs</a></td><td>Returns the current <a href="/api/saved-messages">saved dialog list »</a> or <a href="/api/monoforum">monoforum topic list »</a>.</td></tr><tr><td><a href="/method/messages.getPinnedSavedDialogs">messages.getPinnedSavedDialogs</a></td><td>Get pinned <a href="/api/saved-messages">saved dialogs, see here »</a> for more info.</td></tr><tr><td><a href="/method/messages.getSavedDialogsByID">messages.getSavedDialogsByID</a></td><td>Obtain information about specific <a href="/api/saved-messages#saved-message-dialogs">saved message dialogs »</a> or <a href="/api/monoforum">monoforum topics »</a>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Method</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/method/messages.getSavedDialogs/">messages.getSavedDialogs</a></td><td>Returns the current <a href="/api/saved-messages/">saved dialog list »</a> or <a href="/api/monoforum/">monoforum topic list »</a>.</td></tr><tr><td><a href="/method/messages.getPinnedSavedDialogs/">messages.getPinnedSavedDialogs</a></td><td>Get pinned <a href="/api/saved-messages/">saved dialogs, see here »</a> for more info.</td></tr><tr><td><a href="/method/messages.getSavedDialogsByID/">messages.getSavedDialogsByID</a></td><td>Obtain information about specific <a href="/api/saved-messages/#saved-message-dialogs">saved message dialogs »</a> or <a href="/api/monoforum/">monoforum topics »</a>.</td></tr></tbody></table>
 
 ### Related pages
 

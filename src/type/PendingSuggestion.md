@@ -11,13 +11,13 @@ layout: layout.njk
 
 Represents a [custom pending suggestion »](/api/config/#custom-suggestions).
 
-```
-pendingSuggestion#e7e82e12 suggestion:string title:TextWithEntities description:TextWithEntities url:string = PendingSuggestion;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/pendingSuggestion/">pendingSuggestion</a>#e7e82e12 suggestion:<a href="/type/string/">string</a> title:<a href="/type/TextWithEntities/">TextWithEntities</a> description:<a href="/type/TextWithEntities/">TextWithEntities</a> url:<a href="/type/string/">string</a> = <a href="/type/PendingSuggestion/" class="current_page_link">PendingSuggestion</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/pendingSuggestion">pendingSuggestion</a></td><td>Represents a <a href="/api/config#custom-suggestions">custom pending suggestion »</a>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/pendingSuggestion/">pendingSuggestion</a></td><td>Represents a <a href="/api/config/#custom-suggestions">custom pending suggestion »</a>.</td></tr></tbody></table>
 
 ### Related pages
 

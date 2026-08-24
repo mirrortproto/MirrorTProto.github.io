@@ -3,7 +3,7 @@ title: "DB schema"
 original: "https://core.telegram.org/api/file-references/db-schema"
 section: api
 description: "This is the latest TL schema of the file reference database, contained by the current file reference map file »:"
-crumbs: [{"title":"API","url":"/api/"},{"title":"DB schema","url":"https://core.telegram.org/api/file-references%2Fdb-schema"}]
+crumbs: [{"title":"API","url":"/api/"},{"title":"DB schema","url":"/api/file-references/db-schema/"}]
 layout: layout.njk
 ---
 

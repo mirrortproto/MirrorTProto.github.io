@@ -3,7 +3,7 @@ title: "File reference map file schema"
 original: "https://core.telegram.org/api/file-references/map-schema"
 section: api
 description: "This is the TL schema of the file reference map file »."
-crumbs: [{"title":"API","url":"/api/"},{"title":"File reference map file schema","url":"https://core.telegram.org/api/file-references%2Fmap-schema"}]
+crumbs: [{"title":"API","url":"/api/"},{"title":"File reference map file schema","url":"/api/file-references/map-schema/"}]
 layout: layout.njk
 ---
 

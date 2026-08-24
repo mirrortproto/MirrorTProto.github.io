@@ -11,9 +11,9 @@ layout: layout.njk
 
 The bot attachment menu entry is available in [groups and supergroups](/api/channel/)
 
-```
-attachMenuPeerTypeChat#509113f = AttachMenuPeerType;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/attachMenuPeerTypeChat/" class="current_page_link">attachMenuPeerTypeChat</a>#509113f = <a href="/type/AttachMenuPeerType/">AttachMenuPeerType</a>;</code></pre>
 
 ### Parameters
 

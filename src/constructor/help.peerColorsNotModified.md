@@ -11,9 +11,9 @@ layout: layout.njk
 
 The list of color palettes has not changed.
 
-```
-help.peerColorsNotModified#2ba1f5ce = help.PeerColors;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/help.peerColorsNotModified/" class="current_page_link">help.peerColorsNotModified</a>#2ba1f5ce = <a href="/type/help.PeerColors/">help.PeerColors</a>;</code></pre>
 
 ### Parameters
 

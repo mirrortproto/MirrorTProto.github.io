@@ -11,12 +11,12 @@ layout: layout.njk
 
 Clear all peer-specific autosave settings.
 
-```
-boolFalse#bc799737 = Bool;
-boolTrue#997275b5 = Bool;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/boolFalse/">boolFalse</a>#bc799737 = <a href="/type/Bool/">Bool</a>;
+<a href="/constructor/boolTrue/">boolTrue</a>#997275b5 = <a href="/type/Bool/">Bool</a>;
 ---functions---
-account.deleteAutoSaveExceptions#53bc0020 = Bool;
-```
+<a href="/method/account.deleteAutoSaveExceptions/" class="current_page_link">account.deleteAutoSaveExceptions</a>#53bc0020 = <a href="/type/Bool/">Bool</a>;</code></pre>
 
 ### Parameters
 

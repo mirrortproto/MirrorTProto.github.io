@@ -11,16 +11,16 @@ layout: layout.njk
 
 Obtain information about a [Telegram Premium giveaway »](/api/giveaways/).
 
-```
-payments.giveawayInfo#4367daa0 flags:# participating:flags.0?true preparing_results:flags.3?true start_date:int joined_too_early_date:flags.1?int admin_disallowed_chat_id:flags.2?long disallowed_country:flags.4?string = payments.GiveawayInfo;
-payments.giveawayInfoResults#e175e66f flags:# winner:flags.0?true refunded:flags.1?true start_date:int gift_code_slug:flags.3?string stars_prize:flags.4?long finish_date:int winners_count:int activated_count:flags.2?int = payments.GiveawayInfo;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/payments.giveawayInfo/">payments.giveawayInfo</a>#4367daa0 flags:<a href="/type/%23/">#</a> participating:flags.0?true preparing_results:flags.3?true start_date:<a href="/type/int/">int</a> joined_too_early_date:flags.1?<a href="/type/int/">int</a> admin_disallowed_chat_id:flags.2?<a href="/type/long/">long</a> disallowed_country:flags.4?<a href="/type/string/">string</a> = <a href="/type/payments.GiveawayInfo/">payments.GiveawayInfo</a>;
+<a href="/constructor/payments.giveawayInfoResults/">payments.giveawayInfoResults</a>#e175e66f flags:<a href="/type/%23/">#</a> winner:flags.0?true refunded:flags.1?true start_date:<a href="/type/int/">int</a> gift_code_slug:flags.3?<a href="/type/string/">string</a> stars_prize:flags.4?<a href="/type/long/">long</a> finish_date:<a href="/type/int/">int</a> winners_count:<a href="/type/int/">int</a> activated_count:flags.2?<a href="/type/int/">int</a> = <a href="/type/payments.GiveawayInfo/">payments.GiveawayInfo</a>;
 ---functions---
-payments.getGiveawayInfo#f4239425 peer:InputPeer msg_id:int = payments.GiveawayInfo;
-```
+<a href="/method/payments.getGiveawayInfo/" class="current_page_link">payments.getGiveawayInfo</a>#f4239425 peer:<a href="/type/InputPeer/">InputPeer</a> msg_id:<a href="/type/int/">int</a> = <a href="/type/payments.GiveawayInfo/">payments.GiveawayInfo</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>The peer where the giveaway was posted.</td></tr><tr><td><strong>msg_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Message ID of the <a href="/constructor/messageActionGiveawayLaunch">messageActionGiveawayLaunch</a> service message</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer/">InputPeer</a></td><td>The peer where the giveaway was posted.</td></tr><tr><td><strong>msg_id</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>Message ID of the <a href="/constructor/messageActionGiveawayLaunch/">messageActionGiveawayLaunch</a> service message</td></tr></tbody></table>
 
 ### Result
 

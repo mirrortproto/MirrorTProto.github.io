@@ -11,13 +11,13 @@ layout: layout.njk
 
 Constructor for setting up a new [2FA SRP password](/api/srp/)
 
-```
-account.passwordInputSettings#c23727c9 flags:# new_algo:flags.0?PasswordKdfAlgo new_password_hash:flags.0?bytes hint:flags.0?string email:flags.1?string new_secure_settings:flags.2?SecureSecretSettings = account.PasswordInputSettings;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/account.passwordInputSettings/">account.passwordInputSettings</a>#c23727c9 flags:<a href="/type/%23/">#</a> new_algo:flags.0?<a href="/type/PasswordKdfAlgo/">PasswordKdfAlgo</a> new_password_hash:flags.0?<a href="/type/bytes/">bytes</a> hint:flags.0?<a href="/type/string/">string</a> email:flags.1?<a href="/type/string/">string</a> new_secure_settings:flags.2?<a href="/type/SecureSecretSettings/">SecureSecretSettings</a> = <a href="/type/account.PasswordInputSettings/" class="current_page_link">account.PasswordInputSettings</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/account.passwordInputSettings">account.passwordInputSettings</a></td><td>Settings for setting up a new password</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/account.passwordInputSettings/">account.passwordInputSettings</a></td><td>Settings for setting up a new password</td></tr></tbody></table>
 
 ### Related pages
 

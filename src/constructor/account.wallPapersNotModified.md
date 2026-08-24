@@ -11,9 +11,9 @@ layout: layout.njk
 
 No new [wallpapers](/api/wallpapers/) were found
 
-```
-account.wallPapersNotModified#1c199183 = account.WallPapers;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/account.wallPapersNotModified/" class="current_page_link">account.wallPapersNotModified</a>#1c199183 = <a href="/type/account.WallPapers/">account.WallPapers</a>;</code></pre>
 
 ### Parameters
 

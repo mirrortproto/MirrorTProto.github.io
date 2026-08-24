@@ -11,13 +11,13 @@ layout: layout.njk
 
 Used if the user wishes to start a channel/supergroup [giveaway](/api/giveaways/) or send some [giftcodes](/api/giveaways/) to members of a channel/supergroup, in exchange for [boosts](/api/boost/).
 
-```
-inputInvoicePremiumGiftCode#98986c0d purpose:InputStorePaymentPurpose option:PremiumGiftCodeOption = InputInvoice;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputInvoicePremiumGiftCode/" class="current_page_link">inputInvoicePremiumGiftCode</a>#98986c0d purpose:<a href="/type/InputStorePaymentPurpose/">InputStorePaymentPurpose</a> option:<a href="/type/PremiumGiftCodeOption/">PremiumGiftCodeOption</a> = <a href="/type/InputInvoice/">InputInvoice</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>purpose</strong></td><td style="text-align: center;"><a href="/type/InputStorePaymentPurpose">InputStorePaymentPurpose</a></td><td>Should be populated with <a href="/constructor/inputStorePaymentPremiumGiveaway">inputStorePaymentPremiumGiveaway</a> for <a href="/api/giveaways">giveaways</a> and <a href="/constructor/inputStorePaymentPremiumGiftCode">inputStorePaymentPremiumGiftCode</a> for <a href="/api/giveaways">gifts</a>.</td></tr><tr><td><strong>option</strong></td><td style="text-align: center;"><a href="/type/PremiumGiftCodeOption">PremiumGiftCodeOption</a></td><td>Should be populated with one of the giveaway options returned by <a href="/method/payments.getPremiumGiftCodeOptions">payments.getPremiumGiftCodeOptions</a>, see the <a href="/api/giveaways">giveaways »</a> documentation for more info.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>purpose</strong></td><td style="text-align: center;"><a href="/type/InputStorePaymentPurpose/">InputStorePaymentPurpose</a></td><td>Should be populated with <a href="/constructor/inputStorePaymentPremiumGiveaway/">inputStorePaymentPremiumGiveaway</a> for <a href="/api/giveaways/">giveaways</a> and <a href="/constructor/inputStorePaymentPremiumGiftCode/">inputStorePaymentPremiumGiftCode</a> for <a href="/api/giveaways/">gifts</a>.</td></tr><tr><td><strong>option</strong></td><td style="text-align: center;"><a href="/type/PremiumGiftCodeOption/">PremiumGiftCodeOption</a></td><td>Should be populated with one of the giveaway options returned by <a href="/method/payments.getPremiumGiftCodeOptions/">payments.getPremiumGiftCodeOptions</a>, see the <a href="/api/giveaways/">giveaways »</a> documentation for more info.</td></tr></tbody></table>
 
 ### Type
 

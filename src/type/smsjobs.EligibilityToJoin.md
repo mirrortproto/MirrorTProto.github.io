@@ -10,18 +10,18 @@ layout: layout.njk
 
 SMS jobs eligibility
 
-```
-smsjobs.eligibleToJoin#dc8b44cf terms_url:string monthly_sent_sms:int = smsjobs.EligibilityToJoin;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/smsjobs.eligibleToJoin/">smsjobs.eligibleToJoin</a>#dc8b44cf terms_url:<a href="/type/string/">string</a> monthly_sent_sms:<a href="/type/int/">int</a> = <a href="/type/smsjobs.EligibilityToJoin/" class="current_page_link">smsjobs.EligibilityToJoin</a>;
 
 ---functions---
 
-smsjobs.isEligibleToJoin#edc39d0 = smsjobs.EligibilityToJoin;
-```
+<a href="/method/smsjobs.isEligibleToJoin/">smsjobs.isEligibleToJoin</a>#edc39d0 = <a href="/type/smsjobs.EligibilityToJoin/" class="current_page_link">smsjobs.EligibilityToJoin</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/smsjobs.eligibleToJoin">smsjobs.eligibleToJoin</a></td><td>SMS jobs eligibility</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/smsjobs.eligibleToJoin/">smsjobs.eligibleToJoin</a></td><td>SMS jobs eligibility</td></tr></tbody></table>
 
 ### Methods
 
-<table class="table"><thead><tr><th scope="col">Method</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/method/smsjobs.isEligibleToJoin">smsjobs.isEligibleToJoin</a></td><td>Check if we can process SMS jobs (official clients only).</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Method</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/method/smsjobs.isEligibleToJoin/">smsjobs.isEligibleToJoin</a></td><td>Check if we can process SMS jobs (official clients only).</td></tr></tbody></table>

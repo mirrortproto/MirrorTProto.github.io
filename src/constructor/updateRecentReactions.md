@@ -11,9 +11,9 @@ layout: layout.njk
 
 The list of recent [message reactions](/api/reactions/) has changed
 
-```
-updateRecentReactions#6f7863f4 = Update;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/updateRecentReactions/" class="current_page_link">updateRecentReactions</a>#6f7863f4 = <a href="/type/Update/">Update</a>;</code></pre>
 
 ### Parameters
 

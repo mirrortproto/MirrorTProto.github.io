@@ -11,9 +11,9 @@ layout: layout.njk
 
 No new stickers were found for the given query
 
-```
-messages.stickersNotModified#f1749a22 = messages.Stickers;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/messages.stickersNotModified/" class="current_page_link">messages.stickersNotModified</a>#f1749a22 = <a href="/type/messages.Stickers/">messages.Stickers</a>;</code></pre>
 
 ### Parameters
 

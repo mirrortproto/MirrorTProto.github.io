@@ -17,7 +17,7 @@ e2e.chain.changeSetSharedKey#987a2158 shared_key:e2e.chain.SharedKey = e2e.chain
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>shared_key</strong></td><td style="text-align: center;"><a href="/type/e2e.chain.SharedKey">e2e.chain.SharedKey</a></td><td>Encrypted shared key material for all participants in the current group state.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>shared_key</strong></td><td style="text-align: center;"><a href="/type/e2e.chain.SharedKey/">e2e.chain.SharedKey</a></td><td>Encrypted shared key material for all participants in the current group state.</td></tr></tbody></table>
 
 ### Type
 

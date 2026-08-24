@@ -11,6 +11,6 @@ layout: layout.njk
 
 VoIP decrypted data block
 
-```
-Type schema is not available in the selected layer.
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code>Type schema is not available in the selected layer.</code></pre>

@@ -11,9 +11,9 @@ layout: layout.njk
 
 The list of recent [emoji statuses](/api/emoji-status/) has changed
 
-```
-updateRecentEmojiStatuses#30f443db = Update;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/updateRecentEmojiStatuses/" class="current_page_link">updateRecentEmojiStatuses</a>#30f443db = <a href="/type/Update/">Update</a>;</code></pre>
 
 ### Parameters
 

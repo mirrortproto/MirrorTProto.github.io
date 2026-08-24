@@ -11,9 +11,9 @@ layout: layout.njk
 
 PDF document image. MIME type: `application/pdf`.
 
-```
-storage.filePdf#ae1e508d = storage.FileType;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/storage.filePdf/" class="current_page_link">storage.filePdf</a>#ae1e508d = <a href="/type/storage.FileType/">storage.FileType</a>;</code></pre>
 
 ### Parameters
 

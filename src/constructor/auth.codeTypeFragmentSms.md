@@ -11,9 +11,9 @@ layout: layout.njk
 
 The next time, the authentication code will be delivered via [fragment.com](https://fragment.com)
 
-```
-auth.codeTypeFragmentSms#6ed998c = auth.CodeType;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/auth.codeTypeFragmentSms/" class="current_page_link">auth.codeTypeFragmentSms</a>#6ed998c = <a href="/type/auth.CodeType/">auth.CodeType</a>;</code></pre>
 
 ### Parameters
 

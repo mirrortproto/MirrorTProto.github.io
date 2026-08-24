@@ -11,13 +11,13 @@ layout: layout.njk
 
 Timezone information that may be used elsewhere in the API, such as to set [Telegram Business opening hours »](/api/business/#opening-hours).
 
-```
-help.timezonesList#7b74ed71 timezones:Vector<Timezone> hash:int = help.TimezonesList;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/help.timezonesList/" class="current_page_link">help.timezonesList</a>#7b74ed71 timezones:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/Timezone/">Timezone</a>&gt; hash:<a href="/type/int/">int</a> = <a href="/type/help.TimezonesList/">help.TimezonesList</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>timezones</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/Timezone">Timezone</a>&gt;</td><td>Timezones</td></tr><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td><a href="/api/offsets#hash-generation">Hash used for caching, for more info click here</a></td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>timezones</strong></td><td style="text-align: center;"><a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/Timezone/">Timezone</a>&gt;</td><td>Timezones</td></tr><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td><a href="/api/offsets/#hash-generation">Hash used for caching, for more info click here</a></td></tr></tbody></table>
 
 ### Type
 

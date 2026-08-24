@@ -17,7 +17,7 @@ e2e.callPacketLargeMsgId#1ce56c2d = e2e.CallPacketLargeMsgId;
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/e2e.callPacketLargeMsgId">e2e.callPacketLargeMsgId</a></td><td>Marker constructor whose CRC32 constructor ID is used when signing the large message ID produced while encrypting <a href="/api/end-to-end/group-calls#packet-encryption">group call packets</a>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/e2e.callPacketLargeMsgId/">e2e.callPacketLargeMsgId</a></td><td>Marker constructor whose CRC32 constructor ID is used when signing the large message ID produced while encrypting <a href="/api/end-to-end/group-calls/#packet-encryption">group call packets</a>.</td></tr></tbody></table>
 
 ### Related pages
 

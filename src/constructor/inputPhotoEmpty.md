@@ -11,9 +11,9 @@ layout: layout.njk
 
 Empty constructor.
 
-```
-inputPhotoEmpty#1cd7bf0d = InputPhoto;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputPhotoEmpty/" class="current_page_link">inputPhotoEmpty</a>#1cd7bf0d = <a href="/type/InputPhoto/">InputPhoto</a>;</code></pre>
 
 ### Parameters
 

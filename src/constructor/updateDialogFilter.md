@@ -11,13 +11,13 @@ layout: layout.njk
 
 A new [folder](/api/folders/) was added
 
-```
-updateDialogFilter#26ffde7d flags:# id:int filter:flags.0?DialogFilter = Update;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/updateDialogFilter/" class="current_page_link">updateDialogFilter</a>#26ffde7d flags:<a href="/type/%23/">#</a> id:<a href="/type/int/">int</a> filter:flags.0?<a href="/type/DialogFilter/">DialogFilter</a> = <a href="/type/Update/">Update</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>Flags, see <a href="/mtproto/TL-combinators#conditional-fields">TL conditional fields</a></td></tr><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td><a href="/api/folders">Folder</a> ID</td></tr><tr><td><strong>filter</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/DialogFilter">DialogFilter</a></td><td><a href="/api/folders">Folder</a> info</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23/">#</a></td><td>Flags, see <a href="/mtproto/TL-combinators/#conditional-fields">TL conditional fields</a></td></tr><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td><a href="/api/folders/">Folder</a> ID</td></tr><tr><td><strong>filter</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators/#conditional-fields">flags</a>.0?<a href="/type/DialogFilter/">DialogFilter</a></td><td><a href="/api/folders/">Folder</a> info</td></tr></tbody></table>
 
 ### Type
 

@@ -15,16 +15,16 @@ This method is primarily used to display an auction badge in the chat list immed
 
 To instead fetch the full state of a single auction, subscribe to its real-time updates and render the detailed auction UI (typically when the user opens a specific auction), use [payments.getStarGiftAuctionState](/method/payments.getStarGiftAuctionState/).
 
-```
-payments.starGiftActiveAuctionsNotModified#db33dad0 = payments.StarGiftActiveAuctions;
-payments.starGiftActiveAuctions#aef6abbc auctions:Vector<StarGiftActiveAuctionState> users:Vector<User> chats:Vector<Chat> = payments.StarGiftActiveAuctions;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/payments.starGiftActiveAuctionsNotModified/">payments.starGiftActiveAuctionsNotModified</a>#db33dad0 = <a href="/type/payments.StarGiftActiveAuctions/">payments.StarGiftActiveAuctions</a>;
+<a href="/constructor/payments.starGiftActiveAuctions/">payments.starGiftActiveAuctions</a>#aef6abbc auctions:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/StarGiftActiveAuctionState/">StarGiftActiveAuctionState</a>&gt; users:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/User/">User</a>&gt; chats:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/Chat/">Chat</a>&gt; = <a href="/type/payments.StarGiftActiveAuctions/">payments.StarGiftActiveAuctions</a>;
 ---functions---
-payments.getStarGiftActiveAuctions#a5d0514d hash:long = payments.StarGiftActiveAuctions;
-```
+<a href="/method/payments.getStarGiftActiveAuctions/" class="current_page_link">payments.getStarGiftActiveAuctions</a>#a5d0514d hash:<a href="/type/long/">long</a> = <a href="/type/payments.StarGiftActiveAuctions/">payments.StarGiftActiveAuctions</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Hash generated <a href="/api/auctions">as specified here »</a></td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/long/">long</a></td><td>Hash generated <a href="/api/auctions/">as specified here »</a></td></tr></tbody></table>
 
 ### Result
 

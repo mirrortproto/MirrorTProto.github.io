@@ -13,13 +13,13 @@ An owned or [hosted collectible gift »](/api/gifts/#hosted-collectible-gifts) a
 
 Note that once set, the status will be returned to users as a [emojiStatusCollectible](/constructor/emojiStatusCollectible/) constructor, instead (which **cannot** be passed to [account.updateEmojiStatus](/method/account.updateEmojiStatus/), and must be converted to an [inputEmojiStatusCollectible](/constructor/inputEmojiStatusCollectible/) first).
 
-```
-inputEmojiStatusCollectible#7141dbf flags:# collectible_id:long until:flags.0?int = EmojiStatus;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputEmojiStatusCollectible/" class="current_page_link">inputEmojiStatusCollectible</a>#7141dbf flags:<a href="/type/%23/">#</a> collectible_id:<a href="/type/long/">long</a> until:flags.0?<a href="/type/int/">int</a> = <a href="/type/EmojiStatus/">EmojiStatus</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>Flags, see <a href="/mtproto/TL-combinators#conditional-fields">TL conditional fields</a></td></tr><tr><td><strong>collectible_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>ID of the collectible (from <a href="/constructor/starGiftUnique">starGiftUnique</a>.<code>id</code>).</td></tr><tr><td><strong>until</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/int">int</a></td><td>If set, the emoji status will be active until the specified unixtime.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23/">#</a></td><td>Flags, see <a href="/mtproto/TL-combinators/#conditional-fields">TL conditional fields</a></td></tr><tr><td><strong>collectible_id</strong></td><td style="text-align: center;"><a href="/type/long/">long</a></td><td>ID of the collectible (from <a href="/constructor/starGiftUnique/">starGiftUnique</a>.<code>id</code>).</td></tr><tr><td><strong>until</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators/#conditional-fields">flags</a>.0?<a href="/type/int/">int</a></td><td>If set, the emoji status will be active until the specified unixtime.</td></tr></tbody></table>
 
 ### Type
 

@@ -11,10 +11,10 @@ layout: layout.njk
 
 Empty constructor, no media content.
 
-```
-===8===
-decryptedMessageMediaEmpty#89f5c4a = DecryptedMessageMedia;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code>===8===
+<a href="/constructor/decryptedMessageMediaEmpty/" class="current_page_link">decryptedMessageMediaEmpty</a>#89f5c4a = <a href="/type/DecryptedMessageMedia/">DecryptedMessageMedia</a>;</code></pre>
 
 ### Parameters
 

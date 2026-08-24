@@ -11,9 +11,9 @@ layout: layout.njk
 
 WEBP image. MIME type: `image/webp`.
 
-```
-storage.fileWebp#1081464c = storage.FileType;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/storage.fileWebp/" class="current_page_link">storage.fileWebp</a>#1081464c = <a href="/type/storage.FileType/">storage.FileType</a>;</code></pre>
 
 ### Parameters
 

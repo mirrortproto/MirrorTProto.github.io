@@ -11,16 +11,16 @@ layout: layout.njk
 
 Get songs [pinned to the user's profile, see here »](/api/profile/#music) for more info.
 
-```
-users.savedMusicNotModified#e3878aa4 count:int = users.SavedMusic;
-users.savedMusic#34a2f297 count:int documents:Vector<Document> = users.SavedMusic;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/users.savedMusicNotModified/">users.savedMusicNotModified</a>#e3878aa4 count:<a href="/type/int/">int</a> = <a href="/type/users.SavedMusic/">users.SavedMusic</a>;
+<a href="/constructor/users.savedMusic/">users.savedMusic</a>#34a2f297 count:<a href="/type/int/">int</a> documents:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/Document/">Document</a>&gt; = <a href="/type/users.SavedMusic/">users.SavedMusic</a>;
 ---functions---
-users.getSavedMusic#788d7fe3 id:InputUser offset:int limit:int hash:long = users.SavedMusic;
-```
+<a href="/method/users.getSavedMusic/" class="current_page_link">users.getSavedMusic</a>#788d7fe3 id:<a href="/type/InputUser/">InputUser</a> offset:<a href="/type/int/">int</a> limit:<a href="/type/int/">int</a> hash:<a href="/type/long/">long</a> = <a href="/type/users.SavedMusic/">users.SavedMusic</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/InputUser">InputUser</a></td><td>The ID of the user.</td></tr><tr><td><strong>offset</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Offset for pagination.</td></tr><tr><td><strong>limit</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Maximum number of results to return, <a href="/api/offsets">see pagination</a></td></tr><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td><a href="/api/offsets#hash-generation">Hash »</a> of the IDs of previously added songs, to avoid returning any result if there was no change.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/InputUser/">InputUser</a></td><td>The ID of the user.</td></tr><tr><td><strong>offset</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>Offset for pagination.</td></tr><tr><td><strong>limit</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>Maximum number of results to return, <a href="/api/offsets/">see pagination</a></td></tr><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/long/">long</a></td><td><a href="/api/offsets/#hash-generation">Hash »</a> of the IDs of previously added songs, to avoid returning any result if there was no change.</td></tr></tbody></table>
 
 ### Result
 

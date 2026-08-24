@@ -11,9 +11,9 @@ layout: layout.njk
 
 Return only round videos and voice notes
 
-```
-inputMessagesFilterRoundVoice#7a7c17a4 = MessagesFilter;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputMessagesFilterRoundVoice/" class="current_page_link">inputMessagesFilterRoundVoice</a>#7a7c17a4 = <a href="/type/MessagesFilter/">MessagesFilter</a>;</code></pre>
 
 ### Parameters
 

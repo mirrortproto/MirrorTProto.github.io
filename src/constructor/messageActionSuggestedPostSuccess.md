@@ -11,13 +11,13 @@ layout: layout.njk
 
 A [suggested post »](/api/suggested-posts/) was successfully posted, and payment for it was successfully received.
 
-```
-messageActionSuggestedPostSuccess#95ddcf69 price:StarsAmount = MessageAction;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/messageActionSuggestedPostSuccess/" class="current_page_link">messageActionSuggestedPostSuccess</a>#95ddcf69 price:<a href="/type/StarsAmount/">StarsAmount</a> = <a href="/type/MessageAction/">MessageAction</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>price</strong></td><td style="text-align: center;"><a href="/type/StarsAmount">StarsAmount</a></td><td>The price.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>price</strong></td><td style="text-align: center;"><a href="/type/StarsAmount/">StarsAmount</a></td><td>The price.</td></tr></tbody></table>
 
 ### Type
 

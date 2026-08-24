@@ -11,13 +11,13 @@ layout: layout.njk
 
 Connecting or disconnecting a [business bot](/api/bots/connected-business-bots/) or changing the connection settings will emit an [updateBotBusinessConnect](/constructor/updateBotBusinessConnect/) update to the bot, with the new settings and a `connection_id` that will be used by the bot to handle updates from and send messages as the user.
 
-```
-updateBotBusinessConnect#8ae5c97a connection:BotBusinessConnection qts:int = Update;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/updateBotBusinessConnect/" class="current_page_link">updateBotBusinessConnect</a>#8ae5c97a connection:<a href="/type/BotBusinessConnection/">BotBusinessConnection</a> qts:<a href="/type/int/">int</a> = <a href="/type/Update/">Update</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>connection</strong></td><td style="text-align: center;"><a href="/type/BotBusinessConnection">BotBusinessConnection</a></td><td>Business connection settings</td></tr><tr><td><strong>qts</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>New <strong>qts</strong> value, see <a href="/api/updates">updates »</a> for more info.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>connection</strong></td><td style="text-align: center;"><a href="/type/BotBusinessConnection/">BotBusinessConnection</a></td><td>Business connection settings</td></tr><tr><td><strong>qts</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>New <strong>qts</strong> value, see <a href="/api/updates/">updates »</a> for more info.</td></tr></tbody></table>
 
 ### Type
 

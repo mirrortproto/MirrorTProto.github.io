@@ -11,9 +11,9 @@ layout: layout.njk
 
 Peer type: [supergroup](/api/channel/)
 
-```
-inlineQueryPeerTypeMegagroup#5ec4be43 = InlineQueryPeerType;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inlineQueryPeerTypeMegagroup/" class="current_page_link">inlineQueryPeerTypeMegagroup</a>#5ec4be43 = <a href="/type/InlineQueryPeerType/">InlineQueryPeerType</a>;</code></pre>
 
 ### Parameters
 

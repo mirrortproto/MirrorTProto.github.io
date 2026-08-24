@@ -11,9 +11,9 @@ layout: layout.njk
 
 Returned only by auction methods (never by updates) if the passed `version` is equal to the remote [auction »](/api/auctions/).`version`, meaning auction information hasn't changed over the locally cached version.
 
-```
-starGiftAuctionStateNotModified#fe333952 = StarGiftAuctionState;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/starGiftAuctionStateNotModified/" class="current_page_link">starGiftAuctionStateNotModified</a>#fe333952 = <a href="/type/StarGiftAuctionState/">StarGiftAuctionState</a>;</code></pre>
 
 ### Parameters
 

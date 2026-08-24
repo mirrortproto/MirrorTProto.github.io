@@ -40,7 +40,7 @@
 {% if description %}<meta property="og:description" content="{{ description | htmlattr }}">{% endif %}
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="MTProto Mirror">
-<meta property="og:url" content="https://mirrortproto.github.io{{ page.url }}">
+<meta property="og:url" content="https://mirrortproto.github.io{{ page.url | urlpath }}">
 <meta property="og:image" content="https://mirrortproto.github.io/apple-touch-icon.png">
 <meta name="twitter:card" content="summary">
 {# Telegram Instant View: заставляем IV-бота применить готовый шаблон Medium #}
@@ -49,7 +49,7 @@
 <meta name="author" content="Telegram">
 {# если появится свой канал — раскомментировать и указать @username:
 <meta name="telegram:channel" content="@YourChannel"> #}
-<link rel="canonical" href="https://mirrortproto.github.io{{ page.url }}">
+<link rel="canonical" href="https://mirrortproto.github.io{{ page.url | urlpath }}">
 <link rel="manifest" href="/manifest.webmanifest">
 <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">

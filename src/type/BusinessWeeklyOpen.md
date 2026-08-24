@@ -11,13 +11,13 @@ layout: layout.njk
 
 A time interval, indicating the opening hours of a [Telegram Business](/api/business/#opening-hours).
 
-```
-businessWeeklyOpen#120b1ab9 start_minute:int end_minute:int = BusinessWeeklyOpen;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/businessWeeklyOpen/">businessWeeklyOpen</a>#120b1ab9 start_minute:<a href="/type/int/">int</a> end_minute:<a href="/type/int/">int</a> = <a href="/type/BusinessWeeklyOpen/" class="current_page_link">BusinessWeeklyOpen</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/businessWeeklyOpen">businessWeeklyOpen</a></td><td>A time interval, indicating the opening hours of a business.<br><br>Note that opening hours specified by the user must be appropriately validated and transformed before uploading them to the server, as specified <a href="/api/business#opening-hours">here »</a>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/businessWeeklyOpen/">businessWeeklyOpen</a></td><td>A time interval, indicating the opening hours of a business.<br><br>Note that opening hours specified by the user must be appropriately validated and transformed before uploading them to the server, as specified <a href="/api/business/#opening-hours">here »</a>.</td></tr></tbody></table>
 
 ### Related pages
 

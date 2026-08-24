@@ -11,13 +11,13 @@ layout: layout.njk
 
 Bots may use this method to answer a [guest mode »](/api/bots/guest-mode/) query received via an [updateBotGuestChatQuery](/constructor/updateBotGuestChatQuery/) update, providing the message to post into the chat as a guest, see [here »](/api/bots/guest-mode/#handling-guest-queries-bot-side) for more info.
 
-```
- Method schema is available as of layer 225. Switch »
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code>Method schema is available as of layer 225. <a href="?layer=225">Switch »</a></code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>query_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Query identifier from the <a href="/constructor/updateBotGuestChatQuery">updateBotGuestChatQuery</a>.<code>query_id</code> field</td></tr><tr><td><strong>result</strong></td><td style="text-align: center;"><a href="/type/InputBotInlineResult">InputBotInlineResult</a></td><td>The result to send as the answer to the query</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>query_id</strong></td><td style="text-align: center;"><a href="/type/long/">long</a></td><td>Query identifier from the <a href="/constructor/updateBotGuestChatQuery/">updateBotGuestChatQuery</a>.<code>query_id</code> field</td></tr><tr><td><strong>result</strong></td><td style="text-align: center;"><a href="/type/InputBotInlineResult/">InputBotInlineResult</a></td><td>The result to send as the answer to the query</td></tr></tbody></table>
 
 ### Result
 

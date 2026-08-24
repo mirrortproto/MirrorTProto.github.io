@@ -11,9 +11,9 @@ layout: layout.njk
 
 No location (normal supergroup)
 
-```
-channelLocationEmpty#bfb5ad8b = ChannelLocation;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/channelLocationEmpty/" class="current_page_link">channelLocationEmpty</a>#bfb5ad8b = <a href="/type/ChannelLocation/">ChannelLocation</a>;</code></pre>
 
 ### Parameters
 

@@ -11,22 +11,22 @@ layout: layout.njk
 
 Available [gifts »](/api/gifts/).
 
-```
-payments.starGiftsNotModified#a388a368 = payments.StarGifts;
-payments.starGifts#2ed82995 hash:int gifts:Vector<StarGift> chats:Vector<Chat> users:Vector<User> = payments.StarGifts;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/payments.starGiftsNotModified/">payments.starGiftsNotModified</a>#a388a368 = <a href="/type/payments.StarGifts/" class="current_page_link">payments.StarGifts</a>;
+<a href="/constructor/payments.starGifts/">payments.starGifts</a>#2ed82995 hash:<a href="/type/int/">int</a> gifts:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/StarGift/">StarGift</a>&gt; chats:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/Chat/">Chat</a>&gt; users:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/User/">User</a>&gt; = <a href="/type/payments.StarGifts/" class="current_page_link">payments.StarGifts</a>;
 
 ---functions---
 
-payments.getStarGifts#c4563590 hash:int = payments.StarGifts;
-```
+<a href="/method/payments.getStarGifts/">payments.getStarGifts</a>#c4563590 hash:<a href="/type/int/">int</a> = <a href="/type/payments.StarGifts/" class="current_page_link">payments.StarGifts</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/payments.starGiftsNotModified">payments.starGiftsNotModified</a></td><td>The list of available <a href="/api/gifts">gifts »</a> hasn't changed.</td></tr><tr><td><a href="/constructor/payments.starGifts">payments.starGifts</a></td><td>Available <a href="/api/gifts">gifts »</a>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/payments.starGiftsNotModified/">payments.starGiftsNotModified</a></td><td>The list of available <a href="/api/gifts/">gifts »</a> hasn't changed.</td></tr><tr><td><a href="/constructor/payments.starGifts/">payments.starGifts</a></td><td>Available <a href="/api/gifts/">gifts »</a>.</td></tr></tbody></table>
 
 ### Methods
 
-<table class="table"><thead><tr><th scope="col">Method</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/method/payments.getStarGifts">payments.getStarGifts</a></td><td>Get a list of available <a href="/api/gifts">gifts, see here »</a> for more info.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Method</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/method/payments.getStarGifts/">payments.getStarGifts</a></td><td>Get a list of available <a href="/api/gifts/">gifts, see here »</a> for more info.</td></tr></tbody></table>
 
 ### Related pages
 

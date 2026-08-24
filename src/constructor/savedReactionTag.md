@@ -11,13 +11,13 @@ layout: layout.njk
 
 Info about a [saved message reaction tag »](/api/saved-messages/#tags).
 
-```
-savedReactionTag#cb6ff828 flags:# reaction:Reaction title:flags.0?string count:int = SavedReactionTag;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/savedReactionTag/" class="current_page_link">savedReactionTag</a>#cb6ff828 flags:<a href="/type/%23/">#</a> reaction:<a href="/type/Reaction/">Reaction</a> title:flags.0?<a href="/type/string/">string</a> count:<a href="/type/int/">int</a> = <a href="/type/SavedReactionTag/">SavedReactionTag</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>Flags, see <a href="/mtproto/TL-combinators#conditional-fields">TL conditional fields</a></td></tr><tr><td><strong>reaction</strong></td><td style="text-align: center;"><a href="/type/Reaction">Reaction</a></td><td><a href="/api/reactions">Reaction</a> associated to the tag.</td></tr><tr><td><strong>title</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/string">string</a></td><td>Custom tag name assigned by the user (max 12 UTF-8 chars).</td></tr><tr><td><strong>count</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Number of messages tagged with this tag.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23/">#</a></td><td>Flags, see <a href="/mtproto/TL-combinators/#conditional-fields">TL conditional fields</a></td></tr><tr><td><strong>reaction</strong></td><td style="text-align: center;"><a href="/type/Reaction/">Reaction</a></td><td><a href="/api/reactions/">Reaction</a> associated to the tag.</td></tr><tr><td><strong>title</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators/#conditional-fields">flags</a>.0?<a href="/type/string/">string</a></td><td>Custom tag name assigned by the user (max 12 UTF-8 chars).</td></tr><tr><td><strong>count</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>Number of messages tagged with this tag.</td></tr></tbody></table>
 
 ### Type
 

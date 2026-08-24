@@ -11,22 +11,22 @@ layout: layout.njk
 
 Telegram [passport](https://core.telegram.org/passport) configuration
 
-```
-help.passportConfigNotModified#bfb9f457 = help.PassportConfig;
-help.passportConfig#a098d6af hash:int countries_langs:DataJSON = help.PassportConfig;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/help.passportConfigNotModified/">help.passportConfigNotModified</a>#bfb9f457 = <a href="/type/help.PassportConfig/" class="current_page_link">help.PassportConfig</a>;
+<a href="/constructor/help.passportConfig/">help.passportConfig</a>#a098d6af hash:<a href="/type/int/">int</a> countries_langs:<a href="/type/DataJSON/">DataJSON</a> = <a href="/type/help.PassportConfig/" class="current_page_link">help.PassportConfig</a>;
 
 ---functions---
 
-help.getPassportConfig#c661ad08 hash:int = help.PassportConfig;
-```
+<a href="/method/help.getPassportConfig/">help.getPassportConfig</a>#c661ad08 hash:<a href="/type/int/">int</a> = <a href="/type/help.PassportConfig/" class="current_page_link">help.PassportConfig</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/help.passportConfigNotModified">help.passportConfigNotModified</a></td><td>Password configuration not modified</td></tr><tr><td><a href="/constructor/help.passportConfig">help.passportConfig</a></td><td>Telegram <a href="/passport">passport</a> configuration</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/help.passportConfigNotModified/">help.passportConfigNotModified</a></td><td>Password configuration not modified</td></tr><tr><td><a href="/constructor/help.passportConfig/">help.passportConfig</a></td><td>Telegram <a href="https://core.telegram.org/passport">passport</a> configuration</td></tr></tbody></table>
 
 ### Methods
 
-<table class="table"><thead><tr><th scope="col">Method</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/method/help.getPassportConfig">help.getPassportConfig</a></td><td>Get <a href="/passport">passport</a> configuration</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Method</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/method/help.getPassportConfig/">help.getPassportConfig</a></td><td>Get <a href="https://core.telegram.org/passport">passport</a> configuration</td></tr></tbody></table>
 
 ### Related pages
 

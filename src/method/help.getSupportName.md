@@ -11,11 +11,11 @@ layout: layout.njk
 
 Get localized name of the telegram support user
 
-```
-help.supportName#8c05f1c9 name:string = help.SupportName;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/help.supportName/">help.supportName</a>#8c05f1c9 name:<a href="/type/string/">string</a> = <a href="/type/help.SupportName/">help.SupportName</a>;
 ---functions---
-help.getSupportName#d360e72c = help.SupportName;
-```
+<a href="/method/help.getSupportName/" class="current_page_link">help.getSupportName</a>#d360e72c = <a href="/type/help.SupportName/">help.SupportName</a>;</code></pre>
 
 ### Parameters
 

@@ -11,9 +11,9 @@ layout: layout.njk
 
 The list of available [gifts »](/api/gifts/) hasn't changed.
 
-```
-payments.starGiftsNotModified#a388a368 = payments.StarGifts;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/payments.starGiftsNotModified/" class="current_page_link">payments.starGiftsNotModified</a>#a388a368 = <a href="/type/payments.StarGifts/">payments.StarGifts</a>;</code></pre>
 
 ### Parameters
 

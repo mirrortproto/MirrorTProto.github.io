@@ -116,6 +116,15 @@ export default function (eleventyConfig) {
     String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
   );
 
+  // A handful of TL pages carry characters that are not URL-safe: `/type/Vector t`
+  // has a space and `/type/#` is literally the TL "nat" type. page.url reports
+  // them verbatim, which would put a raw space into <link rel="canonical"> and
+  // into <loc>, and would cut `/type/#/` short at the fragment. Encoding runs per
+  // segment so the separators survive.
+  eleventyConfig.addFilter('urlpath', (s) =>
+    String(s).split('/').map(encodeURIComponent).join('/')
+  );
+
   // Heading anchors (keep Cyrillic/Latin as-is)
   eleventyConfig.amendLibrary('md', (mdLib) =>
     mdLib.use(markdownItAnchor, {

@@ -11,9 +11,9 @@ layout: layout.njk
 
 No notification sound should be used
 
-```
-notificationSoundNone#6f0c34df = NotificationSound;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/notificationSoundNone/" class="current_page_link">notificationSoundNone</a>#6f0c34df = <a href="/type/NotificationSound/">NotificationSound</a>;</code></pre>
 
 ### Parameters
 

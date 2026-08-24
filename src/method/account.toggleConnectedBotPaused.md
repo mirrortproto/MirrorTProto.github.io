@@ -11,16 +11,16 @@ layout: layout.njk
 
 Pause or unpause a specific chat, temporarily disconnecting it from all [business bots »](/api/bots/connected-business-bots/).
 
-```
-boolFalse#bc799737 = Bool;
-boolTrue#997275b5 = Bool;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/boolFalse/">boolFalse</a>#bc799737 = <a href="/type/Bool/">Bool</a>;
+<a href="/constructor/boolTrue/">boolTrue</a>#997275b5 = <a href="/type/Bool/">Bool</a>;
 ---functions---
-account.toggleConnectedBotPaused#646e1097 peer:InputPeer paused:Bool = Bool;
-```
+<a href="/method/account.toggleConnectedBotPaused/" class="current_page_link">account.toggleConnectedBotPaused</a>#646e1097 peer:<a href="/type/InputPeer/">InputPeer</a> paused:<a href="/type/Bool/">Bool</a> = <a href="/type/Bool/">Bool</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>The chat to pause</td></tr><tr><td><strong>paused</strong></td><td style="text-align: center;"><a href="/type/Bool">Bool</a></td><td>Whether to pause or unpause the chat</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer/">InputPeer</a></td><td>The chat to pause</td></tr><tr><td><strong>paused</strong></td><td style="text-align: center;"><a href="/type/Bool/">Bool</a></td><td>Whether to pause or unpause the chat</td></tr></tbody></table>
 
 ### Result
 

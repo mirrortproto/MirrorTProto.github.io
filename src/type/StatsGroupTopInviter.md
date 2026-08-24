@@ -11,13 +11,13 @@ layout: layout.njk
 
 Most active inviter in a [supergroup](/api/channel/)
 
-```
-statsGroupTopInviter#535f779d user_id:long invitations:int = StatsGroupTopInviter;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/statsGroupTopInviter/">statsGroupTopInviter</a>#535f779d user_id:<a href="/type/long/">long</a> invitations:<a href="/type/int/">int</a> = <a href="/type/StatsGroupTopInviter/" class="current_page_link">StatsGroupTopInviter</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/statsGroupTopInviter">statsGroupTopInviter</a></td><td>Information about an active supergroup inviter</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/statsGroupTopInviter/">statsGroupTopInviter</a></td><td>Information about an active supergroup inviter</td></tr></tbody></table>
 
 ### Related pages
 

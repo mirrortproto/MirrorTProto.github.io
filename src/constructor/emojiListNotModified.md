@@ -11,9 +11,9 @@ layout: layout.njk
 
 The list of [custom emojis](/api/custom-emoji/) hasn't changed.
 
-```
-emojiListNotModified#481eadfa = EmojiList;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/emojiListNotModified/" class="current_page_link">emojiListNotModified</a>#481eadfa = <a href="/type/EmojiList/">EmojiList</a>;</code></pre>
 
 ### Parameters
 

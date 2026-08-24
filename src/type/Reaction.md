@@ -11,16 +11,16 @@ layout: layout.njk
 
 [Message reaction](/api/reactions/)
 
-```
-reactionEmpty#79f5d419 = Reaction;
-reactionEmoji#1b2286b8 emoticon:string = Reaction;
-reactionCustomEmoji#8935fc73 document_id:long = Reaction;
-reactionPaid#523da4eb = Reaction;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/reactionEmpty/">reactionEmpty</a>#79f5d419 = <a href="/type/Reaction/" class="current_page_link">Reaction</a>;
+<a href="/constructor/reactionEmoji/">reactionEmoji</a>#1b2286b8 emoticon:<a href="/type/string/">string</a> = <a href="/type/Reaction/" class="current_page_link">Reaction</a>;
+<a href="/constructor/reactionCustomEmoji/">reactionCustomEmoji</a>#8935fc73 document_id:<a href="/type/long/">long</a> = <a href="/type/Reaction/" class="current_page_link">Reaction</a>;
+<a href="/constructor/reactionPaid/">reactionPaid</a>#523da4eb = <a href="/type/Reaction/" class="current_page_link">Reaction</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/reactionEmpty">reactionEmpty</a></td><td>No reaction</td></tr><tr><td><a href="/constructor/reactionEmoji">reactionEmoji</a></td><td>Normal emoji message reaction</td></tr><tr><td><a href="/constructor/reactionCustomEmoji">reactionCustomEmoji</a></td><td><a href="/api/custom-emoji">Custom emoji</a> message reaction</td></tr><tr><td><a href="/constructor/reactionPaid">reactionPaid</a></td><td>Represents a <a href="/api/reactions#paid-reactions">paid Telegram Star reaction »</a>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/reactionEmpty/">reactionEmpty</a></td><td>No reaction</td></tr><tr><td><a href="/constructor/reactionEmoji/">reactionEmoji</a></td><td>Normal emoji message reaction</td></tr><tr><td><a href="/constructor/reactionCustomEmoji/">reactionCustomEmoji</a></td><td><a href="/api/custom-emoji/">Custom emoji</a> message reaction</td></tr><tr><td><a href="/constructor/reactionPaid/">reactionPaid</a></td><td>Represents a <a href="/api/reactions/#paid-reactions">paid Telegram Star reaction »</a>.</td></tr></tbody></table>
 
 ### Related pages
 

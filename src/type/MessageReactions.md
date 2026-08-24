@@ -11,13 +11,13 @@ layout: layout.njk
 
 [Message reactions »](/api/reactions/)
 
-```
-messageReactions#a339f0b flags:# min:flags.0?true can_see_list:flags.2?true reactions_as_tags:flags.3?true results:Vector<ReactionCount> recent_reactions:flags.1?Vector<MessagePeerReaction> top_reactors:flags.4?Vector<MessageReactor> = MessageReactions;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/messageReactions/">messageReactions</a>#a339f0b flags:<a href="/type/%23/">#</a> min:flags.0?true can_see_list:flags.2?true reactions_as_tags:flags.3?true results:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/ReactionCount/">ReactionCount</a>&gt; recent_reactions:flags.1?<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/MessagePeerReaction/">MessagePeerReaction</a>&gt; top_reactors:flags.4?<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/MessageReactor/">MessageReactor</a>&gt; = <a href="/type/MessageReactions/" class="current_page_link">MessageReactions</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/messageReactions">messageReactions</a></td><td><a href="/api/reactions">Message reactions »</a></td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/messageReactions/">messageReactions</a></td><td><a href="/api/reactions/">Message reactions »</a></td></tr></tbody></table>
 
 ### Related pages
 

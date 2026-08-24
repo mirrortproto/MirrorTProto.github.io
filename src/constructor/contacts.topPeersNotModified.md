@@ -11,9 +11,9 @@ layout: layout.njk
 
 Top peer info hasn't changed
 
-```
-contacts.topPeersNotModified#de266ef5 = contacts.TopPeers;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/contacts.topPeersNotModified/" class="current_page_link">contacts.topPeersNotModified</a>#de266ef5 = <a href="/type/contacts.TopPeers/">contacts.TopPeers</a>;</code></pre>
 
 ### Parameters
 

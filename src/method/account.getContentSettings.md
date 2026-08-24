@@ -11,11 +11,11 @@ layout: layout.njk
 
 Get sensitive content settings
 
-```
-account.contentSettings#57e28221 flags:# sensitive_enabled:flags.0?true sensitive_can_change:flags.1?true = account.ContentSettings;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/account.contentSettings/">account.contentSettings</a>#57e28221 flags:<a href="/type/%23/">#</a> sensitive_enabled:flags.0?true sensitive_can_change:flags.1?true = <a href="/type/account.ContentSettings/">account.ContentSettings</a>;
 ---functions---
-account.getContentSettings#8b9b4dae = account.ContentSettings;
-```
+<a href="/method/account.getContentSettings/" class="current_page_link">account.getContentSettings</a>#8b9b4dae = <a href="/type/account.ContentSettings/">account.ContentSettings</a>;</code></pre>
 
 ### Parameters
 

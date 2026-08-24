@@ -11,21 +11,21 @@ layout: layout.njk
 
 Indicates if the specified [global post search »](/api/search/#posts-tab) requires payment.
 
-```
-searchPostsFlood#3e0b5b6a flags:# query_is_free:flags.0?true total_daily:int remains:int wait_till:flags.1?int stars_amount:long = SearchPostsFlood;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/searchPostsFlood/">searchPostsFlood</a>#3e0b5b6a flags:<a href="/type/%23/">#</a> query_is_free:flags.0?true total_daily:<a href="/type/int/">int</a> remains:<a href="/type/int/">int</a> wait_till:flags.1?<a href="/type/int/">int</a> stars_amount:<a href="/type/long/">long</a> = <a href="/type/SearchPostsFlood/" class="current_page_link">SearchPostsFlood</a>;
 
 ---functions---
 
-channels.checkSearchPostsFlood#22567115 flags:# query:flags.0?string = SearchPostsFlood;
-```
+<a href="/method/channels.checkSearchPostsFlood/">channels.checkSearchPostsFlood</a>#22567115 flags:<a href="/type/%23/">#</a> query:flags.0?<a href="/type/string/">string</a> = <a href="/type/SearchPostsFlood/" class="current_page_link">SearchPostsFlood</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/searchPostsFlood">searchPostsFlood</a></td><td>Indicates if the specified <a href="/api/search#posts-tab">global post search »</a> requires payment.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/searchPostsFlood/">searchPostsFlood</a></td><td>Indicates if the specified <a href="/api/search/#posts-tab">global post search »</a> requires payment.</td></tr></tbody></table>
 
 ### Methods
 
-<table class="table"><thead><tr><th scope="col">Method</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/method/channels.checkSearchPostsFlood">channels.checkSearchPostsFlood</a></td><td>Check if the specified <a href="/api/search#posts-tab">global post search »</a> requires payment.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Method</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/method/channels.checkSearchPostsFlood/">channels.checkSearchPostsFlood</a></td><td>Check if the specified <a href="/api/search/#posts-tab">global post search »</a> requires payment.</td></tr></tbody></table>
 
 ### Related pages
 

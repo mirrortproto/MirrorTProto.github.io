@@ -11,9 +11,9 @@ layout: layout.njk
 
 Empty constructor.
 
-```
-inputEncryptedFileEmpty#1837c364 = InputEncryptedFile;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputEncryptedFileEmpty/" class="current_page_link">inputEncryptedFileEmpty</a>#1837c364 = <a href="/type/InputEncryptedFile/">InputEncryptedFile</a>;</code></pre>
 
 ### Parameters
 

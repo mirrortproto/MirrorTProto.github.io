@@ -3,7 +3,7 @@ title: "Edit bot information"
 original: "https://core.telegram.org/api/bots/info"
 section: api
 description: "Users can edit and localize the profile picture, name, about text and description of bots they own; the same can be done by the bots themselves."
-crumbs: [{"title":"API","url":"/api/"},{"title":"Edit bot information","url":"https://core.telegram.org/api/bots%2Finfo"}]
+crumbs: [{"title":"API","url":"/api/"},{"title":"Edit bot information","url":"/api/bots/info/"}]
 layout: layout.njk
 ---
 

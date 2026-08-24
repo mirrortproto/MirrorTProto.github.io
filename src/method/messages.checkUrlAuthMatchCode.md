@@ -14,16 +14,16 @@ Validate the match code selected by the user against the code shown on the login
 Only usable when both `match_codes` and `match_codes_first` are set in the [urlAuthResultRequest](/constructor/urlAuthResultRequest/) returned by [messages.requestUrlAuth](/method/messages.requestUrlAuth/).  
 If [boolTrue](/constructor/boolTrue/) is returned, proceed with the login flow and pass the verified code to [messages.acceptUrlAuth](/method/messages.acceptUrlAuth/).`match_code`.
 
-```
-boolFalse#bc799737 = Bool;
-boolTrue#997275b5 = Bool;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/boolFalse/">boolFalse</a>#bc799737 = <a href="/type/Bool/">Bool</a>;
+<a href="/constructor/boolTrue/">boolTrue</a>#997275b5 = <a href="/type/Bool/">Bool</a>;
 ---functions---
-messages.checkUrlAuthMatchCode#c9a47b0b url:string match_code:string = Bool;
-```
+<a href="/method/messages.checkUrlAuthMatchCode/" class="current_page_link">messages.checkUrlAuthMatchCode</a>#c9a47b0b url:<a href="/type/string/">string</a> match_code:<a href="/type/string/">string</a> = <a href="/type/Bool/">Bool</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>url</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>The OAuth deep link</td></tr><tr><td><strong>match_code</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>The emoji or code selected by the user from the list in <a href="/constructor/urlAuthResultRequest">urlAuthResultRequest</a>.<code>match_codes</code></td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>url</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td>The OAuth deep link</td></tr><tr><td><strong>match_code</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td>The emoji or code selected by the user from the list in <a href="/constructor/urlAuthResultRequest/">urlAuthResultRequest</a>.<code>match_codes</code></td></tr></tbody></table>
 
 ### Result
 

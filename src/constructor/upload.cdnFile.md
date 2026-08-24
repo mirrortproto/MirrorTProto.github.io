@@ -11,13 +11,13 @@ layout: layout.njk
 
 Represent a chunk of a [CDN](https://core.telegram.org/cdn) file.
 
-```
-upload.cdnFile#a99fca4f bytes:bytes = upload.CdnFile;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/upload.cdnFile/" class="current_page_link">upload.cdnFile</a>#a99fca4f bytes:<a href="/type/bytes/">bytes</a> = <a href="/type/upload.CdnFile/">upload.CdnFile</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>bytes</strong></td><td style="text-align: center;"><a href="/type/bytes">bytes</a></td><td>The data</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>bytes</strong></td><td style="text-align: center;"><a href="/type/bytes/">bytes</a></td><td>The data</td></tr></tbody></table>
 
 ### Type
 

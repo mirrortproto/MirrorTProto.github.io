@@ -11,9 +11,9 @@ layout: layout.njk
 
 Most frequently called users
 
-```
-topPeerCategoryPhoneCalls#1e76a78c = TopPeerCategory;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/topPeerCategoryPhoneCalls/" class="current_page_link">topPeerCategoryPhoneCalls</a>#1e76a78c = <a href="/type/TopPeerCategory/">TopPeerCategory</a>;</code></pre>
 
 ### Parameters
 

@@ -11,15 +11,15 @@ layout: layout.njk
 
 Convert a [collectible gift »](/api/gifts/) to an NFT on the TON blockchain.
 
-```
-payments.starGiftWithdrawalUrl#84aa3a9c url:string = payments.StarGiftWithdrawalUrl;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/payments.starGiftWithdrawalUrl/">payments.starGiftWithdrawalUrl</a>#84aa3a9c url:<a href="/type/string/">string</a> = <a href="/type/payments.StarGiftWithdrawalUrl/">payments.StarGiftWithdrawalUrl</a>;
 ---functions---
-payments.getStarGiftWithdrawalUrl#d06e93a8 stargift:InputSavedStarGift password:InputCheckPasswordSRP = payments.StarGiftWithdrawalUrl;
-```
+<a href="/method/payments.getStarGiftWithdrawalUrl/" class="current_page_link">payments.getStarGiftWithdrawalUrl</a>#d06e93a8 stargift:<a href="/type/InputSavedStarGift/">InputSavedStarGift</a> password:<a href="/type/InputCheckPasswordSRP/">InputCheckPasswordSRP</a> = <a href="/type/payments.StarGiftWithdrawalUrl/">payments.StarGiftWithdrawalUrl</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>stargift</strong></td><td style="text-align: center;"><a href="/type/InputSavedStarGift">InputSavedStarGift</a></td><td>The collectible gift to export.</td></tr><tr><td><strong>password</strong></td><td style="text-align: center;"><a href="/type/InputCheckPasswordSRP">InputCheckPasswordSRP</a></td><td>The current user's 2FA password, passed as <a href="/api/srp">specified here »</a>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>stargift</strong></td><td style="text-align: center;"><a href="/type/InputSavedStarGift/">InputSavedStarGift</a></td><td>The collectible gift to export.</td></tr><tr><td><strong>password</strong></td><td style="text-align: center;"><a href="/type/InputCheckPasswordSRP/">InputCheckPasswordSRP</a></td><td>The current user's 2FA password, passed as <a href="/api/srp/">specified here »</a>.</td></tr></tbody></table>
 
 ### Result
 

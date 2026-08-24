@@ -13,18 +13,18 @@ Check whether we can write to the specified users, used to implement bulk checks
 
 For each input user, returns a [RequirementToContact](/type/RequirementToContact/) constructor (at the same offset in the vector) containing requirements to contact them.
 
-```
----functions---
-users.getRequirementsToContact#d89a83a3 id:Vector<InputUser> = Vector<RequirementToContact>;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code>---functions---
+<a href="/method/users.getRequirementsToContact/" class="current_page_link">users.getRequirementsToContact</a>#d89a83a3 id:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/InputUser/">InputUser</a>&gt; = <a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/RequirementToContact/">RequirementToContact</a>&gt;;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/InputUser">InputUser</a>&gt;</td><td>Users to check.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/InputUser/">InputUser</a>&gt;</td><td>Users to check.</td></tr></tbody></table>
 
 ### Result
 
-[Vector](https://core.telegram.org/type/Vector%20t)&lt;[RequirementToContact](/type/RequirementToContact/)\>
+[Vector](/type/Vector%20t/)&lt;[RequirementToContact](/type/RequirementToContact/)\>
 
 ### Only users can use this method
 

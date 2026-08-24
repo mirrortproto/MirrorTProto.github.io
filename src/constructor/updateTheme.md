@@ -11,13 +11,13 @@ layout: layout.njk
 
 A cloud theme was updated
 
-```
-updateTheme#8216fba3 theme:Theme = Update;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/updateTheme/" class="current_page_link">updateTheme</a>#8216fba3 theme:<a href="/type/Theme/">Theme</a> = <a href="/type/Update/">Update</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>theme</strong></td><td style="text-align: center;"><a href="/type/Theme">Theme</a></td><td>Theme</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>theme</strong></td><td style="text-align: center;"><a href="/type/Theme/">Theme</a></td><td>Theme</td></tr></tbody></table>
 
 ### Type
 

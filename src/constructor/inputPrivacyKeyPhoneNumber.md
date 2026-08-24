@@ -11,9 +11,9 @@ layout: layout.njk
 
 Whether people will be able to see your phone number
 
-```
-inputPrivacyKeyPhoneNumber#352dafa = InputPrivacyKey;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputPrivacyKeyPhoneNumber/" class="current_page_link">inputPrivacyKeyPhoneNumber</a>#352dafa = <a href="/type/InputPrivacyKey/">InputPrivacyKey</a>;</code></pre>
 
 ### Parameters
 

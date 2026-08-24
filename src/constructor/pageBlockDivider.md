@@ -11,9 +11,9 @@ layout: layout.njk
 
 An empty block separating a page
 
-```
-pageBlockDivider#db20b188 = PageBlock;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/pageBlockDivider/" class="current_page_link">pageBlockDivider</a>#db20b188 = <a href="/type/PageBlock/">PageBlock</a>;</code></pre>
 
 ### Parameters
 

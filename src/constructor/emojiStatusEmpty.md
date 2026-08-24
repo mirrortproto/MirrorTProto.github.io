@@ -11,9 +11,9 @@ layout: layout.njk
 
 No emoji status is set
 
-```
-emojiStatusEmpty#2de11aae = EmojiStatus;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/emojiStatusEmpty/" class="current_page_link">emojiStatusEmpty</a>#2de11aae = <a href="/type/EmojiStatus/">EmojiStatus</a>;</code></pre>
 
 ### Parameters
 

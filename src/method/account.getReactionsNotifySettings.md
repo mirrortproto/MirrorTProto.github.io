@@ -11,11 +11,11 @@ layout: layout.njk
 
 Get the current [reaction notification settings »](/api/reactions/#notifications-about-reactions).
 
-```
-reactionsNotifySettings#56e34970 flags:# messages_notify_from:flags.0?ReactionNotificationsFrom stories_notify_from:flags.1?ReactionNotificationsFrom sound:NotificationSound show_previews:Bool = ReactionsNotifySettings;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/reactionsNotifySettings/">reactionsNotifySettings</a>#56e34970 flags:<a href="/type/%23/">#</a> messages_notify_from:flags.0?<a href="/type/ReactionNotificationsFrom/">ReactionNotificationsFrom</a> stories_notify_from:flags.1?<a href="/type/ReactionNotificationsFrom/">ReactionNotificationsFrom</a> sound:<a href="/type/NotificationSound/">NotificationSound</a> show_previews:<a href="/type/Bool/">Bool</a> = <a href="/type/ReactionsNotifySettings/">ReactionsNotifySettings</a>;
 ---functions---
-account.getReactionsNotifySettings#6dd654c = ReactionsNotifySettings;
-```
+<a href="/method/account.getReactionsNotifySettings/" class="current_page_link">account.getReactionsNotifySettings</a>#6dd654c = <a href="/type/ReactionsNotifySettings/">ReactionsNotifySettings</a>;</code></pre>
 
 ### Parameters
 

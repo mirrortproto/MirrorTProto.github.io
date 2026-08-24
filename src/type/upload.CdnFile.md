@@ -11,19 +11,19 @@ layout: layout.njk
 
 Represents the download status of a CDN file
 
-```
-upload.cdnFileReuploadNeeded#eea8e46e request_token:bytes = upload.CdnFile;
-upload.cdnFile#a99fca4f bytes:bytes = upload.CdnFile;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/upload.cdnFileReuploadNeeded/">upload.cdnFileReuploadNeeded</a>#eea8e46e request_token:<a href="/type/bytes/">bytes</a> = <a href="/type/upload.CdnFile/" class="current_page_link">upload.CdnFile</a>;
+<a href="/constructor/upload.cdnFile/">upload.cdnFile</a>#a99fca4f bytes:<a href="/type/bytes/">bytes</a> = <a href="/type/upload.CdnFile/" class="current_page_link">upload.CdnFile</a>;
 
 ---functions---
 
-upload.getCdnFile#395f69da file_token:bytes offset:long limit:int = upload.CdnFile;
-```
+<a href="/method/upload.getCdnFile/">upload.getCdnFile</a>#395f69da file_token:<a href="/type/bytes/">bytes</a> offset:<a href="/type/long/">long</a> limit:<a href="/type/int/">int</a> = <a href="/type/upload.CdnFile/" class="current_page_link">upload.CdnFile</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/upload.cdnFileReuploadNeeded">upload.cdnFileReuploadNeeded</a></td><td>The file was cleared from the temporary RAM cache of the <a href="/cdn">CDN</a> and has to be re-uploaded.</td></tr><tr><td><a href="/constructor/upload.cdnFile">upload.cdnFile</a></td><td>Represent a chunk of a <a href="/cdn">CDN</a> file.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/upload.cdnFileReuploadNeeded/">upload.cdnFileReuploadNeeded</a></td><td>The file was cleared from the temporary RAM cache of the <a href="https://core.telegram.org/cdn">CDN</a> and has to be re-uploaded.</td></tr><tr><td><a href="/constructor/upload.cdnFile/">upload.cdnFile</a></td><td>Represent a chunk of a <a href="https://core.telegram.org/cdn">CDN</a> file.</td></tr></tbody></table>
 
 ### Methods
 
-<table class="table"><thead><tr><th scope="col">Method</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/method/upload.getCdnFile">upload.getCdnFile</a></td><td>Download a <a href="/cdn">CDN</a> file.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Method</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/method/upload.getCdnFile/">upload.getCdnFile</a></td><td>Download a <a href="https://core.telegram.org/cdn">CDN</a> file.</td></tr></tbody></table>

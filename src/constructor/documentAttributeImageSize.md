@@ -20,13 +20,13 @@ documentAttributeImageSize#6c37c15c w:int h:int = DocumentAttribute;
 
 #### API schema
 
-```
-documentAttributeImageSize#6c37c15c w:int h:int = DocumentAttribute;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/documentAttributeImageSize/" class="current_page_link">documentAttributeImageSize</a>#6c37c15c w:<a href="/type/int/">int</a> h:<a href="/type/int/">int</a> = <a href="/type/DocumentAttribute/">DocumentAttribute</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>w</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Width of image</td></tr><tr><td><strong>h</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Height of image</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>w</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>Width of image</td></tr><tr><td><strong>h</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>Height of image</td></tr></tbody></table>
 
 ### Type
 

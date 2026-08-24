@@ -11,15 +11,15 @@ layout: layout.njk
 
 Points to a [gift »](/api/gifts/).
 
-```
-inputSavedStarGiftUser#69279795 msg_id:int = InputSavedStarGift;
-inputSavedStarGiftChat#f101aa7f peer:InputPeer saved_id:long = InputSavedStarGift;
-inputSavedStarGiftSlug#2085c238 slug:string = InputSavedStarGift;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputSavedStarGiftUser/">inputSavedStarGiftUser</a>#69279795 msg_id:<a href="/type/int/">int</a> = <a href="/type/InputSavedStarGift/" class="current_page_link">InputSavedStarGift</a>;
+<a href="/constructor/inputSavedStarGiftChat/">inputSavedStarGiftChat</a>#f101aa7f peer:<a href="/type/InputPeer/">InputPeer</a> saved_id:<a href="/type/long/">long</a> = <a href="/type/InputSavedStarGift/" class="current_page_link">InputSavedStarGift</a>;
+<a href="/constructor/inputSavedStarGiftSlug/">inputSavedStarGiftSlug</a>#2085c238 slug:<a href="/type/string/">string</a> = <a href="/type/InputSavedStarGift/" class="current_page_link">InputSavedStarGift</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/inputSavedStarGiftUser">inputSavedStarGiftUser</a></td><td>A gift received in a private chat with another user.</td></tr><tr><td><a href="/constructor/inputSavedStarGiftChat">inputSavedStarGiftChat</a></td><td>A gift received by a channel we own.</td></tr><tr><td><a href="/constructor/inputSavedStarGiftSlug">inputSavedStarGiftSlug</a></td><td>Points to a <a href="/api/links#collectible-gift-link">collectible gift obtained from a collectible gift link »</a>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/inputSavedStarGiftUser/">inputSavedStarGiftUser</a></td><td>A gift received in a private chat with another user.</td></tr><tr><td><a href="/constructor/inputSavedStarGiftChat/">inputSavedStarGiftChat</a></td><td>A gift received by a channel we own.</td></tr><tr><td><a href="/constructor/inputSavedStarGiftSlug/">inputSavedStarGiftSlug</a></td><td>Points to a <a href="/api/links/#collectible-gift-link">collectible gift obtained from a collectible gift link »</a>.</td></tr></tbody></table>
 
 ### Related pages
 

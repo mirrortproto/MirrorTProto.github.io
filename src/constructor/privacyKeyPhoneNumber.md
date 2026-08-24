@@ -11,9 +11,9 @@ layout: layout.njk
 
 Whether the user allows us to see his phone number
 
-```
-privacyKeyPhoneNumber#d19ae46d = PrivacyKey;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/privacyKeyPhoneNumber/" class="current_page_link">privacyKeyPhoneNumber</a>#d19ae46d = <a href="/type/PrivacyKey/">PrivacyKey</a>;</code></pre>
 
 ### Parameters
 

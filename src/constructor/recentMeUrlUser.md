@@ -11,13 +11,13 @@ layout: layout.njk
 
 Recent t.me link to a user
 
-```
-recentMeUrlUser#b92c09e2 url:string user_id:long = RecentMeUrl;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/recentMeUrlUser/" class="current_page_link">recentMeUrlUser</a>#b92c09e2 url:<a href="/type/string/">string</a> user_id:<a href="/type/long/">long</a> = <a href="/type/RecentMeUrl/">RecentMeUrl</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>url</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>URL</td></tr><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>User ID</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>url</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td>URL</td></tr><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/long/">long</a></td><td>User ID</td></tr></tbody></table>
 
 ### Type
 

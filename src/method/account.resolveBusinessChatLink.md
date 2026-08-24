@@ -11,15 +11,15 @@ layout: layout.njk
 
 Resolve a [business chat deep link »](/api/business/#business-chat-links).
 
-```
-account.resolvedBusinessChatLinks#9a23af21 flags:# peer:Peer message:string entities:flags.0?Vector<MessageEntity> chats:Vector<Chat> users:Vector<User> = account.ResolvedBusinessChatLinks;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/account.resolvedBusinessChatLinks/">account.resolvedBusinessChatLinks</a>#9a23af21 flags:<a href="/type/%23/">#</a> peer:<a href="/type/Peer/">Peer</a> message:<a href="/type/string/">string</a> entities:flags.0?<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/MessageEntity/">MessageEntity</a>&gt; chats:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/Chat/">Chat</a>&gt; users:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/User/">User</a>&gt; = <a href="/type/account.ResolvedBusinessChatLinks/">account.ResolvedBusinessChatLinks</a>;
 ---functions---
-account.resolveBusinessChatLink#5492e5ee slug:string = account.ResolvedBusinessChatLinks;
-```
+<a href="/method/account.resolveBusinessChatLink/" class="current_page_link">account.resolveBusinessChatLink</a>#5492e5ee slug:<a href="/type/string/">string</a> = <a href="/type/account.ResolvedBusinessChatLinks/">account.ResolvedBusinessChatLinks</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>slug</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Slug of the link, obtained as specified <a href="/api/links#business-chat-links">here »</a>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>slug</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td>Slug of the link, obtained as specified <a href="/api/links/#business-chat-links">here »</a>.</td></tr></tbody></table>
 
 ### Result
 
@@ -29,7 +29,7 @@ account.resolveBusinessChatLink#5492e5ee slug:string = account.ResolvedBusinessC
 
 ### Possible errors
 
-<table class="table"><thead><tr><th scope="col">Code</th><th scope="col">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td>400</td><td>CHATLINK_SLUG_EMPTY</td><td>The specified slug is empty.</td></tr><tr><td>400</td><td>CHATLINK_SLUG_EXPIRED</td><td>The specified <a href="/api/business#business-chat-links">business chat link</a> has expired.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Code</th><th scope="col">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td>400</td><td>CHATLINK_SLUG_EMPTY</td><td>The specified slug is empty.</td></tr><tr><td>400</td><td>CHATLINK_SLUG_EXPIRED</td><td>The specified <a href="/api/business/#business-chat-links">business chat link</a> has expired.</td></tr></tbody></table>
 
 ### Related pages
 

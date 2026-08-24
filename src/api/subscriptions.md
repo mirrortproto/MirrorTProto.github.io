@@ -73,7 +73,7 @@ messages.sendMedia#330e77f flags:# silent:flags.5?true background:flags.6?true c
 payments.botCancelStarsSubscription#6dfa0622 flags:# restore:flags.0?true user_id:InputUser charge_id:string = Bool;
 ```
 
-To create (and subscribe to) a bot subscription, start by following the [invoicing link flow »](https://core.telegram.org/api/payments#12-create-invoice-link), specifying:
+To create (and subscribe to) a bot subscription, start by following the [invoicing link flow »](/api/payments/#1-2-create-invoice-link), specifying:
 
 -   A price for the subscription in Telegram Stars (currency code `XTR`) not greater than the value specified in [`stars_subscription_amount_max` config key »](/api/config/#stars-subscription-amount-max)
 -   The subscription period in seconds in the `subscription_period` flag of the [invoice](/constructor/invoice/): currently the only allowed subscription period is `30*24*60*60`, i.e. the user will be automatically debited the specified amount of stars every month.

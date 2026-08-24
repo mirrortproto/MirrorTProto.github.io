@@ -11,9 +11,9 @@ layout: layout.njk
 
 The list of installed [attachment menu entries »](/api/bots/attach/) has changed, use [messages.getAttachMenuBots](/method/messages.getAttachMenuBots/) to fetch the updated list.
 
-```
-updateAttachMenuBots#17b7a20b = Update;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/updateAttachMenuBots/" class="current_page_link">updateAttachMenuBots</a>#17b7a20b = <a href="/type/Update/">Update</a>;</code></pre>
 
 ### Parameters
 

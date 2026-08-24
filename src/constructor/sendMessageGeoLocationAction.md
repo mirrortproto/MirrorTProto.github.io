@@ -20,9 +20,9 @@ sendMessageGeoLocationAction#176f8ba1 = SendMessageAction;
 
 #### API schema
 
-```
-sendMessageGeoLocationAction#176f8ba1 = SendMessageAction;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/sendMessageGeoLocationAction/" class="current_page_link">sendMessageGeoLocationAction</a>#176f8ba1 = <a href="/type/SendMessageAction/">SendMessageAction</a>;</code></pre>
 
 ### Parameters
 

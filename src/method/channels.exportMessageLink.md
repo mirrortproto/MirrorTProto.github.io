@@ -11,15 +11,15 @@ layout: layout.njk
 
 Get link and embed info of a message in a [channel/supergroup](/api/channel/)
 
-```
-exportedMessageLink#5dab1af4 link:string html:string = ExportedMessageLink;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/exportedMessageLink/">exportedMessageLink</a>#5dab1af4 link:<a href="/type/string/">string</a> html:<a href="/type/string/">string</a> = <a href="/type/ExportedMessageLink/">ExportedMessageLink</a>;
 ---functions---
-channels.exportMessageLink#e63fadeb flags:# grouped:flags.0?true thread:flags.1?true channel:InputChannel id:int = ExportedMessageLink;
-```
+<a href="/method/channels.exportMessageLink/" class="current_page_link">channels.exportMessageLink</a>#e63fadeb flags:<a href="/type/%23/">#</a> grouped:flags.0?true thread:flags.1?true channel:<a href="/type/InputChannel/">InputChannel</a> id:<a href="/type/int/">int</a> = <a href="/type/ExportedMessageLink/">ExportedMessageLink</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>Flags, see <a href="/mtproto/TL-combinators#conditional-fields">TL conditional fields</a></td></tr><tr><td><strong>grouped</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Whether to include other grouped media (for albums)</td></tr><tr><td><strong>thread</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Whether to also include a thread ID, if available, inside of the link</td></tr><tr><td><strong>channel</strong></td><td style="text-align: center;"><a href="/type/InputChannel">InputChannel</a></td><td>Channel</td></tr><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Message ID</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23/">#</a></td><td>Flags, see <a href="/mtproto/TL-combinators/#conditional-fields">TL conditional fields</a></td></tr><tr><td><strong>grouped</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators/#conditional-fields">flags</a>.0?<a href="/constructor/true/">true</a></td><td>Whether to include other grouped media (for albums)</td></tr><tr><td><strong>thread</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators/#conditional-fields">flags</a>.1?<a href="/constructor/true/">true</a></td><td>Whether to also include a thread ID, if available, inside of the link</td></tr><tr><td><strong>channel</strong></td><td style="text-align: center;"><a href="/type/InputChannel/">InputChannel</a></td><td>Channel</td></tr><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>Message ID</td></tr></tbody></table>
 
 ### Result
 

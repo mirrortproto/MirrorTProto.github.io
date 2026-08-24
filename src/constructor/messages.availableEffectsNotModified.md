@@ -11,9 +11,9 @@ layout: layout.njk
 
 The full list of usable [animated message effects »](/api/effects/) hasn't changed.
 
-```
-messages.availableEffectsNotModified#d1ed9a5b = messages.AvailableEffects;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/messages.availableEffectsNotModified/" class="current_page_link">messages.availableEffectsNotModified</a>#d1ed9a5b = <a href="/type/messages.AvailableEffects/">messages.AvailableEffects</a>;</code></pre>
 
 ### Parameters
 

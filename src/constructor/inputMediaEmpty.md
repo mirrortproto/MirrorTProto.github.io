@@ -11,9 +11,9 @@ layout: layout.njk
 
 Empty media content of a message.
 
-```
-inputMediaEmpty#9664f57f = InputMedia;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputMediaEmpty/" class="current_page_link">inputMediaEmpty</a>#9664f57f = <a href="/type/InputMedia/">InputMedia</a>;</code></pre>
 
 ### Parameters
 

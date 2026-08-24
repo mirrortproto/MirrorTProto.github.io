@@ -11,12 +11,12 @@ layout: layout.njk
 
 Abort a pending 2FA password reset, [see here for more info »](/api/srp/#password-reset)
 
-```
-boolFalse#bc799737 = Bool;
-boolTrue#997275b5 = Bool;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/boolFalse/">boolFalse</a>#bc799737 = <a href="/type/Bool/">Bool</a>;
+<a href="/constructor/boolTrue/">boolTrue</a>#997275b5 = <a href="/type/Bool/">Bool</a>;
 ---functions---
-account.declinePasswordReset#4c9409f6 = Bool;
-```
+<a href="/method/account.declinePasswordReset/" class="current_page_link">account.declinePasswordReset</a>#4c9409f6 = <a href="/type/Bool/">Bool</a>;</code></pre>
 
 ### Parameters
 

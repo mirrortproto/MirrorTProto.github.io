@@ -20,9 +20,9 @@ sendMessageChooseContactAction#628cbc6f = SendMessageAction;
 
 #### API schema
 
-```
-sendMessageChooseContactAction#628cbc6f = SendMessageAction;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/sendMessageChooseContactAction/" class="current_page_link">sendMessageChooseContactAction</a>#628cbc6f = <a href="/type/SendMessageAction/">SendMessageAction</a>;</code></pre>
 
 ### Parameters
 

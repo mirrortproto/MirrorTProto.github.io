@@ -5,6 +5,7 @@
 import { mkdir, readFile, writeFile, readdir, rm } from 'node:fs/promises';
 import path from 'node:path';
 import TurndownService from 'turndown';
+import * as prettier from 'prettier';
 
 const ROOT = path.resolve('.');
 const SRC = path.join(ROOT, 'src');
@@ -17,6 +18,8 @@ async function pickBackup(arg) {
   return path.join(dir, dates[dates.length - 1]);
 }
 
+// Returns { html, end } for the div introduced by `marker`, where `end` is the
+// offset just past its closing tag (needed to look at what follows the div).
 function extractDiv(html, marker) {
   const start = html.indexOf(marker);
   if (start === -1) return null;
@@ -29,9 +32,29 @@ function extractDiv(html, marker) {
   while ((m = re.exec(html)) !== null) {
     if (m[0].startsWith('</div')) depth--;
     else depth++;
-    if (depth === 0) return html.slice(tagStart, m.index + 6);
+    if (depth === 0) return { html: html.slice(tagStart, m.index + 6), end: m.index + 6 };
   }
   return null;
+}
+
+// The layer selector itself cannot be mirrored — the older layers it links to
+// were never crawled — but the layer it names is content, not chrome: it is the
+// only thing on the page that says *which* version of the TL-schema is shown.
+// The dropdown is dropped by stripNoise(); this keeps its label.
+function layerLabel(html) {
+  const m = html.match(/dev_layer_select[\s\S]*?<a class="dropdown-toggle"[^>]*>([^<]*)<b class="caret">/);
+  return m ? decode(m[1]).trim() : '';
+}
+
+// On /schema and /schema/end-to-end the TL-schema listing is a *sibling* of the
+// content div, not a child of it — so taking the div alone dropped the entire
+// schema, i.e. the only reason those two pages exist. Collect every
+// <pre class="page_scheme"> between the end of the content div and the footer.
+function trailingSchemes(html, contentEnd) {
+  const stop = html.indexOf('<div class="footer_wrap">', contentEnd);
+  const tail = html.slice(contentEnd, stop === -1 ? undefined : stop);
+  const blocks = tail.match(/<pre class="page_scheme">[\s\S]*?<\/pre>/g);
+  return blocks ? blocks.join('\n') : '';
 }
 
 function extractH1(html) {
@@ -39,6 +62,25 @@ function extractH1(html) {
     || html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/);
   if (!m) return null;
   return decode(m[1].replace(/<[^>]+>/g, '')).trim();
+}
+
+// The original pages carry their own heading anchors
+// (<h3><a class="anchor" id="…">). Telegram deletes punctuation where our
+// slugger replaces it with "-", so ~3% of the ids differ ("messages.report" is
+// `messagesreport` there and `messages-report` here). Links written against the
+// original ids used to be downgraded to off-site links; this map lets them be
+// resolved to the local heading instead.
+function originalAnchors(html) {
+  const map = new Map();
+  const re = /<(h[1-6])\b[^>]*>([\s\S]*?)<\/\1>/g;
+  let m;
+  while ((m = re.exec(html)) !== null) {
+    const id = m[2].match(/<a class="anchor"[^>]*\sid="([^"]*)"/);
+    if (!id) continue;
+    const text = decode(m[2].replace(/<[^>]+>/g, '')).trim();
+    if (text) map.set(id[1], slugify(cleanInline(text)));
+  }
+  return map;
 }
 
 function extractCrumbs(html) {
@@ -53,6 +95,25 @@ function extractCrumbs(html) {
   return crumbs;
 }
 
+// Percent-escapes have to be undone before a path can be looked up in the
+// closure (which holds decoded paths such as "/type/Vector t" and "/type/#")
+// and redone before the path is emitted. Both run per segment: decodeURI would
+// leave the reserved "%23" of the TL "#" type alone, and a whole-path
+// encodeURIComponent would swallow the separators. A malformed escape in the
+// source is left exactly as it was.
+const decodePath = (p) =>
+  p
+    .split('/')
+    .map((s) => {
+      try {
+        return decodeURIComponent(s);
+      } catch {
+        return s;
+      }
+    })
+    .join('/');
+const encodePath = (p) => p.split('/').map(encodeURIComponent).join('/');
+
 function decode(s) {
   return s
     .replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"')
@@ -60,9 +121,22 @@ function decode(s) {
     .replace(/&mdash;/g, '—').replace(/&amp;/g, '&');
 }
 
+// ---- raw JSON endpoints --------------------------------------------------
+// The original serves these as one endless line, which no browser can display
+// usefully. Prettier's `json` parser prints from the concrete syntax tree, so
+// (unlike JSON.parse + JSON.stringify) it neither reorders integer-like keys —
+// JS would sort "400", "401" … ahead of every string key in errors.json — nor
+// renormalises number literals such as 1e-3. printWidth 1 forbids the "collapse
+// short objects onto one line" heuristic, giving the fully expanded layout a
+// reader expects.
+async function beautifyJson(src) {
+  return (await prettier.format(src, { parser: 'json', printWidth: 1, tabWidth: 2 })).trim();
+}
+
 function stripNoise(html) {
   let h = html.replace(/<script[\s\S]*?<\/script>/g, '');
-  // layer selector dropdown (shared UI noise on schema pages)
+  // Layer selector dropdown: a control over layers that were never crawled.
+  // Its label survives separately — see layerLabel().
   h = h.replace(/<div class="clearfix">[\s\S]*?dev_layer_select[\s\S]*?<\/ul>\s*<\/li>\s*<\/ul>\s*<\/div>/g, '');
   // heading anchor icons (we generate our own anchors)
   h = h.replace(/<a class="anchor"[\s\S]*?<\/a>/g, '');
@@ -84,9 +158,45 @@ td.addRule('preCode', {
   filter: (node) => node.nodeName === 'PRE',
   replacement: (_c, node) => '\n\n```\n' + node.textContent.replace(/\n+$/, '') + '\n```\n\n',
 });
-td.addRule('pageSchemeDiv', {
-  filter: (node) => node.nodeName === 'DIV' && /page_scheme/.test(node.getAttribute('class') || ''),
-  replacement: (_c, node) => '\n\n```\n' + node.textContent.replace(/\n+$/, '') + '\n```\n\n',
+// TL-schema listings (<pre class="page_scheme">) are the one code block on the
+// original site whose identifiers are hyperlinks — every type, constructor and
+// method in the line links to its own reference page. A fenced block keeps the
+// text but throws all of that away, so these are emitted as raw HTML instead:
+// markdown-it passes an HTML block through untouched and rewriteLinks() below
+// then localises the hrefs exactly as it does for the rest of the page.
+const escText = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+const escAttr = (s) => escText(s).replace(/"/g, '&quot;');
+
+function schemeHtml(node) {
+  let out = '';
+  for (const child of node.childNodes) {
+    if (child.nodeType === 3) {
+      out += escText(child.nodeValue);
+    } else if (child.nodeName === 'A') {
+      // The source markup is `<a  href="/type/int" >int</a>` — normalised here;
+      // `current_page_link` (the entry describing the page you are on) is kept
+      // because the original renders it as plain, non-clickable text.
+      const href = child.getAttribute('href') || '';
+      const current = /(^|\s)current_page_link(\s|$)/.test(child.getAttribute('class') || '');
+      out += `<a href="${escAttr(href)}"${current ? ' class="current_page_link"' : ''}>` +
+        schemeHtml(child) + '</a>';
+    } else {
+      out += schemeHtml(child);
+    }
+  }
+  return out;
+}
+
+// Registered after preCode on purpose: Turndown checks the most recently added
+// rule first, so this one wins for <pre class="page_scheme">.
+td.addRule('pageScheme', {
+  filter: (node) =>
+    node.nodeName === 'PRE' && /(^|\s)page_scheme(\s|$)/.test(node.getAttribute('class') || ''),
+  replacement: (_c, node) => {
+    const code = node.querySelector('code') || node;
+    return '\n\n<pre class="page_scheme"><code>' +
+      schemeHtml(code).replace(/^\n+|\s+$/g, '') + '</code></pre>\n\n';
+  },
 });
 // keep <img> as raw HTML so width/height/class/style (floats) survive
 td.addRule('imgRaw', {
@@ -162,6 +272,47 @@ function deriveDescription(md) {
   return '';
 }
 
+// The five machine-readable endpoints are served as bare JSON: no <h1>, no
+// breadcrumbs, nothing a mirror could extract. The titles below are the wording
+// the original site itself uses when it links to them, and the trails follow the
+// breadcrumbs of the article each endpoint belongs to.
+const JSON_NOTE =
+  'The original serves this document as a single line of JSON. It is reproduced ' +
+  'here verbatim — only the indentation was added, so that it can be read in a browser.';
+const crumb = (title, url) => ({ title, url });
+const API = crumb('API', '/api/');
+const JSON_DOCS = {
+  '/schema/json': {
+    title: 'TL-Schema in JSON',
+    crumbs: [API, crumb('Schema', '/schema/'), crumb('TL-Schema in JSON', '/schema/json/')],
+  },
+  '/schema/mtproto-json': {
+    title: 'MTProto TL-Schema in JSON',
+    crumbs: [
+      crumb('Mobile Protocol', '/mtproto/'),
+      crumb('Current MTProto TL-schema', '/schema/mtproto/'),
+      crumb('MTProto TL-Schema in JSON', '/schema/mtproto-json/'),
+    ],
+  },
+  '/schema/end-to-end-json': {
+    title: 'End-to-end TL-Schema in JSON',
+    crumbs: [
+      API,
+      crumb('Secret chats', '/api/end-to-end/'),
+      crumb('Current end-to-end TL-schema', '/schema/end-to-end/'),
+      crumb('End-to-end TL-Schema in JSON', '/schema/end-to-end-json/'),
+    ],
+  },
+  '/api/config.json': {
+    title: 'config.json',
+    crumbs: [API, crumb('Client configuration', '/api/config/'), crumb('config.json', '/api/config.json/')],
+  },
+  '/api/errors.json': {
+    title: 'errors.json',
+    crumbs: [API, crumb('Error handling', '/api/errors/'), crumb('errors.json', '/api/errors.json/')],
+  },
+};
+
 // Everything in src/ that is NOT part of the mirror (hand-written site files).
 // On regeneration the mirror directories are removed and rebuilt from the backup.
 const KEEP = new Set([
@@ -176,6 +327,9 @@ async function main() {
   const closure = new Set(meta.pages.map((p) => p.path));
   console.log('backup:', backup, 'pages:', meta.pages.length);
 
+  const inClosure = (u) => closure.has(decodePath(u.split('#')[0]).replace(/\/+$/, ''));
+  const localUrl = (u) => encodePath(decodePath(u.split('#')[0]).replace(/\/+$/, '') + '/');
+
   // clean regeneration: remove previous mirror output, keep hand-written files
   await mkdir(SRC, { recursive: true });
   for (const e of await readdir(SRC)) {
@@ -186,6 +340,7 @@ async function main() {
 
   // ---- pass 1: convert everything to markdown ----
   const records = [];
+  const anchorsByPath = new Map();
   for (const pg of meta.pages) {
     const html = await readFile(path.join(backup, pg.file), 'utf8');
     const normPath = pg.path.replace(/\/+$/, '');
@@ -195,39 +350,68 @@ async function main() {
     let crumbs = [];
     const origin = pg.site || 'https://core.telegram.org';
     const trimmed = html.trimStart();
-    if (trimmed.startsWith('{') || trimmed.startsWith('[')) {
-      title = rel.split('/').pop();
-      body = 'Machine-readable data from the original site (JSON). View the [original](' + pg.url + ') for context.\n\n```json\n' + html.trim() + '\n```';
+    const isJson = trimmed.startsWith('{') || trimmed.startsWith('[');
+    if (isJson) {
+      const doc = JSON_DOCS[normPath];
+      title = doc ? doc.title : rel.split('/').pop();
+      crumbs = doc ? doc.crumbs : [];
+      body = '# ' + title + '\n\n' + JSON_NOTE + '\n\n```json\n' + (await beautifyJson(html.trim())) + '\n```';
     } else {
-      let content = extractDiv(html, '<div id="dev_page_content">')
+      const found = extractDiv(html, '<div id="dev_page_content">')
         || extractDiv(html, '<div class="tl_page">');
-      if (!content) {
+      if (!found) {
         const m = html.match(/<div class="dev_page_wrap">([\s\S]*?)<div class="footer_wrap">/);
         if (!m) continue;
         let raw = m[1].replace(/<div class="dev_page_head[\s\S]*?<\/div>\s*<\/div>/, '');
         raw = raw.replace(/<[^>]+>/g, '');
         body = '```\n' + decode(raw).trim() + '\n```';
       } else {
-        content = stripNoise(content);
+        const content = stripNoise(found.html + trailingSchemes(html, found.end));
         body = td.turndown(content).trim();
+        const layer = layerLabel(html);
+        if (layer) {
+          body = body.replace(
+            /(^|\n)(<pre class="page_scheme">)/,
+            `$1<p class="page_layer">${layer}</p>\n\n$2`
+          );
+        }
       }
       title = extractH1(html) || rel.split('/').pop() || 'Telegram';
       crumbs = extractCrumbs(html).map((c) => ({
         title: c.title,
-        url: closure.has(c.url.split('#')[0].replace(/\/+$/, '')) ? (c.url.endsWith('/') ? c.url : c.url + '/') : 'https://core.telegram.org' + c.url,
+        url: inClosure(c.url) ? localUrl(c.url) : 'https://core.telegram.org' + c.url,
       }));
+      anchorsByPath.set(normPath, originalAnchors(html));
     }
-    records.push({ pg, normPath, rel, body, title, crumbs, origin });
+    records.push({ pg, normPath, rel, body, title, crumbs, origin, isJson });
   }
 
   const slugsByPath = new Map(records.map((r) => [r.normPath, headingSlugs(r.body)]));
 
   // ---- link rewriting with anchor validation ----
-  const resolveAnchor = (targetSlugs, anchor) => {
-    let a = anchor.slice(1);
+  // `null` = unresolvable (the link must stay/become an off-site link),
+  // `''`   = the link carried an empty `#`, which simply drops away.
+  const resolveAnchor = (targetPath, anchor) => {
+    const targetSlugs = slugsByPath.get(targetPath) || new Set();
+    const a = anchor.slice(1);
+    if (!a) return '';
     if (targetSlugs.has(a)) return a;
     if (a.startsWith('q-') && targetSlugs.has(a.slice(2))) return a.slice(2); // original FAQ anchors
+    const mapped = (anchorsByPath.get(targetPath) || new Map()).get(a);
+    if (mapped && targetSlugs.has(mapped)) return mapped;
     return null;
+  };
+
+  // Resolve a site-relative path to its local URL, or to null when the target is
+  // outside the mirrored closure. Percent-escapes matter: the closure holds
+  // decoded paths ("/type/Vector t") while links carry encoded ones
+  // ("/type/Vector%20t"), and the emitted URL has to be encoded again.
+  const target = (p, anchor) => {
+    const decoded = decodePath(p).replace(/\/+$/, '');
+    if (!closure.has(decoded)) return null;
+    const a = anchor ? resolveAnchor(decoded, anchor) : '';
+    if (a === null) return null;
+    return encodePath(decoded + '/') + (a ? '#' + a : '');
   };
 
   const rewriteLinks = (md, ownPath, origin) =>
@@ -243,39 +427,41 @@ async function main() {
       .replace(/!\[([^\]]*)\]\(\/file\//g, `![$1](${origin}/file/`)
       .replace(/!\[([^\]]*)\]\(\/img\//g, `![$1](${origin}/img/`)
       .replace(/!\[([^\]]*)\]\(\/\//g, '![$1](https://')
+      // Hrefs kept as raw HTML — tables and the TL-schema blocks. Site-relative
+      // ones used to stay extension-less (a redirect per link on GitHub Pages)
+      // and, for the ~200 pointing outside the mirror, they 404'd; absolute ones
+      // left the mirror even when the target is part of it.
+      .replace(/(<a\b[^>]*?)href="https:\/\/core\.telegram\.org(\/[^"#]*)(#[^"]*)?"/g,
+        (m0, head, p, anchor) => {
+          const local = target(p, anchor);
+          return local === null ? m0 : `${head}href="${local}"`;
+        })
+      .replace(/(<a\b[^>]*?)href="(\/[^"#]*)(#[^"]*)?"/g, (m0, head, p, anchor) => {
+        const local = target(p, anchor);
+        return `${head}href="${local === null ? origin + p + (anchor || '') : local}"`;
+      })
       // same-page anchors
       .replace(/\]\((#[^)\s]+)\)/g, (m0, anchor) => {
-        const a = resolveAnchor(slugsByPath.get(ownPath) || new Set(), anchor);
-        return a === null ? m0 : `](#${a})`;
+        const a = resolveAnchor(ownPath, anchor);
+        return a === null ? m0 : `](${a ? '#' + a : '#'})`;
       })
       // absolute links to core.telegram.org: local when mirrored
       .replace(/\]\(https:\/\/core\.telegram\.org(\/[^)#\s]*)(#[^)\s]*)?\)/g, (m0, p, anchor) => {
-        const np = (p || '/').replace(/\/+$/, '');
-        if (!closure.has(np)) return m0;
-        if (anchor) {
-          const a = resolveAnchor(slugsByPath.get(np) || new Set(), anchor);
-          if (a === null) return m0;
-          return `](${np}/#${a})`;
-        }
-        return `](${np}/)`;
+        const local = target(p || '/', anchor);
+        return local === null ? m0 : `](${local})`;
       })
       // cross-page relative links
       .replace(/\]\((?!https?:|#)(\/[^)#\s]*)(#[^)\s]*)?\)/g, (m0, p, anchor) => {
-        if (!closure.has(p.replace(/\/+$/, ''))) return `](${origin}${p}${anchor || ''})`;
-        if (!anchor) {
-          const base = p.endsWith('/') ? p : p + '/';
-          return `](${base})`;
-        }
-        const a = resolveAnchor(slugsByPath.get(p.replace(/\/+$/, '')) || new Set(), anchor);
-        if (a === null) return `](${origin}${p}${anchor})`;
-        const base = p.endsWith('/') ? p : p + '/';
-        return `](${base}#${a})`;
+        const local = target(p, anchor);
+        return `](${local === null ? origin + p + (anchor || '') : local})`;
       });
 
   // ---- pass 2: write files ----
   let written = 0;
   for (const r of records) {
-    let body = rewriteLinks(r.body, r.normPath, r.origin);
+    // A JSON document is data, not prose: rewriting "links" inside it would
+    // corrupt the very bytes the page exists to reproduce.
+    let body = r.isJson ? r.body : rewriteLinks(r.body, r.normPath, r.origin);
     // the original <h1> lives outside the content div: restore it so every
     // page has exactly one h1 (a11y/SEO); ignore '#' lines inside code fences
     let inFence = false;
@@ -293,7 +479,7 @@ async function main() {
     }
     if (!hasH1) body = `# ${r.title}\n\n` + body;
     // table header cells get scope for screen readers
-    body = body.replace(/<th(\s|>)/g, '<th scope="col"$1');
+    if (!r.isJson) body = body.replace(/<th(\s|>)/g, '<th scope="col"$1');
     const description = deriveDescription(body);
     const fm = [
       '---',

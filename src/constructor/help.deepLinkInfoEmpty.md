@@ -11,9 +11,9 @@ layout: layout.njk
 
 Deep link info empty
 
-```
-help.deepLinkInfoEmpty#66afa166 = help.DeepLinkInfo;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/help.deepLinkInfoEmpty/" class="current_page_link">help.deepLinkInfoEmpty</a>#66afa166 = <a href="/type/help.DeepLinkInfo/">help.DeepLinkInfo</a>;</code></pre>
 
 ### Parameters
 

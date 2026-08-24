@@ -11,9 +11,9 @@ layout: layout.njk
 
 The phone call was discarded because the user is busy in another call, see [here »](/api/calls/) for more info.
 
-```
-phoneCallDiscardReasonBusy#faf7e8c9 = PhoneCallDiscardReason;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/phoneCallDiscardReasonBusy/" class="current_page_link">phoneCallDiscardReasonBusy</a>#faf7e8c9 = <a href="/type/PhoneCallDiscardReason/">PhoneCallDiscardReason</a>;</code></pre>
 
 ### Parameters
 

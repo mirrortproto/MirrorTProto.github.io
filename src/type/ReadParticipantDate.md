@@ -11,10 +11,10 @@ layout: layout.njk
 
 Contains info about when a certain participant has read a message
 
-```
-readParticipantDate#4a4ff172 user_id:long date:int = ReadParticipantDate;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/readParticipantDate/">readParticipantDate</a>#4a4ff172 user_id:<a href="/type/long/">long</a> date:<a href="/type/int/">int</a> = <a href="/type/ReadParticipantDate/" class="current_page_link">ReadParticipantDate</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/readParticipantDate">readParticipantDate</a></td><td>Contains info about when a certain participant has read a message</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/readParticipantDate/">readParticipantDate</a></td><td>Contains info about when a certain participant has read a message</td></tr></tbody></table>

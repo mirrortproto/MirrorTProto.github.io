@@ -11,10 +11,10 @@ layout: layout.njk
 
 Invoke a request without subscribing the used connection for [updates](/api/updates/) (this is enabled by default for [file queries](/api/files/)).
 
-```
----functions---
-invokeWithoutUpdates#bf9459b7 {X:Type} query:!X = X;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code>---functions---
+<a href="/method/invokeWithoutUpdates/" class="current_page_link">invokeWithoutUpdates</a>#bf9459b7 {X:Type} query:!X = X;</code></pre>
 
 ### Parameters
 

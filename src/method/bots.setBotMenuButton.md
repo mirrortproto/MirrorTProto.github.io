@@ -11,16 +11,16 @@ layout: layout.njk
 
 Sets the [menu button action »](/api/bots/menu/) for a given user or for all users
 
-```
-boolFalse#bc799737 = Bool;
-boolTrue#997275b5 = Bool;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/boolFalse/">boolFalse</a>#bc799737 = <a href="/type/Bool/">Bool</a>;
+<a href="/constructor/boolTrue/">boolTrue</a>#997275b5 = <a href="/type/Bool/">Bool</a>;
 ---functions---
-bots.setBotMenuButton#4504d54f user_id:InputUser button:BotMenuButton = Bool;
-```
+<a href="/method/bots.setBotMenuButton/" class="current_page_link">bots.setBotMenuButton</a>#4504d54f user_id:<a href="/type/InputUser/">InputUser</a> button:<a href="/type/BotMenuButton/">BotMenuButton</a> = <a href="/type/Bool/">Bool</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/InputUser">InputUser</a></td><td>User ID</td></tr><tr><td><strong>button</strong></td><td style="text-align: center;"><a href="/type/BotMenuButton">BotMenuButton</a></td><td>Bot menu button action</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/InputUser/">InputUser</a></td><td>User ID</td></tr><tr><td><strong>button</strong></td><td style="text-align: center;"><a href="/type/BotMenuButton/">BotMenuButton</a></td><td>Bot menu button action</td></tr></tbody></table>
 
 ### Result
 

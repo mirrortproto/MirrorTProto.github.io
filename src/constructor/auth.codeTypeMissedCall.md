@@ -11,9 +11,9 @@ layout: layout.njk
 
 The next time, the authentication code will be delivered via an immediately canceled incoming call, handled manually by the user.
 
-```
-auth.codeTypeMissedCall#d61ad6ee = auth.CodeType;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/auth.codeTypeMissedCall/" class="current_page_link">auth.codeTypeMissedCall</a>#d61ad6ee = <a href="/type/auth.CodeType/">auth.CodeType</a>;</code></pre>
 
 ### Parameters
 

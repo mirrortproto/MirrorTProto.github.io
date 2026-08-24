@@ -11,9 +11,9 @@ layout: layout.njk
 
 Email verification purpose: change login email
 
-```
-emailVerifyPurposeLoginChange#527d22eb = EmailVerifyPurpose;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/emailVerifyPurposeLoginChange/" class="current_page_link">emailVerifyPurposeLoginChange</a>#527d22eb = <a href="/type/EmailVerifyPurpose/">EmailVerifyPurpose</a>;</code></pre>
 
 ### Parameters
 

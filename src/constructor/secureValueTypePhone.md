@@ -11,9 +11,9 @@ layout: layout.njk
 
 Phone
 
-```
-secureValueTypePhone#b320aadb = SecureValueType;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/secureValueTypePhone/" class="current_page_link">secureValueTypePhone</a>#b320aadb = <a href="/type/SecureValueType/">SecureValueType</a>;</code></pre>
 
 ### Parameters
 

@@ -11,15 +11,15 @@ layout: layout.njk
 
 Get full info about a [supergroup](/api/channel/#supergroups), [gigagroup](/api/channel/#gigagroups) or [channel](/api/channel/#channels)
 
-```
-messages.chatFull#e5d7d19c full_chat:ChatFull chats:Vector<Chat> users:Vector<User> = messages.ChatFull;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/messages.chatFull/">messages.chatFull</a>#e5d7d19c full_chat:<a href="/type/ChatFull/">ChatFull</a> chats:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/Chat/">Chat</a>&gt; users:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/User/">User</a>&gt; = <a href="/type/messages.ChatFull/">messages.ChatFull</a>;
 ---functions---
-channels.getFullChannel#8736a09 channel:InputChannel = messages.ChatFull;
-```
+<a href="/method/channels.getFullChannel/" class="current_page_link">channels.getFullChannel</a>#8736a09 channel:<a href="/type/InputChannel/">InputChannel</a> = <a href="/type/messages.ChatFull/">messages.ChatFull</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>channel</strong></td><td style="text-align: center;"><a href="/type/InputChannel">InputChannel</a></td><td>The <a href="/api/channel#channels">channel</a>, <a href="/api/channel#supergroups">supergroup</a> or <a href="/api/channel#gigagroups">gigagroup</a> to get info about</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>channel</strong></td><td style="text-align: center;"><a href="/type/InputChannel/">InputChannel</a></td><td>The <a href="/api/channel/#channels">channel</a>, <a href="/api/channel/#supergroups">supergroup</a> or <a href="/api/channel/#gigagroups">gigagroup</a> to get info about</td></tr></tbody></table>
 
 ### Result
 

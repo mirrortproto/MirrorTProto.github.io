@@ -11,9 +11,9 @@ layout: layout.njk
 
 The [story album list »](/api/stories/#story-albums) hasn't changed.
 
-```
-stories.albumsNotModified#564edaeb = stories.Albums;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/stories.albumsNotModified/" class="current_page_link">stories.albumsNotModified</a>#564edaeb = <a href="/type/stories.Albums/">stories.Albums</a>;</code></pre>
 
 ### Parameters
 

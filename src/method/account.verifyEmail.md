@@ -10,16 +10,16 @@ layout: layout.njk
 
 Verify an email address.
 
-```
-account.emailVerified#2b96cd1b email:string = account.EmailVerified;
-account.emailVerifiedLogin#e1bb0d61 email:string sent_code:auth.SentCode = account.EmailVerified;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/account.emailVerified/">account.emailVerified</a>#2b96cd1b email:<a href="/type/string/">string</a> = <a href="/type/account.EmailVerified/">account.EmailVerified</a>;
+<a href="/constructor/account.emailVerifiedLogin/">account.emailVerifiedLogin</a>#e1bb0d61 email:<a href="/type/string/">string</a> sent_code:<a href="/type/auth.SentCode/">auth.SentCode</a> = <a href="/type/account.EmailVerified/">account.EmailVerified</a>;
 ---functions---
-account.verifyEmail#32da4cf purpose:EmailVerifyPurpose verification:EmailVerification = account.EmailVerified;
-```
+<a href="/method/account.verifyEmail/" class="current_page_link">account.verifyEmail</a>#32da4cf purpose:<a href="/type/EmailVerifyPurpose/">EmailVerifyPurpose</a> verification:<a href="/type/EmailVerification/">EmailVerification</a> = <a href="/type/account.EmailVerified/">account.EmailVerified</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>purpose</strong></td><td style="text-align: center;"><a href="/type/EmailVerifyPurpose">EmailVerifyPurpose</a></td><td>Verification purpose</td></tr><tr><td><strong>verification</strong></td><td style="text-align: center;"><a href="/type/EmailVerification">EmailVerification</a></td><td>Email verification code or token</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>purpose</strong></td><td style="text-align: center;"><a href="/type/EmailVerifyPurpose/">EmailVerifyPurpose</a></td><td>Verification purpose</td></tr><tr><td><strong>verification</strong></td><td style="text-align: center;"><a href="/type/EmailVerification/">EmailVerification</a></td><td>Email verification code or token</td></tr></tbody></table>
 
 ### Result
 

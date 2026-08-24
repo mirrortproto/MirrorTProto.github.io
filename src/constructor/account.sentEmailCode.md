@@ -11,13 +11,13 @@ layout: layout.njk
 
 The sent email code
 
-```
-account.sentEmailCode#811f854f email_pattern:string length:int = account.SentEmailCode;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/account.sentEmailCode/" class="current_page_link">account.sentEmailCode</a>#811f854f email_pattern:<a href="/type/string/">string</a> length:<a href="/type/int/">int</a> = <a href="/type/account.SentEmailCode/">account.SentEmailCode</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>email_pattern</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>The email (to which the code was sent) must match this <a href="/api/pattern">pattern</a></td></tr><tr><td><strong>length</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>The length of the verification code</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>email_pattern</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td>The email (to which the code was sent) must match this <a href="/api/pattern/">pattern</a></td></tr><tr><td><strong>length</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>The length of the verification code</td></tr></tbody></table>
 
 ### Type
 

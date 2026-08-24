@@ -11,9 +11,9 @@ layout: layout.njk
 
 Whether people will be able to see your profile picture
 
-```
-inputPrivacyKeyProfilePhoto#5719bacc = InputPrivacyKey;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputPrivacyKeyProfilePhoto/" class="current_page_link">inputPrivacyKeyProfilePhoto</a>#5719bacc = <a href="/type/InputPrivacyKey/">InputPrivacyKey</a>;</code></pre>
 
 ### Parameters
 

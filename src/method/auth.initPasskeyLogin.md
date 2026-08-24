@@ -11,15 +11,15 @@ layout: layout.njk
 
 Initialize login with a passkey over an unauthenticated connection, see [here »](/api/passkeys/#logging-in-with-a-passkey) for more info.
 
-```
-auth.passkeyLoginOptions#e2037789 options:DataJSON = auth.PasskeyLoginOptions;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/auth.passkeyLoginOptions/">auth.passkeyLoginOptions</a>#e2037789 options:<a href="/type/DataJSON/">DataJSON</a> = <a href="/type/auth.PasskeyLoginOptions/">auth.PasskeyLoginOptions</a>;
 ---functions---
-auth.initPasskeyLogin#518ad0b7 api_id:int api_hash:string = auth.PasskeyLoginOptions;
-```
+<a href="/method/auth.initPasskeyLogin/" class="current_page_link">auth.initPasskeyLogin</a>#518ad0b7 api_id:<a href="/type/int/">int</a> api_hash:<a href="/type/string/">string</a> = <a href="/type/auth.PasskeyLoginOptions/">auth.PasskeyLoginOptions</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>api_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Application identifier (see <a href="/myapp">App configuration</a>)</td></tr><tr><td><strong>api_hash</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Application identifier hash (see <a href="/myapp">App configuration</a>)</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>api_id</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>Application identifier (see <a href="https://core.telegram.org/myapp">App configuration</a>)</td></tr><tr><td><strong>api_hash</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td>Application identifier hash (see <a href="https://core.telegram.org/myapp">App configuration</a>)</td></tr></tbody></table>
 
 ### Result
 

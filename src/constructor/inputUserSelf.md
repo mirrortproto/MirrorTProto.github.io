@@ -11,9 +11,9 @@ layout: layout.njk
 
 Defines the current user.
 
-```
-inputUserSelf#f7c1b13f = InputUser;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputUserSelf/" class="current_page_link">inputUserSelf</a>#f7c1b13f = <a href="/type/InputUser/">InputUser</a>;</code></pre>
 
 ### Parameters
 

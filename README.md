@@ -4,7 +4,7 @@ Enhanced mirror of the documentation sections of [core.telegram.org](https://cor
 the **Telegram API**, the **MTProto protocol**, and the **TL schema**.
 The site is built with [Eleventy](https://www.11ty.dev/) and published via GitHub Pages.
 
-**Дата копии оригинального сайта / content snapshot date: `2026-08-23`** (3183 страницы / pages).
+**Дата копии оригинального сайта / content snapshot date: `2026-08-23`** (3186 страниц / pages).
 
 Каждая страница зеркала содержит ссылку на оригинал.
 
@@ -18,9 +18,18 @@ The site is built with [Eleventy](https://www.11ty.dev/) and published via GitHu
   breadcrumbs generated from the original page data; web manifest + SVG/PNG icons.
 - **Accessibility**: semantic landmarks, skip-link, `aria-current`, `scope` on table headers,
   visible focus, `prefers-reduced-motion`, WCAG-AA link contrast.
-- **Self-check**: `npm run check` validates links, h1/skip-link/canonical on every page,
-  sitemap and robots.
+- **Self-check**: `npm run check` validates every local link *and* every in-site anchor
+  (markdown and raw HTML alike), h1/skip-link/canonical/URL-encoding on every page, the sitemap,
+  robots, and — byte for byte against the backup — the TL-schema listings and the JSON documents.
 - **Complete TL schema reference**: constructors, methods, types, methods by category, machine-readable JSON dumps.
+- **Clickable TL-schema listings**: as on the original, every type, constructor and method inside a
+  schema block links to its own reference page (11 607 links on `/schema/`, 431 on
+  `/schema/end-to-end/`, plus the definition line on each of the 2 990 reference pages), and each
+  listing states the layer it belongs to.
+- **Readable JSON dumps**: the five machine-readable endpoints (`/schema/json/`, `/schema/mtproto-json/`,
+  `/schema/end-to-end-json/`, `/api/config.json/`, `/api/errors.json/`) are served upstream as a single
+  endless line and are re-indented here with [Prettier](https://prettier.io/). Only whitespace is
+  added: key order, number literals and string escapes are those of the original document.
 
 ## Требования / Requirements
 
@@ -63,7 +72,8 @@ npm run regenerate
 #                          constructor/, method/, type/ и т.д.), НЕ трогая служебные файлы
 #                          (index.md, search.md, 404.md, css/, _includes/, _data/, иконки),
 #                          и заново извлекает контент из backup/<последняя дата>/:
-#                          HTML → markdown, заголовки, крошки, description из первого абзаца;
+#                          HTML → markdown, заголовки, крошки, description из первого абзаца,
+#                          TL-схемы со всеми ссылками и номером слоя, JSON-документы через Prettier;
 #    + npm run nav       — src/_data/nav.json (меню) и src/_data/site.json (дата бэкапа);
 #    + npm run indexes   — индексные страницы /constructor/, /method/, /type/;
 #    + npm run build     — eleventy (docs/) + поисковый индекс pagefind.
@@ -81,12 +91,12 @@ node tools/print_structure.mjs
 | Скрипт | Назначение | Сеть |
 |---|---|---|
 | `tools/crawl.mjs` | снимает датированный бэкап `backup/<дата>/` (HTML + `manifest.json` с sha256) | да |
-| `tools/extract.mjs` | извлекает контент из бэкапа в `src/` (markdown + front matter) | нет |
+| `tools/extract.mjs` | извлекает контент из бэкапа в `src/` (markdown + front matter), локализует ссылки, сохраняет TL-схемы со ссылками, форматирует JSON-документы | нет |
 | `tools/gennav.mjs` | меню (`nav.json`) и дата бэкапа (`site.json`) | нет |
 | `tools/genrefindexes.mjs` | алфавитные индексы конструкторов/методов/типов | нет |
 | `tools/make_icons.py` | PNG-иконки (`icon-64.png`, `apple-touch-icon.png`) из кода | нет |
 | `tools/print_structure.mjs` | список всех страниц для README | нет |
-| `tools/verify.mjs` (`npm run check`) | самопроверка собранного сайта (ссылки, h1, meta, sitemap) | нет |
+| `tools/verify.mjs` (`npm run check`) | самопроверка собранного сайта: ссылки и якоря, h1/meta/канонические URL, sitemap, а также сверка TL-схем и JSON-документов с бэкапом | нет |
 
 Готовый сайт — в `docs/`. Локальный просмотр:
 
@@ -108,7 +118,7 @@ npm run serve        # режим разработки: eleventy --serve → htt
 ```
 mirrortproto.github.io/
 ├── backup/
-│   └── 2026-08-23/            # копия оригинала от 23.08.2026 (3183 страницы)
+│   └── 2026-08-23/            # копия оригинала от 23.08.2026 (3186 страниц)
 │       ├── manifest.json      # полный список страниц с sha256
 │       ├── urls.txt
 │       └── pages/             # сырые HTML-копии
@@ -296,10 +306,10 @@ mirrortproto.github.io/
   - `/methods/` — Available methods (методы по категориям)
   - `/schema/` — Schema
   - `/schema/end-to-end/` — Current end-to-end TL-schema
-  - `/schema/end-to-end-json/` — end-to-end-json (машиночитаемые данные)
-  - `/schema/json/` — json (машиночитаемые данные)
+  - `/schema/end-to-end-json/` — End-to-end TL-Schema in JSON (машиночитаемые данные)
+  - `/schema/json/` — TL-Schema in JSON (машиночитаемые данные)
   - `/schema/mtproto/` — Current MTProto TL-schema
-  - `/schema/mtproto-json/` — mtproto-json (машиночитаемые данные)
+  - `/schema/mtproto-json/` — MTProto TL-Schema in JSON (машиночитаемые данные)
 - **Справочник схемы** — 3022 страницы: 1615 конструкторов (`/constructor/<имя>/`),
   787 методов (`/method/<имя>/`), 620 типов (`/type/<имя>/`); индексы:
   `/constructor/`, `/method/`, `/type/`.

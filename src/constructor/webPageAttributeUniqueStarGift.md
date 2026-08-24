@@ -11,13 +11,13 @@ layout: layout.njk
 
 Contains info about [collectible gift »](/api/gifts/#collectible-gifts) for a [webPage](/constructor/webPage/) preview of a [collectible gift »](/api/gifts/#collectible-gifts) (the [webPage](/constructor/webPage/) will have a `type` of `telegram_nft`).
 
-```
-webPageAttributeUniqueStarGift#cf6f6db8 gift:StarGift = WebPageAttribute;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/webPageAttributeUniqueStarGift/" class="current_page_link">webPageAttributeUniqueStarGift</a>#cf6f6db8 gift:<a href="/type/StarGift/">StarGift</a> = <a href="/type/WebPageAttribute/">WebPageAttribute</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>gift</strong></td><td style="text-align: center;"><a href="/type/StarGift">StarGift</a></td><td>The <a href="/constructor/starGiftUnique">starGiftUnique</a> constructor.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>gift</strong></td><td style="text-align: center;"><a href="/type/StarGift/">StarGift</a></td><td>The <a href="/constructor/starGiftUnique/">starGiftUnique</a> constructor.</td></tr></tbody></table>
 
 ### Type
 

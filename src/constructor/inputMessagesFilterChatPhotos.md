@@ -11,9 +11,9 @@ layout: layout.njk
 
 Return only chat photo changes
 
-```
-inputMessagesFilterChatPhotos#3a20ecb8 = MessagesFilter;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputMessagesFilterChatPhotos/" class="current_page_link">inputMessagesFilterChatPhotos</a>#3a20ecb8 = <a href="/type/MessagesFilter/">MessagesFilter</a>;</code></pre>
 
 ### Parameters
 

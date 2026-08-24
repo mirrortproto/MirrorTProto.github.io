@@ -11,9 +11,9 @@ layout: layout.njk
 
 A contact just signed up to telegram
 
-```
-messageActionContactSignUp#f3f25f76 = MessageAction;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/messageActionContactSignUp/" class="current_page_link">messageActionContactSignUp</a>#f3f25f76 = <a href="/type/MessageAction/">MessageAction</a>;</code></pre>
 
 ### Parameters
 

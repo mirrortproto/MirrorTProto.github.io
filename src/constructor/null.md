@@ -11,9 +11,9 @@ layout: layout.njk
 
 Corresponds to an arbitrary empty object.
 
-```
-null#56730bcc = Null;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/null/" class="current_page_link">null</a>#56730bcc = <a href="/type/Null/">Null</a>;</code></pre>
 
 ### Parameters
 

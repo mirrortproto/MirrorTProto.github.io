@@ -11,13 +11,13 @@ layout: layout.njk
 
 An [e2e encrypted chat](/api/end-to-end/).
 
-```
-inputEncryptedChat#f141b5e1 chat_id:int access_hash:long = InputEncryptedChat;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputEncryptedChat/">inputEncryptedChat</a>#f141b5e1 chat_id:<a href="/type/int/">int</a> access_hash:<a href="/type/long/">long</a> = <a href="/type/InputEncryptedChat/" class="current_page_link">InputEncryptedChat</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/inputEncryptedChat">inputEncryptedChat</a></td><td>An <a href="/api/end-to-end">e2e encrypted chat</a>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/inputEncryptedChat/">inputEncryptedChat</a></td><td>An <a href="/api/end-to-end/">e2e encrypted chat</a>.</td></tr></tbody></table>
 
 ### Related pages
 

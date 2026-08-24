@@ -13,15 +13,15 @@ Returns content of a web file, by proxying the request through telegram, see the
 
 **Note**: the query must be sent to the DC specified in the `webfile_dc_id` [MTProto configuration field](/api/config/#mtproto-configuration).
 
-```
-upload.webFile#21e753bc size:int mime_type:string file_type:storage.FileType mtime:int bytes:bytes = upload.WebFile;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/upload.webFile/">upload.webFile</a>#21e753bc size:<a href="/type/int/">int</a> mime_type:<a href="/type/string/">string</a> file_type:<a href="/type/storage.FileType/">storage.FileType</a> mtime:<a href="/type/int/">int</a> bytes:<a href="/type/bytes/">bytes</a> = <a href="/type/upload.WebFile/">upload.WebFile</a>;
 ---functions---
-upload.getWebFile#24e6818d location:InputWebFileLocation offset:int limit:int = upload.WebFile;
-```
+<a href="/method/upload.getWebFile/" class="current_page_link">upload.getWebFile</a>#24e6818d location:<a href="/type/InputWebFileLocation/">InputWebFileLocation</a> offset:<a href="/type/int/">int</a> limit:<a href="/type/int/">int</a> = <a href="/type/upload.WebFile/">upload.WebFile</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>location</strong></td><td style="text-align: center;"><a href="/type/InputWebFileLocation">InputWebFileLocation</a></td><td>The file to download</td></tr><tr><td><strong>offset</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Number of bytes to be skipped</td></tr><tr><td><strong>limit</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Number of bytes to be returned</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>location</strong></td><td style="text-align: center;"><a href="/type/InputWebFileLocation/">InputWebFileLocation</a></td><td>The file to download</td></tr><tr><td><strong>offset</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>Number of bytes to be skipped</td></tr><tr><td><strong>limit</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>Number of bytes to be returned</td></tr></tbody></table>
 
 ### Result
 

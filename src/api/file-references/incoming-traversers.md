@@ -3,7 +3,7 @@ title: "Incoming file reference traversers"
 original: "https://core.telegram.org/api/file-references/incoming-traversers"
 section: api
 description: "Full list of incoming traversers contained by the current file reference map file »."
-crumbs: [{"title":"API","url":"/api/"},{"title":"Incoming file reference traversers","url":"https://core.telegram.org/api/file-references%2Fincoming-traversers"}]
+crumbs: [{"title":"API","url":"/api/"},{"title":"Incoming file reference traversers","url":"/api/file-references/incoming-traversers/"}]
 layout: layout.njk
 ---
 

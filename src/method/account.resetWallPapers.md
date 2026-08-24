@@ -11,12 +11,12 @@ layout: layout.njk
 
 Delete all installed [wallpapers](/api/wallpapers/), reverting to the default wallpaper set.
 
-```
-boolFalse#bc799737 = Bool;
-boolTrue#997275b5 = Bool;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/boolFalse/">boolFalse</a>#bc799737 = <a href="/type/Bool/">Bool</a>;
+<a href="/constructor/boolTrue/">boolTrue</a>#997275b5 = <a href="/type/Bool/">Bool</a>;
 ---functions---
-account.resetWallPapers#bb3b9804 = Bool;
-```
+<a href="/method/account.resetWallPapers/" class="current_page_link">account.resetWallPapers</a>#bb3b9804 = <a href="/type/Bool/">Bool</a>;</code></pre>
 
 ### Parameters
 

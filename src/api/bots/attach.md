@@ -3,7 +3,7 @@ title: "Bot attachment menu and side menu entries"
 original: "https://core.telegram.org/api/bots/attach"
 section: api
 description: "Bots can install attachment menu and side menu entries, offering conveniently accessible, versatile mini apps."
-crumbs: [{"title":"API","url":"/api/"},{"title":"Bot attachment menu and side menu entries","url":"https://core.telegram.org/api/bots%2Fattach"}]
+crumbs: [{"title":"API","url":"/api/"},{"title":"Bot attachment menu and side menu entries","url":"/api/bots/attach/"}]
 layout: layout.njk
 ---
 

@@ -3,7 +3,7 @@ title: "File reference sources"
 original: "https://core.telegram.org/api/file-references/sources"
 section: api
 description: "A source extractor contains instruction that the client may use to extract a file source »: what follows is the full list of file source extractors contained by the current file…"
-crumbs: [{"title":"API","url":"/api/"},{"title":"File reference sources","url":"https://core.telegram.org/api/file-references%2Fsources"}]
+crumbs: [{"title":"API","url":"/api/"},{"title":"File reference sources","url":"/api/file-references/sources/"}]
 layout: layout.njk
 ---
 

@@ -11,13 +11,13 @@ layout: layout.njk
 
 The ID of a pattern of a [collectible gift »](/api/gifts/#collectible-gifts).
 
-```
-starGiftAttributeIdPattern#4a162433 document_id:long = StarGiftAttributeId;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/starGiftAttributeIdPattern/" class="current_page_link">starGiftAttributeIdPattern</a>#4a162433 document_id:<a href="/type/long/">long</a> = <a href="/type/StarGiftAttributeId/">StarGiftAttributeId</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>document_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>The <a href="/api/stickers">sticker</a> representing the symbol</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>document_id</strong></td><td style="text-align: center;"><a href="/type/long/">long</a></td><td>The <a href="/api/stickers/">sticker</a> representing the symbol</td></tr></tbody></table>
 
 ### Type
 

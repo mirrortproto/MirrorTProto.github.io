@@ -10,19 +10,19 @@ layout: layout.njk
 
 Favorited stickers
 
-```
-messages.favedStickersNotModified#9e8fa6d3 = messages.FavedStickers;
-messages.favedStickers#2cb51097 hash:long packs:Vector<StickerPack> stickers:Vector<Document> = messages.FavedStickers;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/messages.favedStickersNotModified/">messages.favedStickersNotModified</a>#9e8fa6d3 = <a href="/type/messages.FavedStickers/" class="current_page_link">messages.FavedStickers</a>;
+<a href="/constructor/messages.favedStickers/">messages.favedStickers</a>#2cb51097 hash:<a href="/type/long/">long</a> packs:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/StickerPack/">StickerPack</a>&gt; stickers:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/Document/">Document</a>&gt; = <a href="/type/messages.FavedStickers/" class="current_page_link">messages.FavedStickers</a>;
 
 ---functions---
 
-messages.getFavedStickers#4f1aaa9 hash:long = messages.FavedStickers;
-```
+<a href="/method/messages.getFavedStickers/">messages.getFavedStickers</a>#4f1aaa9 hash:<a href="/type/long/">long</a> = <a href="/type/messages.FavedStickers/" class="current_page_link">messages.FavedStickers</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/messages.favedStickersNotModified">messages.favedStickersNotModified</a></td><td>No new favorited stickers were found</td></tr><tr><td><a href="/constructor/messages.favedStickers">messages.favedStickers</a></td><td>Favorited stickers</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/messages.favedStickersNotModified/">messages.favedStickersNotModified</a></td><td>No new favorited stickers were found</td></tr><tr><td><a href="/constructor/messages.favedStickers/">messages.favedStickers</a></td><td>Favorited stickers</td></tr></tbody></table>
 
 ### Methods
 
-<table class="table"><thead><tr><th scope="col">Method</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/method/messages.getFavedStickers">messages.getFavedStickers</a></td><td>Get faved stickers</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Method</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/method/messages.getFavedStickers/">messages.getFavedStickers</a></td><td>Get faved stickers</td></tr></tbody></table>

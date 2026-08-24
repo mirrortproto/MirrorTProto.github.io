@@ -17,7 +17,7 @@ e2e.chain.changeSetGroupState#2cf17146 group_state:e2e.chain.GroupState = e2e.ch
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>group_state</strong></td><td style="text-align: center;"><a href="/type/e2e.chain.GroupState">e2e.chain.GroupState</a></td><td>New group state containing the participant list and permission bits.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>group_state</strong></td><td style="text-align: center;"><a href="/type/e2e.chain.GroupState/">e2e.chain.GroupState</a></td><td>New group state containing the participant list and permission bits.</td></tr></tbody></table>
 
 ### Type
 

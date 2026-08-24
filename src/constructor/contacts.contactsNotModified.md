@@ -11,9 +11,9 @@ layout: layout.njk
 
 Contact list on the server is the same as the list on the client.
 
-```
-contacts.contactsNotModified#b74ba9d2 = contacts.Contacts;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/contacts.contactsNotModified/" class="current_page_link">contacts.contactsNotModified</a>#b74ba9d2 = <a href="/type/contacts.Contacts/">contacts.Contacts</a>;</code></pre>
 
 ### Parameters
 

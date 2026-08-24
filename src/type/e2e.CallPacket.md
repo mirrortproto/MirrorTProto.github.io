@@ -17,7 +17,7 @@ e2e.callPacket#40a6bee9 = e2e.CallPacket;
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/e2e.callPacket">e2e.callPacket</a></td><td>Marker constructor whose CRC32 constructor ID is used when deriving and authenticating <a href="/api/end-to-end/group-calls#packet-encryption">encrypted group call packets</a>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/e2e.callPacket/">e2e.callPacket</a></td><td>Marker constructor whose CRC32 constructor ID is used when deriving and authenticating <a href="/api/end-to-end/group-calls/#packet-encryption">encrypted group call packets</a>.</td></tr></tbody></table>
 
 ### Related pages
 

@@ -11,9 +11,9 @@ layout: layout.njk
 
 A login token (for login via QR code) was accepted.
 
-```
-updateLoginToken#564fe691 = Update;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/updateLoginToken/" class="current_page_link">updateLoginToken</a>#564fe691 = <a href="/type/Update/">Update</a>;</code></pre>
 
 ### Parameters
 

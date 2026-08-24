@@ -11,9 +11,9 @@ layout: layout.njk
 
 Represents uncommon collectible gift attribute rarity.
 
-```
-starGiftAttributeRarityUncommon#dbce6389 = StarGiftAttributeRarity;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/starGiftAttributeRarityUncommon/" class="current_page_link">starGiftAttributeRarityUncommon</a>#dbce6389 = <a href="/type/StarGiftAttributeRarity/">StarGiftAttributeRarity</a>;</code></pre>
 
 ### Parameters
 

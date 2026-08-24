@@ -11,9 +11,9 @@ layout: layout.njk
 
 Report for pornography
 
-```
-inputReportReasonPornography#2e59d922 = ReportReason;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputReportReasonPornography/" class="current_page_link">inputReportReasonPornography</a>#2e59d922 = <a href="/type/ReportReason/">ReportReason</a>;</code></pre>
 
 ### Parameters
 

@@ -11,9 +11,9 @@ layout: layout.njk
 
 Arctic theme
 
-```
-baseThemeArctic#5b11125a = BaseTheme;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/baseThemeArctic/" class="current_page_link">baseThemeArctic</a>#5b11125a = <a href="/type/BaseTheme/">BaseTheme</a>;</code></pre>
 
 ### Parameters
 

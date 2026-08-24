@@ -11,13 +11,13 @@ layout: layout.njk
 
 The ID of a model of a [collectible gift »](/api/gifts/#collectible-gifts).
 
-```
-starGiftAttributeIdModel#48aaae3c document_id:long = StarGiftAttributeId;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/starGiftAttributeIdModel/" class="current_page_link">starGiftAttributeIdModel</a>#48aaae3c document_id:<a href="/type/long/">long</a> = <a href="/type/StarGiftAttributeId/">StarGiftAttributeId</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>document_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>The <a href="/api/stickers">sticker</a> representing the upgraded gift</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>document_id</strong></td><td style="text-align: center;"><a href="/type/long/">long</a></td><td>The <a href="/api/stickers/">sticker</a> representing the upgraded gift</td></tr></tbody></table>
 
 ### Type
 

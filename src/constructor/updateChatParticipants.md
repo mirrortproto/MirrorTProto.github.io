@@ -11,13 +11,13 @@ layout: layout.njk
 
 The participants of a [basic group »](/api/channel/#basic-groups) changed.
 
-```
-updateChatParticipants#7761198 participants:ChatParticipants = Update;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/updateChatParticipants/" class="current_page_link">updateChatParticipants</a>#7761198 participants:<a href="/type/ChatParticipants/">ChatParticipants</a> = <a href="/type/Update/">Update</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>participants</strong></td><td style="text-align: center;"><a href="/type/ChatParticipants">ChatParticipants</a></td><td>Updated chat participants (also contains the <code>version</code> used to deduplicate/update outdated chat information as specified <a href="/api/peers#basic-group-updates">here »</a>).</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>participants</strong></td><td style="text-align: center;"><a href="/type/ChatParticipants/">ChatParticipants</a></td><td>Updated chat participants (also contains the <code>version</code> used to deduplicate/update outdated chat information as specified <a href="/api/peers/#basic-group-updates">here »</a>).</td></tr></tbody></table>
 
 ### Type
 

@@ -11,13 +11,13 @@ layout: layout.njk
 
 A document with stickers attached
 
-```
-inputStickeredMediaDocument#438865b id:InputDocument = InputStickeredMedia;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputStickeredMediaDocument/" class="current_page_link">inputStickeredMediaDocument</a>#438865b id:<a href="/type/InputDocument/">InputDocument</a> = <a href="/type/InputStickeredMedia/">InputStickeredMedia</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/InputDocument">InputDocument</a></td><td>The document</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/InputDocument/">InputDocument</a></td><td>The document</td></tr></tbody></table>
 
 ### Type
 

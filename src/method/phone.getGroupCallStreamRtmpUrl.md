@@ -13,15 +13,15 @@ Get the RTMP URL and stream key used by the single external streamer that publis
 
 See [here »](/api/group-calls/#creating-and-publishing-an-rtmp-livestream) for the full flow.
 
-```
-phone.groupCallStreamRtmpUrl#2dbf3432 url:string key:string = phone.GroupCallStreamRtmpUrl;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/phone.groupCallStreamRtmpUrl/">phone.groupCallStreamRtmpUrl</a>#2dbf3432 url:<a href="/type/string/">string</a> key:<a href="/type/string/">string</a> = <a href="/type/phone.GroupCallStreamRtmpUrl/">phone.GroupCallStreamRtmpUrl</a>;
 ---functions---
-phone.getGroupCallStreamRtmpUrl#5af4c73a flags:# live_story:flags.0?true peer:InputPeer revoke:Bool = phone.GroupCallStreamRtmpUrl;
-```
+<a href="/method/phone.getGroupCallStreamRtmpUrl/" class="current_page_link">phone.getGroupCallStreamRtmpUrl</a>#5af4c73a flags:<a href="/type/%23/">#</a> live_story:flags.0?true peer:<a href="/type/InputPeer/">InputPeer</a> revoke:<a href="/type/Bool/">Bool</a> = <a href="/type/phone.GroupCallStreamRtmpUrl/">phone.GroupCallStreamRtmpUrl</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>Flags, see <a href="/mtproto/TL-combinators#conditional-fields">TL conditional fields</a></td></tr><tr><td><strong>live_story</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Obtain credentials for an RTMP live story instead of a video chat/livestream</td></tr><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>Peer that will host the RTMP video chat, livestream or live story</td></tr><tr><td><strong>revoke</strong></td><td style="text-align: center;"><a href="/type/Bool">Bool</a></td><td>Whether to invalidate the previous stream key and generate a new one, instead of returning the existing key</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23/">#</a></td><td>Flags, see <a href="/mtproto/TL-combinators/#conditional-fields">TL conditional fields</a></td></tr><tr><td><strong>live_story</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators/#conditional-fields">flags</a>.0?<a href="/constructor/true/">true</a></td><td>Obtain credentials for an RTMP live story instead of a video chat/livestream</td></tr><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer/">InputPeer</a></td><td>Peer that will host the RTMP video chat, livestream or live story</td></tr><tr><td><strong>revoke</strong></td><td style="text-align: center;"><a href="/type/Bool/">Bool</a></td><td>Whether to invalidate the previous stream key and generate a new one, instead of returning the existing key</td></tr></tbody></table>
 
 ### Result
 

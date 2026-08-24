@@ -11,12 +11,12 @@ layout: layout.njk
 
 Resend the code to verify an email to use as [2FA recovery method](/api/srp/).
 
-```
-boolFalse#bc799737 = Bool;
-boolTrue#997275b5 = Bool;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/boolFalse/">boolFalse</a>#bc799737 = <a href="/type/Bool/">Bool</a>;
+<a href="/constructor/boolTrue/">boolTrue</a>#997275b5 = <a href="/type/Bool/">Bool</a>;
 ---functions---
-account.resendPasswordEmail#7a7f2a15 = Bool;
-```
+<a href="/method/account.resendPasswordEmail/" class="current_page_link">account.resendPasswordEmail</a>#7a7f2a15 = <a href="/type/Bool/">Bool</a>;</code></pre>
 
 ### Parameters
 

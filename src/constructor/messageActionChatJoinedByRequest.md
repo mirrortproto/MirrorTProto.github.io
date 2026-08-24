@@ -11,9 +11,9 @@ layout: layout.njk
 
 A user was accepted into the group by an admin
 
-```
-messageActionChatJoinedByRequest#ebbca3cb = MessageAction;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/messageActionChatJoinedByRequest/" class="current_page_link">messageActionChatJoinedByRequest</a>#ebbca3cb = <a href="/type/MessageAction/">MessageAction</a>;</code></pre>
 
 ### Parameters
 

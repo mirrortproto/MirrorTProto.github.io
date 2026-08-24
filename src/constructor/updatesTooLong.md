@@ -13,9 +13,9 @@ The number of queued updates in the common message box is too large to be delive
 
 Does **not** necessarily indicate the [message box size limit was reached](/api/updates/#recovering-gaps-for-very-old-messages), it simply indicates that the number of queued updates in a message box is too large to be delivered passively through the socket.
 
-```
-updatesTooLong#e317af7e = Updates;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/updatesTooLong/" class="current_page_link">updatesTooLong</a>#e317af7e = <a href="/type/Updates/">Updates</a>;</code></pre>
 
 ### Parameters
 

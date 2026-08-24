@@ -11,15 +11,15 @@ layout: layout.njk
 
 Fetch information about a [fragment collectible, see here »](/api/fragment/#fetching-info-about-fragment-collectibles) for more info on the full flow.
 
-```
-fragment.collectibleInfo#6ebdff91 purchase_date:int currency:string amount:long crypto_currency:string crypto_amount:long url:string = fragment.CollectibleInfo;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/fragment.collectibleInfo/">fragment.collectibleInfo</a>#6ebdff91 purchase_date:<a href="/type/int/">int</a> currency:<a href="/type/string/">string</a> amount:<a href="/type/long/">long</a> crypto_currency:<a href="/type/string/">string</a> crypto_amount:<a href="/type/long/">long</a> url:<a href="/type/string/">string</a> = <a href="/type/fragment.CollectibleInfo/">fragment.CollectibleInfo</a>;
 ---functions---
-fragment.getCollectibleInfo#be1e85ba collectible:InputCollectible = fragment.CollectibleInfo;
-```
+<a href="/method/fragment.getCollectibleInfo/" class="current_page_link">fragment.getCollectibleInfo</a>#be1e85ba collectible:<a href="/type/InputCollectible/">InputCollectible</a> = <a href="/type/fragment.CollectibleInfo/">fragment.CollectibleInfo</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>collectible</strong></td><td style="text-align: center;"><a href="/type/InputCollectible">InputCollectible</a></td><td>Collectible to fetch info about.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>collectible</strong></td><td style="text-align: center;"><a href="/type/InputCollectible/">InputCollectible</a></td><td>Collectible to fetch info about.</td></tr></tbody></table>
 
 ### Result
 

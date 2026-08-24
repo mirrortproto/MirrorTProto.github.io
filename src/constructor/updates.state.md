@@ -11,13 +11,13 @@ layout: layout.njk
 
 Updates state.
 
-```
-updates.state#a56c2a3e pts:int qts:int date:int seq:int unread_count:int = updates.State;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/updates.state/" class="current_page_link">updates.state</a>#a56c2a3e pts:<a href="/type/int/">int</a> qts:<a href="/type/int/">int</a> date:<a href="/type/int/">int</a> seq:<a href="/type/int/">int</a> unread_count:<a href="/type/int/">int</a> = <a href="/type/updates.State/">updates.State</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>pts</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Number of events occurred in a text box</td></tr><tr><td><strong>qts</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Position in a sequence of updates in secret chats. For further details refer to article <a href="/api/end-to-end">secret chats</a></td></tr><tr><td><strong>date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Date of condition</td></tr><tr><td><strong>seq</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Number of sent updates</td></tr><tr><td><strong>unread_count</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Number of unread messages</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>pts</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>Number of events occurred in a text box</td></tr><tr><td><strong>qts</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>Position in a sequence of updates in secret chats. For further details refer to article <a href="/api/end-to-end/">secret chats</a></td></tr><tr><td><strong>date</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>Date of condition</td></tr><tr><td><strong>seq</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>Number of sent updates</td></tr><tr><td><strong>unread_count</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>Number of unread messages</td></tr></tbody></table>
 
 ### Type
 

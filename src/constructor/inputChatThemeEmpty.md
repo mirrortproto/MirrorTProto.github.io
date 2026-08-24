@@ -11,9 +11,9 @@ layout: layout.njk
 
 Remove any currently configured theme.
 
-```
-inputChatThemeEmpty#83268483 = InputChatTheme;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputChatThemeEmpty/" class="current_page_link">inputChatThemeEmpty</a>#83268483 = <a href="/type/InputChatTheme/">InputChatTheme</a>;</code></pre>
 
 ### Parameters
 

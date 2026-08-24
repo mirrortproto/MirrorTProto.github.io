@@ -11,9 +11,9 @@ layout: layout.njk
 
 Bank statement
 
-```
-secureValueTypeBankStatement#89137c0d = SecureValueType;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/secureValueTypeBankStatement/" class="current_page_link">secureValueTypeBankStatement</a>#89137c0d = <a href="/type/SecureValueType/">SecureValueType</a>;</code></pre>
 
 ### Parameters
 

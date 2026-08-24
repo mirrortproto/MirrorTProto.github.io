@@ -3,7 +3,7 @@ title: "Affiliate programs"
 original: "https://core.telegram.org/api/bots/referrals"
 section: api
 description: "Developers can open affiliate programs for their mini app – allowing content creators, other mini app developers and any Telegram user to promote it and earn commissions on…"
-crumbs: [{"title":"API","url":"/api/"},{"title":"Affiliate programs","url":"https://core.telegram.org/api/bots%2Freferrals"}]
+crumbs: [{"title":"API","url":"/api/"},{"title":"Affiliate programs","url":"/api/bots/referrals/"}]
 layout: layout.njk
 ---
 

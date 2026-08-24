@@ -11,15 +11,15 @@ layout: layout.njk
 
 Get the number of stars we have received from the specified user thanks to [paid messages »](/api/paid-messages/); the received amount will be equal to the sent amount multiplied by [stars\_paid\_message\_commission\_permille](/api/config/#stars-paid-message-commission-permille) divided by 1000.
 
-```
-account.paidMessagesRevenue#1e109708 stars_amount:long = account.PaidMessagesRevenue;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/account.paidMessagesRevenue/">account.paidMessagesRevenue</a>#1e109708 stars_amount:<a href="/type/long/">long</a> = <a href="/type/account.PaidMessagesRevenue/">account.PaidMessagesRevenue</a>;
 ---functions---
-account.getPaidMessagesRevenue#19ba4a67 flags:# parent_peer:flags.0?InputPeer user_id:InputUser = account.PaidMessagesRevenue;
-```
+<a href="/method/account.getPaidMessagesRevenue/" class="current_page_link">account.getPaidMessagesRevenue</a>#19ba4a67 flags:<a href="/type/%23/">#</a> parent_peer:flags.0?<a href="/type/InputPeer/">InputPeer</a> user_id:<a href="/type/InputUser/">InputUser</a> = <a href="/type/account.PaidMessagesRevenue/">account.PaidMessagesRevenue</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>Flags, see <a href="/mtproto/TL-combinators#conditional-fields">TL conditional fields</a></td></tr><tr><td><strong>parent_peer</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/InputPeer">InputPeer</a></td><td>If set, can contain the ID of a <a href="/api/monoforum">monoforum (channel direct messages)</a> to obtain the number of stars the user has spent to send us direct messages via the channel.</td></tr><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/InputUser">InputUser</a></td><td>The user that paid to send us messages.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23/">#</a></td><td>Flags, see <a href="/mtproto/TL-combinators/#conditional-fields">TL conditional fields</a></td></tr><tr><td><strong>parent_peer</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators/#conditional-fields">flags</a>.0?<a href="/type/InputPeer/">InputPeer</a></td><td>If set, can contain the ID of a <a href="/api/monoforum/">monoforum (channel direct messages)</a> to obtain the number of stars the user has spent to send us direct messages via the channel.</td></tr><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/InputUser/">InputUser</a></td><td>The user that paid to send us messages.</td></tr></tbody></table>
 
 ### Result
 

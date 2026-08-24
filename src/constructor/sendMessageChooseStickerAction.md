@@ -11,9 +11,9 @@ layout: layout.njk
 
 User is choosing a sticker
 
-```
-sendMessageChooseStickerAction#b05ac6b1 = SendMessageAction;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/sendMessageChooseStickerAction/" class="current_page_link">sendMessageChooseStickerAction</a>#b05ac6b1 = <a href="/type/SendMessageAction/">SendMessageAction</a>;</code></pre>
 
 ### Parameters
 

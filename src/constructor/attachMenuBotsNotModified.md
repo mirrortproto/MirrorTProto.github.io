@@ -11,9 +11,9 @@ layout: layout.njk
 
 The list of bot mini apps hasn't changed
 
-```
-attachMenuBotsNotModified#f1d88a5c = AttachMenuBots;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/attachMenuBotsNotModified/" class="current_page_link">attachMenuBotsNotModified</a>#f1d88a5c = <a href="/type/AttachMenuBots/">AttachMenuBots</a>;</code></pre>
 
 ### Parameters
 

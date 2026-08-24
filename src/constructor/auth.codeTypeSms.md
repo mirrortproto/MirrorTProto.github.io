@@ -11,9 +11,9 @@ layout: layout.njk
 
 The next time, the authentication code will be delivered via an immediately canceled incoming call.
 
-```
-auth.codeTypeSms#72a3158c = auth.CodeType;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/auth.codeTypeSms/" class="current_page_link">auth.codeTypeSms</a>#72a3158c = <a href="/type/auth.CodeType/">auth.CodeType</a>;</code></pre>
 
 ### Parameters
 

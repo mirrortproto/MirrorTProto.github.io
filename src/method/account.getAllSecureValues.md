@@ -11,10 +11,10 @@ layout: layout.njk
 
 Get all saved [Telegram Passport](https://core.telegram.org/passport) documents, [for more info see the passport docs »](https://core.telegram.org/passport/encryption#encryption)
 
-```
----functions---
-account.getAllSecureValues#b288bc7d = Vector<SecureValue>;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code>---functions---
+<a href="/method/account.getAllSecureValues/" class="current_page_link">account.getAllSecureValues</a>#b288bc7d = <a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/SecureValue/">SecureValue</a>&gt;;</code></pre>
 
 ### Parameters
 
@@ -22,7 +22,7 @@ This constructor does not require any parameters.
 
 ### Result
 
-[Vector](https://core.telegram.org/type/Vector%20t)&lt;[SecureValue](/type/SecureValue/)\>
+[Vector](/type/Vector%20t/)&lt;[SecureValue](/type/SecureValue/)\>
 
 ### Only users can use this method
 

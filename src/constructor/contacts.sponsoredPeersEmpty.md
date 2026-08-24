@@ -11,9 +11,9 @@ layout: layout.njk
 
 There are no sponsored peers for this query.
 
-```
-contacts.sponsoredPeersEmpty#ea32b4b1 = contacts.SponsoredPeers;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/contacts.sponsoredPeersEmpty/" class="current_page_link">contacts.sponsoredPeersEmpty</a>#ea32b4b1 = <a href="/type/contacts.SponsoredPeers/">contacts.SponsoredPeers</a>;</code></pre>
 
 ### Parameters
 

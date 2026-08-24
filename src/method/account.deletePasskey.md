@@ -11,16 +11,16 @@ layout: layout.njk
 
 Delete a passkey associated to the current account, see [here »](/api/passkeys/#delete-passkeys) for more info.
 
-```
-boolFalse#bc799737 = Bool;
-boolTrue#997275b5 = Bool;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/boolFalse/">boolFalse</a>#bc799737 = <a href="/type/Bool/">Bool</a>;
+<a href="/constructor/boolTrue/">boolTrue</a>#997275b5 = <a href="/type/Bool/">Bool</a>;
 ---functions---
-account.deletePasskey#f5b5563f id:string = Bool;
-```
+<a href="/method/account.deletePasskey/" class="current_page_link">account.deletePasskey</a>#f5b5563f id:<a href="/type/string/">string</a> = <a href="/type/Bool/">Bool</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Identifier of the passkey to delete, taken from <a href="/constructor/passkey">passkey</a>.<code>id</code>, usually obtained using <a href="/method/account.getPasskeys">account.getPasskeys</a>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td>Identifier of the passkey to delete, taken from <a href="/constructor/passkey/">passkey</a>.<code>id</code>, usually obtained using <a href="/method/account.getPasskeys/">account.getPasskeys</a>.</td></tr></tbody></table>
 
 ### Result
 

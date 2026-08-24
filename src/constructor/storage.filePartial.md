@@ -11,9 +11,9 @@ layout: layout.njk
 
 Part of a bigger file.
 
-```
-storage.filePartial#40bc6f52 = storage.FileType;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/storage.filePartial/" class="current_page_link">storage.filePartial</a>#40bc6f52 = <a href="/type/storage.FileType/">storage.FileType</a>;</code></pre>
 
 ### Parameters
 

@@ -11,9 +11,9 @@ layout: layout.njk
 
 Used to download a JSON file that will contain all personal data related to features that do not have a specialized [takeout method](/api/takeout/) yet, see [here »](/api/takeout/) for more info on the takeout API.
 
-```
-inputTakeoutFileLocation#29be5899 = InputFileLocation;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputTakeoutFileLocation/" class="current_page_link">inputTakeoutFileLocation</a>#29be5899 = <a href="/type/InputFileLocation/">InputFileLocation</a>;</code></pre>
 
 ### Parameters
 

@@ -11,9 +11,9 @@ layout: layout.njk
 
 Peer type: [chat](/api/channel/)
 
-```
-inlineQueryPeerTypeChat#d766c50a = InlineQueryPeerType;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inlineQueryPeerTypeChat/" class="current_page_link">inlineQueryPeerTypeChat</a>#d766c50a = <a href="/type/InlineQueryPeerType/">InlineQueryPeerType</a>;</code></pre>
 
 ### Parameters
 

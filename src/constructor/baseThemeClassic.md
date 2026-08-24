@@ -11,9 +11,9 @@ layout: layout.njk
 
 Classic theme
 
-```
-baseThemeClassic#c3a12462 = BaseTheme;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/baseThemeClassic/" class="current_page_link">baseThemeClassic</a>#c3a12462 = <a href="/type/BaseTheme/">BaseTheme</a>;</code></pre>
 
 ### Parameters
 

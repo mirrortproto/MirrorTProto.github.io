@@ -11,9 +11,9 @@ layout: layout.njk
 
 [Common message box sequence PTS](/api/updates/) has changed, [state has to be refetched using updates.getState](/api/updates/#fetching-state)
 
-```
-updatePtsChanged#3354678f = Update;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/updatePtsChanged/" class="current_page_link">updatePtsChanged</a>#3354678f = <a href="/type/Update/">Update</a>;</code></pre>
 
 ### Parameters
 

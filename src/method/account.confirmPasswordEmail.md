@@ -11,16 +11,16 @@ layout: layout.njk
 
 Verify an email to use as [2FA recovery method](/api/srp/).
 
-```
-boolFalse#bc799737 = Bool;
-boolTrue#997275b5 = Bool;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/boolFalse/">boolFalse</a>#bc799737 = <a href="/type/Bool/">Bool</a>;
+<a href="/constructor/boolTrue/">boolTrue</a>#997275b5 = <a href="/type/Bool/">Bool</a>;
 ---functions---
-account.confirmPasswordEmail#8fdf1920 code:string = Bool;
-```
+<a href="/method/account.confirmPasswordEmail/" class="current_page_link">account.confirmPasswordEmail</a>#8fdf1920 code:<a href="/type/string/">string</a> = <a href="/type/Bool/">Bool</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>code</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>The phone code that was received after <a href="/api/srp#email-verification">setting a recovery email</a></td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>code</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td>The phone code that was received after <a href="/api/srp/#email-verification">setting a recovery email</a></td></tr></tbody></table>
 
 ### Result
 

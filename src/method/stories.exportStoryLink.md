@@ -11,15 +11,15 @@ layout: layout.njk
 
 Generate a [story deep link](/api/links/#story-links) for a specific story
 
-```
-exportedStoryLink#3fc9053b link:string = ExportedStoryLink;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/exportedStoryLink/">exportedStoryLink</a>#3fc9053b link:<a href="/type/string/">string</a> = <a href="/type/ExportedStoryLink/">ExportedStoryLink</a>;
 ---functions---
-stories.exportStoryLink#7b8def20 peer:InputPeer id:int = ExportedStoryLink;
-```
+<a href="/method/stories.exportStoryLink/" class="current_page_link">stories.exportStoryLink</a>#7b8def20 peer:<a href="/type/InputPeer/">InputPeer</a> id:<a href="/type/int/">int</a> = <a href="/type/ExportedStoryLink/">ExportedStoryLink</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>Peer where the story was posted</td></tr><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Story ID</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer/">InputPeer</a></td><td>Peer where the story was posted</td></tr><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>Story ID</td></tr></tbody></table>
 
 ### Result
 

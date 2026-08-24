@@ -11,9 +11,9 @@ layout: layout.njk
 
 Group photo is not set.
 
-```
-chatPhotoEmpty#37c1011c = ChatPhoto;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/chatPhotoEmpty/" class="current_page_link">chatPhotoEmpty</a>#37c1011c = <a href="/type/ChatPhoto/">ChatPhoto</a>;</code></pre>
 
 ### Parameters
 

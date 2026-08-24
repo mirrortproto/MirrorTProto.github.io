@@ -11,16 +11,16 @@ layout: layout.njk
 
 Checks whether a purchase is possible. Must be called before in-store purchase, official apps only.
 
-```
-boolFalse#bc799737 = Bool;
-boolTrue#997275b5 = Bool;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/boolFalse/">boolFalse</a>#bc799737 = <a href="/type/Bool/">Bool</a>;
+<a href="/constructor/boolTrue/">boolTrue</a>#997275b5 = <a href="/type/Bool/">Bool</a>;
 ---functions---
-payments.canPurchaseStore#4fdc5ea7 purpose:InputStorePaymentPurpose = Bool;
-```
+<a href="/method/payments.canPurchaseStore/" class="current_page_link">payments.canPurchaseStore</a>#4fdc5ea7 purpose:<a href="/type/InputStorePaymentPurpose/">InputStorePaymentPurpose</a> = <a href="/type/Bool/">Bool</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>purpose</strong></td><td style="text-align: center;"><a href="/type/InputStorePaymentPurpose">InputStorePaymentPurpose</a></td><td>Payment purpose.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>purpose</strong></td><td style="text-align: center;"><a href="/type/InputStorePaymentPurpose/">InputStorePaymentPurpose</a></td><td>Payment purpose.</td></tr></tbody></table>
 
 ### Result
 

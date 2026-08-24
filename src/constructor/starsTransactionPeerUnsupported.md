@@ -11,9 +11,9 @@ layout: layout.njk
 
 Describes a [Telegram Star](/api/stars/) transaction that cannot be described using the current layer.
 
-```
-starsTransactionPeerUnsupported#95f2bfe4 = StarsTransactionPeer;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/starsTransactionPeerUnsupported/" class="current_page_link">starsTransactionPeerUnsupported</a>#95f2bfe4 = <a href="/type/StarsTransactionPeer/">StarsTransactionPeer</a>;</code></pre>
 
 ### Parameters
 

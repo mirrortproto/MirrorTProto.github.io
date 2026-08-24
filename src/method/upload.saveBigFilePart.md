@@ -11,16 +11,16 @@ layout: layout.njk
 
 Saves a part of a large file (over 10 MB in size) to be later passed to one of the methods.
 
-```
-boolFalse#bc799737 = Bool;
-boolTrue#997275b5 = Bool;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/boolFalse/">boolFalse</a>#bc799737 = <a href="/type/Bool/">Bool</a>;
+<a href="/constructor/boolTrue/">boolTrue</a>#997275b5 = <a href="/type/Bool/">Bool</a>;
 ---functions---
-upload.saveBigFilePart#de7b673d file_id:long file_part:int file_total_parts:int bytes:bytes = Bool;
-```
+<a href="/method/upload.saveBigFilePart/" class="current_page_link">upload.saveBigFilePart</a>#de7b673d file_id:<a href="/type/long/">long</a> file_part:<a href="/type/int/">int</a> file_total_parts:<a href="/type/int/">int</a> bytes:<a href="/type/bytes/">bytes</a> = <a href="/type/Bool/">Bool</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>file_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Random file id, created by the client</td></tr><tr><td><strong>file_part</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Part sequence number</td></tr><tr><td><strong>file_total_parts</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Total number of parts</td></tr><tr><td><strong>bytes</strong></td><td style="text-align: center;"><a href="/type/bytes">bytes</a></td><td>Binary data, part contents</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>file_id</strong></td><td style="text-align: center;"><a href="/type/long/">long</a></td><td>Random file id, created by the client</td></tr><tr><td><strong>file_part</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>Part sequence number</td></tr><tr><td><strong>file_total_parts</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>Total number of parts</td></tr><tr><td><strong>bytes</strong></td><td style="text-align: center;"><a href="/type/bytes/">bytes</a></td><td>Binary data, part contents</td></tr></tbody></table>
 
 ### Result
 

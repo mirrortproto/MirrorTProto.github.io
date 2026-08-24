@@ -803,17 +803,17 @@
     },
     {
      "url": "/schema/json/",
-     "title": "json",
+     "title": "TL-Schema in JSON",
      "section": "schema"
     },
     {
      "url": "/schema/mtproto-json/",
-     "title": "mtproto-json",
+     "title": "MTProto TL-Schema in JSON",
      "section": "schema"
     },
     {
      "url": "/schema/end-to-end-json/",
-     "title": "end-to-end-json",
+     "title": "End-to-end TL-Schema in JSON",
      "section": "schema"
     },
     {

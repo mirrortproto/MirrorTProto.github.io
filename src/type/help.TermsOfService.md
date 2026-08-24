@@ -11,10 +11,10 @@ layout: layout.njk
 
 Contains info about the latest telegram Terms Of Service.
 
-```
-help.termsOfService#780a0310 flags:# popup:flags.0?true id:DataJSON text:string entities:Vector<MessageEntity> min_age_confirm:flags.1?int = help.TermsOfService;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/help.termsOfService/">help.termsOfService</a>#780a0310 flags:<a href="/type/%23/">#</a> popup:flags.0?true id:<a href="/type/DataJSON/">DataJSON</a> text:<a href="/type/string/">string</a> entities:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/MessageEntity/">MessageEntity</a>&gt; min_age_confirm:flags.1?<a href="/type/int/">int</a> = <a href="/type/help.TermsOfService/" class="current_page_link">help.TermsOfService</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/help.termsOfService">help.termsOfService</a></td><td>Info about the latest telegram Terms Of Service</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/help.termsOfService/">help.termsOfService</a></td><td>Info about the latest telegram Terms Of Service</td></tr></tbody></table>

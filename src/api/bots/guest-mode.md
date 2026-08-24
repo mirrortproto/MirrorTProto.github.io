@@ -3,7 +3,7 @@ title: "Guest mode for bots"
 original: "https://core.telegram.org/api/bots/guest-mode"
 section: api
 description: "Guest bots can be queried by username from any non-secret private chat, group and supergroup (except for groups/supergroups with content protection » enabled), posting their…"
-crumbs: [{"title":"API","url":"/api/"},{"title":"Guest mode for bots","url":"https://core.telegram.org/api/bots%2Fguest-mode"}]
+crumbs: [{"title":"API","url":"/api/"},{"title":"Guest mode for bots","url":"/api/bots/guest-mode/"}]
 layout: layout.njk
 ---
 

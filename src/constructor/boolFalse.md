@@ -11,9 +11,9 @@ layout: layout.njk
 
 Constructor may be interpreted as a **boolean**`false` value.
 
-```
-boolFalse#bc799737 = Bool;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/boolFalse/" class="current_page_link">boolFalse</a>#bc799737 = <a href="/type/Bool/">Bool</a>;</code></pre>
 
 ### Parameters
 

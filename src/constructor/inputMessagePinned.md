@@ -11,9 +11,9 @@ layout: layout.njk
 
 Pinned message
 
-```
-inputMessagePinned#86872538 = InputMessage;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputMessagePinned/" class="current_page_link">inputMessagePinned</a>#86872538 = <a href="/type/InputMessage/">InputMessage</a>;</code></pre>
 
 ### Parameters
 

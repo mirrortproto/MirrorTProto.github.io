@@ -11,9 +11,9 @@ layout: layout.njk
 
 Default [custom emoji status](/api/emoji-status/) stickerset
 
-```
-inputStickerSetEmojiDefaultStatuses#29d0f5ee = InputStickerSet;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputStickerSetEmojiDefaultStatuses/" class="current_page_link">inputStickerSetEmojiDefaultStatuses</a>#29d0f5ee = <a href="/type/InputStickerSet/">InputStickerSet</a>;</code></pre>
 
 ### Parameters
 

@@ -11,13 +11,13 @@ layout: layout.njk
 
 Represents a [Telegram Star subscription »](/api/invites/#paid-invite-links).
 
-```
-starsSubscription#2e6eab1a flags:# canceled:flags.0?true can_refulfill:flags.1?true missing_balance:flags.2?true bot_canceled:flags.7?true id:string peer:Peer until_date:int pricing:StarsSubscriptionPricing chat_invite_hash:flags.3?string title:flags.4?string photo:flags.5?WebDocument invoice_slug:flags.6?string = StarsSubscription;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/starsSubscription/">starsSubscription</a>#2e6eab1a flags:<a href="/type/%23/">#</a> canceled:flags.0?true can_refulfill:flags.1?true missing_balance:flags.2?true bot_canceled:flags.7?true id:<a href="/type/string/">string</a> peer:<a href="/type/Peer/">Peer</a> until_date:<a href="/type/int/">int</a> pricing:<a href="/type/StarsSubscriptionPricing/">StarsSubscriptionPricing</a> chat_invite_hash:flags.3?<a href="/type/string/">string</a> title:flags.4?<a href="/type/string/">string</a> photo:flags.5?<a href="/type/WebDocument/">WebDocument</a> invoice_slug:flags.6?<a href="/type/string/">string</a> = <a href="/type/StarsSubscription/" class="current_page_link">StarsSubscription</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/starsSubscription">starsSubscription</a></td><td>Represents a <a href="/api/invites#paid-invite-links">Telegram Star subscription »</a>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/starsSubscription/">starsSubscription</a></td><td>Represents a <a href="/api/invites/#paid-invite-links">Telegram Star subscription »</a>.</td></tr></tbody></table>
 
 ### Related pages
 

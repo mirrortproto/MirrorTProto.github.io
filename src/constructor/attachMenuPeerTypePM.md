@@ -11,9 +11,9 @@ layout: layout.njk
 
 The bot attachment menu entry is available in private chats with other users (not bots)
 
-```
-attachMenuPeerTypePM#f146d31f = AttachMenuPeerType;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/attachMenuPeerTypePM/" class="current_page_link">attachMenuPeerTypePM</a>#f146d31f = <a href="/type/AttachMenuPeerType/">AttachMenuPeerType</a>;</code></pre>
 
 ### Parameters
 

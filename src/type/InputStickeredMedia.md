@@ -11,11 +11,11 @@ layout: layout.njk
 
 Represents a media with attached stickers
 
-```
-inputStickeredMediaPhoto#4a992157 id:InputPhoto = InputStickeredMedia;
-inputStickeredMediaDocument#438865b id:InputDocument = InputStickeredMedia;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputStickeredMediaPhoto/">inputStickeredMediaPhoto</a>#4a992157 id:<a href="/type/InputPhoto/">InputPhoto</a> = <a href="/type/InputStickeredMedia/" class="current_page_link">InputStickeredMedia</a>;
+<a href="/constructor/inputStickeredMediaDocument/">inputStickeredMediaDocument</a>#438865b id:<a href="/type/InputDocument/">InputDocument</a> = <a href="/type/InputStickeredMedia/" class="current_page_link">InputStickeredMedia</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/inputStickeredMediaPhoto">inputStickeredMediaPhoto</a></td><td>A photo with stickers attached</td></tr><tr><td><a href="/constructor/inputStickeredMediaDocument">inputStickeredMediaDocument</a></td><td>A document with stickers attached</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/inputStickeredMediaPhoto/">inputStickeredMediaPhoto</a></td><td>A photo with stickers attached</td></tr><tr><td><a href="/constructor/inputStickeredMediaDocument/">inputStickeredMediaDocument</a></td><td>A document with stickers attached</td></tr></tbody></table>

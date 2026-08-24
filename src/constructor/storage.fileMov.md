@@ -11,9 +11,9 @@ layout: layout.njk
 
 Quicktime video. MIME type: `video/quicktime`.
 
-```
-storage.fileMov#4b09ebbc = storage.FileType;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/storage.fileMov/" class="current_page_link">storage.fileMov</a>#4b09ebbc = <a href="/type/storage.FileType/">storage.FileType</a>;</code></pre>
 
 ### Parameters
 

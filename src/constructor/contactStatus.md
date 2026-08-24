@@ -11,13 +11,13 @@ layout: layout.njk
 
 Contact status: online / offline.
 
-```
-contactStatus#16d9703b user_id:long status:UserStatus = ContactStatus;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/contactStatus/" class="current_page_link">contactStatus</a>#16d9703b user_id:<a href="/type/long/">long</a> status:<a href="/type/UserStatus/">UserStatus</a> = <a href="/type/ContactStatus/">ContactStatus</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>User identifier</td></tr><tr><td><strong>status</strong></td><td style="text-align: center;"><a href="/type/UserStatus">UserStatus</a></td><td>Online status</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/long/">long</a></td><td>User identifier</td></tr><tr><td><strong>status</strong></td><td style="text-align: center;"><a href="/type/UserStatus/">UserStatus</a></td><td>Online status</td></tr></tbody></table>
 
 ### Type
 

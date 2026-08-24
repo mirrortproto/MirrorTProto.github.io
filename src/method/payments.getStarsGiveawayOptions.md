@@ -11,10 +11,10 @@ layout: layout.njk
 
 Fetch a list of [star giveaway options »](/api/giveaways/#star-giveaways).
 
-```
----functions---
-payments.getStarsGiveawayOptions#bd1efd3e = Vector<StarsGiveawayOption>;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code>---functions---
+<a href="/method/payments.getStarsGiveawayOptions/" class="current_page_link">payments.getStarsGiveawayOptions</a>#bd1efd3e = <a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/StarsGiveawayOption/">StarsGiveawayOption</a>&gt;;</code></pre>
 
 ### Parameters
 
@@ -22,7 +22,7 @@ This constructor does not require any parameters.
 
 ### Result
 
-[Vector](https://core.telegram.org/type/Vector%20t)&lt;[StarsGiveawayOption](/type/StarsGiveawayOption/)\>
+[Vector](/type/Vector%20t/)&lt;[StarsGiveawayOption](/type/StarsGiveawayOption/)\>
 
 ### Only users can use this method
 

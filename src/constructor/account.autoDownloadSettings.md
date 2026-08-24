@@ -11,13 +11,13 @@ layout: layout.njk
 
 Media autodownload settings
 
-```
-account.autoDownloadSettings#63cacf26 low:AutoDownloadSettings medium:AutoDownloadSettings high:AutoDownloadSettings = account.AutoDownloadSettings;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/account.autoDownloadSettings/" class="current_page_link">account.autoDownloadSettings</a>#63cacf26 low:<a href="/type/AutoDownloadSettings/">AutoDownloadSettings</a> medium:<a href="/type/AutoDownloadSettings/">AutoDownloadSettings</a> high:<a href="/type/AutoDownloadSettings/">AutoDownloadSettings</a> = <a href="/type/account.AutoDownloadSettings/">account.AutoDownloadSettings</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>low</strong></td><td style="text-align: center;"><a href="/type/AutoDownloadSettings">AutoDownloadSettings</a></td><td>Low data usage preset</td></tr><tr><td><strong>medium</strong></td><td style="text-align: center;"><a href="/type/AutoDownloadSettings">AutoDownloadSettings</a></td><td>Medium data usage preset</td></tr><tr><td><strong>high</strong></td><td style="text-align: center;"><a href="/type/AutoDownloadSettings">AutoDownloadSettings</a></td><td>High data usage preset</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>low</strong></td><td style="text-align: center;"><a href="/type/AutoDownloadSettings/">AutoDownloadSettings</a></td><td>Low data usage preset</td></tr><tr><td><strong>medium</strong></td><td style="text-align: center;"><a href="/type/AutoDownloadSettings/">AutoDownloadSettings</a></td><td>Medium data usage preset</td></tr><tr><td><strong>high</strong></td><td style="text-align: center;"><a href="/type/AutoDownloadSettings/">AutoDownloadSettings</a></td><td>High data usage preset</td></tr></tbody></table>
 
 ### Type
 

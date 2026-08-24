@@ -11,16 +11,16 @@ layout: layout.njk
 
 Delete a [business chat deep link »](/api/business/#business-chat-links).
 
-```
-boolFalse#bc799737 = Bool;
-boolTrue#997275b5 = Bool;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/boolFalse/">boolFalse</a>#bc799737 = <a href="/type/Bool/">Bool</a>;
+<a href="/constructor/boolTrue/">boolTrue</a>#997275b5 = <a href="/type/Bool/">Bool</a>;
 ---functions---
-account.deleteBusinessChatLink#60073674 slug:string = Bool;
-```
+<a href="/method/account.deleteBusinessChatLink/" class="current_page_link">account.deleteBusinessChatLink</a>#60073674 slug:<a href="/type/string/">string</a> = <a href="/type/Bool/">Bool</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>slug</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Slug of the link, obtained as specified <a href="/api/links#business-chat-links">here »</a>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>slug</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td>Slug of the link, obtained as specified <a href="/api/links/#business-chat-links">here »</a>.</td></tr></tbody></table>
 
 ### Result
 
@@ -30,7 +30,7 @@ account.deleteBusinessChatLink#60073674 slug:string = Bool;
 
 ### Possible errors
 
-<table class="table"><thead><tr><th scope="col">Code</th><th scope="col">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td>400</td><td>CHATLINK_SLUG_EMPTY</td><td>The specified slug is empty.</td></tr><tr><td>400</td><td>CHATLINK_SLUG_EXPIRED</td><td>The specified <a href="/api/business#business-chat-links">business chat link</a> has expired.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Code</th><th scope="col">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td>400</td><td>CHATLINK_SLUG_EMPTY</td><td>The specified slug is empty.</td></tr><tr><td>400</td><td>CHATLINK_SLUG_EXPIRED</td><td>The specified <a href="/api/business/#business-chat-links">business chat link</a> has expired.</td></tr></tbody></table>
 
 ### Related pages
 

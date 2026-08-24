@@ -20,9 +20,9 @@ sendMessageRecordRoundAction#88f27fbc = SendMessageAction;
 
 #### API schema
 
-```
-sendMessageRecordRoundAction#88f27fbc = SendMessageAction;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/sendMessageRecordRoundAction/" class="current_page_link">sendMessageRecordRoundAction</a>#88f27fbc = <a href="/type/SendMessageAction/">SendMessageAction</a>;</code></pre>
 
 ### Parameters
 

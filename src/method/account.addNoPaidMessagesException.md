@@ -11,9 +11,9 @@ layout: layout.njk
 
 Allow a user to send us messages without paying if [paid messages »](/api/paid-messages/) are enabled.
 
-```
- Method schema is available as of layer 205. Switch »
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code>Method schema is available as of layer 205. <a href="?layer=205">Switch »</a></code></pre>
 
 ### Parameters
 

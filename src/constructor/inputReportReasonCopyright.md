@@ -11,9 +11,9 @@ layout: layout.njk
 
 Report for copyrighted content
 
-```
-inputReportReasonCopyright#9b89f93a = ReportReason;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputReportReasonCopyright/" class="current_page_link">inputReportReasonCopyright</a>#9b89f93a = <a href="/type/ReportReason/">ReportReason</a>;</code></pre>
 
 ### Parameters
 

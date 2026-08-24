@@ -92,7 +92,7 @@ When buying a gift from the list of gifts currently on [resale »](#reselling-co
 -   `slug`: Taken from the returned [starGiftUnique](/constructor/starGiftUnique/).`slug`, or from the link
 -   `to_id`: Identifier of the user or channel that will receive the gift
 
-Then, follow the [usual payment flow »](https://core.telegram.org/api/payments#22-getting-invoice-info-about-the-product).
+Then, follow the [usual payment flow »](/api/payments/#2-2-getting-invoice-info-about-the-product).
 
 Once the payment is completed, the destination peer will receive a [messageService](/constructor/messageService/) with a [messageActionStarGift](/constructor/messageActionStarGift/) from us, containing info about the received gift.
 
@@ -303,9 +303,9 @@ To upgrade a received gift, pay [starGift](/constructor/starGift/).`upgrade_star
 -   `keep_original_details`: Set this flag to keep the original gift text, sender and receiver in the upgraded gift as a [starGiftAttributeOriginalDetails](/constructor/starGiftAttributeOriginalDetails/) attribute.  
     This information can later be removed using [inputInvoiceStarGiftDropOriginalDetails](/constructor/inputInvoiceStarGiftDropOriginalDetails/) as specified [here »](#dropping-the-original-details-of-an-upgraded-gift).
 
-Then, follow the [usual payment flow »](https://core.telegram.org/api/payments#22-getting-invoice-info-about-the-product).
+Then, follow the [usual payment flow »](/api/payments/#2-2-getting-invoice-info-about-the-product).
 
-If the original sender of the gift has already paid for the upgrade [as specified here »](#prepaying-for-someone-elses-upgrade) (signaled by specific flags listed [here »](#prepaying-for-someone-elses-upgrade)), simply invoke [payments.upgradeStarGift](/method/payments.upgradeStarGift/) with the same flags instead of using the [payments.getPaymentForm](/method/payments.getPaymentForm/) payment flow.
+If the original sender of the gift has already paid for the upgrade [as specified here »](#prepaying-for-someone-else-s-upgrade) (signaled by specific flags listed [here »](#prepaying-for-someone-else-s-upgrade)), simply invoke [payments.upgradeStarGift](/method/payments.upgradeStarGift/) with the same flags instead of using the [payments.getPaymentForm](/method/payments.getPaymentForm/) payment flow.
 
 Upgrading a gift will emit a [messageActionStarGiftUnique](/constructor/messageActionStarGiftUnique/), containing info about the newly upgraded gift as a [starGiftUnique](/constructor/starGiftUnique/) and some extra information.
 
@@ -328,7 +328,7 @@ starsTransaction#13659eb0 flags:# refund:flags.3?true pending:flags.4?true faile
 
 When [upgrading a gift to a collectible gift »](#upgrade-a-gift-to-a-collectible-gift), if the `keep_original_details` flag is set, the upgraded gift will have a [starGiftAttributeOriginalDetails](/constructor/starGiftAttributeOriginalDetails/) attribute containing the original gift text, sender and receiver.
 
-If the `drop_original_details_stars` flag of [messageActionStarGiftUnique](/constructor/messageActionStarGiftUnique/)/[savedStarGift](/constructor/savedStarGift/) is set, this information can be removed by paying the amount of [stars](/api/stars/) specified in `drop_original_details_stars` using [inputInvoiceStarGiftDropOriginalDetails](/constructor/inputInvoiceStarGiftDropOriginalDetails/), passing it to the [usual payment flow »](https://core.telegram.org/api/payments#22-getting-invoice-info-about-the-product), along with an [InputSavedStarGift](/type/InputSavedStarGift/) pointing to the owned gift.
+If the `drop_original_details_stars` flag of [messageActionStarGiftUnique](/constructor/messageActionStarGiftUnique/)/[savedStarGift](/constructor/savedStarGift/) is set, this information can be removed by paying the amount of [stars](/api/stars/) specified in `drop_original_details_stars` using [inputInvoiceStarGiftDropOriginalDetails](/constructor/inputInvoiceStarGiftDropOriginalDetails/), passing it to the [usual payment flow »](/api/payments/#2-2-getting-invoice-info-about-the-product), along with an [InputSavedStarGift](/type/InputSavedStarGift/) pointing to the owned gift.
 
 The resulting [transaction](/constructor/starsTransaction/) will have the `stargift_drop_original_details` flag set.
 
@@ -347,7 +347,7 @@ The resulting [messageActionStarGift](/constructor/messageActionStarGift/) will 
 
 It's also possible to pay to upgrade someone else's gift (even if the currently logged in user did not send them that gift) after the fact, by using [inputInvoiceStarGiftPrepaidUpgrade](/constructor/inputInvoiceStarGiftPrepaidUpgrade/), passing the peer where the gift was sent and the upgrade hash from [messageActionStarGift](/constructor/messageActionStarGift/).`prepaid_upgrade_hash` or [savedStarGift](/constructor/savedStarGift/).`prepaid_upgrade_hash`.
 
-Then, follow the [usual payment flow »](https://core.telegram.org/api/payments#22-getting-invoice-info-about-the-product).
+Then, follow the [usual payment flow »](/api/payments/#2-2-getting-invoice-info-about-the-product).
 
 Upon completion, a new [messageActionStarGift](/constructor/messageActionStarGift/) will be emitted with the `upgrade_separate` flag set, and the `gift_msg_id` flag populated with the ID of the [messageActionStarGift](/constructor/messageActionStarGift/) with the upgraded gift only valid for the receiver of the message.
 
@@ -618,7 +618,7 @@ To transfer a collectible gift, pay [messageActionStarGiftUnique](/constructor/m
 -   `stargift`: The identifier of the received gift
 -   `to_id`: The destination peer
 
-Then, follow the [usual payment flow »](https://core.telegram.org/api/payments#22-getting-invoice-info-about-the-product).
+Then, follow the [usual payment flow »](/api/payments/#2-2-getting-invoice-info-about-the-product).
 
 If [messageActionStarGiftUnique](/constructor/messageActionStarGiftUnique/)/[savedStarGift](/constructor/savedStarGift/).`transfer_stars` is not set, the gift may be transferred for free: in this case, simply invoke [payments.transferStarGift](/method/payments.transferStarGift/).
 

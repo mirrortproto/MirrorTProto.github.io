@@ -11,13 +11,13 @@ layout: layout.njk
 
 A [quick reply shortcut](/api/business/#quick-reply-shortcuts).
 
-```
-quickReply#697102b shortcut_id:int shortcut:string top_message:int count:int = QuickReply;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/quickReply/">quickReply</a>#697102b shortcut_id:<a href="/type/int/">int</a> shortcut:<a href="/type/string/">string</a> top_message:<a href="/type/int/">int</a> count:<a href="/type/int/">int</a> = <a href="/type/QuickReply/" class="current_page_link">QuickReply</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/quickReply">quickReply</a></td><td>A <a href="/api/business#quick-reply-shortcuts">quick reply shortcut</a>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/quickReply/">quickReply</a></td><td>A <a href="/api/business/#quick-reply-shortcuts">quick reply shortcut</a>.</td></tr></tbody></table>
 
 ### Related pages
 

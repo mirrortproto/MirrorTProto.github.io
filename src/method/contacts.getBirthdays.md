@@ -13,11 +13,11 @@ Fetch all users with birthdays that fall within +1/-1 days, relative to the curr
 
 [See here »](/api/profile/#birthday) for more info.
 
-```
-contacts.contactBirthdays#114ff30d contacts:Vector<ContactBirthday> users:Vector<User> = contacts.ContactBirthdays;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/contacts.contactBirthdays/">contacts.contactBirthdays</a>#114ff30d contacts:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/ContactBirthday/">ContactBirthday</a>&gt; users:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/User/">User</a>&gt; = <a href="/type/contacts.ContactBirthdays/">contacts.ContactBirthdays</a>;
 ---functions---
-contacts.getBirthdays#daeda864 = contacts.ContactBirthdays;
-```
+<a href="/method/contacts.getBirthdays/" class="current_page_link">contacts.getBirthdays</a>#daeda864 = <a href="/type/contacts.ContactBirthdays/">contacts.ContactBirthdays</a>;</code></pre>
 
 ### Parameters
 

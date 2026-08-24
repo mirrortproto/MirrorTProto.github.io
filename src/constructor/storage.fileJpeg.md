@@ -11,9 +11,9 @@ layout: layout.njk
 
 JPEG image. MIME type: `image/jpeg`.
 
-```
-storage.fileJpeg#7efe0e = storage.FileType;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/storage.fileJpeg/" class="current_page_link">storage.fileJpeg</a>#7efe0e = <a href="/type/storage.FileType/">storage.FileType</a>;</code></pre>
 
 ### Parameters
 

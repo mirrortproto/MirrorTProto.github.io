@@ -11,13 +11,13 @@ layout: layout.njk
 
 Contains updates to [auction state related to the current user, see here »](/api/auctions/) for more info on how to enable these updates.
 
-```
-updateStarGiftAuctionUserState#dc58f31e gift_id:long user_state:StarGiftAuctionUserState = Update;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/updateStarGiftAuctionUserState/" class="current_page_link">updateStarGiftAuctionUserState</a>#dc58f31e gift_id:<a href="/type/long/">long</a> user_state:<a href="/type/StarGiftAuctionUserState/">StarGiftAuctionUserState</a> = <a href="/type/Update/">Update</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>gift_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>ID of the <a href="/api/gifts#collectible-gifts">collectible gift »</a> currently being distributed in the auction.</td></tr><tr><td><strong>user_state</strong></td><td style="text-align: center;"><a href="/type/StarGiftAuctionUserState">StarGiftAuctionUserState</a></td><td>Auction state related to the current user (i.e. info about placed bids, won gifts and so on).</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>gift_id</strong></td><td style="text-align: center;"><a href="/type/long/">long</a></td><td>ID of the <a href="/api/gifts/#collectible-gifts">collectible gift »</a> currently being distributed in the auction.</td></tr><tr><td><strong>user_state</strong></td><td style="text-align: center;"><a href="/type/StarGiftAuctionUserState/">StarGiftAuctionUserState</a></td><td>Auction state related to the current user (i.e. info about placed bids, won gifts and so on).</td></tr></tbody></table>
 
 ### Type
 

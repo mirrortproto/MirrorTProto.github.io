@@ -11,9 +11,9 @@ layout: layout.njk
 
 No new participant info could be found
 
-```
-channels.channelParticipantsNotModified#f0173fe9 = channels.ChannelParticipants;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/channels.channelParticipantsNotModified/" class="current_page_link">channels.channelParticipantsNotModified</a>#f0173fe9 = <a href="/type/channels.ChannelParticipants/">channels.ChannelParticipants</a>;</code></pre>
 
 ### Parameters
 

@@ -11,11 +11,11 @@ layout: layout.njk
 
 Get [folders](/api/folders/)
 
-```
-messages.dialogFilters#2ad93719 flags:# tags_enabled:flags.0?true filters:Vector<DialogFilter> = messages.DialogFilters;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/messages.dialogFilters/">messages.dialogFilters</a>#2ad93719 flags:<a href="/type/%23/">#</a> tags_enabled:flags.0?true filters:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/DialogFilter/">DialogFilter</a>&gt; = <a href="/type/messages.DialogFilters/">messages.DialogFilters</a>;
 ---functions---
-messages.getDialogFilters#efd48c89 = messages.DialogFilters;
-```
+<a href="/method/messages.getDialogFilters/" class="current_page_link">messages.getDialogFilters</a>#efd48c89 = <a href="/type/messages.DialogFilters/">messages.DialogFilters</a>;</code></pre>
 
 ### Parameters
 

@@ -11,9 +11,9 @@ layout: layout.njk
 
 Always send [Telegram Business away messages](/api/business/#away-messages) to users writing to us in private.
 
-```
-businessAwayMessageScheduleAlways#c9b9e2b9 = BusinessAwayMessageSchedule;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/businessAwayMessageScheduleAlways/" class="current_page_link">businessAwayMessageScheduleAlways</a>#c9b9e2b9 = <a href="/type/BusinessAwayMessageSchedule/">BusinessAwayMessageSchedule</a>;</code></pre>
 
 ### Parameters
 

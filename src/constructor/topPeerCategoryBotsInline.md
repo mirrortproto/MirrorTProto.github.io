@@ -11,9 +11,9 @@ layout: layout.njk
 
 Most used inline bots
 
-```
-topPeerCategoryBotsInline#148677e2 = TopPeerCategory;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/topPeerCategoryBotsInline/" class="current_page_link">topPeerCategoryBotsInline</a>#148677e2 = <a href="/type/TopPeerCategory/">TopPeerCategory</a>;</code></pre>
 
 ### Parameters
 

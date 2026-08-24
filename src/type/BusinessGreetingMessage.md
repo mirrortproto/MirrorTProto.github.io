@@ -11,13 +11,13 @@ layout: layout.njk
 
 Describes a [Telegram Business greeting](/api/business/#greeting-messages), automatically sent to new users writing to us in private for the first time, or after a certain inactivity period.
 
-```
-businessGreetingMessage#e519abab shortcut_id:int recipients:BusinessRecipients no_activity_days:int = BusinessGreetingMessage;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/businessGreetingMessage/">businessGreetingMessage</a>#e519abab shortcut_id:<a href="/type/int/">int</a> recipients:<a href="/type/BusinessRecipients/">BusinessRecipients</a> no_activity_days:<a href="/type/int/">int</a> = <a href="/type/BusinessGreetingMessage/" class="current_page_link">BusinessGreetingMessage</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/businessGreetingMessage">businessGreetingMessage</a></td><td>Describes a <a href="/api/business#greeting-messages">Telegram Business greeting</a>, automatically sent to new users writing to us in private for the first time, or after a certain inactivity period.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/businessGreetingMessage/">businessGreetingMessage</a></td><td>Describes a <a href="/api/business/#greeting-messages">Telegram Business greeting</a>, automatically sent to new users writing to us in private for the first time, or after a certain inactivity period.</td></tr></tbody></table>
 
 ### Related pages
 

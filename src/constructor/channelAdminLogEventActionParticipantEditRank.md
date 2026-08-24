@@ -11,13 +11,13 @@ layout: layout.njk
 
 A participant's [tag »](/api/rank/) was changed.
 
-```
-channelAdminLogEventActionParticipantEditRank#5806b4ec user_id:long prev_rank:string new_rank:string = ChannelAdminLogEventAction;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/channelAdminLogEventActionParticipantEditRank/" class="current_page_link">channelAdminLogEventActionParticipantEditRank</a>#5806b4ec user_id:<a href="/type/long/">long</a> prev_rank:<a href="/type/string/">string</a> new_rank:<a href="/type/string/">string</a> = <a href="/type/ChannelAdminLogEventAction/">ChannelAdminLogEventAction</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>The user ID.</td></tr><tr><td><strong>prev_rank</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>The previous tag.</td></tr><tr><td><strong>new_rank</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>The new tag.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/long/">long</a></td><td>The user ID.</td></tr><tr><td><strong>prev_rank</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td>The previous tag.</td></tr><tr><td><strong>new_rank</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td>The new tag.</td></tr></tbody></table>
 
 ### Type
 

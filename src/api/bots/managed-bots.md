@@ -3,7 +3,7 @@ title: "Managed bots"
 original: "https://core.telegram.org/api/bots/managed-bots"
 section: api
 description: "How to create bot accounts using the MTProto API."
-crumbs: [{"title":"API","url":"/api/"},{"title":"Managed bots","url":"https://core.telegram.org/api/bots%2Fmanaged-bots"}]
+crumbs: [{"title":"API","url":"/api/"},{"title":"Managed bots","url":"/api/bots/managed-bots/"}]
 layout: layout.njk
 ---
 

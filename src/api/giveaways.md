@@ -73,7 +73,7 @@ Once the admin has chosen a specific gift code option, invoke [payments.getPayme
 -   or [inputStorePaymentPremiumGiftCode](/constructor/inputStorePaymentPremiumGiftCode/), to gift [Telegram Premium](/api/premium/) subscriptions only to some specific subscribers (`purpose.users`, max [giveaway\_add\_peers\_max](/api/config/#giveaway-add-peers-max) users) of the channel/supergroup specified in `purpose.boost_peer`, which will receive [giveaway\_boosts\_per\_premium](/api/config/#giveaway-boosts-per-premium) [boosts](/api/boost/) from each user, that cannot be reassigned to another channel/supergroup for the duration of the gifted subscription.  
     Users may also use this method to simply gift subscriptions to contacts by **not** setting the `boost_peer` field: in this case, gifting a [Telegram Premium](/api/premium/) subscription to another user will create [boosts\_per\_sent\_gift](/api/config/#boosts-per-sent-gift) [boost slots »](/api/boost/) for us, and one boost slot for the destination user.
 
-Then, follow the [invoice payment flow as described in the payments documentation »](https://core.telegram.org/api/payments#22-getting-invoice-info-about-the-product).
+Then, follow the [invoice payment flow as described in the payments documentation »](/api/payments/#2-2-getting-invoice-info-about-the-product).
 
 More alternative payment flows are also available:
 
@@ -145,7 +145,7 @@ Once the admin has chosen a specific giveaway option, invoke [payments.getPaymen
     A [messageActionPrizeStars](/constructor/messageActionPrizeStars/) with the `unclaimed` flag set may also be emitted, refunding the remaining stars to the creator of a giveaway if, when the giveaway ends, the number of members in the channel is smaller than the number of winners in the giveaway.
 -   The channel/supergroup specified in `boost_peer` will receive [starsGiveawayOption](/constructor/starsGiveawayOption/).`yearly_boosts` [boosts](/api/boost/) for one year.
 
-Then, follow the [invoice payment flow as described in the payments documentation »](https://core.telegram.org/api/payments#22-getting-invoice-info-about-the-product).
+Then, follow the [invoice payment flow as described in the payments documentation »](/api/payments/#2-2-getting-invoice-info-about-the-product).
 
 More alternative payment flows are also available:
 

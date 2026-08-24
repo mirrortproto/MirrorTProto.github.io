@@ -11,14 +11,14 @@ layout: layout.njk
 
 Represents a [Fragment collectible »](/api/fragment/).
 
-```
-inputCollectibleUsername#e39460a9 username:string = InputCollectible;
-inputCollectiblePhone#a2e214a4 phone:string = InputCollectible;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputCollectibleUsername/">inputCollectibleUsername</a>#e39460a9 username:<a href="/type/string/">string</a> = <a href="/type/InputCollectible/" class="current_page_link">InputCollectible</a>;
+<a href="/constructor/inputCollectiblePhone/">inputCollectiblePhone</a>#a2e214a4 phone:<a href="/type/string/">string</a> = <a href="/type/InputCollectible/" class="current_page_link">InputCollectible</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/inputCollectibleUsername">inputCollectibleUsername</a></td><td>Represents a <a href="/api/fragment">username fragment collectible</a></td></tr><tr><td><a href="/constructor/inputCollectiblePhone">inputCollectiblePhone</a></td><td>Represents a <a href="/api/fragment">phone number fragment collectible</a></td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/inputCollectibleUsername/">inputCollectibleUsername</a></td><td>Represents a <a href="/api/fragment/">username fragment collectible</a></td></tr><tr><td><a href="/constructor/inputCollectiblePhone/">inputCollectiblePhone</a></td><td>Represents a <a href="/api/fragment/">phone number fragment collectible</a></td></tr></tbody></table>
 
 ### Related pages
 

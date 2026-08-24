@@ -11,9 +11,9 @@ layout: layout.njk
 
 The list of saved notification sounds has changed, use [account.getSavedRingtones](/method/account.getSavedRingtones/) to fetch the new list.
 
-```
-updateSavedRingtones#74d8be99 = Update;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/updateSavedRingtones/" class="current_page_link">updateSavedRingtones</a>#74d8be99 = <a href="/type/Update/">Update</a>;</code></pre>
 
 ### Parameters
 

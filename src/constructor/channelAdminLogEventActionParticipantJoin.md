@@ -11,9 +11,9 @@ layout: layout.njk
 
 A user has joined the group (in the case of big groups, info of the user that has joined isn't shown)
 
-```
-channelAdminLogEventActionParticipantJoin#183040d3 = ChannelAdminLogEventAction;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/channelAdminLogEventActionParticipantJoin/" class="current_page_link">channelAdminLogEventActionParticipantJoin</a>#183040d3 = <a href="/type/ChannelAdminLogEventAction/">ChannelAdminLogEventAction</a>;</code></pre>
 
 ### Parameters
 

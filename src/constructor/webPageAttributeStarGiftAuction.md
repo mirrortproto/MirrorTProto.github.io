@@ -11,13 +11,13 @@ layout: layout.njk
 
 Contains info about a [collectible gift auction »](/api/auctions/) for a [webPage](/constructor/webPage/) preview of an [auction »](/api/auctions/) (the [webPage](/constructor/webPage/) will have a `type` of `telegram_auction`).
 
-```
-webPageAttributeStarGiftAuction#1c641c2 gift:StarGift end_date:int = WebPageAttribute;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/webPageAttributeStarGiftAuction/" class="current_page_link">webPageAttributeStarGiftAuction</a>#1c641c2 gift:<a href="/type/StarGift/">StarGift</a> end_date:<a href="/type/int/">int</a> = <a href="/type/WebPageAttribute/">WebPageAttribute</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>gift</strong></td><td style="text-align: center;"><a href="/type/StarGift">StarGift</a></td><td>The gift linked to the auction</td></tr><tr><td><strong>end_date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Date when the auction will end (UNIX timestamp)</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>gift</strong></td><td style="text-align: center;"><a href="/type/StarGift/">StarGift</a></td><td>The gift linked to the auction</td></tr><tr><td><strong>end_date</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>Date when the auction will end (UNIX timestamp)</td></tr></tbody></table>
 
 ### Type
 

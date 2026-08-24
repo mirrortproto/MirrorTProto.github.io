@@ -11,15 +11,15 @@ layout: layout.njk
 
 Get temporary payment password
 
-```
-account.tmpPassword#db64fd34 tmp_password:bytes valid_until:int = account.TmpPassword;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/account.tmpPassword/">account.tmpPassword</a>#db64fd34 tmp_password:<a href="/type/bytes/">bytes</a> valid_until:<a href="/type/int/">int</a> = <a href="/type/account.TmpPassword/">account.TmpPassword</a>;
 ---functions---
-account.getTmpPassword#449e0b51 password:InputCheckPasswordSRP period:int = account.TmpPassword;
-```
+<a href="/method/account.getTmpPassword/" class="current_page_link">account.getTmpPassword</a>#449e0b51 password:<a href="/type/InputCheckPasswordSRP/">InputCheckPasswordSRP</a> period:<a href="/type/int/">int</a> = <a href="/type/account.TmpPassword/">account.TmpPassword</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>password</strong></td><td style="text-align: center;"><a href="/type/InputCheckPasswordSRP">InputCheckPasswordSRP</a></td><td>SRP password parameters</td></tr><tr><td><strong>period</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Time during which the temporary password will be valid, in seconds; should be between 60 and 86400</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>password</strong></td><td style="text-align: center;"><a href="/type/InputCheckPasswordSRP/">InputCheckPasswordSRP</a></td><td>SRP password parameters</td></tr><tr><td><strong>period</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>Time during which the temporary password will be valid, in seconds; should be between 60 and 86400</td></tr></tbody></table>
 
 ### Result
 

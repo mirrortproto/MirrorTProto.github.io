@@ -11,9 +11,9 @@ layout: layout.njk
 
 Chat history was cleared
 
-```
-messageActionHistoryClear#9fbab604 = MessageAction;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/messageActionHistoryClear/" class="current_page_link">messageActionHistoryClear</a>#9fbab604 = <a href="/type/MessageAction/">MessageAction</a>;</code></pre>
 
 ### Parameters
 

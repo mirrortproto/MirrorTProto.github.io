@@ -11,13 +11,13 @@ layout: layout.njk
 
 Contains info about a [gift collection »](/api/gifts/#gift-collections) for a [webPage](/constructor/webPage/) preview of a [gift collection »](/api/gifts/#gift-collections) (the [webPage](/constructor/webPage/) will have a `type` of `telegram_collection`).
 
-```
-webPageAttributeStarGiftCollection#31cad303 icons:Vector<Document> = WebPageAttribute;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/webPageAttributeStarGiftCollection/" class="current_page_link">webPageAttributeStarGiftCollection</a>#31cad303 icons:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/Document/">Document</a>&gt; = <a href="/type/WebPageAttribute/">WebPageAttribute</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>icons</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/Document">Document</a>&gt;</td><td>Gifts in the collection.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>icons</strong></td><td style="text-align: center;"><a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/Document/">Document</a>&gt;</td><td>Gifts in the collection.</td></tr></tbody></table>
 
 ### Type
 

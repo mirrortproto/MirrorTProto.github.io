@@ -11,9 +11,9 @@ layout: layout.njk
 
 Bot app info hasn't changed.
 
-```
-botAppNotModified#5da674b7 = BotApp;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/botAppNotModified/" class="current_page_link">botAppNotModified</a>#5da674b7 = <a href="/type/BotApp/">BotApp</a>;</code></pre>
 
 ### Parameters
 

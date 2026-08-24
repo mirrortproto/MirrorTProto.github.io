@@ -11,10 +11,10 @@ layout: layout.njk
 
 Contains info about the original poster of a reposted story.
 
-```
-storyFwdHeader#b826e150 flags:# modified:flags.3?true from:flags.0?Peer from_name:flags.1?string story_id:flags.2?int = StoryFwdHeader;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/storyFwdHeader/">storyFwdHeader</a>#b826e150 flags:<a href="/type/%23/">#</a> modified:flags.3?true from:flags.0?<a href="/type/Peer/">Peer</a> from_name:flags.1?<a href="/type/string/">string</a> story_id:flags.2?<a href="/type/int/">int</a> = <a href="/type/StoryFwdHeader/" class="current_page_link">StoryFwdHeader</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/storyFwdHeader">storyFwdHeader</a></td><td>Contains info about the original poster of a reposted story.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/storyFwdHeader/">storyFwdHeader</a></td><td>Contains info about the original poster of a reposted story.</td></tr></tbody></table>

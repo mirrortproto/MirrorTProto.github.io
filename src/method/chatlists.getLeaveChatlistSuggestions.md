@@ -11,18 +11,18 @@ layout: layout.njk
 
 Returns identifiers of pinned or always included chats from a chat folder imported using a [chat folder deep link »](/api/links/#chat-folder-links), which are suggested to be left when the chat folder is deleted.
 
-```
----functions---
-chatlists.getLeaveChatlistSuggestions#fdbcd714 chatlist:InputChatlist = Vector<Peer>;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code>---functions---
+<a href="/method/chatlists.getLeaveChatlistSuggestions/" class="current_page_link">chatlists.getLeaveChatlistSuggestions</a>#fdbcd714 chatlist:<a href="/type/InputChatlist/">InputChatlist</a> = <a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/Peer/">Peer</a>&gt;;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>chatlist</strong></td><td style="text-align: center;"><a href="/type/InputChatlist">InputChatlist</a></td><td>Folder ID</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>chatlist</strong></td><td style="text-align: center;"><a href="/type/InputChatlist/">InputChatlist</a></td><td>Folder ID</td></tr></tbody></table>
 
 ### Result
 
-[Vector](https://core.telegram.org/type/Vector%20t)&lt;[Peer](/type/Peer/)\>
+[Vector](/type/Vector%20t/)&lt;[Peer](/type/Peer/)\>
 
 ### Only users can use this method
 

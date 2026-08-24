@@ -11,18 +11,18 @@ layout: layout.njk
 
 Mark all stories up to a certain ID as read, for a given peer; will emit an [updateReadStories](/constructor/updateReadStories/) update to all logged-in sessions.
 
-```
----functions---
-stories.readStories#a556dac8 peer:InputPeer max_id:int = Vector<int>;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code>---functions---
+<a href="/method/stories.readStories/" class="current_page_link">stories.readStories</a>#a556dac8 peer:<a href="/type/InputPeer/">InputPeer</a> max_id:<a href="/type/int/">int</a> = <a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/int/">int</a>&gt;;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>The peer whose stories should be marked as read.</td></tr><tr><td><strong>max_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Mark all stories up to and including this ID as read</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer/">InputPeer</a></td><td>The peer whose stories should be marked as read.</td></tr><tr><td><strong>max_id</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>Mark all stories up to and including this ID as read</td></tr></tbody></table>
 
 ### Result
 
-[Vector](https://core.telegram.org/type/Vector%20t)&lt;[int](/type/int/)\>
+[Vector](/type/Vector%20t/)&lt;[int](/type/int/)\>
 
 ### Only users can use this method
 

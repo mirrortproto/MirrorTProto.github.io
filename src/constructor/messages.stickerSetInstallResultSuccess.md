@@ -11,9 +11,9 @@ layout: layout.njk
 
 The stickerset was installed successfully
 
-```
-messages.stickerSetInstallResultSuccess#38641628 = messages.StickerSetInstallResult;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/messages.stickerSetInstallResultSuccess/" class="current_page_link">messages.stickerSetInstallResultSuccess</a>#38641628 = <a href="/type/messages.StickerSetInstallResult/">messages.StickerSetInstallResult</a>;</code></pre>
 
 ### Parameters
 

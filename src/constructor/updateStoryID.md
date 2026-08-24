@@ -13,13 +13,13 @@ A story was successfully uploaded.
 
 Once a story is successfully uploaded, an [updateStoryID](/constructor/updateStoryID/) will be returned, indicating the story ID (`id`) that was attributed to the story (like for messages, `random_id` indicates the `random_id` that was passed to [stories.sendStory](/method/stories.sendStory/): this way, you can tell which story was assigned a specific `id` by checking which [stories.sendStory](/method/stories.sendStory/) call has the returned `random_id`).
 
-```
-updateStoryID#1bf335b9 id:int random_id:long = Update;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/updateStoryID/" class="current_page_link">updateStoryID</a>#1bf335b9 id:<a href="/type/int/">int</a> random_id:<a href="/type/long/">long</a> = <a href="/type/Update/">Update</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>The <code>id</code> that was attributed to the story.</td></tr><tr><td><strong>random_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>The <code>random_id</code> that was passed to <a href="/method/stories.sendStory">stories.sendStory</a>. See <a href="/api/updates#updatemessageid-updates">here »</a> for more info on random ID deduplication and updateMessageID mapping.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>The <code>id</code> that was attributed to the story.</td></tr><tr><td><strong>random_id</strong></td><td style="text-align: center;"><a href="/type/long/">long</a></td><td>The <code>random_id</code> that was passed to <a href="/method/stories.sendStory/">stories.sendStory</a>. See <a href="/api/updates/#updatemessageid-updates">here »</a> for more info on random ID deduplication and updateMessageID mapping.</td></tr></tbody></table>
 
 ### Type
 

@@ -11,13 +11,13 @@ layout: layout.njk
 
 Represents a [color palette that can be used in message accents »](/api/colors/).
 
-```
-help.peerColorSet#26219a58 colors:Vector<int> = help.PeerColorSet;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/help.peerColorSet/" class="current_page_link">help.peerColorSet</a>#26219a58 colors:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/int/">int</a>&gt; = <a href="/type/help.PeerColorSet/">help.PeerColorSet</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>colors</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/int">int</a>&gt;</td><td>A list of 1-3 colors in RGB format, describing the accent color.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>colors</strong></td><td style="text-align: center;"><a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/int/">int</a>&gt;</td><td>A list of 1-3 colors in RGB format, describing the accent color.</td></tr></tbody></table>
 
 ### Type
 

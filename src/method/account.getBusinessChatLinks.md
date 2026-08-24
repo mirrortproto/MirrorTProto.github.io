@@ -11,11 +11,11 @@ layout: layout.njk
 
 List all created [business chat deep links »](/api/business/#business-chat-links).
 
-```
-account.businessChatLinks#ec43a2d1 links:Vector<BusinessChatLink> chats:Vector<Chat> users:Vector<User> = account.BusinessChatLinks;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/account.businessChatLinks/">account.businessChatLinks</a>#ec43a2d1 links:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/BusinessChatLink/">BusinessChatLink</a>&gt; chats:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/Chat/">Chat</a>&gt; users:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/User/">User</a>&gt; = <a href="/type/account.BusinessChatLinks/">account.BusinessChatLinks</a>;
 ---functions---
-account.getBusinessChatLinks#6f70dde1 = account.BusinessChatLinks;
-```
+<a href="/method/account.getBusinessChatLinks/" class="current_page_link">account.getBusinessChatLinks</a>#6f70dde1 = <a href="/type/account.BusinessChatLinks/">account.BusinessChatLinks</a>;</code></pre>
 
 ### Parameters
 

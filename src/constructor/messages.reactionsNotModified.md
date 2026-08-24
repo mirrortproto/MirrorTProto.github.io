@@ -11,9 +11,9 @@ layout: layout.njk
 
 The server-side list of [message reactions](/api/reactions/) hasn't changed
 
-```
-messages.reactionsNotModified#b06fdbdf = messages.Reactions;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/messages.reactionsNotModified/" class="current_page_link">messages.reactionsNotModified</a>#b06fdbdf = <a href="/type/messages.Reactions/">messages.Reactions</a>;</code></pre>
 
 ### Parameters
 

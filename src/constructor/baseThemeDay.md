@@ -11,9 +11,9 @@ layout: layout.njk
 
 Day theme
 
-```
-baseThemeDay#fbd81688 = BaseTheme;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/baseThemeDay/" class="current_page_link">baseThemeDay</a>#fbd81688 = <a href="/type/BaseTheme/">BaseTheme</a>;</code></pre>
 
 ### Parameters
 

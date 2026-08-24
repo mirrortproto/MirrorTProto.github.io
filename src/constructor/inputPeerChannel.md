@@ -11,13 +11,13 @@ layout: layout.njk
 
 Defines a channel for further interaction.
 
-```
-inputPeerChannel#27bcbbfc channel_id:long access_hash:long = InputPeer;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputPeerChannel/" class="current_page_link">inputPeerChannel</a>#27bcbbfc channel_id:<a href="/type/long/">long</a> access_hash:<a href="/type/long/">long</a> = <a href="/type/InputPeer/">InputPeer</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>channel_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Channel identifier</td></tr><tr><td><strong>access_hash</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td><strong>access_hash</strong> value from the <a href="/constructor/channel">channel</a> constructor</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>channel_id</strong></td><td style="text-align: center;"><a href="/type/long/">long</a></td><td>Channel identifier</td></tr><tr><td><strong>access_hash</strong></td><td style="text-align: center;"><a href="/type/long/">long</a></td><td><strong>access_hash</strong> value from the <a href="/constructor/channel/">channel</a> constructor</td></tr></tbody></table>
 
 ### Type
 

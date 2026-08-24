@@ -11,9 +11,9 @@ layout: layout.njk
 
 Password configuration not modified
 
-```
-help.passportConfigNotModified#bfb9f457 = help.PassportConfig;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/help.passportConfigNotModified/" class="current_page_link">help.passportConfigNotModified</a>#bfb9f457 = <a href="/type/help.PassportConfig/">help.PassportConfig</a>;</code></pre>
 
 ### Parameters
 

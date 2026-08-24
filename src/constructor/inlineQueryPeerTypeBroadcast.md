@@ -11,9 +11,9 @@ layout: layout.njk
 
 Peer type: [channel](/api/channel/)
 
-```
-inlineQueryPeerTypeBroadcast#6334ee9a = InlineQueryPeerType;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inlineQueryPeerTypeBroadcast/" class="current_page_link">inlineQueryPeerTypeBroadcast</a>#6334ee9a = <a href="/type/InlineQueryPeerType/">InlineQueryPeerType</a>;</code></pre>
 
 ### Parameters
 

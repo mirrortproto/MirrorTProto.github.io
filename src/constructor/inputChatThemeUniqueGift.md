@@ -11,13 +11,13 @@ layout: layout.njk
 
 Set a theme based on an owned or [hosted collectible gift »](/api/gifts/#hosted-collectible-gifts), returned by [account.getUniqueGiftChatThemes](/method/account.getUniqueGiftChatThemes/).
 
-```
-inputChatThemeUniqueGift#87e5dfe4 slug:string = InputChatTheme;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputChatThemeUniqueGift/" class="current_page_link">inputChatThemeUniqueGift</a>#87e5dfe4 slug:<a href="/type/string/">string</a> = <a href="/type/InputChatTheme/">InputChatTheme</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>slug</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>The slug from <a href="/constructor/starGiftUnique">starGiftUnique</a>.<code>slug</code>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>slug</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td>The slug from <a href="/constructor/starGiftUnique/">starGiftUnique</a>.<code>slug</code>.</td></tr></tbody></table>
 
 ### Type
 

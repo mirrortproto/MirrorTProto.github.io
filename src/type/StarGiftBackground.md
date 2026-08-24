@@ -11,13 +11,13 @@ layout: layout.njk
 
 Contains the default background palette of a [gift type »](/api/gifts/#listing-all-possible-collectible-variants).
 
-```
-starGiftBackground#aff56398 center_color:int edge_color:int text_color:int = StarGiftBackground;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/starGiftBackground/">starGiftBackground</a>#aff56398 center_color:<a href="/type/int/">int</a> edge_color:<a href="/type/int/">int</a> text_color:<a href="/type/int/">int</a> = <a href="/type/StarGiftBackground/" class="current_page_link">StarGiftBackground</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/starGiftBackground">starGiftBackground</a></td><td>Contains the default background palette of a <a href="/api/gifts#listing-all-possible-collectible-variants">gift type »</a>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/starGiftBackground/">starGiftBackground</a></td><td>Contains the default background palette of a <a href="/api/gifts/#listing-all-possible-collectible-variants">gift type »</a>.</td></tr></tbody></table>
 
 ### Related pages
 

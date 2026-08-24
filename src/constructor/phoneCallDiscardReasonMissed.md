@@ -11,9 +11,9 @@ layout: layout.njk
 
 The phone call was missed, see [here »](/api/calls/) for more info.
 
-```
-phoneCallDiscardReasonMissed#85e42301 = PhoneCallDiscardReason;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/phoneCallDiscardReasonMissed/" class="current_page_link">phoneCallDiscardReasonMissed</a>#85e42301 = <a href="/type/PhoneCallDiscardReason/">PhoneCallDiscardReason</a>;</code></pre>
 
 ### Parameters
 

@@ -20,9 +20,9 @@ sendMessageTypingAction#16bf744e = SendMessageAction;
 
 #### API schema
 
-```
-sendMessageTypingAction#16bf744e = SendMessageAction;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/sendMessageTypingAction/" class="current_page_link">sendMessageTypingAction</a>#16bf744e = <a href="/type/SendMessageAction/">SendMessageAction</a>;</code></pre>
 
 ### Parameters
 

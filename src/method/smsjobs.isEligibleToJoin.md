@@ -11,11 +11,11 @@ layout: layout.njk
 
 Check if we can process SMS jobs (official clients only).
 
-```
-smsjobs.eligibleToJoin#dc8b44cf terms_url:string monthly_sent_sms:int = smsjobs.EligibilityToJoin;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/smsjobs.eligibleToJoin/">smsjobs.eligibleToJoin</a>#dc8b44cf terms_url:<a href="/type/string/">string</a> monthly_sent_sms:<a href="/type/int/">int</a> = <a href="/type/smsjobs.EligibilityToJoin/">smsjobs.EligibilityToJoin</a>;
 ---functions---
-smsjobs.isEligibleToJoin#edc39d0 = smsjobs.EligibilityToJoin;
-```
+<a href="/method/smsjobs.isEligibleToJoin/" class="current_page_link">smsjobs.isEligibleToJoin</a>#edc39d0 = <a href="/type/smsjobs.EligibilityToJoin/">smsjobs.EligibilityToJoin</a>;</code></pre>
 
 ### Parameters
 

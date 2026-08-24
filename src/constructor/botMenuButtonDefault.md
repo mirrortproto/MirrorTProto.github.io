@@ -11,9 +11,9 @@ layout: layout.njk
 
 Placeholder [bot menu button](/api/bots/menu/) never returned to users: see [the docs for more info](/api/bots/menu/).
 
-```
-botMenuButtonDefault#7533a588 = BotMenuButton;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/botMenuButtonDefault/" class="current_page_link">botMenuButtonDefault</a>#7533a588 = <a href="/type/BotMenuButton/">BotMenuButton</a>;</code></pre>
 
 ### Parameters
 

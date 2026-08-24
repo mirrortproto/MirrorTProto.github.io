@@ -11,9 +11,9 @@ layout: layout.njk
 
 Unknown type.
 
-```
-storage.fileUnknown#aa963b05 = storage.FileType;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/storage.fileUnknown/" class="current_page_link">storage.fileUnknown</a>#aa963b05 = <a href="/type/storage.FileType/">storage.FileType</a>;</code></pre>
 
 ### Parameters
 

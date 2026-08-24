@@ -11,15 +11,15 @@ layout: layout.njk
 
 Get info about a [channel/supergroup](/api/channel/) participant
 
-```
-channels.channelParticipant#dfb80317 participant:ChannelParticipant chats:Vector<Chat> users:Vector<User> = channels.ChannelParticipant;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/channels.channelParticipant/">channels.channelParticipant</a>#dfb80317 participant:<a href="/type/ChannelParticipant/">ChannelParticipant</a> chats:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/Chat/">Chat</a>&gt; users:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/User/">User</a>&gt; = <a href="/type/channels.ChannelParticipant/">channels.ChannelParticipant</a>;
 ---functions---
-channels.getParticipant#a0ab6cc6 channel:InputChannel participant:InputPeer = channels.ChannelParticipant;
-```
+<a href="/method/channels.getParticipant/" class="current_page_link">channels.getParticipant</a>#a0ab6cc6 channel:<a href="/type/InputChannel/">InputChannel</a> participant:<a href="/type/InputPeer/">InputPeer</a> = <a href="/type/channels.ChannelParticipant/">channels.ChannelParticipant</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>channel</strong></td><td style="text-align: center;"><a href="/type/InputChannel">InputChannel</a></td><td>Channel/supergroup</td></tr><tr><td><strong>participant</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>Participant to get info about</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>channel</strong></td><td style="text-align: center;"><a href="/type/InputChannel/">InputChannel</a></td><td>Channel/supergroup</td></tr><tr><td><strong>participant</strong></td><td style="text-align: center;"><a href="/type/InputPeer/">InputPeer</a></td><td>Participant to get info about</td></tr></tbody></table>
 
 ### Result
 

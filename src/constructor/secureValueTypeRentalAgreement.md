@@ -11,9 +11,9 @@ layout: layout.njk
 
 Rental agreement
 
-```
-secureValueTypeRentalAgreement#8b883488 = SecureValueType;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/secureValueTypeRentalAgreement/" class="current_page_link">secureValueTypeRentalAgreement</a>#8b883488 = <a href="/type/SecureValueType/">SecureValueType</a>;</code></pre>
 
 ### Parameters
 

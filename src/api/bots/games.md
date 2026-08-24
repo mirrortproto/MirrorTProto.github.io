@@ -3,7 +3,7 @@ title: "HTML5 games"
 original: "https://core.telegram.org/api/bots/games"
 section: api
 description: "Bots can offer users HTML5 games to play solo or to compete against each other in groups and one-on-one chats."
-crumbs: [{"title":"API","url":"/api/"},{"title":"HTML5 games","url":"https://core.telegram.org/api/bots%2Fgames"}]
+crumbs: [{"title":"API","url":"/api/"},{"title":"HTML5 games","url":"/api/bots/games/"}]
 layout: layout.njk
 ---
 

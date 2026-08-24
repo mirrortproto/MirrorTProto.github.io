@@ -11,15 +11,15 @@ layout: layout.njk
 
 Gets the current [number of boosts](/api/boost/) of a channel/supergroup.
 
-```
-premium.boostsStatus#4959427a flags:# my_boost:flags.2?true level:int current_level_boosts:int boosts:int gift_boosts:flags.4?int next_level_boosts:flags.0?int premium_audience:flags.1?StatsPercentValue boost_url:string prepaid_giveaways:flags.3?Vector<PrepaidGiveaway> my_boost_slots:flags.2?Vector<int> = premium.BoostsStatus;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/premium.boostsStatus/">premium.boostsStatus</a>#4959427a flags:<a href="/type/%23/">#</a> my_boost:flags.2?true level:<a href="/type/int/">int</a> current_level_boosts:<a href="/type/int/">int</a> boosts:<a href="/type/int/">int</a> gift_boosts:flags.4?<a href="/type/int/">int</a> next_level_boosts:flags.0?<a href="/type/int/">int</a> premium_audience:flags.1?<a href="/type/StatsPercentValue/">StatsPercentValue</a> boost_url:<a href="/type/string/">string</a> prepaid_giveaways:flags.3?<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/PrepaidGiveaway/">PrepaidGiveaway</a>&gt; my_boost_slots:flags.2?<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/int/">int</a>&gt; = <a href="/type/premium.BoostsStatus/">premium.BoostsStatus</a>;
 ---functions---
-premium.getBoostsStatus#42f1f61 peer:InputPeer = premium.BoostsStatus;
-```
+<a href="/method/premium.getBoostsStatus/" class="current_page_link">premium.getBoostsStatus</a>#42f1f61 peer:<a href="/type/InputPeer/">InputPeer</a> = <a href="/type/premium.BoostsStatus/">premium.BoostsStatus</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>The peer.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer/">InputPeer</a></td><td>The peer.</td></tr></tbody></table>
 
 ### Result
 

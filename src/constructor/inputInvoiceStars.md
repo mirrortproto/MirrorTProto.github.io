@@ -11,13 +11,13 @@ layout: layout.njk
 
 Used to top up the [Telegram Stars](/api/stars/) balance of the current account or someone else's account, or to start a [Telegram Star giveaway »](/api/giveaways/#star-giveaways).
 
-```
-inputInvoiceStars#65f00ce3 purpose:InputStorePaymentPurpose = InputInvoice;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputInvoiceStars/" class="current_page_link">inputInvoiceStars</a>#65f00ce3 purpose:<a href="/type/InputStorePaymentPurpose/">InputStorePaymentPurpose</a> = <a href="/type/InputInvoice/">InputInvoice</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>purpose</strong></td><td style="text-align: center;"><a href="/type/InputStorePaymentPurpose">InputStorePaymentPurpose</a></td><td>An <a href="/constructor/inputStorePaymentStarsGiveaway">inputStorePaymentStarsGiveaway</a>, <a href="/constructor/inputStorePaymentStarsTopup">inputStorePaymentStarsTopup</a> or <a href="/constructor/inputStorePaymentStarsGift">inputStorePaymentStarsGift</a>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>purpose</strong></td><td style="text-align: center;"><a href="/type/InputStorePaymentPurpose/">InputStorePaymentPurpose</a></td><td>An <a href="/constructor/inputStorePaymentStarsGiveaway/">inputStorePaymentStarsGiveaway</a>, <a href="/constructor/inputStorePaymentStarsTopup/">inputStorePaymentStarsTopup</a> or <a href="/constructor/inputStorePaymentStarsGift/">inputStorePaymentStarsGift</a>.</td></tr></tbody></table>
 
 ### Type
 

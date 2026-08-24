@@ -11,13 +11,13 @@ layout: layout.njk
 
 Describes a [bot verification icon »](/api/bots/verification/).
 
-```
-botVerification#f93cd45c bot_id:long icon:long description:string = BotVerification;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/botVerification/" class="current_page_link">botVerification</a>#f93cd45c bot_id:<a href="/type/long/">long</a> icon:<a href="/type/long/">long</a> description:<a href="/type/string/">string</a> = <a href="/type/BotVerification/">BotVerification</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>bot_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>ID of the bot that verified this peer</td></tr><tr><td><strong>icon</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Verification icon</td></tr><tr><td><strong>description</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Verification description</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>bot_id</strong></td><td style="text-align: center;"><a href="/type/long/">long</a></td><td>ID of the bot that verified this peer</td></tr><tr><td><strong>icon</strong></td><td style="text-align: center;"><a href="/type/long/">long</a></td><td>Verification icon</td></tr><tr><td><strong>description</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td>Verification description</td></tr></tbody></table>
 
 ### Type
 

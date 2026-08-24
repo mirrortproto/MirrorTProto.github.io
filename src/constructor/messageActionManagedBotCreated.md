@@ -11,13 +11,13 @@ layout: layout.njk
 
 Service message sent by a user to a manager bot when a new [managed bot »](/api/bots/managed-bots/) is created through it, by invoking [messages.sendBotRequestedPeer](/method/messages.sendBotRequestedPeer/) with a [requestPeerTypeCreateBot](/constructor/requestPeerTypeCreateBot/), see [here »](/api/bots/buttons/#requesting-a-managed-bot) for more info.
 
-```
-Constructor schema is available as of layer 224. Switch »
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code>Constructor schema is available as of layer 224. <a href="?layer=224">Switch »</a></code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>bot_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>ID of the newly created managed bot</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>bot_id</strong></td><td style="text-align: center;"><a href="/type/long/">long</a></td><td>ID of the newly created managed bot</td></tr></tbody></table>
 
 ### Type
 

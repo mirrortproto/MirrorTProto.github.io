@@ -11,9 +11,9 @@ layout: layout.njk
 
 Often-opened groups and supergroups
 
-```
-topPeerCategoryGroups#bd17a14a = TopPeerCategory;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/topPeerCategoryGroups/" class="current_page_link">topPeerCategoryGroups</a>#bd17a14a = <a href="/type/TopPeerCategory/">TopPeerCategory</a>;</code></pre>
 
 ### Parameters
 

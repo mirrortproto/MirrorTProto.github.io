@@ -11,9 +11,9 @@ layout: layout.njk
 
 Return only messages containing URLs
 
-```
-inputMessagesFilterUrl#7ef0dd87 = MessagesFilter;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputMessagesFilterUrl/" class="current_page_link">inputMessagesFilterUrl</a>#7ef0dd87 = <a href="/type/MessagesFilter/">MessagesFilter</a>;</code></pre>
 
 ### Parameters
 

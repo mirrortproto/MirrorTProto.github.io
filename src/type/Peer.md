@@ -11,15 +11,15 @@ layout: layout.njk
 
 Identifier of a private chat, basic group, group or channel (see [here »](/api/peers/) for more info).
 
-```
-peerUser#59511722 user_id:long = Peer;
-peerChat#36c6019a chat_id:long = Peer;
-peerChannel#a2a5371e channel_id:long = Peer;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/peerUser/">peerUser</a>#59511722 user_id:<a href="/type/long/">long</a> = <a href="/type/Peer/" class="current_page_link">Peer</a>;
+<a href="/constructor/peerChat/">peerChat</a>#36c6019a chat_id:<a href="/type/long/">long</a> = <a href="/type/Peer/" class="current_page_link">Peer</a>;
+<a href="/constructor/peerChannel/">peerChannel</a>#a2a5371e channel_id:<a href="/type/long/">long</a> = <a href="/type/Peer/" class="current_page_link">Peer</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/peerUser">peerUser</a></td><td>Chat partner</td></tr><tr><td><a href="/constructor/peerChat">peerChat</a></td><td>Group.</td></tr><tr><td><a href="/constructor/peerChannel">peerChannel</a></td><td>Channel/supergroup</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/peerUser/">peerUser</a></td><td>Chat partner</td></tr><tr><td><a href="/constructor/peerChat/">peerChat</a></td><td>Group.</td></tr><tr><td><a href="/constructor/peerChannel/">peerChannel</a></td><td>Channel/supergroup</td></tr></tbody></table>
 
 ### Related pages
 

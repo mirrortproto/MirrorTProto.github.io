@@ -11,13 +11,13 @@ layout: layout.njk
 
 A specific previously uploaded notification sound should be used
 
-```
-notificationSoundRingtone#ff6c8049 id:long = NotificationSound;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/notificationSoundRingtone/" class="current_page_link">notificationSoundRingtone</a>#ff6c8049 id:<a href="/type/long/">long</a> = <a href="/type/NotificationSound/">NotificationSound</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Document ID of notification sound uploaded using <a href="/method/account.uploadRingtone">account.uploadRingtone</a></td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/long/">long</a></td><td>Document ID of notification sound uploaded using <a href="/method/account.uploadRingtone/">account.uploadRingtone</a></td></tr></tbody></table>
 
 ### Type
 

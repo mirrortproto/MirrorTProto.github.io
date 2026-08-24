@@ -11,16 +11,16 @@ layout: layout.njk
 
 Download a [CDN](https://core.telegram.org/cdn) file.
 
-```
-upload.cdnFileReuploadNeeded#eea8e46e request_token:bytes = upload.CdnFile;
-upload.cdnFile#a99fca4f bytes:bytes = upload.CdnFile;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/upload.cdnFileReuploadNeeded/">upload.cdnFileReuploadNeeded</a>#eea8e46e request_token:<a href="/type/bytes/">bytes</a> = <a href="/type/upload.CdnFile/">upload.CdnFile</a>;
+<a href="/constructor/upload.cdnFile/">upload.cdnFile</a>#a99fca4f bytes:<a href="/type/bytes/">bytes</a> = <a href="/type/upload.CdnFile/">upload.CdnFile</a>;
 ---functions---
-upload.getCdnFile#395f69da file_token:bytes offset:long limit:int = upload.CdnFile;
-```
+<a href="/method/upload.getCdnFile/" class="current_page_link">upload.getCdnFile</a>#395f69da file_token:<a href="/type/bytes/">bytes</a> offset:<a href="/type/long/">long</a> limit:<a href="/type/int/">int</a> = <a href="/type/upload.CdnFile/">upload.CdnFile</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>file_token</strong></td><td style="text-align: center;"><a href="/type/bytes">bytes</a></td><td>File token</td></tr><tr><td><strong>offset</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Offset of chunk to download</td></tr><tr><td><strong>limit</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Length of chunk to download</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>file_token</strong></td><td style="text-align: center;"><a href="/type/bytes/">bytes</a></td><td>File token</td></tr><tr><td><strong>offset</strong></td><td style="text-align: center;"><a href="/type/long/">long</a></td><td>Offset of chunk to download</td></tr><tr><td><strong>limit</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>Length of chunk to download</td></tr></tbody></table>
 
 ### Result
 

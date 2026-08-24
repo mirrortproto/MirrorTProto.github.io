@@ -3,7 +3,7 @@ title: "Refresh actions"
 original: "https://core.telegram.org/api/file-references/refresh-actions"
 section: api
 description: "Full list of actions used to refresh all file source types », contained by the current file reference map file »."
-crumbs: [{"title":"API","url":"/api/"},{"title":"Refresh actions","url":"https://core.telegram.org/api/file-references%2Frefresh-actions"}]
+crumbs: [{"title":"API","url":"/api/"},{"title":"Refresh actions","url":"/api/file-references/refresh-actions/"}]
 layout: layout.njk
 ---
 

@@ -14,12 +14,12 @@ Get all groups that can be used as [discussion groups](/api/discussion/).
 Returned [basic group chats](/api/channel/#basic-groups) must be first upgraded to [supergroups](/api/channel/#supergroups) before they can be set as a discussion group.  
 To set a returned supergroup as a discussion group, access to its old messages must be enabled using [channels.togglePreHistoryHidden](/method/channels.togglePreHistoryHidden/), first.
 
-```
-messages.chats#64ff9fd5 chats:Vector<Chat> = messages.Chats;
-messages.chatsSlice#9cd81144 count:int chats:Vector<Chat> = messages.Chats;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/messages.chats/">messages.chats</a>#64ff9fd5 chats:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/Chat/">Chat</a>&gt; = <a href="/type/messages.Chats/">messages.Chats</a>;
+<a href="/constructor/messages.chatsSlice/">messages.chatsSlice</a>#9cd81144 count:<a href="/type/int/">int</a> chats:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/Chat/">Chat</a>&gt; = <a href="/type/messages.Chats/">messages.Chats</a>;
 ---functions---
-channels.getGroupsForDiscussion#f5dad378 = messages.Chats;
-```
+<a href="/method/channels.getGroupsForDiscussion/" class="current_page_link">channels.getGroupsForDiscussion</a>#f5dad378 = <a href="/type/messages.Chats/">messages.Chats</a>;</code></pre>
 
 ### Parameters
 

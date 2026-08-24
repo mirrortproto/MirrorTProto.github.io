@@ -11,13 +11,13 @@ layout: layout.njk
 
 A [quick reply shortcut »](/api/business/#quick-reply-shortcuts) was deleted. This will **not** emit [updateDeleteQuickReplyMessages](/constructor/updateDeleteQuickReplyMessages/) updates, even if all the messages in the shortcut are also deleted by this update.
 
-```
-updateDeleteQuickReply#53e6f1ec shortcut_id:int = Update;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/updateDeleteQuickReply/" class="current_page_link">updateDeleteQuickReply</a>#53e6f1ec shortcut_id:<a href="/type/int/">int</a> = <a href="/type/Update/">Update</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>shortcut_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>ID of the quick reply shortcut that was deleted.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>shortcut_id</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>ID of the quick reply shortcut that was deleted.</td></tr></tbody></table>
 
 ### Type
 

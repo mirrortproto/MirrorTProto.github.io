@@ -11,9 +11,9 @@ layout: layout.njk
 
 Receive notifications about reactions made by any user.
 
-```
-reactionNotificationsFromAll#4b9e22a0 = ReactionNotificationsFrom;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/reactionNotificationsFromAll/" class="current_page_link">reactionNotificationsFromAll</a>#4b9e22a0 = <a href="/type/ReactionNotificationsFrom/">ReactionNotificationsFrom</a>;</code></pre>
 
 ### Parameters
 

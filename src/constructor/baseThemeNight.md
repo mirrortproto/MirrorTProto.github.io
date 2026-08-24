@@ -11,9 +11,9 @@ layout: layout.njk
 
 Night theme
 
-```
-baseThemeNight#b7b31ea8 = BaseTheme;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/baseThemeNight/" class="current_page_link">baseThemeNight</a>#b7b31ea8 = <a href="/type/BaseTheme/">BaseTheme</a>;</code></pre>
 
 ### Parameters
 

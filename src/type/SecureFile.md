@@ -11,14 +11,14 @@ layout: layout.njk
 
 Secure [passport](https://core.telegram.org/passport) file, for more info [see the passport docs »](https://core.telegram.org/passport/encryption#inputsecurefile)
 
-```
-secureFileEmpty#64199744 = SecureFile;
-secureFile#7d09c27e id:long access_hash:long size:long dc_id:int date:int file_hash:bytes secret:bytes = SecureFile;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/secureFileEmpty/">secureFileEmpty</a>#64199744 = <a href="/type/SecureFile/" class="current_page_link">SecureFile</a>;
+<a href="/constructor/secureFile/">secureFile</a>#7d09c27e id:<a href="/type/long/">long</a> access_hash:<a href="/type/long/">long</a> size:<a href="/type/long/">long</a> dc_id:<a href="/type/int/">int</a> date:<a href="/type/int/">int</a> file_hash:<a href="/type/bytes/">bytes</a> secret:<a href="/type/bytes/">bytes</a> = <a href="/type/SecureFile/" class="current_page_link">SecureFile</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/secureFileEmpty">secureFileEmpty</a></td><td>Empty constructor</td></tr><tr><td><a href="/constructor/secureFile">secureFile</a></td><td>Secure <a href="/passport">passport</a> file, for more info <a href="/passport/encryption#inputsecurefile">see the passport docs »</a></td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/secureFileEmpty/">secureFileEmpty</a></td><td>Empty constructor</td></tr><tr><td><a href="/constructor/secureFile/">secureFile</a></td><td>Secure <a href="https://core.telegram.org/passport">passport</a> file, for more info <a href="https://core.telegram.org/passport/encryption#inputsecurefile">see the passport docs »</a></td></tr></tbody></table>
 
 ### Related pages
 

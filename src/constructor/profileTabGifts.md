@@ -11,9 +11,9 @@ layout: layout.njk
 
 Represents the [gifts](/api/gifts/) tab of a profile page.
 
-```
-profileTabGifts#4d4bd46a = ProfileTab;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/profileTabGifts/" class="current_page_link">profileTabGifts</a>#4d4bd46a = <a href="/type/ProfileTab/">ProfileTab</a>;</code></pre>
 
 ### Parameters
 

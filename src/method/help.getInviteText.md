@@ -11,11 +11,11 @@ layout: layout.njk
 
 Returns localized text of a text message with an invitation.
 
-```
-help.inviteText#18cb9f78 message:string = help.InviteText;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/help.inviteText/">help.inviteText</a>#18cb9f78 message:<a href="/type/string/">string</a> = <a href="/type/help.InviteText/">help.InviteText</a>;
 ---functions---
-help.getInviteText#4d392343 = help.InviteText;
-```
+<a href="/method/help.getInviteText/" class="current_page_link">help.getInviteText</a>#4d392343 = <a href="/type/help.InviteText/">help.InviteText</a>;</code></pre>
 
 ### Parameters
 

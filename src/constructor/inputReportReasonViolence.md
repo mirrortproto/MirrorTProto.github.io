@@ -11,9 +11,9 @@ layout: layout.njk
 
 Report for violence
 
-```
-inputReportReasonViolence#1e22c78d = ReportReason;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputReportReasonViolence/" class="current_page_link">inputReportReasonViolence</a>#1e22c78d = <a href="/type/ReportReason/">ReportReason</a>;</code></pre>
 
 ### Parameters
 

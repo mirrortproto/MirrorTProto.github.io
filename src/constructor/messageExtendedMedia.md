@@ -11,13 +11,13 @@ layout: layout.njk
 
 Already purchased paid media, [see here »](/api/paid-media/) for more info.
 
-```
-messageExtendedMedia#ee479c64 media:MessageMedia = MessageExtendedMedia;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/messageExtendedMedia/" class="current_page_link">messageExtendedMedia</a>#ee479c64 media:<a href="/type/MessageMedia/">MessageMedia</a> = <a href="/type/MessageExtendedMedia/">MessageExtendedMedia</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>media</strong></td><td style="text-align: center;"><a href="/type/MessageMedia">MessageMedia</a></td><td>The media we purchased.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>media</strong></td><td style="text-align: center;"><a href="/type/MessageMedia/">MessageMedia</a></td><td>The media we purchased.</td></tr></tbody></table>
 
 ### Type
 

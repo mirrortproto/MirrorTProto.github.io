@@ -11,9 +11,9 @@ layout: layout.njk
 
 Whether the profile picture of the user is visible
 
-```
-privacyKeyProfilePhoto#96151fed = PrivacyKey;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/privacyKeyProfilePhoto/" class="current_page_link">privacyKeyProfilePhoto</a>#96151fed = <a href="/type/PrivacyKey/">PrivacyKey</a>;</code></pre>
 
 ### Parameters
 

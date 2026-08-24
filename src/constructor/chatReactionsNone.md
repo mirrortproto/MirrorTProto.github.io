@@ -11,9 +11,9 @@ layout: layout.njk
 
 No reactions are allowed
 
-```
-chatReactionsNone#eafc32bc = ChatReactions;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/chatReactionsNone/" class="current_page_link">chatReactionsNone</a>#eafc32bc = <a href="/type/ChatReactions/">ChatReactions</a>;</code></pre>
 
 ### Parameters
 

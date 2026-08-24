@@ -11,9 +11,9 @@ layout: layout.njk
 
 The next time, the authentication code is to be delivered via an outgoing phone call.
 
-```
-auth.codeTypeCall#741cd3e3 = auth.CodeType;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/auth.codeTypeCall/" class="current_page_link">auth.codeTypeCall</a>#741cd3e3 = <a href="/type/auth.CodeType/">auth.CodeType</a>;</code></pre>
 
 ### Parameters
 

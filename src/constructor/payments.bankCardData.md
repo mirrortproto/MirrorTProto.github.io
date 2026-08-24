@@ -11,13 +11,13 @@ layout: layout.njk
 
 Credit card info, provided by the card's bank(s)
 
-```
-payments.bankCardData#3e24e573 title:string open_urls:Vector<BankCardOpenUrl> = payments.BankCardData;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/payments.bankCardData/" class="current_page_link">payments.bankCardData</a>#3e24e573 title:<a href="/type/string/">string</a> open_urls:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/BankCardOpenUrl/">BankCardOpenUrl</a>&gt; = <a href="/type/payments.BankCardData/">payments.BankCardData</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>title</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Credit card title</td></tr><tr><td><strong>open_urls</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/BankCardOpenUrl">BankCardOpenUrl</a>&gt;</td><td>Info URL(s) provided by the card's bank(s)</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>title</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td>Credit card title</td></tr><tr><td><strong>open_urls</strong></td><td style="text-align: center;"><a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/BankCardOpenUrl/">BankCardOpenUrl</a>&gt;</td><td>Info URL(s) provided by the card's bank(s)</td></tr></tbody></table>
 
 ### Type
 

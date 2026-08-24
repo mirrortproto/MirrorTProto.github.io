@@ -11,9 +11,9 @@ layout: layout.njk
 
 User is currently speaking in the group call
 
-```
-speakingInGroupCallAction#d92c2285 = SendMessageAction;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/speakingInGroupCallAction/" class="current_page_link">speakingInGroupCallAction</a>#d92c2285 = <a href="/type/SendMessageAction/">SendMessageAction</a>;</code></pre>
 
 ### Parameters
 

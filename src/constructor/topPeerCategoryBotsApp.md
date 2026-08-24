@@ -11,9 +11,9 @@ layout: layout.njk
 
 Most frequently used [Main Mini Bot Apps](/api/bots/webapps/#main-mini-apps).
 
-```
-topPeerCategoryBotsApp#fd9e7bec = TopPeerCategory;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/topPeerCategoryBotsApp/" class="current_page_link">topPeerCategoryBotsApp</a>#fd9e7bec = <a href="/type/TopPeerCategory/">TopPeerCategory</a>;</code></pre>
 
 ### Parameters
 

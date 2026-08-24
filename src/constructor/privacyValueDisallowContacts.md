@@ -11,9 +11,9 @@ layout: layout.njk
 
 Disallow only contacts
 
-```
-privacyValueDisallowContacts#f888fa1a = PrivacyRule;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/privacyValueDisallowContacts/" class="current_page_link">privacyValueDisallowContacts</a>#f888fa1a = <a href="/type/PrivacyRule/">PrivacyRule</a>;</code></pre>
 
 ### Parameters
 

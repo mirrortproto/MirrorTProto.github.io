@@ -11,9 +11,9 @@ layout: layout.njk
 
 Empty constructor, non-existing file.
 
-```
-encryptedFileEmpty#c21f497e = EncryptedFile;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/encryptedFileEmpty/" class="current_page_link">encryptedFileEmpty</a>#c21f497e = <a href="/type/EncryptedFile/">EncryptedFile</a>;</code></pre>
 
 ### Parameters
 

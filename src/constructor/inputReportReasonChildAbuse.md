@@ -11,9 +11,9 @@ layout: layout.njk
 
 Report for child abuse
 
-```
-inputReportReasonChildAbuse#adf44ee3 = ReportReason;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputReportReasonChildAbuse/" class="current_page_link">inputReportReasonChildAbuse</a>#adf44ee3 = <a href="/type/ReportReason/">ReportReason</a>;</code></pre>
 
 ### Parameters
 

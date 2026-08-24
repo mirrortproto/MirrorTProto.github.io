@@ -11,9 +11,9 @@ layout: layout.njk
 
 Empty rich text element
 
-```
-textEmpty#dc3d824f = RichText;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/textEmpty/" class="current_page_link">textEmpty</a>#dc3d824f = <a href="/type/RichText/">RichText</a>;</code></pre>
 
 ### Parameters
 

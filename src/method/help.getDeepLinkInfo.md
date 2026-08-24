@@ -11,16 +11,16 @@ layout: layout.njk
 
 Get info about an unsupported deep link, see [here for more info »](/api/links/#unsupported-links).
 
-```
-help.deepLinkInfoEmpty#66afa166 = help.DeepLinkInfo;
-help.deepLinkInfo#6a4ee832 flags:# update_app:flags.0?true message:string entities:flags.1?Vector<MessageEntity> = help.DeepLinkInfo;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/help.deepLinkInfoEmpty/">help.deepLinkInfoEmpty</a>#66afa166 = <a href="/type/help.DeepLinkInfo/">help.DeepLinkInfo</a>;
+<a href="/constructor/help.deepLinkInfo/">help.deepLinkInfo</a>#6a4ee832 flags:<a href="/type/%23/">#</a> update_app:flags.0?true message:<a href="/type/string/">string</a> entities:flags.1?<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/MessageEntity/">MessageEntity</a>&gt; = <a href="/type/help.DeepLinkInfo/">help.DeepLinkInfo</a>;
 ---functions---
-help.getDeepLinkInfo#3fedc75f path:string = help.DeepLinkInfo;
-```
+<a href="/method/help.getDeepLinkInfo/" class="current_page_link">help.getDeepLinkInfo</a>#3fedc75f path:<a href="/type/string/">string</a> = <a href="/type/help.DeepLinkInfo/">help.DeepLinkInfo</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>path</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Path component of a <code>tg:</code> link</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>path</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td>Path component of a <code>tg:</code> link</td></tr></tbody></table>
 
 ### Result
 

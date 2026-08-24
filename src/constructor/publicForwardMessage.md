@@ -11,13 +11,13 @@ layout: layout.njk
 
 Contains info about a forward of a [story](/api/stories/) as a message.
 
-```
-publicForwardMessage#1f2bf4a message:Message = PublicForward;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/publicForwardMessage/" class="current_page_link">publicForwardMessage</a>#1f2bf4a message:<a href="/type/Message/">Message</a> = <a href="/type/PublicForward/">PublicForward</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>message</strong></td><td style="text-align: center;"><a href="/type/Message">Message</a></td><td>Info about the message with the reposted story.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>message</strong></td><td style="text-align: center;"><a href="/type/Message/">Message</a></td><td>Info about the message with the reposted story.</td></tr></tbody></table>
 
 ### Type
 

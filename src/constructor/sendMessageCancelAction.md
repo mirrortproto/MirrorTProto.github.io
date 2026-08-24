@@ -20,9 +20,9 @@ sendMessageCancelAction#fd5ec8f5 = SendMessageAction;
 
 #### API schema
 
-```
-sendMessageCancelAction#fd5ec8f5 = SendMessageAction;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/sendMessageCancelAction/" class="current_page_link">sendMessageCancelAction</a>#fd5ec8f5 = <a href="/type/SendMessageAction/">SendMessageAction</a>;</code></pre>
 
 ### Parameters
 

@@ -11,13 +11,13 @@ layout: layout.njk
 
 The saved dialogs haven't changed
 
-```
-messages.savedDialogsNotModified#c01f6fe8 count:int = messages.SavedDialogs;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/messages.savedDialogsNotModified/" class="current_page_link">messages.savedDialogsNotModified</a>#c01f6fe8 count:<a href="/type/int/">int</a> = <a href="/type/messages.SavedDialogs/">messages.SavedDialogs</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>count</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Number of <a href="/api/saved-messages">saved dialogs</a> found server-side by the query</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>count</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>Number of <a href="/api/saved-messages/">saved dialogs</a> found server-side by the query</td></tr></tbody></table>
 
 ### Type
 

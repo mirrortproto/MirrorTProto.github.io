@@ -11,9 +11,9 @@ layout: layout.njk
 
 Top [guest bots »](/api/bots/guest-mode/), i.e. bots most frequently invoked as guests in chats.
 
-```
-Constructor schema is available as of layer 225. Switch »
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code>Constructor schema is available as of layer 225. <a href="?layer=225">Switch »</a></code></pre>
 
 ### Parameters
 

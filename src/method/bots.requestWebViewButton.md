@@ -11,13 +11,13 @@ layout: layout.njk
 
 Bots may use this method to prepare a peer request button for a [Mini App](/api/bots/webapps/), see [here »](/api/bots/buttons/#requesting-peers-via-mini-apps) for more info.
 
-```
- Method schema is available as of layer 224. Switch »
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code>Method schema is available as of layer 224. <a href="?layer=224">Switch »</a></code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/InputUser">InputUser</a></td><td>The user that will use the prepared button in the Mini App</td></tr><tr><td><strong>button</strong></td><td style="text-align: center;"><a href="/type/KeyboardButton">KeyboardButton</a></td><td>The button to prepare, an <a href="/constructor/inputKeyboardButtonRequestPeer">inputKeyboardButtonRequestPeer</a> of any <a href="/type/RequestPeerType">RequestPeerType</a></td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/InputUser/">InputUser</a></td><td>The user that will use the prepared button in the Mini App</td></tr><tr><td><strong>button</strong></td><td style="text-align: center;"><a href="/type/KeyboardButton/">KeyboardButton</a></td><td>The button to prepare, an <a href="/constructor/inputKeyboardButtonRequestPeer/">inputKeyboardButtonRequestPeer</a> of any <a href="/type/RequestPeerType/">RequestPeerType</a></td></tr></tbody></table>
 
 ### Result
 

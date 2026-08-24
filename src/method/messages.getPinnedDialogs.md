@@ -11,15 +11,15 @@ layout: layout.njk
 
 Get pinned dialogs
 
-```
-messages.peerDialogs#3371c354 dialogs:Vector<Dialog> messages:Vector<Message> chats:Vector<Chat> users:Vector<User> state:updates.State = messages.PeerDialogs;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/messages.peerDialogs/">messages.peerDialogs</a>#3371c354 dialogs:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/Dialog/">Dialog</a>&gt; messages:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/Message/">Message</a>&gt; chats:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/Chat/">Chat</a>&gt; users:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/User/">User</a>&gt; state:<a href="/type/updates.State/">updates.State</a> = <a href="/type/messages.PeerDialogs/">messages.PeerDialogs</a>;
 ---functions---
-messages.getPinnedDialogs#d6b94df2 folder_id:int = messages.PeerDialogs;
-```
+<a href="/method/messages.getPinnedDialogs/" class="current_page_link">messages.getPinnedDialogs</a>#d6b94df2 folder_id:<a href="/type/int/">int</a> = <a href="/type/messages.PeerDialogs/">messages.PeerDialogs</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>folder_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td><a href="/api/folders#peer-folders">Peer folder ID, for more info click here</a></td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>folder_id</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td><a href="/api/folders/#peer-folders">Peer folder ID, for more info click here</a></td></tr></tbody></table>
 
 ### Result
 

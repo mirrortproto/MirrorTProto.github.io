@@ -11,9 +11,9 @@ layout: layout.njk
 
 Fetch only pinned messages
 
-```
-inputMessagesFilterPinned#1bb00451 = MessagesFilter;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputMessagesFilterPinned/" class="current_page_link">inputMessagesFilterPinned</a>#1bb00451 = <a href="/type/MessagesFilter/">MessagesFilter</a>;</code></pre>
 
 ### Parameters
 

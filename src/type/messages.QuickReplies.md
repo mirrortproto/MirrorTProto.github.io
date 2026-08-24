@@ -11,22 +11,22 @@ layout: layout.njk
 
 Info about [quick reply shortcuts »](/api/business/#quick-reply-shortcuts).
 
-```
-messages.quickReplies#c68d6695 quick_replies:Vector<QuickReply> messages:Vector<Message> chats:Vector<Chat> users:Vector<User> = messages.QuickReplies;
-messages.quickRepliesNotModified#5f91eb5b = messages.QuickReplies;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/messages.quickReplies/">messages.quickReplies</a>#c68d6695 quick_replies:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/QuickReply/">QuickReply</a>&gt; messages:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/Message/">Message</a>&gt; chats:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/Chat/">Chat</a>&gt; users:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/User/">User</a>&gt; = <a href="/type/messages.QuickReplies/" class="current_page_link">messages.QuickReplies</a>;
+<a href="/constructor/messages.quickRepliesNotModified/">messages.quickRepliesNotModified</a>#5f91eb5b = <a href="/type/messages.QuickReplies/" class="current_page_link">messages.QuickReplies</a>;
 
 ---functions---
 
-messages.getQuickReplies#d483f2a8 hash:long = messages.QuickReplies;
-```
+<a href="/method/messages.getQuickReplies/">messages.getQuickReplies</a>#d483f2a8 hash:<a href="/type/long/">long</a> = <a href="/type/messages.QuickReplies/" class="current_page_link">messages.QuickReplies</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/messages.quickReplies">messages.quickReplies</a></td><td>Info about <a href="/api/business#quick-reply-shortcuts">quick reply shortcuts »</a>.</td></tr><tr><td><a href="/constructor/messages.quickRepliesNotModified">messages.quickRepliesNotModified</a></td><td>Info about <a href="/api/business#quick-reply-shortcuts">quick reply shortcuts »</a> hasn't changed.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/messages.quickReplies/">messages.quickReplies</a></td><td>Info about <a href="/api/business/#quick-reply-shortcuts">quick reply shortcuts »</a>.</td></tr><tr><td><a href="/constructor/messages.quickRepliesNotModified/">messages.quickRepliesNotModified</a></td><td>Info about <a href="/api/business/#quick-reply-shortcuts">quick reply shortcuts »</a> hasn't changed.</td></tr></tbody></table>
 
 ### Methods
 
-<table class="table"><thead><tr><th scope="col">Method</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/method/messages.getQuickReplies">messages.getQuickReplies</a></td><td>Fetch basic info about all existing <a href="/api/business#quick-reply-shortcuts">quick reply shortcuts</a>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Method</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/method/messages.getQuickReplies/">messages.getQuickReplies</a></td><td>Fetch basic info about all existing <a href="/api/business/#quick-reply-shortcuts">quick reply shortcuts</a>.</td></tr></tbody></table>
 
 ### Related pages
 

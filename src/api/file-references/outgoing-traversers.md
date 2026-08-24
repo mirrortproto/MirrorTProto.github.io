@@ -3,7 +3,7 @@ title: "Outgoing file reference traversers"
 original: "https://core.telegram.org/api/file-references/outgoing-traversers"
 section: api
 description: "Full list of outgoing traversers contained by the current file reference map file »."
-crumbs: [{"title":"API","url":"/api/"},{"title":"Outgoing file reference traversers","url":"https://core.telegram.org/api/file-references%2Foutgoing-traversers"}]
+crumbs: [{"title":"API","url":"/api/"},{"title":"Outgoing file reference traversers","url":"/api/file-references/outgoing-traversers/"}]
 layout: layout.njk
 ---
 

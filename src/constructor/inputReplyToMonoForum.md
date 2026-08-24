@@ -11,13 +11,13 @@ layout: layout.njk
 
 Used to send messages to a [monoforum topic](/api/monoforum/).
 
-```
-inputReplyToMonoForum#69d66c45 monoforum_peer_id:InputPeer = InputReplyTo;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputReplyToMonoForum/" class="current_page_link">inputReplyToMonoForum</a>#69d66c45 monoforum_peer_id:<a href="/type/InputPeer/">InputPeer</a> = <a href="/type/InputReplyTo/">InputReplyTo</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>monoforum_peer_id</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>The topic ID.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>monoforum_peer_id</strong></td><td style="text-align: center;"><a href="/type/InputPeer/">InputPeer</a></td><td>The topic ID.</td></tr></tbody></table>
 
 ### Type
 

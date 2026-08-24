@@ -17,7 +17,7 @@ e2e.chain.sharedKey#8a847e7f ek:int256 encrypted_shared_key:string dest_user_id:
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/e2e.chain.sharedKey">e2e.chain.sharedKey</a></td><td>Encrypted <a href="/api/end-to-end/group-calls#shared-key-encryption">shared group key material</a> for an E2E conference call.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/e2e.chain.sharedKey/">e2e.chain.sharedKey</a></td><td>Encrypted <a href="/api/end-to-end/group-calls/#shared-key-encryption">shared group key material</a> for an E2E conference call.</td></tr></tbody></table>
 
 ### Related pages
 

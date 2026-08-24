@@ -11,16 +11,16 @@ layout: layout.njk
 
 Replace a sticker in a [stickerset »](/api/stickers/).
 
-```
-messages.stickerSet#6e153f16 set:StickerSet packs:Vector<StickerPack> keywords:Vector<StickerKeyword> documents:Vector<Document> = messages.StickerSet;
-messages.stickerSetNotModified#d3f924eb = messages.StickerSet;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/messages.stickerSet/">messages.stickerSet</a>#6e153f16 set:<a href="/type/StickerSet/">StickerSet</a> packs:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/StickerPack/">StickerPack</a>&gt; keywords:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/StickerKeyword/">StickerKeyword</a>&gt; documents:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/Document/">Document</a>&gt; = <a href="/type/messages.StickerSet/">messages.StickerSet</a>;
+<a href="/constructor/messages.stickerSetNotModified/">messages.stickerSetNotModified</a>#d3f924eb = <a href="/type/messages.StickerSet/">messages.StickerSet</a>;
 ---functions---
-stickers.replaceSticker#4696459a sticker:InputDocument new_sticker:InputStickerSetItem = messages.StickerSet;
-```
+<a href="/method/stickers.replaceSticker/" class="current_page_link">stickers.replaceSticker</a>#4696459a sticker:<a href="/type/InputDocument/">InputDocument</a> new_sticker:<a href="/type/InputStickerSetItem/">InputStickerSetItem</a> = <a href="/type/messages.StickerSet/">messages.StickerSet</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>sticker</strong></td><td style="text-align: center;"><a href="/type/InputDocument">InputDocument</a></td><td>Old sticker document.</td></tr><tr><td><strong>new_sticker</strong></td><td style="text-align: center;"><a href="/type/InputStickerSetItem">InputStickerSetItem</a></td><td>New sticker.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>sticker</strong></td><td style="text-align: center;"><a href="/type/InputDocument/">InputDocument</a></td><td>Old sticker document.</td></tr><tr><td><strong>new_sticker</strong></td><td style="text-align: center;"><a href="/type/InputStickerSetItem/">InputStickerSetItem</a></td><td>New sticker.</td></tr></tbody></table>
 
 ### Result
 

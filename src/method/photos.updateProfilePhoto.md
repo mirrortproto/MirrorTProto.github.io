@@ -11,15 +11,15 @@ layout: layout.njk
 
 Installs a previously uploaded photo as a profile photo.
 
-```
-photos.photo#20212ca8 photo:Photo users:Vector<User> = photos.Photo;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/photos.photo/">photos.photo</a>#20212ca8 photo:<a href="/type/Photo/">Photo</a> users:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/User/">User</a>&gt; = <a href="/type/photos.Photo/">photos.Photo</a>;
 ---functions---
-photos.updateProfilePhoto#9e82039 flags:# fallback:flags.0?true bot:flags.1?InputUser id:InputPhoto = photos.Photo;
-```
+<a href="/method/photos.updateProfilePhoto/" class="current_page_link">photos.updateProfilePhoto</a>#9e82039 flags:<a href="/type/%23/">#</a> fallback:flags.0?true bot:flags.1?<a href="/type/InputUser/">InputUser</a> id:<a href="/type/InputPhoto/">InputPhoto</a> = <a href="/type/photos.Photo/">photos.Photo</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>Flags, see <a href="/mtproto/TL-combinators#conditional-fields">TL conditional fields</a></td></tr><tr><td><strong>fallback</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>If set, the chosen profile photo will be shown to users that can't display your main profile photo due to your privacy settings.</td></tr><tr><td><strong>bot</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/InputUser">InputUser</a></td><td>Can contain info of a bot we own, to change the profile photo of that bot, instead of the current user.</td></tr><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/InputPhoto">InputPhoto</a></td><td>Input photo</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23/">#</a></td><td>Flags, see <a href="/mtproto/TL-combinators/#conditional-fields">TL conditional fields</a></td></tr><tr><td><strong>fallback</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators/#conditional-fields">flags</a>.0?<a href="/constructor/true/">true</a></td><td>If set, the chosen profile photo will be shown to users that can't display your main profile photo due to your privacy settings.</td></tr><tr><td><strong>bot</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators/#conditional-fields">flags</a>.1?<a href="/type/InputUser/">InputUser</a></td><td>Can contain info of a bot we own, to change the profile photo of that bot, instead of the current user.</td></tr><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/InputPhoto/">InputPhoto</a></td><td>Input photo</td></tr></tbody></table>
 
 ### Result
 

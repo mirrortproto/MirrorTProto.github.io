@@ -11,9 +11,9 @@ layout: layout.njk
 
 Used in updates and in the channel log to indicate when a user is requesting to join or has joined a [discussion group](/api/discussion/#requiring-users-to-join-the-group)
 
-```
-chatInvitePublicJoinRequests#ed107ab7 = ExportedChatInvite;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/chatInvitePublicJoinRequests/" class="current_page_link">chatInvitePublicJoinRequests</a>#ed107ab7 = <a href="/type/ExportedChatInvite/">ExportedChatInvite</a>;</code></pre>
 
 ### Parameters
 

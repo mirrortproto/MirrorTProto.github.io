@@ -15,15 +15,15 @@ Returns info about the new session.
 
 For more info, see [login via QR code](/api/qr-login/).
 
-```
-authorization#ad01d61d flags:# current:flags.0?true official_app:flags.1?true password_pending:flags.2?true encrypted_requests_disabled:flags.3?true call_requests_disabled:flags.4?true unconfirmed:flags.5?true hash:long device_model:string platform:string system_version:string api_id:int app_name:string app_version:string date_created:int date_active:int ip:string country:string region:string = Authorization;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/authorization/">authorization</a>#ad01d61d flags:<a href="/type/%23/">#</a> current:flags.0?true official_app:flags.1?true password_pending:flags.2?true encrypted_requests_disabled:flags.3?true call_requests_disabled:flags.4?true unconfirmed:flags.5?true hash:<a href="/type/long/">long</a> device_model:<a href="/type/string/">string</a> platform:<a href="/type/string/">string</a> system_version:<a href="/type/string/">string</a> api_id:<a href="/type/int/">int</a> app_name:<a href="/type/string/">string</a> app_version:<a href="/type/string/">string</a> date_created:<a href="/type/int/">int</a> date_active:<a href="/type/int/">int</a> ip:<a href="/type/string/">string</a> country:<a href="/type/string/">string</a> region:<a href="/type/string/">string</a> = <a href="/type/Authorization/">Authorization</a>;
 ---functions---
-auth.acceptLoginToken#e894ad4d token:bytes = Authorization;
-```
+<a href="/method/auth.acceptLoginToken/" class="current_page_link">auth.acceptLoginToken</a>#e894ad4d token:<a href="/type/bytes/">bytes</a> = <a href="/type/Authorization/">Authorization</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>token</strong></td><td style="text-align: center;"><a href="/type/bytes">bytes</a></td><td>Login token embedded in QR code, for more info, see <a href="/api/qr-login">login via QR code</a>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>token</strong></td><td style="text-align: center;"><a href="/type/bytes/">bytes</a></td><td>Login token embedded in QR code, for more info, see <a href="/api/qr-login/">login via QR code</a>.</td></tr></tbody></table>
 
 ### Result
 

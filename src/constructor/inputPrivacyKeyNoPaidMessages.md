@@ -11,9 +11,9 @@ layout: layout.njk
 
 Who can send you messages without paying, if [paid messages »](/api/paid-messages/) are enabled.
 
-```
-inputPrivacyKeyNoPaidMessages#bdc597b4 = InputPrivacyKey;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputPrivacyKeyNoPaidMessages/" class="current_page_link">inputPrivacyKeyNoPaidMessages</a>#bdc597b4 = <a href="/type/InputPrivacyKey/">InputPrivacyKey</a>;</code></pre>
 
 ### Parameters
 

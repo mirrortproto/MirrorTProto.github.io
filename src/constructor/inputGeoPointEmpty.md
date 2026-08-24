@@ -11,9 +11,9 @@ layout: layout.njk
 
 Empty GeoPoint constructor.
 
-```
-inputGeoPointEmpty#e4c123d6 = InputGeoPoint;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputGeoPointEmpty/" class="current_page_link">inputGeoPointEmpty</a>#e4c123d6 = <a href="/type/InputGeoPoint/">InputGeoPoint</a>;</code></pre>
 
 ### Parameters
 

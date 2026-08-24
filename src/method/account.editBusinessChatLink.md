@@ -11,15 +11,15 @@ layout: layout.njk
 
 Edit a created [business chat deep link »](/api/business/#business-chat-links).
 
-```
-businessChatLink#b4ae666f flags:# link:string message:string entities:flags.0?Vector<MessageEntity> title:flags.1?string views:int = BusinessChatLink;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/businessChatLink/">businessChatLink</a>#b4ae666f flags:<a href="/type/%23/">#</a> link:<a href="/type/string/">string</a> message:<a href="/type/string/">string</a> entities:flags.0?<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/MessageEntity/">MessageEntity</a>&gt; title:flags.1?<a href="/type/string/">string</a> views:<a href="/type/int/">int</a> = <a href="/type/BusinessChatLink/">BusinessChatLink</a>;
 ---functions---
-account.editBusinessChatLink#8c3410af slug:string link:InputBusinessChatLink = BusinessChatLink;
-```
+<a href="/method/account.editBusinessChatLink/" class="current_page_link">account.editBusinessChatLink</a>#8c3410af slug:<a href="/type/string/">string</a> link:<a href="/type/InputBusinessChatLink/">InputBusinessChatLink</a> = <a href="/type/BusinessChatLink/">BusinessChatLink</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>slug</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Slug of the link, obtained as specified <a href="/api/links#business-chat-links">here »</a>.</td></tr><tr><td><strong>link</strong></td><td style="text-align: center;"><a href="/type/InputBusinessChatLink">InputBusinessChatLink</a></td><td>New link information.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>slug</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td>Slug of the link, obtained as specified <a href="/api/links/#business-chat-links">here »</a>.</td></tr><tr><td><strong>link</strong></td><td style="text-align: center;"><a href="/type/InputBusinessChatLink/">InputBusinessChatLink</a></td><td>New link information.</td></tr></tbody></table>
 
 ### Result
 

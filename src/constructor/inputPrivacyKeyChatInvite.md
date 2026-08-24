@@ -11,9 +11,9 @@ layout: layout.njk
 
 Whether people will be able to invite you to chats
 
-```
-inputPrivacyKeyChatInvite#bdfb0426 = InputPrivacyKey;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputPrivacyKeyChatInvite/" class="current_page_link">inputPrivacyKeyChatInvite</a>#bdfb0426 = <a href="/type/InputPrivacyKey/">InputPrivacyKey</a>;</code></pre>
 
 ### Parameters
 

@@ -11,9 +11,9 @@ layout: layout.njk
 
 Other
 
-```
-inputReportReasonOther#c1e4a2b1 = ReportReason;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputReportReasonOther/" class="current_page_link">inputReportReasonOther</a>#c1e4a2b1 = <a href="/type/ReportReason/">ReportReason</a>;</code></pre>
 
 ### Parameters
 

@@ -11,9 +11,9 @@ layout: layout.njk
 
 Whether P2P connections in phone calls with this user are allowed
 
-```
-privacyKeyPhoneP2P#39491cc8 = PrivacyKey;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/privacyKeyPhoneP2P/" class="current_page_link">privacyKeyPhoneP2P</a>#39491cc8 = <a href="/type/PrivacyKey/">PrivacyKey</a>;</code></pre>
 
 ### Parameters
 

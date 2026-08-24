@@ -11,13 +11,13 @@ layout: layout.njk
 
 Most active user in a [supergroup](/api/channel/)
 
-```
-statsGroupTopPoster#9d04af9b user_id:long messages:int avg_chars:int = StatsGroupTopPoster;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/statsGroupTopPoster/">statsGroupTopPoster</a>#9d04af9b user_id:<a href="/type/long/">long</a> messages:<a href="/type/int/">int</a> avg_chars:<a href="/type/int/">int</a> = <a href="/type/StatsGroupTopPoster/" class="current_page_link">StatsGroupTopPoster</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/statsGroupTopPoster">statsGroupTopPoster</a></td><td>Information about an active user in a supergroup</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/statsGroupTopPoster/">statsGroupTopPoster</a></td><td>Information about an active user in a supergroup</td></tr></tbody></table>
 
 ### Related pages
 

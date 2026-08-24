@@ -11,11 +11,11 @@ layout: layout.njk
 
 Initialize passkey registration for the current account, see [here »](/api/passkeys/#creating-a-passkey) for more info on the full flow.
 
-```
-account.passkeyRegistrationOptions#e16b5ce1 options:DataJSON = account.PasskeyRegistrationOptions;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/account.passkeyRegistrationOptions/">account.passkeyRegistrationOptions</a>#e16b5ce1 options:<a href="/type/DataJSON/">DataJSON</a> = <a href="/type/account.PasskeyRegistrationOptions/">account.PasskeyRegistrationOptions</a>;
 ---functions---
-account.initPasskeyRegistration#429547e8 = account.PasskeyRegistrationOptions;
-```
+<a href="/method/account.initPasskeyRegistration/" class="current_page_link">account.initPasskeyRegistration</a>#429547e8 = <a href="/type/account.PasskeyRegistrationOptions/">account.PasskeyRegistrationOptions</a>;</code></pre>
 
 ### Parameters
 

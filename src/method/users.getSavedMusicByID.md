@@ -11,16 +11,16 @@ layout: layout.njk
 
 Check if the passed songs are still pinned to the user's profile, or refresh the file references of songs pinned on a user's profile [see here »](/api/profile/#music) for more info.
 
-```
-users.savedMusicNotModified#e3878aa4 count:int = users.SavedMusic;
-users.savedMusic#34a2f297 count:int documents:Vector<Document> = users.SavedMusic;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/users.savedMusicNotModified/">users.savedMusicNotModified</a>#e3878aa4 count:<a href="/type/int/">int</a> = <a href="/type/users.SavedMusic/">users.SavedMusic</a>;
+<a href="/constructor/users.savedMusic/">users.savedMusic</a>#34a2f297 count:<a href="/type/int/">int</a> documents:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/Document/">Document</a>&gt; = <a href="/type/users.SavedMusic/">users.SavedMusic</a>;
 ---functions---
-users.getSavedMusicByID#7573a4e9 id:InputUser documents:Vector<InputDocument> = users.SavedMusic;
-```
+<a href="/method/users.getSavedMusicByID/" class="current_page_link">users.getSavedMusicByID</a>#7573a4e9 id:<a href="/type/InputUser/">InputUser</a> documents:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/InputDocument/">InputDocument</a>&gt; = <a href="/type/users.SavedMusic/">users.SavedMusic</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/InputUser">InputUser</a></td><td>The ID of the user.</td></tr><tr><td><strong>documents</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/InputDocument">InputDocument</a>&gt;</td><td>The songs (here, <code>file_reference</code> can be empty to refresh file references).</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/InputUser/">InputUser</a></td><td>The ID of the user.</td></tr><tr><td><strong>documents</strong></td><td style="text-align: center;"><a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/InputDocument/">InputDocument</a>&gt;</td><td>The songs (here, <code>file_reference</code> can be empty to refresh file references).</td></tr></tbody></table>
 
 ### Result
 

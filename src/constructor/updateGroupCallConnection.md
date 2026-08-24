@@ -34,13 +34,13 @@ for a call that entered [stream mode](/api/group-calls/#stream-mode), or
 
 for an [RTMP-mode call](/api/group-calls/#creating-and-publishing-an-rtmp-livestream).
 
-```
-updateGroupCallConnection#b783982 flags:# presentation:flags.0?true params:DataJSON = Update;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/updateGroupCallConnection/" class="current_page_link">updateGroupCallConnection</a>#b783982 flags:<a href="/type/%23/">#</a> presentation:flags.0?true params:<a href="/type/DataJSON/">DataJSON</a> = <a href="/type/Update/">Update</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>Flags, see <a href="/mtproto/TL-combinators#conditional-fields">TL conditional fields</a></td></tr><tr><td><strong>presentation</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Whether these parameters belong to the separate presentation connection instead of the main connection</td></tr><tr><td><strong>params</strong></td><td style="text-align: center;"><a href="/type/DataJSON">DataJSON</a></td><td>RTC join response parameters or broadcast-stream metadata, as described above</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23/">#</a></td><td>Flags, see <a href="/mtproto/TL-combinators/#conditional-fields">TL conditional fields</a></td></tr><tr><td><strong>presentation</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators/#conditional-fields">flags</a>.0?<a href="/constructor/true/">true</a></td><td>Whether these parameters belong to the separate presentation connection instead of the main connection</td></tr><tr><td><strong>params</strong></td><td style="text-align: center;"><a href="/type/DataJSON/">DataJSON</a></td><td>RTC join response parameters or broadcast-stream metadata, as described above</td></tr></tbody></table>
 
 ### Type
 

@@ -11,9 +11,9 @@ layout: layout.njk
 
 No updates are available for the application.
 
-```
-help.noAppUpdate#c45a6536 = help.AppUpdate;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/help.noAppUpdate/" class="current_page_link">help.noAppUpdate</a>#c45a6536 = <a href="/type/help.AppUpdate/">help.AppUpdate</a>;</code></pre>
 
 ### Parameters
 

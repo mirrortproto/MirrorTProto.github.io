@@ -11,13 +11,13 @@ layout: layout.njk
 
 Specifies the private chats that a [connected business bot »](/api/bots/connected-business-bots/) may interact with.
 
-```
-inputBusinessBotRecipients#c4e5921e flags:# existing_chats:flags.0?true new_chats:flags.1?true contacts:flags.2?true non_contacts:flags.3?true exclude_selected:flags.5?true users:flags.4?Vector<InputUser> exclude_users:flags.6?Vector<InputUser> = InputBusinessBotRecipients;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputBusinessBotRecipients/">inputBusinessBotRecipients</a>#c4e5921e flags:<a href="/type/%23/">#</a> existing_chats:flags.0?true new_chats:flags.1?true contacts:flags.2?true non_contacts:flags.3?true exclude_selected:flags.5?true users:flags.4?<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/InputUser/">InputUser</a>&gt; exclude_users:flags.6?<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/InputUser/">InputUser</a>&gt; = <a href="/type/InputBusinessBotRecipients/" class="current_page_link">InputBusinessBotRecipients</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/inputBusinessBotRecipients">inputBusinessBotRecipients</a></td><td>Specifies the private chats that a <a href="/api/bots/connected-business-bots">connected business bot »</a> may interact with.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/inputBusinessBotRecipients/">inputBusinessBotRecipients</a></td><td>Specifies the private chats that a <a href="/api/bots/connected-business-bots/">connected business bot »</a> may interact with.</td></tr></tbody></table>
 
 ### Related pages
 

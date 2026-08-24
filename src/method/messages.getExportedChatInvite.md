@@ -11,16 +11,16 @@ layout: layout.njk
 
 Get info about a chat invite
 
-```
-messages.exportedChatInvite#1871be50 invite:ExportedChatInvite users:Vector<User> = messages.ExportedChatInvite;
-messages.exportedChatInviteReplaced#222600ef invite:ExportedChatInvite new_invite:ExportedChatInvite users:Vector<User> = messages.ExportedChatInvite;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/messages.exportedChatInvite/">messages.exportedChatInvite</a>#1871be50 invite:<a href="/type/ExportedChatInvite/">ExportedChatInvite</a> users:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/User/">User</a>&gt; = <a href="/type/messages.ExportedChatInvite/">messages.ExportedChatInvite</a>;
+<a href="/constructor/messages.exportedChatInviteReplaced/">messages.exportedChatInviteReplaced</a>#222600ef invite:<a href="/type/ExportedChatInvite/">ExportedChatInvite</a> new_invite:<a href="/type/ExportedChatInvite/">ExportedChatInvite</a> users:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/User/">User</a>&gt; = <a href="/type/messages.ExportedChatInvite/">messages.ExportedChatInvite</a>;
 ---functions---
-messages.getExportedChatInvite#73746f5c peer:InputPeer link:string = messages.ExportedChatInvite;
-```
+<a href="/method/messages.getExportedChatInvite/" class="current_page_link">messages.getExportedChatInvite</a>#73746f5c peer:<a href="/type/InputPeer/">InputPeer</a> link:<a href="/type/string/">string</a> = <a href="/type/messages.ExportedChatInvite/">messages.ExportedChatInvite</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>Chat</td></tr><tr><td><strong>link</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Invite link</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer/">InputPeer</a></td><td>Chat</td></tr><tr><td><strong>link</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td>Invite link</td></tr></tbody></table>
 
 ### Result
 

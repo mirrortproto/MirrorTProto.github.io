@@ -11,9 +11,9 @@ layout: layout.njk
 
 Represents a [paid Telegram Star reaction »](/api/reactions/#paid-reactions).
 
-```
-reactionPaid#523da4eb = Reaction;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/reactionPaid/" class="current_page_link">reactionPaid</a>#523da4eb = <a href="/type/Reaction/">Reaction</a>;</code></pre>
 
 ### Parameters
 

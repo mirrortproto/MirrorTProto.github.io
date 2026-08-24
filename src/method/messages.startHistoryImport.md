@@ -12,16 +12,16 @@ layout: layout.njk
 Complete the [history import process](/api/import/), importing all messages into the chat.  
 To be called only after initializing the import with [messages.initHistoryImport](/method/messages.initHistoryImport/) and uploading all files using [messages.uploadImportedMedia](/method/messages.uploadImportedMedia/).
 
-```
-boolFalse#bc799737 = Bool;
-boolTrue#997275b5 = Bool;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/boolFalse/">boolFalse</a>#bc799737 = <a href="/type/Bool/">Bool</a>;
+<a href="/constructor/boolTrue/">boolTrue</a>#997275b5 = <a href="/type/Bool/">Bool</a>;
 ---functions---
-messages.startHistoryImport#b43df344 peer:InputPeer import_id:long = Bool;
-```
+<a href="/method/messages.startHistoryImport/" class="current_page_link">messages.startHistoryImport</a>#b43df344 peer:<a href="/type/InputPeer/">InputPeer</a> import_id:<a href="/type/long/">long</a> = <a href="/type/Bool/">Bool</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>The Telegram chat where the messages should be <a href="/api/import">imported, click here for more info »</a></td></tr><tr><td><strong>import_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Identifier of a history import session, returned by <a href="/method/messages.initHistoryImport">messages.initHistoryImport</a>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer/">InputPeer</a></td><td>The Telegram chat where the messages should be <a href="/api/import/">imported, click here for more info »</a></td></tr><tr><td><strong>import_id</strong></td><td style="text-align: center;"><a href="/type/long/">long</a></td><td>Identifier of a history import session, returned by <a href="/method/messages.initHistoryImport/">messages.initHistoryImport</a>.</td></tr></tbody></table>
 
 ### Result
 

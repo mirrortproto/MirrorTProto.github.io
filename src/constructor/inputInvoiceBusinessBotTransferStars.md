@@ -11,13 +11,13 @@ layout: layout.njk
 
 Transfer stars from the balance of a user account [connected to a business bot](/api/bots/connected-business-bots/), to the balance of the [business bot](/api/bots/connected-business-bots/), see [here »](/api/stars/#transferring-stars-from-a-business-account-to-the-business-bot) for more info on the full flow.
 
-```
-inputInvoiceBusinessBotTransferStars#f4997e42 bot:InputUser stars:long = InputInvoice;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputInvoiceBusinessBotTransferStars/" class="current_page_link">inputInvoiceBusinessBotTransferStars</a>#f4997e42 bot:<a href="/type/InputUser/">InputUser</a> stars:<a href="/type/long/">long</a> = <a href="/type/InputInvoice/">InputInvoice</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>bot</strong></td><td style="text-align: center;"><a href="/type/InputUser">InputUser</a></td><td>Always <a href="/constructor/inputUserSelf">inputUserSelf</a>.</td></tr><tr><td><strong>stars</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>The number of stars to transfer.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>bot</strong></td><td style="text-align: center;"><a href="/type/InputUser/">InputUser</a></td><td>Always <a href="/constructor/inputUserSelf/">inputUserSelf</a>.</td></tr><tr><td><strong>stars</strong></td><td style="text-align: center;"><a href="/type/long/">long</a></td><td>The number of stars to transfer.</td></tr></tbody></table>
 
 ### Type
 

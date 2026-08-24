@@ -11,9 +11,9 @@ layout: layout.njk
 
 Passport
 
-```
-secureValueTypePassport#3dac6a00 = SecureValueType;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/secureValueTypePassport/" class="current_page_link">secureValueTypePassport</a>#3dac6a00 = <a href="/type/SecureValueType/">SecureValueType</a>;</code></pre>
 
 ### Parameters
 

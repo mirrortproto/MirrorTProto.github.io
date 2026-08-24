@@ -11,15 +11,15 @@ layout: layout.njk
 
 Get localized [emoji keywords »](/api/custom-emoji/#emoji-keywords).
 
-```
-emojiKeywordsDifference#5cc761bd lang_code:string from_version:int version:int keywords:Vector<EmojiKeyword> = EmojiKeywordsDifference;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/emojiKeywordsDifference/">emojiKeywordsDifference</a>#5cc761bd lang_code:<a href="/type/string/">string</a> from_version:<a href="/type/int/">int</a> version:<a href="/type/int/">int</a> keywords:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/EmojiKeyword/">EmojiKeyword</a>&gt; = <a href="/type/EmojiKeywordsDifference/">EmojiKeywordsDifference</a>;
 ---functions---
-messages.getEmojiKeywords#35a0e062 lang_code:string = EmojiKeywordsDifference;
-```
+<a href="/method/messages.getEmojiKeywords/" class="current_page_link">messages.getEmojiKeywords</a>#35a0e062 lang_code:<a href="/type/string/">string</a> = <a href="/type/EmojiKeywordsDifference/">EmojiKeywordsDifference</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>lang_code</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Language code</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>lang_code</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td>Language code</td></tr></tbody></table>
 
 ### Result
 

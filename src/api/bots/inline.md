@@ -3,7 +3,7 @@ title: "Inline queries"
 original: "https://core.telegram.org/api/bots/inline"
 section: api
 description: "Users can interact with your bot via inline queries, straight from the text input field in any chat."
-crumbs: [{"title":"API","url":"/api/"},{"title":"Inline queries","url":"https://core.telegram.org/api/bots%2Finline"}]
+crumbs: [{"title":"API","url":"/api/"},{"title":"Inline queries","url":"/api/bots/inline/"}]
 layout: layout.njk
 ---
 

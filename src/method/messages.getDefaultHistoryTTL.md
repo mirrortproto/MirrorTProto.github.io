@@ -11,11 +11,11 @@ layout: layout.njk
 
 Gets the default value of the Time-To-Live setting, applied to all new chats.
 
-```
-defaultHistoryTTL#43b46b20 period:int = DefaultHistoryTTL;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/defaultHistoryTTL/">defaultHistoryTTL</a>#43b46b20 period:<a href="/type/int/">int</a> = <a href="/type/DefaultHistoryTTL/">DefaultHistoryTTL</a>;
 ---functions---
-messages.getDefaultHistoryTTL#658b7188 = DefaultHistoryTTL;
-```
+<a href="/method/messages.getDefaultHistoryTTL/" class="current_page_link">messages.getDefaultHistoryTTL</a>#658b7188 = <a href="/type/DefaultHistoryTTL/">DefaultHistoryTTL</a>;</code></pre>
 
 ### Parameters
 

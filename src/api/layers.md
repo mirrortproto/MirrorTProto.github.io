@@ -4603,7 +4603,7 @@ payments.checkCanSendGift#c0c4edc9 gift_id:long = payments.CheckCanSendGiftResul
 
 This layer introduces the following features:
 
--   [Separately prepay for the upgrade of a gift »](https://core.telegram.org/api/gifts#prepaying-for-someone-elses-upgrade).
+-   [Separately prepay for the upgrade of a gift »](/api/gifts/#prepaying-for-someone-else-s-upgrade).
 -   [Get info about the value of a collectible gift »](/method/payments.getUniqueStarGiftValueInfo/)
 
 #### [Schema](/schema/) changes
@@ -4618,7 +4618,7 @@ This layer introduces the following features:
 
 ##### New Constructors
 
--   Added [inputInvoiceStarGiftPrepaidUpgrade](/constructor/inputInvoiceStarGiftPrepaidUpgrade/) - [Separately prepay for the upgrade of a gift »](https://core.telegram.org/api/gifts#prepaying-for-someone-elses-upgrade).
+-   Added [inputInvoiceStarGiftPrepaidUpgrade](/constructor/inputInvoiceStarGiftPrepaidUpgrade/) - [Separately prepay for the upgrade of a gift »](/api/gifts/#prepaying-for-someone-else-s-upgrade).
 -   Added [payments.uniqueStarGiftValueInfo](/constructor/payments.uniqueStarGiftValueInfo/) - Information about the value of a [collectible gift »](/api/gifts/#collectible-gifts).
 
 ##### Changed Constructors

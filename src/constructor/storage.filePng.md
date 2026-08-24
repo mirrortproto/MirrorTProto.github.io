@@ -11,9 +11,9 @@ layout: layout.njk
 
 PNG image. MIME type: `image/png`.
 
-```
-storage.filePng#a4f63c0 = storage.FileType;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/storage.filePng/" class="current_page_link">storage.filePng</a>#a4f63c0 = <a href="/type/storage.FileType/">storage.FileType</a>;</code></pre>
 
 ### Parameters
 

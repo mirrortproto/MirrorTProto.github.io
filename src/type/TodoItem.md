@@ -11,13 +11,13 @@ layout: layout.njk
 
 An item of a [todo list »](/api/todo/).
 
-```
-todoItem#cba9a52f id:int title:TextWithEntities = TodoItem;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/todoItem/">todoItem</a>#cba9a52f id:<a href="/type/int/">int</a> title:<a href="/type/TextWithEntities/">TextWithEntities</a> = <a href="/type/TodoItem/" class="current_page_link">TodoItem</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/todoItem">todoItem</a></td><td>An item of a <a href="/api/todo">todo list »</a>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/todoItem/">todoItem</a></td><td>An item of a <a href="/api/todo/">todo list »</a>.</td></tr></tbody></table>
 
 ### Related pages
 

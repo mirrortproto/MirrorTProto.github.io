@@ -11,9 +11,9 @@ layout: layout.njk
 
 The server-side configuration has changed; the client should re-fetch the config using [help.getConfig](/method/help.getConfig/) and [help.getAppConfig](/method/help.getAppConfig/).
 
-```
-updateConfig#a229dd06 = Update;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/updateConfig/" class="current_page_link">updateConfig</a>#a229dd06 = <a href="/type/Update/">Update</a>;</code></pre>
 
 ### Parameters
 

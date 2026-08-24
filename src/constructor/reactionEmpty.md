@@ -11,9 +11,9 @@ layout: layout.njk
 
 No reaction
 
-```
-reactionEmpty#79f5d419 = Reaction;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/reactionEmpty/" class="current_page_link">reactionEmpty</a>#79f5d419 = <a href="/type/Reaction/">Reaction</a>;</code></pre>
 
 ### Parameters
 

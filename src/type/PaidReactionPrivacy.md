@@ -11,15 +11,15 @@ layout: layout.njk
 
 [Paid reaction privacy settings »](/api/reactions/#paid-reactions)
 
-```
-paidReactionPrivacyDefault#206ad49e = PaidReactionPrivacy;
-paidReactionPrivacyAnonymous#1f0c1ad9 = PaidReactionPrivacy;
-paidReactionPrivacyPeer#dc6cfcf0 peer:InputPeer = PaidReactionPrivacy;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/paidReactionPrivacyDefault/">paidReactionPrivacyDefault</a>#206ad49e = <a href="/type/PaidReactionPrivacy/" class="current_page_link">PaidReactionPrivacy</a>;
+<a href="/constructor/paidReactionPrivacyAnonymous/">paidReactionPrivacyAnonymous</a>#1f0c1ad9 = <a href="/type/PaidReactionPrivacy/" class="current_page_link">PaidReactionPrivacy</a>;
+<a href="/constructor/paidReactionPrivacyPeer/">paidReactionPrivacyPeer</a>#dc6cfcf0 peer:<a href="/type/InputPeer/">InputPeer</a> = <a href="/type/PaidReactionPrivacy/" class="current_page_link">PaidReactionPrivacy</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/paidReactionPrivacyDefault">paidReactionPrivacyDefault</a></td><td>Uses the default reaction privacy, set using <a href="/method/messages.togglePaidReactionPrivacy">messages.togglePaidReactionPrivacy</a>.</td></tr><tr><td><a href="/constructor/paidReactionPrivacyAnonymous">paidReactionPrivacyAnonymous</a></td><td>Send paid reactions anonymously.</td></tr><tr><td><a href="/constructor/paidReactionPrivacyPeer">paidReactionPrivacyPeer</a></td><td>Send paid reactions as the specified peer, fetched using <a href="/method/channels.getSendAs">channels.getSendAs</a> with the <code>for_paid_reactions</code> flag set.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/paidReactionPrivacyDefault/">paidReactionPrivacyDefault</a></td><td>Uses the default reaction privacy, set using <a href="/method/messages.togglePaidReactionPrivacy/">messages.togglePaidReactionPrivacy</a>.</td></tr><tr><td><a href="/constructor/paidReactionPrivacyAnonymous/">paidReactionPrivacyAnonymous</a></td><td>Send paid reactions anonymously.</td></tr><tr><td><a href="/constructor/paidReactionPrivacyPeer/">paidReactionPrivacyPeer</a></td><td>Send paid reactions as the specified peer, fetched using <a href="/method/channels.getSendAs/">channels.getSendAs</a> with the <code>for_paid_reactions</code> flag set.</td></tr></tbody></table>
 
 ### Related pages
 

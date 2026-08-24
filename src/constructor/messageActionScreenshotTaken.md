@@ -11,9 +11,9 @@ layout: layout.njk
 
 A screenshot of the chat was taken
 
-```
-messageActionScreenshotTaken#4792929b = MessageAction;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/messageActionScreenshotTaken/" class="current_page_link">messageActionScreenshotTaken</a>#4792929b = <a href="/type/MessageAction/">MessageAction</a>;</code></pre>
 
 ### Parameters
 

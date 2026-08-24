@@ -11,13 +11,13 @@ layout: layout.njk
 
 Used to pay for a [Telegram Star subscription »](/api/stars/#star-subscriptions).
 
-```
-inputInvoiceChatInviteSubscription#34e793f1 hash:string = InputInvoice;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputInvoiceChatInviteSubscription/" class="current_page_link">inputInvoiceChatInviteSubscription</a>#34e793f1 hash:<a href="/type/string/">string</a> = <a href="/type/InputInvoice/">InputInvoice</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>The <a href="/api/stars#star-subscriptions">invitation link of the Telegram Star subscription »</a></td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td>The <a href="/api/stars/#star-subscriptions">invitation link of the Telegram Star subscription »</a></td></tr></tbody></table>
 
 ### Type
 

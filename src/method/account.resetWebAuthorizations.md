@@ -11,12 +11,12 @@ layout: layout.njk
 
 Reset all active web [telegram login](https://core.telegram.org/widgets/login) sessions
 
-```
-boolFalse#bc799737 = Bool;
-boolTrue#997275b5 = Bool;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/boolFalse/">boolFalse</a>#bc799737 = <a href="/type/Bool/">Bool</a>;
+<a href="/constructor/boolTrue/">boolTrue</a>#997275b5 = <a href="/type/Bool/">Bool</a>;
 ---functions---
-account.resetWebAuthorizations#682d2594 = Bool;
-```
+<a href="/method/account.resetWebAuthorizations/" class="current_page_link">account.resetWebAuthorizations</a>#682d2594 = <a href="/type/Bool/">Bool</a>;</code></pre>
 
 ### Parameters
 

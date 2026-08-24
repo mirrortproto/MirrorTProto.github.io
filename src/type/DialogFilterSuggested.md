@@ -11,13 +11,13 @@ layout: layout.njk
 
 Suggested dialog filters ([folder »](/api/folders/))
 
-```
-dialogFilterSuggested#77744d4a filter:DialogFilter description:string = DialogFilterSuggested;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/dialogFilterSuggested/">dialogFilterSuggested</a>#77744d4a filter:<a href="/type/DialogFilter/">DialogFilter</a> description:<a href="/type/string/">string</a> = <a href="/type/DialogFilterSuggested/" class="current_page_link">DialogFilterSuggested</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/dialogFilterSuggested">dialogFilterSuggested</a></td><td>Suggested <a href="/api/folders">folders</a></td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/dialogFilterSuggested/">dialogFilterSuggested</a></td><td>Suggested <a href="/api/folders/">folders</a></td></tr></tbody></table>
 
 ### Related pages
 

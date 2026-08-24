@@ -11,15 +11,15 @@ layout: layout.njk
 
 Suggests a short name for a given stickerpack name
 
-```
-stickers.suggestedShortName#85fea03f short_name:string = stickers.SuggestedShortName;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/stickers.suggestedShortName/">stickers.suggestedShortName</a>#85fea03f short_name:<a href="/type/string/">string</a> = <a href="/type/stickers.SuggestedShortName/">stickers.SuggestedShortName</a>;
 ---functions---
-stickers.suggestShortName#4dafc503 title:string = stickers.SuggestedShortName;
-```
+<a href="/method/stickers.suggestShortName/" class="current_page_link">stickers.suggestShortName</a>#4dafc503 title:<a href="/type/string/">string</a> = <a href="/type/stickers.SuggestedShortName/">stickers.SuggestedShortName</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>title</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Sticker pack name</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>title</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td>Sticker pack name</td></tr></tbody></table>
 
 ### Result
 

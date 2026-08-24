@@ -11,9 +11,9 @@ layout: layout.njk
 
 Tinted theme
 
-```
-baseThemeTinted#6d5f77ee = BaseTheme;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/baseThemeTinted/" class="current_page_link">baseThemeTinted</a>#6d5f77ee = <a href="/type/BaseTheme/">BaseTheme</a>;</code></pre>
 
 ### Parameters
 

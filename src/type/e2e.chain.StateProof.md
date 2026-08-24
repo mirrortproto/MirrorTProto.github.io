@@ -17,7 +17,7 @@ e2e.chain.stateProof#d6b679e6 flags:# kv_hash:int256 group_state:flags.0?e2e.cha
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/e2e.chain.stateProof">e2e.chain.stateProof</a></td><td>Proof of the <a href="/api/end-to-end/group-calls#block-application-process">E2E conference call blockchain state</a> after a block has been applied.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/e2e.chain.stateProof/">e2e.chain.stateProof</a></td><td>Proof of the <a href="/api/end-to-end/group-calls/#block-application-process">E2E conference call blockchain state</a> after a block has been applied.</td></tr></tbody></table>
 
 ### Related pages
 

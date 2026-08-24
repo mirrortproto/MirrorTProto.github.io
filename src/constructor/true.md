@@ -11,9 +11,9 @@ layout: layout.njk
 
 See [predefined identifiers](/mtproto/TL-formal/#predefined-identifiers).
 
-```
-true#3fedd339 = True;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/true/" class="current_page_link">true</a>#3fedd339 = <a href="/type/True/">True</a>;</code></pre>
 
 ### Parameters
 

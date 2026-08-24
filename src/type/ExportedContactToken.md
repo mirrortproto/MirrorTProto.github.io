@@ -11,21 +11,21 @@ layout: layout.njk
 
 Describes a [temporary profile link](/api/links/#temporary-profile-links).
 
-```
-exportedContactToken#41bf109b url:string expires:int = ExportedContactToken;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/exportedContactToken/">exportedContactToken</a>#41bf109b url:<a href="/type/string/">string</a> expires:<a href="/type/int/">int</a> = <a href="/type/ExportedContactToken/" class="current_page_link">ExportedContactToken</a>;
 
 ---functions---
 
-contacts.exportContactToken#f8654027 = ExportedContactToken;
-```
+<a href="/method/contacts.exportContactToken/">contacts.exportContactToken</a>#f8654027 = <a href="/type/ExportedContactToken/" class="current_page_link">ExportedContactToken</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/exportedContactToken">exportedContactToken</a></td><td>Describes a <a href="/api/links#temporary-profile-links">temporary profile link</a>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/exportedContactToken/">exportedContactToken</a></td><td>Describes a <a href="/api/links/#temporary-profile-links">temporary profile link</a>.</td></tr></tbody></table>
 
 ### Methods
 
-<table class="table"><thead><tr><th scope="col">Method</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/method/contacts.exportContactToken">contacts.exportContactToken</a></td><td>Generates a <a href="/api/links#temporary-profile-links">temporary profile link</a> for the currently logged-in user.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Method</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/method/contacts.exportContactToken/">contacts.exportContactToken</a></td><td>Generates a <a href="/api/links/#temporary-profile-links">temporary profile link</a> for the currently logged-in user.</td></tr></tbody></table>
 
 ### Related pages
 

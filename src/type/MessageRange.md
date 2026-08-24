@@ -11,10 +11,10 @@ layout: layout.njk
 
 Indicates a range of chat messages
 
-```
-messageRange#ae30253 min_id:int max_id:int = MessageRange;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/messageRange/">messageRange</a>#ae30253 min_id:<a href="/type/int/">int</a> max_id:<a href="/type/int/">int</a> = <a href="/type/MessageRange/" class="current_page_link">MessageRange</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/messageRange">messageRange</a></td><td>Indicates a range of chat messages</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/messageRange/">messageRange</a></td><td>Indicates a range of chat messages</td></tr></tbody></table>

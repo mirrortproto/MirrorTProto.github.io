@@ -11,13 +11,13 @@ layout: layout.njk
 
 An [emoji category](/api/emoji-categories/), used to select all [Premium](/api/premium/)\-only stickers (i.e. those with a [Premium effect »](/api/stickers/#premium-animated-sticker-effects))/[Premium](/api/premium/)\-only [custom emojis](/api/custom-emoji/) (i.e. those where the [documentAttributeCustomEmoji](/constructor/documentAttributeCustomEmoji/).`free` flag is **not** set)
 
-```
-emojiGroupPremium#93bcf34 title:string icon_emoji_id:long = EmojiGroup;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/emojiGroupPremium/" class="current_page_link">emojiGroupPremium</a>#93bcf34 title:<a href="/type/string/">string</a> icon_emoji_id:<a href="/type/long/">long</a> = <a href="/type/EmojiGroup/">EmojiGroup</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>title</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Category name, i.e. "Animals", "Flags", "Faces" and so on...</td></tr><tr><td><strong>icon_emoji_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>A single custom emoji used as preview for the category.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>title</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td>Category name, i.e. "Animals", "Flags", "Faces" and so on...</td></tr><tr><td><strong>icon_emoji_id</strong></td><td style="text-align: center;"><a href="/type/long/">long</a></td><td>A single custom emoji used as preview for the category.</td></tr></tbody></table>
 
 ### Type
 

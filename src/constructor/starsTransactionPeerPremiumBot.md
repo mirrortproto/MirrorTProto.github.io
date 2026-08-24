@@ -11,9 +11,9 @@ layout: layout.njk
 
 Describes a [Telegram Star](/api/stars/) transaction made using [@PremiumBot](https://t.me/premiumbot) (i.e. using the [inputInvoiceStars](/constructor/inputInvoiceStars/) flow described [here »](/api/stars/#buying-or-gifting-stars)).
 
-```
-starsTransactionPeerPremiumBot#250dbaf8 = StarsTransactionPeer;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/starsTransactionPeerPremiumBot/" class="current_page_link">starsTransactionPeerPremiumBot</a>#250dbaf8 = <a href="/type/StarsTransactionPeer/">StarsTransactionPeer</a>;</code></pre>
 
 ### Parameters
 

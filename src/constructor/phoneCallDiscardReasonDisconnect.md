@@ -11,9 +11,9 @@ layout: layout.njk
 
 The phone call was disconnected, see [here »](/api/calls/) for more info.
 
-```
-phoneCallDiscardReasonDisconnect#e095c1a0 = PhoneCallDiscardReason;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/phoneCallDiscardReasonDisconnect/" class="current_page_link">phoneCallDiscardReasonDisconnect</a>#e095c1a0 = <a href="/type/PhoneCallDiscardReason/">PhoneCallDiscardReason</a>;</code></pre>
 
 ### Parameters
 

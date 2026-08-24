@@ -11,18 +11,18 @@ layout: layout.njk
 
 Messages found and affected by changes
 
-```
-messages.affectedFoundMessages#ef8d3e6c pts:int pts_count:int offset:int messages:Vector<int> = messages.AffectedFoundMessages;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/messages.affectedFoundMessages/">messages.affectedFoundMessages</a>#ef8d3e6c pts:<a href="/type/int/">int</a> pts_count:<a href="/type/int/">int</a> offset:<a href="/type/int/">int</a> messages:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/int/">int</a>&gt; = <a href="/type/messages.AffectedFoundMessages/" class="current_page_link">messages.AffectedFoundMessages</a>;
 
 ---functions---
 
-messages.deletePhoneCallHistory#f9cbe409 flags:# revoke:flags.0?true = messages.AffectedFoundMessages;
-```
+<a href="/method/messages.deletePhoneCallHistory/">messages.deletePhoneCallHistory</a>#f9cbe409 flags:<a href="/type/%23/">#</a> revoke:flags.0?true = <a href="/type/messages.AffectedFoundMessages/" class="current_page_link">messages.AffectedFoundMessages</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/messages.affectedFoundMessages">messages.affectedFoundMessages</a></td><td>Messages found and affected by changes</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/messages.affectedFoundMessages/">messages.affectedFoundMessages</a></td><td>Messages found and affected by changes</td></tr></tbody></table>
 
 ### Methods
 
-<table class="table"><thead><tr><th scope="col">Method</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/method/messages.deletePhoneCallHistory">messages.deletePhoneCallHistory</a></td><td>Delete the entire phone call history.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Method</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/method/messages.deletePhoneCallHistory/">messages.deletePhoneCallHistory</a></td><td>Delete the entire phone call history.</td></tr></tbody></table>

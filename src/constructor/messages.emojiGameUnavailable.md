@@ -11,9 +11,9 @@ layout: layout.njk
 
 Dice game information.
 
-```
-messages.emojiGameUnavailable#59e65335 = messages.EmojiGameInfo;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/messages.emojiGameUnavailable/" class="current_page_link">messages.emojiGameUnavailable</a>#59e65335 = <a href="/type/messages.EmojiGameInfo/">messages.EmojiGameInfo</a>;</code></pre>
 
 ### Parameters
 

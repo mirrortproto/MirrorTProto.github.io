@@ -10,10 +10,10 @@ layout: layout.njk
 
 [Instant view](https://instantview.telegram.org) page
 
-```
-page#98657f0d flags:# part:flags.0?true rtl:flags.1?true v2:flags.2?true url:string blocks:Vector<PageBlock> photos:Vector<Photo> documents:Vector<Document> views:flags.3?int = Page;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/page/">page</a>#98657f0d flags:<a href="/type/%23/">#</a> part:flags.0?true rtl:flags.1?true v2:flags.2?true url:<a href="/type/string/">string</a> blocks:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/PageBlock/">PageBlock</a>&gt; photos:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/Photo/">Photo</a>&gt; documents:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/Document/">Document</a>&gt; views:flags.3?<a href="/type/int/">int</a> = <a href="/type/Page/" class="current_page_link">Page</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/page">page</a></td><td><a href="https://instantview.telegram.org">Instant view</a> page</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/page/">page</a></td><td><a href="https://instantview.telegram.org">Instant view</a> page</td></tr></tbody></table>

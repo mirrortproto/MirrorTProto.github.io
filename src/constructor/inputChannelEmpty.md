@@ -11,9 +11,9 @@ layout: layout.njk
 
 Represents the absence of a channel
 
-```
-inputChannelEmpty#ee8c1e86 = InputChannel;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputChannelEmpty/" class="current_page_link">inputChannelEmpty</a>#ee8c1e86 = <a href="/type/InputChannel/">InputChannel</a>;</code></pre>
 
 ### Parameters
 

@@ -11,9 +11,9 @@ layout: layout.njk
 
 Sponsored messages were hidden for the user in all chats.
 
-```
-channels.sponsoredMessageReportResultAdsHidden#3e3bcf2f = channels.SponsoredMessageReportResult;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/channels.sponsoredMessageReportResultAdsHidden/" class="current_page_link">channels.sponsoredMessageReportResultAdsHidden</a>#3e3bcf2f = <a href="/type/channels.SponsoredMessageReportResult/">channels.SponsoredMessageReportResult</a>;</code></pre>
 
 ### Parameters
 

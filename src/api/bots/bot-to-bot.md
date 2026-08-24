@@ -3,7 +3,7 @@ title: "Bot-to-bot communication"
 original: "https://core.telegram.org/api/bots/bot-to-bot"
 section: api
 description: "Bot-to-bot communication allows bots to receive messages from other bots in the contexts described below. Outside of these contexts, bots normally do not receive messages from…"
-crumbs: [{"title":"API","url":"/api/"},{"title":"Bot-to-bot communication","url":"https://core.telegram.org/api/bots%2Fbot-to-bot"}]
+crumbs: [{"title":"API","url":"/api/"},{"title":"Bot-to-bot communication","url":"/api/bots/bot-to-bot/"}]
 layout: layout.njk
 ---
 
@@ -73,7 +73,7 @@ Only the sending bot needs to enable Bot-to-Bot Communication Mode.
 
 Obtain the `connection_id` from [botBusinessConnection](/constructor/botBusinessConnection/), then invoke [messages.sendMessage](/method/messages.sendMessage/) through [invokeWithBusinessConnection](/method/invokeWithBusinessConnection/). The available operations still depend on the [businessBotRights](/constructor/businessBotRights/) granted for that connection.
 
-Messages received through the connection are delivered as [updateBotNewBusinessMessage](/constructor/updateBotNewBusinessMessage/) updates, using the `qts` [update sequence »](https://core.telegram.org/api/updates#qts-secret-chats-amp-bots).
+Messages received through the connection are delivered as [updateBotNewBusinessMessage](/constructor/updateBotNewBusinessMessage/) updates, using the `qts` [update sequence »](/api/updates/#qts-secret-chats-bots).
 
 ### Loop prevention
 

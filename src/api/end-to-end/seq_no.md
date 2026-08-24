@@ -3,7 +3,7 @@ title: "Sequence numbers in Secret Chats"
 original: "https://core.telegram.org/api/end-to-end/seq_no"
 section: api
 description: "It is necessary to interpret all messages in their original order to protect against reordering, reflection, replay, omission and other manipulations (decryptedMessageActionResend…"
-crumbs: [{"title":"API","url":"/api/"},{"title":"Secret Chats","url":"/api/end-to-end/"},{"title":"Sequence numbers in Secret Chats","url":"https://core.telegram.org/api/end-to-end%2Fseq_no"}]
+crumbs: [{"title":"API","url":"/api/"},{"title":"Secret Chats","url":"/api/end-to-end/"},{"title":"Sequence numbers in Secret Chats","url":"/api/end-to-end/seq_no/"}]
 layout: layout.njk
 ---
 

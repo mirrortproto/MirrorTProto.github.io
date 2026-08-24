@@ -11,9 +11,9 @@ layout: layout.njk
 
 Whether the user can see our birthday.
 
-```
-privacyKeyBirthday#2000a518 = PrivacyKey;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/privacyKeyBirthday/" class="current_page_link">privacyKeyBirthday</a>#2000a518 = <a href="/type/PrivacyKey/">PrivacyKey</a>;</code></pre>
 
 ### Parameters
 

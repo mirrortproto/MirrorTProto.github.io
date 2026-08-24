@@ -3,7 +3,7 @@ title: "Bot buttons"
 original: "https://core.telegram.org/api/bots/buttons"
 section: api
 description: "Users can interact with your bot via buttons or even inline buttons, straight from inline messages in any chat."
-crumbs: [{"title":"API","url":"/api/"},{"title":"Bot buttons","url":"https://core.telegram.org/api/bots%2Fbuttons"}]
+crumbs: [{"title":"API","url":"/api/"},{"title":"Bot buttons","url":"/api/bots/buttons/"}]
 layout: layout.njk
 ---
 

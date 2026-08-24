@@ -3,7 +3,7 @@ title: "Bot commands"
 original: "https://core.telegram.org/api/bots/commands"
 section: api
 description: "Bots offer a set of commands that can be used by users in private, or in a chat."
-crumbs: [{"title":"API","url":"/api/"},{"title":"Bot commands","url":"https://core.telegram.org/api/bots%2Fcommands"}]
+crumbs: [{"title":"API","url":"/api/"},{"title":"Bot commands","url":"/api/bots/commands/"}]
 layout: layout.njk
 ---
 

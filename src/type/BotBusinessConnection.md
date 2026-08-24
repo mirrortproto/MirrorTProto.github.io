@@ -11,13 +11,13 @@ layout: layout.njk
 
 Contains info about a [bot business connection](/api/bots/connected-business-bots/).
 
-```
-botBusinessConnection#8f34b2f5 flags:# disabled:flags.1?true connection_id:string user_id:long dc_id:int date:int rights:flags.2?BusinessBotRights = BotBusinessConnection;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/botBusinessConnection/">botBusinessConnection</a>#8f34b2f5 flags:<a href="/type/%23/">#</a> disabled:flags.1?true connection_id:<a href="/type/string/">string</a> user_id:<a href="/type/long/">long</a> dc_id:<a href="/type/int/">int</a> date:<a href="/type/int/">int</a> rights:flags.2?<a href="/type/BusinessBotRights/">BusinessBotRights</a> = <a href="/type/BotBusinessConnection/" class="current_page_link">BotBusinessConnection</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/botBusinessConnection">botBusinessConnection</a></td><td>Contains info about a <a href="/api/bots/connected-business-bots">bot business connection</a>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/botBusinessConnection/">botBusinessConnection</a></td><td>Contains info about a <a href="/api/bots/connected-business-bots/">bot business connection</a>.</td></tr></tbody></table>
 
 ### Related pages
 

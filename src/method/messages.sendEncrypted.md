@@ -11,16 +11,16 @@ layout: layout.njk
 
 Sends a text message to a secret chat.
 
-```
-messages.sentEncryptedMessage#560f8935 date:int = messages.SentEncryptedMessage;
-messages.sentEncryptedFile#9493ff32 date:int file:EncryptedFile = messages.SentEncryptedMessage;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/messages.sentEncryptedMessage/">messages.sentEncryptedMessage</a>#560f8935 date:<a href="/type/int/">int</a> = <a href="/type/messages.SentEncryptedMessage/">messages.SentEncryptedMessage</a>;
+<a href="/constructor/messages.sentEncryptedFile/">messages.sentEncryptedFile</a>#9493ff32 date:<a href="/type/int/">int</a> file:<a href="/type/EncryptedFile/">EncryptedFile</a> = <a href="/type/messages.SentEncryptedMessage/">messages.SentEncryptedMessage</a>;
 ---functions---
-messages.sendEncrypted#44fa7a15 flags:# silent:flags.0?true peer:InputEncryptedChat random_id:long data:bytes = messages.SentEncryptedMessage;
-```
+<a href="/method/messages.sendEncrypted/" class="current_page_link">messages.sendEncrypted</a>#44fa7a15 flags:<a href="/type/%23/">#</a> silent:flags.0?true peer:<a href="/type/InputEncryptedChat/">InputEncryptedChat</a> random_id:<a href="/type/long/">long</a> data:<a href="/type/bytes/">bytes</a> = <a href="/type/messages.SentEncryptedMessage/">messages.SentEncryptedMessage</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>Flags, see <a href="/mtproto/TL-combinators#conditional-fields">TL conditional fields</a></td></tr><tr><td><strong>silent</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Send encrypted message without a notification</td></tr><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputEncryptedChat">InputEncryptedChat</a></td><td>Secret chat ID</td></tr><tr><td><strong>random_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Unique client message ID, necessary to avoid message resending. See <a href="/api/updates#updatemessageid-updates">here »</a> for more info on random ID deduplication and updateMessageID mapping.</td></tr><tr><td><strong>data</strong></td><td style="text-align: center;"><a href="/type/bytes">bytes</a></td><td>TL-serialization of <a href="/type/DecryptedMessage">DecryptedMessage</a> type, encrypted with a key that was created during chat initialization</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23/">#</a></td><td>Flags, see <a href="/mtproto/TL-combinators/#conditional-fields">TL conditional fields</a></td></tr><tr><td><strong>silent</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators/#conditional-fields">flags</a>.0?<a href="/constructor/true/">true</a></td><td>Send encrypted message without a notification</td></tr><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputEncryptedChat/">InputEncryptedChat</a></td><td>Secret chat ID</td></tr><tr><td><strong>random_id</strong></td><td style="text-align: center;"><a href="/type/long/">long</a></td><td>Unique client message ID, necessary to avoid message resending. See <a href="/api/updates/#updatemessageid-updates">here »</a> for more info on random ID deduplication and updateMessageID mapping.</td></tr><tr><td><strong>data</strong></td><td style="text-align: center;"><a href="/type/bytes/">bytes</a></td><td>TL-serialization of <a href="/type/DecryptedMessage/">DecryptedMessage</a> type, encrypted with a key that was created during chat initialization</td></tr></tbody></table>
 
 ### Result
 

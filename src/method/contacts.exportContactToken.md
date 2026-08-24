@@ -11,11 +11,11 @@ layout: layout.njk
 
 Generates a [temporary profile link](/api/links/#temporary-profile-links) for the currently logged-in user.
 
-```
-exportedContactToken#41bf109b url:string expires:int = ExportedContactToken;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/exportedContactToken/">exportedContactToken</a>#41bf109b url:<a href="/type/string/">string</a> expires:<a href="/type/int/">int</a> = <a href="/type/ExportedContactToken/">ExportedContactToken</a>;
 ---functions---
-contacts.exportContactToken#f8654027 = ExportedContactToken;
-```
+<a href="/method/contacts.exportContactToken/" class="current_page_link">contacts.exportContactToken</a>#f8654027 = <a href="/type/ExportedContactToken/">ExportedContactToken</a>;</code></pre>
 
 ### Parameters
 

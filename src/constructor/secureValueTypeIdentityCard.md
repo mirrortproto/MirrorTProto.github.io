@@ -11,9 +11,9 @@ layout: layout.njk
 
 Identity card
 
-```
-secureValueTypeIdentityCard#a0d0744b = SecureValueType;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/secureValueTypeIdentityCard/" class="current_page_link">secureValueTypeIdentityCard</a>#a0d0744b = <a href="/type/SecureValueType/">SecureValueType</a>;</code></pre>
 
 ### Parameters
 

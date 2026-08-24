@@ -11,9 +11,9 @@ layout: layout.njk
 
 Report for illegal drugs
 
-```
-inputReportReasonIllegalDrugs#a8eb2be = ReportReason;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputReportReasonIllegalDrugs/" class="current_page_link">inputReportReasonIllegalDrugs</a>#a8eb2be = <a href="/type/ReportReason/">ReportReason</a>;</code></pre>
 
 ### Parameters
 

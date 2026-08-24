@@ -11,15 +11,15 @@ layout: layout.njk
 
 Fetch new chats associated with an imported [chat folder deep link »](/api/links/#chat-folder-links). Must be invoked at most every `chatlist_update_period` seconds (as per the related [client configuration parameter »](/api/config/#chatlist-update-period)).
 
-```
-chatlists.chatlistUpdates#93bd878d missing_peers:Vector<Peer> chats:Vector<Chat> users:Vector<User> = chatlists.ChatlistUpdates;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/chatlists.chatlistUpdates/">chatlists.chatlistUpdates</a>#93bd878d missing_peers:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/Peer/">Peer</a>&gt; chats:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/Chat/">Chat</a>&gt; users:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/User/">User</a>&gt; = <a href="/type/chatlists.ChatlistUpdates/">chatlists.ChatlistUpdates</a>;
 ---functions---
-chatlists.getChatlistUpdates#89419521 chatlist:InputChatlist = chatlists.ChatlistUpdates;
-```
+<a href="/method/chatlists.getChatlistUpdates/" class="current_page_link">chatlists.getChatlistUpdates</a>#89419521 chatlist:<a href="/type/InputChatlist/">InputChatlist</a> = <a href="/type/chatlists.ChatlistUpdates/">chatlists.ChatlistUpdates</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>chatlist</strong></td><td style="text-align: center;"><a href="/type/InputChatlist">InputChatlist</a></td><td>The folder</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>chatlist</strong></td><td style="text-align: center;"><a href="/type/InputChatlist/">InputChatlist</a></td><td>The folder</td></tr></tbody></table>
 
 ### Result
 

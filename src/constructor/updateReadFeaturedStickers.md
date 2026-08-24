@@ -11,9 +11,9 @@ layout: layout.njk
 
 Some featured stickers were marked as read
 
-```
-updateReadFeaturedStickers#571d2742 = Update;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/updateReadFeaturedStickers/" class="current_page_link">updateReadFeaturedStickers</a>#571d2742 = <a href="/type/Update/">Update</a>;</code></pre>
 
 ### Parameters
 

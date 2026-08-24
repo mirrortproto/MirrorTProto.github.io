@@ -9,15 +9,15 @@ layout: layout.njk
 
 # messages.botPreparedInlineMessage
 
-Represents a [prepared inline message saved by a bot, to be sent to the user via a web app »](https://core.telegram.org/api/bots/inline#21-using-a-prepared-inline-message)
+Represents a [prepared inline message saved by a bot, to be sent to the user via a web app »](/api/bots/inline/#2-1-using-a-prepared-inline-message)
 
-```
-messages.botPreparedInlineMessage#8ecf0511 id:string expire_date:int = messages.BotPreparedInlineMessage;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/messages.botPreparedInlineMessage/" class="current_page_link">messages.botPreparedInlineMessage</a>#8ecf0511 id:<a href="/type/string/">string</a> expire_date:<a href="/type/int/">int</a> = <a href="/type/messages.BotPreparedInlineMessage/">messages.BotPreparedInlineMessage</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>The ID of the saved message, to be passed to the <code>id</code> field of the <a href="/api/web-events#web-app-send-prepared-message">web_app_send_prepared_message event »</a></td></tr><tr><td><strong>expire_date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Expiration date of the message</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td>The ID of the saved message, to be passed to the <code>id</code> field of the <a href="/api/web-events/#web-app-send-prepared-message">web_app_send_prepared_message event »</a></td></tr><tr><td><strong>expire_date</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>Expiration date of the message</td></tr></tbody></table>
 
 ### Type
 

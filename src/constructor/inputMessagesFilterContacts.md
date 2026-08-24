@@ -11,9 +11,9 @@ layout: layout.njk
 
 Return only messages containing contacts
 
-```
-inputMessagesFilterContacts#e062db83 = MessagesFilter;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputMessagesFilterContacts/" class="current_page_link">inputMessagesFilterContacts</a>#e062db83 = <a href="/type/MessagesFilter/">MessagesFilter</a>;</code></pre>
 
 ### Parameters
 

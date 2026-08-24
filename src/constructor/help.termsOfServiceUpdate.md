@@ -11,13 +11,13 @@ layout: layout.njk
 
 Info about an update of telegram's terms of service. If the terms of service are declined, then the [account.deleteAccount](/method/account.deleteAccount/) method should be called with the reason "Decline ToS update"
 
-```
-help.termsOfServiceUpdate#28ecf961 expires:int terms_of_service:help.TermsOfService = help.TermsOfServiceUpdate;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/help.termsOfServiceUpdate/" class="current_page_link">help.termsOfServiceUpdate</a>#28ecf961 expires:<a href="/type/int/">int</a> terms_of_service:<a href="/type/help.TermsOfService/">help.TermsOfService</a> = <a href="/type/help.TermsOfServiceUpdate/">help.TermsOfServiceUpdate</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>expires</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>New TOS updates will have to be queried using <a href="/method/help.getTermsOfServiceUpdate">help.getTermsOfServiceUpdate</a> in <code>expires</code> seconds</td></tr><tr><td><strong>terms_of_service</strong></td><td style="text-align: center;"><a href="/type/help.TermsOfService">help.TermsOfService</a></td><td>New terms of service</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>expires</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>New TOS updates will have to be queried using <a href="/method/help.getTermsOfServiceUpdate/">help.getTermsOfServiceUpdate</a> in <code>expires</code> seconds</td></tr><tr><td><strong>terms_of_service</strong></td><td style="text-align: center;"><a href="/type/help.TermsOfService/">help.TermsOfService</a></td><td>New terms of service</td></tr></tbody></table>
 
 ### Type
 

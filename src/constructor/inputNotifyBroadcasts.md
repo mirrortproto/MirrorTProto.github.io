@@ -11,9 +11,9 @@ layout: layout.njk
 
 All [channels](/api/channel/)
 
-```
-inputNotifyBroadcasts#b1db7c7e = InputNotifyPeer;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputNotifyBroadcasts/" class="current_page_link">inputNotifyBroadcasts</a>#b1db7c7e = <a href="/type/InputNotifyPeer/">InputNotifyPeer</a>;</code></pre>
 
 ### Parameters
 

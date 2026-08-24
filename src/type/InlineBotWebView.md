@@ -11,13 +11,13 @@ layout: layout.njk
 
 Specifies an [inline mode mini app](/api/bots/webapps/#inline-mode-mini-apps) button, shown on top of the inline query results list.
 
-```
-inlineBotWebView#b57295d5 text:string url:string = InlineBotWebView;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inlineBotWebView/">inlineBotWebView</a>#b57295d5 text:<a href="/type/string/">string</a> url:<a href="/type/string/">string</a> = <a href="/type/InlineBotWebView/" class="current_page_link">InlineBotWebView</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/inlineBotWebView">inlineBotWebView</a></td><td>Specifies an <a href="/api/bots/webapps#inline-mode-mini-apps">inline mode mini app</a> button, shown on top of the inline query results list.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/inlineBotWebView/">inlineBotWebView</a></td><td>Specifies an <a href="/api/bots/webapps/#inline-mode-mini-apps">inline mode mini app</a> button, shown on top of the inline query results list.</td></tr></tbody></table>
 
 ### Related pages
 

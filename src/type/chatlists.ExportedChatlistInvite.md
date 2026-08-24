@@ -11,21 +11,21 @@ layout: layout.njk
 
 Exported [chat folder deep link »](/api/links/#chat-folder-links).
 
-```
-chatlists.exportedChatlistInvite#10e6e3a6 filter:DialogFilter invite:ExportedChatlistInvite = chatlists.ExportedChatlistInvite;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/chatlists.exportedChatlistInvite/">chatlists.exportedChatlistInvite</a>#10e6e3a6 filter:<a href="/type/DialogFilter/">DialogFilter</a> invite:<a href="/type/ExportedChatlistInvite/">ExportedChatlistInvite</a> = <a href="/type/chatlists.ExportedChatlistInvite/" class="current_page_link">chatlists.ExportedChatlistInvite</a>;
 
 ---functions---
 
-chatlists.exportChatlistInvite#8472478e chatlist:InputChatlist title:string peers:Vector<InputPeer> = chatlists.ExportedChatlistInvite;
-```
+<a href="/method/chatlists.exportChatlistInvite/">chatlists.exportChatlistInvite</a>#8472478e chatlist:<a href="/type/InputChatlist/">InputChatlist</a> title:<a href="/type/string/">string</a> peers:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/InputPeer/">InputPeer</a>&gt; = <a href="/type/chatlists.ExportedChatlistInvite/" class="current_page_link">chatlists.ExportedChatlistInvite</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/chatlists.exportedChatlistInvite">chatlists.exportedChatlistInvite</a></td><td>Info about an exported <a href="/api/links#chat-folder-links">chat folder deep link »</a>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/chatlists.exportedChatlistInvite/">chatlists.exportedChatlistInvite</a></td><td>Info about an exported <a href="/api/links/#chat-folder-links">chat folder deep link »</a>.</td></tr></tbody></table>
 
 ### Methods
 
-<table class="table"><thead><tr><th scope="col">Method</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/method/chatlists.exportChatlistInvite">chatlists.exportChatlistInvite</a></td><td>Export a <a href="/api/folders">folder »</a>, creating a <a href="/api/links#chat-folder-links">chat folder deep link »</a>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Method</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/method/chatlists.exportChatlistInvite/">chatlists.exportChatlistInvite</a></td><td>Export a <a href="/api/folders/">folder »</a>, creating a <a href="/api/links/#chat-folder-links">chat folder deep link »</a>.</td></tr></tbody></table>
 
 ### Related pages
 

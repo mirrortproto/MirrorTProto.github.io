@@ -11,9 +11,9 @@ layout: layout.njk
 
 Utility bill
 
-```
-secureValueTypeUtilityBill#fc36954e = SecureValueType;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/secureValueTypeUtilityBill/" class="current_page_link">secureValueTypeUtilityBill</a>#fc36954e = <a href="/type/SecureValueType/">SecureValueType</a>;</code></pre>
 
 ### Parameters
 

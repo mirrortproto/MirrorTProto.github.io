@@ -11,15 +11,15 @@ layout: layout.njk
 
 Returns attachment menu entry for a [bot mini app that can be launched from the attachment menu »](/api/bots/attach/)
 
-```
-attachMenuBotsBot#93bf667f bot:AttachMenuBot users:Vector<User> = AttachMenuBotsBot;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/attachMenuBotsBot/">attachMenuBotsBot</a>#93bf667f bot:<a href="/type/AttachMenuBot/">AttachMenuBot</a> users:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/User/">User</a>&gt; = <a href="/type/AttachMenuBotsBot/">AttachMenuBotsBot</a>;
 ---functions---
-messages.getAttachMenuBot#77216192 bot:InputUser = AttachMenuBotsBot;
-```
+<a href="/method/messages.getAttachMenuBot/" class="current_page_link">messages.getAttachMenuBot</a>#77216192 bot:<a href="/type/InputUser/">InputUser</a> = <a href="/type/AttachMenuBotsBot/">AttachMenuBotsBot</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>bot</strong></td><td style="text-align: center;"><a href="/type/InputUser">InputUser</a></td><td>Bot ID</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>bot</strong></td><td style="text-align: center;"><a href="/type/InputUser/">InputUser</a></td><td>Bot ID</td></tr></tbody></table>
 
 ### Result
 

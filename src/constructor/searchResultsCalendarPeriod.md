@@ -13,13 +13,13 @@ Information about found messages sent on a specific day, used to split the `mess
 
 Multiple searchResultsCalendarPeriod constructors are returned in [messages.searchResultsCalendar](/constructor/messages.searchResultsCalendar/), each containing information about the first, last and total number of messages matching the filter that were sent on a specific day.
 
-```
-searchResultsCalendarPeriod#c9b0539f date:int min_msg_id:int max_msg_id:int count:int = SearchResultsCalendarPeriod;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/searchResultsCalendarPeriod/" class="current_page_link">searchResultsCalendarPeriod</a>#c9b0539f date:<a href="/type/int/">int</a> min_msg_id:<a href="/type/int/">int</a> max_msg_id:<a href="/type/int/">int</a> count:<a href="/type/int/">int</a> = <a href="/type/SearchResultsCalendarPeriod/">SearchResultsCalendarPeriod</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>The day this object is referring to.</td></tr><tr><td><strong>min_msg_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>First message ID that was sent on this day.</td></tr><tr><td><strong>max_msg_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Last message ID that was sent on this day.</td></tr><tr><td><strong>count</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>All messages that were sent on this day.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>date</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>The day this object is referring to.</td></tr><tr><td><strong>min_msg_id</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>First message ID that was sent on this day.</td></tr><tr><td><strong>max_msg_id</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>Last message ID that was sent on this day.</td></tr><tr><td><strong>count</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>All messages that were sent on this day.</td></tr></tbody></table>
 
 ### Type
 

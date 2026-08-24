@@ -11,9 +11,9 @@ layout: layout.njk
 
 No new recent sticker was found
 
-```
-messages.recentStickersNotModified#b17f890 = messages.RecentStickers;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/messages.recentStickersNotModified/" class="current_page_link">messages.recentStickersNotModified</a>#b17f890 = <a href="/type/messages.RecentStickers/">messages.RecentStickers</a>;</code></pre>
 
 ### Parameters
 

@@ -11,16 +11,16 @@ layout: layout.njk
 
 Permanently disconnect a specific chat from all [business bots »](/api/bots/connected-business-bots/) (equivalent to specifying it in `recipients.exclude_users` during initial configuration with [account.updateConnectedBot »](/method/account.updateConnectedBot/)); to reconnect of a chat disconnected using this method the user must reconnect the entire bot by invoking [account.updateConnectedBot »](/method/account.updateConnectedBot/).
 
-```
-boolFalse#bc799737 = Bool;
-boolTrue#997275b5 = Bool;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/boolFalse/">boolFalse</a>#bc799737 = <a href="/type/Bool/">Bool</a>;
+<a href="/constructor/boolTrue/">boolTrue</a>#997275b5 = <a href="/type/Bool/">Bool</a>;
 ---functions---
-account.disablePeerConnectedBot#5e437ed9 peer:InputPeer = Bool;
-```
+<a href="/method/account.disablePeerConnectedBot/" class="current_page_link">account.disablePeerConnectedBot</a>#5e437ed9 peer:<a href="/type/InputPeer/">InputPeer</a> = <a href="/type/Bool/">Bool</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>The chat to disconnect</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer/">InputPeer</a></td><td>The chat to disconnect</td></tr></tbody></table>
 
 ### Result
 
@@ -30,7 +30,7 @@ account.disablePeerConnectedBot#5e437ed9 peer:InputPeer = Bool;
 
 ### Possible errors
 
-<table class="table"><thead><tr><th scope="col">Code</th><th scope="col">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td>400</td><td>BOT_ALREADY_DISABLED</td><td>The connected business bot was already disabled for the specified peer.</td></tr><tr><td>400</td><td>BOT_NOT_CONNECTED_YET</td><td>No <a href="/api/business#connected-bots">business bot</a> is connected to the currently logged in user.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>The provided peer id is invalid.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Code</th><th scope="col">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td>400</td><td>BOT_ALREADY_DISABLED</td><td>The connected business bot was already disabled for the specified peer.</td></tr><tr><td>400</td><td>BOT_NOT_CONNECTED_YET</td><td>No <a href="/api/business/#connected-bots">business bot</a> is connected to the currently logged in user.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>The provided peer id is invalid.</td></tr></tbody></table>
 
 ### Related pages
 

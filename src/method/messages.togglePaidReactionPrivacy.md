@@ -11,16 +11,16 @@ layout: layout.njk
 
 Changes the privacy of already sent [paid reactions](/api/reactions/#paid-reactions) on a specific message.
 
-```
-boolFalse#bc799737 = Bool;
-boolTrue#997275b5 = Bool;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/boolFalse/">boolFalse</a>#bc799737 = <a href="/type/Bool/">Bool</a>;
+<a href="/constructor/boolTrue/">boolTrue</a>#997275b5 = <a href="/type/Bool/">Bool</a>;
 ---functions---
-messages.togglePaidReactionPrivacy#435885b5 peer:InputPeer msg_id:int private:PaidReactionPrivacy = Bool;
-```
+<a href="/method/messages.togglePaidReactionPrivacy/" class="current_page_link">messages.togglePaidReactionPrivacy</a>#435885b5 peer:<a href="/type/InputPeer/">InputPeer</a> msg_id:<a href="/type/int/">int</a> private:<a href="/type/PaidReactionPrivacy/">PaidReactionPrivacy</a> = <a href="/type/Bool/">Bool</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>The channel</td></tr><tr><td><strong>msg_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>The ID of the message to which we sent the paid reactions</td></tr><tr><td><strong>private</strong></td><td style="text-align: center;"><a href="/type/PaidReactionPrivacy">PaidReactionPrivacy</a></td><td>If true, makes the current anonymous in the top sender leaderboard for this message; otherwise, does the opposite.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer/">InputPeer</a></td><td>The channel</td></tr><tr><td><strong>msg_id</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>The ID of the message to which we sent the paid reactions</td></tr><tr><td><strong>private</strong></td><td style="text-align: center;"><a href="/type/PaidReactionPrivacy/">PaidReactionPrivacy</a></td><td>If true, makes the current anonymous in the top sender leaderboard for this message; otherwise, does the opposite.</td></tr></tbody></table>
 
 ### Result
 

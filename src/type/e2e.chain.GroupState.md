@@ -17,7 +17,7 @@ e2e.chain.groupState#1ddc7584 participants:Vector<e2e.chain.GroupParticipant> ex
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/e2e.chain.groupState">e2e.chain.groupState</a></td><td>The participant list and external permission mask for an <a href="/api/end-to-end/group-calls#participants-and-permissions">E2E conference call blockchain state »</a>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/e2e.chain.groupState/">e2e.chain.groupState</a></td><td>The participant list and external permission mask for an <a href="/api/end-to-end/group-calls/#participants-and-permissions">E2E conference call blockchain state »</a>.</td></tr></tbody></table>
 
 ### Related pages
 

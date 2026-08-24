@@ -11,9 +11,9 @@ layout: layout.njk
 
 Indicates that a [crafting »](/api/gifts/#crafting-collectible-gifts) attempt did not produce a new collectible gift.
 
-```
-updateStarGiftCraftFail#ac072444 = Update;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/updateStarGiftCraftFail/" class="current_page_link">updateStarGiftCraftFail</a>#ac072444 = <a href="/type/Update/">Update</a>;</code></pre>
 
 ### Parameters
 

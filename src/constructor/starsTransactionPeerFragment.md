@@ -11,9 +11,9 @@ layout: layout.njk
 
 Describes a [Telegram Star](/api/stars/) transaction with [Fragment](https://fragment.com), used when purchasing Telegram Stars through [Fragment](https://fragment.com).
 
-```
-starsTransactionPeerFragment#e92fd902 = StarsTransactionPeer;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/starsTransactionPeerFragment/" class="current_page_link">starsTransactionPeerFragment</a>#e92fd902 = <a href="/type/StarsTransactionPeer/">StarsTransactionPeer</a>;</code></pre>
 
 ### Parameters
 

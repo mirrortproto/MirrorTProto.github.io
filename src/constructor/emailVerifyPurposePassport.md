@@ -11,9 +11,9 @@ layout: layout.njk
 
 Verify an email for use in [telegram passport](/api/passport/)
 
-```
-emailVerifyPurposePassport#bbf51685 = EmailVerifyPurpose;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/emailVerifyPurposePassport/" class="current_page_link">emailVerifyPurposePassport</a>#bbf51685 = <a href="/type/EmailVerifyPurpose/">EmailVerifyPurpose</a>;</code></pre>
 
 ### Parameters
 

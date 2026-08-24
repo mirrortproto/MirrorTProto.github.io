@@ -11,13 +11,13 @@ layout: layout.njk
 
 Login via token (QR code) succeeded!
 
-```
-auth.loginTokenSuccess#390d5c5e authorization:auth.Authorization = auth.LoginToken;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/auth.loginTokenSuccess/" class="current_page_link">auth.loginTokenSuccess</a>#390d5c5e authorization:<a href="/type/auth.Authorization/">auth.Authorization</a> = <a href="/type/auth.LoginToken/">auth.LoginToken</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>authorization</strong></td><td style="text-align: center;"><a href="/type/auth.Authorization">auth.Authorization</a></td><td>Authorization info</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>authorization</strong></td><td style="text-align: center;"><a href="/type/auth.Authorization/">auth.Authorization</a></td><td>Authorization info</td></tr></tbody></table>
 
 ### Type
 

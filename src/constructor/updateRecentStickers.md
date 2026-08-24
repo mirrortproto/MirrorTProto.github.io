@@ -11,9 +11,9 @@ layout: layout.njk
 
 The recent sticker list was updated
 
-```
-updateRecentStickers#9a422c20 = Update;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/updateRecentStickers/" class="current_page_link">updateRecentStickers</a>#9a422c20 = <a href="/type/Update/">Update</a>;</code></pre>
 
 ### Parameters
 

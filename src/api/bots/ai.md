@@ -3,7 +3,7 @@ title: "AI features for bots"
 original: "https://core.telegram.org/api/bots/ai"
 section: api
 description: "Telegram bots offer a number of features for AI chatbots."
-crumbs: [{"title":"API","url":"/api/"},{"title":"AI features for bots","url":"https://core.telegram.org/api/bots%2Fai"}]
+crumbs: [{"title":"API","url":"/api/"},{"title":"AI features for bots","url":"/api/bots/ai/"}]
 layout: layout.njk
 ---
 

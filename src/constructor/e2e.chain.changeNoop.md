@@ -17,7 +17,7 @@ e2e.chain.changeNoop#deb4a41b nonce:int256 = e2e.chain.Change;
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>nonce</strong></td><td style="text-align: center;"><a href="/type/int256">int256</a></td><td>Random value included in the no-op change.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>nonce</strong></td><td style="text-align: center;"><a href="/type/int256/">int256</a></td><td>Random value included in the no-op change.</td></tr></tbody></table>
 
 ### Type
 

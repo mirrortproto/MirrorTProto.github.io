@@ -11,9 +11,9 @@ layout: layout.njk
 
 Peer type: private chat
 
-```
-inlineQueryPeerTypePM#833c0fac = InlineQueryPeerType;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inlineQueryPeerTypePM/" class="current_page_link">inlineQueryPeerTypePM</a>#833c0fac = <a href="/type/InlineQueryPeerType/">InlineQueryPeerType</a>;</code></pre>
 
 ### Parameters
 

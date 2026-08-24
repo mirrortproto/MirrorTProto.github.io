@@ -11,9 +11,9 @@ layout: layout.njk
 
 Empty constructor
 
-```
-secureFileEmpty#64199744 = SecureFile;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/secureFileEmpty/" class="current_page_link">secureFileEmpty</a>#64199744 = <a href="/type/SecureFile/">SecureFile</a>;</code></pre>
 
 ### Parameters
 

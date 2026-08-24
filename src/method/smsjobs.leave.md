@@ -11,12 +11,12 @@ layout: layout.njk
 
 Disable SMS jobs (official clients only).
 
-```
-boolFalse#bc799737 = Bool;
-boolTrue#997275b5 = Bool;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/boolFalse/">boolFalse</a>#bc799737 = <a href="/type/Bool/">Bool</a>;
+<a href="/constructor/boolTrue/">boolTrue</a>#997275b5 = <a href="/type/Bool/">Bool</a>;
 ---functions---
-smsjobs.leave#9898ad73 = Bool;
-```
+<a href="/method/smsjobs.leave/" class="current_page_link">smsjobs.leave</a>#9898ad73 = <a href="/type/Bool/">Bool</a>;</code></pre>
 
 ### Parameters
 

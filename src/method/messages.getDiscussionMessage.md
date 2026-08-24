@@ -11,15 +11,15 @@ layout: layout.njk
 
 Get [discussion message](/api/threads/) from the [associated discussion group](/api/discussion/) of a channel to show it on top of the comment section, without actually joining the group
 
-```
-messages.discussionMessage#a6341782 flags:# messages:Vector<Message> max_id:flags.0?int read_inbox_max_id:flags.1?int read_outbox_max_id:flags.2?int unread_count:int chats:Vector<Chat> users:Vector<User> = messages.DiscussionMessage;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/messages.discussionMessage/">messages.discussionMessage</a>#a6341782 flags:<a href="/type/%23/">#</a> messages:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/Message/">Message</a>&gt; max_id:flags.0?<a href="/type/int/">int</a> read_inbox_max_id:flags.1?<a href="/type/int/">int</a> read_outbox_max_id:flags.2?<a href="/type/int/">int</a> unread_count:<a href="/type/int/">int</a> chats:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/Chat/">Chat</a>&gt; users:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/User/">User</a>&gt; = <a href="/type/messages.DiscussionMessage/">messages.DiscussionMessage</a>;
 ---functions---
-messages.getDiscussionMessage#446972fd peer:InputPeer msg_id:int = messages.DiscussionMessage;
-```
+<a href="/method/messages.getDiscussionMessage/" class="current_page_link">messages.getDiscussionMessage</a>#446972fd peer:<a href="/type/InputPeer/">InputPeer</a> msg_id:<a href="/type/int/">int</a> = <a href="/type/messages.DiscussionMessage/">messages.DiscussionMessage</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td><a href="/api/channel">Channel ID</a></td></tr><tr><td><strong>msg_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Message ID</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer/">InputPeer</a></td><td><a href="/api/channel/">Channel ID</a></td></tr><tr><td><strong>msg_id</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>Message ID</td></tr></tbody></table>
 
 ### Result
 

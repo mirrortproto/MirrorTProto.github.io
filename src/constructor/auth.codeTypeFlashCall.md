@@ -11,9 +11,9 @@ layout: layout.njk
 
 The next time, the authentication code will be delivered via an immediately canceled incoming call.
 
-```
-auth.codeTypeFlashCall#226ccefb = auth.CodeType;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/auth.codeTypeFlashCall/" class="current_page_link">auth.codeTypeFlashCall</a>#226ccefb = <a href="/type/auth.CodeType/">auth.CodeType</a>;</code></pre>
 
 ### Parameters
 

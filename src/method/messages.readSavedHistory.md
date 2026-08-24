@@ -11,16 +11,16 @@ layout: layout.njk
 
 Mark messages as read in a [monoforum topic »](/api/monoforum/).
 
-```
-boolFalse#bc799737 = Bool;
-boolTrue#997275b5 = Bool;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/boolFalse/">boolFalse</a>#bc799737 = <a href="/type/Bool/">Bool</a>;
+<a href="/constructor/boolTrue/">boolTrue</a>#997275b5 = <a href="/type/Bool/">Bool</a>;
 ---functions---
-messages.readSavedHistory#ba4a3b5b parent_peer:InputPeer peer:InputPeer max_id:int = Bool;
-```
+<a href="/method/messages.readSavedHistory/" class="current_page_link">messages.readSavedHistory</a>#ba4a3b5b parent_peer:<a href="/type/InputPeer/">InputPeer</a> peer:<a href="/type/InputPeer/">InputPeer</a> max_id:<a href="/type/int/">int</a> = <a href="/type/Bool/">Bool</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>parent_peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>ID of the monoforum group.</td></tr><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>ID of the topic.</td></tr><tr><td><strong>max_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>If a positive value is passed, only messages with identifiers less than or equal to the given one will be read.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>parent_peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer/">InputPeer</a></td><td>ID of the monoforum group.</td></tr><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer/">InputPeer</a></td><td>ID of the topic.</td></tr><tr><td><strong>max_id</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>If a positive value is passed, only messages with identifiers less than or equal to the given one will be read.</td></tr></tbody></table>
 
 ### Result
 

@@ -11,13 +11,13 @@ layout: layout.njk
 
 Selects a [quick reply shortcut](/api/business/#quick-reply-shortcuts) by its numeric ID.
 
-```
-inputQuickReplyShortcutId#1190cf1 shortcut_id:int = InputQuickReplyShortcut;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputQuickReplyShortcutId/" class="current_page_link">inputQuickReplyShortcutId</a>#1190cf1 shortcut_id:<a href="/type/int/">int</a> = <a href="/type/InputQuickReplyShortcut/">InputQuickReplyShortcut</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>shortcut_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Shortcut ID.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>shortcut_id</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>Shortcut ID.</td></tr></tbody></table>
 
 ### Type
 

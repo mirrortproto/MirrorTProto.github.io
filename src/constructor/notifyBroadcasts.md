@@ -11,9 +11,9 @@ layout: layout.njk
 
 Channel notification settings
 
-```
-notifyBroadcasts#d612e8ef = NotifyPeer;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/notifyBroadcasts/" class="current_page_link">notifyBroadcasts</a>#d612e8ef = <a href="/type/NotifyPeer/">NotifyPeer</a>;</code></pre>
 
 ### Parameters
 

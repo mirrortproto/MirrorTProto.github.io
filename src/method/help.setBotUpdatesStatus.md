@@ -11,16 +11,16 @@ layout: layout.njk
 
 Informs the server about the number of pending bot updates if they haven't been processed for a long time; for bots only
 
-```
-boolFalse#bc799737 = Bool;
-boolTrue#997275b5 = Bool;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/boolFalse/">boolFalse</a>#bc799737 = <a href="/type/Bool/">Bool</a>;
+<a href="/constructor/boolTrue/">boolTrue</a>#997275b5 = <a href="/type/Bool/">Bool</a>;
 ---functions---
-help.setBotUpdatesStatus#ec22cfcd pending_updates_count:int message:string = Bool;
-```
+<a href="/method/help.setBotUpdatesStatus/" class="current_page_link">help.setBotUpdatesStatus</a>#ec22cfcd pending_updates_count:<a href="/type/int/">int</a> message:<a href="/type/string/">string</a> = <a href="/type/Bool/">Bool</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>pending_updates_count</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Number of pending updates</td></tr><tr><td><strong>message</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Error message, if present</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>pending_updates_count</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>Number of pending updates</td></tr><tr><td><strong>message</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td>Error message, if present</td></tr></tbody></table>
 
 ### Result
 

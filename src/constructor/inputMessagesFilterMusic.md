@@ -11,9 +11,9 @@ layout: layout.njk
 
 Return only messages containing audio files
 
-```
-inputMessagesFilterMusic#3751b49e = MessagesFilter;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputMessagesFilterMusic/" class="current_page_link">inputMessagesFilterMusic</a>#3751b49e = <a href="/type/MessagesFilter/">MessagesFilter</a>;</code></pre>
 
 ### Parameters
 

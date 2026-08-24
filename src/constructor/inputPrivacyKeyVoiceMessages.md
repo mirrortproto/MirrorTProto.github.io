@@ -11,9 +11,9 @@ layout: layout.njk
 
 Whether people can send you voice messages or round videos ([Premium](/api/premium/) users only).
 
-```
-inputPrivacyKeyVoiceMessages#aee69d68 = InputPrivacyKey;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputPrivacyKeyVoiceMessages/" class="current_page_link">inputPrivacyKeyVoiceMessages</a>#aee69d68 = <a href="/type/InputPrivacyKey/">InputPrivacyKey</a>;</code></pre>
 
 ### Parameters
 

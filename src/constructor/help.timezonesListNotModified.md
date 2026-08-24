@@ -11,9 +11,9 @@ layout: layout.njk
 
 The timezone list has not changed.
 
-```
-help.timezonesListNotModified#970708cc = help.TimezonesList;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/help.timezonesListNotModified/" class="current_page_link">help.timezonesListNotModified</a>#970708cc = <a href="/type/help.TimezonesList/">help.TimezonesList</a>;</code></pre>
 
 ### Parameters
 

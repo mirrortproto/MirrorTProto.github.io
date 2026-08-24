@@ -11,16 +11,16 @@ layout: layout.njk
 
 Obtain a list of similarly themed bots, selected based on similarities in their subscriber bases, see [here »](/api/recommend/) for more info.
 
-```
-users.users#62d706b8 users:Vector<User> = users.Users;
-users.usersSlice#315a4974 count:int users:Vector<User> = users.Users;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/users.users/">users.users</a>#62d706b8 users:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/User/">User</a>&gt; = <a href="/type/users.Users/">users.Users</a>;
+<a href="/constructor/users.usersSlice/">users.usersSlice</a>#315a4974 count:<a href="/type/int/">int</a> users:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/User/">User</a>&gt; = <a href="/type/users.Users/">users.Users</a>;
 ---functions---
-bots.getBotRecommendations#a1b70815 bot:InputUser = users.Users;
-```
+<a href="/method/bots.getBotRecommendations/" class="current_page_link">bots.getBotRecommendations</a>#a1b70815 bot:<a href="/type/InputUser/">InputUser</a> = <a href="/type/users.Users/">users.Users</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>bot</strong></td><td style="text-align: center;"><a href="/type/InputUser">InputUser</a></td><td>The method will return bots related to the passed bot.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>bot</strong></td><td style="text-align: center;"><a href="/type/InputUser/">InputUser</a></td><td>The method will return bots related to the passed bot.</td></tr></tbody></table>
 
 ### Result
 

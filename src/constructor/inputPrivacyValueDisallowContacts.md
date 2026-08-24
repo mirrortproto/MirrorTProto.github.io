@@ -11,9 +11,9 @@ layout: layout.njk
 
 Disallow only contacts
 
-```
-inputPrivacyValueDisallowContacts#ba52007 = InputPrivacyRule;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputPrivacyValueDisallowContacts/" class="current_page_link">inputPrivacyValueDisallowContacts</a>#ba52007 = <a href="/type/InputPrivacyRule/">InputPrivacyRule</a>;</code></pre>
 
 ### Parameters
 

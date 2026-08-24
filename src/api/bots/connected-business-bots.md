@@ -3,7 +3,7 @@ title: "Connected business bots"
 original: "https://core.telegram.org/api/bots/connected-business-bots"
 section: api
 description: "Users can connect Telegram bots that will process and answer messages on their behalf. This allows them to seamlessly integrate any existing tools and workflows, or add AI…"
-crumbs: [{"title":"API","url":"/api/"},{"title":"Connected business bots","url":"https://core.telegram.org/api/bots%2Fconnected-business-bots"}]
+crumbs: [{"title":"API","url":"/api/"},{"title":"Connected business bots","url":"/api/bots/connected-business-bots/"}]
 layout: layout.njk
 ---
 

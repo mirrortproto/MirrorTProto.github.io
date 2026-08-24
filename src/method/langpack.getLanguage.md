@@ -11,15 +11,15 @@ layout: layout.njk
 
 Get information about a language in a localization pack
 
-```
-langPackLanguage#eeca5ce3 flags:# official:flags.0?true rtl:flags.2?true beta:flags.3?true name:string native_name:string lang_code:string base_lang_code:flags.1?string plural_code:string strings_count:int translated_count:int translations_url:string = LangPackLanguage;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/langPackLanguage/">langPackLanguage</a>#eeca5ce3 flags:<a href="/type/%23/">#</a> official:flags.0?true rtl:flags.2?true beta:flags.3?true name:<a href="/type/string/">string</a> native_name:<a href="/type/string/">string</a> lang_code:<a href="/type/string/">string</a> base_lang_code:flags.1?<a href="/type/string/">string</a> plural_code:<a href="/type/string/">string</a> strings_count:<a href="/type/int/">int</a> translated_count:<a href="/type/int/">int</a> translations_url:<a href="/type/string/">string</a> = <a href="/type/LangPackLanguage/">LangPackLanguage</a>;
 ---functions---
-langpack.getLanguage#6a596502 lang_pack:string lang_code:string = LangPackLanguage;
-```
+<a href="/method/langpack.getLanguage/" class="current_page_link">langpack.getLanguage</a>#6a596502 lang_pack:<a href="/type/string/">string</a> lang_code:<a href="/type/string/">string</a> = <a href="/type/LangPackLanguage/">LangPackLanguage</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>lang_pack</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Platform identifier (i.e. <code>android</code>, <code>tdesktop</code>, etc).</td></tr><tr><td><strong>lang_code</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Either an ISO 639-1 language code or a language pack name obtained from a <a href="/api/links#language-pack-links">language pack link</a>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>lang_pack</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td>Platform identifier (i.e. <code>android</code>, <code>tdesktop</code>, etc).</td></tr><tr><td><strong>lang_code</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td>Either an ISO 639-1 language code or a language pack name obtained from a <a href="/api/links/#language-pack-links">language pack link</a>.</td></tr></tbody></table>
 
 ### Result
 

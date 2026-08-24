@@ -11,11 +11,11 @@ layout: layout.njk
 
 Get inactive channels and supergroups
 
-```
-messages.inactiveChats#a927fec5 dates:Vector<int> chats:Vector<Chat> users:Vector<User> = messages.InactiveChats;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/messages.inactiveChats/">messages.inactiveChats</a>#a927fec5 dates:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/int/">int</a>&gt; chats:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/Chat/">Chat</a>&gt; users:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/User/">User</a>&gt; = <a href="/type/messages.InactiveChats/">messages.InactiveChats</a>;
 ---functions---
-channels.getInactiveChannels#11e831ee = messages.InactiveChats;
-```
+<a href="/method/channels.getInactiveChannels/" class="current_page_link">channels.getInactiveChannels</a>#11e831ee = <a href="/type/messages.InactiveChats/">messages.InactiveChats</a>;</code></pre>
 
 ### Parameters
 

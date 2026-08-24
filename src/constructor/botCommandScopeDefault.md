@@ -11,9 +11,9 @@ layout: layout.njk
 
 The commands will be valid in all dialogs
 
-```
-botCommandScopeDefault#2f6cb2ab = BotCommandScope;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/botCommandScopeDefault/" class="current_page_link">botCommandScopeDefault</a>#2f6cb2ab = <a href="/type/BotCommandScope/">BotCommandScope</a>;</code></pre>
 
 ### Parameters
 

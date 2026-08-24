@@ -11,9 +11,9 @@ layout: layout.njk
 
 No new saved gifs were found
 
-```
-messages.savedGifsNotModified#e8025ca2 = messages.SavedGifs;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/messages.savedGifsNotModified/" class="current_page_link">messages.savedGifsNotModified</a>#e8025ca2 = <a href="/type/messages.SavedGifs/">messages.SavedGifs</a>;</code></pre>
 
 ### Parameters
 

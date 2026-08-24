@@ -11,9 +11,9 @@ layout: layout.njk
 
 Generic animation stickerset containing animations to play when [reacting to messages using a normal emoji without a custom animation](/api/reactions/)
 
-```
-inputStickerSetEmojiGenericAnimations#4c4d4ce = InputStickerSet;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputStickerSetEmojiGenericAnimations/" class="current_page_link">inputStickerSetEmojiGenericAnimations</a>#4c4d4ce = <a href="/type/InputStickerSet/">InputStickerSet</a>;</code></pre>
 
 ### Parameters
 

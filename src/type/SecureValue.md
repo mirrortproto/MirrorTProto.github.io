@@ -11,18 +11,18 @@ layout: layout.njk
 
 Secure Telegram Passport value
 
-```
-secureValue#187fa0ca flags:# type:SecureValueType data:flags.0?SecureData front_side:flags.1?SecureFile reverse_side:flags.2?SecureFile selfie:flags.3?SecureFile translation:flags.6?Vector<SecureFile> files:flags.4?Vector<SecureFile> plain_data:flags.5?SecurePlainData hash:bytes = SecureValue;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/secureValue/">secureValue</a>#187fa0ca flags:<a href="/type/%23/">#</a> type:<a href="/type/SecureValueType/">SecureValueType</a> data:flags.0?<a href="/type/SecureData/">SecureData</a> front_side:flags.1?<a href="/type/SecureFile/">SecureFile</a> reverse_side:flags.2?<a href="/type/SecureFile/">SecureFile</a> selfie:flags.3?<a href="/type/SecureFile/">SecureFile</a> translation:flags.6?<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/SecureFile/">SecureFile</a>&gt; files:flags.4?<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/SecureFile/">SecureFile</a>&gt; plain_data:flags.5?<a href="/type/SecurePlainData/">SecurePlainData</a> hash:<a href="/type/bytes/">bytes</a> = <a href="/type/SecureValue/" class="current_page_link">SecureValue</a>;
 
 ---functions---
 
-account.saveSecureValue#899fe31d value:InputSecureValue secure_secret_id:long = SecureValue;
-```
+<a href="/method/account.saveSecureValue/">account.saveSecureValue</a>#899fe31d value:<a href="/type/InputSecureValue/">InputSecureValue</a> secure_secret_id:<a href="/type/long/">long</a> = <a href="/type/SecureValue/" class="current_page_link">SecureValue</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/secureValue">secureValue</a></td><td>Secure value</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/secureValue/">secureValue</a></td><td>Secure value</td></tr></tbody></table>
 
 ### Methods
 
-<table class="table"><thead><tr><th scope="col">Method</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/method/account.saveSecureValue">account.saveSecureValue</a></td><td>Securely save <a href="/passport">Telegram Passport</a> document, <a href="/passport/encryption#encryption">for more info see the passport docs »</a></td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Method</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/method/account.saveSecureValue/">account.saveSecureValue</a></td><td>Securely save <a href="https://core.telegram.org/passport">Telegram Passport</a> document, <a href="https://core.telegram.org/passport/encryption#encryption">for more info see the passport docs »</a></td></tr></tbody></table>

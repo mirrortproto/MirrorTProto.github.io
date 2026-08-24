@@ -11,9 +11,9 @@ layout: layout.njk
 
 Return only messages containing voice notes
 
-```
-inputMessagesFilterVoice#50f5c392 = MessagesFilter;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputMessagesFilterVoice/" class="current_page_link">inputMessagesFilterVoice</a>#50f5c392 = <a href="/type/MessagesFilter/">MessagesFilter</a>;</code></pre>
 
 ### Parameters
 

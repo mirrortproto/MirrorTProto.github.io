@@ -11,16 +11,16 @@ layout: layout.njk
 
 Report a profile photo of a dialog
 
-```
-boolFalse#bc799737 = Bool;
-boolTrue#997275b5 = Bool;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/boolFalse/">boolFalse</a>#bc799737 = <a href="/type/Bool/">Bool</a>;
+<a href="/constructor/boolTrue/">boolTrue</a>#997275b5 = <a href="/type/Bool/">Bool</a>;
 ---functions---
-account.reportProfilePhoto#fa8cc6f5 peer:InputPeer photo_id:InputPhoto reason:ReportReason message:string = Bool;
-```
+<a href="/method/account.reportProfilePhoto/" class="current_page_link">account.reportProfilePhoto</a>#fa8cc6f5 peer:<a href="/type/InputPeer/">InputPeer</a> photo_id:<a href="/type/InputPhoto/">InputPhoto</a> reason:<a href="/type/ReportReason/">ReportReason</a> message:<a href="/type/string/">string</a> = <a href="/type/Bool/">Bool</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>The dialog</td></tr><tr><td><strong>photo_id</strong></td><td style="text-align: center;"><a href="/type/InputPhoto">InputPhoto</a></td><td>Dialog photo ID</td></tr><tr><td><strong>reason</strong></td><td style="text-align: center;"><a href="/type/ReportReason">ReportReason</a></td><td>Report reason</td></tr><tr><td><strong>message</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Comment for report moderation</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer/">InputPeer</a></td><td>The dialog</td></tr><tr><td><strong>photo_id</strong></td><td style="text-align: center;"><a href="/type/InputPhoto/">InputPhoto</a></td><td>Dialog photo ID</td></tr><tr><td><strong>reason</strong></td><td style="text-align: center;"><a href="/type/ReportReason/">ReportReason</a></td><td>Report reason</td></tr><tr><td><strong>message</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td>Comment for report moderation</td></tr></tbody></table>
 
 ### Result
 

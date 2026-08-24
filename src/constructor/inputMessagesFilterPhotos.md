@@ -11,9 +11,9 @@ layout: layout.njk
 
 Filter for messages containing photos.
 
-```
-inputMessagesFilterPhotos#9609a51c = MessagesFilter;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputMessagesFilterPhotos/" class="current_page_link">inputMessagesFilterPhotos</a>#9609a51c = <a href="/type/MessagesFilter/">MessagesFilter</a>;</code></pre>
 
 ### Parameters
 

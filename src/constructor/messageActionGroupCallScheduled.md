@@ -11,13 +11,13 @@ layout: layout.njk
 
 A [video chat/livestream](/api/group-calls/#video-chats-livestreams) was scheduled.
 
-```
-messageActionGroupCallScheduled#b3a07661 call:InputGroupCall schedule_date:int = MessageAction;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/messageActionGroupCallScheduled/" class="current_page_link">messageActionGroupCallScheduled</a>#b3a07661 call:<a href="/type/InputGroupCall/">InputGroupCall</a> schedule_date:<a href="/type/int/">int</a> = <a href="/type/MessageAction/">MessageAction</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>call</strong></td><td style="text-align: center;"><a href="/type/InputGroupCall">InputGroupCall</a></td><td>Scheduled video chat/livestream</td></tr><tr><td><strong>schedule_date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>When is the group call scheduled to start</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>call</strong></td><td style="text-align: center;"><a href="/type/InputGroupCall/">InputGroupCall</a></td><td>Scheduled video chat/livestream</td></tr><tr><td><strong>schedule_date</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>When is the group call scheduled to start</td></tr></tbody></table>
 
 ### Type
 

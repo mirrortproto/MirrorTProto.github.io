@@ -11,9 +11,9 @@ layout: layout.njk
 
 The server-side list of [emoji statuses](/api/emoji-status/) hasn't changed
 
-```
-account.emojiStatusesNotModified#d08ce645 = account.EmojiStatuses;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/account.emojiStatusesNotModified/" class="current_page_link">account.emojiStatusesNotModified</a>#d08ce645 = <a href="/type/account.EmojiStatuses/">account.EmojiStatuses</a>;</code></pre>
 
 ### Parameters
 

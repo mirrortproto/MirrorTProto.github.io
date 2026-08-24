@@ -11,9 +11,9 @@ layout: layout.njk
 
 Send [Telegram Business away messages](/api/business/#away-messages) to users writing to us in private outside of the configured [Telegram Business working hours](/api/business/#opening-hours).
 
-```
-businessAwayMessageScheduleOutsideWorkHours#c3f2f501 = BusinessAwayMessageSchedule;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/businessAwayMessageScheduleOutsideWorkHours/" class="current_page_link">businessAwayMessageScheduleOutsideWorkHours</a>#c3f2f501 = <a href="/type/BusinessAwayMessageSchedule/">BusinessAwayMessageSchedule</a>;</code></pre>
 
 ### Parameters
 

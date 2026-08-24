@@ -11,15 +11,15 @@ layout: layout.njk
 
 Obtain info about a [collectible gift »](/api/gifts/#collectible-gifts) using a slug obtained from a [collectible gift link »](/api/links/#collectible-gift-link).
 
-```
-payments.uniqueStarGift#416c56e8 gift:StarGift chats:Vector<Chat> users:Vector<User> = payments.UniqueStarGift;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/payments.uniqueStarGift/">payments.uniqueStarGift</a>#416c56e8 gift:<a href="/type/StarGift/">StarGift</a> chats:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/Chat/">Chat</a>&gt; users:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/User/">User</a>&gt; = <a href="/type/payments.UniqueStarGift/">payments.UniqueStarGift</a>;
 ---functions---
-payments.getUniqueStarGift#a1974d72 slug:string = payments.UniqueStarGift;
-```
+<a href="/method/payments.getUniqueStarGift/" class="current_page_link">payments.getUniqueStarGift</a>#a1974d72 slug:<a href="/type/string/">string</a> = <a href="/type/payments.UniqueStarGift/">payments.UniqueStarGift</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>slug</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>The slug.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>slug</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td>The slug.</td></tr></tbody></table>
 
 ### Result
 

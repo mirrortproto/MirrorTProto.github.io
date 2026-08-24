@@ -11,9 +11,9 @@ layout: layout.njk
 
 Info about [quick reply shortcuts »](/api/business/#quick-reply-shortcuts) hasn't changed.
 
-```
-messages.quickRepliesNotModified#5f91eb5b = messages.QuickReplies;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/messages.quickRepliesNotModified/" class="current_page_link">messages.quickRepliesNotModified</a>#5f91eb5b = <a href="/type/messages.QuickReplies/">messages.QuickReplies</a>;</code></pre>
 
 ### Parameters
 

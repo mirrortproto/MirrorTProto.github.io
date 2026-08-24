@@ -11,9 +11,9 @@ layout: layout.njk
 
 [Bot menu button](/api/bots/menu/) that opens the bot command list when clicked.
 
-```
-botMenuButtonCommands#4258c205 = BotMenuButton;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/botMenuButtonCommands/" class="current_page_link">botMenuButtonCommands</a>#4258c205 = <a href="/type/BotMenuButton/">BotMenuButton</a>;</code></pre>
 
 ### Parameters
 

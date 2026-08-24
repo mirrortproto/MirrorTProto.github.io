@@ -11,15 +11,15 @@ layout: layout.njk
 
 Adds a user to a chat and sends a service message on it.
 
-```
-messages.invitedUsers#7f5defa6 updates:Updates missing_invitees:Vector<MissingInvitee> = messages.InvitedUsers;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/messages.invitedUsers/">messages.invitedUsers</a>#7f5defa6 updates:<a href="/type/Updates/">Updates</a> missing_invitees:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/MissingInvitee/">MissingInvitee</a>&gt; = <a href="/type/messages.InvitedUsers/">messages.InvitedUsers</a>;
 ---functions---
-messages.addChatUser#cbc6d107 chat_id:long user_id:InputUser fwd_limit:int = messages.InvitedUsers;
-```
+<a href="/method/messages.addChatUser/" class="current_page_link">messages.addChatUser</a>#cbc6d107 chat_id:<a href="/type/long/">long</a> user_id:<a href="/type/InputUser/">InputUser</a> fwd_limit:<a href="/type/int/">int</a> = <a href="/type/messages.InvitedUsers/">messages.InvitedUsers</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>chat_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Chat ID</td></tr><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/InputUser">InputUser</a></td><td>User ID to be added</td></tr><tr><td><strong>fwd_limit</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Number of last messages to be forwarded</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>chat_id</strong></td><td style="text-align: center;"><a href="/type/long/">long</a></td><td>Chat ID</td></tr><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/InputUser/">InputUser</a></td><td>User ID to be added</td></tr><tr><td><strong>fwd_limit</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>Number of last messages to be forwarded</td></tr></tbody></table>
 
 ### Result
 

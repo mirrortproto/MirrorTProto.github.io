@@ -11,9 +11,9 @@ layout: layout.njk
 
 Whether people can see your bio
 
-```
-inputPrivacyKeyAbout#3823cc40 = InputPrivacyKey;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputPrivacyKeyAbout/" class="current_page_link">inputPrivacyKeyAbout</a>#3823cc40 = <a href="/type/InputPrivacyKey/">InputPrivacyKey</a>;</code></pre>
 
 ### Parameters
 

@@ -11,9 +11,9 @@ layout: layout.njk
 
 A universal vector constructor.
 
-```
-vector#1cb5c415 {t:Type} # [ t ] = Vector t;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/vector/" class="current_page_link">vector</a>#1cb5c415 {t:Type} # [ t ] = <a href="/type/Vector%20t/">Vector t</a>;</code></pre>
 
 ### Parameters
 
@@ -21,7 +21,7 @@ This constructor does not require any parameters.
 
 ### Type
 
-[Vector t](https://core.telegram.org/type/Vector%20t)
+[Vector t](/type/Vector%20t/)
 
 ### Params additional
 

@@ -11,9 +11,9 @@ layout: layout.njk
 
 Whether the user can see the [songs we pinned to our profile »](/api/profile/#music).
 
-```
-privacyKeySavedMusic#ff7a571b = PrivacyKey;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/privacyKeySavedMusic/" class="current_page_link">privacyKeySavedMusic</a>#ff7a571b = <a href="/type/PrivacyKey/">PrivacyKey</a>;</code></pre>
 
 ### Parameters
 

@@ -17,7 +17,7 @@ e2e.chain.groupParticipant#28852f20 user_id:long public_key:int256 flags:# add_u
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/e2e.chain.groupParticipant">e2e.chain.groupParticipant</a></td><td>A participant and their permissions in an <a href="/api/end-to-end/group-calls#participants-and-permissions">E2E conference call group state »</a>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/e2e.chain.groupParticipant/">e2e.chain.groupParticipant</a></td><td>A participant and their permissions in an <a href="/api/end-to-end/group-calls/#participants-and-permissions">E2E conference call group state »</a>.</td></tr></tbody></table>
 
 ### Related pages
 

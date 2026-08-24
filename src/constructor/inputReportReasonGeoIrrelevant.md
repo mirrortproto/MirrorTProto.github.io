@@ -11,9 +11,9 @@ layout: layout.njk
 
 Report an irrelevant geogroup
 
-```
-inputReportReasonGeoIrrelevant#dbd4feed = ReportReason;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputReportReasonGeoIrrelevant/" class="current_page_link">inputReportReasonGeoIrrelevant</a>#dbd4feed = <a href="/type/ReportReason/">ReportReason</a>;</code></pre>
 
 ### Parameters
 

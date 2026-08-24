@@ -11,9 +11,9 @@ layout: layout.njk
 
 Allow all users
 
-```
-inputPrivacyValueAllowAll#184b35ce = InputPrivacyRule;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputPrivacyValueAllowAll/" class="current_page_link">inputPrivacyValueAllowAll</a>#184b35ce = <a href="/type/InputPrivacyRule/">InputPrivacyRule</a>;</code></pre>
 
 ### Parameters
 

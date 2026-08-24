@@ -11,13 +11,13 @@ layout: layout.njk
 
 Credit card info URL provided by the bank
 
-```
-bankCardOpenUrl#f568028a url:string name:string = BankCardOpenUrl;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/bankCardOpenUrl/" class="current_page_link">bankCardOpenUrl</a>#f568028a url:<a href="/type/string/">string</a> name:<a href="/type/string/">string</a> = <a href="/type/BankCardOpenUrl/">BankCardOpenUrl</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>url</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Info URL</td></tr><tr><td><strong>name</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Bank name</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>url</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td>Info URL</td></tr><tr><td><strong>name</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td>Bank name</td></tr></tbody></table>
 
 ### Type
 

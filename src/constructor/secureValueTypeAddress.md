@@ -11,9 +11,9 @@ layout: layout.njk
 
 Address
 
-```
-secureValueTypeAddress#cbe31e26 = SecureValueType;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/secureValueTypeAddress/" class="current_page_link">secureValueTypeAddress</a>#cbe31e26 = <a href="/type/SecureValueType/">SecureValueType</a>;</code></pre>
 
 ### Parameters
 

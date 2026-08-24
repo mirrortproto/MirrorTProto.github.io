@@ -11,13 +11,13 @@ layout: layout.njk
 
 Contains the available channels of an RTMP-mode group call, see [playing an RTMP livestream »](/api/group-calls/#rtmp-mode).
 
-```
-phone.groupCallStreamChannels#d0e482b2 channels:Vector<GroupCallStreamChannel> = phone.GroupCallStreamChannels;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/phone.groupCallStreamChannels/" class="current_page_link">phone.groupCallStreamChannels</a>#d0e482b2 channels:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/GroupCallStreamChannel/">GroupCallStreamChannel</a>&gt; = <a href="/type/phone.GroupCallStreamChannels/">phone.GroupCallStreamChannels</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>channels</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/GroupCallStreamChannel">GroupCallStreamChannel</a>&gt;</td><td>Available RTMP stream channels; may be empty while the external publisher is not sending media</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>channels</strong></td><td style="text-align: center;"><a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/GroupCallStreamChannel/">GroupCallStreamChannel</a>&gt;</td><td>Available RTMP stream channels; may be empty while the external publisher is not sending media</td></tr></tbody></table>
 
 ### Type
 

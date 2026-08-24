@@ -11,17 +11,17 @@ layout: layout.njk
 
 [Statistics](/api/stats/#poll-statistics) for a poll sent in a message.
 
-```
-Method schema is available as of layer 225. Switch »
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code>Method schema is available as of layer 225. <a href="?layer=225">Switch »</a></code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/stats.pollStats">stats.pollStats</a></td><td><a href="/api/stats#poll-statistics">Statistics</a> for a poll sent in a message.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/stats.pollStats/">stats.pollStats</a></td><td><a href="/api/stats/#poll-statistics">Statistics</a> for a poll sent in a message.</td></tr></tbody></table>
 
 ### Methods
 
-<table class="table"><thead><tr><th scope="col">Method</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/method/stats.getPollStats">stats.getPollStats</a></td><td>Get <a href="/api/stats#poll-statistics">statistics</a> for a poll sent in a message.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Method</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/method/stats.getPollStats/">stats.getPollStats</a></td><td>Get <a href="/api/stats/#poll-statistics">statistics</a> for a poll sent in a message.</td></tr></tbody></table>
 
 ### Related pages
 

@@ -11,9 +11,9 @@ layout: layout.njk
 
 Report for spam
 
-```
-inputReportReasonSpam#58dbcab8 = ReportReason;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputReportReasonSpam/" class="current_page_link">inputReportReasonSpam</a>#58dbcab8 = <a href="/type/ReportReason/">ReportReason</a>;</code></pre>
 
 ### Parameters
 

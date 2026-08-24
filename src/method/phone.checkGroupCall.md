@@ -15,18 +15,18 @@ After joining the main connection with [phone.joinGroupCall](/method/phone.joinG
 
 The method returns the subset of the supplied sources that are still joined. A missing source means that the corresponding connection must be recreated and joined again; it does not indicate whether media packets are currently flowing. If the method returns `GROUPCALL_JOIN_MISSING`, the main connection must be rejoined.
 
-```
----functions---
-phone.checkGroupCall#b59cf977 call:InputGroupCall sources:Vector<int> = Vector<int>;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code>---functions---
+<a href="/method/phone.checkGroupCall/" class="current_page_link">phone.checkGroupCall</a>#b59cf977 call:<a href="/type/InputGroupCall/">InputGroupCall</a> sources:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/int/">int</a>&gt; = <a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/int/">int</a>&gt;;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>call</strong></td><td style="text-align: center;"><a href="/type/InputGroupCall">InputGroupCall</a></td><td>Group call whose WebRTC connections should be checked</td></tr><tr><td><strong>sources</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/int">int</a>&gt;</td><td>Non-zero SSRC/source IDs of the caller's main and presentation connections</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>call</strong></td><td style="text-align: center;"><a href="/type/InputGroupCall/">InputGroupCall</a></td><td>Group call whose WebRTC connections should be checked</td></tr><tr><td><strong>sources</strong></td><td style="text-align: center;"><a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/int/">int</a>&gt;</td><td>Non-zero SSRC/source IDs of the caller's main and presentation connections</td></tr></tbody></table>
 
 ### Result
 
-[Vector](https://core.telegram.org/type/Vector%20t)&lt;[int](/type/int/)\>
+[Vector](/type/Vector%20t/)&lt;[int](/type/int/)\>
 
 ### Only users can use this method
 

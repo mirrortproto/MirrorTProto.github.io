@@ -11,15 +11,15 @@ layout: layout.njk
 
 Sends a custom request; for bots only
 
-```
-dataJSON#7d748d04 data:string = DataJSON;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/dataJSON/">dataJSON</a>#7d748d04 data:<a href="/type/string/">string</a> = <a href="/type/DataJSON/">DataJSON</a>;
 ---functions---
-bots.sendCustomRequest#aa2769ed custom_method:string params:DataJSON = DataJSON;
-```
+<a href="/method/bots.sendCustomRequest/" class="current_page_link">bots.sendCustomRequest</a>#aa2769ed custom_method:<a href="/type/string/">string</a> params:<a href="/type/DataJSON/">DataJSON</a> = <a href="/type/DataJSON/">DataJSON</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>custom_method</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>The method name</td></tr><tr><td><strong>params</strong></td><td style="text-align: center;"><a href="/type/DataJSON">DataJSON</a></td><td>JSON-serialized method parameters</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>custom_method</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td>The method name</td></tr><tr><td><strong>params</strong></td><td style="text-align: center;"><a href="/type/DataJSON/">DataJSON</a></td><td>JSON-serialized method parameters</td></tr></tbody></table>
 
 ### Result
 

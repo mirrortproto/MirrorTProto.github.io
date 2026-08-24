@@ -11,10 +11,10 @@ layout: layout.njk
 
 The entire message history has been deleted.
 
-```
-===8===
-decryptedMessageActionFlushHistory#6719e45c = DecryptedMessageAction;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code>===8===
+<a href="/constructor/decryptedMessageActionFlushHistory/" class="current_page_link">decryptedMessageActionFlushHistory</a>#6719e45c = <a href="/type/DecryptedMessageAction/">DecryptedMessageAction</a>;</code></pre>
 
 ### Parameters
 

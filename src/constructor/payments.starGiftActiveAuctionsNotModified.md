@@ -11,9 +11,9 @@ layout: layout.njk
 
 The list of currently active [gift auctions](/api/auctions/) **where the user has placed a bid** hasn't changed.
 
-```
-payments.starGiftActiveAuctionsNotModified#db33dad0 = payments.StarGiftActiveAuctions;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/payments.starGiftActiveAuctionsNotModified/" class="current_page_link">payments.starGiftActiveAuctionsNotModified</a>#db33dad0 = <a href="/type/payments.StarGiftActiveAuctions/">payments.StarGiftActiveAuctions</a>;</code></pre>
 
 ### Parameters
 

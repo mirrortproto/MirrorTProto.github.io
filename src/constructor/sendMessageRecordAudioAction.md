@@ -20,9 +20,9 @@ sendMessageRecordAudioAction#d52f73f7 = SendMessageAction;
 
 #### API schema
 
-```
-sendMessageRecordAudioAction#d52f73f7 = SendMessageAction;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/sendMessageRecordAudioAction/" class="current_page_link">sendMessageRecordAudioAction</a>#d52f73f7 = <a href="/type/SendMessageAction/">SendMessageAction</a>;</code></pre>
 
 ### Parameters
 

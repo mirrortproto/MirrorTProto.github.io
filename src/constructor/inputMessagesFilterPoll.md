@@ -11,9 +11,9 @@ layout: layout.njk
 
 Filter for poll messages, see [searching for polls »](/api/poll/#searching-for-polls)
 
-```
-Constructor schema is available as of layer 224. Switch »
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code>Constructor schema is available as of layer 224. <a href="?layer=224">Switch »</a></code></pre>
 
 ### Parameters
 

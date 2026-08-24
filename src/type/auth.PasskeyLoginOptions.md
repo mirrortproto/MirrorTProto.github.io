@@ -11,21 +11,21 @@ layout: layout.njk
 
 Passkey login options, see [here »](/api/passkeys/#logging-in-with-a-passkey) for more info on the full flow.
 
-```
-auth.passkeyLoginOptions#e2037789 options:DataJSON = auth.PasskeyLoginOptions;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/auth.passkeyLoginOptions/">auth.passkeyLoginOptions</a>#e2037789 options:<a href="/type/DataJSON/">DataJSON</a> = <a href="/type/auth.PasskeyLoginOptions/" class="current_page_link">auth.PasskeyLoginOptions</a>;
 
 ---functions---
 
-auth.initPasskeyLogin#518ad0b7 api_id:int api_hash:string = auth.PasskeyLoginOptions;
-```
+<a href="/method/auth.initPasskeyLogin/">auth.initPasskeyLogin</a>#518ad0b7 api_id:<a href="/type/int/">int</a> api_hash:<a href="/type/string/">string</a> = <a href="/type/auth.PasskeyLoginOptions/" class="current_page_link">auth.PasskeyLoginOptions</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/auth.passkeyLoginOptions">auth.passkeyLoginOptions</a></td><td>Passkey login options, see <a href="/api/passkeys#logging-in-with-a-passkey">here »</a> for more info on the full flow.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/auth.passkeyLoginOptions/">auth.passkeyLoginOptions</a></td><td>Passkey login options, see <a href="/api/passkeys/#logging-in-with-a-passkey">here »</a> for more info on the full flow.</td></tr></tbody></table>
 
 ### Methods
 
-<table class="table"><thead><tr><th scope="col">Method</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/method/auth.initPasskeyLogin">auth.initPasskeyLogin</a></td><td>Initialize login with a passkey over an unauthenticated connection, see <a href="/api/passkeys#logging-in-with-a-passkey">here »</a> for more info.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Method</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/method/auth.initPasskeyLogin/">auth.initPasskeyLogin</a></td><td>Initialize login with a passkey over an unauthenticated connection, see <a href="/api/passkeys/#logging-in-with-a-passkey">here »</a> for more info.</td></tr></tbody></table>
 
 ### Related pages
 

@@ -11,11 +11,11 @@ layout: layout.njk
 
 Request recovery code of a [2FA password](/api/srp/), only for accounts with a [recovery email configured](/api/srp/#email-verification).
 
-```
-auth.passwordRecovery#137948a5 email_pattern:string = auth.PasswordRecovery;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/auth.passwordRecovery/">auth.passwordRecovery</a>#137948a5 email_pattern:<a href="/type/string/">string</a> = <a href="/type/auth.PasswordRecovery/">auth.PasswordRecovery</a>;
 ---functions---
-auth.requestPasswordRecovery#d897bc66 = auth.PasswordRecovery;
-```
+<a href="/method/auth.requestPasswordRecovery/" class="current_page_link">auth.requestPasswordRecovery</a>#d897bc66 = <a href="/type/auth.PasswordRecovery/">auth.PasswordRecovery</a>;</code></pre>
 
 ### Parameters
 

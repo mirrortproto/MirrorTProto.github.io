@@ -11,9 +11,9 @@ layout: layout.njk
 
 The list of [reaction tag »](/api/saved-messages/#tags) names assigned by the user has changed and should be refetched using [messages.getSavedReactionTags »](/method/messages.getSavedReactionTags/).
 
-```
-updateSavedReactionTags#39c67432 = Update;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/updateSavedReactionTags/" class="current_page_link">updateSavedReactionTags</a>#39c67432 = <a href="/type/Update/">Update</a>;</code></pre>
 
 ### Parameters
 

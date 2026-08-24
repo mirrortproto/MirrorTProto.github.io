@@ -11,9 +11,9 @@ layout: layout.njk
 
 Report for impersonation
 
-```
-inputReportReasonFake#f5ddd6e7 = ReportReason;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputReportReasonFake/" class="current_page_link">inputReportReasonFake</a>#f5ddd6e7 = <a href="/type/ReportReason/">ReportReason</a>;</code></pre>
 
 ### Parameters
 

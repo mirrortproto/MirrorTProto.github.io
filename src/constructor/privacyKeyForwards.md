@@ -11,9 +11,9 @@ layout: layout.njk
 
 Whether messages forwarded from the user will be [anonymously forwarded](https://telegram.org/blog/unsend-privacy-emoji#anonymous-forwarding)
 
-```
-privacyKeyForwards#69ec56a3 = PrivacyKey;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/privacyKeyForwards/" class="current_page_link">privacyKeyForwards</a>#69ec56a3 = <a href="/type/PrivacyKey/">PrivacyKey</a>;</code></pre>
 
 ### Parameters
 

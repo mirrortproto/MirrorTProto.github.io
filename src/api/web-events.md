@@ -650,7 +650,7 @@ Handle this event using the following steps:
 
 Event data: a JSON object with an `id` string field.
 
-Used by [bot web apps](/api/bots/webapps/) to invite the user to send a [prepared inline message »](https://core.telegram.org/api/bots/inline#21-using-a-prepared-inline-message).
+Used by [bot web apps](/api/bots/webapps/) to invite the user to send a [prepared inline message »](/api/bots/inline/#2-1-using-a-prepared-inline-message).
 
 #### `web_app_toggle_orientation_lock`
 

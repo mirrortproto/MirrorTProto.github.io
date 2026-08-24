@@ -11,9 +11,9 @@ layout: layout.njk
 
 Whether the user accepts phone calls
 
-```
-privacyKeyPhoneCall#3d662b7b = PrivacyKey;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/privacyKeyPhoneCall/" class="current_page_link">privacyKeyPhoneCall</a>#3d662b7b = <a href="/type/PrivacyKey/">PrivacyKey</a>;</code></pre>
 
 ### Parameters
 

@@ -11,13 +11,13 @@ layout: layout.njk
 
 channelAdminLogEvent.user\_id has set the volume of participant.peer to participant.volume
 
-```
-channelAdminLogEventActionParticipantVolume#3e7f6847 participant:GroupCallParticipant = ChannelAdminLogEventAction;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/channelAdminLogEventActionParticipantVolume/" class="current_page_link">channelAdminLogEventActionParticipantVolume</a>#3e7f6847 participant:<a href="/type/GroupCallParticipant/">GroupCallParticipant</a> = <a href="/type/ChannelAdminLogEventAction/">ChannelAdminLogEventAction</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>participant</strong></td><td style="text-align: center;"><a href="/type/GroupCallParticipant">GroupCallParticipant</a></td><td>The participant whose volume was changed</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>participant</strong></td><td style="text-align: center;"><a href="/type/GroupCallParticipant/">GroupCallParticipant</a></td><td>The participant whose volume was changed</td></tr></tbody></table>
 
 ### Type
 

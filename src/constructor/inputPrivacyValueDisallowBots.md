@@ -11,9 +11,9 @@ layout: layout.njk
 
 Disallow bots and mini apps
 
-```
-inputPrivacyValueDisallowBots#c4e57915 = InputPrivacyRule;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputPrivacyValueDisallowBots/" class="current_page_link">inputPrivacyValueDisallowBots</a>#c4e57915 = <a href="/type/InputPrivacyRule/">InputPrivacyRule</a>;</code></pre>
 
 ### Parameters
 

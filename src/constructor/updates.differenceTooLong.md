@@ -11,13 +11,13 @@ layout: layout.njk
 
 The difference is [too long](/api/updates/#recovering-gaps), and the specified state must be used to refetch updates.
 
-```
-updates.differenceTooLong#4afe8f6d pts:int = updates.Difference;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/updates.differenceTooLong/" class="current_page_link">updates.differenceTooLong</a>#4afe8f6d pts:<a href="/type/int/">int</a> = <a href="/type/updates.Difference/">updates.Difference</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>pts</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>The new state to use.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>pts</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>The new state to use.</td></tr></tbody></table>
 
 ### Type
 

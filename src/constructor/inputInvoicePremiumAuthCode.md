@@ -11,13 +11,13 @@ layout: layout.njk
 
 Used to pay for login codes, in case of high cost of SMS verification codes for the user's country/provider, see [here »](/api/auth/#paid-auth) for more info.
 
-```
-inputInvoicePremiumAuthCode#3e77f614 purpose:InputStorePaymentPurpose = InputInvoice;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputInvoicePremiumAuthCode/" class="current_page_link">inputInvoicePremiumAuthCode</a>#3e77f614 purpose:<a href="/type/InputStorePaymentPurpose/">InputStorePaymentPurpose</a> = <a href="/type/InputInvoice/">InputInvoice</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>purpose</strong></td><td style="text-align: center;"><a href="/type/InputStorePaymentPurpose">InputStorePaymentPurpose</a></td><td>Must contain an <a href="/constructor/inputStorePaymentAuthCode">inputStorePaymentAuthCode</a>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>purpose</strong></td><td style="text-align: center;"><a href="/type/InputStorePaymentPurpose/">InputStorePaymentPurpose</a></td><td>Must contain an <a href="/constructor/inputStorePaymentAuthCode/">inputStorePaymentAuthCode</a>.</td></tr></tbody></table>
 
 ### Type
 

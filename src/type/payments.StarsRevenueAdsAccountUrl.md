@@ -11,21 +11,21 @@ layout: layout.njk
 
 Contains a URL leading to a page where the user will be able to place ads for the channel/bot, paying using [Telegram Stars](/api/stars/#paying-for-ads).
 
-```
-payments.starsRevenueAdsAccountUrl#394e7f21 url:string = payments.StarsRevenueAdsAccountUrl;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/payments.starsRevenueAdsAccountUrl/">payments.starsRevenueAdsAccountUrl</a>#394e7f21 url:<a href="/type/string/">string</a> = <a href="/type/payments.StarsRevenueAdsAccountUrl/" class="current_page_link">payments.StarsRevenueAdsAccountUrl</a>;
 
 ---functions---
 
-payments.getStarsRevenueAdsAccountUrl#d1d7efc5 peer:InputPeer = payments.StarsRevenueAdsAccountUrl;
-```
+<a href="/method/payments.getStarsRevenueAdsAccountUrl/">payments.getStarsRevenueAdsAccountUrl</a>#d1d7efc5 peer:<a href="/type/InputPeer/">InputPeer</a> = <a href="/type/payments.StarsRevenueAdsAccountUrl/" class="current_page_link">payments.StarsRevenueAdsAccountUrl</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/payments.starsRevenueAdsAccountUrl">payments.starsRevenueAdsAccountUrl</a></td><td>Contains a URL leading to a page where the user will be able to place ads for the channel/bot, paying using <a href="/api/stars#paying-for-ads">Telegram Stars</a>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/payments.starsRevenueAdsAccountUrl/">payments.starsRevenueAdsAccountUrl</a></td><td>Contains a URL leading to a page where the user will be able to place ads for the channel/bot, paying using <a href="/api/stars/#paying-for-ads">Telegram Stars</a>.</td></tr></tbody></table>
 
 ### Methods
 
-<table class="table"><thead><tr><th scope="col">Method</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/method/payments.getStarsRevenueAdsAccountUrl">payments.getStarsRevenueAdsAccountUrl</a></td><td>Returns a URL for a Telegram Ad platform account that can be used to set up advertisements for channel/bot in <code>peer</code>, paid using the Telegram Stars owned by the specified <code>peer</code>, see <a href="/api/stars#paying-for-ads">here »</a> for more info.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Method</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/method/payments.getStarsRevenueAdsAccountUrl/">payments.getStarsRevenueAdsAccountUrl</a></td><td>Returns a URL for a Telegram Ad platform account that can be used to set up advertisements for channel/bot in <code>peer</code>, paid using the Telegram Stars owned by the specified <code>peer</code>, see <a href="/api/stars/#paying-for-ads">here »</a> for more info.</td></tr></tbody></table>
 
 ### Related pages
 

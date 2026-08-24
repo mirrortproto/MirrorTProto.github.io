@@ -11,13 +11,13 @@ layout: layout.njk
 
 Phone number to use in [telegram passport](https://core.telegram.org/passport): [it must be verified, first »](https://core.telegram.org/passport/encryption#secureplaindata).
 
-```
-securePlainPhone#7d6099dd phone:string = SecurePlainData;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/securePlainPhone/" class="current_page_link">securePlainPhone</a>#7d6099dd phone:<a href="/type/string/">string</a> = <a href="/type/SecurePlainData/">SecurePlainData</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>phone</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Phone number</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>phone</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td>Phone number</td></tr></tbody></table>
 
 ### Type
 

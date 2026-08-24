@@ -11,14 +11,14 @@ layout: layout.njk
 
 Represents a [quick reply shortcut »](/api/business/#quick-reply-shortcuts).
 
-```
-inputQuickReplyShortcut#24596d41 shortcut:string = InputQuickReplyShortcut;
-inputQuickReplyShortcutId#1190cf1 shortcut_id:int = InputQuickReplyShortcut;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputQuickReplyShortcut/">inputQuickReplyShortcut</a>#24596d41 shortcut:<a href="/type/string/">string</a> = <a href="/type/InputQuickReplyShortcut/" class="current_page_link">InputQuickReplyShortcut</a>;
+<a href="/constructor/inputQuickReplyShortcutId/">inputQuickReplyShortcutId</a>#1190cf1 shortcut_id:<a href="/type/int/">int</a> = <a href="/type/InputQuickReplyShortcut/" class="current_page_link">InputQuickReplyShortcut</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/inputQuickReplyShortcut">inputQuickReplyShortcut</a></td><td>Selects a <a href="/api/business#quick-reply-shortcuts">quick reply shortcut</a> by name.</td></tr><tr><td><a href="/constructor/inputQuickReplyShortcutId">inputQuickReplyShortcutId</a></td><td>Selects a <a href="/api/business#quick-reply-shortcuts">quick reply shortcut</a> by its numeric ID.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/inputQuickReplyShortcut/">inputQuickReplyShortcut</a></td><td>Selects a <a href="/api/business/#quick-reply-shortcuts">quick reply shortcut</a> by name.</td></tr><tr><td><a href="/constructor/inputQuickReplyShortcutId/">inputQuickReplyShortcutId</a></td><td>Selects a <a href="/api/business/#quick-reply-shortcuts">quick reply shortcut</a> by its numeric ID.</td></tr></tbody></table>
 
 ### Related pages
 

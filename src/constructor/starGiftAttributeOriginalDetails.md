@@ -11,13 +11,13 @@ layout: layout.njk
 
 Info about the sender, receiver and message attached to the original [gift »](/api/gifts/), before it was upgraded to a [collectible gift »](/api/gifts/#collectible-gifts).
 
-```
-starGiftAttributeOriginalDetails#e0bff26c flags:# sender_id:flags.0?Peer recipient_id:Peer date:int message:flags.1?TextWithEntities = StarGiftAttribute;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/starGiftAttributeOriginalDetails/" class="current_page_link">starGiftAttributeOriginalDetails</a>#e0bff26c flags:<a href="/type/%23/">#</a> sender_id:flags.0?<a href="/type/Peer/">Peer</a> recipient_id:<a href="/type/Peer/">Peer</a> date:<a href="/type/int/">int</a> message:flags.1?<a href="/type/TextWithEntities/">TextWithEntities</a> = <a href="/type/StarGiftAttribute/">StarGiftAttribute</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>Flags, see <a href="/mtproto/TL-combinators#conditional-fields">TL conditional fields</a></td></tr><tr><td><strong>sender_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/Peer">Peer</a></td><td>Original sender of the gift, absent if the gift was private.</td></tr><tr><td><strong>recipient_id</strong></td><td style="text-align: center;"><a href="/type/Peer">Peer</a></td><td>Original receiver of the gift.</td></tr><tr><td><strong>date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>When was the gift sent.</td></tr><tr><td><strong>message</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/TextWithEntities">TextWithEntities</a></td><td>Original message attached to the gift, if present.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23/">#</a></td><td>Flags, see <a href="/mtproto/TL-combinators/#conditional-fields">TL conditional fields</a></td></tr><tr><td><strong>sender_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators/#conditional-fields">flags</a>.0?<a href="/type/Peer/">Peer</a></td><td>Original sender of the gift, absent if the gift was private.</td></tr><tr><td><strong>recipient_id</strong></td><td style="text-align: center;"><a href="/type/Peer/">Peer</a></td><td>Original receiver of the gift.</td></tr><tr><td><strong>date</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>When was the gift sent.</td></tr><tr><td><strong>message</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators/#conditional-fields">flags</a>.1?<a href="/type/TextWithEntities/">TextWithEntities</a></td><td>Original message attached to the gift, if present.</td></tr></tbody></table>
 
 ### Type
 

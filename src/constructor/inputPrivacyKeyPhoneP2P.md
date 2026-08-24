@@ -11,9 +11,9 @@ layout: layout.njk
 
 Whether to allow P2P communication during VoIP calls
 
-```
-inputPrivacyKeyPhoneP2P#db9e70d2 = InputPrivacyKey;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputPrivacyKeyPhoneP2P/" class="current_page_link">inputPrivacyKeyPhoneP2P</a>#db9e70d2 = <a href="/type/InputPrivacyKey/">InputPrivacyKey</a>;</code></pre>
 
 ### Parameters
 

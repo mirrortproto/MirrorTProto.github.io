@@ -20,9 +20,9 @@ inputStickerSetEmpty#ffb62b95 = InputStickerSet;
 
 #### API schema
 
-```
-inputStickerSetEmpty#ffb62b95 = InputStickerSet;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputStickerSetEmpty/" class="current_page_link">inputStickerSetEmpty</a>#ffb62b95 = <a href="/type/InputStickerSet/">InputStickerSet</a>;</code></pre>
 
 ### Parameters
 

@@ -11,16 +11,16 @@ layout: layout.njk
 
 Edits notification settings from a given user/group, from all users/all groups.
 
-```
-boolFalse#bc799737 = Bool;
-boolTrue#997275b5 = Bool;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/boolFalse/">boolFalse</a>#bc799737 = <a href="/type/Bool/">Bool</a>;
+<a href="/constructor/boolTrue/">boolTrue</a>#997275b5 = <a href="/type/Bool/">Bool</a>;
 ---functions---
-account.updateNotifySettings#84be5b93 peer:InputNotifyPeer settings:InputPeerNotifySettings = Bool;
-```
+<a href="/method/account.updateNotifySettings/" class="current_page_link">account.updateNotifySettings</a>#84be5b93 peer:<a href="/type/InputNotifyPeer/">InputNotifyPeer</a> settings:<a href="/type/InputPeerNotifySettings/">InputPeerNotifySettings</a> = <a href="/type/Bool/">Bool</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputNotifyPeer">InputNotifyPeer</a></td><td>Notification source</td></tr><tr><td><strong>settings</strong></td><td style="text-align: center;"><a href="/type/InputPeerNotifySettings">InputPeerNotifySettings</a></td><td>Notification settings</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputNotifyPeer/">InputNotifyPeer</a></td><td>Notification source</td></tr><tr><td><strong>settings</strong></td><td style="text-align: center;"><a href="/type/InputPeerNotifySettings/">InputPeerNotifySettings</a></td><td>Notification settings</td></tr></tbody></table>
 
 ### Result
 

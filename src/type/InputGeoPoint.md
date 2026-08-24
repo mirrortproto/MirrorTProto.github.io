@@ -10,11 +10,11 @@ layout: layout.njk
 
 Defines a GeoPoint.
 
-```
-inputGeoPointEmpty#e4c123d6 = InputGeoPoint;
-inputGeoPoint#48222faf flags:# lat:double long:double accuracy_radius:flags.0?int = InputGeoPoint;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputGeoPointEmpty/">inputGeoPointEmpty</a>#e4c123d6 = <a href="/type/InputGeoPoint/" class="current_page_link">InputGeoPoint</a>;
+<a href="/constructor/inputGeoPoint/">inputGeoPoint</a>#48222faf flags:<a href="/type/%23/">#</a> lat:<a href="/type/double/">double</a> long:<a href="/type/double/">double</a> accuracy_radius:flags.0?<a href="/type/int/">int</a> = <a href="/type/InputGeoPoint/" class="current_page_link">InputGeoPoint</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/inputGeoPointEmpty">inputGeoPointEmpty</a></td><td>Empty GeoPoint constructor.</td></tr><tr><td><a href="/constructor/inputGeoPoint">inputGeoPoint</a></td><td>Defines a GeoPoint by its coordinates.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/inputGeoPointEmpty/">inputGeoPointEmpty</a></td><td>Empty GeoPoint constructor.</td></tr><tr><td><a href="/constructor/inputGeoPoint/">inputGeoPoint</a></td><td>Defines a GeoPoint by its coordinates.</td></tr></tbody></table>

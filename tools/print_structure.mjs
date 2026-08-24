@@ -31,7 +31,8 @@ for await (const f of walk(SRC)) {
   const fm = parseFm(await readFile(f, 'utf8'));
   if (!fm.title) continue;
   const rel = '/' + path.relative(SRC, f).replace(/\.md$/, '').replace(/\\/g, '/');
-  const url = rel === '/index' ? '/' : rel.endsWith('/index') ? rel.slice(0, -5) : rel;
+  // Directory indexes already end in "/" — printing `${url}/` would double it.
+  const url = rel === '/index' ? '/' : rel.endsWith('/index') ? rel.slice(0, -6) + '/' : rel + '/';
   pages.push({ url, title: fm.title, section: fm.section || 'other' });
 }
 pages.sort((a, b) => a.url.localeCompare(b.url));
@@ -39,16 +40,16 @@ pages.sort((a, b) => a.url.localeCompare(b.url));
 const groups = {
   mtproto: pages.filter((p) => p.url.startsWith('/mtproto')),
   api: pages.filter((p) => p.url.startsWith('/api')),
-  schema: pages.filter((p) => p.section === 'schema' || p.url.startsWith('/schema') || ['/methods', '/constructors', '/types'].includes(p.url)),
+  schema: pages.filter((p) => p.section === 'schema' || p.url.startsWith('/schema') || ['/methods/', '/constructors/', '/types/'].includes(p.url)),
   ref: pages.filter((p) => p.section === 'ref'),
 };
 
 console.log(`- **MTProto Protocol** — ${groups.mtproto.length} pages:`);
-for (const p of groups.mtproto) console.log(`  - \`${p.url}/\` — ${p.title}`);
+for (const p of groups.mtproto) console.log(`  - \`${p.url}\` — ${p.title}`);
 console.log(`- **Telegram API** — ${groups.api.length} pages:`);
-for (const p of groups.api) console.log(`  - \`${p.url}/\` — ${p.title}`);
+for (const p of groups.api) console.log(`  - \`${p.url}\` — ${p.title}`);
 console.log(`- **Schema (overview & indexes)** — ${groups.schema.length} pages:`);
-for (const p of groups.schema) console.log(`  - \`${p.url}/\` — ${p.title}`);
+for (const p of groups.schema) console.log(`  - \`${p.url}\` — ${p.title}`);
 const c = groups.ref.filter((p) => p.url.startsWith('/constructor')).length;
 const m = groups.ref.filter((p) => p.url.startsWith('/method')).length;
 const t = groups.ref.filter((p) => p.url.startsWith('/type')).length;

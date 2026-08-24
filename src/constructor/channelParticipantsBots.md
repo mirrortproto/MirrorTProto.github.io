@@ -11,9 +11,9 @@ layout: layout.njk
 
 Fetch only bot participants
 
-```
-channelParticipantsBots#b0d1865b = ChannelParticipantsFilter;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/channelParticipantsBots/" class="current_page_link">channelParticipantsBots</a>#b0d1865b = <a href="/type/ChannelParticipantsFilter/">ChannelParticipantsFilter</a>;</code></pre>
 
 ### Parameters
 

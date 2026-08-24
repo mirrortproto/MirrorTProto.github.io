@@ -11,9 +11,9 @@ layout: layout.njk
 
 Empty constructor.
 
-```
-messageActionEmpty#b6aef7b0 = MessageAction;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/messageActionEmpty/" class="current_page_link">messageActionEmpty</a>#b6aef7b0 = <a href="/type/MessageAction/">MessageAction</a>;</code></pre>
 
 ### Parameters
 

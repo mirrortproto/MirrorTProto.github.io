@@ -107,7 +107,7 @@ tg://resolve?domain=<username>&text=<draft_text>&profile
 
 Parameters:
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>username</code></td><td style="text-align: center;">Required</td><td>Username to <a href="/api/invites#public-usernames">check or import&nbsp;»</a></td></tr><tr><td><code>draft_text</code></td><td style="text-align: center;">Optional</td><td>UTF-8 text to pre-enter into the text input bar, if the user can write in the chat.<br>Before insertion:<br>- Validate that the text is valid UTF-8.<br>- If the text starts with a <code>@</code>, prepend a whitespace to it (to avoid triggering an <a href="/api/bots/inline">inline query</a>).<br>- Trim the text to <a href="/constructor/config">message_length_max</a> UTF-8 codepoints.</td></tr><tr><td><code>profile</code></td><td style="text-align: center;">Optional</td><td>If set, clicking on this link should open the destination peer's profile page, not the chat view.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>username</code></td><td style="text-align: center;">Required</td><td>Username to <a href="/api/invites/#public-usernames">check or import&nbsp;»</a></td></tr><tr><td><code>draft_text</code></td><td style="text-align: center;">Optional</td><td>UTF-8 text to pre-enter into the text input bar, if the user can write in the chat.<br>Before insertion:<br>- Validate that the text is valid UTF-8.<br>- If the text starts with a <code>@</code>, prepend a whitespace to it (to avoid triggering an <a href="/api/bots/inline/">inline query</a>).<br>- Trim the text to <a href="/constructor/config/">message_length_max</a> UTF-8 codepoints.</td></tr><tr><td><code>profile</code></td><td style="text-align: center;">Optional</td><td>If set, clicking on this link should open the destination peer's profile page, not the chat view.</td></tr></tbody></table>
 
 Note that [message links](#message-links) and [monoforum links](#monoforum-links) have the same or similar syntax, with extra parameters.
 
@@ -154,7 +154,7 @@ tg://contact?token=<token>
 
 Parameters:
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>token</code></td><td style="text-align: center;">Required</td><td>Profile token to import using <a href="/method/contacts.importContactToken">contacts.importContactToken</a>, will return user information.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>token</code></td><td style="text-align: center;">Required</td><td>Profile token to import using <a href="/method/contacts.importContactToken/">contacts.importContactToken</a>, will return user information.</td></tr></tbody></table>
 
 ### Phone number links
 
@@ -174,7 +174,7 @@ tg://resolve?phone=<phone_number>&text=<draft_text>&profile
 
 Parameters:
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>phone_number</code></td><td style="text-align: center;">Required</td><td>Phone number to resolve using <a href="/method/contacts.resolvePhone">contacts.resolvePhone</a></td></tr><tr><td><code>draft_text</code></td><td style="text-align: center;">Optional</td><td>UTF-8 text to pre-enter into the text input bar, if the user can write in the chat.<br>Before insertion:<br>- Validate that the text is valid UTF-8.<br>- If the text starts with a <code>@</code>, prepend a whitespace to it (to avoid triggering an <a href="/api/bots/inline">inline query</a>).<br>- Trim the text to <a href="/constructor/config">message_length_max</a> UTF-8 codepoints.</td></tr><tr><td><code>profile</code></td><td style="text-align: center;">Optional</td><td>If set, clicking on this link should open the user's profile page, not the chat with them.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>phone_number</code></td><td style="text-align: center;">Required</td><td>Phone number to resolve using <a href="/method/contacts.resolvePhone/">contacts.resolvePhone</a></td></tr><tr><td><code>draft_text</code></td><td style="text-align: center;">Optional</td><td>UTF-8 text to pre-enter into the text input bar, if the user can write in the chat.<br>Before insertion:<br>- Validate that the text is valid UTF-8.<br>- If the text starts with a <code>@</code>, prepend a whitespace to it (to avoid triggering an <a href="/api/bots/inline/">inline query</a>).<br>- Trim the text to <a href="/constructor/config/">message_length_max</a> UTF-8 codepoints.</td></tr><tr><td><code>profile</code></td><td style="text-align: center;">Optional</td><td>If set, clicking on this link should open the user's profile page, not the chat with them.</td></tr></tbody></table>
 
 Note that [chat invite links](#message-links) have the same syntax, but `<phone_number>` won't be a valid phone number.
 
@@ -202,7 +202,7 @@ tg://join?invite=<hash>
 
 Parameters:
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>hash</code></td><td style="text-align: center;">Required</td><td>Invite hash to <a href="/api/invites#invite-links">check or import&nbsp;»</a></td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>hash</code></td><td style="text-align: center;">Required</td><td>Invite hash to <a href="/api/invites/#invite-links">check or import&nbsp;»</a></td></tr></tbody></table>
 
 ### Chat folder links
 
@@ -222,7 +222,7 @@ tg://addlist?slug=<slug>
 
 Parameters:
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>slug</code></td><td style="text-align: center;">Required</td><td>Invite slug to <a href="/api/folders#shared-folders">check or import&nbsp;»</a></td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>slug</code></td><td style="text-align: center;">Required</td><td>Invite slug to <a href="/api/folders/#shared-folders">check or import&nbsp;»</a></td></tr></tbody></table>
 
 ### Message links
 
@@ -256,7 +256,7 @@ tg://privatepost?channel=<channel>&post=<id>&single&thread=<thread_id>&comment=<
 
 Parameters:
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>username</code></td><td style="text-align: center;">Required if public link</td><td>Dialog username.</td></tr><tr><td><code>channel</code></td><td style="text-align: center;">Required if private link</td><td>Channel or supergroup ID.</td></tr><tr><td><code>id</code></td><td style="text-align: center;">Required</td><td>Message ID.</td></tr><tr><td><code>single</code></td><td style="text-align: center;">Optional</td><td>For albums/grouped media, if set indicates that this is a link to a specific media in the album; otherwise, it is a link to the entire album.</td></tr><tr><td><code>thread_id</code></td><td style="text-align: center;">Optional</td><td>For <a href="/api/threads">message threads</a>, contains the thread ID.</td></tr><tr><td><code>comment</code></td><td style="text-align: center;">Optional</td><td>For <a href="/api/discussion">channel comments</a>, <code>username</code> will contain the channel username, <code>id</code> will contain the message ID of the channel message that started the comment section and this field will contain the message ID of the comment in the discussion group.</td></tr><tr><td><code>media_timestamp</code></td><td style="text-align: center;">Optional</td><td>Timestamp at which to start playing the media file present in the body or in the webpage preview of the message, in the following formats:<br>- Seconds: <code>123</code>, regex <code>^(\d+)$</code><br>- Minutes and seconds: <code>10:23</code>, example regex <code>^(\d+):(\d{1,2})$</code><br>- Hours, minutes and seconds: <code>1h23m10s</code>, example regex <code>^(?:(\d+)h)?(?:(\d{1,2})m)?(?:(\d{1,2})s)$</code></td></tr><tr><td><code>task_id</code></td><td style="text-align: center;">Optional</td><td>Positive integer ID of a specific task to highlight, when the linked message contains a <a href="/api/todo">checklist&nbsp;»</a>, corresponding to a <a href="/constructor/todoItem">todoItem</a>.<code>id</code>. Invalid (non-positive or non-numeric) values should be treated as an error.</td></tr><tr><td><code>option_id</code></td><td style="text-align: center;">Optional</td><td>base64url-encoded identifier of a specific <a href="/constructor/poll">poll&nbsp;»</a> option to highlight, when the linked message contains a poll, corresponding to a <a href="/constructor/pollAnswer">pollAnswer</a>.<code>option</code>. The decoded value must be valid UTF-8, otherwise it should be ignored.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>username</code></td><td style="text-align: center;">Required if public link</td><td>Dialog username.</td></tr><tr><td><code>channel</code></td><td style="text-align: center;">Required if private link</td><td>Channel or supergroup ID.</td></tr><tr><td><code>id</code></td><td style="text-align: center;">Required</td><td>Message ID.</td></tr><tr><td><code>single</code></td><td style="text-align: center;">Optional</td><td>For albums/grouped media, if set indicates that this is a link to a specific media in the album; otherwise, it is a link to the entire album.</td></tr><tr><td><code>thread_id</code></td><td style="text-align: center;">Optional</td><td>For <a href="/api/threads/">message threads</a>, contains the thread ID.</td></tr><tr><td><code>comment</code></td><td style="text-align: center;">Optional</td><td>For <a href="/api/discussion/">channel comments</a>, <code>username</code> will contain the channel username, <code>id</code> will contain the message ID of the channel message that started the comment section and this field will contain the message ID of the comment in the discussion group.</td></tr><tr><td><code>media_timestamp</code></td><td style="text-align: center;">Optional</td><td>Timestamp at which to start playing the media file present in the body or in the webpage preview of the message, in the following formats:<br>- Seconds: <code>123</code>, regex <code>^(\d+)$</code><br>- Minutes and seconds: <code>10:23</code>, example regex <code>^(\d+):(\d{1,2})$</code><br>- Hours, minutes and seconds: <code>1h23m10s</code>, example regex <code>^(?:(\d+)h)?(?:(\d{1,2})m)?(?:(\d{1,2})s)$</code></td></tr><tr><td><code>task_id</code></td><td style="text-align: center;">Optional</td><td>Positive integer ID of a specific task to highlight, when the linked message contains a <a href="/api/todo/">checklist&nbsp;»</a>, corresponding to a <a href="/constructor/todoItem/">todoItem</a>.<code>id</code>. Invalid (non-positive or non-numeric) values should be treated as an error.</td></tr><tr><td><code>option_id</code></td><td style="text-align: center;">Optional</td><td>base64url-encoded identifier of a specific <a href="/constructor/poll/">poll&nbsp;»</a> option to highlight, when the linked message contains a poll, corresponding to a <a href="/constructor/pollAnswer/">pollAnswer</a>.<code>option</code>. The decoded value must be valid UTF-8, otherwise it should be ignored.</td></tr></tbody></table>
 
 Note that since a [forum topic](/api/forum/#forum-topics) ID is actually the ID of the service message that created the topic, whenever the client resolves a [message link](#message-links) that points to a [messageActionTopicCreate](/constructor/messageActionTopicCreate/) service message, it should open the topic, instead.  
 Also, if the message ID is `1` and the linked-to supergroup is a forum, the "General" topic should be opened instead of the first message of the supergroup.
@@ -325,7 +325,7 @@ tg://message?slug=<slug>
 
 Parameters:
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>slug</code></td><td style="text-align: center;">Required</td><td>Slug to pass to <a href="/method/account.resolveBusinessChatLink">account.resolveBusinessChatLink</a> and link management methods.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>slug</code></td><td style="text-align: center;">Required</td><td>Slug to pass to <a href="/method/account.resolveBusinessChatLink/">account.resolveBusinessChatLink</a> and link management methods.</td></tr></tbody></table>
 
 ### Video chat/Livestream links
 
@@ -357,7 +357,7 @@ tg://resolve?domain=<username>&voicechat=<invite_hash>
 
 Parameters:
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>invite_hash</code></td><td style="text-align: center;">Optional</td><td>Invite hash exported if the <code>can_self_unmute</code> flag is set when calling <a href="/method/phone.exportGroupCallInvite">phone.exportGroupCallInvite</a>: should be passed to <a href="/method/phone.joinGroupCall">phone.joinGroupCall</a>, allows the user to speak in livestreams or muted group chats.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>invite_hash</code></td><td style="text-align: center;">Optional</td><td>Invite hash exported if the <code>can_self_unmute</code> flag is set when calling <a href="/method/phone.exportGroupCallInvite/">phone.exportGroupCallInvite</a>: should be passed to <a href="/method/phone.joinGroupCall/">phone.joinGroupCall</a>, allows the user to speak in livestreams or muted group chats.</td></tr></tbody></table>
 
 ### Conference links
 
@@ -399,7 +399,7 @@ tg://addemoji?set=<slug>
 
 Parameters:
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>slug</code></td><td style="text-align: center;">Required</td><td>Stickerset short name, used when <a href="/api/stickers#installing-stickersets">installing stickers</a>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>slug</code></td><td style="text-align: center;">Required</td><td>Stickerset short name, used when <a href="/api/stickers/#installing-stickersets">installing stickers</a>.</td></tr></tbody></table>
 
 ### Custom emoji stickerset links
 
@@ -419,7 +419,7 @@ tg://addemoji?set=<slug>
 
 Parameters:
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>slug</code></td><td style="text-align: center;">Required</td><td>Stickerset short name, used when <a href="/api/stickers#installing-stickersets">installing stickers</a>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>slug</code></td><td style="text-align: center;">Required</td><td>Stickerset short name, used when <a href="/api/stickers/#installing-stickersets">installing stickers</a>.</td></tr></tbody></table>
 
 ### Story links
 
@@ -439,7 +439,7 @@ tg://resolve?domain=<username>&story=<story_id>
 
 Parameters:
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>username</code></td><td style="text-align: center;">Required</td><td>Username of the user or channel that posted the story.</td></tr><tr><td><code>story_id</code></td><td style="text-align: center;">Required</td><td>ID of the <a href="/api/stories#watching-stories">Telegram Story to be fetched and viewed as described here&nbsp;»</a>.<br>If equal to <code>live</code>, this is a <a href="#live-story-links">live story link »</a>, instead.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>username</code></td><td style="text-align: center;">Required</td><td>Username of the user or channel that posted the story.</td></tr><tr><td><code>story_id</code></td><td style="text-align: center;">Required</td><td>ID of the <a href="/api/stories/#watching-stories">Telegram Story to be fetched and viewed as described here&nbsp;»</a>.<br>If equal to <code>live</code>, this is a <a href="#live-story-links">live story link »</a>, instead.</td></tr></tbody></table>
 
 #### Live story links
 
@@ -480,7 +480,7 @@ tg://resolve?domain=<username>&album=<album_id>
 
 Parameters:
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>username</code></td><td style="text-align: center;">Required</td><td>Username of the peer that owns the collection.</td></tr><tr><td><code>album_id</code></td><td style="text-align: center;">Required</td><td>Integer ID of the <a href="/api/stories#story-albums">story album »</a>, from <a href="/constructor/storyAlbum">storyAlbum</a>.<code>album_id</code>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>username</code></td><td style="text-align: center;">Required</td><td>Username of the peer that owns the collection.</td></tr><tr><td><code>album_id</code></td><td style="text-align: center;">Required</td><td>Integer ID of the <a href="/api/stories/#story-albums">story album »</a>, from <a href="/constructor/storyAlbum/">storyAlbum</a>.<code>album_id</code>.</td></tr></tbody></table>
 
 ### Post story links
 
@@ -518,7 +518,7 @@ tg://newbot?manager=<manager_bot_username>&username=<suggested_bot_username>&nam
 
 Parameters:
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>manager_bot_username</code></td><td style="text-align: center;">Required</td><td>Username of the manager bot, passed to <a href="/method/bots.createBot">bots.createBot</a>.<code>manager_id</code>.<br>Before using this value, resolve it and make sure that it's associated to a manager bot (i.e. the resolved <a href="/constructor/user">user</a> must have the <code>bot_can_manage_bots</code> flag set).</td></tr><tr><td><code>suggested_bot_username</code></td><td style="text-align: center;">Optional</td><td>Suggested username for the managed bot that will be created, passed to <a href="/method/bots.createBot">bots.createBot</a>.<code>username</code>.<br>If non-empty, and the passed value does <strong>not</strong> end in <code>bot</code>, append <code>bot</code> to the value before recommending it to the user.<br>Can be empty, in which case the user must choose a username before invoking <a href="/method/bots.createBot">bots.createBot</a>.</td></tr><tr><td><code>suggested_bot_name</code></td><td style="text-align: center;">Optional</td><td>Suggested name for the managed bot that will be created, passed to <a href="/method/bots.createBot">bots.createBot</a>.<code>name</code>.<br>Can be empty, in which case the user must choose a name before invoking <a href="/method/bots.createBot">bots.createBot</a>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>manager_bot_username</code></td><td style="text-align: center;">Required</td><td>Username of the manager bot, passed to <a href="/method/bots.createBot/">bots.createBot</a>.<code>manager_id</code>.<br>Before using this value, resolve it and make sure that it's associated to a manager bot (i.e. the resolved <a href="/constructor/user/">user</a> must have the <code>bot_can_manage_bots</code> flag set).</td></tr><tr><td><code>suggested_bot_username</code></td><td style="text-align: center;">Optional</td><td>Suggested username for the managed bot that will be created, passed to <a href="/method/bots.createBot/">bots.createBot</a>.<code>username</code>.<br>If non-empty, and the passed value does <strong>not</strong> end in <code>bot</code>, append <code>bot</code> to the value before recommending it to the user.<br>Can be empty, in which case the user must choose a username before invoking <a href="/method/bots.createBot/">bots.createBot</a>.</td></tr><tr><td><code>suggested_bot_name</code></td><td style="text-align: center;">Optional</td><td>Suggested name for the managed bot that will be created, passed to <a href="/method/bots.createBot/">bots.createBot</a>.<code>name</code>.<br>Can be empty, in which case the user must choose a name before invoking <a href="/method/bots.createBot/">bots.createBot</a>.</td></tr></tbody></table>
 
 ### Boost links
 
@@ -605,7 +605,7 @@ tg://proxy?server=<server>&port=<port>&secret=<secret>
 
 Parameters:
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>server</code></td><td style="text-align: center;">Required</td><td>MTProxy server IP address or host</td></tr><tr><td><code>port</code></td><td style="text-align: center;">Required</td><td>MTProxy server port</td></tr><tr><td><code>secret</code></td><td style="text-align: center;">Required</td><td>MTProxy <a href="/mtproto/mtproto-transports#transport-obfuscation">secret&nbsp;»</a></td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>server</code></td><td style="text-align: center;">Required</td><td>MTProxy server IP address or host</td></tr><tr><td><code>port</code></td><td style="text-align: center;">Required</td><td>MTProxy server port</td></tr><tr><td><code>secret</code></td><td style="text-align: center;">Required</td><td>MTProxy <a href="/mtproto/mtproto-transports/#transport-obfuscation">secret&nbsp;»</a></td></tr></tbody></table>
 
 #### SOCKS5 proxy links
 
@@ -645,7 +645,7 @@ tg://addtheme?slug=<name>
 
 Parameters:
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>name</code></td><td style="text-align: center;">Required</td><td>Theme short name used when <a href="/api/themes#installing-themes">installing themes&nbsp;»</a></td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>name</code></td><td style="text-align: center;">Required</td><td>Theme short name used when <a href="/api/themes/#installing-themes">installing themes&nbsp;»</a></td></tr></tbody></table>
 
 ### AI compose tone links
 
@@ -667,7 +667,7 @@ tg://addstyle?slug=<slug>
 
 Parameters:
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>slug</code></td><td style="text-align: center;">Required</td><td>Unique <a href="/api/ai#ai-compose-tones">AI composer tone&nbsp;»</a> slug, as found in <a href="/constructor/aiComposeTone">aiComposeTone</a>.<code>slug</code>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>slug</code></td><td style="text-align: center;">Required</td><td>Unique <a href="/api/ai/#ai-compose-tones">AI composer tone&nbsp;»</a> slug, as found in <a href="/constructor/aiComposeTone/">aiComposeTone</a>.<code>slug</code>.</td></tr></tbody></table>
 
 ### Wallpaper links
 
@@ -691,7 +691,7 @@ tg://bg?slug=<slug>&mode=<mode>
 
 Parameters:
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>slug</code></td><td style="text-align: center;">Required</td><td>Wallpaper slug used to obtain the image file using <a href="/method/account.getWallPaper">account.getWallPaper</a>.</td></tr><tr><td><code>mode</code></td><td style="text-align: center;">Optional</td><td>A combination of <code>blur</code> and <code>motion</code> (joined by <code>+</code>) to enable blurring and/or parallax motion as specified in the <a href="/api/wallpapers#image-wallpapers">docs&nbsp;»</a>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>slug</code></td><td style="text-align: center;">Required</td><td>Wallpaper slug used to obtain the image file using <a href="/method/account.getWallPaper/">account.getWallPaper</a>.</td></tr><tr><td><code>mode</code></td><td style="text-align: center;">Optional</td><td>A combination of <code>blur</code> and <code>motion</code> (joined by <code>+</code>) to enable blurring and/or parallax motion as specified in the <a href="/api/wallpapers/#image-wallpapers">docs&nbsp;»</a>.</td></tr></tbody></table>
 
 #### Solid fill wallpapers
 
@@ -773,7 +773,7 @@ tg://bg?slug=<slug>&intensity=<intensity>&bg_color=<bg_color>&mode=<mode>
 
 Parameters:
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>slug</code></td><td style="text-align: center;">Required</td><td>Wallpaper slug used to obtain the pattern file using <a href="/method/account.getWallPaper">account.getWallPaper</a>.</td></tr><tr><td><code>intensity</code></td><td style="text-align: center;">Required</td><td>A value ranging from -100 to 100, used to combine the pattern with the fill <a href="/api/wallpapers#pattern-wallpapers">as specified in the docs</a>.</td></tr><tr><td><code>bg_color</code></td><td style="text-align: center;">Required</td><td>Fill color in hex RGB format.</td></tr><tr><td><code>mode</code></td><td style="text-align: center;">Optional</td><td><code>motion</code> to enable parallax motion as specified in the <a href="/api/wallpapers#image-wallpapers">docs</a>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>slug</code></td><td style="text-align: center;">Required</td><td>Wallpaper slug used to obtain the pattern file using <a href="/method/account.getWallPaper/">account.getWallPaper</a>.</td></tr><tr><td><code>intensity</code></td><td style="text-align: center;">Required</td><td>A value ranging from -100 to 100, used to combine the pattern with the fill <a href="/api/wallpapers/#pattern-wallpapers">as specified in the docs</a>.</td></tr><tr><td><code>bg_color</code></td><td style="text-align: center;">Required</td><td>Fill color in hex RGB format.</td></tr><tr><td><code>mode</code></td><td style="text-align: center;">Optional</td><td><code>motion</code> to enable parallax motion as specified in the <a href="/api/wallpapers/#image-wallpapers">docs</a>.</td></tr></tbody></table>
 
 #### Gradient pattern wallpapers
 
@@ -793,7 +793,7 @@ tg://bg?slug=<slug>&intensity=<intensity>&bg_color=<top_color>-<bottom_color>&ro
 
 Parameters:
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>slug</code></td><td style="text-align: center;">Required</td><td>Wallpaper slug used to obtain the pattern file using <a href="/method/account.getWallPaper">account.getWallPaper</a>.</td></tr><tr><td><code>intensity</code></td><td style="text-align: center;">Required</td><td>A value ranging from -100 to 100, used to combine the pattern with the fill <a href="/api/wallpapers#pattern-wallpapers">as specified in the docs</a>.</td></tr><tr><td><code>top_color</code></td><td style="text-align: center;">Required</td><td>Top gradient color in hex RGB format.</td></tr><tr><td><code>bottom_color</code></td><td style="text-align: center;">Required</td><td>Bottom gradient color in hex RGB format.</td></tr><tr><td><code>rotation</code></td><td style="text-align: center;">Optional</td><td>Clockwise rotation angle of the gradient, in degrees; 0-359. Must be always divisible by 45, default to 0 if not set.</td></tr><tr><td><code>mode</code></td><td style="text-align: center;">Optional</td><td><code>motion</code> to enable parallax motion as specified in the <a href="/api/wallpapers#image-wallpapers">docs</a>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>slug</code></td><td style="text-align: center;">Required</td><td>Wallpaper slug used to obtain the pattern file using <a href="/method/account.getWallPaper/">account.getWallPaper</a>.</td></tr><tr><td><code>intensity</code></td><td style="text-align: center;">Required</td><td>A value ranging from -100 to 100, used to combine the pattern with the fill <a href="/api/wallpapers/#pattern-wallpapers">as specified in the docs</a>.</td></tr><tr><td><code>top_color</code></td><td style="text-align: center;">Required</td><td>Top gradient color in hex RGB format.</td></tr><tr><td><code>bottom_color</code></td><td style="text-align: center;">Required</td><td>Bottom gradient color in hex RGB format.</td></tr><tr><td><code>rotation</code></td><td style="text-align: center;">Optional</td><td>Clockwise rotation angle of the gradient, in degrees; 0-359. Must be always divisible by 45, default to 0 if not set.</td></tr><tr><td><code>mode</code></td><td style="text-align: center;">Optional</td><td><code>motion</code> to enable parallax motion as specified in the <a href="/api/wallpapers/#image-wallpapers">docs</a>.</td></tr></tbody></table>
 
 #### Free-form gradient pattern wallpapers
 
@@ -815,7 +815,7 @@ tg://bg?slug=<slug>&intensity=<intensity>&bg_color=<hex_color1>~<hex_color2>~<he
 
 Parameters:
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>slug</code></td><td style="text-align: center;">Required</td><td>Wallpaper slug used to obtain the pattern file using <a href="/method/account.getWallPaper">account.getWallPaper</a>.</td></tr><tr><td><code>intensity</code></td><td style="text-align: center;">Required</td><td>A value ranging from -100 to 100, used to combine the pattern with the fill <a href="/api/wallpapers#pattern-wallpapers">as specified in the docs</a>.</td></tr><tr><td><code>hex_color1</code></td><td style="text-align: center;">Required</td><td>First gradient color in hex RGB format.</td></tr><tr><td><code>hex_color2</code></td><td style="text-align: center;">Required</td><td>Second gradient color in hex RGB format.</td></tr><tr><td><code>hex_color3</code></td><td style="text-align: center;">Required</td><td>Third gradient color in hex RGB format.</td></tr><tr><td><code>hex_color4</code></td><td style="text-align: center;">Optional</td><td>Fourth gradient color in hex RGB format.</td></tr><tr><td><code>mode</code></td><td style="text-align: center;">Optional</td><td><code>motion</code> to enable parallax motion as specified in the <a href="/api/wallpapers#image-wallpapers">docs</a>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>slug</code></td><td style="text-align: center;">Required</td><td>Wallpaper slug used to obtain the pattern file using <a href="/method/account.getWallPaper/">account.getWallPaper</a>.</td></tr><tr><td><code>intensity</code></td><td style="text-align: center;">Required</td><td>A value ranging from -100 to 100, used to combine the pattern with the fill <a href="/api/wallpapers/#pattern-wallpapers">as specified in the docs</a>.</td></tr><tr><td><code>hex_color1</code></td><td style="text-align: center;">Required</td><td>First gradient color in hex RGB format.</td></tr><tr><td><code>hex_color2</code></td><td style="text-align: center;">Required</td><td>Second gradient color in hex RGB format.</td></tr><tr><td><code>hex_color3</code></td><td style="text-align: center;">Required</td><td>Third gradient color in hex RGB format.</td></tr><tr><td><code>hex_color4</code></td><td style="text-align: center;">Optional</td><td>Fourth gradient color in hex RGB format.</td></tr><tr><td><code>mode</code></td><td style="text-align: center;">Optional</td><td><code>motion</code> to enable parallax motion as specified in the <a href="/api/wallpapers/#image-wallpapers">docs</a>.</td></tr></tbody></table>
 
 ### Bot links
 
@@ -837,7 +837,7 @@ Note that [referral links have a similar syntax, with a mandatory prefix in `par
 
 Parameters:
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>bot_username</code></td><td style="text-align: center;">Required</td><td>Bot username</td></tr><tr><td><code>parameter</code></td><td style="text-align: center;">Optional</td><td>Start parameter, up to 64 base64url characters: if provided and the <code>bot_username</code> is indeed a bot, the text input bar should be replaced with a <code>Start</code> button (even if the user has already started the bot) that should invoke <a href="/method/messages.startBot">messages.startBot</a> with the appropriate <code>parameter</code> once clicked. Note that if the <code>bot_username</code> is equal to the <a href="/api/config#premium-bot-username"><code>premium_bot_username</code> configuration value&nbsp;»</a>, clicking on this link should immediately invoke <a href="/method/messages.startBot">messages.startBot</a> with the appropriate <code>parameter</code>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>bot_username</code></td><td style="text-align: center;">Required</td><td>Bot username</td></tr><tr><td><code>parameter</code></td><td style="text-align: center;">Optional</td><td>Start parameter, up to 64 base64url characters: if provided and the <code>bot_username</code> is indeed a bot, the text input bar should be replaced with a <code>Start</code> button (even if the user has already started the bot) that should invoke <a href="/method/messages.startBot/">messages.startBot</a> with the appropriate <code>parameter</code> once clicked. Note that if the <code>bot_username</code> is equal to the <a href="/api/config/#premium-bot-username"><code>premium_bot_username</code> configuration value&nbsp;»</a>, clicking on this link should immediately invoke <a href="/method/messages.startBot/">messages.startBot</a> with the appropriate <code>parameter</code>.</td></tr></tbody></table>
 
 ### Group/channel bot links
 
@@ -889,7 +889,7 @@ tg://resolve?domain=<bot_username>&startchannel&admin=<permissions>
 
 Parameters:
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>bot_username</code></td><td style="text-align: center;">Required</td><td>Bot username</td></tr><tr><td><code>parameter</code></td><td style="text-align: center;">Optional for group links, absent in channel links</td><td>Start parameter, only for group links, up to 64 base64url characters: if provided and the <code>bot_username</code> is indeed a bot, <a href="/method/messages.startBot">messages.startBot</a> with the appropriate <code>parameter</code> should be invoked after adding the bot to the group.</td></tr><tr><td><code>admin</code></td><td style="text-align: center;">Optional for group links, required for channel links</td><td>A combination of the following identifiers separated by <code>+</code>, each corresponding to the appropriate flag in the <a href="/constructor/chatAdminRights">chatAdminRights&nbsp;»</a> constructor:<br>- <code>change_info</code> - <a href="/constructor/chatAdminRights">chatAdminRights.change_info</a><br>- <code>post_messages</code> - <a href="/constructor/chatAdminRights">chatAdminRights.post_messages</a><br>- <code>edit_messages</code> - <a href="/constructor/chatAdminRights">chatAdminRights.edit_messages</a><br>- <code>delete_messages</code> - <a href="/constructor/chatAdminRights">chatAdminRights.delete_messages</a><br>- <code>restrict_members</code> - <a href="/constructor/chatAdminRights">chatAdminRights.ban_users</a><br>- <code>invite_users</code> - <a href="/constructor/chatAdminRights">chatAdminRights.invite_users</a><br>- <code>pin_messages</code> - <a href="/constructor/chatAdminRights">chatAdminRights.pin_messages</a><br>- <code>manage_topics</code> - <a href="/constructor/chatAdminRights">chatAdminRights.manage_topics</a><br>- <code>promote_members</code> - <a href="/constructor/chatAdminRights">chatAdminRights.add_admins</a><br>- <code>manage_video_chats</code> - <a href="/constructor/chatAdminRights">chatAdminRights.manage_call</a><br>- <code>anonymous</code> - <a href="/constructor/chatAdminRights">chatAdminRights.anonymous</a><br>- <code>manage_chat</code> - <a href="/constructor/chatAdminRights">chatAdminRights.other</a><br>- <code>post_stories</code> - <a href="/constructor/chatAdminRights">chatAdminRights.post_stories</a><br>- <code>edit_stories</code> - <a href="/constructor/chatAdminRights">chatAdminRights.edit_stories</a><br>- <code>delete_stories</code> - <a href="/constructor/chatAdminRights">chatAdminRights.delete_stories</a><br>- <code>manage_direct_messages</code> - <a href="/constructor/chatAdminRights">chatAdminRights.manage_direct_messages</a><br>- <code>manage_tags</code> - <a href="/constructor/chatAdminRights">chatAdminRights.manage_ranks</a></td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>bot_username</code></td><td style="text-align: center;">Required</td><td>Bot username</td></tr><tr><td><code>parameter</code></td><td style="text-align: center;">Optional for group links, absent in channel links</td><td>Start parameter, only for group links, up to 64 base64url characters: if provided and the <code>bot_username</code> is indeed a bot, <a href="/method/messages.startBot/">messages.startBot</a> with the appropriate <code>parameter</code> should be invoked after adding the bot to the group.</td></tr><tr><td><code>admin</code></td><td style="text-align: center;">Optional for group links, required for channel links</td><td>A combination of the following identifiers separated by <code>+</code>, each corresponding to the appropriate flag in the <a href="/constructor/chatAdminRights/">chatAdminRights&nbsp;»</a> constructor:<br>- <code>change_info</code> - <a href="/constructor/chatAdminRights/">chatAdminRights.change_info</a><br>- <code>post_messages</code> - <a href="/constructor/chatAdminRights/">chatAdminRights.post_messages</a><br>- <code>edit_messages</code> - <a href="/constructor/chatAdminRights/">chatAdminRights.edit_messages</a><br>- <code>delete_messages</code> - <a href="/constructor/chatAdminRights/">chatAdminRights.delete_messages</a><br>- <code>restrict_members</code> - <a href="/constructor/chatAdminRights/">chatAdminRights.ban_users</a><br>- <code>invite_users</code> - <a href="/constructor/chatAdminRights/">chatAdminRights.invite_users</a><br>- <code>pin_messages</code> - <a href="/constructor/chatAdminRights/">chatAdminRights.pin_messages</a><br>- <code>manage_topics</code> - <a href="/constructor/chatAdminRights/">chatAdminRights.manage_topics</a><br>- <code>promote_members</code> - <a href="/constructor/chatAdminRights/">chatAdminRights.add_admins</a><br>- <code>manage_video_chats</code> - <a href="/constructor/chatAdminRights/">chatAdminRights.manage_call</a><br>- <code>anonymous</code> - <a href="/constructor/chatAdminRights/">chatAdminRights.anonymous</a><br>- <code>manage_chat</code> - <a href="/constructor/chatAdminRights/">chatAdminRights.other</a><br>- <code>post_stories</code> - <a href="/constructor/chatAdminRights/">chatAdminRights.post_stories</a><br>- <code>edit_stories</code> - <a href="/constructor/chatAdminRights/">chatAdminRights.edit_stories</a><br>- <code>delete_stories</code> - <a href="/constructor/chatAdminRights/">chatAdminRights.delete_stories</a><br>- <code>manage_direct_messages</code> - <a href="/constructor/chatAdminRights/">chatAdminRights.manage_direct_messages</a><br>- <code>manage_tags</code> - <a href="/constructor/chatAdminRights/">chatAdminRights.manage_ranks</a></td></tr></tbody></table>
 
 ### Game links
 
@@ -915,7 +915,7 @@ tg://resolve?domain=<bot_username>&game=<short_name>
 
 Parameters:
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>bot_username</code></td><td style="text-align: center;">Required</td><td>Username of the bot that owns the <a href="/api/bots/games">game</a></td></tr><tr><td><code>short_name</code></td><td style="text-align: center;">Required</td><td>Game short name</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>bot_username</code></td><td style="text-align: center;">Required</td><td>Username of the bot that owns the <a href="/api/bots/games/">game</a></td></tr><tr><td><code>short_name</code></td><td style="text-align: center;">Required</td><td>Game short name</td></tr></tbody></table>
 
 ### Settings links
 
@@ -1382,7 +1382,7 @@ tg://invoice?slug=<slug>
 
 Parameters:
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>slug</code></td><td style="text-align: center;">Required</td><td>The invoice slug to be used <a href="/api/payments">during payment&nbsp;»</a>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>slug</code></td><td style="text-align: center;">Required</td><td>The invoice slug to be used <a href="/api/payments/">during payment&nbsp;»</a>.</td></tr></tbody></table>
 
 ### Language pack links
 
@@ -1402,7 +1402,7 @@ tg://setlanguage?lang=<slug>
 
 Parameters:
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>slug</code></td><td style="text-align: center;">Required</td><td>Name of language pack to import using <a href="/method/langpack.getLangPack">langpack.getLangPack</a></td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>slug</code></td><td style="text-align: center;">Required</td><td>Name of language pack to import using <a href="/method/langpack.getLangPack/">langpack.getLangPack</a></td></tr></tbody></table>
 
 ### Telegram Passport links
 
@@ -1434,7 +1434,7 @@ tg://confirmphone?phone=<phone>&hash=<hash>
 
 Parameters:
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>phone</code></td><td style="text-align: center;">Required</td><td>Phone number</td></tr><tr><td><code>hash</code></td><td style="text-align: center;">Required</td><td>Confirmation hash to handle <a href="/api/account-deletion">as described here&nbsp;»</a></td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>phone</code></td><td style="text-align: center;">Required</td><td>Phone number</td></tr><tr><td><code>hash</code></td><td style="text-align: center;">Required</td><td>Confirmation hash to handle <a href="/api/account-deletion/">as described here&nbsp;»</a></td></tr></tbody></table>
 
 ### Premium multigift links
 
@@ -1450,7 +1450,7 @@ tg://premium_multigift?ref=<referrer>
 
 Parameters:
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>referrer</code></td><td style="text-align: center;">Optional</td><td>Used by official apps for analytics using <a href="/method/help.saveAppLog">help.saveAppLog</a>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>referrer</code></td><td style="text-align: center;">Optional</td><td>Used by official apps for analytics using <a href="/method/help.saveAppLog/">help.saveAppLog</a>.</td></tr></tbody></table>
 
 ### Premium referrer links
 
@@ -1464,7 +1464,7 @@ tg://premium_offer?ref=<referrer>
 
 Parameters:
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>referrer</code></td><td style="text-align: center;">Optional</td><td>Used by official apps for analytics using <a href="/method/help.saveAppLog">help.saveAppLog</a></td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>referrer</code></td><td style="text-align: center;">Optional</td><td>Used by official apps for analytics using <a href="/method/help.saveAppLog/">help.saveAppLog</a></td></tr></tbody></table>
 
 ### Premium giftcode links
 
@@ -1484,7 +1484,7 @@ t.me/giftcode/<slug>
 
 Parameters:
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>slug</code></td><td style="text-align: center;">Optional</td><td>Gift code slug to be passed to <a href="/method/payments.checkGiftCode">payments.checkGiftCode</a> to obtain further info, and eventually to <a href="/method/payments.applyGiftCode">payments.applyGiftCode</a> to apply it. See the <a href="/api/giveaways">giveaways</a> documentation for more info.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>slug</code></td><td style="text-align: center;">Optional</td><td>Gift code slug to be passed to <a href="/method/payments.checkGiftCode/">payments.checkGiftCode</a> to obtain further info, and eventually to <a href="/method/payments.applyGiftCode/">payments.applyGiftCode</a> to apply it. See the <a href="/api/giveaways/">giveaways</a> documentation for more info.</td></tr></tbody></table>
 
 ### QR code login links
 
@@ -1498,7 +1498,7 @@ tg://login?token=<base64encodedtoken>
 
 Parameters:
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>server</code></td><td style="text-align: center;">Required</td><td>Base64URL-encoded <a href="/api/qr-login">QR code login token</a></td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>server</code></td><td style="text-align: center;">Required</td><td>Base64URL-encoded <a href="/api/qr-login/">QR code login token</a></td></tr></tbody></table>
 
 ### Main Mini App links
 
@@ -1526,7 +1526,7 @@ tg://resolve?domain=<bot_username>&startapp=<start_parameter>&mode=<mode>
 
 Parameters:
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>bot_username</code></td><td style="text-align: center;">Required</td><td>Username of the bot that owns the <a href="/api/bots/webapps#main-mini-apps">main mini app&nbsp;»</a></td></tr><tr><td><code>start_parameter</code></td><td style="text-align: center;">Optional</td><td>If provided, should be passed to <a href="/method/messages.requestMainWebView">messages.requestMainWebView</a>.<code>start_param</code></td></tr><tr><td><code>mode</code></td><td style="text-align: center;">Optional</td><td>If equal to <code>compact</code>, the <a href="/method/messages.requestMainWebView">messages.requestMainWebView</a>.<code>compact</code> flag must be set.<br>If equal to <code>fullscreen</code>, the <a href="/method/messages.requestMainWebView">messages.requestMainWebView</a>.<code>fullscreen</code> flag must be set.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>bot_username</code></td><td style="text-align: center;">Required</td><td>Username of the bot that owns the <a href="/api/bots/webapps/#main-mini-apps">main mini app&nbsp;»</a></td></tr><tr><td><code>start_parameter</code></td><td style="text-align: center;">Optional</td><td>If provided, should be passed to <a href="/method/messages.requestMainWebView/">messages.requestMainWebView</a>.<code>start_param</code></td></tr><tr><td><code>mode</code></td><td style="text-align: center;">Optional</td><td>If equal to <code>compact</code>, the <a href="/method/messages.requestMainWebView/">messages.requestMainWebView</a>.<code>compact</code> flag must be set.<br>If equal to <code>fullscreen</code>, the <a href="/method/messages.requestMainWebView/">messages.requestMainWebView</a>.<code>fullscreen</code> flag must be set.</td></tr></tbody></table>
 
 ### Direct mini app links
 
@@ -1552,7 +1552,7 @@ Note that [Main Mini App links](#main-mini-app-links) have a similar syntax, _wi
 
 Parameters:
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>bot_username</code></td><td style="text-align: center;">Required</td><td>Username of the bot that owns the <a href="/api/bots/games">game</a></td></tr><tr><td><code>appname</code></td><td style="text-align: center;">Required</td><td>Mini app short name, to pass to <a href="/constructor/inputBotAppShortName">inputBotAppShortName</a>.<code>short_name</code> when invoking <a href="/method/messages.getBotApp">messages.getBotApp</a></td></tr><tr><td><code>startapp</code></td><td style="text-align: center;">Optional</td><td><code>start_param</code> to pass to <a href="/method/messages.requestAppWebView">messages.requestAppWebView</a></td></tr><tr><td><code>mode</code></td><td style="text-align: center;">Optional</td><td>If equal to <code>compact</code>, the <a href="/method/messages.requestAppWebView">messages.requestAppWebView</a>.<code>compact</code> flag must be set.<br>If equal to <code>fullscreen</code>, the <a href="/method/messages.requestAppWebView">messages.requestAppWebView</a>.<code>fullscreen</code> flag must be set.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>bot_username</code></td><td style="text-align: center;">Required</td><td>Username of the bot that owns the <a href="/api/bots/games/">game</a></td></tr><tr><td><code>appname</code></td><td style="text-align: center;">Required</td><td>Mini app short name, to pass to <a href="/constructor/inputBotAppShortName/">inputBotAppShortName</a>.<code>short_name</code> when invoking <a href="/method/messages.getBotApp/">messages.getBotApp</a></td></tr><tr><td><code>startapp</code></td><td style="text-align: center;">Optional</td><td><code>start_param</code> to pass to <a href="/method/messages.requestAppWebView/">messages.requestAppWebView</a></td></tr><tr><td><code>mode</code></td><td style="text-align: center;">Optional</td><td>If equal to <code>compact</code>, the <a href="/method/messages.requestAppWebView/">messages.requestAppWebView</a>.<code>compact</code> flag must be set.<br>If equal to <code>fullscreen</code>, the <a href="/method/messages.requestAppWebView/">messages.requestAppWebView</a>.<code>fullscreen</code> flag must be set.</td></tr></tbody></table>
 
 ### Bot attachment or side menu links
 
@@ -1584,7 +1584,7 @@ tg://resolve?domain=<bot_username>&startattach=<start_parameter>
 
 Parameters:
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>bot_username</code></td><td style="text-align: center;">Required</td><td>Username of the bot that owns the <a href="/api/bots/attach">attachment/side menu entry</a></td></tr><tr><td><code>start_parameter</code></td><td style="text-align: center;">Optional</td><td>If provided, should be passed to <a href="/method/messages.requestWebView">messages.requestWebView</a>.<code>start_param</code></td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>bot_username</code></td><td style="text-align: center;">Required</td><td>Username of the bot that owns the <a href="/api/bots/attach/">attachment/side menu entry</a></td></tr><tr><td><code>start_parameter</code></td><td style="text-align: center;">Optional</td><td>If provided, should be passed to <a href="/method/messages.requestWebView/">messages.requestWebView</a>.<code>start_param</code></td></tr></tbody></table>
 
 #### Open in specific chat
 
@@ -1615,7 +1615,7 @@ If the specified chat is not supported by the [attachMenuBot](/constructor/attac
 
 Parameters:
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>username</code></td><td style="text-align: center;">Required for <a href="#public-username-links">username links</a></td><td>Username of chat where to open the mini app</td></tr><tr><td><code>phone_number</code></td><td style="text-align: center;">Required for <a href="#phone-number-links">phone number links</a></td><td>Phone number of private chat where to the open mini app</td></tr><tr><td><code>bot_username</code></td><td style="text-align: center;">Required</td><td>Username of the bot that owns the <a href="/api/bots/attach">attachment/side menu</a></td></tr><tr><td><code>start_parameter</code></td><td style="text-align: center;">Optional</td><td>If provided, should be passed to <a href="/method/messages.requestWebView">messages.requestWebView</a>.<code>start_param</code></td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>username</code></td><td style="text-align: center;">Required for <a href="#public-username-links">username links</a></td><td>Username of chat where to open the mini app</td></tr><tr><td><code>phone_number</code></td><td style="text-align: center;">Required for <a href="#phone-number-links">phone number links</a></td><td>Phone number of private chat where to the open mini app</td></tr><tr><td><code>bot_username</code></td><td style="text-align: center;">Required</td><td>Username of the bot that owns the <a href="/api/bots/attach/">attachment/side menu</a></td></tr><tr><td><code>start_parameter</code></td><td style="text-align: center;">Optional</td><td>If provided, should be passed to <a href="/method/messages.requestWebView/">messages.requestWebView</a>.<code>start_param</code></td></tr></tbody></table>
 
 #### Open in any chat
 
@@ -1637,7 +1637,7 @@ tg://resolve?domain=<bot_username>&startattach=<start_parameter>&choose=users+bo
 
 Parameters:
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>bot_username</code></td><td style="text-align: center;">Required</td><td>Username of the bot that owns the <a href="/api/bots/attach">attachment/side menu</a></td></tr><tr><td><code>start_parameter</code></td><td style="text-align: center;">Optional</td><td>If provided, should be passed to <a href="/method/messages.requestWebView">messages.requestWebView</a>.<code>start_param</code></td></tr><tr><td><code>choose</code></td><td style="text-align: center;">Optional</td><td>A combination of <code>users</code>, <code>bots</code>, <code>groups</code>, <code>channels</code> separated by <code>+</code>: indicates the dialog types to show in the dialog selection popup: must be intersected with the dialog types contained in the <a href="/constructor/attachMenuBot">attachMenuBot</a>.<code>peer_types</code> field before use.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>bot_username</code></td><td style="text-align: center;">Required</td><td>Username of the bot that owns the <a href="/api/bots/attach/">attachment/side menu</a></td></tr><tr><td><code>start_parameter</code></td><td style="text-align: center;">Optional</td><td>If provided, should be passed to <a href="/method/messages.requestWebView/">messages.requestWebView</a>.<code>start_param</code></td></tr><tr><td><code>choose</code></td><td style="text-align: center;">Optional</td><td>A combination of <code>users</code>, <code>bots</code>, <code>groups</code>, <code>channels</code> separated by <code>+</code>: indicates the dialog types to show in the dialog selection popup: must be intersected with the dialog types contained in the <a href="/constructor/attachMenuBot/">attachMenuBot</a>.<code>peer_types</code> field before use.</td></tr></tbody></table>
 
 ### Stars topup link
 
@@ -1672,7 +1672,7 @@ tg://nft?slug=<slug>
 
 Parameters:
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>slug</code></td><td style="text-align: center;">Required</td><td>Identifier of the collectible gift, to pass to <a href="/method/payments.getUniqueStarGift">payments.getUniqueStarGift</a>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>slug</code></td><td style="text-align: center;">Required</td><td>Identifier of the collectible gift, to pass to <a href="/method/payments.getUniqueStarGift/">payments.getUniqueStarGift</a>.</td></tr></tbody></table>
 
 ### Gift collection links
 
@@ -1693,7 +1693,7 @@ tg://resolve?domain=<username>&collection=<collection_id>
 
 Parameters:
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>username</code></td><td style="text-align: center;">Required</td><td>Username of the peer that owns the collection.</td></tr><tr><td><code>collection_id</code></td><td style="text-align: center;">Required</td><td>Integer ID of the <a href="/api/gifts#gift-collections">star gift collection »</a>, from <a href="/constructor/starGiftCollection">starGiftCollection</a>.<code>collection_id</code>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>username</code></td><td style="text-align: center;">Required</td><td>Username of the peer that owns the collection.</td></tr><tr><td><code>collection_id</code></td><td style="text-align: center;">Required</td><td>Integer ID of the <a href="/api/gifts/#gift-collections">star gift collection »</a>, from <a href="/constructor/starGiftCollection/">starGiftCollection</a>.<code>collection_id</code>.</td></tr></tbody></table>
 
 ### Auction links
 
@@ -1713,7 +1713,7 @@ tg://stargift_auction?slug=<slug>
 
 Parameters:
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>slug</code></td><td style="text-align: center;">Required</td><td>Auction slug, use it to generate a <a href="/constructor/inputStarGiftAuctionSlug">inputStarGiftAuctionSlug</a>, passed to <a href="/method/payments.getStarGiftAuctionState">payments.getStarGiftAuctionState</a>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>slug</code></td><td style="text-align: center;">Required</td><td>Auction slug, use it to generate a <a href="/constructor/inputStarGiftAuctionSlug/">inputStarGiftAuctionSlug</a>, passed to <a href="/method/payments.getStarGiftAuctionState/">payments.getStarGiftAuctionState</a>.</td></tr></tbody></table>
 
 ### Referral links
 
@@ -1739,7 +1739,7 @@ tg://resolve?domain=<bot_username>&start={prefix}<referrer>
 
 Parameters:
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>bot_username</code></td><td style="text-align: center;">Required</td><td>Username of the bot that owns the <a href="/api/bots/webapps">mini app</a></td></tr><tr><td><code>referrer</code></td><td style="text-align: center;">Required</td><td>Referrer ID, to be passed to <a href="/method/contacts.resolveUsername">contacts.resolveUsername</a></td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>bot_username</code></td><td style="text-align: center;">Required</td><td>Username of the bot that owns the <a href="/api/bots/webapps/">mini app</a></td></tr><tr><td><code>referrer</code></td><td style="text-align: center;">Required</td><td>Referrer ID, to be passed to <a href="/method/contacts.resolveUsername/">contacts.resolveUsername</a></td></tr></tbody></table>
 
 ### ID links
 
@@ -1767,7 +1767,7 @@ tg://emoji?id=<id>
 
 Parameters:
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>id</code></td><td style="text-align: center;">Required</td><td><a href="/api/custom-emoji">Custom emoji ID</a></td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>id</code></td><td style="text-align: center;">Required</td><td><a href="/api/custom-emoji/">Custom emoji ID</a></td></tr></tbody></table>
 
 ### Timestamp links
 
@@ -1781,7 +1781,7 @@ tg://time?unix=<unix>&format=<format>
 
 Parameters:
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>unix</code></td><td style="text-align: center;">Required</td><td>Positive Unix timestamp (in seconds) of the date to display.</td></tr><tr><td><code>format</code></td><td style="text-align: center;">Optional</td><td>Format string indicating how the date should be displayed, see <a href="/api/entities#date-entities">here »</a> for more info.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Optional</th><th scope="col">Description</th></tr></thead><tbody><tr><td><code>unix</code></td><td style="text-align: center;">Required</td><td>Positive Unix timestamp (in seconds) of the date to display.</td></tr><tr><td><code>format</code></td><td style="text-align: center;">Optional</td><td>Format string indicating how the date should be displayed, see <a href="/api/entities/#date-entities">here »</a> for more info.</td></tr></tbody></table>
 
 ### Unsupported links
 

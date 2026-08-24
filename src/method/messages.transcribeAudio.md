@@ -11,15 +11,15 @@ layout: layout.njk
 
 [Transcribe voice message](/api/transcribe/)
 
-```
-messages.transcribedAudio#cfb9d957 flags:# pending:flags.0?true transcription_id:long text:string trial_remains_num:flags.1?int trial_remains_until_date:flags.1?int = messages.TranscribedAudio;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/messages.transcribedAudio/">messages.transcribedAudio</a>#cfb9d957 flags:<a href="/type/%23/">#</a> pending:flags.0?true transcription_id:<a href="/type/long/">long</a> text:<a href="/type/string/">string</a> trial_remains_num:flags.1?<a href="/type/int/">int</a> trial_remains_until_date:flags.1?<a href="/type/int/">int</a> = <a href="/type/messages.TranscribedAudio/">messages.TranscribedAudio</a>;
 ---functions---
-messages.transcribeAudio#269e9a49 peer:InputPeer msg_id:int = messages.TranscribedAudio;
-```
+<a href="/method/messages.transcribeAudio/" class="current_page_link">messages.transcribeAudio</a>#269e9a49 peer:<a href="/type/InputPeer/">InputPeer</a> msg_id:<a href="/type/int/">int</a> = <a href="/type/messages.TranscribedAudio/">messages.TranscribedAudio</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>Peer ID where the voice message was sent</td></tr><tr><td><strong>msg_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Voice message ID</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer/">InputPeer</a></td><td>Peer ID where the voice message was sent</td></tr><tr><td><strong>msg_id</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>Voice message ID</td></tr></tbody></table>
 
 ### Result
 

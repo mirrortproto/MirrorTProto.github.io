@@ -11,10 +11,10 @@ layout: layout.njk
 
 Obtain a list of [Telegram Stars topup options »](/api/stars/#buying-or-gifting-stars) as [starsTopupOption](/constructor/starsTopupOption/) constructors.
 
-```
----functions---
-payments.getStarsTopupOptions#c00ec7d3 = Vector<StarsTopupOption>;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code>---functions---
+<a href="/method/payments.getStarsTopupOptions/" class="current_page_link">payments.getStarsTopupOptions</a>#c00ec7d3 = <a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/StarsTopupOption/">StarsTopupOption</a>&gt;;</code></pre>
 
 ### Parameters
 
@@ -22,7 +22,7 @@ This constructor does not require any parameters.
 
 ### Result
 
-[Vector](https://core.telegram.org/type/Vector%20t)&lt;[StarsTopupOption](/type/StarsTopupOption/)\>
+[Vector](/type/Vector%20t/)&lt;[StarsTopupOption](/type/StarsTopupOption/)\>
 
 ### Only users can use this method
 

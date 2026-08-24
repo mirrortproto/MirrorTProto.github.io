@@ -11,10 +11,10 @@ layout: layout.njk
 
 Get [suggested folders](/api/folders/)
 
-```
----functions---
-messages.getSuggestedDialogFilters#a29cd42c = Vector<DialogFilterSuggested>;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code>---functions---
+<a href="/method/messages.getSuggestedDialogFilters/" class="current_page_link">messages.getSuggestedDialogFilters</a>#a29cd42c = <a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/DialogFilterSuggested/">DialogFilterSuggested</a>&gt;;</code></pre>
 
 ### Parameters
 
@@ -22,7 +22,7 @@ This constructor does not require any parameters.
 
 ### Result
 
-[Vector](https://core.telegram.org/type/Vector%20t)&lt;[DialogFilterSuggested](/type/DialogFilterSuggested/)\>
+[Vector](/type/Vector%20t/)&lt;[DialogFilterSuggested](/type/DialogFilterSuggested/)\>
 
 ### Only users can use this method
 

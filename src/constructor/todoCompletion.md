@@ -11,13 +11,13 @@ layout: layout.njk
 
 A completed [todo list »](/api/todo/) item.
 
-```
-todoCompletion#221bb5e4 id:int completed_by:Peer date:int = TodoCompletion;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/todoCompletion/" class="current_page_link">todoCompletion</a>#221bb5e4 id:<a href="/type/int/">int</a> completed_by:<a href="/type/Peer/">Peer</a> date:<a href="/type/int/">int</a> = <a href="/type/TodoCompletion/">TodoCompletion</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>The ID of the completed item.</td></tr><tr><td><strong>completed_by</strong></td><td style="text-align: center;"><a href="/type/Peer">Peer</a></td><td>ID of the user that completed the item.</td></tr><tr><td><strong>date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>When was the item completed.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>The ID of the completed item.</td></tr><tr><td><strong>completed_by</strong></td><td style="text-align: center;"><a href="/type/Peer/">Peer</a></td><td>ID of the user that completed the item.</td></tr><tr><td><strong>date</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>When was the item completed.</td></tr></tbody></table>
 
 ### Type
 

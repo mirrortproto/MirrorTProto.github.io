@@ -11,9 +11,9 @@ layout: layout.njk
 
 Empty constructor.
 
-```
-inputDocumentEmpty#72f0eaae = InputDocument;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputDocumentEmpty/" class="current_page_link">inputDocumentEmpty</a>#72f0eaae = <a href="/type/InputDocument/">InputDocument</a>;</code></pre>
 
 ### Parameters
 

@@ -11,11 +11,11 @@ layout: layout.njk
 
 Logs out the user.
 
-```
-auth.loggedOut#c3a2835f flags:# future_auth_token:flags.0?bytes = auth.LoggedOut;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/auth.loggedOut/">auth.loggedOut</a>#c3a2835f flags:<a href="/type/%23/">#</a> future_auth_token:flags.0?<a href="/type/bytes/">bytes</a> = <a href="/type/auth.LoggedOut/">auth.LoggedOut</a>;
 ---functions---
-auth.logOut#3e72ba19 = auth.LoggedOut;
-```
+<a href="/method/auth.logOut/" class="current_page_link">auth.logOut</a>#3e72ba19 = <a href="/type/auth.LoggedOut/">auth.LoggedOut</a>;</code></pre>
 
 ### Parameters
 

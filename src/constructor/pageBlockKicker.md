@@ -10,13 +10,13 @@ layout: layout.njk
 
 Kicker
 
-```
-pageBlockKicker#1e148390 text:RichText = PageBlock;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/pageBlockKicker/" class="current_page_link">pageBlockKicker</a>#1e148390 text:<a href="/type/RichText/">RichText</a> = <a href="/type/PageBlock/">PageBlock</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>text</strong></td><td style="text-align: center;"><a href="/type/RichText">RichText</a></td><td>Contents</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>text</strong></td><td style="text-align: center;"><a href="/type/RichText/">RichText</a></td><td>Contents</td></tr></tbody></table>
 
 ### Type
 

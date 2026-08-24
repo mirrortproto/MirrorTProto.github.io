@@ -11,14 +11,14 @@ layout: layout.njk
 
 Describes one or more rounds of a [collectible gift auction »](/api/auctions/), optionally extendable.
 
-```
-starGiftAuctionRound#3aae0528 num:int duration:int = StarGiftAuctionRound;
-starGiftAuctionRoundExtendable#aa021e5 num:int duration:int extend_top:int extend_window:int = StarGiftAuctionRound;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/starGiftAuctionRound/">starGiftAuctionRound</a>#3aae0528 num:<a href="/type/int/">int</a> duration:<a href="/type/int/">int</a> = <a href="/type/StarGiftAuctionRound/" class="current_page_link">StarGiftAuctionRound</a>;
+<a href="/constructor/starGiftAuctionRoundExtendable/">starGiftAuctionRoundExtendable</a>#aa021e5 num:<a href="/type/int/">int</a> duration:<a href="/type/int/">int</a> extend_top:<a href="/type/int/">int</a> extend_window:<a href="/type/int/">int</a> = <a href="/type/StarGiftAuctionRound/" class="current_page_link">StarGiftAuctionRound</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/starGiftAuctionRound">starGiftAuctionRound</a></td><td>Describes one or more <a href="/api/auctions">collectible gift auction rounds »</a>.</td></tr><tr><td><a href="/constructor/starGiftAuctionRoundExtendable">starGiftAuctionRoundExtendable</a></td><td>Describes one or more extendable <a href="/api/auctions">collectible gift auction rounds »</a>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/starGiftAuctionRound/">starGiftAuctionRound</a></td><td>Describes one or more <a href="/api/auctions/">collectible gift auction rounds »</a>.</td></tr><tr><td><a href="/constructor/starGiftAuctionRoundExtendable/">starGiftAuctionRoundExtendable</a></td><td>Describes one or more extendable <a href="/api/auctions/">collectible gift auction rounds »</a>.</td></tr></tbody></table>
 
 ### Related pages
 

@@ -11,9 +11,9 @@ layout: layout.njk
 
 All contacts were deleted
 
-```
-updateContactsReset#7084a7be = Update;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/updateContactsReset/" class="current_page_link">updateContactsReset</a>#7084a7be = <a href="/type/Update/">Update</a>;</code></pre>
 
 ### Parameters
 

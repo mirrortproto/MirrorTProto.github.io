@@ -3,7 +3,7 @@ title: "E2E Group Calls"
 original: "https://core.telegram.org/api/end-to-end/group-calls"
 section: api
 description: "This article describes the end-to-end encryption used for Telegram group voice and video calls, incorporating a blockchain for state management and enhanced security."
-crumbs: [{"title":"API","url":"/api/"},{"title":"E2E Group Calls","url":"https://core.telegram.org/api/end-to-end%2Fgroup-calls"}]
+crumbs: [{"title":"API","url":"/api/"},{"title":"E2E Group Calls","url":"/api/end-to-end/group-calls/"}]
 layout: layout.njk
 ---
 

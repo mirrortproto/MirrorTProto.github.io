@@ -11,13 +11,13 @@ layout: layout.njk
 
 Outgoing messages in a [channel/supergroup](/api/channel/) were read
 
-```
-updateReadChannelOutbox#b75f99a9 channel_id:long max_id:int = Update;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/updateReadChannelOutbox/" class="current_page_link">updateReadChannelOutbox</a>#b75f99a9 channel_id:<a href="/type/long/">long</a> max_id:<a href="/type/int/">int</a> = <a href="/type/Update/">Update</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>channel_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Channel/supergroup ID</td></tr><tr><td><strong>max_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Position up to which all outgoing messages are read.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>channel_id</strong></td><td style="text-align: center;"><a href="/type/long/">long</a></td><td>Channel/supergroup ID</td></tr><tr><td><strong>max_id</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>Position up to which all outgoing messages are read.</td></tr></tbody></table>
 
 ### Type
 

@@ -11,9 +11,9 @@ layout: layout.njk
 
 The report was sent successfully, no further actions are required.
 
-```
-reportResultReported#8db33c4b = ReportResult;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/reportResultReported/" class="current_page_link">reportResultReported</a>#8db33c4b = <a href="/type/ReportResult/">ReportResult</a>;</code></pre>
 
 ### Parameters
 

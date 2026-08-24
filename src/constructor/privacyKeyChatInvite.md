@@ -11,9 +11,9 @@ layout: layout.njk
 
 Whether the user can be invited to chats
 
-```
-privacyKeyChatInvite#500e6dfa = PrivacyKey;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/privacyKeyChatInvite/" class="current_page_link">privacyKeyChatInvite</a>#500e6dfa = <a href="/type/PrivacyKey/">PrivacyKey</a>;</code></pre>
 
 ### Parameters
 

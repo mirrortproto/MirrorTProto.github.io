@@ -11,9 +11,9 @@ layout: layout.njk
 
 Allow bots and mini apps
 
-```
-privacyValueAllowBots#21461b5d = PrivacyRule;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/privacyValueAllowBots/" class="current_page_link">privacyValueAllowBots</a>#21461b5d = <a href="/type/PrivacyRule/">PrivacyRule</a>;</code></pre>
 
 ### Parameters
 

@@ -10,13 +10,13 @@ layout: layout.njk
 
 Payment result
 
-```
-payments.paymentResult#4e5f810d updates:Updates = payments.PaymentResult;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/payments.paymentResult/" class="current_page_link">payments.paymentResult</a>#4e5f810d updates:<a href="/type/Updates/">Updates</a> = <a href="/type/payments.PaymentResult/">payments.PaymentResult</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>updates</strong></td><td style="text-align: center;"><a href="/type/Updates">Updates</a></td><td>Info about the payment</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>updates</strong></td><td style="text-align: center;"><a href="/type/Updates/">Updates</a></td><td>Info about the payment</td></tr></tbody></table>
 
 ### Type
 

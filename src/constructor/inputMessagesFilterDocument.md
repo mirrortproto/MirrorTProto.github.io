@@ -11,9 +11,9 @@ layout: layout.njk
 
 Filter for messages containing documents.
 
-```
-inputMessagesFilterDocument#9eddf188 = MessagesFilter;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputMessagesFilterDocument/" class="current_page_link">inputMessagesFilterDocument</a>#9eddf188 = <a href="/type/MessagesFilter/">MessagesFilter</a>;</code></pre>
 
 ### Parameters
 

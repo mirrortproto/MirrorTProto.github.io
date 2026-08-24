@@ -11,13 +11,13 @@ layout: layout.njk
 
 A chat theme based on a [collectible gift »](/api/gifts/#collectible-gifts).
 
-```
-chatThemeUniqueGift#3458f9c8 gift:StarGift theme_settings:Vector<ThemeSettings> = ChatTheme;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/chatThemeUniqueGift/" class="current_page_link">chatThemeUniqueGift</a>#3458f9c8 gift:<a href="/type/StarGift/">StarGift</a> theme_settings:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/ThemeSettings/">ThemeSettings</a>&gt; = <a href="/type/ChatTheme/">ChatTheme</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>gift</strong></td><td style="text-align: center;"><a href="/type/StarGift">StarGift</a></td><td>The owned or <a href="/api/gifts#hosted-collectible-gifts">hosted collectible gift »</a> on which this theme is based, as a <a href="/constructor/starGiftUnique">starGiftUnique</a> constructor.</td></tr><tr><td><strong>theme_settings</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/ThemeSettings">ThemeSettings</a>&gt;</td><td>Theme settings.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>gift</strong></td><td style="text-align: center;"><a href="/type/StarGift/">StarGift</a></td><td>The owned or <a href="/api/gifts/#hosted-collectible-gifts">hosted collectible gift »</a> on which this theme is based, as a <a href="/constructor/starGiftUnique/">starGiftUnique</a> constructor.</td></tr><tr><td><strong>theme_settings</strong></td><td style="text-align: center;"><a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/ThemeSettings/">ThemeSettings</a>&gt;</td><td>Theme settings.</td></tr></tbody></table>
 
 ### Type
 

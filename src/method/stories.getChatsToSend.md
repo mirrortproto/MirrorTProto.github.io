@@ -11,12 +11,12 @@ layout: layout.njk
 
 Obtain a list of channels where the user can post [stories](/api/stories/)
 
-```
-messages.chats#64ff9fd5 chats:Vector<Chat> = messages.Chats;
-messages.chatsSlice#9cd81144 count:int chats:Vector<Chat> = messages.Chats;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/messages.chats/">messages.chats</a>#64ff9fd5 chats:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/Chat/">Chat</a>&gt; = <a href="/type/messages.Chats/">messages.Chats</a>;
+<a href="/constructor/messages.chatsSlice/">messages.chatsSlice</a>#9cd81144 count:<a href="/type/int/">int</a> chats:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/Chat/">Chat</a>&gt; = <a href="/type/messages.Chats/">messages.Chats</a>;
 ---functions---
-stories.getChatsToSend#a56a8b60 = messages.Chats;
-```
+<a href="/method/stories.getChatsToSend/" class="current_page_link">stories.getChatsToSend</a>#a56a8b60 = <a href="/type/messages.Chats/">messages.Chats</a>;</code></pre>
 
 ### Parameters
 

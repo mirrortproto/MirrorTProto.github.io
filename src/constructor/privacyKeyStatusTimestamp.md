@@ -15,9 +15,9 @@ Note that if _we_ decide to hide our exact last online timestamp to someone (i.e
 
 If those users _do_ share their exact online status with us, but we can't see it due to the reason mentioned above, the `by_me` flag of [userStatusRecently](/constructor/userStatusRecently/), [userStatusLastWeek](/constructor/userStatusLastWeek/), [userStatusLastMonth](/constructor/userStatusLastMonth/) will be set.
 
-```
-privacyKeyStatusTimestamp#bc2eab30 = PrivacyKey;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/privacyKeyStatusTimestamp/" class="current_page_link">privacyKeyStatusTimestamp</a>#bc2eab30 = <a href="/type/PrivacyKey/">PrivacyKey</a>;</code></pre>
 
 ### Parameters
 

@@ -11,9 +11,9 @@ layout: layout.njk
 
 Allow only users with a [Premium subscription »](/api/premium/), currently only usable for [inputPrivacyKeyChatInvite](/constructor/inputPrivacyKeyChatInvite/).
 
-```
-privacyValueAllowPremium#ece9814b = PrivacyRule;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/privacyValueAllowPremium/" class="current_page_link">privacyValueAllowPremium</a>#ece9814b = <a href="/type/PrivacyRule/">PrivacyRule</a>;</code></pre>
 
 ### Parameters
 

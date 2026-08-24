@@ -11,15 +11,15 @@ layout: layout.njk
 
 Create a [star gift collection »](/api/gifts/#gift-collections).
 
-```
-starGiftCollection#9d6b13b0 flags:# collection_id:int title:string icon:flags.0?Document gifts_count:int hash:long = StarGiftCollection;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/starGiftCollection/">starGiftCollection</a>#9d6b13b0 flags:<a href="/type/%23/">#</a> collection_id:<a href="/type/int/">int</a> title:<a href="/type/string/">string</a> icon:flags.0?<a href="/type/Document/">Document</a> gifts_count:<a href="/type/int/">int</a> hash:<a href="/type/long/">long</a> = <a href="/type/StarGiftCollection/">StarGiftCollection</a>;
 ---functions---
-payments.createStarGiftCollection#1f4a0e87 peer:InputPeer title:string stargift:Vector<InputSavedStarGift> = StarGiftCollection;
-```
+<a href="/method/payments.createStarGiftCollection/" class="current_page_link">payments.createStarGiftCollection</a>#1f4a0e87 peer:<a href="/type/InputPeer/">InputPeer</a> title:<a href="/type/string/">string</a> stargift:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/InputSavedStarGift/">InputSavedStarGift</a>&gt; = <a href="/type/StarGiftCollection/">StarGiftCollection</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>Peer where to create the collection.</td></tr><tr><td><strong>title</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Title of the collection.</td></tr><tr><td><strong>stargift</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/InputSavedStarGift">InputSavedStarGift</a>&gt;</td><td>Gifts added to the collection.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer/">InputPeer</a></td><td>Peer where to create the collection.</td></tr><tr><td><strong>title</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td>Title of the collection.</td></tr><tr><td><strong>stargift</strong></td><td style="text-align: center;"><a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/InputSavedStarGift/">InputSavedStarGift</a>&gt;</td><td>Gifts added to the collection.</td></tr></tbody></table>
 
 ### Result
 

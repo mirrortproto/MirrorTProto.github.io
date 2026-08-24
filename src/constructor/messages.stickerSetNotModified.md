@@ -11,9 +11,9 @@ layout: layout.njk
 
 The stickerset hasn't changed
 
-```
-messages.stickerSetNotModified#d3f924eb = messages.StickerSet;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/messages.stickerSetNotModified/" class="current_page_link">messages.stickerSetNotModified</a>#d3f924eb = <a href="/type/messages.StickerSet/">messages.StickerSet</a>;</code></pre>
 
 ### Parameters
 

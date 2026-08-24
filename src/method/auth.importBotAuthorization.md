@@ -11,16 +11,16 @@ layout: layout.njk
 
 Login as a bot
 
-```
-auth.authorization#2ea2c0d4 flags:# setup_password_required:flags.1?true otherwise_relogin_days:flags.1?int tmp_sessions:flags.0?int future_auth_token:flags.2?bytes user:User = auth.Authorization;
-auth.authorizationSignUpRequired#44747e9a flags:# terms_of_service:flags.0?help.TermsOfService = auth.Authorization;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/auth.authorization/">auth.authorization</a>#2ea2c0d4 flags:<a href="/type/%23/">#</a> setup_password_required:flags.1?true otherwise_relogin_days:flags.1?<a href="/type/int/">int</a> tmp_sessions:flags.0?<a href="/type/int/">int</a> future_auth_token:flags.2?<a href="/type/bytes/">bytes</a> user:<a href="/type/User/">User</a> = <a href="/type/auth.Authorization/">auth.Authorization</a>;
+<a href="/constructor/auth.authorizationSignUpRequired/">auth.authorizationSignUpRequired</a>#44747e9a flags:<a href="/type/%23/">#</a> terms_of_service:flags.0?<a href="/type/help.TermsOfService/">help.TermsOfService</a> = <a href="/type/auth.Authorization/">auth.Authorization</a>;
 ---functions---
-auth.importBotAuthorization#67a3ff2c flags:int api_id:int api_hash:string bot_auth_token:string = auth.Authorization;
-```
+<a href="/method/auth.importBotAuthorization/" class="current_page_link">auth.importBotAuthorization</a>#67a3ff2c flags:<a href="/type/int/">int</a> api_id:<a href="/type/int/">int</a> api_hash:<a href="/type/string/">string</a> bot_auth_token:<a href="/type/string/">string</a> = <a href="/type/auth.Authorization/">auth.Authorization</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Reserved for future use</td></tr><tr><td><strong>api_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Application identifier (see. <a href="/myapp">App configuration</a>)</td></tr><tr><td><strong>api_hash</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Application identifier hash (see. <a href="/myapp">App configuration</a>)</td></tr><tr><td><strong>bot_auth_token</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Bot token (see <a href="/bots">bots</a>)</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>Reserved for future use</td></tr><tr><td><strong>api_id</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>Application identifier (see. <a href="https://core.telegram.org/myapp">App configuration</a>)</td></tr><tr><td><strong>api_hash</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td>Application identifier hash (see. <a href="https://core.telegram.org/myapp">App configuration</a>)</td></tr><tr><td><strong>bot_auth_token</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td>Bot token (see <a href="https://core.telegram.org/bots">bots</a>)</td></tr></tbody></table>
 
 ### Result
 

@@ -11,13 +11,13 @@ layout: layout.njk
 
 Translated text with [entities](/api/entities/)
 
-```
-messages.translateResult#33db32f8 result:Vector<TextWithEntities> = messages.TranslatedText;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/messages.translateResult/" class="current_page_link">messages.translateResult</a>#33db32f8 result:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/TextWithEntities/">TextWithEntities</a>&gt; = <a href="/type/messages.TranslatedText/">messages.TranslatedText</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>result</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/TextWithEntities">TextWithEntities</a>&gt;</td><td>Text+<a href="/api/entities">entities</a>, for each input message.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>result</strong></td><td style="text-align: center;"><a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/TextWithEntities/">TextWithEntities</a>&gt;</td><td>Text+<a href="/api/entities/">entities</a>, for each input message.</td></tr></tbody></table>
 
 ### Type
 

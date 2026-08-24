@@ -11,13 +11,13 @@ layout: layout.njk
 
 A new profile picture was suggested using [photos.uploadContactProfilePhoto](/method/photos.uploadContactProfilePhoto/).
 
-```
-messageActionSuggestProfilePhoto#57de635e photo:Photo = MessageAction;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/messageActionSuggestProfilePhoto/" class="current_page_link">messageActionSuggestProfilePhoto</a>#57de635e photo:<a href="/type/Photo/">Photo</a> = <a href="/type/MessageAction/">MessageAction</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>photo</strong></td><td style="text-align: center;"><a href="/type/Photo">Photo</a></td><td>The photo that the user suggested we set as profile picture.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>photo</strong></td><td style="text-align: center;"><a href="/type/Photo/">Photo</a></td><td>The photo that the user suggested we set as profile picture.</td></tr></tbody></table>
 
 ### Type
 

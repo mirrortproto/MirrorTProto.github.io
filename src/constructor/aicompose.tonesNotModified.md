@@ -11,9 +11,9 @@ layout: layout.njk
 
 The list of saved [AI composer tones »](/api/ai/#ai-compose-tones) hasn't changed since the last time it was fetched (i.e. the `hash` passed to [aicompose.getTones](/method/aicompose.getTones/) is still valid).
 
-```
-Constructor schema is available as of layer 225. Switch »
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code>Constructor schema is available as of layer 225. <a href="?layer=225">Switch »</a></code></pre>
 
 ### Parameters
 

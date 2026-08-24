@@ -11,13 +11,13 @@ layout: layout.njk
 
 Describes [Telegram Star revenue balances »](/api/stars/).
 
-```
-starsRevenueStatus#febe5491 flags:# withdrawal_enabled:flags.0?true current_balance:StarsAmount available_balance:StarsAmount overall_revenue:StarsAmount next_withdrawal_at:flags.1?int = StarsRevenueStatus;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/starsRevenueStatus/">starsRevenueStatus</a>#febe5491 flags:<a href="/type/%23/">#</a> withdrawal_enabled:flags.0?true current_balance:<a href="/type/StarsAmount/">StarsAmount</a> available_balance:<a href="/type/StarsAmount/">StarsAmount</a> overall_revenue:<a href="/type/StarsAmount/">StarsAmount</a> next_withdrawal_at:flags.1?<a href="/type/int/">int</a> = <a href="/type/StarsRevenueStatus/" class="current_page_link">StarsRevenueStatus</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/starsRevenueStatus">starsRevenueStatus</a></td><td>Describes <a href="/api/stars">Telegram Star revenue balances »</a>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/starsRevenueStatus/">starsRevenueStatus</a></td><td>Describes <a href="/api/stars/">Telegram Star revenue balances »</a>.</td></tr></tbody></table>
 
 ### Related pages
 

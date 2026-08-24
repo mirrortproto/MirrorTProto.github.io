@@ -11,11 +11,11 @@ layout: layout.njk
 
 Get web [login widget](https://core.telegram.org/widgets/login) authorizations
 
-```
-account.webAuthorizations#ed56c9fc authorizations:Vector<WebAuthorization> users:Vector<User> = account.WebAuthorizations;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/account.webAuthorizations/">account.webAuthorizations</a>#ed56c9fc authorizations:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/WebAuthorization/">WebAuthorization</a>&gt; users:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/User/">User</a>&gt; = <a href="/type/account.WebAuthorizations/">account.WebAuthorizations</a>;
 ---functions---
-account.getWebAuthorizations#182e6d6f = account.WebAuthorizations;
-```
+<a href="/method/account.getWebAuthorizations/" class="current_page_link">account.getWebAuthorizations</a>#182e6d6f = <a href="/type/account.WebAuthorizations/">account.WebAuthorizations</a>;</code></pre>
 
 ### Parameters
 

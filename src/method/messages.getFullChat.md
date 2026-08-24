@@ -11,15 +11,15 @@ layout: layout.njk
 
 Get full info about a [basic group](/api/channel/#basic-groups).
 
-```
-messages.chatFull#e5d7d19c full_chat:ChatFull chats:Vector<Chat> users:Vector<User> = messages.ChatFull;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/messages.chatFull/">messages.chatFull</a>#e5d7d19c full_chat:<a href="/type/ChatFull/">ChatFull</a> chats:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/Chat/">Chat</a>&gt; users:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/User/">User</a>&gt; = <a href="/type/messages.ChatFull/">messages.ChatFull</a>;
 ---functions---
-messages.getFullChat#aeb00b34 chat_id:long = messages.ChatFull;
-```
+<a href="/method/messages.getFullChat/" class="current_page_link">messages.getFullChat</a>#aeb00b34 chat_id:<a href="/type/long/">long</a> = <a href="/type/messages.ChatFull/">messages.ChatFull</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>chat_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td><a href="/api/channel#basic-groups">Basic group</a> ID.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>chat_id</strong></td><td style="text-align: center;"><a href="/type/long/">long</a></td><td><a href="/api/channel/#basic-groups">Basic group</a> ID.</td></tr></tbody></table>
 
 ### Result
 

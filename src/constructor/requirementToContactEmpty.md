@@ -11,9 +11,9 @@ layout: layout.njk
 
 This user can be freely contacted.
 
-```
-requirementToContactEmpty#50a9839 = RequirementToContact;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/requirementToContactEmpty/" class="current_page_link">requirementToContactEmpty</a>#50a9839 = <a href="/type/RequirementToContact/">RequirementToContact</a>;</code></pre>
 
 ### Parameters
 

@@ -10,18 +10,18 @@ layout: layout.njk
 
 Message statistics
 
-```
-stats.messageStats#7fe91c14 views_graph:StatsGraph reactions_by_emotion_graph:StatsGraph = stats.MessageStats;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/stats.messageStats/">stats.messageStats</a>#7fe91c14 views_graph:<a href="/type/StatsGraph/">StatsGraph</a> reactions_by_emotion_graph:<a href="/type/StatsGraph/">StatsGraph</a> = <a href="/type/stats.MessageStats/" class="current_page_link">stats.MessageStats</a>;
 
 ---functions---
 
-stats.getMessageStats#b6e0a3f5 flags:# dark:flags.0?true channel:InputChannel msg_id:int = stats.MessageStats;
-```
+<a href="/method/stats.getMessageStats/">stats.getMessageStats</a>#b6e0a3f5 flags:<a href="/type/%23/">#</a> dark:flags.0?true channel:<a href="/type/InputChannel/">InputChannel</a> msg_id:<a href="/type/int/">int</a> = <a href="/type/stats.MessageStats/" class="current_page_link">stats.MessageStats</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/stats.messageStats">stats.messageStats</a></td><td>Message statistics</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/stats.messageStats/">stats.messageStats</a></td><td>Message statistics</td></tr></tbody></table>
 
 ### Methods
 
-<table class="table"><thead><tr><th scope="col">Method</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/method/stats.getMessageStats">stats.getMessageStats</a></td><td>Get <a href="/api/stats">message statistics</a></td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Method</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/method/stats.getMessageStats/">stats.getMessageStats</a></td><td>Get <a href="/api/stats/">message statistics</a></td></tr></tbody></table>

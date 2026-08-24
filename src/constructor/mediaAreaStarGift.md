@@ -11,13 +11,13 @@ layout: layout.njk
 
 Represents a [collectible gift »](/api/gifts/#collectible-gifts).
 
-```
-mediaAreaStarGift#5787686d coordinates:MediaAreaCoordinates slug:string = MediaArea;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/mediaAreaStarGift/" class="current_page_link">mediaAreaStarGift</a>#5787686d coordinates:<a href="/type/MediaAreaCoordinates/">MediaAreaCoordinates</a> slug:<a href="/type/string/">string</a> = <a href="/type/MediaArea/">MediaArea</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>coordinates</strong></td><td style="text-align: center;"><a href="/type/MediaAreaCoordinates">MediaAreaCoordinates</a></td><td>Coordinates of the media area.</td></tr><tr><td><strong>slug</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td><code>slug</code> from <a href="/constructor/starGiftUnique">starGiftUnique</a>.<code>slug</code>, that can be resolved as <a href="/api/gifts#sharing-and-getting-info-about-a-collectible-gift">specified here »</a>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>coordinates</strong></td><td style="text-align: center;"><a href="/type/MediaAreaCoordinates/">MediaAreaCoordinates</a></td><td>Coordinates of the media area.</td></tr><tr><td><strong>slug</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td><code>slug</code> from <a href="/constructor/starGiftUnique/">starGiftUnique</a>.<code>slug</code>, that can be resolved as <a href="/api/gifts/#sharing-and-getting-info-about-a-collectible-gift">specified here »</a>.</td></tr></tbody></table>
 
 ### Type
 

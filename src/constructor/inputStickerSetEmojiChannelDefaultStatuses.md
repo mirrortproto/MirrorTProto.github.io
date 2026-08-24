@@ -11,9 +11,9 @@ layout: layout.njk
 
 Default [custom emoji status](/api/emoji-status/) stickerset for channel statuses
 
-```
-inputStickerSetEmojiChannelDefaultStatuses#49748553 = InputStickerSet;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputStickerSetEmojiChannelDefaultStatuses/" class="current_page_link">inputStickerSetEmojiChannelDefaultStatuses</a>#49748553 = <a href="/type/InputStickerSet/">InputStickerSet</a>;</code></pre>
 
 ### Parameters
 

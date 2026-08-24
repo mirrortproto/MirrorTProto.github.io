@@ -11,13 +11,13 @@ layout: layout.njk
 
 Represents a [fact-check »](/api/factcheck/) created by an independent fact-checker.
 
-```
-factCheck#b89bfccf flags:# need_check:flags.0?true country:flags.1?string text:flags.1?TextWithEntities hash:long = FactCheck;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/factCheck/">factCheck</a>#b89bfccf flags:<a href="/type/%23/">#</a> need_check:flags.0?true country:flags.1?<a href="/type/string/">string</a> text:flags.1?<a href="/type/TextWithEntities/">TextWithEntities</a> hash:<a href="/type/long/">long</a> = <a href="/type/FactCheck/" class="current_page_link">FactCheck</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/factCheck">factCheck</a></td><td>Represents a <a href="/api/factcheck">fact-check »</a> created by an independent fact-checker.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/factCheck/">factCheck</a></td><td>Represents a <a href="/api/factcheck/">fact-check »</a> created by an independent fact-checker.</td></tr></tbody></table>
 
 ### Related pages
 

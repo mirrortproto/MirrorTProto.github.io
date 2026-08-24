@@ -11,18 +11,18 @@ layout: layout.njk
 
 Media autodownload settings
 
-```
-account.autoDownloadSettings#63cacf26 low:AutoDownloadSettings medium:AutoDownloadSettings high:AutoDownloadSettings = account.AutoDownloadSettings;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/account.autoDownloadSettings/">account.autoDownloadSettings</a>#63cacf26 low:<a href="/type/AutoDownloadSettings/">AutoDownloadSettings</a> medium:<a href="/type/AutoDownloadSettings/">AutoDownloadSettings</a> high:<a href="/type/AutoDownloadSettings/">AutoDownloadSettings</a> = <a href="/type/account.AutoDownloadSettings/" class="current_page_link">account.AutoDownloadSettings</a>;
 
 ---functions---
 
-account.getAutoDownloadSettings#56da0b3f = account.AutoDownloadSettings;
-```
+<a href="/method/account.getAutoDownloadSettings/">account.getAutoDownloadSettings</a>#56da0b3f = <a href="/type/account.AutoDownloadSettings/" class="current_page_link">account.AutoDownloadSettings</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/account.autoDownloadSettings">account.autoDownloadSettings</a></td><td>Media autodownload settings</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/account.autoDownloadSettings/">account.autoDownloadSettings</a></td><td>Media autodownload settings</td></tr></tbody></table>
 
 ### Methods
 
-<table class="table"><thead><tr><th scope="col">Method</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/method/account.getAutoDownloadSettings">account.getAutoDownloadSettings</a></td><td>Get media autodownload settings</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Method</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/method/account.getAutoDownloadSettings/">account.getAutoDownloadSettings</a></td><td>Get media autodownload settings</td></tr></tbody></table>

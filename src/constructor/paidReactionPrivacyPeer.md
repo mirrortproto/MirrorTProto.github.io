@@ -11,13 +11,13 @@ layout: layout.njk
 
 Send paid reactions as the specified peer, fetched using [channels.getSendAs](/method/channels.getSendAs/) with the `for_paid_reactions` flag set.
 
-```
-paidReactionPrivacyPeer#dc6cfcf0 peer:InputPeer = PaidReactionPrivacy;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/paidReactionPrivacyPeer/" class="current_page_link">paidReactionPrivacyPeer</a>#dc6cfcf0 peer:<a href="/type/InputPeer/">InputPeer</a> = <a href="/type/PaidReactionPrivacy/">PaidReactionPrivacy</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>The peer to send reactions as.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer/">InputPeer</a></td><td>The peer to send reactions as.</td></tr></tbody></table>
 
 ### Type
 

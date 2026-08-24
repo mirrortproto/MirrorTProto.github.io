@@ -17,7 +17,7 @@ e2e.chain.changeSetValue#7c4f9bfa key:bytes value:bytes = e2e.chain.Change;
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>key</strong></td><td style="text-align: center;"><a href="/type/bytes">bytes</a></td><td>Key-value trie key; clients that do not implement the trie must ignore its contents</td></tr><tr><td><strong>value</strong></td><td style="text-align: center;"><a href="/type/bytes">bytes</a></td><td>Key-value trie value; clients that do not implement the trie must ignore its contents and accept the containing block's <code>state_proof.kv_hash</code></td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>key</strong></td><td style="text-align: center;"><a href="/type/bytes/">bytes</a></td><td>Key-value trie key; clients that do not implement the trie must ignore its contents</td></tr><tr><td><strong>value</strong></td><td style="text-align: center;"><a href="/type/bytes/">bytes</a></td><td>Key-value trie value; clients that do not implement the trie must ignore its contents and accept the containing block's <code>state_proof.kv_hash</code></td></tr></tbody></table>
 
 ### Type
 

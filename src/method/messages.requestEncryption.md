@@ -11,19 +11,19 @@ layout: layout.njk
 
 Sends a request to start a secret chat to the user.
 
-```
-encryptedChatEmpty#ab7ec0a0 id:int = EncryptedChat;
-encryptedChatWaiting#66b25953 id:int access_hash:long date:int admin_id:long participant_id:long = EncryptedChat;
-encryptedChatRequested#48f1d94c flags:# folder_id:flags.0?int id:int access_hash:long date:int admin_id:long participant_id:long g_a:bytes = EncryptedChat;
-encryptedChat#61f0d4c7 id:int access_hash:long date:int admin_id:long participant_id:long g_a_or_b:bytes key_fingerprint:long = EncryptedChat;
-encryptedChatDiscarded#1e1c7c45 flags:# history_deleted:flags.0?true id:int = EncryptedChat;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/encryptedChatEmpty/">encryptedChatEmpty</a>#ab7ec0a0 id:<a href="/type/int/">int</a> = <a href="/type/EncryptedChat/">EncryptedChat</a>;
+<a href="/constructor/encryptedChatWaiting/">encryptedChatWaiting</a>#66b25953 id:<a href="/type/int/">int</a> access_hash:<a href="/type/long/">long</a> date:<a href="/type/int/">int</a> admin_id:<a href="/type/long/">long</a> participant_id:<a href="/type/long/">long</a> = <a href="/type/EncryptedChat/">EncryptedChat</a>;
+<a href="/constructor/encryptedChatRequested/">encryptedChatRequested</a>#48f1d94c flags:<a href="/type/%23/">#</a> folder_id:flags.0?<a href="/type/int/">int</a> id:<a href="/type/int/">int</a> access_hash:<a href="/type/long/">long</a> date:<a href="/type/int/">int</a> admin_id:<a href="/type/long/">long</a> participant_id:<a href="/type/long/">long</a> g_a:<a href="/type/bytes/">bytes</a> = <a href="/type/EncryptedChat/">EncryptedChat</a>;
+<a href="/constructor/encryptedChat/">encryptedChat</a>#61f0d4c7 id:<a href="/type/int/">int</a> access_hash:<a href="/type/long/">long</a> date:<a href="/type/int/">int</a> admin_id:<a href="/type/long/">long</a> participant_id:<a href="/type/long/">long</a> g_a_or_b:<a href="/type/bytes/">bytes</a> key_fingerprint:<a href="/type/long/">long</a> = <a href="/type/EncryptedChat/">EncryptedChat</a>;
+<a href="/constructor/encryptedChatDiscarded/">encryptedChatDiscarded</a>#1e1c7c45 flags:<a href="/type/%23/">#</a> history_deleted:flags.0?true id:<a href="/type/int/">int</a> = <a href="/type/EncryptedChat/">EncryptedChat</a>;
 ---functions---
-messages.requestEncryption#f64daf43 user_id:InputUser random_id:int g_a:bytes = EncryptedChat;
-```
+<a href="/method/messages.requestEncryption/" class="current_page_link">messages.requestEncryption</a>#f64daf43 user_id:<a href="/type/InputUser/">InputUser</a> random_id:<a href="/type/int/">int</a> g_a:<a href="/type/bytes/">bytes</a> = <a href="/type/EncryptedChat/">EncryptedChat</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/InputUser">InputUser</a></td><td>User ID</td></tr><tr><td><strong>random_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Unique client request ID required to prevent resending. This also doubles as the chat ID. See <a href="/api/updates#updatemessageid-updates">here »</a> for more info on random ID deduplication and updateMessageID mapping.</td></tr><tr><td><strong>g_a</strong></td><td style="text-align: center;"><a href="/type/bytes">bytes</a></td><td><code>A = g ^ a mod p</code>, see <a href="https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange">Wikipedia</a></td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/InputUser/">InputUser</a></td><td>User ID</td></tr><tr><td><strong>random_id</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>Unique client request ID required to prevent resending. This also doubles as the chat ID. See <a href="/api/updates/#updatemessageid-updates">here »</a> for more info on random ID deduplication and updateMessageID mapping.</td></tr><tr><td><strong>g_a</strong></td><td style="text-align: center;"><a href="/type/bytes/">bytes</a></td><td><code>A = g ^ a mod p</code>, see <a href="https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange">Wikipedia</a></td></tr></tbody></table>
 
 ### Result
 

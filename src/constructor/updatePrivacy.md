@@ -11,13 +11,13 @@ layout: layout.njk
 
 Privacy rules were changed
 
-```
-updatePrivacy#ee3b272a key:PrivacyKey rules:Vector<PrivacyRule> = Update;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/updatePrivacy/" class="current_page_link">updatePrivacy</a>#ee3b272a key:<a href="/type/PrivacyKey/">PrivacyKey</a> rules:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/PrivacyRule/">PrivacyRule</a>&gt; = <a href="/type/Update/">Update</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>key</strong></td><td style="text-align: center;"><a href="/type/PrivacyKey">PrivacyKey</a></td><td>Peers to which the privacy rules apply</td></tr><tr><td><strong>rules</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/PrivacyRule">PrivacyRule</a>&gt;</td><td>New privacy rules</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>key</strong></td><td style="text-align: center;"><a href="/type/PrivacyKey/">PrivacyKey</a></td><td>Peers to which the privacy rules apply</td></tr><tr><td><strong>rules</strong></td><td style="text-align: center;"><a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/PrivacyRule/">PrivacyRule</a>&gt;</td><td>New privacy rules</td></tr></tbody></table>
 
 ### Type
 

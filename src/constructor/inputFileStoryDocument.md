@@ -11,13 +11,13 @@ layout: layout.njk
 
 Used to [edit the thumbnail/static preview of a story, see here »](/api/stories/#editing-stories) for more info on the full flow.
 
-```
-inputFileStoryDocument#62dc8b48 id:InputDocument = InputFile;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputFileStoryDocument/" class="current_page_link">inputFileStoryDocument</a>#62dc8b48 id:<a href="/type/InputDocument/">InputDocument</a> = <a href="/type/InputFile/">InputFile</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/InputDocument">InputDocument</a></td><td>The old story video.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/InputDocument/">InputDocument</a></td><td>The old story video.</td></tr></tbody></table>
 
 ### Type
 

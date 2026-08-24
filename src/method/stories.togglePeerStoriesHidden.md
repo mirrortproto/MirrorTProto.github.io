@@ -11,16 +11,16 @@ layout: layout.njk
 
 Hide the active stories of a user, preventing them from being displayed on the action bar on the homescreen, see [here »](/api/stories/#hiding-stories-of-other-users) for more info.
 
-```
-boolFalse#bc799737 = Bool;
-boolTrue#997275b5 = Bool;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/boolFalse/">boolFalse</a>#bc799737 = <a href="/type/Bool/">Bool</a>;
+<a href="/constructor/boolTrue/">boolTrue</a>#997275b5 = <a href="/type/Bool/">Bool</a>;
 ---functions---
-stories.togglePeerStoriesHidden#bd0415c4 peer:InputPeer hidden:Bool = Bool;
-```
+<a href="/method/stories.togglePeerStoriesHidden/" class="current_page_link">stories.togglePeerStoriesHidden</a>#bd0415c4 peer:<a href="/type/InputPeer/">InputPeer</a> hidden:<a href="/type/Bool/">Bool</a> = <a href="/type/Bool/">Bool</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>Peer whose stories should be (un)hidden.</td></tr><tr><td><strong>hidden</strong></td><td style="text-align: center;"><a href="/type/Bool">Bool</a></td><td>Whether to hide or unhide stories.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer/">InputPeer</a></td><td>Peer whose stories should be (un)hidden.</td></tr><tr><td><strong>hidden</strong></td><td style="text-align: center;"><a href="/type/Bool/">Bool</a></td><td>Whether to hide or unhide stories.</td></tr></tbody></table>
 
 ### Result
 

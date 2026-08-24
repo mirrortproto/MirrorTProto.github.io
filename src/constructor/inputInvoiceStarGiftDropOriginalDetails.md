@@ -11,13 +11,13 @@ layout: layout.njk
 
 Used to pay for for the removal of the [starGiftAttributeOriginalDetails](/constructor/starGiftAttributeOriginalDetails/) attribute from a collectible gift, see [here »](/api/gifts/#dropping-the-original-details-of-an-upgraded-gift) for the full flow.
 
-```
-inputInvoiceStarGiftDropOriginalDetails#923d8d1 stargift:InputSavedStarGift = InputInvoice;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputInvoiceStarGiftDropOriginalDetails/" class="current_page_link">inputInvoiceStarGiftDropOriginalDetails</a>#923d8d1 stargift:<a href="/type/InputSavedStarGift/">InputSavedStarGift</a> = <a href="/type/InputInvoice/">InputInvoice</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>stargift</strong></td><td style="text-align: center;"><a href="/type/InputSavedStarGift">InputSavedStarGift</a></td><td>The collectible gift whose <a href="/constructor/starGiftAttributeOriginalDetails">starGiftAttributeOriginalDetails</a> attribute should be removed.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>stargift</strong></td><td style="text-align: center;"><a href="/type/InputSavedStarGift/">InputSavedStarGift</a></td><td>The collectible gift whose <a href="/constructor/starGiftAttributeOriginalDetails/">starGiftAttributeOriginalDetails</a> attribute should be removed.</td></tr></tbody></table>
 
 ### Type
 

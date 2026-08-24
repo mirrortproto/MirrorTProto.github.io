@@ -11,22 +11,22 @@ layout: layout.njk
 
 A list of peers we are currently [boosting](/api/boost/), and how many [boost slots](/api/boost/) we have left.
 
-```
-premium.myBoosts#9ae228e2 my_boosts:Vector<MyBoost> chats:Vector<Chat> users:Vector<User> = premium.MyBoosts;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/premium.myBoosts/">premium.myBoosts</a>#9ae228e2 my_boosts:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/MyBoost/">MyBoost</a>&gt; chats:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/Chat/">Chat</a>&gt; users:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/User/">User</a>&gt; = <a href="/type/premium.MyBoosts/" class="current_page_link">premium.MyBoosts</a>;
 
 ---functions---
 
-premium.getMyBoosts#be77b4a = premium.MyBoosts;
-premium.applyBoost#6b7da746 flags:# slots:flags.0?Vector<int> peer:InputPeer = premium.MyBoosts;
-```
+<a href="/method/premium.getMyBoosts/">premium.getMyBoosts</a>#be77b4a = <a href="/type/premium.MyBoosts/" class="current_page_link">premium.MyBoosts</a>;
+<a href="/method/premium.applyBoost/">premium.applyBoost</a>#6b7da746 flags:<a href="/type/%23/">#</a> slots:flags.0?<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/int/">int</a>&gt; peer:<a href="/type/InputPeer/">InputPeer</a> = <a href="/type/premium.MyBoosts/" class="current_page_link">premium.MyBoosts</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/premium.myBoosts">premium.myBoosts</a></td><td>A list of peers we are currently <a href="/api/boost">boosting</a>, and how many <a href="/api/boost">boost slots</a> we have left.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/premium.myBoosts/">premium.myBoosts</a></td><td>A list of peers we are currently <a href="/api/boost/">boosting</a>, and how many <a href="/api/boost/">boost slots</a> we have left.</td></tr></tbody></table>
 
 ### Methods
 
-<table class="table"><thead><tr><th scope="col">Method</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/method/premium.getMyBoosts">premium.getMyBoosts</a></td><td>Obtain which peers are we currently <a href="/api/boost">boosting</a>, and how many <a href="/api/boost">boost slots</a> we have left.</td></tr><tr><td><a href="/method/premium.applyBoost">premium.applyBoost</a></td><td>Apply one or more <a href="/api/boost">boosts »</a> to a peer.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Method</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/method/premium.getMyBoosts/">premium.getMyBoosts</a></td><td>Obtain which peers are we currently <a href="/api/boost/">boosting</a>, and how many <a href="/api/boost/">boost slots</a> we have left.</td></tr><tr><td><a href="/method/premium.applyBoost/">premium.applyBoost</a></td><td>Apply one or more <a href="/api/boost/">boosts »</a> to a peer.</td></tr></tbody></table>
 
 ### Related pages
 

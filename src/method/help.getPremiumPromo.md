@@ -11,11 +11,11 @@ layout: layout.njk
 
 Get Telegram Premium promotion information
 
-```
-help.premiumPromo#5334759c status_text:string status_entities:Vector<MessageEntity> video_sections:Vector<string> videos:Vector<Document> period_options:Vector<PremiumSubscriptionOption> users:Vector<User> = help.PremiumPromo;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/help.premiumPromo/">help.premiumPromo</a>#5334759c status_text:<a href="/type/string/">string</a> status_entities:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/MessageEntity/">MessageEntity</a>&gt; video_sections:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/string/">string</a>&gt; videos:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/Document/">Document</a>&gt; period_options:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/PremiumSubscriptionOption/">PremiumSubscriptionOption</a>&gt; users:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/User/">User</a>&gt; = <a href="/type/help.PremiumPromo/">help.PremiumPromo</a>;
 ---functions---
-help.getPremiumPromo#b81b93d4 = help.PremiumPromo;
-```
+<a href="/method/help.getPremiumPromo/" class="current_page_link">help.getPremiumPromo</a>#b81b93d4 = <a href="/type/help.PremiumPromo/">help.PremiumPromo</a>;</code></pre>
 
 ### Parameters
 

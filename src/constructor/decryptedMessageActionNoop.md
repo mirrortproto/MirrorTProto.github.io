@@ -11,10 +11,10 @@ layout: layout.njk
 
 NOOP action
 
-```
-===20===
-decryptedMessageActionNoop#a82fdd63 = DecryptedMessageAction;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code>===20===
+<a href="/constructor/decryptedMessageActionNoop/" class="current_page_link">decryptedMessageActionNoop</a>#a82fdd63 = <a href="/type/DecryptedMessageAction/">DecryptedMessageAction</a>;</code></pre>
 
 ### Parameters
 

@@ -11,9 +11,9 @@ layout: layout.njk
 
 The list of favorited stickers was changed, the client should call [messages.getFavedStickers](/method/messages.getFavedStickers/) to refetch the new list
 
-```
-updateFavedStickers#e511996d = Update;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/updateFavedStickers/" class="current_page_link">updateFavedStickers</a>#e511996d = <a href="/type/Update/">Update</a>;</code></pre>
 
 ### Parameters
 

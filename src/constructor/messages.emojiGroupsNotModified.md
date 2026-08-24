@@ -11,9 +11,9 @@ layout: layout.njk
 
 The list of [emoji categories](/api/emoji-categories/) hasn't changed.
 
-```
-messages.emojiGroupsNotModified#6fb4ad87 = messages.EmojiGroups;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/messages.emojiGroupsNotModified/" class="current_page_link">messages.emojiGroupsNotModified</a>#6fb4ad87 = <a href="/type/messages.EmojiGroups/">messages.EmojiGroups</a>;</code></pre>
 
 ### Parameters
 

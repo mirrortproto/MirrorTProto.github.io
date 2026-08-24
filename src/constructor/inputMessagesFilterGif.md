@@ -11,9 +11,9 @@ layout: layout.njk
 
 Return only messages containing gifs
 
-```
-inputMessagesFilterGif#ffc86587 = MessagesFilter;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputMessagesFilterGif/" class="current_page_link">inputMessagesFilterGif</a>#ffc86587 = <a href="/type/MessagesFilter/">MessagesFilter</a>;</code></pre>
 
 ### Parameters
 

@@ -11,16 +11,16 @@ layout: layout.njk
 
 Represents a list of [emoji categories](/api/emoji-categories/).
 
-```
-messages.emojiGroupsNotModified#6fb4ad87 = messages.EmojiGroups;
-messages.emojiGroups#881fb94b hash:int groups:Vector<EmojiGroup> = messages.EmojiGroups;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/messages.emojiGroupsNotModified/">messages.emojiGroupsNotModified</a>#6fb4ad87 = <a href="/type/messages.EmojiGroups/">messages.EmojiGroups</a>;
+<a href="/constructor/messages.emojiGroups/">messages.emojiGroups</a>#881fb94b hash:<a href="/type/int/">int</a> groups:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/EmojiGroup/">EmojiGroup</a>&gt; = <a href="/type/messages.EmojiGroups/">messages.EmojiGroups</a>;
 ---functions---
-messages.getEmojiGroups#7488ce5b hash:int = messages.EmojiGroups;
-```
+<a href="/method/messages.getEmojiGroups/" class="current_page_link">messages.getEmojiGroups</a>#7488ce5b hash:<a href="/type/int/">int</a> = <a href="/type/messages.EmojiGroups/">messages.EmojiGroups</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td><a href="/api/offsets#hash-generation">Hash used for caching, for more info click here</a>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td><a href="/api/offsets/#hash-generation">Hash used for caching, for more info click here</a>.</td></tr></tbody></table>
 
 ### Result
 

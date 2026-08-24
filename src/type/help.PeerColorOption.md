@@ -11,13 +11,13 @@ layout: layout.njk
 
 Contains info about a [color palette »](/api/colors/).
 
-```
-help.peerColorOption#adec6ebe flags:# hidden:flags.0?true color_id:int colors:flags.1?help.PeerColorSet dark_colors:flags.2?help.PeerColorSet channel_min_level:flags.3?int group_min_level:flags.4?int = help.PeerColorOption;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/help.peerColorOption/">help.peerColorOption</a>#adec6ebe flags:<a href="/type/%23/">#</a> hidden:flags.0?true color_id:<a href="/type/int/">int</a> colors:flags.1?<a href="/type/help.PeerColorSet/">help.PeerColorSet</a> dark_colors:flags.2?<a href="/type/help.PeerColorSet/">help.PeerColorSet</a> channel_min_level:flags.3?<a href="/type/int/">int</a> group_min_level:flags.4?<a href="/type/int/">int</a> = <a href="/type/help.PeerColorOption/" class="current_page_link">help.PeerColorOption</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/help.peerColorOption">help.peerColorOption</a></td><td>Contains info about a <a href="/api/colors">color palette »</a>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/help.peerColorOption/">help.peerColorOption</a></td><td>Contains info about a <a href="/api/colors/">color palette »</a>.</td></tr></tbody></table>
 
 ### Related pages
 

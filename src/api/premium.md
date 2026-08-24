@@ -413,7 +413,7 @@ Each `users/months` combo can have up to two options: one in the user's native c
 
 Unofficial clients should display and use only the options where `currency`\=`XTR`.
 
-To gift a Telegram Premium subscription paying with [Telegram Stars](/api/stars/), create an [inputInvoicePremiumGiftStars](/constructor/inputInvoicePremiumGiftStars/), then follow the [usual payment flow »](https://core.telegram.org/api/payments#22-getting-invoice-info-about-the-product).
+To gift a Telegram Premium subscription paying with [Telegram Stars](/api/stars/), create an [inputInvoicePremiumGiftStars](/constructor/inputInvoicePremiumGiftStars/), then follow the [usual payment flow »](/api/payments/#2-2-getting-invoice-info-about-the-product).
 
 Once the payment is successfully processed, the user to which the gift was sent will automatically receive a [messageService](/constructor/messageService/) from the user that sent the gift, containing a [messageActionGiftPremium](/constructor/messageActionGiftPremium/) constructor with further info about the price and duration of the gifted Telegram Premium subscription.  
 Clients should display this message, along with a sticker from the [inputStickerSetPremiumGifts](/constructor/inputStickerSetPremiumGifts/) [stickerset](/api/stickers/): here's an [example](https://telegram.org/blog/custom-emoji#gifting-telegram-premium).

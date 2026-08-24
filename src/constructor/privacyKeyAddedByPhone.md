@@ -11,9 +11,9 @@ layout: layout.njk
 
 Whether this user can be added to our contact list by their phone number
 
-```
-privacyKeyAddedByPhone#42ffd42b = PrivacyKey;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/privacyKeyAddedByPhone/" class="current_page_link">privacyKeyAddedByPhone</a>#42ffd42b = <a href="/type/PrivacyKey/">PrivacyKey</a>;</code></pre>
 
 ### Parameters
 

@@ -11,15 +11,15 @@ layout: layout.njk
 
 Fetch popular [Main Mini Apps](/api/bots/webapps/#main-mini-apps), to be used in the [apps tab of global search »](/api/search/#apps-tab).
 
-```
-bots.popularAppBots#1991b13b flags:# next_offset:flags.0?string users:Vector<User> = bots.PopularAppBots;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/bots.popularAppBots/">bots.popularAppBots</a>#1991b13b flags:<a href="/type/%23/">#</a> next_offset:flags.0?<a href="/type/string/">string</a> users:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/User/">User</a>&gt; = <a href="/type/bots.PopularAppBots/">bots.PopularAppBots</a>;
 ---functions---
-bots.getPopularAppBots#c2510192 offset:string limit:int = bots.PopularAppBots;
-```
+<a href="/method/bots.getPopularAppBots/" class="current_page_link">bots.getPopularAppBots</a>#c2510192 offset:<a href="/type/string/">string</a> limit:<a href="/type/int/">int</a> = <a href="/type/bots.PopularAppBots/">bots.PopularAppBots</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>offset</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Offset for <a href="/api/offsets">pagination</a>, initially an empty string, then re-use the <code>next_offset</code> returned by the previous query.</td></tr><tr><td><strong>limit</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Maximum number of results to return, <a href="/api/offsets">see pagination</a></td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>offset</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td>Offset for <a href="/api/offsets/">pagination</a>, initially an empty string, then re-use the <code>next_offset</code> returned by the previous query.</td></tr><tr><td><strong>limit</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>Maximum number of results to return, <a href="/api/offsets/">see pagination</a></td></tr></tbody></table>
 
 ### Result
 

@@ -11,9 +11,9 @@ layout: layout.njk
 
 The list of [reaction tag »](/api/saved-messages/#tags) names assigned by the user hasn't changed.
 
-```
-messages.savedReactionTagsNotModified#889b59ef = messages.SavedReactionTags;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/messages.savedReactionTagsNotModified/" class="current_page_link">messages.savedReactionTagsNotModified</a>#889b59ef = <a href="/type/messages.SavedReactionTags/">messages.SavedReactionTags</a>;</code></pre>
 
 ### Parameters
 

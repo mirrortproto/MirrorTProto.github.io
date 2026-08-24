@@ -11,9 +11,9 @@ layout: layout.njk
 
 Most frequently visited channels
 
-```
-topPeerCategoryChannels#161d9628 = TopPeerCategory;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/topPeerCategoryChannels/" class="current_page_link">topPeerCategoryChannels</a>#161d9628 = <a href="/type/TopPeerCategory/">TopPeerCategory</a>;</code></pre>
 
 ### Parameters
 

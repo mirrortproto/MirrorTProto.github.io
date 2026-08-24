@@ -11,9 +11,9 @@ layout: layout.njk
 
 Empty constructor.
 
-```
-geoPointEmpty#1117dd5f = GeoPoint;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/geoPointEmpty/" class="current_page_link">geoPointEmpty</a>#1117dd5f = <a href="/type/GeoPoint/">GeoPoint</a>;</code></pre>
 
 ### Parameters
 

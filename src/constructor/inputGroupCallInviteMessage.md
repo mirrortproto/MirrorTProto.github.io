@@ -11,13 +11,13 @@ layout: layout.njk
 
 Identifies a [conference call »](/api/group-calls/#conference-calls) using its [messageActionConferenceCall](/constructor/messageActionConferenceCall/) invitation service message.
 
-```
-inputGroupCallInviteMessage#8c10603f msg_id:int = InputGroupCall;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputGroupCallInviteMessage/" class="current_page_link">inputGroupCallInviteMessage</a>#8c10603f msg_id:<a href="/type/int/">int</a> = <a href="/type/InputGroupCall/">InputGroupCall</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>msg_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>ID of the <a href="/constructor/messageActionConferenceCall">messageActionConferenceCall</a>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>msg_id</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>ID of the <a href="/constructor/messageActionConferenceCall/">messageActionConferenceCall</a>.</td></tr></tbody></table>
 
 ### Type
 

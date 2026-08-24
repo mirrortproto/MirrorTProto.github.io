@@ -11,9 +11,9 @@ layout: layout.njk
 
 Top peers disabled
 
-```
-contacts.topPeersDisabled#b52c939d = contacts.TopPeers;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/contacts.topPeersDisabled/" class="current_page_link">contacts.topPeersDisabled</a>#b52c939d = <a href="/type/contacts.TopPeers/">contacts.TopPeers</a>;</code></pre>
 
 ### Parameters
 

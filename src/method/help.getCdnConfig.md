@@ -11,11 +11,11 @@ layout: layout.njk
 
 Get configuration for [CDN](https://core.telegram.org/cdn) file downloads.
 
-```
-cdnConfig#5725e40a public_keys:Vector<CdnPublicKey> = CdnConfig;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/cdnConfig/">cdnConfig</a>#5725e40a public_keys:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/CdnPublicKey/">CdnPublicKey</a>&gt; = <a href="/type/CdnConfig/">CdnConfig</a>;
 ---functions---
-help.getCdnConfig#52029342 = CdnConfig;
-```
+<a href="/method/help.getCdnConfig/" class="current_page_link">help.getCdnConfig</a>#52029342 = <a href="/type/CdnConfig/">CdnConfig</a>;</code></pre>
 
 ### Parameters
 

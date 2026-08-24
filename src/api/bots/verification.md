@@ -3,7 +3,7 @@ title: "Third-party verification"
 original: "https://core.telegram.org/api/bots/verification"
 section: api
 description: "To further improve transparency on Telegram, official third-party services are able to assign extra verification icons to user accounts and chats — in order to prevent scams and…"
-crumbs: [{"title":"API","url":"/api/"},{"title":"Third-party verification","url":"https://core.telegram.org/api/bots%2Fverification"}]
+crumbs: [{"title":"API","url":"/api/"},{"title":"Third-party verification","url":"/api/bots/verification/"}]
 layout: layout.njk
 ---
 

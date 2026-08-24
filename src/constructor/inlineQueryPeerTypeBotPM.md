@@ -11,9 +11,9 @@ layout: layout.njk
 
 Peer type: private chat with a bot.
 
-```
-inlineQueryPeerTypeBotPM#e3b2d0c = InlineQueryPeerType;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inlineQueryPeerTypeBotPM/" class="current_page_link">inlineQueryPeerTypeBotPM</a>#e3b2d0c = <a href="/type/InlineQueryPeerType/">InlineQueryPeerType</a>;</code></pre>
 
 ### Parameters
 

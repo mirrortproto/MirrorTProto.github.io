@@ -11,9 +11,9 @@ layout: layout.njk
 
 A message was pinned
 
-```
-messageActionPinMessage#94bd38ed = MessageAction;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/messageActionPinMessage/" class="current_page_link">messageActionPinMessage</a>#94bd38ed = <a href="/type/MessageAction/">MessageAction</a>;</code></pre>
 
 ### Parameters
 

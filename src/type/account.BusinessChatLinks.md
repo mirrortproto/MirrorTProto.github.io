@@ -11,21 +11,21 @@ layout: layout.njk
 
 Contains info about [business chat deep links »](/api/business/#business-chat-links) created by the current account.
 
-```
-account.businessChatLinks#ec43a2d1 links:Vector<BusinessChatLink> chats:Vector<Chat> users:Vector<User> = account.BusinessChatLinks;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/account.businessChatLinks/">account.businessChatLinks</a>#ec43a2d1 links:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/BusinessChatLink/">BusinessChatLink</a>&gt; chats:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/Chat/">Chat</a>&gt; users:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/User/">User</a>&gt; = <a href="/type/account.BusinessChatLinks/" class="current_page_link">account.BusinessChatLinks</a>;
 
 ---functions---
 
-account.getBusinessChatLinks#6f70dde1 = account.BusinessChatLinks;
-```
+<a href="/method/account.getBusinessChatLinks/">account.getBusinessChatLinks</a>#6f70dde1 = <a href="/type/account.BusinessChatLinks/" class="current_page_link">account.BusinessChatLinks</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/account.businessChatLinks">account.businessChatLinks</a></td><td>Contains info about <a href="/api/business#business-chat-links">business chat deep links »</a> created by the current account.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/account.businessChatLinks/">account.businessChatLinks</a></td><td>Contains info about <a href="/api/business/#business-chat-links">business chat deep links »</a> created by the current account.</td></tr></tbody></table>
 
 ### Methods
 
-<table class="table"><thead><tr><th scope="col">Method</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/method/account.getBusinessChatLinks">account.getBusinessChatLinks</a></td><td>List all created <a href="/api/business#business-chat-links">business chat deep links »</a>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Method</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/method/account.getBusinessChatLinks/">account.getBusinessChatLinks</a></td><td>List all created <a href="/api/business/#business-chat-links">business chat deep links »</a>.</td></tr></tbody></table>
 
 ### Related pages
 

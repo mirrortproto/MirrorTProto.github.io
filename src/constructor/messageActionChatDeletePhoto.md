@@ -11,9 +11,9 @@ layout: layout.njk
 
 Group profile photo removed.
 
-```
-messageActionChatDeletePhoto#95e3fbef = MessageAction;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/messageActionChatDeletePhoto/" class="current_page_link">messageActionChatDeletePhoto</a>#95e3fbef = <a href="/type/MessageAction/">MessageAction</a>;</code></pre>
 
 ### Parameters
 

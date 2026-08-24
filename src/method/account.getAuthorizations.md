@@ -11,11 +11,11 @@ layout: layout.njk
 
 Get logged-in sessions
 
-```
-account.authorizations#4bff8ea0 authorization_ttl_days:int authorizations:Vector<Authorization> = account.Authorizations;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/account.authorizations/">account.authorizations</a>#4bff8ea0 authorization_ttl_days:<a href="/type/int/">int</a> authorizations:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/Authorization/">Authorization</a>&gt; = <a href="/type/account.Authorizations/">account.Authorizations</a>;
 ---functions---
-account.getAuthorizations#e320c158 = account.Authorizations;
-```
+<a href="/method/account.getAuthorizations/" class="current_page_link">account.getAuthorizations</a>#e320c158 = <a href="/type/account.Authorizations/">account.Authorizations</a>;</code></pre>
 
 ### Parameters
 

@@ -11,9 +11,9 @@ layout: layout.njk
 
 Whether people can add you to their contact list by your phone number
 
-```
-inputPrivacyKeyAddedByPhone#d1219bdd = InputPrivacyKey;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputPrivacyKeyAddedByPhone/" class="current_page_link">inputPrivacyKeyAddedByPhone</a>#d1219bdd = <a href="/type/InputPrivacyKey/">InputPrivacyKey</a>;</code></pre>
 
 ### Parameters
 

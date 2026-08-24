@@ -13,13 +13,13 @@ WebAuthn registration response used when registering a new passkey, see [here »
 
 Generated from the [AuthenticatorAttestationResponse](https://developer.mozilla.org/en-US/docs/Web/API/AuthenticatorAttestationResponse) object.
 
-```
-inputPasskeyResponseRegister#3e63935c client_data:DataJSON attestation_data:bytes = InputPasskeyResponse;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputPasskeyResponseRegister/" class="current_page_link">inputPasskeyResponseRegister</a>#3e63935c client_data:<a href="/type/DataJSON/">DataJSON</a> attestation_data:<a href="/type/bytes/">bytes</a> = <a href="/type/InputPasskeyResponse/">InputPasskeyResponse</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>client_data</strong></td><td style="text-align: center;"><a href="/type/DataJSON">DataJSON</a></td><td>Base64url-decoded <code>clientDataJSON</code> field of an <a href="https://developer.mozilla.org/en-US/docs/Web/API/AuthenticatorAttestationResponse">AuthenticatorAttestationResponse</a>, wrapped in <a href="/constructor/dataJSON">dataJSON</a></td></tr><tr><td><strong>attestation_data</strong></td><td style="text-align: center;"><a href="/type/bytes">bytes</a></td><td>Base64url-decoded <code>attestationObject</code> field of an <a href="https://developer.mozilla.org/en-US/docs/Web/API/AuthenticatorAttestationResponse">AuthenticatorAttestationResponse</a></td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>client_data</strong></td><td style="text-align: center;"><a href="/type/DataJSON/">DataJSON</a></td><td>Base64url-decoded <code>clientDataJSON</code> field of an <a href="https://developer.mozilla.org/en-US/docs/Web/API/AuthenticatorAttestationResponse">AuthenticatorAttestationResponse</a>, wrapped in <a href="/constructor/dataJSON/">dataJSON</a></td></tr><tr><td><strong>attestation_data</strong></td><td style="text-align: center;"><a href="/type/bytes/">bytes</a></td><td>Base64url-decoded <code>attestationObject</code> field of an <a href="https://developer.mozilla.org/en-US/docs/Web/API/AuthenticatorAttestationResponse">AuthenticatorAttestationResponse</a></td></tr></tbody></table>
 
 ### Type
 

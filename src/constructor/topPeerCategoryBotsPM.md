@@ -11,9 +11,9 @@ layout: layout.njk
 
 Most used bots
 
-```
-topPeerCategoryBotsPM#ab661b5b = TopPeerCategory;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/topPeerCategoryBotsPM/" class="current_page_link">topPeerCategoryBotsPM</a>#ab661b5b = <a href="/type/TopPeerCategory/">TopPeerCategory</a>;</code></pre>
 
 ### Parameters
 

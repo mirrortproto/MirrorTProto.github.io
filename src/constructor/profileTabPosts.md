@@ -11,9 +11,9 @@ layout: layout.njk
 
 Represents the [stories](/api/stories/) tab of a profile page.
 
-```
-profileTabPosts#b98cd696 = ProfileTab;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/profileTabPosts/" class="current_page_link">profileTabPosts</a>#b98cd696 = <a href="/type/ProfileTab/">ProfileTab</a>;</code></pre>
 
 ### Parameters
 

@@ -11,9 +11,9 @@ layout: layout.njk
 
 The list of IDs of songs ([document](/constructor/document/).`id`s) currently pinned on our profile hasn't changed.
 
-```
-account.savedMusicIdsNotModified#4fc81d6e = account.SavedMusicIds;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/account.savedMusicIdsNotModified/" class="current_page_link">account.savedMusicIdsNotModified</a>#4fc81d6e = <a href="/type/account.SavedMusicIds/">account.SavedMusicIds</a>;</code></pre>
 
 ### Parameters
 

@@ -11,15 +11,15 @@ layout: layout.njk
 
 Send an email verification code.
 
-```
-account.sentEmailCode#811f854f email_pattern:string length:int = account.SentEmailCode;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/account.sentEmailCode/">account.sentEmailCode</a>#811f854f email_pattern:<a href="/type/string/">string</a> length:<a href="/type/int/">int</a> = <a href="/type/account.SentEmailCode/">account.SentEmailCode</a>;
 ---functions---
-account.sendVerifyEmailCode#98e037bb purpose:EmailVerifyPurpose email:string = account.SentEmailCode;
-```
+<a href="/method/account.sendVerifyEmailCode/" class="current_page_link">account.sendVerifyEmailCode</a>#98e037bb purpose:<a href="/type/EmailVerifyPurpose/">EmailVerifyPurpose</a> email:<a href="/type/string/">string</a> = <a href="/type/account.SentEmailCode/">account.SentEmailCode</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>purpose</strong></td><td style="text-align: center;"><a href="/type/EmailVerifyPurpose">EmailVerifyPurpose</a></td><td>Verification purpose.</td></tr><tr><td><strong>email</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>The email where to send the code.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>purpose</strong></td><td style="text-align: center;"><a href="/type/EmailVerifyPurpose/">EmailVerifyPurpose</a></td><td>Verification purpose.</td></tr><tr><td><strong>email</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td>The email where to send the code.</td></tr></tbody></table>
 
 ### Result
 

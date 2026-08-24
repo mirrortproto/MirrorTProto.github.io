@@ -11,13 +11,13 @@ layout: layout.njk
 
 A [report option for a sponsored message »](/api/sponsored-messages/#reporting-sponsored-messages).
 
-```
-sponsoredMessageReportOption#430d3150 text:string option:bytes = SponsoredMessageReportOption;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/sponsoredMessageReportOption/" class="current_page_link">sponsoredMessageReportOption</a>#430d3150 text:<a href="/type/string/">string</a> option:<a href="/type/bytes/">bytes</a> = <a href="/type/SponsoredMessageReportOption/">SponsoredMessageReportOption</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>text</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Localized description of the option.</td></tr><tr><td><strong>option</strong></td><td style="text-align: center;"><a href="/type/bytes">bytes</a></td><td>Option identifier to pass to <a href="/method/messages.reportSponsoredMessage">messages.reportSponsoredMessage</a>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>text</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td>Localized description of the option.</td></tr><tr><td><strong>option</strong></td><td style="text-align: center;"><a href="/type/bytes/">bytes</a></td><td>Option identifier to pass to <a href="/method/messages.reportSponsoredMessage/">messages.reportSponsoredMessage</a>.</td></tr></tbody></table>
 
 ### Type
 

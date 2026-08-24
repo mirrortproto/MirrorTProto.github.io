@@ -11,9 +11,9 @@ layout: layout.njk
 
 Represents the media tab of a profile page.
 
-```
-profileTabMedia#72c64955 = ProfileTab;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/profileTabMedia/" class="current_page_link">profileTabMedia</a>#72c64955 = <a href="/type/ProfileTab/">ProfileTab</a>;</code></pre>
 
 ### Parameters
 

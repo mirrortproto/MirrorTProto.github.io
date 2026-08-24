@@ -10,11 +10,11 @@ layout: layout.njk
 
 A game to send
 
-```
-inputGameID#32c3e77 id:long access_hash:long = InputGame;
-inputGameShortName#c331e80a bot_id:InputUser short_name:string = InputGame;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/inputGameID/">inputGameID</a>#32c3e77 id:<a href="/type/long/">long</a> access_hash:<a href="/type/long/">long</a> = <a href="/type/InputGame/" class="current_page_link">InputGame</a>;
+<a href="/constructor/inputGameShortName/">inputGameShortName</a>#c331e80a bot_id:<a href="/type/InputUser/">InputUser</a> short_name:<a href="/type/string/">string</a> = <a href="/type/InputGame/" class="current_page_link">InputGame</a>;</code></pre>
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/inputGameID">inputGameID</a></td><td>Indicates an already sent game</td></tr><tr><td><a href="/constructor/inputGameShortName">inputGameShortName</a></td><td>Game by short name</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/inputGameID/">inputGameID</a></td><td>Indicates an already sent game</td></tr><tr><td><a href="/constructor/inputGameShortName/">inputGameShortName</a></td><td>Game by short name</td></tr></tbody></table>

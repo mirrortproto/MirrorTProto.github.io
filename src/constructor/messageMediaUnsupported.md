@@ -11,9 +11,9 @@ layout: layout.njk
 
 Current version of the client does not support this media type.
 
-```
-messageMediaUnsupported#9f84f49e = MessageMedia;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/messageMediaUnsupported/" class="current_page_link">messageMediaUnsupported</a>#9f84f49e = <a href="/type/MessageMedia/">MessageMedia</a>;</code></pre>
 
 ### Parameters
 

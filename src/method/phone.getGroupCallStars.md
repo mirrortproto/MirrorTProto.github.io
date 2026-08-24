@@ -11,15 +11,15 @@ layout: layout.njk
 
 Fetch a live story's total donations and top donors, see [paid live story donations »](/api/group-calls/#paid-live-story-donations).
 
-```
-phone.groupCallStars#9d1dbd26 total_stars:long top_donors:Vector<GroupCallDonor> chats:Vector<Chat> users:Vector<User> = phone.GroupCallStars;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/phone.groupCallStars/">phone.groupCallStars</a>#9d1dbd26 total_stars:<a href="/type/long/">long</a> top_donors:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/GroupCallDonor/">GroupCallDonor</a>&gt; chats:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/Chat/">Chat</a>&gt; users:<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/User/">User</a>&gt; = <a href="/type/phone.GroupCallStars/">phone.GroupCallStars</a>;
 ---functions---
-phone.getGroupCallStars#6f636302 call:InputGroupCall = phone.GroupCallStars;
-```
+<a href="/method/phone.getGroupCallStars/" class="current_page_link">phone.getGroupCallStars</a>#6f636302 call:<a href="/type/InputGroupCall/">InputGroupCall</a> = <a href="/type/phone.GroupCallStars/">phone.GroupCallStars</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>call</strong></td><td style="text-align: center;"><a href="/type/InputGroupCall">InputGroupCall</a></td><td>Live story group call</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>call</strong></td><td style="text-align: center;"><a href="/type/InputGroupCall/">InputGroupCall</a></td><td>Live story group call</td></tr></tbody></table>
 
 ### Result
 

@@ -11,13 +11,13 @@ layout: layout.njk
 
 Summary of a peer's [active stories »](/api/stories/#recent-story-summaries), embedded in [user](/constructor/user/).`stories_max_id` and [channel](/constructor/channel/).`stories_max_id` and returned by [stories.getPeerMaxIDs](/method/stories.getPeerMaxIDs/).
 
-```
-recentStory#711d692d flags:# live:flags.0?true max_id:flags.1?int = RecentStory;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/recentStory/" class="current_page_link">recentStory</a>#711d692d flags:<a href="/type/%23/">#</a> live:flags.0?true max_id:flags.1?<a href="/type/int/">int</a> = <a href="/type/RecentStory/">RecentStory</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>Flags, see <a href="/mtproto/TL-combinators#conditional-fields">TL conditional fields</a></td></tr><tr><td><strong>live</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Whether the peer is currently broadcasting a <a href="/api/stories#live-stories">live story »</a>.</td></tr><tr><td><strong>max_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/int">int</a></td><td>If <code>live</code> is set, ID of the peer's active <a href="/api/stories#live-stories">live story »</a>; otherwise, ID of the peer's maximum active story.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23/">#</a></td><td>Flags, see <a href="/mtproto/TL-combinators/#conditional-fields">TL conditional fields</a></td></tr><tr><td><strong>live</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators/#conditional-fields">flags</a>.0?<a href="/constructor/true/">true</a></td><td>Whether the peer is currently broadcasting a <a href="/api/stories/#live-stories">live story »</a>.</td></tr><tr><td><strong>max_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators/#conditional-fields">flags</a>.1?<a href="/type/int/">int</a></td><td>If <code>live</code> is set, ID of the peer's active <a href="/api/stories/#live-stories">live story »</a>; otherwise, ID of the peer's maximum active story.</td></tr></tbody></table>
 
 ### Type
 

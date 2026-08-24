@@ -11,9 +11,9 @@ layout: layout.njk
 
 Whether the user accepts voice messages
 
-```
-privacyKeyVoiceMessages#697f414 = PrivacyKey;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/privacyKeyVoiceMessages/" class="current_page_link">privacyKeyVoiceMessages</a>#697f414 = <a href="/type/PrivacyKey/">PrivacyKey</a>;</code></pre>
 
 ### Parameters
 

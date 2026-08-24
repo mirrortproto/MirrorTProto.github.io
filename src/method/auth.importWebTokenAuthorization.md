@@ -11,16 +11,16 @@ layout: layout.njk
 
 Login by importing an authorization token
 
-```
-auth.authorization#2ea2c0d4 flags:# setup_password_required:flags.1?true otherwise_relogin_days:flags.1?int tmp_sessions:flags.0?int future_auth_token:flags.2?bytes user:User = auth.Authorization;
-auth.authorizationSignUpRequired#44747e9a flags:# terms_of_service:flags.0?help.TermsOfService = auth.Authorization;
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/auth.authorization/">auth.authorization</a>#2ea2c0d4 flags:<a href="/type/%23/">#</a> setup_password_required:flags.1?true otherwise_relogin_days:flags.1?<a href="/type/int/">int</a> tmp_sessions:flags.0?<a href="/type/int/">int</a> future_auth_token:flags.2?<a href="/type/bytes/">bytes</a> user:<a href="/type/User/">User</a> = <a href="/type/auth.Authorization/">auth.Authorization</a>;
+<a href="/constructor/auth.authorizationSignUpRequired/">auth.authorizationSignUpRequired</a>#44747e9a flags:<a href="/type/%23/">#</a> terms_of_service:flags.0?<a href="/type/help.TermsOfService/">help.TermsOfService</a> = <a href="/type/auth.Authorization/">auth.Authorization</a>;
 ---functions---
-auth.importWebTokenAuthorization#2db873a9 api_id:int api_hash:string web_auth_token:string = auth.Authorization;
-```
+<a href="/method/auth.importWebTokenAuthorization/" class="current_page_link">auth.importWebTokenAuthorization</a>#2db873a9 api_id:<a href="/type/int/">int</a> api_hash:<a href="/type/string/">string</a> web_auth_token:<a href="/type/string/">string</a> = <a href="/type/auth.Authorization/">auth.Authorization</a>;</code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>api_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td><a href="/api/obtaining_api_id">API ID</a></td></tr><tr><td><strong>api_hash</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td><a href="/api/obtaining_api_id">API hash</a></td></tr><tr><td><strong>web_auth_token</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>The authorization token</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>api_id</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td><a href="/api/obtaining_api_id/">API ID</a></td></tr><tr><td><strong>api_hash</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td><a href="/api/obtaining_api_id/">API hash</a></td></tr><tr><td><strong>web_auth_token</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td>The authorization token</td></tr></tbody></table>
 
 ### Result
 

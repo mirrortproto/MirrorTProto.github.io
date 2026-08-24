@@ -20,9 +20,9 @@ sendMessageRecordVideoAction#a187d66f = SendMessageAction;
 
 #### API schema
 
-```
-sendMessageRecordVideoAction#a187d66f = SendMessageAction;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/sendMessageRecordVideoAction/" class="current_page_link">sendMessageRecordVideoAction</a>#a187d66f = <a href="/type/SendMessageAction/">SendMessageAction</a>;</code></pre>
 
 ### Parameters
 

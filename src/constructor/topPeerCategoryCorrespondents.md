@@ -11,9 +11,9 @@ layout: layout.njk
 
 Users we've chatted most frequently with
 
-```
-topPeerCategoryCorrespondents#637b7ed = TopPeerCategory;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/topPeerCategoryCorrespondents/" class="current_page_link">topPeerCategoryCorrespondents</a>#637b7ed = <a href="/type/TopPeerCategory/">TopPeerCategory</a>;</code></pre>
 
 ### Parameters
 

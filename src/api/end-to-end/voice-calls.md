@@ -3,7 +3,7 @@ title: "End-to-End Encrypted Voice Calls"
 original: "https://core.telegram.org/api/end-to-end/voice-calls"
 section: api
 description: "Before a voice call is ready, some preliminary actions have to be performed. The calling party needs to contact the party to be called and check whether it is ready to accept the…"
-crumbs: [{"title":"API","url":"/api/"},{"title":"End-to-End Encrypted Voice Calls","url":"https://core.telegram.org/api/end-to-end%2Fvoice-calls"}]
+crumbs: [{"title":"API","url":"/api/"},{"title":"End-to-End Encrypted Voice Calls","url":"/api/end-to-end/voice-calls/"}]
 layout: layout.njk
 ---
 

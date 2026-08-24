@@ -11,9 +11,9 @@ layout: layout.njk
 
 Describes a [Telegram Star](/api/stars/) transaction used to pay for [Telegram ads as specified here »](/api/stars/#paying-for-ads).
 
-```
-starsTransactionPeerAds#60682812 = StarsTransactionPeer;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/starsTransactionPeerAds/" class="current_page_link">starsTransactionPeerAds</a>#60682812 = <a href="/type/StarsTransactionPeer/">StarsTransactionPeer</a>;</code></pre>
 
 ### Parameters
 

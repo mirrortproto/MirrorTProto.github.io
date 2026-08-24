@@ -11,9 +11,9 @@ layout: layout.njk
 
 This user requires us to buy a [Premium](/api/premium/) subscription in order to contact them.
 
-```
-requirementToContactPremium#e581e4e9 = RequirementToContact;
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code><a href="/constructor/requirementToContactPremium/" class="current_page_link">requirementToContactPremium</a>#e581e4e9 = <a href="/type/RequirementToContact/">RequirementToContact</a>;</code></pre>
 
 ### Parameters
 

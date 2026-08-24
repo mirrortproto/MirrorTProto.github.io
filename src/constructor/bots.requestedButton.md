@@ -11,13 +11,13 @@ layout: layout.njk
 
 Contains the request ID a bot should pass to a [Mini App](/api/bots/webapps/) after preparing a peer request button with [bots.requestWebViewButton](/method/bots.requestWebViewButton/), see [here »](/api/bots/buttons/#requesting-peers-via-mini-apps) for more info.
 
-```
-Constructor schema is available as of layer 224. Switch »
-```
+<p class="page_layer">Layer 223</p>
+
+<pre class="page_scheme"><code>Constructor schema is available as of layer 224. <a href="?layer=224">Switch »</a></code></pre>
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>webapp_req_id</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Mini App request ID, to be passed by the bot to the Mini App and then back to <a href="/method/bots.getRequestedWebViewButton">bots.getRequestedWebViewButton</a> and <a href="/method/messages.sendBotRequestedPeer">messages.sendBotRequestedPeer</a></td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>webapp_req_id</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td>Mini App request ID, to be passed by the bot to the Mini App and then back to <a href="/method/bots.getRequestedWebViewButton/">bots.getRequestedWebViewButton</a> and <a href="/method/messages.sendBotRequestedPeer/">messages.sendBotRequestedPeer</a></td></tr></tbody></table>
 
 ### Type
 
