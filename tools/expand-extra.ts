@@ -60,14 +60,20 @@ const groupFor = (host: string, pagePath: string): string => {
     /faq_[a-z]+$/.test(pagePath)
   )
     return "FAQ";
+  if (
+    pagePath.startsWith("/blackberry") ||
+    pagePath === "/contest300K" ||
+    /contest|botprize/i.test(pagePath) ||
+    pagePath === "/blog/bb-results" ||
+    pagePath === "/blog/telegram-x"
+  )
+    return "Contests";
   if (pagePath === "/blog" || pagePath.startsWith("/blog/")) return "Blog";
   if (
     host === "core.telegram.org" &&
     (pagePath === "/bots" || pagePath.startsWith("/bots/"))
   )
     return "Bot API";
-  if (host === "core.telegram.org" && pagePath.startsWith("/blackberry"))
-    return "BlackBerry Guide";
   if (
     host === "telegram.org" &&
     (pagePath === "/source" ||
@@ -94,7 +100,7 @@ const groupFor = (host: string, pagePath: string): string => {
       pagePath.startsWith("/tos/"))
   )
     return "Policies";
-  return "Resources";
+  return "Other";
 };
 
 const report = JSON.parse(fs.readFileSync(REPORT, "utf8")) as Report;
@@ -155,11 +161,11 @@ const added: Record<string, string[]> = {
   "Bot API": [],
   Blog: [],
   FAQ: [],
-  "BlackBerry Guide": [],
+  Contests: [],
   "Apps & Clients": [],
   "Developer Tools": [],
   Policies: [],
-  Resources: [],
+  Other: [],
 };
 for (const url of candidates.keys()) {
   const u = new URL(url);

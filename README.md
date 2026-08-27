@@ -21,9 +21,11 @@ The site is built with [Eleventy](https://www.11ty.dev/) and published via GitHu
 ## Возможности / Features
 
 - **Eleven sections**: Telegram API (130), Bot API (18), MTProto (23), Schema (10 + 3 022 reference
-  pages), Blog (179), FAQ (9), Apps & Clients (3), BlackBerry Guide (16), Developer Tools (22),
-  Policies (21) and Resources (14) — the same complete section list is shown on every page, and each
-  section has its own collapsible sidebar group and search filter. The blog is the **whole archive** of telegram.org: `tools/list-blog.ts`
+  pages), Blog, FAQ (9), Apps & Clients (3), Contests (29), Developer Tools (22), Policies (21) and
+  Other (14). The same complete section list is shown on every page; each section has its own landing
+  page at the top of its sidebar group and its own search filter. The header always stays on one row,
+  switching section labels to icons and then to one compact menu when space is limited. The blog is the
+  **whole archive** of telegram.org: `tools/list-blog.ts`
   pages through the upstream archive and records every post. `/blog/` is rebuilt as a semantic,
   year-grouped archive of all 178 posts; the sidebar stays usable by showing the archive plus the 12
   newest posts instead of injecting all 179 pages into every article. One legacy post whose original
@@ -34,7 +36,9 @@ The site is built with [Eleventy](https://www.11ty.dev/) and published via GitHu
   media (images, video and archives keep pointing at the original), interactive forms whose static
   copy would be nothing but field labels (`/support`, `/dsa-report`), login screens on
   my.telegram.org, app-store fronts, the Doxygen dump of `/tdlib/docs/`, translations, and the
-  addresses the original answers with a stand-in page.
+  addresses the original answers with a stand-in page. Telegram's remote TGS response has no
+  `Access-Control-Allow-Origin`, so `/blog/stories/` uses Telegram's own remote PNG fallback instead
+  of storing the animation in the mirror.
 - **Full-text search** over all pages (articles + constructor/method/type names) — a dedicated [search page](https://mirrortproto.github.io/search/) powered by [Pagefind](https://pagefind.app/) with a filter by section; runs entirely in the browser. Hotkey `/` focuses the search box.
 - **Anchors on every paragraph and heading** — hover a paragraph for the ¶ link, hover a heading for #.
 - **Consistent navigation** with all 11 sections in both the top menu and sidebar on every page; the current section starts expanded, and every page has breadcrumbs.
@@ -596,7 +600,20 @@ mirrortproto.github.io/
   - `/android/` — Telegram for Android
   - `/apps/` — Telegram Applications
   - `/evolution/` — The Evolution of Telegram
-- **BlackBerry Guide** — 16 pages:
+- **Contests** — 29 pages (contest posts remain at their canonical `/blog/…` URLs):
+  - `/contests/` — Telegram Contests index
+  - `/contest300K/` — Telegram Cracking Contest Description
+  - `/blog/cryptocontest/` — $300,000 for Cracking Telegram Encryption
+  - `/blog/cryptocontest-ends/` — Crypto Contest Ends
+  - `/blog/blackberry-contest/` — A $50,000 Contest For Blackberry Engineers
+  - `/blog/bb-contest-extension/` — $50,000 Blackberry Contest Extended
+  - `/blog/bb-results/` — BlackBerry Contest Results
+  - `/blog/botprize/` — $1,000,000 to Bot Developers
+  - `/blog/botprize1/` — First BotPrize Winners Get $200,000
+  - `/blog/instant-view-contest-200K/` — Instant Views for Everyone & a $200K Contest
+  - `/blog/first-IV-contest/` — Instant View Now Available for 2274 Websites
+  - `/blog/telegram-x/` — Telegram X: Progress through Competition
+  - `/blog/winter-contest-ends/` — Winter Contest Ends
   - `/blackberry/` — Blackberry 10 Dev Contest
   - `/blackberry/chat-edit/` — Editing Messages
   - `/blackberry/chat-emoji/` — Choosing Emoji
@@ -658,11 +675,11 @@ mirrortproto.github.io/
   - `/tos/stars/` — Terms of Service for Telegram Stars
   - `/tos/third-party-payments/` — Third-Party Payments and Authorized Resellers
   - `/verify/` — Page Verification Guidelines
-- **Resources** — 14 pages:
+- **Other** — 14 pages:
+  - `/other/` — Other Telegram Resources index
   - `/articles/DH_Hash_Collision/` — Hash Collisions for Diffie-Hellman Keys
   - `/bug-bounty/` — Telegram Bug Bounty Program
   - `/cdn/` — Encrypted CDNs for Speed and Security
-  - `/contest300K/` — Telegram Cracking Contest Description
   - `/jobs/` — Jobs
   - `/press/` — Telegram Press Info
   - `/reproducible-builds/` — Reproducible Builds for iOS and Android

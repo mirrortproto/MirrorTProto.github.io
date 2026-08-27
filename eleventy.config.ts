@@ -324,29 +324,10 @@ export default function (eleventyConfig: EleventyConfig) {
     }),
   );
 
-  // Paragraph anchors: every non-empty <p> inside <article> gets id="p-N" and a ¶ link
-  eleventyConfig.addTransform("paragraph-anchors", (content) => {
-    const articleOpen = /<article\b[^>]*>/.exec(content);
-    if (!articleOpen) return content;
-    const start = articleOpen.index;
-    const end = content.indexOf("</article>");
-    if (start === -1 || end === -1) return content;
-    let n = 0;
-    let article = content.slice(start, end);
-    article = article.replace(/<p>([\s\S]*?)<\/p>/g, (_m, inner) => {
-      n += 1;
-      return `<p id="p-${n}">${inner}<a class="p-anchor" href="#p-${n}" aria-label="Link to this paragraph">¶</a></p>`;
-    });
-    return content.slice(0, start) + article + content.slice(end);
-  });
-
-  // Instant View needs standalone media as a block: a photo cannot live inside a
-  // text paragraph. A <p> whose whole content is one media box becomes a <figure>.
-  // Runs AFTER paragraph-anchors on purpose, so the p-N numbering, the id and the
-  // ¶ link are carried over verbatim and existing #p-N links keep resolving.
-  // Inline icons/emoji (.img-icon) stay inline — they belong to the text flow.
+  // A standalone image or video is a media block, not a paragraph. Convert it
+  // before numbering so it never consumes p-N and never receives a ¶ anchor.
+  // Inline icons/emoji (.img-icon) remain part of their surrounding paragraph.
   function spanEnd(s: string): number {
-    // s starts with "<span"; index just past its matching </span>, or -1
     const re = /<(\/?)span\b[^>]*>/g;
     let depth = 0;
     let m;
@@ -356,6 +337,18 @@ export default function (eleventyConfig: EleventyConfig) {
     }
     return -1;
   }
+
+  const standaloneMediaBoxes = (value: string): boolean => {
+    let rest = value.trim();
+    let count = 0;
+    while (/^<span class="img-box(?! img-icon)/.test(rest)) {
+      const end = spanEnd(rest);
+      if (end < 0) return false;
+      count++;
+      rest = rest.slice(end).trim();
+    }
+    return count > 0 && rest.length === 0;
+  };
 
   eleventyConfig.addTransform("media-block", (content, page) => {
     const out = typeof page === "string" ? page : page && page.outputPath;
@@ -369,15 +362,27 @@ export default function (eleventyConfig: EleventyConfig) {
 
     const article = content
       .slice(start, end)
-      .replace(/<p id="(p-\d+)">([\s\S]*?)<\/p>/g, (whole, id, inner) => {
-        const anchorRe = /<a class="p-anchor"[\s\S]*?<\/a>\s*$/;
-        const anchor = (inner.match(anchorRe) || [""])[0];
-        const body = inner.replace(anchorRe, "").trim();
-        // exactly one media box, nothing else in the paragraph
-        if (!/^<span class="img-box(?! img-icon)/.test(body)) return whole;
-        if (spanEnd(body) !== body.length) return whole;
-        return `<figure id="${id}" class="img-figure">${body}${anchor}</figure>`;
+      .replace(/<p>([\s\S]*?)<\/p>/g, (whole, inner) => {
+        const body = inner.trim();
+        if (!standaloneMediaBoxes(body)) return whole;
+        return `<figure class="img-figure">${body}</figure>`;
       });
+    return content.slice(0, start) + article + content.slice(end);
+  });
+
+  // Paragraph anchors belong only to actual non-empty text paragraphs.
+  eleventyConfig.addTransform("paragraph-anchors", (content) => {
+    const articleOpen = /<article\b[^>]*>/.exec(content);
+    if (!articleOpen) return content;
+    const start = articleOpen.index;
+    const end = content.indexOf("</article>");
+    if (start === -1 || end === -1) return content;
+    let n = 0;
+    let article = content.slice(start, end);
+    article = article.replace(/<p>([\s\S]*?)<\/p>/g, (_m, inner) => {
+      n += 1;
+      return `<p id="p-${n}">${inner}<a class="p-anchor" href="#p-${n}" aria-label="Link to this paragraph">¶</a></p>`;
+    });
     return content.slice(0, start) + article + content.slice(end);
   });
 

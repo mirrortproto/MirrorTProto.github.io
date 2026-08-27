@@ -35,24 +35,32 @@
    constructor/method/type pages — belongs to Schema, and the mirror's own pages
    (`site`: home, search, 404) are not a section of the documentation at all, so
    they carry no filter. #}
-{% set sectionNames = { api: 'Telegram API', bots: 'Bot API', mtproto: 'MTProto', schema: 'Schema', ref: 'Schema', blog: 'Blog', faq: 'FAQ', apps: 'Apps & Clients', blackberry: 'BlackBerry Guide', devtools: 'Developer Tools', policies: 'Policies', resources: 'Resources' } %}
-<body{% if section and section != 'site' %} data-pagefind-filter="section:{{ sectionNames[section] or section }}"{% endif %}>
+{% set sectionNames = { api: 'Telegram API', bots: 'Bot API', mtproto: 'MTProto', schema: 'Schema', ref: 'Schema', blog: 'Blog', faq: 'FAQ', apps: 'Apps & Clients', contests: 'Contests', devtools: 'Developer Tools', policies: 'Policies', other: 'Other' } %}
+<body{% if page.url == '/search/' %} class="search-page"{% endif %}{% if section and section != 'site' %} data-pagefind-filter="section:{{ sectionNames[section] or section }}"{% endif %}>
 <a class="skip-link" href="#content">Skip to content</a>
 <header class="site-header">
   <div class="header-inner">
-    <a class="brand" href="/">MTProto&nbsp;<span>Mirror</span></a>
+    <a class="brand" href="/" aria-label="MTProto Mirror home"><span class="brand-name">MTProto</span><span class="brand-suffix"> Mirror</span><span class="brand-short" aria-hidden="true">M</span></a>
     <nav class="top-nav" aria-label="Sections">
-      <a href="/api/" {% if section == 'api' %}class="active" aria-current="section"{% endif %}>API</a>
-      <a href="/bots/" {% if section == 'bots' %}class="active" aria-current="section"{% endif %}>Bot API</a>
-      <a href="/mtproto/" {% if section == 'mtproto' %}class="active" aria-current="section"{% endif %}>MTProto</a>
-      <a href="/schema/" {% if section == 'schema' or section == 'ref' %}class="active" aria-current="section"{% endif %}>Schema</a>
-      <a href="/blog/stories/" {% if section == 'blog' %}class="active" aria-current="section"{% endif %}>Blog</a>
-      <a href="/faq/" {% if section == 'faq' %}class="active" aria-current="section"{% endif %}>FAQ</a>
-      <a href="/apps/" {% if section == 'apps' %}class="active" aria-current="section"{% endif %}>Apps</a>
-      <a href="/blackberry/" {% if section == 'blackberry' %}class="active" aria-current="section"{% endif %}>BlackBerry</a>
-      <a href="/tdlib/" {% if section == 'devtools' %}class="active" aria-current="section"{% endif %}>Dev Tools</a>
-      <a href="/privacy/" {% if section == 'policies' %}class="active" aria-current="section"{% endif %}>Policies</a>
-      <a href="/tour/channels/" {% if section == 'resources' %}class="active" aria-current="section"{% endif %}>Resources</a>
+      <details class="section-menu" open>
+        <summary aria-label="Sections menu">
+          <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M2 4h12M2 8h12M2 12h12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <span>Sections</span>
+        </summary>
+        <div class="top-nav-links">
+          <a href="/api/" aria-label="Telegram API" title="Telegram API" {% if section == 'api' %}class="active" aria-current="section"{% endif %}><span class="nav-label">API</span><span class="nav-short" aria-hidden="true">API</span></a>
+          <a href="/bots/" aria-label="Bot API" title="Bot API" {% if section == 'bots' %}class="active" aria-current="section"{% endif %}><span class="nav-label">Bot API</span><span class="nav-short" aria-hidden="true">Bots</span></a>
+          <a href="/mtproto/" aria-label="MTProto" title="MTProto" {% if section == 'mtproto' %}class="active" aria-current="section"{% endif %}><span class="nav-label">MTProto</span><span class="nav-short" aria-hidden="true">MT</span></a>
+          <a href="/schema/" aria-label="Schema" title="Schema" {% if section == 'schema' or section == 'ref' %}class="active" aria-current="section"{% endif %}><span class="nav-label">Schema</span><span class="nav-short" aria-hidden="true">TL</span></a>
+          <a href="/blog/" aria-label="Blog" title="Blog" {% if section == 'blog' %}class="active" aria-current="section"{% endif %}><span class="nav-label">Blog</span><span class="nav-short" aria-hidden="true">Blog</span></a>
+          <a href="/faq/" aria-label="FAQ" title="FAQ" {% if section == 'faq' %}class="active" aria-current="section"{% endif %}><span class="nav-label">FAQ</span><span class="nav-short" aria-hidden="true">FAQ</span></a>
+          <a href="/apps/" aria-label="Apps and Clients" title="Apps and Clients" {% if section == 'apps' %}class="active" aria-current="section"{% endif %}><span class="nav-label">Apps</span><span class="nav-short" aria-hidden="true">Apps</span></a>
+          <a href="/contests/" aria-label="Contests" title="Contests" {% if section == 'contests' %}class="active" aria-current="section"{% endif %}><span class="nav-label">Contests</span><span class="nav-short" aria-hidden="true">Cont.</span></a>
+          <a href="/tdlib/" aria-label="Developer Tools" title="Developer Tools" {% if section == 'devtools' %}class="active" aria-current="section"{% endif %}><span class="nav-label">Dev Tools</span><span class="nav-short" aria-hidden="true">Tools</span></a>
+          <a href="/privacy/" aria-label="Policies" title="Policies" {% if section == 'policies' %}class="active" aria-current="section"{% endif %}><span class="nav-label">Policies</span><span class="nav-short" aria-hidden="true">Rules</span></a>
+          <a href="/other/" aria-label="Other" title="Other" {% if section == 'other' %}class="active" aria-current="section"{% endif %}><span class="nav-label">Other</span><span class="nav-short" aria-hidden="true">Other</span></a>
+        </div>
+      </details>
     </nav>
     <form class="site-search" action="/search/" method="get" role="search">
       <span class="search-field">

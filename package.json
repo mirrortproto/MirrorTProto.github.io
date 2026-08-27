@@ -26,7 +26,7 @@
     "clean": "npm run compile --silent && npm run clean:compiled --silent",
     "build": "npm run compile --silent && npm run test:compiled --silent && npm run clean:compiled --silent && npm run generate:compiled --silent && npm run render --silent && node .build/tools/verify.js && node .build/tools/quality.js",
     "quality": "npm run compile --silent && node .build/tools/quality.js",
-    "serve": "npm run generate && eleventy --config=.build/eleventy.config.js --serve",
+    "serve": "npm run build && eleventy --config=.build/eleventy.config.js --serve",
     "check": "npm run format:check && npm run typecheck && npm run build",
     "reproducible": "npm run format:check --silent && npm run typecheck --silent && npm run compile --silent && node .build/tools/reproducibility.js",
     "extlinks": "npm run compile --silent && node .build/tools/extlinks.js",

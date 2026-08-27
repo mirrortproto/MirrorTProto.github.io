@@ -127,7 +127,7 @@ const latestBlogPosts = allBlogItems
     title: page.date ? `${page.title} (${page.date.slice(0, 7)})` : page.title,
   }));
 const blogItems = [
-  ...(blogArchive ? [{ ...blogArchive, title: "Complete archive" }] : []),
+  ...(blogArchive ? [{ ...blogArchive, title: "Blog index" }] : []),
   ...latestBlogPosts,
 ];
 
@@ -148,11 +148,11 @@ const sectionItems = (section: string, lead?: string): Page[] =>
           ? 1
           : a.url.localeCompare(b.url),
     );
-const blackberryItems = sectionItems("blackberry", "/blackberry/");
 const appsItems = sectionItems("apps", "/apps/");
-const devtoolsItems = sectionItems("devtools");
+const contestItems = sectionItems("contests", "/contests/");
+const devtoolsItems = sectionItems("devtools", "/tdlib/");
 const policyItems = sectionItems("policies", "/privacy/");
-const resourceItems = sectionItems("resources");
+const otherItems = sectionItems("other", "/other/");
 
 const sections = [
   { key: "api", title: "Telegram API", items: apiItems },
@@ -162,14 +162,10 @@ const sections = [
   { key: "blog", title: "Blog", items: blogItems },
   { key: "faq", title: "FAQ", items: faqItems },
   { key: "apps", title: "Apps & Clients", items: appsItems },
-  {
-    key: "blackberry",
-    title: "BlackBerry Guide",
-    items: blackberryItems,
-  },
+  { key: "contests", title: "Contests", items: contestItems },
   { key: "devtools", title: "Developer Tools", items: devtoolsItems },
   { key: "policies", title: "Policies", items: policyItems },
-  { key: "resources", title: "Resources", items: resourceItems },
+  { key: "other", title: "Other", items: otherItems },
 ];
 
 const dataDir = path.join(CRAWLED, "_data");
@@ -204,14 +200,14 @@ console.log(
   faqItems.length,
   "| Apps",
   appsItems.length,
-  "| BlackBerry",
-  blackberryItems.length,
+  "| Contests",
+  contestItems.length,
   "| Developer Tools",
   devtoolsItems.length,
   "| Policies",
   policyItems.length,
-  "| Resources",
-  resourceItems.length,
+  "| Other",
+  otherItems.length,
   "| backup",
   backupDate,
 );

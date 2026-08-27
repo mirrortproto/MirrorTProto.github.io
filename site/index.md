@@ -39,10 +39,10 @@ The general and technical FAQs, including the deprecated MTProto 1.0 guide, plus
 ### Additional documentation sections
 
 - [Apps & Clients](/apps/) — official applications, downloads and client history.
-- [BlackBerry Guide](/blackberry/) — the complete legacy BlackBerry development guide.
+- [Contests](/contests/) — Telegram competitions and results, including the complete BlackBerry 10 development guide.
 - [Developer Tools](/tdlib/) — TDLib, Passport, Gateway, stickers, themes and widgets.
 - [Policies](/privacy/) — privacy, safety, Terms of Service and transparency documents.
-- [Resources](/tour/channels/) — security articles, contests, company information and feature tours.
+- [Other](/other/) — security articles, company information, reproducible builds and feature tours.
 
 ## About this site
 

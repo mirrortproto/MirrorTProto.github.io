@@ -362,15 +362,29 @@ const GROUP_SECTION: Record<string, string> = {
   "Bot API": "bots",
   Blog: "blog",
   FAQ: "faq",
-  "BlackBerry Guide": "blackberry",
+  Contests: "contests",
   "Apps & Clients": "apps",
   "Developer Tools": "devtools",
   Policies: "policies",
-  Resources: "resources",
   Other: "other",
 };
 
+const CONTEST_BLOG_PATHS = new Set([
+  "/blog/bb-results",
+  "/blog/botprize",
+  "/blog/botprize1",
+  "/blog/telegram-x",
+]);
+
 function sectionOf(p: string, group?: string): string {
+  if (
+    p === "/blackberry" ||
+    p.startsWith("/blackberry/") ||
+    p === "/contest300K" ||
+    (p.startsWith("/blog/") && p.toLowerCase().includes("contest")) ||
+    CONTEST_BLOG_PATHS.has(p)
+  )
+    return "contests";
   if (group && GROUP_SECTION[group]) return GROUP_SECTION[group];
   if (p === "/methods" || p === "/constructors" || p === "/types")
     return "schema";

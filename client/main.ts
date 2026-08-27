@@ -66,11 +66,21 @@ document
   });
 applyTheme(currentTheme());
 
+// The full section row is native HTML at desktop widths. On narrow screens the
+// same <details> becomes one menu icon, keeping every header control on one row.
+const sectionMenu = document.querySelector<HTMLDetailsElement>(".section-menu");
+const compactHeader = matchMedia("(max-width: 699px)");
+const syncSectionMenu = (): void => {
+  sectionMenu?.toggleAttribute("open", !compactHeader.matches);
+};
+syncSectionMenu();
+compactHeader.addEventListener("change", syncSectionMenu);
+
 document.addEventListener("keydown", (event) => {
   const tag = document.activeElement?.tagName ?? "";
   if (event.key !== "/" || /^(input|textarea|select)$/i.test(tag)) return;
   const search = document.querySelector<HTMLInputElement>(
-    "pagefind-searchbox input, .site-search input",
+    "#docs-search-query, .site-search input",
   );
   if (search) {
     event.preventDefault();

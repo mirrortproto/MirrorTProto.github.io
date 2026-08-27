@@ -55,30 +55,35 @@ const exists = (p: string): Promise<boolean> =>
 // ---- src link graph ------------------------------------------------------
 const mdFiles = await walk(CRAWLED, ".md");
 
-// The former 76-page Other bucket is deliberately split into stable, named
-// navigation/search sections. Guard the taxonomy itself, not only its links.
+// Guard the complete navigation taxonomy and every section landing page.
 const navData = JSON.parse(
   await readFile(path.join(CRAWLED, "_data", "nav.json"), "utf8"),
-) as { sections: Array<{ key: string; title: string; items: unknown[] }> };
+) as {
+  sections: Array<{
+    key: string;
+    title: string;
+    items: Array<{ url: string; title: string }>;
+  }>;
+};
 const expectedTopNavigation = [
   ["/api/", "API"],
   ["/bots/", "Bot API"],
   ["/mtproto/", "MTProto"],
   ["/schema/", "Schema"],
-  ["/blog/stories/", "Blog"],
+  ["/blog/", "Blog"],
   ["/faq/", "FAQ"],
   ["/apps/", "Apps"],
-  ["/blackberry/", "BlackBerry"],
+  ["/contests/", "Contests"],
   ["/tdlib/", "Dev Tools"],
   ["/privacy/", "Policies"],
-  ["/tour/channels/", "Resources"],
+  ["/other/", "Other"],
 ] as const;
 const expectedAdditionalSections: Record<string, number> = {
   apps: 3,
-  blackberry: 16,
+  contests: 29,
   devtools: 22,
   policies: 21,
-  resources: 14,
+  other: 14,
 };
 let sectionBad = 0;
 for (const [key, count] of Object.entries(expectedAdditionalSections)) {
@@ -89,12 +94,58 @@ for (const [key, count] of Object.entries(expectedAdditionalSections)) {
     fail(`section ${key} has ${actual ?? 0} pages, expected ${count}`);
   }
 }
-if (navData.sections.some((section) => section.key === "other")) {
-  sectionBad++;
-  fail("obsolete Other section remains in navigation");
+const expectedSectionLeads: Record<string, string> = {
+  api: "/api/",
+  bots: "/bots/",
+  mtproto: "/mtproto/",
+  schema: "/schema/",
+  blog: "/blog/",
+  faq: "/faq/",
+  apps: "/apps/",
+  contests: "/contests/",
+  devtools: "/tdlib/",
+  policies: "/privacy/",
+  other: "/other/",
+};
+for (const [key, lead] of Object.entries(expectedSectionLeads)) {
+  const first = navData.sections.find((section) => section.key === key)
+    ?.items[0]?.url;
+  if (first !== lead) {
+    sectionBad++;
+    fail(`section ${key} starts with ${first ?? "nothing"}, expected ${lead}`);
+  }
 }
-if (!sectionBad)
-  ok("76 former Other pages are split across five focused sections");
+const contestUrls = new Set(
+  navData.sections
+    .find((section) => section.key === "contests")
+    ?.items.map((item) => item.url) ?? [],
+);
+const requiredContestUrls = [
+  "/contests/",
+  "/contest300K/",
+  "/blog/bb-contest-extension/",
+  "/blog/bb-results/",
+  "/blog/blackberry-contest/",
+  "/blog/botprize/",
+  "/blog/botprize1/",
+  "/blog/cryptocontest-ends/",
+  "/blog/cryptocontest/",
+  "/blog/first-IV-contest/",
+  "/blog/instant-view-contest-200K/",
+  "/blog/telegram-x/",
+  "/blog/winter-contest-ends/",
+];
+if (
+  [...contestUrls].filter((url) => url.startsWith("/blackberry/")).length !==
+    16 ||
+  requiredContestUrls.some((url) => !contestUrls.has(url))
+) {
+  sectionBad++;
+  fail(
+    "Contests does not contain every BlackBerry and historical contest page",
+  );
+}
+if (!sectionBad) ok("all 11 sections have the expected taxonomy and lead page");
 
 // Every link the mirror emits, from both syntaxes: markdown `](/path#frag)` and
 // the raw HTML `href="/path#frag"` that survives inside tables and TL-schema
@@ -246,9 +297,9 @@ for (const l of links) {
     );
 }
 const localLinkCount = links.length - samePage;
-if (localLinkCount !== 95539)
-  fail(`local link inventory changed: ${localLinkCount}, expected 95539`);
-if (!broken && localLinkCount === 95539)
+if (localLinkCount !== 95580)
+  fail(`local link inventory changed: ${localLinkCount}, expected 95580`);
+if (!broken && localLinkCount === 95580)
   ok(
     `local links: ${localLinkCount} (markdown + raw HTML; ${relative} document-relative), all resolve`,
   );
@@ -264,6 +315,7 @@ let securityBad = 0;
 let jsonLdBad = 0;
 let pagefindBad = 0;
 let emptyParagraphBad = 0;
+let mediaParagraphBad = 0;
 let navigationBad = 0;
 let localMediaBad = 0;
 let unnamedLinkBad = 0;
@@ -332,6 +384,20 @@ for (const f of pages) {
       emptyParagraphBad++;
       if (emptyParagraphBad <= 5) fail(`empty paragraph in ${rel}`);
     }
+    if (
+      meaningfulElement &&
+      !text &&
+      !/class="img-box img-icon\b/i.test(inner)
+    ) {
+      mediaParagraphBad++;
+      if (mediaParagraphBad <= 5)
+        fail(`standalone media incorrectly remains a paragraph in ${rel}`);
+    }
+  }
+  if (/<figure\b[^>]*\bid="p-\d+"/i.test(articleHtml)) {
+    mediaParagraphBad++;
+    if (mediaParagraphBad <= 5)
+      fail(`standalone media incorrectly consumes p-N in ${rel}`);
   }
   for (const image of articleHtml.matchAll(/<img\b([^>]*)>/gi)) {
     if (!/\balt="[^"]*"/i.test(image[1] ?? "")) {
@@ -363,7 +429,9 @@ for (const f of pages) {
   const topNavHtml =
     /<nav class="top-nav"[^>]*>([\s\S]*?)<\/nav>/.exec(h)?.[1] ?? "";
   const topLinks = [
-    ...topNavHtml.matchAll(/<a href="([^"]+)"[^>]*>([^<]+)<\/a>/g),
+    ...topNavHtml.matchAll(
+      /<a href="([^"]+)"[^>]*>[\s\S]*?<span class="nav-label">([^<]+)<\/span>[\s\S]*?<\/a>/g,
+    ),
   ].map((match) => [match[1], match[2]]);
   const exactTopNavigation = expectedTopNavigation.every(
     (expected, index) =>
@@ -381,6 +449,7 @@ for (const f of pages) {
     topLinks.length !== expectedTopNavigation.length ||
     !exactTopNavigation ||
     activeTopLinks !== expectedActiveTopLinks ||
+    !topNavHtml.includes('<details class="section-menu" open>') ||
     h.includes('href="/more/"')
   ) {
     navigationBad++;
@@ -403,7 +472,10 @@ for (const f of pages) {
     /<(?:a|img|video|source)\b[^>]+(?:href|src)=["']\s*(?:javascript:|data:text\/html)/i.test(
       h,
     ) ||
-    /<(?:object|embed|iframe|form|input|button|textarea)\b/i.test(articleHtml)
+    (rel !== "search/index.html" &&
+      /<(?:object|embed|iframe|form|input|button|textarea)\b/i.test(
+        articleHtml,
+      ))
   ) {
     securityBad++;
     if (securityBad <= 5) fail(`active unsafe markup in ${rel}`);
@@ -456,12 +528,47 @@ if (!securityBad) ok("no inline executable scripts or active unsafe markup");
 if (!jsonLdBad) ok("all breadcrumb JSON-LD blocks parse");
 if (!emptyParagraphBad)
   ok("empty paragraphs are absent before numbering and indexing");
+if (!mediaParagraphBad) ok("standalone media never consumes paragraph numbers");
 if (!unnamedLinkBad) ok("all article links have accessible names");
 if (!imageAltBad) ok("all article images have alt attributes");
-if (!navigationBad)
-  ok(
-    `all ${pages.length} pages show the same ${navData.sections.length} sections in top and sidebar navigation`,
+const searchHtml = await readFile(
+  path.join(DOCS, "search", "index.html"),
+  "utf8",
+).catch(() => "");
+const searchSections = (
+  searchHtml.match(/<input type="checkbox" name="section"/g) || []
+).length;
+const searchJs = await readFile(
+  path.join(DOCS, "js", "search.js"),
+  "utf8",
+).catch(() => "");
+if (
+  !searchHtml.includes('id="docs-search"') ||
+  !searchHtml.includes('id="docs-search-results"') ||
+  !searchHtml.includes('id="docs-search-pagination"') ||
+  searchSections !== 11 ||
+  !searchJs.includes("/pagefind/pagefind.js") ||
+  !searchJs.includes("docs-search-pagination") ||
+  !searchJs.includes("section:{any:") ||
+  searchHtml.includes("pagefind-filter-dropdown") ||
+  searchHtml.includes("pagefind-component-ui") ||
+  searchHtml.includes("max-results")
+) {
+  fail(
+    "/search/ does not provide visible filters and unbounded paginated results",
   );
+} else {
+  ok("/search/ has 11 visible OR filters and unbounded paginated results");
+}
+const blogIndexHtml = await readFile(
+  path.join(DOCS, "blog", "index.html"),
+  "utf8",
+).catch(() => "");
+if ((blogIndexHtml.match(/class="blog-archive-item"/g) || []).length !== 178) {
+  fail("/blog/ is not the complete 178-post archive");
+} else {
+  ok("/blog/ is the complete 178-post index");
+}
 const storiesHtml = await readFile(
   path.join(DOCS, "blog", "stories", "index.html"),
   "utf8",
@@ -470,16 +577,36 @@ const builtCss = await readFile(
   path.join(DOCS, "css", "style.css"),
   "utf8",
 ).catch(() => "");
+const headerCss = builtCss.slice(
+  builtCss.indexOf(".header-inner{"),
+  builtCss.indexOf(".brand{"),
+);
+if (
+  !headerCss.includes("display:flex") ||
+  !headerCss.includes("flex-wrap:nowrap") ||
+  !builtCss.includes("@media (width<=1000px)") ||
+  !builtCss.includes("@media (width<=699px)") ||
+  (searchHtml.match(/class="nav-short"/g) || []).length !== 11 ||
+  !searchHtml.includes('class="brand-short"') ||
+  searchHtml.includes('class="nav-icon')
+) {
+  navigationBad++;
+  fail("header CSS no longer guarantees one row and compact mobile navigation");
+}
+if (!navigationBad)
+  ok(
+    `all ${pages.length} pages show the same ${navData.sections.length} sections in one-row top and sidebar navigation`,
+  );
 if (
   !storiesHtml.includes('class="img-box img-tgsticker"') ||
   !storiesHtml.includes(
     'src="https://telegram.org/file/400780400899/2/Mm0RBKjlAiw.40307.png/8daecf88911311259d"',
   ) ||
-  !builtCss.includes("margin:-41px 0 0 -180px") ||
-  !builtCss.includes("position:absolute")
+  !builtCss.includes("float:right") ||
+  builtCss.includes("margin:-41px 0 0 -180px")
 ) {
   localMediaBad++;
-  fail("/blog/stories/ does not retain its remote left-side fallback");
+  fail("/blog/stories/ does not retain its aligned remote fallback");
 }
 if (
   (await exists(path.join(DOCS, "media"))) ||

@@ -214,7 +214,7 @@
       "https://telegram.org/blog/wear-gifts-blockchain-and-more",
       "https://telegram.org/blog/winter-contest-ends"
     ],
-    "BlackBerry Guide": [
+    "Contests": [
       "https://core.telegram.org/blackberry",
       "https://core.telegram.org/blackberry/chat",
       "https://core.telegram.org/blackberry/chat-edit",
@@ -230,7 +230,9 @@
       "https://core.telegram.org/blackberry/login",
       "https://core.telegram.org/blackberry/newmessage",
       "https://core.telegram.org/blackberry/secretchats",
-      "https://core.telegram.org/blackberry/settings"
+      "https://core.telegram.org/blackberry/settings",
+      "https://core.telegram.org/contest300K",
+      "https://telegram.org/crypto_contest"
     ],
     "Apps & Clients": [
       "http://telegram.org/source",
@@ -299,13 +301,11 @@
       "https://telegram.org/tos/www.telegram.org/tos/content-creator-rewards",
       "https://telegram.org/verify"
     ],
-    "Resources": [
+    "Other": [
       "https://core.telegram.org/articles/DH_Hash_Collision",
       "https://core.telegram.org/bug-bounty",
       "https://core.telegram.org/cdn",
-      "https://core.telegram.org/contest300K",
       "https://core.telegram.org/reproducible-builds",
-      "https://telegram.org/crypto_contest",
       "https://telegram.org/jobs",
       "https://telegram.org/press",
       "https://telegram.org/tour/affiliate-programs",

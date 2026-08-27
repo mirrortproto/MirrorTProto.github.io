@@ -59,10 +59,9 @@ const groups = {
   blog: pages.filter((p) => p.section === "blog"),
   faq: pages.filter((p) => p.section === "faq"),
   apps: pages.filter((p) => p.section === "apps"),
-  blackberry: pages.filter((p) => p.section === "blackberry"),
+  contests: pages.filter((p) => p.section === "contests"),
   devtools: pages.filter((p) => p.section === "devtools"),
   policies: pages.filter((p) => p.section === "policies"),
-  resources: pages.filter((p) => p.section === "resources"),
   other: pages.filter((p) => p.section === "other"),
   site: pages.filter((p) => p.section === "site"),
 };
@@ -85,9 +84,8 @@ console.log(
 list("FAQ", groups.faq);
 list("Blog", groups.blog);
 list("Apps & Clients", groups.apps);
-list("BlackBerry Guide", groups.blackberry);
+list("Contests", groups.contests);
 list("Developer Tools", groups.devtools);
 list("Policies", groups.policies);
-list("Resources", groups.resources);
-if (groups.other.length) list("Unclassified", groups.other);
+list("Other", groups.other);
 list("Pages of the mirror itself", groups.site);
