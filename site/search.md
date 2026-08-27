@@ -46,5 +46,3 @@ Search the whole mirror: articles, constructors, methods and types. Results are 
 <button type="button" data-page-action="next">Next</button>
 </nav>
 <noscript><p class="search-error">Search requires JavaScript. The rest of the mirror remains fully accessible without it.</p></noscript>
-
-<script src="/js/search.js" type="module"></script>

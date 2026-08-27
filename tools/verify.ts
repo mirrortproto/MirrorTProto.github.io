@@ -542,6 +542,11 @@ const searchJs = await readFile(
   path.join(DOCS, "js", "search.js"),
   "utf8",
 ).catch(() => "");
+const assetVersions = [
+  ...searchHtml.matchAll(
+    /(?:href|src)="\/(?:css\/style\.css|js\/(?:head|main|search)\.js)\?v=([0-9a-f]{12})"/g,
+  ),
+].map((match) => match[1]);
 if (
   !searchHtml.includes('id="docs-search"') ||
   !searchHtml.includes('id="docs-search-results"') ||
@@ -550,6 +555,8 @@ if (
   !searchJs.includes("/pagefind/pagefind.js") ||
   !searchJs.includes("docs-search-pagination") ||
   !searchJs.includes("section:{any:") ||
+  assetVersions.length !== 4 ||
+  new Set(assetVersions).size !== 1 ||
   searchHtml.includes("pagefind-filter-dropdown") ||
   searchHtml.includes("pagefind-component-ui") ||
   searchHtml.includes("max-results")
@@ -558,7 +565,9 @@ if (
     "/search/ does not provide visible filters and unbounded paginated results",
   );
 } else {
-  ok("/search/ has 11 visible OR filters and unbounded paginated results");
+  ok(
+    "/search/ has 11 visible OR filters, pagination and cache-versioned assets",
+  );
 }
 const blogIndexHtml = await readFile(
   path.join(DOCS, "blog", "index.html"),

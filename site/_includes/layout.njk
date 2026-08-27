@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; media-src 'self' https:; font-src 'self' data:; connect-src 'self'; frame-src https:; object-src 'none'; base-uri 'self'; form-action 'self' https://core.telegram.org https://telegram.org; upgrade-insecure-requests">
-<script src="/js/head.js"></script>
+<script src="{{ '/js/head.js' | asseturl }}"></script>
 <title>{{ title }} — MTProto Mirror</title>
 {% if description %}<meta name="description" content="{{ description | htmlattr }}">{% endif %}
 <meta property="og:title" content="{{ title | htmlattr }}">
@@ -28,7 +28,7 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/icon-64.png" type="image/png" sizes="64x64">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="{{ '/css/style.css' | asseturl }}">
 {% if crumbs and crumbs.length %}<script type="application/ld+json">{{ crumbs | breadcrumbJson | safe }}</script>{% endif %}
 </head>
 {# The search filter names the section the way the menu does. `ref` — the 2 990
@@ -139,6 +139,7 @@
   A mirror of <a href="https://core.telegram.org" rel="noopener">core.telegram.org</a> (Telegram API, MTProto, Schema).
   Content snapshot: {{ site.backup_date }}.
 </footer>
-<script src="/js/main.js" defer></script>
+{% if page.url == '/search/' %}<script src="{{ '/js/search.js' | asseturl }}" type="module"></script>{% endif %}
+<script src="{{ '/js/main.js' | asseturl }}" defer></script>
 </body>
 </html>

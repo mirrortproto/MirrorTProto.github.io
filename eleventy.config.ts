@@ -1,6 +1,8 @@
 import markdownItAnchor from "markdown-it-anchor";
 import { minify as minifyHtml } from "html-minifier-terser";
 import { transform as transformCss } from "lightningcss";
+import { createHash } from "node:crypto";
+import { readFileSync } from "node:fs";
 
 type OutputPage = string | { outputPath?: string } | undefined;
 type CollectionItem = { data: { section?: string }; inputPath: string };
@@ -42,6 +44,23 @@ type EleventyConfig = {
 export default function (eleventyConfig: EleventyConfig) {
   // crawled/ is intentionally ignored by Git but is Eleventy's generated input.
   eleventyConfig.setUseGitIgnore(false);
+
+  // GitHub Pages caches extension assets independently from HTML. Hash every
+  // header/search asset into its URL so new markup can never receive stale CSS
+  // or JavaScript from an earlier deployment.
+  const assetHash = createHash("sha256");
+  for (const file of [
+    "crawled/css/style.css",
+    "crawled/js/head.js",
+    "crawled/js/main.js",
+    "crawled/js/search.js",
+  ])
+    assetHash.update(file).update("\0").update(readFileSync(file)).update("\0");
+  const assetVersion = assetHash.digest("hex").slice(0, 12);
+  eleventyConfig.addFilter(
+    "asseturl",
+    (assetPath: string): string => `${assetPath}?v=${assetVersion}`,
+  );
 
   // style.css is compiled instead of copied, so it can be minified. It is kept
   // out of collections by crawled/css/css.11tydata.json — otherwise sitemap.njk,
