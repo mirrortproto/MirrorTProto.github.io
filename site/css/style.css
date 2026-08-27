@@ -205,20 +205,16 @@ body {
 .nav-group[open] > summary .chev { transform: rotate(90deg); }
 @media (min-width: 901px) {
   .nav-group-title { font-weight: 700; text-transform: uppercase; font-size: 12px; color: var(--muted); letter-spacing: .04em; }
-  /* single-section pages: permanently expanded, inert title (was a plain <div>) */
-  .nav-pinned > summary { cursor: default; pointer-events: none; margin-bottom: 6px; }
-  .nav-pinned > summary .chev { display: none; }
-  /* "all sections" pages: collapsible groups */
-  .nav-group:not(.nav-pinned) > summary {
+  .nav-group > summary {
     padding: 5px 8px;
     margin: 0 -8px 2px;
     border-radius: 6px;
     transition: background .12s ease;
   }
-  .nav-group:not(.nav-pinned) > summary:hover { background: var(--code-bg); color: var(--accent-dark); }
-  .nav-group:not(.nav-pinned) > summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
-  .nav-group:not(.nav-pinned) > summary:hover .chev { color: var(--accent); }
-  .nav-group:not(.nav-pinned) > ul { margin: 2px 0 10px 5px; padding-left: 14px; border-left: 1px solid var(--border); }
+  .nav-group > summary:hover { background: var(--code-bg); color: var(--accent-dark); }
+  .nav-group > summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+  .nav-group > summary:hover .chev { color: var(--accent); }
+  .nav-group > ul { margin: 2px 0 10px 5px; padding-left: 14px; border-left: 1px solid var(--border); }
 }
 .content { grid-area: main; min-width: 0; }
 article { overflow-wrap: break-word; }
@@ -331,11 +327,18 @@ article img { max-width: 100%; }
 article figure.img-figure { position: relative; margin: 1em 0; }
 /* original media wrappers: centered grey captions, bounded images */
 .blog_image_wrap { width: 275px; max-width: 100%; margin: 10px auto 20px; }
+.blog_side_image_wrap { position: relative; direction: ltr; }
 .img-box.img-tgsticker {
-  display: block; width: 160px; max-width: 100%; margin: 20px auto;
+  position: absolute; display: block; width: 160px; height: 160px;
+  margin: -41px 0 0 -180px;
 }
 .img-box.img-tgsticker img {
-  display: block; width: 100%; height: auto; object-fit: contain;
+  display: block; width: 100%; height: 100%; object-fit: contain;
+}
+@media (max-width: 900px) {
+  .img-box.img-tgsticker {
+    position: relative; margin: 20px auto; max-width: 100%;
+  }
 }
 .blog_image_wrap .img-box { display: block; }
 .blog_image_wrap .img-box img { width: 275px; max-width: 100%; padding: 10px 5px; }

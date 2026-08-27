@@ -322,10 +322,10 @@ td.addRule("videoRaw", {
   filter: "video",
   replacement: (_c, node) => "\n\n" + (node as Element).outerHTML + "\n\n",
 });
-// Telegram animates application/x-tgsticker with proprietary page JavaScript.
-// A native <picture> cannot render that source, so emit its bundled PNG fallback
-// and carry the wrapper's sizing classes onto the image.
-td.addRule("pictureFallback", {
+// Browsers cannot render Telegram's TGS source without fetching it from script,
+// which the upstream blocks cross-origin. Keep no media in the mirror: preserve
+// the original left-side wrapper and use Telegram's remote PNG fallback.
+td.addRule("tgsFallback", {
   filter: "picture",
   replacement: (_c, node) => {
     const picture = node as Element;
@@ -337,7 +337,7 @@ td.addRule("pictureFallback", {
         .filter(Boolean),
     );
     if (classes.size) image.setAttribute("class", [...classes].join(" "));
-    return "\n\n" + image.outerHTML + "\n\n";
+    return `\n\n<div class="blog_side_image_wrap">${image.outerHTML}</div>\n\n`;
   },
 });
 // keep image/caption wrappers as raw HTML so their classes survive

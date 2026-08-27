@@ -22,8 +22,8 @@ The site is built with [Eleventy](https://www.11ty.dev/) and published via GitHu
 
 - **Eleven sections**: Telegram API (130), Bot API (18), MTProto (23), Schema (10 + 3 022 reference
   pages), Blog (179), FAQ (9), Apps & Clients (3), BlackBerry Guide (16), Developer Tools (22),
-  Policies (21) and Resources (14) — each has its own sidebar and search filter; the five additional
-  sections are available through **More** in the header. The blog is the **whole archive** of telegram.org: `tools/list-blog.ts`
+  Policies (21) and Resources (14) — the same complete section list is shown on every page, and each
+  section has its own collapsible sidebar group and search filter. The blog is the **whole archive** of telegram.org: `tools/list-blog.ts`
   pages through the upstream archive and records every post. `/blog/` is rebuilt as a semantic,
   year-grouped archive of all 178 posts; the sidebar stays usable by showing the archive plus the 12
   newest posts instead of injecting all 179 pages into every article. One legacy post whose original
@@ -37,7 +37,7 @@ The site is built with [Eleventy](https://www.11ty.dev/) and published via GitHu
   addresses the original answers with a stand-in page.
 - **Full-text search** over all pages (articles + constructor/method/type names) — a dedicated [search page](https://mirrortproto.github.io/search/) powered by [Pagefind](https://pagefind.app/) with a filter by section; runs entirely in the browser. Hotkey `/` focuses the search box.
 - **Anchors on every paragraph and heading** — hover a paragraph for the ¶ link, hover a heading for #.
-- **Sidebar menu** with the pages of the current section + breadcrumbs on every page.
+- **Consistent sidebar menu** with all sections on every page; the current section starts expanded, and every page has breadcrumbs.
 - **Three color themes**: system (default), light, dark — switcher in the header, choice persisted.
 - **SEO & machine-readable**: `sitemap.xml`, `robots.txt`, canonical/OG/Twitter meta and JSON-LD
   breadcrumbs generated from the original page data; web manifest + SVG/PNG icons.
@@ -673,10 +673,9 @@ mirrortproto.github.io/
   - `/tour/quizbot/` — Quizzes
   - `/tour/screenshots/` — Telegram Logos and App Screenshots
   - `/tour/stories/` — Telegram Stories
-- **Pages of the mirror itself** — 4 pages:
+- **Pages of the mirror itself** — 3 pages:
   - `/` — Telegram API Documentation Mirror
   - `/404/` — Page not found
-  - `/more/` — More sections
   - `/search/` — Search
 
 ## Права

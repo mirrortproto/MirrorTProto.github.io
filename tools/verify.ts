@@ -59,7 +59,7 @@ const mdFiles = await walk(CRAWLED, ".md");
 // navigation/search sections. Guard the taxonomy itself, not only its links.
 const navData = JSON.parse(
   await readFile(path.join(CRAWLED, "_data", "nav.json"), "utf8"),
-) as { sections: Array<{ key: string; items: unknown[] }> };
+) as { sections: Array<{ key: string; title: string; items: unknown[] }> };
 const expectedAdditionalSections: Record<string, number> = {
   apps: 3,
   blackberry: 16,
@@ -247,6 +247,9 @@ let duplicateIdBad = 0;
 let securityBad = 0;
 let jsonLdBad = 0;
 let pagefindBad = 0;
+let emptyParagraphBad = 0;
+let navigationBad = 0;
+let localMediaBad = 0;
 for (const f of pages) {
   const h = await readFile(f, "utf8");
   const rel = path.relative(DOCS, f);
@@ -271,6 +274,45 @@ for (const f of pages) {
   }
   const articleHtml =
     /<article\b[^>]*>([\s\S]*?)<\/article>/i.exec(h)?.[1] ?? "";
+  for (const paragraph of articleHtml.matchAll(/<p\b[^>]*>([\s\S]*?)<\/p>/gi)) {
+    const inner = (paragraph[1] ?? "")
+      .replace(/<a\b[^>]*class="p-anchor"[\s\S]*?<\/a>/gi, "")
+      .replace(/<!--[\s\S]*?-->/g, "")
+      .replace(/<br\s*\/?\s*>/gi, "");
+    const meaningfulElement =
+      /<(?:img|video|audio|picture|svg|canvas|iframe|table|pagefind-[a-z-]+)\b/i.test(
+        inner,
+      ) || /<a\b[^>]*(?:id|name)="[^"]+"/i.test(inner);
+    const text = inner
+      .replace(/<[^>]+>/g, "")
+      .replace(/(?:&nbsp;|&#160;|&#x0*a0;)/gi, "")
+      .trim();
+    if (!meaningfulElement && !text) {
+      emptyParagraphBad++;
+      if (emptyParagraphBad <= 5) fail(`empty paragraph in ${rel}`);
+    }
+  }
+  const navGroups = (h.match(/class="nav-group(?:\s|\")/g) || []).length;
+  const allSectionTitles = navData.sections.every((group) =>
+    h.includes(
+      `<span>${group.title.replace(/&/g, "&amp;").replace(/</g, "&lt;")}</span>`,
+    ),
+  );
+  if (
+    navGroups !== navData.sections.length ||
+    !allSectionTitles ||
+    h.includes('href="/more/"')
+  ) {
+    navigationBad++;
+    if (navigationBad <= 5)
+      fail(
+        `inconsistent section navigation in ${rel}: ${navGroups}/${navData.sections.length} groups`,
+      );
+  }
+  if (/\bdata-tgs=|["']\/media\/tgs\/|["']\/js\/tgs\.js/i.test(h)) {
+    localMediaBad++;
+    if (localMediaBad <= 5) fail(`mirrored TGS media remains in ${rel}`);
+  }
   if (
     /<[^>]+\son[a-z]+\s*=/i.test(h) ||
     /<(?:a|img|video|source)\b[^>]+(?:href|src)=["']\s*(?:javascript:|data:text\/html)/i.test(
@@ -326,6 +368,40 @@ if (!pagefindBad) ok("Pagefind indexes article content only");
 if (!duplicateIdBad) ok("HTML ids are unique on every page");
 if (!securityBad) ok("no inline executable scripts or active unsafe markup");
 if (!jsonLdBad) ok("all breadcrumb JSON-LD blocks parse");
+if (!emptyParagraphBad)
+  ok("empty paragraphs are absent before numbering and indexing");
+if (!navigationBad)
+  ok(
+    `all ${pages.length} pages show the same ${navData.sections.length} sections`,
+  );
+const storiesHtml = await readFile(
+  path.join(DOCS, "blog", "stories", "index.html"),
+  "utf8",
+).catch(() => "");
+const builtCss = await readFile(
+  path.join(DOCS, "css", "style.css"),
+  "utf8",
+).catch(() => "");
+if (
+  !storiesHtml.includes('class="img-box img-tgsticker"') ||
+  !storiesHtml.includes(
+    'src="https://telegram.org/file/400780400899/2/Mm0RBKjlAiw.40307.png/8daecf88911311259d"',
+  ) ||
+  !builtCss.includes("margin:-41px 0 0 -180px") ||
+  !builtCss.includes("position:absolute")
+) {
+  localMediaBad++;
+  fail("/blog/stories/ does not retain its remote left-side fallback");
+}
+if (
+  (await exists(path.join(DOCS, "media"))) ||
+  (await exists(path.join(DOCS, "js", "tgs.js")))
+) {
+  localMediaBad++;
+  fail("generated site contains mirrored media or its TGS runtime");
+}
+if (!localMediaBad)
+  ok("no media files are mirrored; Stories uses Telegram's remote fallback");
 
 // ---- anchors -------------------------------------------------------------
 // A link that points at a heading which no longer exists is exactly as broken as

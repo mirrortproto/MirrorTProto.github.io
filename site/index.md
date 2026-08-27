@@ -36,9 +36,13 @@ The TL schema: all [constructors](/constructor/), [methods](/method/), [types](/
 
 The general and technical FAQs, including the deprecated MTProto 1.0 guide, plus the complete Telegram announcement archive.
 
-### [More sections](/more/)
+### Additional documentation sections
 
-Official apps and downloads, the legacy BlackBerry guide, developer tools, policies and additional Telegram resources are organized into five focused sections.
+- [Apps & Clients](/apps/) — official applications, downloads and client history.
+- [BlackBerry Guide](/blackberry/) — the complete legacy BlackBerry development guide.
+- [Developer Tools](/tdlib/) — TDLib, Passport, Gateway, stickers, themes and widgets.
+- [Policies](/privacy/) — privacy, safety, Terms of Service and transparency documents.
+- [Resources](/tour/channels/) — security articles, contests, company information and feature tours.
 
 ## About this site
 

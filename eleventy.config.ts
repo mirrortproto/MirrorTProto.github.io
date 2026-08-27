@@ -246,7 +246,28 @@ export default function (eleventyConfig: EleventyConfig) {
     }),
   );
 
-  // Paragraph anchors: every <p> inside <article> gets id="p-N" and a ¶ link
+  // Empty upstream paragraphs (<p>, <p><br>, &nbsp; and empty formatting tags)
+  // carry no content, must not consume p-N numbers and must not enter Pagefind.
+  eleventyConfig.addTransform("remove-empty-paragraphs", (content) =>
+    content.replace(/<p\b[^>]*>([\s\S]*?)<\/p>/gi, (paragraph, inner) => {
+      if (
+        /<(?:img|video|audio|picture|svg|canvas|iframe|table|pagefind-[a-z-]+)\b/i.test(
+          inner,
+        ) ||
+        /<a\b[^>]*(?:id|name)="[^"]+"/i.test(inner)
+      )
+        return paragraph;
+      const text = inner
+        .replace(/<!--[\s\S]*?-->/g, "")
+        .replace(/<br\s*\/?\s*>/gi, "")
+        .replace(/<[^>]+>/g, "")
+        .replace(/(?:&nbsp;|&#160;|&#x0*a0;)/gi, "")
+        .trim();
+      return text ? paragraph : "";
+    }),
+  );
+
+  // Paragraph anchors: every non-empty <p> inside <article> gets id="p-N" and a ¶ link
   eleventyConfig.addTransform("paragraph-anchors", (content) => {
     const articleOpen = /<article\b[^>]*>/.exec(content);
     if (!articleOpen) return content;

@@ -102,6 +102,10 @@ export function sanitizeUpstreamHtml(input: string): string {
       },
     },
     disallowedTagsMode: "discard",
+    exclusiveFilter: (frame) =>
+      frame.tag === "p" &&
+      frame.text.replace(/\u00a0/g, "").trim() === "" &&
+      frame.mediaChildren.length === 0,
     enforceHtmlBoundary: true,
     parseStyleAttributes: true,
     transformTags: {

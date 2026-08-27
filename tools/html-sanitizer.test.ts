@@ -41,6 +41,19 @@ test("preserves safe documentation tables and Telegram media", () => {
   assert.doesNotMatch(output, /background-image|javascript:/i);
 });
 
+test("removes empty paragraphs but keeps paragraphs containing media", () => {
+  const output = sanitizeUpstreamHtml(`
+    <p></p><p> </p><p>&nbsp;</p><p><br></p><p><strong> </strong></p>
+    <p><img src="/file/poster.png" alt="poster"></p><p>Visible</p>
+  `);
+  assert.equal((output.match(/<p>/g) || []).length, 2);
+  assert.match(
+    output,
+    /<p><img src="\/file\/poster\.png" alt="poster" \/><\/p>/,
+  );
+  assert.match(output, /<p>Visible<\/p>/);
+});
+
 test("repairs whitespace-corrupted upstream media URLs", () => {
   const output = sanitizeUpstreamHtml(`
     <img src="https://telegram.org/file/path

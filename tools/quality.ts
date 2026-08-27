@@ -51,6 +51,12 @@ check(
   [".build/", "crawled/", "docs/"].every((item) => gitignore.includes(item)),
 );
 check(
+  "media files remain external",
+  !(await readdir(path.join(root, "site"))).includes("media") &&
+    !layout.includes("/js/tgs.js") &&
+    !extractor.includes("/media/"),
+);
+check(
   "all owned JavaScript sources are TypeScript",
   (await Promise.all(["client", "tools", "site"].map(ownedJavaScript))).flat()
     .length === 0,

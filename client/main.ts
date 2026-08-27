@@ -66,21 +66,6 @@ document
   });
 applyTheme(currentTheme());
 
-const pinnedNavigation =
-  document.querySelectorAll<HTMLDetailsElement>(".nav-pinned");
-const mobile = matchMedia("(max-width:900px)");
-function syncNavigation(): void {
-  for (const details of pinnedNavigation) {
-    details.open = !mobile.matches;
-    const summary = details.querySelector<HTMLElement>(":scope > summary");
-    if (summary) summary.tabIndex = mobile.matches ? 0 : -1;
-  }
-}
-if (pinnedNavigation.length) {
-  syncNavigation();
-  mobile.addEventListener("change", syncNavigation);
-}
-
 document.addEventListener("keydown", (event) => {
   const tag = document.activeElement?.tagName ?? "";
   if (event.key !== "/" || /^(input|textarea|select)$/i.test(tag)) return;

@@ -48,7 +48,6 @@
       <a href="/schema/" {% if section == 'schema' or section == 'ref' %}class="active" aria-current="section"{% endif %}>Schema</a>
       <a href="/blog/stories/" {% if section == 'blog' %}class="active" aria-current="section"{% endif %}>Blog</a>
       <a href="/faq/" {% if section == 'faq' %}class="active" aria-current="section"{% endif %}>FAQ</a>
-      <a href="/more/" {% if section == 'apps' or section == 'blackberry' or section == 'devtools' or section == 'policies' or section == 'resources' %}class="active" aria-current="section"{% endif %}>More</a>
     </nav>
     <form class="site-search" action="/search/" method="get" role="search">
       <span class="search-field">
@@ -84,24 +83,19 @@
   </div>
 </header>
 <div class="layout">
-  {% set showAll = section == 'site' %}
   {% set currentGroup = 'schema' if section == 'ref' else section %}
   {% if crumbs and crumbs.length %}
     <div class="crumbs">
       {% for c in crumbs %}<a href="{{ c.url }}">{{ c.title }}</a>{% if not loop.last %} <span class="crumb-sep">›</span> {% endif %}{% endfor %}
     </div>
   {% endif %}
-  {# One navigation tree for both breakpoints. CSS places it in the sticky left
-     column on desktop and as an accordion above the article on mobile; the two
-     used to be separate DOM subtrees carrying identical links.
-     .nav-pinned = the single-section case, which desktop keeps permanently
-     expanded (and non-interactive) while mobile keeps it collapsed by default —
-     a difference <details> cannot express in markup, so the script below syncs
-     the `open` state to the breakpoint. #}
+  {# One complete navigation tree on every page. CSS places it in the sticky
+     left column on desktop and as accordions above the article on mobile. The
+     current section starts open; all section headings remain consistently
+     visible so navigation never changes its taxonomy from page to page. #}
   <nav class="sidebar" aria-label="Pages in this section" data-pagefind-ignore>
     {% for group in nav.sections %}
-      {% if showAll or group.key == currentGroup %}
-      <details class="nav-group{% if not showAll %} nav-pinned{% endif %}"{% if not showAll %} open{% endif %}>
+      <details class="nav-group"{% if group.key == currentGroup %} open{% endif %}>
         <summary class="nav-group-title">
           <svg class="chev" width="10" height="10" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           <span>{{ group.title }}</span>
@@ -112,7 +106,6 @@
           {% endfor %}
         </ul>
       </details>
-      {% endif %}
     {% endfor %}
   </nav>
   <main class="content" id="content">
