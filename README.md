@@ -37,7 +37,7 @@ The site is built with [Eleventy](https://www.11ty.dev/) and published via GitHu
   addresses the original answers with a stand-in page.
 - **Full-text search** over all pages (articles + constructor/method/type names) — a dedicated [search page](https://mirrortproto.github.io/search/) powered by [Pagefind](https://pagefind.app/) with a filter by section; runs entirely in the browser. Hotkey `/` focuses the search box.
 - **Anchors on every paragraph and heading** — hover a paragraph for the ¶ link, hover a heading for #.
-- **Consistent sidebar menu** with all sections on every page; the current section starts expanded, and every page has breadcrumbs.
+- **Consistent navigation** with all 11 sections in both the top menu and sidebar on every page; the current section starts expanded, and every page has breadcrumbs.
 - **Three color themes**: system (default), light, dark — switcher in the header, choice persisted.
 - **SEO & machine-readable**: `sitemap.xml`, `robots.txt`, canonical/OG/Twitter meta and JSON-LD
   breadcrumbs generated from the original page data; web manifest + SVG/PNG icons.

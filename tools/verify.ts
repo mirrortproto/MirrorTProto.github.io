@@ -60,6 +60,19 @@ const mdFiles = await walk(CRAWLED, ".md");
 const navData = JSON.parse(
   await readFile(path.join(CRAWLED, "_data", "nav.json"), "utf8"),
 ) as { sections: Array<{ key: string; title: string; items: unknown[] }> };
+const expectedTopNavigation = [
+  ["/api/", "API"],
+  ["/bots/", "Bot API"],
+  ["/mtproto/", "MTProto"],
+  ["/schema/", "Schema"],
+  ["/blog/stories/", "Blog"],
+  ["/faq/", "FAQ"],
+  ["/apps/", "Apps"],
+  ["/blackberry/", "BlackBerry"],
+  ["/tdlib/", "Dev Tools"],
+  ["/privacy/", "Policies"],
+  ["/tour/channels/", "Resources"],
+] as const;
 const expectedAdditionalSections: Record<string, number> = {
   apps: 3,
   blackberry: 16,
@@ -232,9 +245,12 @@ for (const l of links) {
       `broken link ${l.url} in ${l.file}${l.relative ? ` (relative, resolves to ${l.target})` : ""}`,
     );
 }
-if (!broken)
+const localLinkCount = links.length - samePage;
+if (localLinkCount !== 95539)
+  fail(`local link inventory changed: ${localLinkCount}, expected 95539`);
+if (!broken && localLinkCount === 95539)
   ok(
-    `local links: ${links.length - samePage} (markdown + raw HTML; ${relative} document-relative), all resolve`,
+    `local links: ${localLinkCount} (markdown + raw HTML; ${relative} document-relative), all resolve`,
   );
 
 // ---- built pages ---------------------------------------------------------
@@ -250,6 +266,9 @@ let pagefindBad = 0;
 let emptyParagraphBad = 0;
 let navigationBad = 0;
 let localMediaBad = 0;
+let unnamedLinkBad = 0;
+let headingOrderBad = 0;
+let imageAltBad = 0;
 for (const f of pages) {
   const h = await readFile(f, "utf8");
   const rel = path.relative(DOCS, f);
@@ -262,7 +281,10 @@ for (const f of pages) {
     !h.includes('rel="canonical"') ||
     !h.includes('<html lang="en">') ||
     !h.includes('http-equiv="Content-Security-Policy"') ||
-    !h.includes('name="referrer"')
+    !h.includes('name="referrer"') ||
+    !/<a class="source-link"[^>]*aria-label="[^"]+"/.test(h) ||
+    /<a class="header-anchor"[^>]*aria-hidden="true"/.test(h) ||
+    (h.includes('class="crumbs"') && !h.includes('<nav class="crumbs"'))
   ) {
     metaBad++;
     if (metaBad <= 5)
@@ -274,15 +296,34 @@ for (const f of pages) {
   }
   const articleHtml =
     /<article\b[^>]*>([\s\S]*?)<\/article>/i.exec(h)?.[1] ?? "";
+  let previousHeadingLevel = 0;
+  for (const heading of articleHtml.matchAll(
+    /<h[1-6]\b[^>]*\baria-level="([1-6])"[^>]*>/gi,
+  )) {
+    const level = Number(heading[1]);
+    if (
+      previousHeadingLevel === 0
+        ? level !== 1
+        : level > previousHeadingLevel + 1
+    ) {
+      headingOrderBad++;
+      if (headingOrderBad <= 5)
+        fail(`invalid semantic heading order in ${rel}`);
+    }
+    previousHeadingLevel = level;
+  }
+  if (!previousHeadingLevel) {
+    headingOrderBad++;
+    if (headingOrderBad <= 5) fail(`missing semantic heading levels in ${rel}`);
+  }
   for (const paragraph of articleHtml.matchAll(/<p\b[^>]*>([\s\S]*?)<\/p>/gi)) {
     const inner = (paragraph[1] ?? "")
       .replace(/<a\b[^>]*class="p-anchor"[\s\S]*?<\/a>/gi, "")
       .replace(/<!--[\s\S]*?-->/g, "")
       .replace(/<br\s*\/?\s*>/gi, "");
     const meaningfulElement =
-      /<(?:img|video|audio|picture|svg|canvas|iframe|table|pagefind-[a-z-]+)\b/i.test(
-        inner,
-      ) || /<a\b[^>]*(?:id|name)="[^"]+"/i.test(inner);
+      /<(?:img|video|audio|picture|svg|canvas|iframe|table)\b/i.test(inner) ||
+      /<a\b[^>]*(?:id|name)="[^"]+"/i.test(inner);
     const text = inner
       .replace(/<[^>]+>/g, "")
       .replace(/(?:&nbsp;|&#160;|&#x0*a0;)/gi, "")
@@ -292,26 +333,70 @@ for (const f of pages) {
       if (emptyParagraphBad <= 5) fail(`empty paragraph in ${rel}`);
     }
   }
+  for (const image of articleHtml.matchAll(/<img\b([^>]*)>/gi)) {
+    if (!/\balt="[^"]*"/i.test(image[1] ?? "")) {
+      imageAltBad++;
+      if (imageAltBad <= 5) fail(`image without alt attribute in ${rel}`);
+    }
+  }
+  for (const link of articleHtml.matchAll(/<a\b([^>]*)>([\s\S]*?)<\/a>/gi)) {
+    const attrs = link[1] ?? "";
+    if (!/\bhref=/i.test(attrs)) continue;
+    const inner = link[2] ?? "";
+    const ariaLabel = /\baria-label="([^"]+)"/i.exec(attrs)?.[1]?.trim();
+    const text = inner
+      .replace(/<[^>]+>/g, "")
+      .replace(/&nbsp;/gi, "")
+      .trim();
+    const imageAlt = /<img\b[^>]*\balt="([^"]+)"/i.exec(inner)?.[1]?.trim();
+    if (!ariaLabel && !text && !imageAlt) {
+      unnamedLinkBad++;
+      if (unnamedLinkBad <= 5) fail(`unnamed link in ${rel}`);
+    }
+  }
   const navGroups = (h.match(/class="nav-group(?:\s|\")/g) || []).length;
   const allSectionTitles = navData.sections.every((group) =>
     h.includes(
       `<span>${group.title.replace(/&/g, "&amp;").replace(/</g, "&lt;")}</span>`,
     ),
   );
+  const topNavHtml =
+    /<nav class="top-nav"[^>]*>([\s\S]*?)<\/nav>/.exec(h)?.[1] ?? "";
+  const topLinks = [
+    ...topNavHtml.matchAll(/<a href="([^"]+)"[^>]*>([^<]+)<\/a>/g),
+  ].map((match) => [match[1], match[2]]);
+  const exactTopNavigation = expectedTopNavigation.every(
+    (expected, index) =>
+      topLinks[index]?.[0] === expected[0] &&
+      topLinks[index]?.[1] === expected[1],
+  );
+  const activeTopLinks = (topNavHtml.match(/aria-current="section"/g) || [])
+    .length;
+  const expectedActiveTopLinks = h.includes('data-pagefind-filter="section:')
+    ? 1
+    : 0;
   if (
     navGroups !== navData.sections.length ||
     !allSectionTitles ||
+    topLinks.length !== expectedTopNavigation.length ||
+    !exactTopNavigation ||
+    activeTopLinks !== expectedActiveTopLinks ||
     h.includes('href="/more/"')
   ) {
     navigationBad++;
     if (navigationBad <= 5)
       fail(
-        `inconsistent section navigation in ${rel}: ${navGroups}/${navData.sections.length} groups`,
+        `inconsistent navigation in ${rel}: ${navGroups}/${navData.sections.length} sidebar groups, ${topLinks.length}/${expectedTopNavigation.length} top links`,
       );
   }
-  if (/\bdata-tgs=|["']\/media\/tgs\/|["']\/js\/tgs\.js/i.test(h)) {
+  if (
+    /\bdata-tgs=|["']\/media\/tgs\/|["']\/js\/tgs\.js|\b(?:src|poster)="(?:url|PHOTO|VIDEO|SMALL|X+|Y+|Z+)"/i.test(
+      h,
+    )
+  ) {
     localMediaBad++;
-    if (localMediaBad <= 5) fail(`mirrored TGS media remains in ${rel}`);
+    if (localMediaBad <= 5)
+      fail(`local or placeholder media remains in ${rel}`);
   }
   if (
     /<[^>]+\son[a-z]+\s*=/i.test(h) ||
@@ -361,6 +446,7 @@ for (const f of pages) {
   idsByUrl.set(url === "/." ? "/" : url, ids);
 }
 if (!h1bad) ok(`h1: exactly one on all ${pages.length} pages`);
+if (!headingOrderBad) ok("semantic heading levels never skip");
 if (!metaBad)
   ok("accessibility, canonical and security metadata present on all pages");
 if (!urlBad) ok("canonical/og:url properly encoded on all pages");
@@ -370,9 +456,11 @@ if (!securityBad) ok("no inline executable scripts or active unsafe markup");
 if (!jsonLdBad) ok("all breadcrumb JSON-LD blocks parse");
 if (!emptyParagraphBad)
   ok("empty paragraphs are absent before numbering and indexing");
+if (!unnamedLinkBad) ok("all article links have accessible names");
+if (!imageAltBad) ok("all article images have alt attributes");
 if (!navigationBad)
   ok(
-    `all ${pages.length} pages show the same ${navData.sections.length} sections`,
+    `all ${pages.length} pages show the same ${navData.sections.length} sections in top and sidebar navigation`,
   );
 const storiesHtml = await readFile(
   path.join(DOCS, "blog", "stories", "index.html"),
@@ -420,7 +508,9 @@ for (const l of links) {
     if (anchorBad <= 10) fail(`dead anchor ${l.url} in ${l.file}`);
   }
 }
-if (!anchorBad)
+if (anchorChecked !== 14699)
+  fail(`anchor inventory changed: ${anchorChecked}, expected 14699`);
+if (!anchorBad && anchorChecked === 14699)
   ok(
     `anchors: ${anchorChecked} in-site fragments (${anchorSame} into the page's own headings), all resolve`,
   );

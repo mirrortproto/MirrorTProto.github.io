@@ -331,6 +331,8 @@ td.addRule("tgsFallback", {
     const picture = node as Element;
     const image = picture.querySelector("img");
     if (!image) return "";
+    if (!image.hasAttribute("alt"))
+      image.setAttribute("alt", "Telegram illustration");
     const classes = new Set(
       `${picture.getAttribute("class") || ""} ${image.getAttribute("class") || ""}`
         .split(/\s+/)
@@ -691,7 +693,13 @@ async function main(): Promise<void> {
         const content = stripNoise(
           found.html + trailingSchemes(html, found.end),
         );
-        body = td.turndown(content).trim();
+        // Invalid nested upstream anchors are normalized by the HTML parser into
+        // a meaningful inner link plus a redundant empty Markdown link. Empty
+        // links have no accessible name, so discard only that generated wrapper.
+        body = td
+          .turndown(content)
+          .replace(/\[\]\((?:\\.|[^)])*\)/g, "")
+          .trim();
         const layer = layerLabel(html);
         if (layer) {
           body = body.replace(

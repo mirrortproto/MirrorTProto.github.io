@@ -4,8 +4,14 @@ const length = /^\d+(?:\.\d+)?(?:px|%|em|rem|vh|vw)?$/i;
 const box =
   /^(?:auto|0|\d+(?:\.\d+)?(?:px|%|em|rem))(?:\s+(?:auto|0|\d+(?:\.\d+)?(?:px|%|em|rem))){0,3}$/i;
 
-const compactMediaUrl = (value: string | undefined): string | undefined =>
-  value && !value.startsWith("data:") ? value.replace(/\s+/g, "") : value;
+const compactMediaUrl = (value: string | undefined): string | undefined => {
+  if (!value || value.startsWith("data:")) return undefined;
+  const compact = value.replace(/\s+/g, "");
+  // Literal placeholders in syntax examples are not media URLs and must not
+  // trigger requests such as /bots/api/url in the rendered mirror.
+  if (/^(?:PHOTO|VIDEO|SMALL|url|X+|Y+|Z+)$/i.test(compact)) return undefined;
+  return compact;
+};
 
 const allowedTags = [
   ...sanitizeHtml.defaults.allowedTags,
@@ -72,7 +78,7 @@ export function sanitizeUpstreamHtml(input: string): string {
     },
     allowedSchemes: ["http", "https", "mailto", "tel", "tg"],
     allowedSchemesByTag: {
-      img: ["http", "https", "data"],
+      img: ["http", "https"],
       source: ["http", "https"],
       video: ["http", "https"],
     },
@@ -102,10 +108,15 @@ export function sanitizeUpstreamHtml(input: string): string {
       },
     },
     disallowedTagsMode: "discard",
-    exclusiveFilter: (frame) =>
-      frame.tag === "p" &&
-      frame.text.replace(/\u00a0/g, "").trim() === "" &&
-      frame.mediaChildren.length === 0,
+    exclusiveFilter: (frame) => {
+      const empty =
+        frame.text.replace(/\u00a0/g, "").trim() === "" &&
+        frame.mediaChildren.length === 0;
+      if (frame.tag === "p") return empty;
+      if (frame.tag === "a")
+        return empty && !frame.attribs.id && !frame.attribs.name;
+      return false;
+    },
     enforceHtmlBoundary: true,
     parseStyleAttributes: true,
     transformTags: {

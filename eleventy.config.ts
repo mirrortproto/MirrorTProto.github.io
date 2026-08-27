@@ -131,6 +131,11 @@ export default function (eleventyConfig: EleventyConfig) {
     // never starts loading, so the placeholder would never resolve.
     if (!/decoding=/.test(img))
       img = img.replace(/^<img/, '<img decoding="async"');
+    if (!/\salt=/.test(img))
+      img = img.replace(
+        /^<img/,
+        `<img alt="${entEncode(text || "Telegram documentation image")}"`,
+      );
     // Load/failure signals are wired by the capture-phase listener in layout.njk
     // (fires at the same moment an inline on* handler would). Inline handlers are
     // deliberately NOT emitted: Instant View drops nodes carrying inline JS.
@@ -143,6 +148,15 @@ export default function (eleventyConfig: EleventyConfig) {
       ? ' style="' + entEncode(boxDecls.join(";")) + '"'
       : "";
     const sticker = /\bdev_page_tgsticker\b/.test(imgTag);
+    let accessibleInner = innerHtml.replace(imgTag, img);
+    if (
+      /^<a\b/.test(accessibleInner) &&
+      !/^<a\b[^>]*\baria-label=/.test(accessibleInner)
+    )
+      accessibleInner = accessibleInner.replace(
+        /^<a\b/,
+        `<a aria-label="${entEncode(text || "View image")}"`,
+      );
     return (
       '<span class="img-box' +
       (icon ? " img-icon" : "") +
@@ -150,7 +164,7 @@ export default function (eleventyConfig: EleventyConfig) {
       '"' +
       boxStyle +
       ">" +
-      innerHtml.replace(imgTag, img) +
+      accessibleInner +
       chip +
       "</span>"
     );
@@ -241,29 +255,72 @@ export default function (eleventyConfig: EleventyConfig) {
         symbol: "#",
         placement: "after",
         class: "header-anchor",
-        ariaHidden: true,
+        ariaHidden: false,
       }),
     }),
   );
 
+  // Upstream pages use visual heading sizes rather than a valid outline (for
+  // example h1 → h4). Preserve those visual tags, but expose a gap-free semantic
+  // level to assistive technology based on the source hierarchy.
+  eleventyConfig.addTransform("normalize-heading-semantics", (content) => {
+    const articleOpen = /<article\b[^>]*>/.exec(content);
+    if (!articleOpen) return content;
+    const start = articleOpen.index;
+    const end = content.indexOf("</article>", start);
+    if (end === -1) return content;
+    let previousSource = 1;
+    let previousSemantic = 1;
+    const article = content
+      .slice(start, end)
+      .replace(/<h([1-6])([^>]*)>/gi, (_tag, rawLevel, attrs) => {
+        const sourceLevel = Number(rawLevel);
+        let semanticLevel: number;
+        if (sourceLevel === 1) semanticLevel = 1;
+        else if (sourceLevel === previousSource)
+          semanticLevel = previousSemantic;
+        else if (sourceLevel > previousSource)
+          semanticLevel = Math.min(6, previousSemantic + 1);
+        else
+          semanticLevel = Math.max(
+            2,
+            previousSemantic - (previousSource - sourceLevel),
+          );
+        previousSource = sourceLevel;
+        previousSemantic = semanticLevel;
+        const cleanAttrs = String(attrs).replace(
+          /\s+(?:role|aria-level)="[^"]*"/gi,
+          "",
+        );
+        return `<h${rawLevel}${cleanAttrs} role="heading" aria-level="${semanticLevel}">`;
+      });
+    return content.slice(0, start) + article + content.slice(end);
+  });
+
   // Empty upstream paragraphs (<p>, <p><br>, &nbsp; and empty formatting tags)
   // carry no content, must not consume p-N numbers and must not enter Pagefind.
+  const visibleParagraphText = (value: string): string =>
+    value
+      .replace(/<!--[\s\S]*?-->/g, "")
+      .replace(/<br\s*\/?\s*>/gi, "")
+      .replace(/<[^>]+>/g, "")
+      .replace(/(?:&nbsp;|&#160;|&#x0*a0;)/gi, "")
+      .trim();
   eleventyConfig.addTransform("remove-empty-paragraphs", (content) =>
     content.replace(/<p\b[^>]*>([\s\S]*?)<\/p>/gi, (paragraph, inner) => {
+      if (/<pagefind-[a-z-]+\b/i.test(inner)) {
+        const withoutComponents = inner.replace(
+          /<\/?pagefind-[a-z-]+\b[^>]*>/gi,
+          "",
+        );
+        if (!visibleParagraphText(withoutComponents)) return inner.trim();
+      }
       if (
-        /<(?:img|video|audio|picture|svg|canvas|iframe|table|pagefind-[a-z-]+)\b/i.test(
-          inner,
-        ) ||
+        /<(?:img|video|audio|picture|svg|canvas|iframe|table)\b/i.test(inner) ||
         /<a\b[^>]*(?:id|name)="[^"]+"/i.test(inner)
       )
         return paragraph;
-      const text = inner
-        .replace(/<!--[\s\S]*?-->/g, "")
-        .replace(/<br\s*\/?\s*>/gi, "")
-        .replace(/<[^>]+>/g, "")
-        .replace(/(?:&nbsp;|&#160;|&#x0*a0;)/gi, "")
-        .trim();
-      return text ? paragraph : "";
+      return visibleParagraphText(inner) ? paragraph : "";
     }),
   );
 

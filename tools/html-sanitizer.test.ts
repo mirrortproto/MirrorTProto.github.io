@@ -54,6 +54,17 @@ test("removes empty paragraphs but keeps paragraphs containing media", () => {
   assert.match(output, /<p>Visible<\/p>/);
 });
 
+test("removes unnamed empty links but preserves anchors and linked media", () => {
+  const output = sanitizeUpstreamHtml(`
+    <a href="/empty"></a>
+    <a id="section"></a>
+    <a href="/full"><img src="/file/image.png" alt="Diagram"></a>
+  `);
+  assert.doesNotMatch(output, /href="\/empty"/);
+  assert.match(output, /<a id="section"><\/a>/);
+  assert.match(output, /<a href="\/full"><img[^>]+alt="Diagram" \/><\/a>/);
+});
+
 test("repairs whitespace-corrupted upstream media URLs", () => {
   const output = sanitizeUpstreamHtml(`
     <img src="https://telegram.org/file/path
@@ -61,6 +72,7 @@ test("repairs whitespace-corrupted upstream media URLs", () => {
 /hash" alt="poster">
     <video poster="/file/poster
 /hash"><source src="/resources/video/demo.mp4"></video>
+    <img src="url" alt="Example"><img src="data:image/png;base64,AAAA" alt="Embedded">
   `);
   assert.match(output, /src="https:\/\/telegram\.org\/file\/path\/hash"/);
   assert.match(output, /poster="\/file\/poster\/hash"/);
@@ -68,6 +80,7 @@ test("repairs whitespace-corrupted upstream media URLs", () => {
     output,
     /<source src="\/resources\/video\/demo\.mp4"><\/source>/,
   );
+  assert.doesNotMatch(output, /src="(?:url|data:)/);
 });
 
 test("hardens links opened in a new tab", () => {

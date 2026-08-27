@@ -13,9 +13,11 @@ layout: layout.njk
 
 Full-text search over the whole mirror: articles, constructors, methods and types. Use the **Section** filter below to limit results to any documentation section, including Apps & Clients, BlackBerry Guide, Developer Tools, Policies and Resources.
 
-<pagefind-config faceted preload></pagefind-config>
+<div class="search-controls">
+<pagefind-config faceted></pagefind-config>
 <pagefind-filter-dropdown filter="section" label="Section"></pagefind-filter-dropdown>
 <pagefind-searchbox shortcut="/" show-sub-results></pagefind-searchbox>
+</div>
 
 <script src="/pagefind/pagefind-component-ui.js" type="module"></script>
 <script src="/js/search.js" defer></script>

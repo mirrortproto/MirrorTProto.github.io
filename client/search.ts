@@ -1,9 +1,31 @@
 window.addEventListener("DOMContentLoaded", async () => {
-  const query = new URLSearchParams(location.search).get("q");
-  if (!query) return;
+  await Promise.all([
+    customElements.whenDefined("pagefind-filter-dropdown"),
+    customElements.whenDefined("pagefind-searchbox"),
+  ]);
 
-  await customElements.whenDefined("pagefind-searchbox");
+  const dropdown = document.querySelector("pagefind-filter-dropdown");
+  const labelDropdown = (): boolean => {
+    const trigger = dropdown?.querySelector<HTMLButtonElement>(
+      ".pf-dropdown-trigger",
+    );
+    if (!trigger) return false;
+    if (!trigger.hasAttribute("aria-label"))
+      trigger.setAttribute(
+        "aria-label",
+        dropdown?.getAttribute("label") || "Search filters",
+      );
+    return true;
+  };
+  labelDropdown();
+  if (dropdown) {
+    const observer = new MutationObserver(labelDropdown);
+    observer.observe(dropdown, { childList: true, subtree: true });
+  }
+
   requestAnimationFrame(() => {
+    const query = new URLSearchParams(location.search).get("q");
+    if (!query) return;
     const input = document.querySelector<HTMLInputElement>(
       "pagefind-searchbox input",
     );
