@@ -4,6 +4,9 @@ const length = /^\d+(?:\.\d+)?(?:px|%|em|rem|vh|vw)?$/i;
 const box =
   /^(?:auto|0|\d+(?:\.\d+)?(?:px|%|em|rem))(?:\s+(?:auto|0|\d+(?:\.\d+)?(?:px|%|em|rem))){0,3}$/i;
 
+const compactMediaUrl = (value: string | undefined): string | undefined =>
+  value && !value.startsWith("data:") ? value.replace(/\s+/g, "") : value;
+
 const allowedTags = [
   ...sanitizeHtml.defaults.allowedTags,
   "center",
@@ -111,6 +114,27 @@ export function sanitizeUpstreamHtml(input: string): string {
           rel.add("noreferrer");
           attributes.rel = [...rel].sort().join(" ");
         }
+        return { tagName, attribs: attributes };
+      },
+      img: (tagName, attributes) => {
+        const src = compactMediaUrl(attributes.src);
+        if (src) attributes.src = src;
+        else delete attributes.src;
+        return { tagName, attribs: attributes };
+      },
+      source: (tagName, attributes) => {
+        const src = compactMediaUrl(attributes.src);
+        if (src) attributes.src = src;
+        else delete attributes.src;
+        return { tagName, attribs: attributes };
+      },
+      video: (tagName, attributes) => {
+        const src = compactMediaUrl(attributes.src);
+        const poster = compactMediaUrl(attributes.poster);
+        if (src) attributes.src = src;
+        else delete attributes.src;
+        if (poster) attributes.poster = poster;
+        else delete attributes.poster;
         return { tagName, attribs: attributes };
       },
     },

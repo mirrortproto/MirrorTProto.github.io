@@ -41,6 +41,22 @@ test("preserves safe documentation tables and Telegram media", () => {
   assert.doesNotMatch(output, /background-image|javascript:/i);
 });
 
+test("repairs whitespace-corrupted upstream media URLs", () => {
+  const output = sanitizeUpstreamHtml(`
+    <img src="https://telegram.org/file/path
+
+/hash" alt="poster">
+    <video poster="/file/poster
+/hash"><source src="/resources/video/demo.mp4"></video>
+  `);
+  assert.match(output, /src="https:\/\/telegram\.org\/file\/path\/hash"/);
+  assert.match(output, /poster="\/file\/poster\/hash"/);
+  assert.match(
+    output,
+    /<source src="\/resources\/video\/demo\.mp4"><\/source>/,
+  );
+});
+
 test("hardens links opened in a new tab", () => {
   const output = sanitizeUpstreamHtml(
     '<a href="https://telegram.org/file" target="_blank" rel="nofollow">file</a>',

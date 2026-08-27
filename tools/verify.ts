@@ -331,7 +331,12 @@ const manifestMeta = JSON.parse(
   await readFile(path.join(backups, latest, "manifest.json"), "utf8"),
 ) as {
   page_count: number;
-  pages: Array<{ file: string; bytes: number; sha256: string }>;
+  pages: Array<{
+    file: string;
+    path: string;
+    bytes: number;
+    sha256: string;
+  }>;
 };
 let integrityBad = 0;
 for (const entry of manifestMeta.pages) {
@@ -370,6 +375,76 @@ const preText = (html: string): string => {
   const m = html.match(/<pre[^>]*>[\s\S]*?<\/pre>/);
   return m ? unentity(m[0].replace(/<[^>]+>/g, "")).trim() : "";
 };
+
+const contentDiv = (html: string): string => {
+  const opening = /<div\b[^>]*\bid="dev_page_content"[^>]*>/i.exec(html);
+  if (!opening || opening.index === undefined) return "";
+  const tags = /<\/?div\b[^>]*>/gi;
+  tags.lastIndex = opening.index;
+  let depth = 0;
+  for (const match of html.matchAll(tags)) {
+    depth += /^<\/div/i.test(match[0]) ? -1 : 1;
+    if (depth === 0)
+      return html.slice(opening.index, (match.index ?? 0) + match[0].length);
+  }
+  return "";
+};
+
+// Blog media is intentionally remote, but every upstream-relative URL must be
+// externalized. Turndown also has no native video rule: compare exact tag counts
+// so legacy smartphone demos cannot silently disappear again.
+let blogMediaBad = 0;
+let blogImages = 0;
+let blogVideos = 0;
+let blogSources = 0;
+for (const entry of manifestMeta.pages.filter((page) =>
+  page.path.startsWith("/blog/"),
+)) {
+  const upstream = contentDiv(
+    await readFile(path.join(backups, latest, entry.file), "utf8"),
+  ).replace(/<!--[\s\S]*?-->/g, "");
+  const rendered = await readFile(
+    path.join(DOCS, entry.path.slice(1), "index.html"),
+    "utf8",
+  ).catch(() => "");
+  const expectedImages = (upstream.match(/<img\b/gi) || []).length;
+  const expectedVideos = (upstream.match(/<video\b/gi) || []).length;
+  const expectedSources = (
+    upstream
+      .replace(/<picture\b[\s\S]*?<\/picture>/gi, "")
+      .match(/<source\b/gi) || []
+  ).length;
+  const actualImages = (rendered.match(/<img\b/gi) || []).length;
+  const actualVideos = (rendered.match(/<video\b/gi) || []).length;
+  const actualSources = (rendered.match(/<source\b/gi) || []).length;
+  blogImages += actualImages;
+  blogVideos += actualVideos;
+  blogSources += actualSources;
+  if (
+    expectedImages !== actualImages ||
+    expectedVideos !== actualVideos ||
+    expectedSources !== actualSources
+  ) {
+    blogMediaBad++;
+    if (blogMediaBad <= 5)
+      fail(
+        `${entry.path}/ media differs from backup: images ${actualImages}/${expectedImages}, videos ${actualVideos}/${expectedVideos}, sources ${actualSources}/${expectedSources}`,
+      );
+  }
+  if (
+    /\b(?:src|poster|srcset)="(?:\/\/(?:telegram\.org|core\.telegram\.org)|\/(?:file|img|resources)\/)/i.test(
+      rendered,
+    )
+  ) {
+    blogMediaBad++;
+    if (blogMediaBad <= 5)
+      fail(`${entry.path}/ keeps an upstream-relative media URL`);
+  }
+}
+if (!blogMediaBad)
+  ok(
+    `blog media matches backup (${blogImages} images, ${blogVideos} videos, ${blogSources} sources; all URLs usable)`,
+  );
 
 // ---- the pages this mirror exists for ------------------------------------
 // On /schema and /schema/end-to-end the TL-schema is a sibling of the content

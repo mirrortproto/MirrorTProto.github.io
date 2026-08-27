@@ -315,11 +315,36 @@ td.addRule("imgRaw", {
   filter: "img",
   replacement: (_c, node) => (node as Element).outerHTML,
 });
+// A video outside the modern blog_video_player_wrap used to disappear because
+// Turndown has no video rule. Legacy posts use 29 smartphone players and one
+// Nexus demo; preserve the media itself even if an unknown wrapper appears.
+td.addRule("videoRaw", {
+  filter: "video",
+  replacement: (_c, node) => "\n\n" + (node as Element).outerHTML + "\n\n",
+});
+// Telegram animates application/x-tgsticker with proprietary page JavaScript.
+// A native <picture> cannot render that source, so emit its bundled PNG fallback
+// and carry the wrapper's sizing classes onto the image.
+td.addRule("pictureFallback", {
+  filter: "picture",
+  replacement: (_c, node) => {
+    const picture = node as Element;
+    const image = picture.querySelector("img");
+    if (!image) return "";
+    const classes = new Set(
+      `${picture.getAttribute("class") || ""} ${image.getAttribute("class") || ""}`
+        .split(/\s+/)
+        .filter(Boolean),
+    );
+    if (classes.size) image.setAttribute("class", [...classes].join(" "));
+    return "\n\n" + image.outerHTML + "\n\n";
+  },
+});
 // keep image/caption wrappers as raw HTML so their classes survive
 td.addRule("rawMediaDivs", {
   filter: (node) =>
     node.nodeName === "DIV" &&
-    /blog_(image_wrap|video_player_wrap|2images_wrap|3images_wrap|medium_image_wrap)/.test(
+    /(?:blog_(?:image_wrap|video_player_wrap|2images_wrap|3images_wrap|medium_image_wrap)|smartphone_video_player_wrap|smarphone_device_nexus)/.test(
       node.getAttribute("class") || "",
     ),
   replacement: (_c, node) => "\n\n" + (node as Element).outerHTML + "\n\n",
@@ -868,21 +893,30 @@ async function main(): Promise<void> {
     origin: string,
   ): string => {
     const host = new URL(origin).hostname;
+    const externalizeSrcset = (value: string): string =>
+      value
+        // Telegram currently emits `url, 1200w`; the comma incorrectly splits
+        // the descriptor into a second candidate. Normalize it to valid srcset.
+        .replace(/,\s+(\d+(?:\.\d+)?[wx])(?=\s*(?:,|$))/gi, " $1")
+        .replace(/(^|,\s*)\/\//g, "$1https://")
+        .replace(/(^|,\s*)\/(?!\/)/g, `$1${origin}/`);
     return (
       md
-        .replace(/<img([^>]*?)src="\/file\//g, `<img$1src="${origin}/file/`)
-        .replace(/<img([^>]*?)src="\/img\//g, `<img$1src="${origin}/img/`)
+        .replace(
+          /\bsrcset="([^"]*)"/gi,
+          (_match, value: string) => `srcset="${externalizeSrcset(value)}"`,
+        )
         .replace(/<img([^>]*?)src="\/\//g, '<img$1src="https://')
+        .replace(/<img([^>]*?)src="\/(?!\/)/g, `<img$1src="${origin}/`)
         .replace(/(<a[^>]*?)href="\/file\//g, `$1href="${origin}/file/`)
         .replace(/(<a[^>]*?)href="\/img\//g, `$1href="${origin}/img/`)
         .replace(/(<a[^>]*?)href="\/\//g, '$1href="https://')
         .replace(
-          /(<(?:source|video|img)[^>]*?)src="\/file\//g,
-          `$1src="${origin}/file/`,
+          /(<(?:source|video|img)[^>]*?)src="\/(?!\/)/g,
+          `$1src="${origin}/`,
         )
-        .replace(/(<video[^>]*?)poster="\/file\//g, `$1poster="${origin}/file/`)
-        .replace(/!\[([^\]]*)\]\(\/file\//g, `![$1](${origin}/file/`)
-        .replace(/!\[([^\]]*)\]\(\/img\//g, `![$1](${origin}/img/`)
+        .replace(/(<video[^>]*?)poster="\/(?!\/)/g, `$1poster="${origin}/`)
+        .replace(/!\[([^\]]*)\]\(\/(?!\/)/g, `![$1](${origin}/`)
         .replace(/!\[([^\]]*)\]\(\/\//g, "![$1](https://")
         // Turndown escapes markdown punctuation, and it does so inside link
         // destinations too: telegram.org's DSA report links to

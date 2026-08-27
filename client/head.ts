@@ -37,7 +37,8 @@ document.addEventListener(
   (event) => {
     if (
       event.target instanceof HTMLImageElement ||
-      event.target instanceof HTMLVideoElement
+      event.target instanceof HTMLVideoElement ||
+      event.target instanceof HTMLSourceElement
     ) {
       markMedia(event.target, "img-broken");
     }

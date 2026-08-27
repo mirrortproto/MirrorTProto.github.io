@@ -277,8 +277,7 @@ article img { max-width: 100%; }
    once loaded, the chip disappears and the media takes its place */
 .img-box { position: relative; display: inline-block; vertical-align: middle; max-width: 100%; }
 .img-box > a { display: inline-block; max-width: 100%; }
-.img-box:not(.img-ok) img,
-.img-box:not(.img-ok) video { display: none !important; }
+.img-box:not(.img-ok) img { display: none !important; }
 .img-box img { display: block; max-width: 100%; height: auto; }
 .img-alt {
   display: flex; align-items: center; justify-content: center; gap: 4px;
@@ -309,16 +308,35 @@ article img { max-width: 100%; }
 /* video placeholders: same principle as images */
 .img-box.img-video { display: block; width: 100%; }
 .img-box.img-video video {
-  display: block; width: 100%; height: auto; max-width: 480px; margin: 0 auto;
+  display: block; width: 100%; height: auto; max-width: 600px; margin: 0 auto;
   background: #000;
 }
-.img-box.img-video .img-alt { min-height: 9em; max-width: 480px; margin: 0 auto; }
+/* Hiding a video until `loadeddata` is circular: browsers may not fetch media
+   with display:none, so the event never fires. Show the native poster/player
+   immediately; reveal our fallback only after an actual media error. */
+.img-box.img-video .img-alt { display: none; min-height: 9em; max-width: 600px; margin: 0 auto; }
+.img-box.img-video.img-broken video { display: none; }
+.img-box.img-video.img-broken .img-alt { display: flex; }
+.smartphone_video_player_wrap,
+.smarphone_device_nexus {
+  width: min(270px, 100%); margin: 20px auto; padding: 12px;
+  border-radius: 32px; background: #111; box-sizing: border-box;
+}
+.smartphone_video_player_iphone,
+.smarphone_device_nexus .screen { overflow: hidden; border-radius: 20px; line-height: 0; }
+.img-box.img-video video.smartphone_video_player { max-width: 234px; }
 /* standalone media promoted out of <p> into a block <figure> (Instant View needs
    a block-level photo). Must render exactly like the paragraph it replaced:
    same default margin (1em 0), same inline-block box, same ¶ hover behaviour. */
 article figure.img-figure { position: relative; margin: 1em 0; }
 /* original media wrappers: centered grey captions, bounded images */
 .blog_image_wrap { width: 275px; max-width: 100%; margin: 10px auto 20px; }
+.img-box.img-tgsticker {
+  display: block; width: 160px; max-width: 100%; margin: 20px auto;
+}
+.img-box.img-tgsticker img {
+  display: block; width: 100%; height: auto; object-fit: contain;
+}
 .blog_image_wrap .img-box { display: block; }
 .blog_image_wrap .img-box img { width: 275px; max-width: 100%; padding: 10px 5px; }
 .blog_image_wrap p, .blog_video_player_wrap p {

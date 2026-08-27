@@ -142,9 +142,11 @@ export default function (eleventyConfig: EleventyConfig) {
     const boxStyle = boxDecls.length
       ? ' style="' + entEncode(boxDecls.join(";")) + '"'
       : "";
+    const sticker = /\bdev_page_tgsticker\b/.test(imgTag);
     return (
       '<span class="img-box' +
       (icon ? " img-icon" : "") +
+      (sticker ? " img-tgsticker" : "") +
       '"' +
       boxStyle +
       ">" +
