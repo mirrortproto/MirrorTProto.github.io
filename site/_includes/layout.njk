@@ -35,7 +35,7 @@
    constructor/method/type pages — belongs to Schema, and the mirror's own pages
    (`site`: home, search, 404) are not a section of the documentation at all, so
    they carry no filter. #}
-{% set sectionNames = { api: 'Telegram API', bots: 'Bot API', mtproto: 'MTProto', schema: 'Schema', ref: 'Schema', blog: 'Blog', faq: 'FAQ', other: 'Other' } %}
+{% set sectionNames = { api: 'Telegram API', bots: 'Bot API', mtproto: 'MTProto', schema: 'Schema', ref: 'Schema', blog: 'Blog', faq: 'FAQ', apps: 'Apps & Clients', blackberry: 'BlackBerry Guide', devtools: 'Developer Tools', policies: 'Policies', resources: 'Resources' } %}
 <body{% if section and section != 'site' %} data-pagefind-filter="section:{{ sectionNames[section] or section }}"{% endif %}>
 <a class="skip-link" href="#content">Skip to content</a>
 <header class="site-header">
@@ -48,7 +48,7 @@
       <a href="/schema/" {% if section == 'schema' or section == 'ref' %}class="active" aria-current="section"{% endif %}>Schema</a>
       <a href="/blog/stories/" {% if section == 'blog' %}class="active" aria-current="section"{% endif %}>Blog</a>
       <a href="/faq/" {% if section == 'faq' %}class="active" aria-current="section"{% endif %}>FAQ</a>
-      <a href="/apps/" {% if section == 'other' %}class="active" aria-current="section"{% endif %}>Other</a>
+      <a href="/more/" {% if section == 'apps' or section == 'blackberry' or section == 'devtools' or section == 'policies' or section == 'resources' %}class="active" aria-current="section"{% endif %}>More</a>
     </nav>
     <form class="site-search" action="/search/" method="get" role="search">
       <span class="search-field">

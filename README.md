@@ -20,9 +20,10 @@ The site is built with [Eleventy](https://www.11ty.dev/) and published via GitHu
 
 ## Возможности / Features
 
-- **Seven sections**: Telegram API (130), Bot API (18), MTProto (23), Schema (10 + 3 022 reference
-  pages), Blog (179), FAQ (9) and Other (76) — each with its own menu, its own filter in the search
-  and its own entry in the header. The blog is the **whole archive** of telegram.org: `tools/list-blog.ts`
+- **Eleven sections**: Telegram API (130), Bot API (18), MTProto (23), Schema (10 + 3 022 reference
+  pages), Blog (179), FAQ (9), Apps & Clients (3), BlackBerry Guide (16), Developer Tools (22),
+  Policies (21) and Resources (14) — each has its own sidebar and search filter; the five additional
+  sections are available through **More** in the header. The blog is the **whole archive** of telegram.org: `tools/list-blog.ts`
   pages through the upstream archive and records every post. `/blog/` is rebuilt as a semantic,
   year-grouped archive of all 178 posts; the sidebar stays usable by showing the archive plus the 12
   newest posts instead of injecting all 179 pages into every article. One legacy post whose original
@@ -591,11 +592,11 @@ mirrortproto.github.io/
   - `/blog/watch-apps-and-more/` — Smartwatch Apps, Rich Text for Bots, AI Guardians for Groups, and Much More
   - `/blog/wear-gifts-blockchain-and-more/` — Wear Collectible Gifts, Move Gifts to the Blockchain, Send Gifts to Channels, and More
   - `/blog/winter-contest-ends/` — Winter Contest Ends
-- **Other** — 76 pages:
+- **Apps & Clients** — 3 pages:
   - `/android/` — Telegram for Android
-  - `/apple_privacy/` — Apple Privacy Labels Explained
   - `/apps/` — Telegram Applications
-  - `/articles/DH_Hash_Collision/` — Hash Collisions for Diffie-Hellman Keys
+  - `/evolution/` — The Evolution of Telegram
+- **BlackBerry Guide** — 16 pages:
   - `/blackberry/` — Blackberry 10 Dev Contest
   - `/blackberry/chat-edit/` — Editing Messages
   - `/blackberry/chat-emoji/` — Choosing Emoji
@@ -612,26 +613,17 @@ mirrortproto.github.io/
   - `/blackberry/newmessage/` — New Message
   - `/blackberry/secretchats/` — Secret Chats
   - `/blackberry/settings/` — Settings
-  - `/bug-bounty/` — Telegram Bug Bounty Program
-  - `/cdn/` — Encrypted CDNs for Speed and Security
-  - `/contest300K/` — Telegram Cracking Contest Description
-  - `/evolution/` — The Evolution of Telegram
+- **Developer Tools** — 22 pages:
   - `/gateway/` — Telegram Gateway – Fast, Affordable, and Secure User Verification
   - `/gateway/api/` — Telegram Gateway API
   - `/gateway/verification-tutorial/` — Authorization via Telegram Gateway: Quick-start Guide
   - `/import-stickers/` — Importing Stickers to Telegram
-  - `/jobs/` — Jobs
-  - `/moderation/` — Telegram Safety Overview
   - `/passport/` — Telegram Passport Manual
   - `/passport/encryption/` — Telegram Passport Encryption Details
   - `/passport/example/` — Passport example
   - `/passport/sdk-android/` — Android SDK
   - `/passport/sdk-ios-mac/` — iOS & macOS SDK
   - `/passport/sdk-javascript/` — Javascript SDK
-  - `/press/` — Telegram Press Info
-  - `/privacy-tpa/` — Standard Bot Privacy Policy
-  - `/privacy/` — Telegram Privacy Policy
-  - `/reproducible-builds/` — Reproducible Builds for iOS and Android
   - `/stickers/` — Telegram Stickers
   - `/stickers/webm-vp9-encoding/` — Encoding Video Stickers and Emoji with .WEBM and VP9
   - `/tdlib/` — Telegram Database Library
@@ -639,6 +631,16 @@ mirrortproto.github.io/
   - `/tdlib/notification-api/` — Notification API
   - `/tdlib/options/` — TDLib options
   - `/themes/` — Creating Custom Cloud Themes
+  - `/widgets/` — Telegram Widgets
+  - `/widgets/discussion/` — Discussion Widget
+  - `/widgets/login-legacy/` — Telegram Login Widget
+  - `/widgets/posts/` — Post Widget
+  - `/widgets/share/` — Sharing Button
+- **Policies** — 21 pages:
+  - `/apple_privacy/` — Apple Privacy Labels Explained
+  - `/moderation/` — Telegram Safety Overview
+  - `/privacy-tpa/` — Standard Bot Privacy Policy
+  - `/privacy/` — Telegram Privacy Policy
   - `/tos/` — Terms of Service
   - `/tos/bot-developers/` — Telegram Bot Platform Developer Terms of Service
   - `/tos/bots/` — Terms of Service for Bots
@@ -655,6 +657,15 @@ mirrortproto.github.io/
   - `/tos/mini-apps/` — Terms of Service for Mini Apps
   - `/tos/stars/` — Terms of Service for Telegram Stars
   - `/tos/third-party-payments/` — Third-Party Payments and Authorized Resellers
+  - `/verify/` — Page Verification Guidelines
+- **Resources** — 14 pages:
+  - `/articles/DH_Hash_Collision/` — Hash Collisions for Diffie-Hellman Keys
+  - `/bug-bounty/` — Telegram Bug Bounty Program
+  - `/cdn/` — Encrypted CDNs for Speed and Security
+  - `/contest300K/` — Telegram Cracking Contest Description
+  - `/jobs/` — Jobs
+  - `/press/` — Telegram Press Info
+  - `/reproducible-builds/` — Reproducible Builds for iOS and Android
   - `/tour/affiliate-programs/` — Affiliate Programs
   - `/tour/channels/` — Telegram Channels
   - `/tour/chat-folders/` — Shareable Chat Folders
@@ -662,15 +673,10 @@ mirrortproto.github.io/
   - `/tour/quizbot/` — Quizzes
   - `/tour/screenshots/` — Telegram Logos and App Screenshots
   - `/tour/stories/` — Telegram Stories
-  - `/verify/` — Page Verification Guidelines
-  - `/widgets/` — Telegram Widgets
-  - `/widgets/discussion/` — Discussion Widget
-  - `/widgets/login-legacy/` — Telegram Login Widget
-  - `/widgets/posts/` — Post Widget
-  - `/widgets/share/` — Sharing Button
-- **Pages of the mirror itself** — 3 pages:
+- **Pages of the mirror itself** — 4 pages:
   - `/` — Telegram API Documentation Mirror
   - `/404/` — Page not found
+  - `/more/` — More sections
   - `/search/` — Search
 
 ## Права

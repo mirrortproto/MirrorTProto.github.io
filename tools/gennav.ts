@@ -138,9 +138,21 @@ const faqItems = [
     .filter((page) => page.section === "faq" && !faqLead.includes(page.url))
     .sort((a, b) => a.url.localeCompare(b.url)),
 ];
-const otherItems = pages
-  .filter((page) => page.section === "other")
-  .sort((a, b) => a.url.localeCompare(b.url));
+const sectionItems = (section: string, lead?: string): Page[] =>
+  pages
+    .filter((page) => page.section === section)
+    .sort((a, b) =>
+      lead && a.url === lead
+        ? -1
+        : lead && b.url === lead
+          ? 1
+          : a.url.localeCompare(b.url),
+    );
+const blackberryItems = sectionItems("blackberry", "/blackberry/");
+const appsItems = sectionItems("apps", "/apps/");
+const devtoolsItems = sectionItems("devtools");
+const policyItems = sectionItems("policies", "/privacy/");
+const resourceItems = sectionItems("resources");
 
 const sections = [
   { key: "api", title: "Telegram API", items: apiItems },
@@ -149,7 +161,15 @@ const sections = [
   { key: "schema", title: "Schema", items: schemaItems },
   { key: "blog", title: "Blog", items: blogItems },
   { key: "faq", title: "FAQ", items: faqItems },
-  { key: "other", title: "Other", items: otherItems },
+  { key: "apps", title: "Apps & Clients", items: appsItems },
+  {
+    key: "blackberry",
+    title: "BlackBerry Guide",
+    items: blackberryItems,
+  },
+  { key: "devtools", title: "Developer Tools", items: devtoolsItems },
+  { key: "policies", title: "Policies", items: policyItems },
+  { key: "resources", title: "Resources", items: resourceItems },
 ];
 
 const dataDir = path.join(CRAWLED, "_data");
@@ -182,8 +202,16 @@ console.log(
   blogItems.length,
   "| FAQ",
   faqItems.length,
-  "| Other",
-  otherItems.length,
+  "| Apps",
+  appsItems.length,
+  "| BlackBerry",
+  blackberryItems.length,
+  "| Developer Tools",
+  devtoolsItems.length,
+  "| Policies",
+  policyItems.length,
+  "| Resources",
+  resourceItems.length,
   "| backup",
   backupDate,
 );

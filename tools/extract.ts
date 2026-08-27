@@ -360,6 +360,11 @@ const GROUP_SECTION: Record<string, string> = {
   "Bot API": "bots",
   Blog: "blog",
   FAQ: "faq",
+  "BlackBerry Guide": "blackberry",
+  "Apps & Clients": "apps",
+  "Developer Tools": "devtools",
+  Policies: "policies",
+  Resources: "resources",
   Other: "other",
 };
 
@@ -526,6 +531,7 @@ type BackupManifest = {
   pages: ManifestPage[];
   redirects?: Array<{ path: string; to: string; url: string }>;
 };
+type ExtraPages = { groups: Record<string, string[]> };
 type PageRecord = {
   pg: ManifestPage;
   normPath: string;
@@ -588,6 +594,20 @@ async function main(): Promise<void> {
     await readFile(path.join(backup, "manifest.json"), "utf8"),
   ) as BackupManifest;
   console.log("backup:", backup, "pages:", meta.pages.length);
+
+  // Group ownership lives in extra-pages.json. Reading it here lets a newer
+  // navigation taxonomy classify an immutable older backup without rewriting
+  // that backup's historical manifest.
+  const extraPages = JSON.parse(
+    await readFile(path.join(ROOT, "tools", "extra-pages.json"), "utf8"),
+  ) as ExtraPages;
+  const sourceKey = (raw: string): string => {
+    const url = new URL(raw);
+    return `${url.hostname.replace(/^www\./, "").toLowerCase()}${url.pathname.replace(/\/+$/, "")}`;
+  };
+  const groupBySource = new Map<string, string>();
+  for (const [group, urls] of Object.entries(extraPages.groups))
+    for (const url of urls) groupBySource.set(sourceKey(url), group);
 
   // The mirror spans two hosts — core.telegram.org and, for the user FAQ,
   // telegram.org — and both address pages by the same kind of path. A closure
@@ -1062,7 +1082,10 @@ async function main(): Promise<void> {
       // another document — telegram.org/tos serves /tos/eu. Pointing at what
       // was actually copied beats pointing at a URL that answers differently.
       `original: "${r.pg.final_url || r.pg.url}"`,
-      `section: ${sectionOf(r.normPath, r.pg.group)}`,
+      `section: ${sectionOf(
+        r.normPath,
+        groupBySource.get(sourceKey(r.pg.url)) ?? r.pg.group,
+      )}`,
       // Blog posts carry their publication date upstream; without it the menu
       // could only sort a decade of announcements alphabetically.
       ...(r.published ? [`date: ${r.published}`] : []),

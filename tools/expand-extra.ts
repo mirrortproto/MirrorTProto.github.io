@@ -66,7 +66,35 @@ const groupFor = (host: string, pagePath: string): string => {
     (pagePath === "/bots" || pagePath.startsWith("/bots/"))
   )
     return "Bot API";
-  return "Other";
+  if (host === "core.telegram.org" && pagePath.startsWith("/blackberry"))
+    return "BlackBerry Guide";
+  if (
+    host === "telegram.org" &&
+    (pagePath === "/source" ||
+      pagePath === "/android" ||
+      pagePath === "/apps" ||
+      pagePath === "/evolution" ||
+      pagePath === "/dl" ||
+      pagePath.startsWith("/dl/"))
+  )
+    return "Apps & Clients";
+  if (
+    host === "core.telegram.org" &&
+    /^(?:\/(?:animated_stickers|import-stickers|themes|webapps)|\/(?:gateway|passport|stickers|tdlib|widgets)(?:\/|$))/.test(
+      pagePath,
+    )
+  )
+    return "Developer Tools";
+  if (
+    host === "telegram.org" &&
+    (/^\/(?:apple_privacy|moderation|privacy(?:-tpa)?|verify)$/.test(
+      pagePath,
+    ) ||
+      pagePath === "/tos" ||
+      pagePath.startsWith("/tos/"))
+  )
+    return "Policies";
+  return "Resources";
 };
 
 const report = JSON.parse(fs.readFileSync(REPORT, "utf8")) as Report;
@@ -127,7 +155,11 @@ const added: Record<string, string[]> = {
   "Bot API": [],
   Blog: [],
   FAQ: [],
-  Other: [],
+  "BlackBerry Guide": [],
+  "Apps & Clients": [],
+  "Developer Tools": [],
+  Policies: [],
+  Resources: [],
 };
 for (const url of candidates.keys()) {
   const u = new URL(url);

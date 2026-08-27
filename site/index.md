@@ -13,7 +13,7 @@ An enhanced mirror of the documentation sections of [core.telegram.org](https://
 
 What this mirror adds over the original:
 
-- **Full-text search** over all pages (including constructor/method/type names) — see the [search page](/search/): results are shown on a dedicated page and can be limited to the Telegram API, MTProto or Schema sections.
+- **Full-text search** over all pages (including constructor/method/type names) — see the [search page](/search/): results can be limited to any documentation section.
 - **Anchors on every paragraph and heading** — hover a paragraph to see the ¶ link, hover a heading for #.
 - **A structured sidebar menu** with all articles grouped by section, plus breadcrumbs on every page.
 - **A complete TL schema reference**: [constructors](/constructor/), [methods](/method/), [types](/type/) and [methods by category](/methods/).
@@ -32,11 +32,13 @@ The transport/crypto layer beneath the API: message format, `auth_key` generatio
 
 The TL schema: all [constructors](/constructor/), [methods](/method/), [types](/type/), the [MTProto layer schema](/schema/mtproto/), the [end-to-end layer schema](/schema/end-to-end/) and machine-readable JSON dumps.
 
-### Other
+### [FAQ](/faq/) and [Blog](/blog/)
 
-- [Telegram FAQ](/faq/) — the general user FAQ from telegram.org; the mirror also contains the complete [blog archive](/blog/) and all linked Telegram pages.
-- [FAQ for the Technically Inclined](/techfaq/) — the technical FAQ: encryption, key exchange, updates, security questions.
-- [Advanced FAQ (MTProto v1.0)](/techfaq/mtproto_v1/) — the same deep-dive FAQ for the deprecated protocol version 1.0.
+The general and technical FAQs, including the deprecated MTProto 1.0 guide, plus the complete Telegram announcement archive.
+
+### [More sections](/more/)
+
+Official apps and downloads, the legacy BlackBerry guide, developer tools, policies and additional Telegram resources are organized into five focused sections.
 
 ## About this site
 

@@ -55,6 +55,34 @@ const exists = (p: string): Promise<boolean> =>
 // ---- src link graph ------------------------------------------------------
 const mdFiles = await walk(CRAWLED, ".md");
 
+// The former 76-page Other bucket is deliberately split into stable, named
+// navigation/search sections. Guard the taxonomy itself, not only its links.
+const navData = JSON.parse(
+  await readFile(path.join(CRAWLED, "_data", "nav.json"), "utf8"),
+) as { sections: Array<{ key: string; items: unknown[] }> };
+const expectedAdditionalSections: Record<string, number> = {
+  apps: 3,
+  blackberry: 16,
+  devtools: 22,
+  policies: 21,
+  resources: 14,
+};
+let sectionBad = 0;
+for (const [key, count] of Object.entries(expectedAdditionalSections)) {
+  const actual = navData.sections.find((section) => section.key === key)?.items
+    .length;
+  if (actual !== count) {
+    sectionBad++;
+    fail(`section ${key} has ${actual ?? 0} pages, expected ${count}`);
+  }
+}
+if (navData.sections.some((section) => section.key === "other")) {
+  sectionBad++;
+  fail("obsolete Other section remains in navigation");
+}
+if (!sectionBad)
+  ok("76 former Other pages are split across five focused sections");
+
 // Every link the mirror emits, from both syntaxes: markdown `](/path#frag)` and
 // the raw HTML `href="/path#frag"` that survives inside tables and TL-schema
 // blocks. The raw-HTML half used to go completely unchecked.
