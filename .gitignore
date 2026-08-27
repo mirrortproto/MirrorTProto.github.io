@@ -1,4 +1,10 @@
 node_modules/
 .npm-cache/
+.build/
+crawled/
+docs/
+external-links.json
+external-links.md
 .crawl.log
 .npm_install.log
+.DS_Store

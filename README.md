@@ -15,18 +15,19 @@ The site is built with [Eleventy](https://www.11ty.dev/) and published via GitHu
 `manifest.json` (`not_mirrored`) — формы входа на my.telegram.org, витрины магазинов приложений,
 удалённые из оригинала посты, переводы, заглушки — плюс дерево Doxygen `/tdlib/docs/`, главные
 страницы самих оригиналов и адреса-версии с query (`?setln=`, `?offset=`). Проверяется командой
-`node tools/extlinks.mjs` — она пишет `external-links.md` со всеми внешними адресами и страницами,
+`npm run extlinks` — она пишет `external-links.md` со всеми внешними адресами и страницами,
 которые на них ссылаются.
 
 ## Возможности / Features
 
 - **Seven sections**: Telegram API (130), Bot API (18), MTProto (23), Schema (10 + 3 022 reference
   pages), Blog (179), FAQ (9) and Other (76) — each with its own menu, its own filter in the search
-  and its own entry in the header. The blog is the **whole archive** of telegram.org, newest first
-  by the upstream publication date: `tools/list-blog.mjs` pages through the archive and writes every
-  post into the page list. The archive's own first page is mirrored as `/blog/`; its paginated views
-  (`?offset=20`, …) are not — they are a view of the same posts, and the Blog menu lists all 179 of
-  them at once. The FAQ holds every FAQ of both hosts (the user FAQ, the technical one, the bot FAQ,
+  and its own entry in the header. The blog is the **whole archive** of telegram.org: `tools/list-blog.ts`
+  pages through the upstream archive and records every post. `/blog/` is rebuilt as a semantic,
+  year-grouped archive of all 178 posts; the sidebar stays usable by showing the archive plus the 12
+  newest posts instead of injecting all 179 pages into every article. One legacy post whose original
+  provides no date is explicitly listed under “Date unavailable”. The FAQ holds every FAQ of both hosts
+  (the user FAQ, the technical one, the bot FAQ,
   Premium, channels, spam, the Persian CDN one).
 - **What is deliberately left out**, with the reason recorded in `manifest.json` → `not_mirrored`:
   media (images, video and archives keep pointing at the original), interactive forms whose static
@@ -50,7 +51,7 @@ The site is built with [Eleventy](https://www.11ty.dev/) and published via GitHu
   documents.
 - **Every internal link is absolute**: the original writes some of them document-relative
   (`href="TL"` on `/mtproto/TL-formal`), which only works while the page URL carries no trailing
-  slash; here every page is a directory, so `tools/extract.mjs` resolves such links against the
+  slash; here every page is a directory, so `tools/extract.ts` resolves such links against the
   original URL and rewrites them from the site root (`/mtproto/TL/`).
 - **A link to a mirrored page stays in the mirror, however the original spells it.** The same page
   is written upstream in half a dozen shapes, and each one is recognised:
@@ -82,21 +83,25 @@ The site is built with [Eleventy](https://www.11ty.dev/) and published via GitHu
 
 ## Требования / Requirements
 
-- Node.js ≥ 18 (проверено на 24)
+- Node.js ≥ 20
 - npm
 
-## Сборка / Build
+## Локальная сборка / Local build
 
 ```bash
-npm install          # зависимости
-npm run build        # собирает сайт в docs/ и строит поисковый индекс
+npm ci               # точные версии из package-lock.json
+npm run generate     # создать disposable crawled/ без сети
+npm run build        # создать и полностью проверить disposable docs/
 ```
 
-Готовый сайт — в `docs/`. Локальный просмотр:
+`crawled/` и `docs/` намеренно находятся в `.gitignore`: первый каталог полностью восстанавливается
+из `backup/` и `site/`, второй — из `crawled/`. Для локальной разработки:
 
 ```bash
-npx serve docs       # или любой статический сервер
-npm run serve        # режим разработки: eleventy --serve → http://localhost:8080/
+npm run serve        # генерация + Eleventy dev server → http://localhost:8080/
+npm run check        # format + typecheck + сборка + verify + quality score ≥ 9.5/10
+npm run quality      # 20 объективных архитектурных gates; порог 9.5/10
+npm run reproducible # две чистые сборки и побайтовое сравнение всех результатов
 ```
 
 ## Бэкап оригинала и конвейер / Backup & pipeline
@@ -128,14 +133,14 @@ npm run serve        # режим разработки: eleventy --serve → htt
 ### Замыкание по ссылкам
 
 ```bash
-node tools/list-blog.mjs     # весь архив блога (разово, при обновлении бэкапа)
-node tools/extlinks.mjs      # какие страницы зеркало упоминает, но не содержит
-node tools/expand-extra.mjs  # добавить их в tools/extra-pages.json
-npm run backup -- 2026-08-23 # докачать только их (бэкап дополняется)
-npm run regenerate           # пересобрать сайт
+npm run list-blog              # весь архив блога (разово, при обновлении бэкапа)
+npm run extlinks               # какие страницы зеркало упоминает, но не содержит
+npm run expand-extra           # добавить их в tools/extra-pages.json
+npm run backup -- 2026-08-23   # докачать только их (бэкап дополняется)
+npm run build                  # пересобрать и проверить сайт
 ```
 
-Повторять, пока `expand-extra.mjs` не скажет `queued 0 new page(s)`. Каждый круг добавляет страницы,
+Повторять, пока `npm run expand-extra` не скажет `queued 0 new page(s)`. Каждый круг добавляет страницы,
 на которые ссылаются страницы прошлого круга, поэтому кругов нужно несколько: на текущем бэкапе —
 шесть, от 103 страниц в первом до нуля в последнем.
 
@@ -148,99 +153,63 @@ telegram.org отдаёт страницы на языке по геолокац
 ### Полная перегенерация сайта с нуля
 
 ```bash
-# 1. Скачать свежую копию оригинала в backup/<дата>/ (единственный сетевой шаг).
-#    Можно указать дату вручную: node tools/crawl.mjs 2026-12-31
-npm run backup
-
-# 2. Сгенерировать PNG-иконки (детерминированно, из кода):
-npm run icons
-
-# 3. Пересобрать сайт целиком из бэкапа:
-npm run regenerate
-#    = npm run extract   — очищает зеркальные каталоги в src/ (api/, bots/, mtproto/, schema/,
-#                          constructor/, method/, type/, blog/, tos/ и т.д.), НЕ трогая служебные файлы
-#                          (index.md, search.md, 404.md, css/, _includes/, _data/, иконки),
-#                          и заново извлекает контент из backup/<последняя дата>/:
-#                          HTML → markdown, заголовки, крошки, description из первого абзаца,
-#                          TL-схемы со всеми ссылками и номером слоя, JSON-документы через Prettier;
-#    + npm run nav       — src/_data/nav.json (меню) и src/_data/site.json (дата бэкапа);
-#    + npm run indexes   — индексные страницы /constructor/, /method/, /type/;
-#    + npm run build     — eleventy (docs/) + поисковый индекс pagefind.
+npm run backup -- 2026-12-31 # единственный сетевой шаг; создаёт backup/<дата>/
+npm run icons                # при необходимости обновить PNG-иконки
+npm run build                # backup/ + site/ → crawled/ → docs/ → Pagefind → verify
+npm run print-structure      # обновить список страниц для README
 ```
 
-Старые бэкапы не удаляются; сборка всегда берёт последний по дате. После перегенерации
-раздел «Полная структура сайта» ниже можно обновить командой:
-
-```bash
-node tools/print_structure.mjs
-```
+Старые бэкапы не удаляются; сборка всегда берёт последний по дате. `npm run generate` доступен
+отдельно для пользователей, которым нужен только удобный для чтения Markdown-каталог `crawled/`.
 
 ### Что делает каждый инструмент
 
+Весь собственный JavaScript переведён на TypeScript. `tsc` компилирует Node-инструменты во
+временный `.build/`, а esbuild собирает браузерные `client/*.ts` в `crawled/js/`.
+
 | Скрипт | Назначение | Сеть |
 |---|---|---|
-| `tools/crawl.mjs` | снимает (и дополняет) датированный бэкап `backup/<дата>/` (HTML + `manifest.json` с sha256, редиректами и причинами пропуска) | да |
-| `tools/extra-pages.json` | данные, а не код: список связанных страниц вне разделов документации, разбитый по разделам сайта (Bot API / Blog / FAQ / Other) | — |
-| `tools/extract.mjs` | извлекает контент из бэкапа в `src/` (markdown + front matter), локализует ссылки (все внутренние — абсолютные, от корня сайта; распознаются `http`/`https`, протокол-относительные `//host/path`, `?layer=N` и адреса обоих зеркалируемых хостов), сопоставляет якоря оригинала (`id=` на core.telegram.org, `name=` на telegram.org) со своими заголовками, сохраняет TL-схемы со ссылками, форматирует JSON-документы | нет |
-| `tools/gennav.mjs` | меню (`nav.json`) и дата бэкапа (`site.json`) | нет |
-| `tools/genrefindexes.mjs` | алфавитные индексы конструкторов/методов/типов (`generated: true`, имена в ссылках percent-encoded) | нет |
-| `tools/make_icons.py` | PNG-иконки (`icon-64.png`, `apple-touch-icon.png`) из кода | нет |
-| `tools/print_structure.mjs` | список всех страниц для README | нет |
-| `tools/verify.mjs` (`npm run check`) | самопроверка собранного сайта: ссылки и якоря, h1/meta/канонические URL, sitemap, а также сверка TL-схем и JSON-документов с бэкапом | нет |
-| `tools/extlinks.mjs` | инвентаризация внешних ссылок: `external-links.md` + `external-links.json` — какие страницы вне зеркала и на каких его страницах на них ссылаются | нет |
-| `tools/expand-extra.mjs` | круг замыкания: переносит недостающие страницы двух хостов из отчёта в `tools/extra-pages.json`, раскладывая по разделам | нет |
-| `tools/list-blog.mjs` | листает архив telegram.org/blog и вносит в список все посты — блог зеркалируется целиком, а не только связанные посты | да |
+| `tools/crawl.ts` | создаёт/дополняет датированный backup с SHA-256, редиректами и причинами пропуска | да |
+| `tools/extract.ts` | пересоздаёт `crawled/` из `site/` и backup, локализует ссылки и извлекает Markdown/TL/JSON | нет |
+| `tools/gennav.ts`, `tools/genrefindexes.ts` | создают меню, метаданные и TL-индексы | нет |
+| `tools/build-client.ts` | детерминированно собирает браузерный TypeScript | нет |
+| `tools/html-sanitizer.ts` | parser-based allowlist для недоверенного HTML оригинала; удаляет исполняемую и интерактивную разметку | нет |
+| `tools/canonicalize-pagefind.ts` | сортирует недетерминированный CBOR-фильтр Pagefind и стабилизирует его content-hash имена | нет |
+| `tools/verify.ts` | проверяет SHA-256 бэкапа, ссылки, якоря, HTML ids, CSP, JSON-LD, отсутствие unsafe/inline JS, Pagefind, sitemap, TL и JSON | нет |
+| `tools/reproducibility.ts` | выполняет две чистые сборки и сравнивает SHA-256 каждого файла `crawled/` и `docs/` | нет |
+| `tools/extlinks.ts`, `tools/expand-extra.ts`, `tools/list-blog.ts` | обслуживают замыкание зеркала по ссылкам | частично |
+| `tools/make_icons.py` | генерирует PNG-иконки | нет |
 
-Готовый сайт — в `docs/`. Локальный просмотр:
-
-```bash
-npx serve docs       # или любой статический сервер
-npm run serve        # режим разработки: eleventy --serve → http://localhost:8080/
-```
+Pagefind 1.5.2 записывает значения одного и того же фильтра в случайном порядке. Содержимое поиска
+при этом одинаково, но меняются CBOR-байты, хеши в именах файлов и вся метацепочка. Канонизатор
+сортирует значения и заменяет content-hash имена стабильными после индексации. Он намеренно привязан
+к Pagefind 1.5.2, проверяет magic header и структуру, повторно декодирует записанные файлы и завершает
+сборку ошибкой при несовместимом обновлении вместо тихой порчи индекса.
 
 ## Публикация / GitHub Pages
 
-1. `npm run build`
-2. Закоммитьте изменения (включая `docs/` и `backup/`) в ветку `main`.
-3. Settings → Pages → **Deploy from a branch**, ветка `main`, папка `/docs`.
+`.github/workflows/pages.yml` запускается для pull request и `main`: устанавливает только версии из
+lock-файла, проверяет зависимости, TypeScript и две идентичные чистые сборки. Для `main` проверенный
+`docs/` загружается как Pages artifact и публикуется через GitHub Actions. Генерируемые файлы
+никогда не коммитятся. В Settings → Pages источником должен быть выбран **GitHub Actions**.
 
-Сайт будет доступен на [https://mirrortproto.github.io](https://mirrortproto.github.io).
+Сайт доступен на [https://mirrortproto.github.io](https://mirrortproto.github.io).
 
 ## Структура репозитория / Repository layout
 
 ```
 mirrortproto.github.io/
-├── backup/
-│   └── 2026-08-23/            # копия оригинала от 23.08.2026 (3465 страниц)
-│       ├── manifest.json      # полный список страниц с sha256
-│       ├── urls.txt
-│       └── pages/             # сырые HTML-копии
-├── docs/                      # собранный сайт (публикуется на GitHub Pages)
-├── src/                       # исходники страниц (извлечены из бэкапа)
-│   ├── _includes/layout.njk   # шаблон: шапка, меню, крошки, поиск, якоря
-│   ├── _data/nav.json         # меню (генерируется: tools/gennav.mjs)
-│   ├── css/style.css
-│   ├── api/...                # раздел Telegram API
-│   ├── bots/...               # раздел Bot API
-│   ├── mtproto/...            # раздел MTProto
-│   ├── schema/...             # обзорные страницы схем + JSON-дампы
-│   ├── constructor/...        # справочник конструкторов
-│   ├── method/...             # справочник методов
-│   ├── type/...               # справочник типов
-│   ├── blog/...               # раздел Blog (посты telegram.org)
-│   ├── faq*.md, techfaq/...   # раздел FAQ
-│   ├── tos/..., tour/..., …   # раздел Other: прочие связанные страницы
-│   └── index.md               # главная
-├── tools/
-│   ├── crawl.mjs              # снятие датированного бэкапа (сеть)
-│   ├── extra-pages.json       # список связанных страниц вне разделов документации
-│   ├── extract.mjs            # извлечение контента из бэкапа (без сети)
-│   ├── gennav.mjs             # меню + дата бэкапа
-│   ├── extlinks.mjs           # инвентаризация внешних ссылок
-│   ├── expand-extra.mjs       # круг замыкания зеркала по ссылкам
-│   └── print_structure.mjs    # генерация списка страниц для README
-├── eleventy.config.mjs        # конфигурация: якоря параграфов/заголовков, вывод в docs/
-├── package.json               # скрипты: backup, extract, nav, build, serve, clean
+├── .github/                   # CI, Pages deployment, Dependabot
+├── backup/                    # immutable исходные снимки и SHA-256 manifest
+├── site/                      # единственные authored шаблоны, стили и статические страницы
+├── client/                    # authored browser TypeScript
+├── tools/                     # Node TypeScript и данные краулера
+├── crawled/                   # generated Markdown + data + browser bundle (gitignored)
+├── docs/                      # generated production site + Pagefind (gitignored)
+├── .build/                    # generated Node JavaScript from TypeScript (gitignored)
+├── eleventy.config.ts
+├── tsconfig.json
+├── package.json
 └── README.md
 ```
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # Generates the PNG favicons (icon-64.png, apple-touch-icon.png) from scratch —
-# the same "protocol layers" artwork as src/favicons/layers.svg, drawn pixel by
+# the same "protocol layers" artwork as site/favicons/layers.svg, drawn pixel by
 # pixel so the pipeline has no binary dependency. Pure stdlib (zlib/struct).
 #
 # Usage: python3 tools/make_icons.py
@@ -8,7 +8,7 @@ import struct
 import zlib
 import os
 
-SRC = os.path.join(os.path.dirname(__file__), '..', 'src')
+SITE = os.path.join(os.path.dirname(__file__), '..', 'site')
 
 
 def png_chunk(tag: bytes, data: bytes) -> bytes:
@@ -108,5 +108,5 @@ def write_png(path: str, size: int):
 
 
 if __name__ == '__main__':
-    write_png(os.path.join(SRC, 'icon-64.png'), 64)
-    write_png(os.path.join(SRC, 'apple-touch-icon.png'), 180)
+    write_png(os.path.join(SITE, 'icon-64.png'), 64)
+    write_png(os.path.join(SITE, 'apple-touch-icon.png'), 180)
