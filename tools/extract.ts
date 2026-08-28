@@ -1,8 +1,8 @@
 // Builds the disposable Eleventy input tree in crawled/ from the immutable backup
 // and the hand-written shell in site/. NO network access is performed.
 //
-// Usage: node .build/tools/extract.js [date]   (defaults to the newest backup)
-import { cp, mkdir, readFile, writeFile, readdir, rm } from "node:fs/promises";
+// Usage: node .build/tools/extract.js
+import { cp, mkdir, readFile, writeFile, rm } from "node:fs/promises";
 import path from "node:path";
 import TurndownService from "turndown";
 import * as prettier from "prettier";
@@ -12,20 +12,7 @@ const ROOT = path.resolve(".");
 const CRAWLED = path.join(ROOT, "crawled");
 const SITE = path.join(ROOT, "site");
 
-async function pickBackup(arg?: string) {
-  const dir = path.join(ROOT, "backup");
-  if (arg) {
-    if (!/^\d{4}-\d{2}-\d{2}$/.test(arg))
-      throw new Error(`invalid backup date: ${arg}`);
-    return path.join(dir, arg);
-  }
-  const dates = (await readdir(dir))
-    .filter((d) => /^\d{4}-\d{2}-\d{2}$/.test(d))
-    .sort();
-  if (!dates.length)
-    throw new Error("no backup found: run tools/crawl.ts first");
-  return path.join(dir, dates[dates.length - 1]);
-}
+const BACKUP = path.join(ROOT, "backup", "latest");
 
 // Returns { html, end } for the div introduced by `marker`, where `end` is the
 // offset just past its closing tag (needed to look at what follows the div).
@@ -627,11 +614,10 @@ function buildBlogArchive(records: PageRecord[]): string {
 }
 
 async function main(): Promise<void> {
-  const backup = await pickBackup(process.argv[2]);
   const meta = JSON.parse(
-    await readFile(path.join(backup, "manifest.json"), "utf8"),
+    await readFile(path.join(BACKUP, "manifest.json"), "utf8"),
   ) as BackupManifest;
-  console.log("backup:", backup, "pages:", meta.pages.length);
+  console.log("backup:", BACKUP, "pages:", meta.pages.length);
 
   // Group ownership lives in extra-pages.json. Reading it here lets a newer
   // navigation taxonomy classify an immutable older backup without rewriting
@@ -685,7 +671,7 @@ async function main(): Promise<void> {
   const anchorsByPath = new Map<string, Map<string, string>>();
   const notExtracted: string[] = [];
   for (const pg of meta.pages) {
-    const html = await readFile(path.join(backup, pg.file), "utf8");
+    const html = await readFile(path.join(BACKUP, pg.file), "utf8");
     const normPath = pg.path.replace(/\/+$/, "");
     const rel = normPath.replace(/^\/+/, "");
     let body = "";

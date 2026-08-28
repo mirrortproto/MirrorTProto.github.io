@@ -651,14 +651,9 @@ if (!anchorBad && anchorChecked === 14702)
     `anchors: ${anchorChecked} in-site fragments (${anchorSame} into the page's own headings), all resolve`,
   );
 
-const backups = path.join(ROOT, "backup");
-const dates = (await readdir(backups).catch(() => []))
-  .filter((d) => /^\d{4}-\d{2}-\d{2}$/.test(d))
-  .sort();
-const latest = dates.at(-1);
-if (!latest) throw new Error("no dated backup found");
+const backup = path.join(ROOT, "backup", "latest");
 const manifestMeta = JSON.parse(
-  await readFile(path.join(backups, latest, "manifest.json"), "utf8"),
+  await readFile(path.join(backup, "manifest.json"), "utf8"),
 ) as {
   page_count: number;
   pages: Array<{
@@ -670,7 +665,7 @@ const manifestMeta = JSON.parse(
 };
 let integrityBad = 0;
 for (const entry of manifestMeta.pages) {
-  const content = await readFile(path.join(backups, latest, entry.file));
+  const content = await readFile(path.join(backup, entry.file));
   const digest = createHash("sha256").update(content).digest("hex");
   if (content.byteLength !== entry.bytes || digest !== entry.sha256) {
     integrityBad++;
@@ -685,12 +680,7 @@ else if (!integrityBad)
   );
 const backupPage = (url: string): Promise<string> =>
   readFile(
-    path.join(
-      backups,
-      latest,
-      "pages",
-      url.slice(1).replace(/\//g, "__") + ".html",
-    ),
+    path.join(backup, "pages", url.slice(1).replace(/\//g, "__") + ".html"),
     "utf8",
   );
 const unentity = (s: string): string =>
@@ -743,7 +733,7 @@ for (const entry of manifestMeta.pages.filter((page) =>
   page.path.startsWith("/blog/"),
 )) {
   const upstream = articleContent(
-    await readFile(path.join(backups, latest, entry.file), "utf8"),
+    await readFile(path.join(backup, entry.file), "utf8"),
   ).replace(/<!--[\s\S]*?-->/g, "");
   const rendered = await readFile(
     path.join(DOCS, entry.path.slice(1), "index.html"),
