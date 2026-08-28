@@ -82,7 +82,7 @@ const expectedAdditionalSections: Record<string, number> = {
   apps: 3,
   contests: 29,
   devtools: 22,
-  policies: 21,
+  policies: 19,
   other: 14,
 };
 let sectionBad = 0;
@@ -297,9 +297,9 @@ for (const l of links) {
     );
 }
 const localLinkCount = links.length - samePage;
-if (localLinkCount !== 95586)
-  fail(`local link inventory changed: ${localLinkCount}, expected 95586`);
-if (!broken && localLinkCount === 95586)
+if (localLinkCount !== 95687)
+  fail(`local link inventory changed: ${localLinkCount}, expected 95687`);
+if (!broken && localLinkCount === 95687)
   ok(
     `local links: ${localLinkCount} (markdown + raw HTML; ${relative} document-relative), all resolve`,
   );
@@ -573,10 +573,10 @@ const blogIndexHtml = await readFile(
   path.join(DOCS, "blog", "index.html"),
   "utf8",
 ).catch(() => "");
-if ((blogIndexHtml.match(/class="blog-archive-item"/g) || []).length !== 178) {
-  fail("/blog/ is not the complete 178-post archive");
+if ((blogIndexHtml.match(/class="blog-archive-item"/g) || []).length !== 179) {
+  fail("/blog/ is not the complete 179-post archive");
 } else {
-  ok("/blog/ is the complete 178-post index");
+  ok("/blog/ is the complete 179-post index");
 }
 const storiesHtml = await readFile(
   path.join(DOCS, "blog", "stories", "index.html"),
@@ -644,9 +644,9 @@ for (const l of links) {
     if (anchorBad <= 10) fail(`dead anchor ${l.url} in ${l.file}`);
   }
 }
-if (anchorChecked !== 14702)
-  fail(`anchor inventory changed: ${anchorChecked}, expected 14702`);
-if (!anchorBad && anchorChecked === 14702)
+if (anchorChecked !== 14944)
+  fail(`anchor inventory changed: ${anchorChecked}, expected 14944`);
+if (!anchorBad && anchorChecked === 14944)
   ok(
     `anchors: ${anchorChecked} in-site fragments (${anchorSame} into the page's own headings), all resolve`,
   );
