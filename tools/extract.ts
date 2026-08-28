@@ -61,15 +61,24 @@ function layerLabel(html: string): string {
   return m ? decode(m[1]).trim() : "";
 }
 
-// On /schema and /schema/end-to-end the TL-schema listing is a *sibling* of the
-// content div, not a child of it — so taking the div alone dropped the entire
-// schema, i.e. the only reason those two pages exist. Collect every
-// <pre class="page_scheme"> between the end of the content div and the footer.
-function trailingSchemes(html: string, contentEnd: number): string {
-  const stop = html.indexOf('<div class="footer_wrap">', contentEnd);
-  const tail = html.slice(contentEnd, stop === -1 ? undefined : stop);
-  const blocks = tail.match(/<pre class="page_scheme">[\s\S]*?<\/pre>/g);
-  return blocks ? blocks.join("\n") : "";
+// Some upstream pages place real article content after the div selected above:
+// the two schema listings are siblings of #dev_page_content, /widgets has its
+// widget list there, /moderation has reporting instructions after .tl_page, and
+// one malformed legacy blog post closes #dev_page_content after its first
+// image. Keep everything up to the first known piece of page chrome. Unmatched
+// closing tags left by slicing are harmless: the sanitizer's parser discards
+// them while retaining the content that follows.
+function trailingArticleContent(html: string, contentEnd: number): string {
+  const chrome = [
+    '<div class="tl_main_share',
+    '<div class="tl_main_recent_news_wrap',
+    '<div class="footer_wrap',
+  ];
+  const stops = chrome
+    .map((marker) => html.indexOf(marker, contentEnd))
+    .filter((offset) => offset !== -1);
+  const stop = stops.length ? Math.min(...stops) : html.length;
+  return html.slice(contentEnd, stop);
 }
 
 function extractH1(html: string): string | null {
@@ -135,7 +144,20 @@ function originalAnchors(html: string): Map<string, string> {
     const id = m[2].match(/<a class="anchor"[^>]*\s(?:id|name)="([^"]*)"/);
     if (!id) continue;
     const text = decode(m[2].replace(/<[^>]+>/g, "")).trim();
-    if (text) map.set(id[1], slugify(cleanInline(text)));
+    if (text) {
+      map.set(id[1], slugify(cleanInline(text)));
+      continue;
+    }
+    // /moderation puts its named anchor in an empty h2 immediately before a
+    // styled wrapper whose first child is the visible h2. Reconnect that legacy
+    // id to the heading generated from the visible text.
+    const following = html
+      .slice(re.lastIndex, re.lastIndex + 500)
+      .match(/^[\s\S]*?<h[1-6]\b[^>]*>([\s\S]*?)<\/h[1-6]>/);
+    if (following) {
+      const followingText = decode(following[1].replace(/<[^>]+>/g, "")).trim();
+      if (followingText) map.set(id[1], slugify(cleanInline(followingText)));
+    }
   }
   return map;
 }
@@ -705,7 +727,7 @@ async function main(): Promise<void> {
         body = "```\n" + decode(raw).trim() + "\n```";
       } else {
         const content = stripNoise(
-          found.html + trailingSchemes(html, found.end),
+          found.html + trailingArticleContent(html, found.end),
         );
         // Invalid nested upstream anchors are normalized by the HTML parser into
         // a meaningful inner link plus a redundant empty Markdown link. Empty
